@@ -1,0 +1,112 @@
+/*Button.module.css*/
+
+/* Базовая кнопка */
+.baseButton {
+  width: 100%;
+  padding: 10px 4px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #888;
+  border-radius: 4px;
+  font: 900 10px "Segoe UI", Tahoma, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Эффект при наведении на неактивную кнопку */
+.baseButton:hover:not(.isActive) {
+  background: #333;
+  color: #fff;
+}
+
+/* Общий класс для активного состояния */
+.isActive {
+  color: #fff;
+}
+
+/* --- ТЕМЫ ПОКОЛЕНИЙ --- */
+
+.v2Theme { 
+  background: #6a1b9a; 
+  border-color: #8e24aa; 
+}
+
+.v3Theme { 
+  background: #d35400; 
+  border-color: #e67e22; 
+}
+
+.metallicActive {
+  background: #e0e0e0 !important;
+  color: #000 !important;
+  border-color: #fff !important;
+}
+
+/* --- ЦВЕТНЫЕ ТЕМЫ --- */
+
+.dangerTheme { background: #961b1b; border-color: #b22222; }
+.optimalTheme { background: #218838; border-color: #28a745; }
+.safeTheme { background: #555; border-color: #666; }
+.customTheme { background: #00838f; border-color: #00acc1; }
+
+/* --- ТЕМЫ ИНФО (СИНЯЯ) --- */
+
+.infoTheme { 
+  background: #0044aa; 
+  border-color: #0056b3; 
+}
+
+.infoOutline {
+  background: transparent !important;
+  border: 1px solid #0056b3 !important;
+  color: #007bff !important;
+}
+
+/* --- ВНИМАНИЕ (ИНВЕРСИЯ) --- */
+
+.warningInactive {
+  border: 1px solid #961b1b;
+  color: #c5a021;
+  background: transparent;
+}
+
+.warningActive {
+  background: #c5a021;
+  border-color: #d4ac0d;
+  color: #000;
+}
+
+/* --- СПЕЦЭФФЕКТЫ --- */
+
+.lavaEffect {
+  background-color: transparent;
+  border-color: #ff4e00;
+  background-image: linear-gradient(90deg, #ff4e00, #ffcc00, #ff4e00);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: lavaSync 2s linear infinite;
+  text-shadow: 0 0 8px rgba(255, 78, 0, 0.4);
+  font-weight: 900; /* Чтобы не прыгало */
+}
+
+@keyframes lavaSync {
+  0% { background-position: 0% center; }
+  100% { background-position: -200% center; }
+}
+
+/* Адаптив: просто разрешаем кнопкам чуть сжиматься на мобилках */
+@media (max-width: 480px) {
+  .baseButton {
+    padding: 8px 2px;
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,112 @@
+.screenWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 620px;
+}
+
+.mainWindow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 520px;
+  padding: 25px;
+  background: #0000aa;
+  color: #aaaaaa;
+  font-family: "Courier New", monospace;
+  border: 4px solid #cccccc;
+  box-shadow: 15px 15px 0 #000;
+  box-sizing: border-box;
+}
+
+.windowTitle {
+  background: #cccccc;
+  color: #0000aa;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.rowsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 8px;
+}
+
+/* Когда строка выделена сером */
+.isHighlighted {
+  background: #aaaaaa;
+  color: #0000aa;
+}
+
+/* Текст (Enabled/Disabled) становится синим на сером фоне */
+.isHighlighted .rowValue {
+  color: #0000aa;
+}
+
+.isDisabled {
+  pointer-events: none;
+  color: #555555;
+}
+
+.rowValue {
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.valueInput {
+  all: unset;
+  width: 2.2ch;
+  text-align: center;
+}
+
+/* Твои желтые поля ввода */
+.editableInput {
+  background: #ebe707; 
+  color: #0000aa !important; /* Принудительно синий текст */
+  margin: 0 2px;
+  cursor: text;
+}
+
+.valueInput:focus {
+  background: #ffffff;
+  color: #000000;
+}
+
+.rowSeparator {
+  height: 2px;
+  background: #aaaaaa;
+  margin: 10px 8px;
+}
+
+.pathFooter {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 2px solid #aaaaaa;
+  color: #ffff55;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .mainWindow {
+    height: auto;
+    min-height: 400px;
+    padding: 15px;
+    box-shadow: 8px 8px 0 #000;
+  }
+  .itemRow {
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,47 @@
+/*Header.module.css*/
+
+.navigationShell {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.navigationContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.navLink {
+  background: transparent;
+  color: #888;
+  border: 1px solid transparent;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.isActiveLink {
+  color: #fff;
+  border-color: #007bff;
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.navLink:hover:not(.isActiveLink) {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navigationContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 0 15px;
+  }
+}
