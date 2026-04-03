@@ -27742,15 +27742,19 @@ const RamTools = ()=>{
         ] : []
     ];
     const renderGroup = (label, options, field, prefix = "", formatValue)=>{
-        // ФИКС: Скрываем 3 слота для неподходящих объемов
         let visibleOptions = options;
+        // UI ФИЛЬТРАЦИЯ СЛОТОВ
         if (field === 'slotsCount') {
-            const tripleValidSizes = [
+            const TRIPLE_SIZES = [
                 12,
                 24,
                 48
             ];
-            if (!tripleValidSizes.includes(config.ramSize)) visibleOptions = options.filter((opt)=>opt !== 3);
+            visibleOptions = options.filter((opt)=>{
+                if (config.ramSize === 12) return opt === 2 || opt === 3;
+                if (TRIPLE_SIZES.includes(config.ramSize)) return opt >= 2;
+                return opt !== 3;
+            });
         }
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
             children: [
@@ -27758,7 +27762,7 @@ const RamTools = ()=>{
                     children: label
                 }, void 0, false, {
                     fileName: "src/components/RamConfiguration/RamTools.tsx",
-                    lineNumber: 32,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Grid, {
@@ -27772,19 +27776,19 @@ const RamTools = ()=>{
                                 })
                         }, field + v.toString(), false, {
                             fileName: "src/components/RamConfiguration/RamTools.tsx",
-                            lineNumber: 37,
+                            lineNumber: 40,
                             columnNumber: 15
                         }, undefined);
                     })
                 }, void 0, false, {
                     fileName: "src/components/RamConfiguration/RamTools.tsx",
-                    lineNumber: 33,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/RamConfiguration/RamTools.tsx",
-            lineNumber: 31,
+            lineNumber: 34,
             columnNumber: 7
         }, undefined);
     };
@@ -27798,7 +27802,7 @@ const RamTools = ()=>{
                         children: "\u041C\u041E\u0414\u0415\u041B\u042C \u041F\u0420\u041E\u0426\u0415\u0421\u0421\u041E\u0420\u0410:"
                     }, void 0, false, {
                         fileName: "src/components/RamConfiguration/RamTools.tsx",
-                        lineNumber: 55,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Select, {
@@ -27811,32 +27815,32 @@ const RamTools = ()=>{
                                 children: m.name
                             }, m.name, false, {
                                 fileName: "src/components/RamConfiguration/RamTools.tsx",
-                                lineNumber: 63,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/RamConfiguration/RamTools.tsx",
-                        lineNumber: 56,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RamConfiguration/RamTools.tsx",
-                lineNumber: 54,
+                lineNumber: 57,
                 columnNumber: 7
             }, undefined),
             renderGroup("\u0422\u0418\u041F \u041F\u0410\u041C\u042F\u0422\u0418:", [
                 'desktop',
                 'ecc'
             ], "isEcc", "", (v)=>v === 'ecc'),
-            renderGroup("\u0412\u0421\u0415\u0413\u041E \u041F\u0410\u041C\u042F\u0422\u0418 \u0423\u0421\u0422\u0410\u041D\u041E\u0412\u041B\u0415\u041D\u041E:", (0, _timingsData.RAM_SIZE_OPTIONS), "ramSize", "size_"),
+            renderGroup("\u0412\u0421\u0415\u0413\u041E \u041F\u0410\u041C\u042F\u0422\u0418:", (0, _timingsData.RAM_SIZE_OPTIONS), "ramSize", "size_"),
             renderGroup("\u0417\u0410\u041D\u042F\u0422\u041E \u0421\u041B\u041E\u0422\u041E\u0412:", (0, _timingsData.SLOT_COUNT_OPTIONS), "slotsCount", "slots_"),
             renderGroup("\u041C\u0410\u0422\u0415\u0420\u0418\u041D\u0421\u041A\u0410\u042F \u041F\u041B\u0410\u0422\u0410:", (0, _timingsData.BOARD_TYPE_OPTIONS), "boardType"),
             renderGroup("\u041F\u0420\u0415\u0421\u0415\u0422\u042B:", profiles, "profile")
         ]
     }, void 0, true, {
         fileName: "src/components/RamConfiguration/RamTools.tsx",
-        lineNumber: 51,
+        lineNumber: 54,
         columnNumber: 5
     }, undefined);
 };
@@ -28141,8 +28145,8 @@ const INITIAL_CONFIG = {
     gen: 'V2',
     profile: 'safe',
     boardType: 'atx',
-    ramSize: 4,
-    slotsCount: 1,
+    ramSize: 8,
+    slotsCount: 2,
     isEcc: false,
     cpu: (0, _cpuData.CPU_MODELS)['V2'][0],
     custom: {
@@ -28351,23 +28355,33 @@ parcelHelpers.export(exports, "useTimingEngine", ()=>useTimingEngine);
 var _zustand = require("zustand");
 var _timingsData = require("./timingsData");
 var _cpuData = require("./cpuData");
-const validateConfig = (conf, lastFieldUpdated)=>{
+const TRIPLE_SIZES = [
+    12,
+    24,
+    48
+];
+/**
+ * Валидатор конфигурации: управляет логикой слотов и объемов
+ */ const validateConfig = (conf, lastFieldUpdated)=>{
     const next = {
         ...conf
     };
-    const tripleValidSizes = [
-        12,
-        24,
-        48
-    ];
     const field = lastFieldUpdated || "";
-    if (field.includes('ramSize') && tripleValidSizes.includes(next.ramSize)) next.slotsCount = 3;
-    else if (field.includes('slotsCount') && next.slotsCount === 3) {
-        if (!tripleValidSizes.includes(next.ramSize)) next.ramSize = 24;
-    } else if (next.slotsCount === 3 && !tripleValidSizes.includes(next.ramSize)) next.slotsCount = next.ramSize >= 32 ? 4 : 2;
+    // 1. Запрет 1 слота для 12, 24, 48 ГБ (таких плашек нет)
+    if (TRIPLE_SIZES.includes(next.ramSize) && next.slotsCount === 1) next.slotsCount = 3;
+    // 2. 12 ГБ не может быть в 4 слота (минимум 4+4+4)
+    if (next.ramSize === 12 && next.slotsCount === 4) next.slotsCount = 3;
+    // 3. Если вручную выбрали 3 слота, но объем "обычный" (16, 32 и т.д.)
+    if (field.includes('slotsCount') && next.slotsCount === 3) {
+        if (!TRIPLE_SIZES.includes(next.ramSize)) next.ramSize = 24;
+    }
+    // 4. Сброс с 3 слотов, если объем стал обычным (например, переключили с 24 на 16)
+    if (next.slotsCount === 3 && !TRIPLE_SIZES.includes(next.ramSize)) next.slotsCount = next.ramSize >= 32 ? 4 : 2;
     return next;
 };
-const calculate = (conf)=>{
+/**
+ * Основной движок расчета таймингов
+ */ const calculate = (conf)=>{
     const { cpu, gen, profile, boardType, ramSize, slotsCount, isEcc, custom } = conf;
     const freq = cpu?.max || 1866;
     const freqData = (0, _timingsData.TIMINGS_BY_FREQ)[freq] || (0, _timingsData.TIMINGS_BY_FREQ)[1866];
@@ -28382,11 +28396,6 @@ const calculate = (conf)=>{
         tRCD += 1;
         tRP += 1;
     }
-    if (!isC && profile !== 'safe') {
-        tCL = Math.min(tCL, freqData.safe.tCL);
-        tRCD = Math.min(tRCD, freqData.safe.tRCD + (isEcc ? 1 : 0));
-        tRP = Math.min(tRP, freqData.safe.tRP + (isEcc ? 1 : 0));
-    }
     // 2. ВТОРИЧНЫЕ (mATX Guard)
     const isMatx = boardType === 'matx';
     const tRRD = isMatx ? Math.max(src.tRRD || 4, 6) : src.tRRD || 4;
@@ -28394,11 +28403,11 @@ const calculate = (conf)=>{
     let tWR = src.tWR || (gen === 'V2' ? 10 : 12);
     if (isMatx || profile === 'safe') tWR += 2;
     // 3. tRFC + Штрафы за канальность
-    const perStickSize = Math.max(4, Math.floor(ramSize / (slotsCount || 1)));
+    const perStickSize = Math.max(4, Math.floor(ramSize / slotsCount));
     const rfcGenData = (0, _timingsData.RFC_MODIFIERS)[gen] || (0, _timingsData.RFC_MODIFIERS).V4;
-    let sizeKey = perStickSize >= 64 ? 'gb64' : perStickSize >= 32 ? 'gb32' : perStickSize >= 16 ? 'gb16' : perStickSize >= 8 ? 'gb8' : 'gb4';
+    const sizeKey = perStickSize >= 64 ? 'gb64' : perStickSize >= 32 ? 'gb32' : perStickSize >= 16 ? 'gb16' : perStickSize >= 8 ? 'gb8' : 'gb4';
     const rfcSet = rfcGenData[sizeKey] || rfcGenData.gb16;
-    const rfcVals = rfcSet[boardType] || rfcSet;
+    const rfcVals = rfcSet[boardType] || rfcSet.atx || rfcSet;
     const baseFreq = {
         V2: 1866,
         V3: 2133,
@@ -28409,13 +28418,11 @@ const calculate = (conf)=>{
     const quadPenalty = slotsCount === 4 && !isMatx ? 1.04 : 1.0;
     const triplePenalty = slotsCount === 3 ? 1.02 : 1.0;
     const calcRFCValue = (k)=>{
-        let val = rfcVals[k] || rfcVals.balanced || 312;
-        if (perStickSize === 8 && k === 'balanced' && isMatx && freq === 2400) return 328;
-        // Применяем штрафы за ECC, Quad и Triple одновременно
+        const val = rfcVals[k] || rfcVals.balanced || 312;
         return Math.floor(val * ratio * (isEcc ? 1.08 : 1.0) * quadPenalty * triplePenalty);
     };
     const mainRfc = isU ? Math.floor(calcRFCValue('aggressive') * 0.92) : calcRFCValue(baseKey);
-    // Метка IDEAL
+    // Формирование строки tRFC с подсказкой IDEAL
     let tRFC_Result = `${mainRfc}`;
     if (!isC) {
         if (isU) tRFC_Result = `${mainRfc} (ULTRA)`;
@@ -28425,12 +28432,16 @@ const calculate = (conf)=>{
                 balanced: 'aggressive',
                 aggressive: 'min'
             }[profile] || 'min';
-            tRFC_Result = `${mainRfc} (IDEAL: ${Math.min(calcRFCValue(nextK), mainRfc)})`;
+            const best = calcRFCValue(nextK);
+            if (best < mainRfc) tRFC_Result = `${mainRfc} (IDEAL: ${best})`;
         }
     }
-    const channels = Math.min(slotsCount, 4);
+    // 4. КАНАЛЬНОСТЬ И ПРОПУСКНАЯ СПОСОБНОСТЬ
+    const channels = isMatx ? Math.min(slotsCount, 2) : Math.min(slotsCount, 4);
+    // Штраф за смешанные модули (например, 24 ГБ в 4 слотах = 8+8+4+4)
+    const isMixed = TRIPLE_SIZES.includes(ramSize) && slotsCount === 4;
+    const mixedPenalty = isMixed ? 0.96 : 1.0;
     return {
-        ...src,
         tCL,
         tRCD,
         tRP,
@@ -28441,11 +28452,10 @@ const calculate = (conf)=>{
         tFAW,
         tRFC: tRFC_Result,
         tREFI: ramSize >= 64 || profile === 'safe' ? 15600 : 32767,
-        // На ATX при 3+ планках или ECC — принудительно 2N
         tCR: profile === 'safe' || boardType === 'atx' && (slotsCount >= 3 || ramSize >= 64 || isEcc) ? '2N' : '1N',
         tCWL: gen === 'V2' ? tCL : tCL % 2 === 0 ? tCL : tCL - 1,
         totalRam: ramSize,
-        bandwidth: `${(freq * 8 * channels / 1000).toFixed(1)} GB/s`,
+        bandwidth: `${(freq * 8 * channels / 1000 * mixedPenalty).toFixed(1)} GB/s`,
         channelMode: channels === 4 ? 'QUAD' : channels === 3 ? 'TRIPLE' : channels === 2 ? 'DUAL' : 'SINGLE',
         voltage: isU ? '1.45v' : profile === 'safe' ? '1.20v' : '1.35v',
         latency: `${(tCL * 2000 / freq).toFixed(1)} ns`,
@@ -28461,13 +28471,14 @@ const useTimingEngine = (0, _zustand.create)((set)=>({
                 unlocked
             }),
         update: (patch)=>set((state)=>{
-                // Берем ключ первого измененного поля
                 const firstKey = Object.keys(patch)[0];
-                const nextConfig = validateConfig({
+                let nextConfig = {
                     ...state.config,
                     ...patch
-                }, firstKey);
+                };
+                // Автоматическая смена процессора при смене поколения
                 if (patch.gen) nextConfig.cpu = (0, _cpuData.CPU_MODELS)[patch.gen][0];
+                nextConfig = validateConfig(nextConfig, firstKey);
                 return {
                     config: nextConfig,
                     res: calculate(nextConfig)
