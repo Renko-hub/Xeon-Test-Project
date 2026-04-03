@@ -5,7 +5,7 @@ const Header = () => (
   <nav className={styles.navigationShell}>
     <div className={styles.navigationContainer}>
       {[
-        ['/ram', 'RAM Tool'],
+        ['/ram', 'RAM Calculator'],
         ['/power', 'Power Manager'],
         ['/fan', 'Fan Configuration'],
         ['/iio', 'IIO Configuration'],

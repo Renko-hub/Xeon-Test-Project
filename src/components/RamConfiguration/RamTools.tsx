@@ -1,52 +1,58 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Button from '../Button/Button';
 import InfoBlock from '../InfoBlock/InfoBlock';
 import { CPU_MODELS } from './data/cpuData';
 import { GEN_OPTIONS, RAM_SIZE_OPTIONS, SLOT_COUNT_OPTIONS, BOARD_TYPE_OPTIONS, Gen } from './data/timingsData';
-import { RamContext } from './data/timingEngine'; 
+import { useTimingEngine } from './data/timingEngine'; 
 
 const RamTools = () => {
-  const context = useContext(RamContext);
-
-  if (!context) return null; 
-
-  const { config, update, unlocked: isUnlocked } = context;
-  const prevUnlocked = useRef(isUnlocked);
+  const { config, update, unlocked } = useTimingEngine();
+  const prevUnlocked = useRef(unlocked);
 
   useEffect(() => {
-    if (!prevUnlocked.current && isUnlocked) {
-      update({ profile: 'ultra' });
-    }
-    if (!isUnlocked && config.profile === 'ultra') {
-      update({ profile: 'balanced' });
-    }
-    prevUnlocked.current = isUnlocked;
-  }, [isUnlocked, config.profile, update]);
+    if (!prevUnlocked.current && unlocked) update({ profile: 'ultra' });
+    if (prevUnlocked.current && !unlocked && config.profile === 'ultra') update({ profile: 'balanced' });
+    prevUnlocked.current = unlocked;
+  }, [unlocked, config.profile, update]);
 
-  const profiles = ['safe', 'balanced', 'aggressive', 'custom', ...(isUnlocked ? ['ultra'] : [])];
+  const profiles = ['safe', 'balanced', 'aggressive', 'custom', ...(unlocked ? ['ultra'] : [])];
 
-  const Group = ({ label, options, field, prefix = '' }: any) => (
-    <InfoBlock.Section>
-      <InfoBlock.Label>{label}</InfoBlock.Label>
-      <InfoBlock.Grid>
-        {options.map((v: any) => (
-          <Button 
-            key={v} 
-            type={prefix + v} 
-            isActive={config[field as keyof typeof config] === v} 
-            onClick={() => update({ [field]: v })} 
-          />
-        ))}
-      </InfoBlock.Grid>
-    </InfoBlock.Section>
-  );
+  const renderGroup = (label: string, options: any[], field: string, prefix = "", formatValue?: (v: any) => any) => {
+    // ФИКС: Скрываем 3 слота для неподходящих объемов
+    let visibleOptions = options;
+    if (field === 'slotsCount') {
+      const tripleValidSizes = [12, 24, 48];
+      if (!tripleValidSizes.includes(config.ramSize)) {
+        visibleOptions = options.filter(opt => opt !== 3);
+      }
+    }
+
+    return (
+      <InfoBlock.Section>
+        <InfoBlock.Label>{label}</InfoBlock.Label>
+        <InfoBlock.Grid>
+          {visibleOptions.map((v) => {
+            const val = formatValue ? formatValue(v) : v;
+            return (
+              <Button 
+                key={field + v.toString()} 
+                type={prefix + v} 
+                isActive={config[field] === val} 
+                onClick={() => update({ [field]: val })} 
+              />
+            );
+          })}
+        </InfoBlock.Grid>
+      </InfoBlock.Section>
+    );
+  };
 
   return (
     <div className="ram-tools">
-      <Group label="ПОКОЛЕНИЕ ПРОЦЕССОРА:" options={GEN_OPTIONS} field="gen" />
+      {renderGroup("ПОКОЛЕНИЕ:", GEN_OPTIONS, "gen")}
 
       <InfoBlock.Section>
-        <InfoBlock.Label>МОДЕЛЬ:</InfoBlock.Label>
+        <InfoBlock.Label>МОДЕЛЬ ПРОЦЕССОРА:</InfoBlock.Label>
         <InfoBlock.Select 
           value={config.cpu?.name} 
           onChange={(e: any) => update({ 
@@ -59,10 +65,11 @@ const RamTools = () => {
         </InfoBlock.Select>
       </InfoBlock.Section>
 
-      <Group label="ОБЩИЙ ОБЪЕМ (ГБ):" options={RAM_SIZE_OPTIONS} field="ramSize" prefix="size_" />
-      <Group label="ЗАНЯТО СЛОТОВ:" options={SLOT_COUNT_OPTIONS} field="slotsCount" prefix="slots_" />
-      <Group label="ФОРМ-ФАКТОР МАТЕРИНКИ:" options={BOARD_TYPE_OPTIONS} field="boardType" />
-      <Group label="ПРЕСЕТЫ:" options={profiles} field="profile" />
+      {renderGroup("ТИП ПАМЯТИ:", ['desktop', 'ecc'], "isEcc", "", (v) => v === 'ecc')}
+      {renderGroup("ОБЪЕМ (ГБ):", RAM_SIZE_OPTIONS, "ramSize", "size_")}
+      {renderGroup("СЛОТОВ:", SLOT_COUNT_OPTIONS, "slotsCount", "slots_")}
+      {renderGroup("МАТЕРИНКА:", BOARD_TYPE_OPTIONS, "boardType")}
+      {renderGroup("ПРЕСЕТЫ:", profiles, "profile")}
     </div>
   );
 };
