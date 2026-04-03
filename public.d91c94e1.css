@@ -626,13 +626,11 @@
 
 .JXsdbW_fanBtn {
   color: #fff;
-  cursor: pointer;
   background: #252525;
   border: 1px solid #333;
   border-radius: 8px;
   align-items: center;
   padding: 10px 14px;
-  transition: background .2s;
   display: flex;
 }
 

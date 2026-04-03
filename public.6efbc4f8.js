@@ -24881,11 +24881,11 @@ const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
             children: [
                 [
                     '/ram',
-                    'RAM Calculator'
+                    'Xeon Ram Tool'
                 ],
                 [
                     '/power',
-                    'Power Manager'
+                    'Power Management'
                 ],
                 [
                     '/fan',
@@ -27550,7 +27550,7 @@ const BUTTONS = [
         theme: 'info',
         variant: 'outline'
     },
-    // Поколения
+    // Поколения (DDR / Прочие)
     {
         type: 'v2',
         label: 'V2',
@@ -27565,6 +27565,33 @@ const BUTTONS = [
         type: 'v4',
         label: 'V4',
         theme: 'metallic'
+    },
+    // РЕЖИМ ШИНЫ PCI-E (Те самые кнопки с твоего скрина)
+    {
+        type: 'gen 2',
+        label: 'GEN 2',
+        theme: 'info'
+    },
+    {
+        type: 'gen 3',
+        label: 'GEN 3',
+        theme: 'info'
+    },
+    {
+        type: 'gen 4',
+        label: 'GEN 4',
+        theme: 'info'
+    },
+    // Алгоритмы / Системные (Тоже синие)
+    {
+        type: 'mbr',
+        label: 'MBR',
+        theme: 'info'
+    },
+    {
+        type: 'gpt',
+        label: 'GPT',
+        theme: 'info'
     },
     // Тип памяти
     {
@@ -27802,9 +27829,9 @@ const RamTools = ()=>{
                 'desktop',
                 'ecc'
             ], "isEcc", "", (v)=>v === 'ecc'),
-            renderGroup("\u041E\u0411\u042A\u0415\u041C (\u0413\u0411):", (0, _timingsData.RAM_SIZE_OPTIONS), "ramSize", "size_"),
-            renderGroup("\u0421\u041B\u041E\u0422\u041E\u0412:", (0, _timingsData.SLOT_COUNT_OPTIONS), "slotsCount", "slots_"),
-            renderGroup("\u041C\u0410\u0422\u0415\u0420\u0418\u041D\u041A\u0410:", (0, _timingsData.BOARD_TYPE_OPTIONS), "boardType"),
+            renderGroup("\u0412\u0421\u0415\u0413\u041E \u041F\u0410\u041C\u042F\u0422\u0418 \u0423\u0421\u0422\u0410\u041D\u041E\u0412\u041B\u0415\u041D\u041E:", (0, _timingsData.RAM_SIZE_OPTIONS), "ramSize", "size_"),
+            renderGroup("\u0417\u0410\u041D\u042F\u0422\u041E \u0421\u041B\u041E\u0422\u041E\u0412:", (0, _timingsData.SLOT_COUNT_OPTIONS), "slotsCount", "slots_"),
+            renderGroup("\u041C\u0410\u0422\u0415\u0420\u0418\u041D\u0421\u041A\u0410\u042F \u041F\u041B\u0410\u0422\u0410:", (0, _timingsData.BOARD_TYPE_OPTIONS), "boardType"),
             renderGroup("\u041F\u0420\u0415\u0421\u0415\u0422\u042B:", profiles, "profile")
         ]
     }, void 0, true, {
@@ -28111,17 +28138,17 @@ const BOARD_TYPE_OPTIONS = [
     'matx'
 ];
 const INITIAL_CONFIG = {
-    gen: 'V4',
-    profile: 'balanced',
+    gen: 'V2',
+    profile: 'safe',
     boardType: 'atx',
-    ramSize: 16,
-    slotsCount: 2,
-    isEcc: true,
-    cpu: (0, _cpuData.CPU_MODELS)['V4'][0],
+    ramSize: 4,
+    slotsCount: 1,
+    isEcc: false,
+    cpu: (0, _cpuData.CPU_MODELS)['V2'][0],
     custom: {
-        CL: '15',
-        RCD: '15',
-        RP: '15'
+        CL: '9',
+        RCD: '9',
+        RP: '9'
     }
 };
 const TIMINGS_BY_FREQ = {
@@ -28627,12 +28654,9 @@ var _timingEngine = require("./data/timingEngine");
 var _s = $RefreshSig$();
 const RamBios = ()=>{
     _s();
-    // Используем хук с исправленным названием (useTimingEngine)
     const { config, res, updateCustomTiming } = (0, _timingEngine.useTimingEngine)();
     if (!res) return null;
     const isUltra = config.profile === 'ultra';
-    // Формируем список строк для BIOS. 
-    // Все значения теперь приходят из пересчитанного res в timingEngine
     const rows = [
         {
             label: "DIMM profile",
@@ -28705,18 +28729,17 @@ const RamBios = ()=>{
             value: res.tCWL
         }
     ];
-    // В заголовке выводим важную техническую инфо: Частоту, Объем, Канальность и Скорость
     const biosTitle = `BIOS: ${config.cpu?.max || 2400}MHZ \u{2014} ${res.totalRam}GB ${res.channelMode} [${res.bandwidth}]`;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
         title: biosTitle,
-        path: "IntelRCSetup > Memory Configuration",
+        path: "IntelRCSetup > Memory Configuration > Memory Timings & Voltage",
         config: config,
         onUpdate: updateCustomTiming,
         rows: rows,
         isUltra: isUltra
     }, void 0, false, {
         fileName: "src/components/RamConfiguration/RamBios.tsx",
-        lineNumber: 38,
+        lineNumber: 34,
         columnNumber: 5
     }, undefined);
 };
@@ -29398,7 +29421,7 @@ const PowerBios = ({ gen })=>{
     ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
         title: "CPU C STATE CONTROL",
-        path: "Advanced \u2192 Power Management \u2192 CPU C State",
+        path: "Advanced > Power Management Configuration > CPU C State Control",
         rows: rows
     }, void 0, false, {
         fileName: "src/components/PowerConfiguration/PowerBios.tsx",
@@ -29669,7 +29692,7 @@ const FanBios = ()=>{
     ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
         title: "SMART FAN FUNCTION",
-        path: "Advanced \u2192 Smart Fan Function",
+        path: "Advanced > Smart Fan Function",
         rows: rows
     }, void 0, false, {
         fileName: "src/components/FanConfiguration/FanBios.tsx",
@@ -30116,7 +30139,7 @@ const IIOBios = ({ pciGen })=>{
     ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
         title: "IIO0 CONFIGURATION",
-        path: "IntelRCSetup \u2192 IIO Configuration",
+        path: "IntelRCSetup > IIO Configuration > IIO0 Configuration",
         rows: rows
     }, void 0, false, {
         fileName: "src/components/IIOConfiguration/IIOBios.tsx",
@@ -30530,7 +30553,7 @@ const CSMBios = ({ config })=>{
     ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
         title: "CSM CONFIGURATION",
-        path: "Advanced \u2192 CSM Configuration",
+        path: "Advanced > CSM Configuration",
         rows: rows
     }, void 0, false, {
         fileName: "src/components/CSMConfiguration/CSMBios.tsx",
@@ -30955,7 +30978,7 @@ const PCIBios = ()=>{
     ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
         title: "PCI SUBSYSTEM SETTINGS",
-        path: "Advanced \u2192 PCI Subsystem Setting",
+        path: "Advanced > PCI Subsystem Setting",
         rows: rows
     }, void 0, false, {
         fileName: "src/components/PCIConfiguration/PCIBios.tsx",
