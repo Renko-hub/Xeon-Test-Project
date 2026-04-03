@@ -24881,7 +24881,7 @@ const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
             children: [
                 [
                     '/ram',
-                    'RAM Tool'
+                    'RAM Calculator'
                 ],
                 [
                     '/power',
@@ -27240,48 +27240,40 @@ var _ramBios = require("./RamBios");
 var _ramBiosDefault = parcelHelpers.interopDefault(_ramBios);
 var _ultraWarningModal = require("./UltraWarningModal/UltraWarningModal");
 var _ultraWarningModalDefault = parcelHelpers.interopDefault(_ultraWarningModal);
-var _timingEngine = require("./data/timingEngine");
-var _timingEngineDefault = parcelHelpers.interopDefault(_timingEngine);
-const RamConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _timingEngineDefault.default), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-            className: "manager-layout",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default), {
-                    title: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ultraWarningModalDefault.default), {}, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                        lineNumber: 13,
-                        columnNumber: 16
-                    }, void 0),
-                    toolsLabel: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0410 \u041F\u0410\u041C\u042F\u0422\u0418",
-                    infoNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramInfoDefault.default), {}, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                        lineNumber: 15,
-                        columnNumber: 19
-                    }, void 0),
-                    toolsNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramToolsDefault.default), {}, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                        lineNumber: 16,
-                        columnNumber: 20
-                    }, void 0)
-                }, void 0, false, {
+const RamConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
+        className: "manager-layout",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default), {
+                title: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ultraWarningModalDefault.default), {}, void 0, false, {
                     fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                    lineNumber: 12,
-                    columnNumber: 7
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramBiosDefault.default), {}, void 0, false, {
+                    lineNumber: 11,
+                    columnNumber: 14
+                }, void 0),
+                toolsLabel: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0410 \u041F\u0410\u041C\u042F\u0422\u0418",
+                infoNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramInfoDefault.default), {}, void 0, false, {
                     fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                    lineNumber: 18,
-                    columnNumber: 7
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-            lineNumber: 11,
-            columnNumber: 5
-        }, undefined)
-    }, void 0, false, {
+                    lineNumber: 13,
+                    columnNumber: 17
+                }, void 0),
+                toolsNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramToolsDefault.default), {}, void 0, false, {
+                    fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
+                    lineNumber: 14,
+                    columnNumber: 18
+                }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
+                lineNumber: 10,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramBiosDefault.default), {}, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
+                lineNumber: 16,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-        lineNumber: 10,
+        lineNumber: 9,
         columnNumber: 3
     }, undefined);
 _c = RamConfiguration;
@@ -27294,7 +27286,7 @@ $RefreshReg$(_c, "RamConfiguration");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","./RamTools":"jxHKH","./RamInfo":"cUeEy","./RamBios":"a06IC","./UltraWarningModal/UltraWarningModal":"lUMXS","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./data/timingEngine":"8QKzL"}],"xpgGa":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","./RamTools":"jxHKH","./RamInfo":"cUeEy","./RamBios":"a06IC","./UltraWarningModal/UltraWarningModal":"lUMXS","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"xpgGa":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$81e1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$81e1.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27521,6 +27513,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "BUTTONS", ()=>BUTTONS);
 const BUTTONS = [
+    // Пресеты
     {
         type: 'safe',
         label: "\u0411\u0415\u0417\u041E\u041F\u0410\u0421\u041D\u042B\u0419",
@@ -27557,16 +27550,7 @@ const BUTTONS = [
         theme: 'info',
         variant: 'outline'
     },
-    {
-        type: 'mbr',
-        label: 'MBR',
-        theme: 'info'
-    },
-    {
-        type: 'gpt',
-        label: 'GPT',
-        theme: 'info'
-    },
+    // Поколения
     {
         type: 'v2',
         label: 'V2',
@@ -27582,27 +27566,18 @@ const BUTTONS = [
         label: 'V4',
         theme: 'metallic'
     },
-    {
-        type: 'gen 2',
-        label: 'GEN 2',
-        theme: 'info'
-    },
-    {
-        type: 'gen 3',
-        label: 'GEN 3',
-        theme: 'info'
-    },
+    // Тип памяти
     {
         type: 'ecc',
         label: 'ECC REG',
-        theme: 'safe'
+        theme: 'optimal'
     },
     {
         type: 'desktop',
         label: 'DESKTOP',
-        theme: 'safe'
+        theme: 'optimal'
     },
-    // Память (RamTools)
+    // ОБЪЕМ
     {
         type: 'size_4',
         label: "4\u0413\u0411",
@@ -27614,8 +27589,18 @@ const BUTTONS = [
         theme: 'safe'
     },
     {
+        type: 'size_12',
+        label: "12\u0413\u0411",
+        theme: 'safe'
+    },
+    {
         type: 'size_16',
         label: "16\u0413\u0411",
+        theme: 'safe'
+    },
+    {
+        type: 'size_24',
+        label: "24\u0413\u0411",
         theme: 'safe'
     },
     {
@@ -27624,11 +27609,16 @@ const BUTTONS = [
         theme: 'safe'
     },
     {
+        type: 'size_48',
+        label: "48\u0413\u0411",
+        theme: 'safe'
+    },
+    {
         type: 'size_64',
         label: "64\u0413\u0411",
         theme: 'safe'
     },
-    // Слоты и форм-фактор
+    // СЛОТЫ
     {
         type: 'slots_1',
         label: '1',
@@ -27640,10 +27630,16 @@ const BUTTONS = [
         theme: 'info'
     },
     {
+        type: 'slots_3',
+        label: '3',
+        theme: 'info'
+    },
+    {
         type: 'slots_4',
         label: '4',
         theme: 'info'
     },
+    // Материнка
     {
         type: 'atx',
         label: 'ATX',
@@ -27694,20 +27690,18 @@ var _timingEngine = require("./data/timingEngine");
 var _s = $RefreshSig$();
 const RamTools = ()=>{
     _s();
-    const context = (0, _react.useContext)((0, _timingEngine.RamContext));
-    if (!context) return null;
-    const { config, update, unlocked: isUnlocked } = context;
-    const prevUnlocked = (0, _react.useRef)(isUnlocked);
+    const { config, update, unlocked } = (0, _timingEngine.useTimingEngine)();
+    const prevUnlocked = (0, _react.useRef)(unlocked);
     (0, _react.useEffect)(()=>{
-        if (!prevUnlocked.current && isUnlocked) update({
+        if (!prevUnlocked.current && unlocked) update({
             profile: 'ultra'
         });
-        if (!isUnlocked && config.profile === 'ultra') update({
+        if (prevUnlocked.current && !unlocked && config.profile === 'ultra') update({
             profile: 'balanced'
         });
-        prevUnlocked.current = isUnlocked;
+        prevUnlocked.current = unlocked;
     }, [
-        isUnlocked,
+        unlocked,
         config.profile,
         update
     ]);
@@ -27716,61 +27710,68 @@ const RamTools = ()=>{
         'balanced',
         'aggressive',
         'custom',
-        ...isUnlocked ? [
+        ...unlocked ? [
             'ultra'
         ] : []
     ];
-    const Group = ({ label, options, field, prefix = '' })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
+    const renderGroup = (label, options, field, prefix = "", formatValue)=>{
+        // ФИКС: Скрываем 3 слота для неподходящих объемов
+        let visibleOptions = options;
+        if (field === 'slotsCount') {
+            const tripleValidSizes = [
+                12,
+                24,
+                48
+            ];
+            if (!tripleValidSizes.includes(config.ramSize)) visibleOptions = options.filter((opt)=>opt !== 3);
+        }
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Label, {
                     children: label
                 }, void 0, false, {
                     fileName: "src/components/RamConfiguration/RamTools.tsx",
-                    lineNumber: 30,
-                    columnNumber: 7
+                    lineNumber: 32,
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Grid, {
-                    children: options.map((v)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                    children: visibleOptions.map((v)=>{
+                        const val = formatValue ? formatValue(v) : v;
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                             type: prefix + v,
-                            isActive: config[field] === v,
+                            isActive: config[field] === val,
                             onClick: ()=>update({
-                                    [field]: v
+                                    [field]: val
                                 })
-                        }, v, false, {
+                        }, field + v.toString(), false, {
                             fileName: "src/components/RamConfiguration/RamTools.tsx",
-                            lineNumber: 33,
-                            columnNumber: 11
-                        }, undefined))
+                            lineNumber: 37,
+                            columnNumber: 15
+                        }, undefined);
+                    })
                 }, void 0, false, {
                     fileName: "src/components/RamConfiguration/RamTools.tsx",
-                    lineNumber: 31,
-                    columnNumber: 7
+                    lineNumber: 33,
+                    columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/RamConfiguration/RamTools.tsx",
-            lineNumber: 29,
-            columnNumber: 5
+            lineNumber: 31,
+            columnNumber: 7
         }, undefined);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "ram-tools",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Group, {
-                label: "\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415 \u041F\u0420\u041E\u0426\u0415\u0421\u0421\u041E\u0420\u0410:",
-                options: (0, _timingsData.GEN_OPTIONS),
-                field: "gen"
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools.tsx",
-                lineNumber: 46,
-                columnNumber: 7
-            }, undefined),
+            renderGroup("\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415:", (0, _timingsData.GEN_OPTIONS), "gen"),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Label, {
-                        children: "\u041C\u041E\u0414\u0415\u041B\u042C:"
+                        children: "\u041C\u041E\u0414\u0415\u041B\u042C \u041F\u0420\u041E\u0426\u0415\u0421\u0421\u041E\u0420\u0410:"
                     }, void 0, false, {
                         fileName: "src/components/RamConfiguration/RamTools.tsx",
-                        lineNumber: 49,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Select, {
@@ -27783,66 +27784,40 @@ const RamTools = ()=>{
                                 children: m.name
                             }, m.name, false, {
                                 fileName: "src/components/RamConfiguration/RamTools.tsx",
-                                lineNumber: 57,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/RamConfiguration/RamTools.tsx",
-                        lineNumber: 50,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RamConfiguration/RamTools.tsx",
-                lineNumber: 48,
+                lineNumber: 54,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Group, {
-                label: "\u041E\u0411\u0429\u0418\u0419 \u041E\u0411\u042A\u0415\u041C (\u0413\u0411):",
-                options: (0, _timingsData.RAM_SIZE_OPTIONS),
-                field: "ramSize",
-                prefix: "size_"
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools.tsx",
-                lineNumber: 62,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Group, {
-                label: "\u0417\u0410\u041D\u042F\u0422\u041E \u0421\u041B\u041E\u0422\u041E\u0412:",
-                options: (0, _timingsData.SLOT_COUNT_OPTIONS),
-                field: "slotsCount",
-                prefix: "slots_"
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools.tsx",
-                lineNumber: 63,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Group, {
-                label: "\u0424\u041E\u0420\u041C-\u0424\u0410\u041A\u0422\u041E\u0420 \u041C\u0410\u0422\u0415\u0420\u0418\u041D\u041A\u0418:",
-                options: (0, _timingsData.BOARD_TYPE_OPTIONS),
-                field: "boardType"
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools.tsx",
-                lineNumber: 64,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Group, {
-                label: "\u041F\u0420\u0415\u0421\u0415\u0422\u042B:",
-                options: profiles,
-                field: "profile"
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools.tsx",
-                lineNumber: 65,
-                columnNumber: 7
-            }, undefined)
+            renderGroup("\u0422\u0418\u041F \u041F\u0410\u041C\u042F\u0422\u0418:", [
+                'desktop',
+                'ecc'
+            ], "isEcc", "", (v)=>v === 'ecc'),
+            renderGroup("\u041E\u0411\u042A\u0415\u041C (\u0413\u0411):", (0, _timingsData.RAM_SIZE_OPTIONS), "ramSize", "size_"),
+            renderGroup("\u0421\u041B\u041E\u0422\u041E\u0412:", (0, _timingsData.SLOT_COUNT_OPTIONS), "slotsCount", "slots_"),
+            renderGroup("\u041C\u0410\u0422\u0415\u0420\u0418\u041D\u041A\u0410:", (0, _timingsData.BOARD_TYPE_OPTIONS), "boardType"),
+            renderGroup("\u041F\u0420\u0415\u0421\u0415\u0422\u042B:", profiles, "profile")
         ]
     }, void 0, true, {
         fileName: "src/components/RamConfiguration/RamTools.tsx",
-        lineNumber: 45,
+        lineNumber: 51,
         columnNumber: 5
     }, undefined);
 };
-_s(RamTools, "ScrjCGGz79rN2xhtaj+ID442D9Q=");
+_s(RamTools, "yz0gtWNlzrIeuCXb8tx9ROBHE/8=", false, function() {
+    return [
+        (0, _timingEngine.useTimingEngine)
+    ];
+});
 _c = RamTools;
 exports.default = RamTools;
 var _c;
@@ -27853,7 +27828,7 @@ $RefreshReg$(_c, "RamTools");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","../InfoBlock/InfoBlock":"xpgGa","./data/cpuData":"jogp5","./data/timingsData":"5c8Ij","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./data/timingEngine":"8QKzL"}],"jogp5":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","../InfoBlock/InfoBlock":"xpgGa","./data/cpuData":"jogp5","./data/timingsData":"5c8Ij","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./data/timingEngine":"g2O1J"}],"jogp5":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CPU_MODELS", ()=>CPU_MODELS);
@@ -28007,11 +27982,11 @@ exports.default = CPU_MODELS;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "RFC_MODIFIERS", ()=>RFC_MODIFIERS);
-parcelHelpers.export(exports, "INITIAL_CONFIG", ()=>INITIAL_CONFIG);
 parcelHelpers.export(exports, "GEN_OPTIONS", ()=>GEN_OPTIONS);
 parcelHelpers.export(exports, "RAM_SIZE_OPTIONS", ()=>RAM_SIZE_OPTIONS);
 parcelHelpers.export(exports, "SLOT_COUNT_OPTIONS", ()=>SLOT_COUNT_OPTIONS);
 parcelHelpers.export(exports, "BOARD_TYPE_OPTIONS", ()=>BOARD_TYPE_OPTIONS);
+parcelHelpers.export(exports, "INITIAL_CONFIG", ()=>INITIAL_CONFIG);
 parcelHelpers.export(exports, "TIMINGS_BY_FREQ", ()=>TIMINGS_BY_FREQ);
 var _cpuData = require("./cpuData");
 const DDR4_RFC = {
@@ -28088,18 +28063,6 @@ const DDR4_RFC = {
 };
 const RFC_MODIFIERS = {
     V2: {
-        gb64: {
-            safe: 900,
-            balanced: 820,
-            aggressive: 760,
-            min: 700
-        },
-        gb32: {
-            safe: 650,
-            balanced: 580,
-            aggressive: 520,
-            min: 480
-        },
         gb16: {
             safe: 344,
             balanced: 312,
@@ -28122,19 +28085,6 @@ const RFC_MODIFIERS = {
     V3: DDR4_RFC,
     V4: DDR4_RFC
 };
-const INITIAL_CONFIG = {
-    gen: 'V4',
-    profile: 'balanced',
-    boardType: 'atx',
-    ramSize: 8,
-    slotsCount: 2,
-    cpu: (0, _cpuData.CPU_MODELS)['V4'][0],
-    custom: {
-        CL: '15',
-        RCD: '15',
-        RP: '15'
-    }
-};
 const GEN_OPTIONS = [
     'V2',
     'V3',
@@ -28143,19 +28093,37 @@ const GEN_OPTIONS = [
 const RAM_SIZE_OPTIONS = [
     4,
     8,
+    12,
     16,
+    24,
     32,
+    48,
     64
 ];
 const SLOT_COUNT_OPTIONS = [
     1,
     2,
+    3,
     4
 ];
 const BOARD_TYPE_OPTIONS = [
     'atx',
     'matx'
 ];
+const INITIAL_CONFIG = {
+    gen: 'V4',
+    profile: 'balanced',
+    boardType: 'atx',
+    ramSize: 16,
+    slotsCount: 2,
+    isEcc: true,
+    cpu: (0, _cpuData.CPU_MODELS)['V4'][0],
+    custom: {
+        CL: '15',
+        RCD: '15',
+        RP: '15'
+    }
+};
 const TIMINGS_BY_FREQ = {
     1333: {
         safe: {
@@ -28168,8 +28136,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 6,
             tWTR: 6,
             tFAW: 20,
-            tCWL: 9,
-            tREFI: 15600
+            tCWL: 9
         },
         balanced: {
             tCL: 7,
@@ -28181,8 +28148,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 4,
             tWTR: 4,
             tFAW: 16,
-            tCWL: 7,
-            tREFI: 32767
+            tCWL: 7
         },
         aggressive: {
             tCL: 6,
@@ -28194,8 +28160,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 4,
             tWTR: 4,
             tFAW: 16,
-            tCWL: 6,
-            tREFI: 32767
+            tCWL: 6
         }
     },
     1600: {
@@ -28209,8 +28174,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 7,
             tWTR: 7,
             tFAW: 20,
-            tCWL: 10,
-            tREFI: 15600
+            tCWL: 10
         },
         balanced: {
             tCL: 9,
@@ -28222,8 +28186,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 6,
             tWTR: 6,
             tFAW: 16,
-            tCWL: 9,
-            tREFI: 32767
+            tCWL: 9
         },
         aggressive: {
             tCL: 8,
@@ -28235,8 +28198,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 5,
             tWTR: 4,
             tFAW: 16,
-            tCWL: 8,
-            tREFI: 32767
+            tCWL: 8
         }
     },
     1866: {
@@ -28250,8 +28212,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 8,
             tWTR: 8,
             tFAW: 24,
-            tCWL: 11,
-            tREFI: 15600
+            tCWL: 11
         },
         balanced: {
             tCL: 11,
@@ -28263,8 +28224,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 7,
             tWTR: 7,
             tFAW: 20,
-            tCWL: 10,
-            tREFI: 32767
+            tCWL: 10
         },
         aggressive: {
             tCL: 10,
@@ -28276,8 +28236,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 6,
             tWTR: 5,
             tFAW: 16,
-            tCWL: 9,
-            tREFI: 32767
+            tCWL: 9
         }
     },
     2133: {
@@ -28291,8 +28250,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 10,
             tWTR: 10,
             tFAW: 28,
-            tCWL: 13,
-            tREFI: 15600
+            tCWL: 13
         },
         balanced: {
             tCL: 13,
@@ -28304,8 +28262,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 8,
             tWTR: 8,
             tFAW: 24,
-            tCWL: 13,
-            tREFI: 32767
+            tCWL: 13
         },
         aggressive: {
             tCL: 12,
@@ -28317,8 +28274,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 7,
             tWTR: 7,
             tFAW: 20,
-            tCWL: 12,
-            tREFI: 32767
+            tCWL: 12
         }
     },
     2400: {
@@ -28332,8 +28288,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 10,
             tWTR: 10,
             tFAW: 28,
-            tCWL: 14,
-            tREFI: 15600
+            tCWL: 14
         },
         balanced: {
             tCL: 13,
@@ -28345,8 +28300,7 @@ const TIMINGS_BY_FREQ = {
             tRTP: 8,
             tWTR: 8,
             tFAW: 24,
-            tCWL: 13,
-            tREFI: 32767
+            tCWL: 13
         },
         aggressive: {
             tCL: 12,
@@ -28358,130 +28312,234 @@ const TIMINGS_BY_FREQ = {
             tRTP: 6,
             tWTR: 6,
             tFAW: 16,
-            tCWL: 12,
-            tREFI: 32767
+            tCWL: 12
         }
     }
 };
 
-},{"./cpuData":"jogp5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8QKzL":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$f50e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$f50e.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f50e.prelude(module);
-
-try {
+},{"./cpuData":"jogp5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"g2O1J":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "RamContext", ()=>RamContext);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
+parcelHelpers.export(exports, "useTimingEngine", ()=>useTimingEngine);
+var _zustand = require("zustand");
 var _timingsData = require("./timingsData");
 var _cpuData = require("./cpuData");
-var _s = $RefreshSig$();
-const RamContext = /*#__PURE__*/ (0, _react.createContext)(null);
+const validateConfig = (conf, lastFieldUpdated)=>{
+    const next = {
+        ...conf
+    };
+    const tripleValidSizes = [
+        12,
+        24,
+        48
+    ];
+    const field = lastFieldUpdated || "";
+    if (field.includes('ramSize') && tripleValidSizes.includes(next.ramSize)) next.slotsCount = 3;
+    else if (field.includes('slotsCount') && next.slotsCount === 3) {
+        if (!tripleValidSizes.includes(next.ramSize)) next.ramSize = 24;
+    } else if (next.slotsCount === 3 && !tripleValidSizes.includes(next.ramSize)) next.slotsCount = next.ramSize >= 32 ? 4 : 2;
+    return next;
+};
 const calculate = (conf)=>{
-    const { cpu, gen, profile, boardType, ramSize, slotsCount, custom } = conf;
-    if (!cpu || !(0, _timingsData.TIMINGS_BY_FREQ)[cpu.max]) return null;
+    const { cpu, gen, profile, boardType, ramSize, slotsCount, isEcc, custom } = conf;
+    const freq = cpu?.max || 1866;
+    const freqData = (0, _timingsData.TIMINGS_BY_FREQ)[freq] || (0, _timingsData.TIMINGS_BY_FREQ)[1866];
     const isU = profile === 'ultra', isC = profile === 'custom';
     const baseKey = isU || isC ? 'aggressive' : profile;
-    const src = (0, _timingsData.TIMINGS_BY_FREQ)[cpu.max][baseKey] || (0, _timingsData.TIMINGS_BY_FREQ)[cpu.max].balanced;
-    let tCL = isC ? +custom.CL : isU ? src.tCL - 1 : src.tCL;
-    let tRCD = isC ? +custom.RCD : isU ? src.tRCD - 1 : src.tRCD;
-    let tRP = isC ? +custom.RP : isU ? src.tRP - 1 : src.tRP;
-    if (gen === 'V4' && cpu.max >= 2400 && !isU && cpu.name.match(/2667|2690/)) tRCD = Math.max(tRCD, 13);
-    const tRAS = tCL + tRCD + 4;
-    const channels = Math.min(slotsCount, 4);
-    const rfcSet = (0, _timingsData.RFC_MODIFIERS)[gen][`gb${ramSize / slotsCount}`] || (0, _timingsData.RFC_MODIFIERS)[gen].gb16;
+    const src = freqData[baseKey] || freqData.balanced;
+    // 1. ПЕРВИЧНЫЕ ТАЙМИНГИ
+    let tCL = isC ? Math.max(6, Number(custom.CL)) : isU ? src.tCL - 1 : src.tCL;
+    let tRCD = isC ? Math.max(6, Number(custom.RCD)) : isU ? src.tRCD - 1 : src.tRCD;
+    let tRP = isC ? Math.max(6, Number(custom.RP)) : isU ? src.tRP - 1 : src.tRP;
+    if (isEcc && !isC && profile !== 'safe') {
+        tRCD += 1;
+        tRP += 1;
+    }
+    if (!isC && profile !== 'safe') {
+        tCL = Math.min(tCL, freqData.safe.tCL);
+        tRCD = Math.min(tRCD, freqData.safe.tRCD + (isEcc ? 1 : 0));
+        tRP = Math.min(tRP, freqData.safe.tRP + (isEcc ? 1 : 0));
+    }
+    // 2. ВТОРИЧНЫЕ (mATX Guard)
+    const isMatx = boardType === 'matx';
+    const tRRD = isMatx ? Math.max(src.tRRD || 4, 6) : src.tRRD || 4;
+    const tFAW = isMatx ? Math.max(src.tFAW || 16, 24) : src.tFAW || 16;
+    let tWR = src.tWR || (gen === 'V2' ? 10 : 12);
+    if (isMatx || profile === 'safe') tWR += 2;
+    // 3. tRFC + Штрафы за канальность
+    const perStickSize = Math.max(4, Math.floor(ramSize / (slotsCount || 1)));
+    const rfcGenData = (0, _timingsData.RFC_MODIFIERS)[gen] || (0, _timingsData.RFC_MODIFIERS).V4;
+    let sizeKey = perStickSize >= 64 ? 'gb64' : perStickSize >= 32 ? 'gb32' : perStickSize >= 16 ? 'gb16' : perStickSize >= 8 ? 'gb8' : 'gb4';
+    const rfcSet = rfcGenData[sizeKey] || rfcGenData.gb16;
     const rfcVals = rfcSet[boardType] || rfcSet;
-    const ratio = cpu.max / (({
+    const baseFreq = {
         V2: 1866,
         V3: 2133,
         V4: 2400
-    })[gen] || 2400);
-    const getRfc = (p)=>Math.floor((rfcVals[p] || rfcVals.min || 328) * ratio);
-    const next = {
-        safe: 'balanced',
-        balanced: 'aggressive',
-        aggressive: 'min'
-    }[profile] || 'min';
-    const bandwidth = (cpu.max * 8 * channels / 1000).toFixed(1) + ' GB/s';
+    }[gen] || 2400;
+    const ratio = freq / baseFreq;
+    // Штрафы: Quad (4%) и Triple (2%)
+    const quadPenalty = slotsCount === 4 && !isMatx ? 1.04 : 1.0;
+    const triplePenalty = slotsCount === 3 ? 1.02 : 1.0;
+    const calcRFCValue = (k)=>{
+        let val = rfcVals[k] || rfcVals.balanced || 312;
+        if (perStickSize === 8 && k === 'balanced' && isMatx && freq === 2400) return 328;
+        // Применяем штрафы за ECC, Quad и Triple одновременно
+        return Math.floor(val * ratio * (isEcc ? 1.08 : 1.0) * quadPenalty * triplePenalty);
+    };
+    const mainRfc = isU ? Math.floor(calcRFCValue('aggressive') * 0.92) : calcRFCValue(baseKey);
+    // Метка IDEAL
+    let tRFC_Result = `${mainRfc}`;
+    if (!isC) {
+        if (isU) tRFC_Result = `${mainRfc} (ULTRA)`;
+        else {
+            const nextK = {
+                safe: 'balanced',
+                balanced: 'aggressive',
+                aggressive: 'min'
+            }[profile] || 'min';
+            tRFC_Result = `${mainRfc} (IDEAL: ${Math.min(calcRFCValue(nextK), mainRfc)})`;
+        }
+    }
+    const channels = Math.min(slotsCount, 4);
     return {
         ...src,
         tCL,
         tRCD,
         tRP,
-        tRAS,
-        totalRam: ramSize,
-        bandwidth,
-        tRFC: isU ? `${Math.floor(getRfc('aggressive') * 0.9)} (ULTRA)` : isC ? `${getRfc('aggressive')}` : `${getRfc(baseKey)} (IDEAL: ${getRfc(next)})`,
-        voltage: isU ? '1.45v' : profile === 'safe' ? '1.20v' : '1.35v',
-        tREFI: isU ? 65535 : ramSize >= 64 ? 15600 : 32767,
-        latency: `${(tCL * 2000 / cpu.max).toFixed(1)} ns`,
-        channelMode: channels === 4 ? 'QUAD' : channels === 2 ? 'DUAL' : 'SINGLE',
-        tCR: channels === 4 || ramSize >= 64 || profile === 'safe' ? '2N' : '1N',
+        tRAS: tCL + tRCD + 4,
+        tRC: tCL + tRCD + 4 + tRP,
+        tWR,
+        tRRD,
+        tFAW,
+        tRFC: tRFC_Result,
+        tREFI: ramSize >= 64 || profile === 'safe' ? 15600 : 32767,
+        // На ATX при 3+ планках или ECC — принудительно 2N
+        tCR: profile === 'safe' || boardType === 'atx' && (slotsCount >= 3 || ramSize >= 64 || isEcc) ? '2N' : '1N',
         tCWL: gen === 'V2' ? tCL : tCL % 2 === 0 ? tCL : tCL - 1,
+        totalRam: ramSize,
+        bandwidth: `${(freq * 8 * channels / 1000).toFixed(1)} GB/s`,
+        channelMode: channels === 4 ? 'QUAD' : channels === 3 ? 'TRIPLE' : channels === 2 ? 'DUAL' : 'SINGLE',
+        voltage: isU ? '1.45v' : profile === 'safe' ? '1.20v' : '1.35v',
+        latency: `${(tCL * 2000 / freq).toFixed(1)} ns`,
         tRTP: isU ? 5 : Math.max(6, Math.floor(tCL / 2)),
-        tRC: tRAS + tRP,
-        tFAW: (src.tRRD || 4) * 4
+        tWTR: isU ? 4 : src.tWTR || 6
     };
 };
-const TimingEngine = ({ children })=>{
-    _s();
-    const [config, setConfig] = (0, _react.useState)((0, _timingsData.INITIAL_CONFIG));
-    const [unlocked, setUnlocked] = (0, _react.useState)(false);
-    const update = (0, _react.useCallback)((patch)=>{
-        setConfig((prev)=>{
-            const next = {
-                ...prev,
-                ...patch
-            };
-            if (patch.gen && patch.gen !== prev.gen) next.cpu = (0, _cpuData.CPU_MODELS)[patch.gen][0];
-            return next;
-        });
-    }, []);
-    const updateCustomTiming = (0, _react.useCallback)((key, val)=>{
-        setConfig((prev)=>({
-                ...prev,
-                custom: {
-                    ...prev.custom,
-                    [key]: val.replace(/\D/g, '')
-                }
-            }));
-    }, []);
-    const res = (0, _react.useMemo)(()=>calculate(config), [
-        config
-    ]);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RamContext.Provider, {
-        value: {
-            config,
-            res,
-            unlocked,
-            setUnlocked,
-            update,
-            updateCustomTiming
-        },
-        children: children
-    }, void 0, false, {
-        fileName: "src/components/RamConfiguration/data/timingEngine.tsx",
-        lineNumber: 78,
-        columnNumber: 5
-    }, undefined);
-};
-_s(TimingEngine, "gOJVo8ovQekYDF7/ohK4klTpLHc=");
-_c = TimingEngine;
-exports.default = TimingEngine;
-var _c;
-$RefreshReg$(_c, "TimingEngine");
+const useTimingEngine = (0, _zustand.create)((set)=>({
+        config: (0, _timingsData.INITIAL_CONFIG),
+        unlocked: false,
+        res: calculate((0, _timingsData.INITIAL_CONFIG)),
+        setUnlocked: (unlocked)=>set({
+                unlocked
+            }),
+        update: (patch)=>set((state)=>{
+                // Берем ключ первого измененного поля
+                const firstKey = Object.keys(patch)[0];
+                const nextConfig = validateConfig({
+                    ...state.config,
+                    ...patch
+                }, firstKey);
+                if (patch.gen) nextConfig.cpu = (0, _cpuData.CPU_MODELS)[patch.gen][0];
+                return {
+                    config: nextConfig,
+                    res: calculate(nextConfig)
+                };
+            }),
+        updateCustomTiming: (key, val)=>set((state)=>{
+                const nextConfig = {
+                    ...state.config,
+                    custom: {
+                        ...state.config.custom,
+                        [key]: val.replace(/\D/g, '')
+                    }
+                };
+                return {
+                    config: nextConfig,
+                    res: calculate(nextConfig)
+                };
+            })
+    }));
 
-  $parcel$ReactRefreshHelpers$f50e.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
+},{"zustand":"83cPn","./timingsData":"5c8Ij","./cpuData":"jogp5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"83cPn":[function(require,module,exports,__globalThis) {
+'use strict';
+var vanilla = require("a19f4edd89926025");
+var react = require("a0cacd268d6bf882");
+Object.keys(vanilla).forEach(function(k) {
+    if (k !== 'default' && !Object.prototype.hasOwnProperty.call(exports, k)) Object.defineProperty(exports, k, {
+        enumerable: true,
+        get: function() {
+            return vanilla[k];
+        }
+    });
+});
+Object.keys(react).forEach(function(k) {
+    if (k !== 'default' && !Object.prototype.hasOwnProperty.call(exports, k)) Object.defineProperty(exports, k, {
+        enumerable: true,
+        get: function() {
+            return react[k];
+        }
+    });
+});
+
+},{"a19f4edd89926025":"folPr","a0cacd268d6bf882":"6ueAP"}],"folPr":[function(require,module,exports,__globalThis) {
+'use strict';
+const createStoreImpl = (createState)=>{
+    let state;
+    const listeners = /* @__PURE__ */ new Set();
+    const setState = (partial, replace)=>{
+        const nextState = typeof partial === "function" ? partial(state) : partial;
+        if (!Object.is(nextState, state)) {
+            const previousState = state;
+            state = (replace != null ? replace : typeof nextState !== "object" || nextState === null) ? nextState : Object.assign({}, state, nextState);
+            listeners.forEach((listener)=>listener(state, previousState));
+        }
+    };
+    const getState = ()=>state;
+    const getInitialState = ()=>initialState;
+    const subscribe = (listener)=>{
+        listeners.add(listener);
+        return ()=>listeners.delete(listener);
+    };
+    const api = {
+        setState,
+        getState,
+        getInitialState,
+        subscribe
+    };
+    const initialState = state = createState(setState, getState, api);
+    return api;
+};
+const createStore = (createState)=>createState ? createStoreImpl(createState) : createStoreImpl;
+exports.createStore = createStore;
+
+},{}],"6ueAP":[function(require,module,exports,__globalThis) {
+'use strict';
+var React = require("6a69048f974f8971");
+var vanilla = require("985957b117977eb9");
+const identity = (arg)=>arg;
+function useStore(api, selector = identity) {
+    const slice = React.useSyncExternalStore(api.subscribe, React.useCallback(()=>selector(api.getState()), [
+        api,
+        selector
+    ]), React.useCallback(()=>selector(api.getInitialState()), [
+        api,
+        selector
+    ]));
+    React.useDebugValue(slice);
+    return slice;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./timingsData":"5c8Ij","./cpuData":"jogp5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"cUeEy":[function(require,module,exports,__globalThis) {
+const createImpl = (createState)=>{
+    const api = vanilla.createStore(createState);
+    const useBoundStore = (selector)=>useStore(api, selector);
+    Object.assign(useBoundStore, api);
+    return useBoundStore;
+};
+const create = (createState)=>createState ? createImpl(createState) : createImpl;
+exports.create = create;
+exports.useStore = useStore;
+
+},{"6a69048f974f8971":"jMk1U","985957b117977eb9":"folPr"}],"cUeEy":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$6f8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$6f8e.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -28569,10 +28627,12 @@ var _timingEngine = require("./data/timingEngine");
 var _s = $RefreshSig$();
 const RamBios = ()=>{
     _s();
-    const context = (0, _react.useContext)((0, _timingEngine.RamContext));
-    if (!context || !context.res) return null;
-    const { config, res, updateCustomTiming } = context;
+    // Используем хук с исправленным названием (useTimingEngine)
+    const { config, res, updateCustomTiming } = (0, _timingEngine.useTimingEngine)();
+    if (!res) return null;
     const isUltra = config.profile === 'ultra';
+    // Формируем список строк для BIOS. 
+    // Все значения теперь приходят из пересчитанного res в timingEngine
     const rows = [
         {
             label: "DIMM profile",
@@ -28589,11 +28649,11 @@ const RamBios = ()=>{
             value: res.tCR
         },
         {
-            label: "Refresh Rate",
+            label: "Refresh Rate (tREFI)",
             value: res.tREFI
         },
         {
-            label: "CAS Latency",
+            label: "CAS Latency (tCL)",
             value: res.tCL,
             manualKey: "CL"
         },
@@ -28645,8 +28705,10 @@ const RamBios = ()=>{
             value: res.tCWL
         }
     ];
+    // В заголовке выводим важную техническую инфо: Частоту, Объем, Канальность и Скорость
+    const biosTitle = `BIOS: ${config.cpu?.max || 2400}MHZ \u{2014} ${res.totalRam}GB ${res.channelMode} [${res.bandwidth}]`;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-        title: `BIOS: ${config.cpu.max}MHz \u{2014} ${res.totalRam}GB ${res.channelMode} [${res.bandwidth}]`,
+        title: biosTitle,
         path: "IntelRCSetup > Memory Configuration",
         config: config,
         onUpdate: updateCustomTiming,
@@ -28654,11 +28716,15 @@ const RamBios = ()=>{
         isUltra: isUltra
     }, void 0, false, {
         fileName: "src/components/RamConfiguration/RamBios.tsx",
-        lineNumber: 33,
+        lineNumber: 38,
         columnNumber: 5
     }, undefined);
 };
-_s(RamBios, "b9L3QQ+jgeyIrH0NfHrJ8nn7VMU=");
+_s(RamBios, "ZZfy2Aer231DcIT7MLd4cUSL/PA=", false, function() {
+    return [
+        (0, _timingEngine.useTimingEngine)
+    ];
+});
 _c = RamBios;
 exports.default = RamBios;
 var _c;
@@ -28669,7 +28735,7 @@ $RefreshReg$(_c, "RamBios");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"fCqKj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./data/timingEngine":"8QKzL"}],"fCqKj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../BiosWindow/BiosWindow":"fCqKj","./data/timingEngine":"g2O1J"}],"fCqKj":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$87fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$87fc.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -28824,38 +28890,39 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _ultraWarningModalModuleCss = require("./UltraWarningModal.module.css");
 var _ultraWarningModalModuleCssDefault = parcelHelpers.interopDefault(_ultraWarningModalModuleCss);
-// Импортируем контекст из твоего инженера
 var _timingEngine = require("../data/timingEngine");
 var _s = $RefreshSig$();
 const UltraWarningModal = ()=>{
     _s();
     const [open, setOpen] = (0, _react.useState)(false);
     const [clicks, setClicks] = (0, _react.useState)(0);
-    // Подключаемся к общему состоянию
-    const context = (0, _react.useContext)((0, _timingEngine.RamContext));
-    // Защита от пустых данных
-    if (!context) return null;
-    const { unlocked, setUnlocked } = context;
+    // Используем наш кастомный стор
+    const { unlocked, setUnlocked } = (0, _timingEngine.useTimingEngine)();
     const handleMouseDown = (e)=>{
-        // Если уже разблокировано — ничего не делаем при клике на заголовок
+        // Если уже разблокировано, больше не реагируем на клики
         if (unlocked) return;
-        // Защита от выделения текста при быстрой долбежке
+        // Чтобы текст не выделялся синим при быстрой долбежке
         if (e.detail > 1) e.preventDefault();
-        if (clicks + 1 >= 10) {
-            setUnlocked(true);
-            setOpen(true);
+        const nextClicks = clicks + 1;
+        if (nextClicks >= 10) {
+            setOpen(true); // Открываем модалку ПЕРЕД разблокировкой
             setClicks(0);
-        } else setClicks((v)=>v + 1);
+        } else setClicks(nextClicks);
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: (0, _ultraWarningModalModuleCssDefault.default).wrapper,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                 onMouseDown: handleMouseDown,
                 className: `${(0, _ultraWarningModalModuleCssDefault.default).title} ${unlocked ? (0, _ultraWarningModalModuleCssDefault.default).unlocked : ''}`,
+                style: {
+                    opacity: !unlocked && clicks > 0 ? 0.7 + clicks * 0.03 : 1,
+                    transform: !unlocked && clicks > 0 ? `scale(${1 + clicks * 0.01})` : 'none'
+                },
                 children: unlocked ? "EXTREME RAM TOOL \uD83D\uDEE0\uFE0F" : 'XEON RAM TOOL'
             }, void 0, false, {
                 fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                lineNumber: 36,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             open && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28867,7 +28934,7 @@ const UltraWarningModal = ()=>{
                             className: (0, _ultraWarningModalModuleCssDefault.default).hazardLine
                         }, void 0, false, {
                             fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                            lineNumber: 46,
+                            lineNumber: 45,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28880,12 +28947,12 @@ const UltraWarningModal = ()=>{
                                         children: "!"
                                     }, void 0, false, {
                                         fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                        lineNumber: 50,
+                                        lineNumber: 49,
                                         columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                    lineNumber: 49,
+                                    lineNumber: 48,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -28893,7 +28960,7 @@ const UltraWarningModal = ()=>{
                                     children: "\u26A0\uFE0F \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415: ULTRA \u0420\u0415\u0416\u0418\u041C"
                                 }, void 0, false, {
                                     fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                    lineNumber: 53,
+                                    lineNumber: 52,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28903,7 +28970,7 @@ const UltraWarningModal = ()=>{
                                             children: "\u0412\u044B \u0430\u043A\u0442\u0438\u0432\u0438\u0440\u0443\u0435\u0442\u0435 \u044D\u043A\u0441\u0442\u0440\u0435\u043C\u0430\u043B\u044C\u043D\u044B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438. \u041E\u043D\u0438 \u043F\u043E\u0434\u0445\u043E\u0434\u044F\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0434\u043B\u044F \u0443\u0434\u0430\u0447\u043D\u044B\u0445 \u0447\u0438\u043F\u043E\u0432 \u043F\u0430\u043C\u044F\u0442\u0438 \u0438 \u0442\u0440\u0435\u0431\u0443\u044E\u0442 \u0430\u043A\u0442\u0438\u0432\u043D\u043E\u0433\u043E \u043E\u0431\u0434\u0443\u0432\u0430."
                                         }, void 0, false, {
                                             fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                            lineNumber: 56,
+                                            lineNumber: 55,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28914,14 +28981,14 @@ const UltraWarningModal = ()=>{
                                                     children: "1.45V"
                                                 }, void 0, false, {
                                                     fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                                    lineNumber: 57,
+                                                    lineNumber: 56,
                                                     columnNumber: 48
                                                 }, undefined),
                                                 "."
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                            lineNumber: 57,
+                                            lineNumber: 56,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28929,13 +28996,13 @@ const UltraWarningModal = ()=>{
                                             children: '\u041D\u0430\u0436\u043C\u0438\u0442\u0435 "\u041E\u0422\u041C\u0415\u041D\u0410", \u0435\u0441\u043B\u0438 \u0432\u044B \u043F\u0440\u043E\u0447\u043B\u0438 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435.'
                                         }, void 0, false, {
                                             fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 57,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 54,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28944,7 +29011,6 @@ const UltraWarningModal = ()=>{
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                             className: (0, _ultraWarningModalModuleCssDefault.default).btnConfirm,
                                             onClick: ()=>{
-                                                // Твоя логика: нажатие АКТИВИРОВАТЬ забирает доступ и сбрасывает профиль на Balanced
                                                 setUnlocked(false);
                                                 setOpen(false);
                                             },
@@ -28956,47 +29022,58 @@ const UltraWarningModal = ()=>{
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                             className: (0, _ultraWarningModalModuleCssDefault.default).btnCancel,
-                                            onClick: ()=>setOpen(false),
+                                            onClick: ()=>{
+                                                setUnlocked(true);
+                                                setOpen(false);
+                                            },
                                             children: "\u041E\u0422\u041C\u0415\u041D\u0410"
                                         }, void 0, false, {
                                             fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                            lineNumber: 72,
+                                            lineNumber: 73,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 60,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                            lineNumber: 48,
+                            lineNumber: 47,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: (0, _ultraWarningModalModuleCssDefault.default).hazardLine
                         }, void 0, false, {
                             fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                            lineNumber: 81,
+                            lineNumber: 85,
                             columnNumber: 13
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                    lineNumber: 45,
+                    lineNumber: 44,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                lineNumber: 44,
+                lineNumber: 43,
                 columnNumber: 9
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
+        lineNumber: 30,
+        columnNumber: 5
+    }, undefined);
 };
-_s(UltraWarningModal, "yTQ5Yukvl646IwOcpQ/7TzH9Jgc=");
+_s(UltraWarningModal, "GrjDjAk1wUCc36aDTKMHW//5bzE=", false, function() {
+    return [
+        (0, _timingEngine.useTimingEngine)
+    ];
+});
 _c = UltraWarningModal;
 exports.default = UltraWarningModal;
 var _c;
@@ -29007,7 +29084,7 @@ $RefreshReg$(_c, "UltraWarningModal");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./UltraWarningModal.module.css":"18H3D","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../data/timingEngine":"8QKzL"}],"18H3D":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./UltraWarningModal.module.css":"18H3D","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../data/timingEngine":"g2O1J"}],"18H3D":[function(require,module,exports,__globalThis) {
 module.exports["btnCancel"] = `IfAWBa_btnCancel`;
 module.exports["btnConfirm"] = `IfAWBa_btnConfirm`;
 module.exports["exclamation"] = `IfAWBa_exclamation`;
@@ -29490,7 +29567,7 @@ const FanInfo = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
                 icon: "\uD83D\uDCE2",
-                children: "\u041F\u043E\u043B\u043D\u043E\u0446\u0435\u043D\u043D\u043E \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E 4-pin \u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0442\u043E\u0440\u044B. 3-pin \u0432\u0435\u0440\u0442\u0443\u0448\u043A\u0430 \u0432 4-pin \u0440\u0430\u0437\u044A\u0435\u043C\u0435 \u043D\u0430 \u043A\u0438\u0442\u0430\u0439\u0441\u043A\u0438\u0445 \u043F\u043B\u0430\u0442\u0430\u0445 \u0432\u0441\u0435\u0433\u0434\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u043D\u0430 100%."
+                children: "\u041F\u043E\u043B\u043D\u043E\u0446\u0435\u043D\u043D\u043E \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E 4-pin \u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0442\u043E\u0440\u044B. 4-pin \u0432\u0435\u0440\u0442\u0443\u0448\u043A\u0430 \u0432 3-pin \u0440\u0430\u0437\u044A\u0435\u043C\u0435 \u043D\u0430 \u043A\u0438\u0442\u0430\u0439\u0441\u043A\u0438\u0445 \u043F\u043B\u0430\u0442\u0430\u0445 \u0432\u0441\u0435\u0433\u0434\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u043D\u0430 100%. \u041F\u0440\u0438 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 2\u0445 4-pin \u0432\u0435\u0440\u0442\u0443\u0448\u0435\u043A - \u043C\u0435\u043D\u044E \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043A \u043C\u043E\u0436\u0435\u0442 \u043E\u0442\u043B\u0438\u0447\u0430\u0442\u044C\u0441\u044F. \u0422\u0430\u043A\u043E\u0435 \u043C\u0435\u043D\u044E \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u043F\u0440\u0438 \u043D\u0430\u043B\u0438\u0447\u0438\u0435 \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u044F \u043D\u0430 VRM."
             }, void 0, false, {
                 fileName: "src/components/FanConfiguration/FanInfo.tsx",
                 lineNumber: 9,
