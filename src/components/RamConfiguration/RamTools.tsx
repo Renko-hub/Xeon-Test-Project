@@ -5,7 +5,11 @@ import { CPU_MODELS } from './data/cpuData';
 import { GEN_OPTIONS, RAM_SIZE_OPTIONS, SLOT_COUNT_OPTIONS, BOARD_TYPE_OPTIONS, Gen } from './data/timingsData';
 import { useTimingEngine } from './data/timingEngine'; 
 
-const RamTools = () => {
+interface Props {
+  showUltraTeaser: boolean;
+}
+
+const RamTools = ({ showUltraTeaser }: Props) => {
   const { config, update, unlocked } = useTimingEngine();
   const prevUnlocked = useRef(unlocked);
 
@@ -15,12 +19,11 @@ const RamTools = () => {
     prevUnlocked.current = unlocked;
   }, [unlocked, config.profile, update]);
 
-  const profiles = ['safe', 'balanced', 'aggressive', 'custom', ...(unlocked ? ['ultra'] : [])];
+  const profiles = ['safe', 'balanced', 'aggressive', 'custom', ...(unlocked || showUltraTeaser ? ['ultra'] : [])];
 
   const renderGroup = (label: string, options: any[], field: string, prefix = "", formatValue?: (v: any) => any) => {
     let visibleOptions = options;
     
-    // UI ФИЛЬТРАЦИЯ СЛОТОВ
     if (field === 'slotsCount') {
       const TRIPLE_SIZES = [12, 24, 48];
       visibleOptions = options.filter(opt => {
@@ -36,12 +39,17 @@ const RamTools = () => {
         <InfoBlock.Grid>
           {visibleOptions.map((v) => {
             const val = formatValue ? formatValue(v) : v;
+            const isLockedUltra = val === 'ultra' && !unlocked;
+
             return (
               <Button 
                 key={field + v.toString()} 
                 type={prefix + v} 
                 isActive={config[field as keyof typeof config] === val} 
-                onClick={() => update({ [field]: val })} 
+                onClick={() => {
+                  if (isLockedUltra) return;
+                  update({ [field]: val });
+                }} 
               />
             );
           })}
@@ -53,7 +61,6 @@ const RamTools = () => {
   return (
     <div className="ram-tools">
       {renderGroup("ПОКОЛЕНИЕ:", GEN_OPTIONS, "gen")}
-
       <InfoBlock.Section>
         <InfoBlock.Label>МОДЕЛЬ ПРОЦЕССОРА:</InfoBlock.Label>
         <InfoBlock.Select 
@@ -67,7 +74,6 @@ const RamTools = () => {
           ))}
         </InfoBlock.Select>
       </InfoBlock.Section>
-
       {renderGroup("ТИП ПАМЯТИ:", ['desktop', 'ecc'], "isEcc", "", (v) => v === 'ecc')}
       {renderGroup("ВСЕГО ПАМЯТИ:", RAM_SIZE_OPTIONS, "ramSize", "size_")}
       {renderGroup("ЗАНЯТО СЛОТОВ:", SLOT_COUNT_OPTIONS, "slotsCount", "slots_")}

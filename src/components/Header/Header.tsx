@@ -15,7 +15,6 @@ const Header = () => (
         <NavLink 
           key={to} 
           to={to} 
-          // Используем новые названия классов и camelCase
           className={({ isActive }) => 
             `${styles.navLink} ${isActive ? styles.isActiveLink : ''}`
           }

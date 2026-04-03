@@ -19,24 +19,24 @@ const validateConfig = (conf: RamConfig, lastFieldUpdated?: string): RamConfig =
   const next = { ...conf };
   const field = lastFieldUpdated || "";
 
-  // 1. Запрет 1 слота для 12, 24, 48 ГБ (таких плашек нет)
+  // 1. Запрет 1 слота для 12, 24, 48 ГБ
   if (TRIPLE_SIZES.includes(next.ramSize) && next.slotsCount === 1) {
     next.slotsCount = 3;
   }
 
-  // 2. 12 ГБ не может быть в 4 слота (минимум 4+4+4)
+  // 2. 12 ГБ не может быть в 4 слота
   if (next.ramSize === 12 && next.slotsCount === 4) {
     next.slotsCount = 3;
   }
 
-  // 3. Если вручную выбрали 3 слота, но объем "обычный" (16, 32 и т.д.)
+  // 3. Если вручную выбрали 3 слота, но объем "обычный"
   if (field.includes('slotsCount') && next.slotsCount === 3) {
     if (!TRIPLE_SIZES.includes(next.ramSize)) {
       next.ramSize = 24; 
     }
   }
 
-  // 4. Сброс с 3 слотов, если объем стал обычным (например, переключили с 24 на 16)
+  // 4. Сброс с 3 слотов, если объем стал обычным
   if (next.slotsCount === 3 && !TRIPLE_SIZES.includes(next.ramSize)) {
     next.slotsCount = next.ramSize >= 32 ? 4 : 2;
   }
@@ -84,7 +84,6 @@ const calculate = (conf: RamConfig): TimingResult => {
   const baseFreq = { V2: 1866, V3: 2133, V4: 2400 }[gen] || 2400;
   const ratio = freq / baseFreq;
   
-  // Штрафы: Quad (4%) и Triple (2%)
   const quadPenalty = (slotsCount === 4 && !isMatx) ? 1.04 : 1.0;
   const triplePenalty = (slotsCount === 3) ? 1.02 : 1.0;
 
@@ -95,7 +94,6 @@ const calculate = (conf: RamConfig): TimingResult => {
 
   const mainRfc = isU ? Math.floor(calcRFCValue('aggressive') * 0.92) : calcRFCValue(baseKey);
 
-  // Формирование строки tRFC с подсказкой IDEAL
   let tRFC_Result = `${mainRfc}`;
   if (!isC) {
     if (isU) {
@@ -109,10 +107,8 @@ const calculate = (conf: RamConfig): TimingResult => {
     }
   }
 
-  // 4. КАНАЛЬНОСТЬ И ПРОПУСКНАЯ СПОСОБНОСТЬ
+  // 4. КАНАЛЬНОСТЬ
   const channels = isMatx ? Math.min(slotsCount, 2) : Math.min(slotsCount, 4);
-  
-  // Штраф за смешанные модули (например, 24 ГБ в 4 слотах = 8+8+4+4)
   const isMixed = TRIPLE_SIZES.includes(ramSize) && slotsCount === 4;
   const mixedPenalty = isMixed ? 0.96 : 1.0;
 
@@ -152,13 +148,23 @@ export const useTimingEngine = create<TimingStore>((set) => ({
   unlocked: false,
   res: calculate(INITIAL_CONFIG),
   
-  setUnlocked: (unlocked) => set({ unlocked }),
+  setUnlocked: (unlocked) => set((state) => {
+    // Если закрыли доступ к Ultra, а он был активен — откатываем конфиг на balanced
+    const nextConfig = (!unlocked && state.config.profile === 'ultra') 
+      ? { ...state.config, profile: 'balanced' as Profile } 
+      : state.config;
+
+    return { 
+      unlocked,
+      config: nextConfig,
+      res: calculate(nextConfig)
+    };
+  }),
   
   update: (patch) => set((state) => {
     const firstKey = Object.keys(patch)[0];
     let nextConfig = { ...state.config, ...patch };
     
-    // Автоматическая смена процессора при смене поколения
     if (patch.gen) {
       nextConfig.cpu = CPU_MODELS[patch.gen as Gen][0];
     }
