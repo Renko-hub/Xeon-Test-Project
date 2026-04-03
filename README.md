@@ -2,9 +2,9 @@
 
 Профессиональный интерактивный калькулятор и симулятор BIOS для тонкой настройки систем на базе Intel Xeon (LGA2011 / 2011-3). Инструмент позволяет рассчитать идеальные тайминги для стабильной работы и максимальной пропускной способности памяти.
 
-![React](https://shields.io)
-![TypeScript](https://shields.io)
-![Parcel](https://shields.io)
+![React]
+![TypeScript]
+![Parcel]
 
 ## ✨ Основные возможности
 
@@ -40,5 +40,5 @@
 
 1. **Клонирование:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/Renko-hub/Xeon-Test-Project
    ```
