@@ -18,13 +18,16 @@ const RamTools = () => {
   const profiles = ['safe', 'balanced', 'aggressive', 'custom', ...(unlocked ? ['ultra'] : [])];
 
   const renderGroup = (label: string, options: any[], field: string, prefix = "", formatValue?: (v: any) => any) => {
-    // ФИКС: Скрываем 3 слота для неподходящих объемов
     let visibleOptions = options;
+    
+    // UI ФИЛЬТРАЦИЯ СЛОТОВ
     if (field === 'slotsCount') {
-      const tripleValidSizes = [12, 24, 48];
-      if (!tripleValidSizes.includes(config.ramSize)) {
-        visibleOptions = options.filter(opt => opt !== 3);
-      }
+      const TRIPLE_SIZES = [12, 24, 48];
+      visibleOptions = options.filter(opt => {
+        if (config.ramSize === 12) return opt === 2 || opt === 3;
+        if (TRIPLE_SIZES.includes(config.ramSize)) return opt >= 2;
+        return opt !== 3;
+      });
     }
 
     return (
@@ -37,7 +40,7 @@ const RamTools = () => {
               <Button 
                 key={field + v.toString()} 
                 type={prefix + v} 
-                isActive={config[field] === val} 
+                isActive={config[field as keyof typeof config] === val} 
                 onClick={() => update({ [field]: val })} 
               />
             );
@@ -66,7 +69,7 @@ const RamTools = () => {
       </InfoBlock.Section>
 
       {renderGroup("ТИП ПАМЯТИ:", ['desktop', 'ecc'], "isEcc", "", (v) => v === 'ecc')}
-      {renderGroup("ВСЕГО ПАМЯТИ УСТАНОВЛЕНО:", RAM_SIZE_OPTIONS, "ramSize", "size_")}
+      {renderGroup("ВСЕГО ПАМЯТИ:", RAM_SIZE_OPTIONS, "ramSize", "size_")}
       {renderGroup("ЗАНЯТО СЛОТОВ:", SLOT_COUNT_OPTIONS, "slotsCount", "slots_")}
       {renderGroup("МАТЕРИНСКАЯ ПЛАТА:", BOARD_TYPE_OPTIONS, "boardType")}
       {renderGroup("ПРЕСЕТЫ:", profiles, "profile")}

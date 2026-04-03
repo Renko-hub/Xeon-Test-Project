@@ -1,25 +1,53 @@
 import { create } from 'zustand';
-import { INITIAL_CONFIG, TIMINGS_BY_FREQ, RFC_MODIFIERS, Gen, RamConfig, Profile } from './timingsData';
+import { 
+  INITIAL_CONFIG, 
+  TIMINGS_BY_FREQ, 
+  RFC_MODIFIERS, 
+  Gen, 
+  RamConfig, 
+  Profile, 
+  TimingResult 
+} from './timingsData';
 import { CPU_MODELS } from './cpuData';
 
+const TRIPLE_SIZES = [12, 24, 48];
+
+/**
+ * Валидатор конфигурации: управляет логикой слотов и объемов
+ */
 const validateConfig = (conf: RamConfig, lastFieldUpdated?: string): RamConfig => {
   const next = { ...conf };
-  const tripleValidSizes = [12, 24, 48];
   const field = lastFieldUpdated || "";
 
-  if (field.includes('ramSize') && tripleValidSizes.includes(next.ramSize)) {
+  // 1. Запрет 1 слота для 12, 24, 48 ГБ (таких плашек нет)
+  if (TRIPLE_SIZES.includes(next.ramSize) && next.slotsCount === 1) {
     next.slotsCount = 3;
-  } 
-  else if (field.includes('slotsCount') && next.slotsCount === 3) {
-    if (!tripleValidSizes.includes(next.ramSize)) next.ramSize = 24;
   }
-  else if (next.slotsCount === 3 && !tripleValidSizes.includes(next.ramSize)) {
+
+  // 2. 12 ГБ не может быть в 4 слота (минимум 4+4+4)
+  if (next.ramSize === 12 && next.slotsCount === 4) {
+    next.slotsCount = 3;
+  }
+
+  // 3. Если вручную выбрали 3 слота, но объем "обычный" (16, 32 и т.д.)
+  if (field.includes('slotsCount') && next.slotsCount === 3) {
+    if (!TRIPLE_SIZES.includes(next.ramSize)) {
+      next.ramSize = 24; 
+    }
+  }
+
+  // 4. Сброс с 3 слотов, если объем стал обычным (например, переключили с 24 на 16)
+  if (next.slotsCount === 3 && !TRIPLE_SIZES.includes(next.ramSize)) {
     next.slotsCount = next.ramSize >= 32 ? 4 : 2;
   }
+
   return next;
 };
 
-const calculate = (conf: RamConfig) => {
+/**
+ * Основной движок расчета таймингов
+ */
+const calculate = (conf: RamConfig): TimingResult => {
   const { cpu, gen, profile, boardType, ramSize, slotsCount, isEcc, custom } = conf;
   const freq = cpu?.max || 1866;
   const freqData = TIMINGS_BY_FREQ[freq] || TIMINGS_BY_FREQ[1866];
@@ -33,12 +61,9 @@ const calculate = (conf: RamConfig) => {
   let tRCD = isC ? Math.max(6, Number(custom.RCD)) : (isU ? src.tRCD - 1 : src.tRCD);
   let tRP = isC ? Math.max(6, Number(custom.RP)) : (isU ? src.tRP - 1 : src.tRP);
 
-  if (isEcc && !isC && profile !== 'safe') { tRCD += 1; tRP += 1; }
-
-  if (!isC && profile !== 'safe') {
-    tCL = Math.min(tCL, freqData.safe.tCL);
-    tRCD = Math.min(tRCD, freqData.safe.tRCD + (isEcc ? 1 : 0));
-    tRP = Math.min(tRP, freqData.safe.tRP + (isEcc ? 1 : 0));
+  if (isEcc && !isC && profile !== 'safe') { 
+    tRCD += 1; 
+    tRP += 1; 
   }
 
   // 2. ВТОРИЧНЫЕ (mATX Guard)
@@ -49,12 +74,13 @@ const calculate = (conf: RamConfig) => {
   if (isMatx || profile === 'safe') tWR += 2;
 
   // 3. tRFC + Штрафы за канальность
-  const perStickSize = Math.max(4, Math.floor(ramSize / (slotsCount || 1)));
+  const perStickSize = Math.max(4, Math.floor(ramSize / slotsCount));
   const rfcGenData = RFC_MODIFIERS[gen] || RFC_MODIFIERS.V4;
-  let sizeKey = perStickSize >= 64 ? 'gb64' : (perStickSize >= 32 ? 'gb32' : (perStickSize >= 16 ? 'gb16' : (perStickSize >= 8 ? 'gb8' : 'gb4')));
+  const sizeKey = perStickSize >= 64 ? 'gb64' : (perStickSize >= 32 ? 'gb32' : (perStickSize >= 16 ? 'gb16' : (perStickSize >= 8 ? 'gb8' : 'gb4')));
   
   const rfcSet = rfcGenData[sizeKey] || rfcGenData.gb16;
-  const rfcVals = rfcSet[boardType] || rfcSet; 
+  const rfcVals = rfcSet[boardType] || rfcSet.atx || rfcSet; 
+  
   const baseFreq = { V2: 1866, V3: 2133, V4: 2400 }[gen] || 2400;
   const ratio = freq / baseFreq;
   
@@ -63,39 +89,44 @@ const calculate = (conf: RamConfig) => {
   const triplePenalty = (slotsCount === 3) ? 1.02 : 1.0;
 
   const calcRFCValue = (k: string) => {
-    let val = rfcVals[k] || rfcVals.balanced || 312;
-    if (perStickSize === 8 && k === 'balanced' && isMatx && freq === 2400) return 328;
-    // Применяем штрафы за ECC, Quad и Triple одновременно
+    const val = rfcVals[k] || rfcVals.balanced || 312;
     return Math.floor(val * ratio * (isEcc ? 1.08 : 1.0) * quadPenalty * triplePenalty);
   };
 
   const mainRfc = isU ? Math.floor(calcRFCValue('aggressive') * 0.92) : calcRFCValue(baseKey);
 
-  // Метка IDEAL
+  // Формирование строки tRFC с подсказкой IDEAL
   let tRFC_Result = `${mainRfc}`;
   if (!isC) {
-    if (isU) tRFC_Result = `${mainRfc} (ULTRA)`;
-    else {
+    if (isU) {
+      tRFC_Result = `${mainRfc} (ULTRA)`;
+    } else {
       const nextK = ({ safe: 'balanced', balanced: 'aggressive', aggressive: 'min' } as any)[profile] || 'min';
-      tRFC_Result = `${mainRfc} (IDEAL: ${Math.min(calcRFCValue(nextK), mainRfc)})`;
+      const best = calcRFCValue(nextK);
+      if (best < mainRfc) {
+        tRFC_Result = `${mainRfc} (IDEAL: ${best})`;
+      }
     }
   }
 
-  const channels = Math.min(slotsCount, 4);
+  // 4. КАНАЛЬНОСТЬ И ПРОПУСКНАЯ СПОСОБНОСТЬ
+  const channels = isMatx ? Math.min(slotsCount, 2) : Math.min(slotsCount, 4);
+  
+  // Штраф за смешанные модули (например, 24 ГБ в 4 слотах = 8+8+4+4)
+  const isMixed = TRIPLE_SIZES.includes(ramSize) && slotsCount === 4;
+  const mixedPenalty = isMixed ? 0.96 : 1.0;
 
   return {
-    ...src,
     tCL, tRCD, tRP,
     tRAS: tCL + tRCD + 4,
     tRC: tCL + tRCD + 4 + tRP,
     tWR, tRRD, tFAW,
     tRFC: tRFC_Result,
     tREFI: (ramSize >= 64 || profile === 'safe') ? 15600 : 32767,
-    // На ATX при 3+ планках или ECC — принудительно 2N
     tCR: (profile === 'safe' || (boardType === 'atx' && (slotsCount >= 3 || ramSize >= 64 || isEcc))) ? '2N' : '1N',
     tCWL: gen === 'V2' ? tCL : (tCL % 2 === 0 ? tCL : tCL - 1),
     totalRam: ramSize,
-    bandwidth: `${(freq * 8 * channels / 1000).toFixed(1)} GB/s`,
+    bandwidth: `${(freq * 8 * channels / 1000 * mixedPenalty).toFixed(1)} GB/s`,
     channelMode: channels === 4 ? 'QUAD' : (channels === 3 ? 'TRIPLE' : (channels === 2 ? 'DUAL' : 'SINGLE')),
     voltage: isU ? '1.45v' : (profile === 'safe' ? '1.20v' : '1.35v'),
     latency: `${((tCL * 2000) / freq).toFixed(1)} ns`,
@@ -104,24 +135,50 @@ const calculate = (conf: RamConfig) => {
   };
 };
 
-export const useTimingEngine = create<any>((set) => ({
+/**
+ * Store управления состоянием
+ */
+interface TimingStore {
+  config: RamConfig;
+  unlocked: boolean;
+  res: TimingResult;
+  setUnlocked: (unlocked: boolean) => void;
+  update: (patch: Partial<RamConfig>) => void;
+  updateCustomTiming: (key: keyof RamConfig['custom'], val: string) => void;
+}
+
+export const useTimingEngine = create<TimingStore>((set) => ({
   config: INITIAL_CONFIG,
   unlocked: false,
   res: calculate(INITIAL_CONFIG),
-  setUnlocked: (unlocked: boolean) => set({ unlocked }),
-  update: (patch: any) => set((state: any) => {
-    // Берем ключ первого измененного поля
+  
+  setUnlocked: (unlocked) => set({ unlocked }),
+  
+  update: (patch) => set((state) => {
     const firstKey = Object.keys(patch)[0];
-    const nextConfig = validateConfig({ ...state.config, ...patch }, firstKey);
+    let nextConfig = { ...state.config, ...patch };
     
+    // Автоматическая смена процессора при смене поколения
     if (patch.gen) {
       nextConfig.cpu = CPU_MODELS[patch.gen as Gen][0];
     }
     
-    return { config: nextConfig, res: calculate(nextConfig) };
+    nextConfig = validateConfig(nextConfig, firstKey);
+    
+    return { 
+      config: nextConfig, 
+      res: calculate(nextConfig) 
+    };
   }),
-  updateCustomTiming: (key: string, val: string) => set((state: any) => {
-    const nextConfig = { ...state.config, custom: { ...state.config.custom, [key]: val.replace(/\D/g, '') } };
-    return { config: nextConfig, res: calculate(nextConfig) };
+
+  updateCustomTiming: (key, val) => set((state) => {
+    const nextConfig = { 
+      ...state.config, 
+      custom: { ...state.config.custom, [key]: val.replace(/\D/g, '') } 
+    };
+    return { 
+      config: nextConfig, 
+      res: calculate(nextConfig) 
+    };
   }),
 }));
