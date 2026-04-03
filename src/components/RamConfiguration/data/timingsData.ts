@@ -38,11 +38,16 @@ export const RAM_SIZE_OPTIONS = [4, 8, 12, 16, 24, 32, 48, 64];
 export const SLOT_COUNT_OPTIONS = [1, 2, 3, 4]; 
 export const BOARD_TYPE_OPTIONS: BoardType[] = ['atx', 'matx'];
 
+// НАСТРОЙКИ ПО УМОЛЧАНИЮ (ПЕРВЫЕ КНОПКИ)
 export const INITIAL_CONFIG: RamConfig = {
-  gen: 'V4', profile: 'balanced', boardType: 'atx',
-  ramSize: 16, slotsCount: 2, isEcc: true,
-  cpu: CPU_MODELS['V4'][0],
-  custom: { CL: '15', RCD: '15', RP: '15' }
+  gen: 'V2',            // Первая кнопка Поколения
+  profile: 'safe',      // Первый Пресет (Безопасный)
+  boardType: 'atx',     // Первая кнопка Материнки
+  ramSize: 4,           // Первая кнопка Объема (4ГБ)
+  slotsCount: 1,        // Первая кнопка Слотов (1)
+  isEcc: false,         // Тип Desktop (false)
+  cpu: CPU_MODELS['V2'][0], // Первый процессор в списке V2
+  custom: { CL: '9', RCD: '9', RP: '9' }
 };
 
 export const TIMINGS_BY_FREQ: any = {

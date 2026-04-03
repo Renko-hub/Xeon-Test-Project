@@ -14,7 +14,7 @@ const CSMBios = ({ config }: any) => {
   return (
     <BiosWindow 
       title="CSM CONFIGURATION" 
-      path="Advanced → CSM Configuration" 
+      path="Advanced > CSM Configuration" 
       rows={rows} 
     />
   );

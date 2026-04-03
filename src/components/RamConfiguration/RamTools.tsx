@@ -66,9 +66,9 @@ const RamTools = () => {
       </InfoBlock.Section>
 
       {renderGroup("ТИП ПАМЯТИ:", ['desktop', 'ecc'], "isEcc", "", (v) => v === 'ecc')}
-      {renderGroup("ОБЪЕМ (ГБ):", RAM_SIZE_OPTIONS, "ramSize", "size_")}
-      {renderGroup("СЛОТОВ:", SLOT_COUNT_OPTIONS, "slotsCount", "slots_")}
-      {renderGroup("МАТЕРИНКА:", BOARD_TYPE_OPTIONS, "boardType")}
+      {renderGroup("ВСЕГО ПАМЯТИ УСТАНОВЛЕНО:", RAM_SIZE_OPTIONS, "ramSize", "size_")}
+      {renderGroup("ЗАНЯТО СЛОТОВ:", SLOT_COUNT_OPTIONS, "slotsCount", "slots_")}
+      {renderGroup("МАТЕРИНСКАЯ ПЛАТА:", BOARD_TYPE_OPTIONS, "boardType")}
       {renderGroup("ПРЕСЕТЫ:", profiles, "profile")}
     </div>
   );

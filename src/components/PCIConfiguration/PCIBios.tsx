@@ -10,7 +10,7 @@ const PCIBios = () => {
   return (
     <BiosWindow 
       title="PCI SUBSYSTEM SETTINGS" 
-      path="Advanced → PCI Subsystem Setting" 
+      path="Advanced > PCI Subsystem Setting" 
       rows={rows} 
     />
   );

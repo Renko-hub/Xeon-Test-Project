@@ -20,7 +20,7 @@ const FanBios = () => {
   return (
     <BiosWindow 
       title="SMART FAN FUNCTION" 
-      path="Advanced → Smart Fan Function" 
+      path="Advanced > Smart Fan Function" 
       rows={rows} 
     />
   );

@@ -15,13 +15,11 @@
 .fanBtn {
   display: flex;
   align-items: center;
-  background: #252525; 
+  background: #252525;
   border: 1px solid #333;
   border-radius: 8px;
   padding: 10px 14px;
-  color: #fff; 
-  transition: background 0.2s ease;
-  cursor: pointer;
+  color: #fff;
 }
 
 .icon {
@@ -35,7 +33,7 @@
   flex: 1;
   font-size: 13px;
   font-weight: 500;
-  color: #ccc; 
+  color: #ccc;
 }
 
 .value {

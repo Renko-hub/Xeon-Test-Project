@@ -33,7 +33,7 @@ const RamBios = () => {
   return (
     <BiosWindow 
       title={biosTitle}
-      path="IntelRCSetup > Memory Configuration"
+      path="IntelRCSetup > Memory Configuration > Memory Timings & Voltage"
       config={config}
       onUpdate={updateCustomTiming}
       rows={rows}

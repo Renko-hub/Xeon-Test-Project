@@ -8,10 +8,19 @@ export const BUTTONS = [
   { type: 'warning', label: 'ВНИМАНИЕ', theme: 'warning' },
   { type: 'info', label: 'ИНФО', theme: 'info', variant: 'outline' },
 
-  // Поколения
+  // Поколения (DDR / Прочие)
   { type: 'v2', label: 'V2', theme: 'v2' },
   { type: 'v3', label: 'V3', theme: 'v3' },
   { type: 'v4', label: 'V4', theme: 'metallic' },
+  
+  // РЕЖИМ ШИНЫ PCI-E (Те самые кнопки с твоего скрина)
+  { type: 'gen 2', label: 'GEN 2', theme: 'info' },
+  { type: 'gen 3', label: 'GEN 3', theme: 'info' },
+  { type: 'gen 4', label: 'GEN 4', theme: 'info' },
+
+  // Алгоритмы / Системные (Тоже синие)
+  { type: 'mbr', label: 'MBR', theme: 'info' },
+  { type: 'gpt', label: 'GPT', theme: 'info' },
   
   // Тип памяти
   { type: 'ecc', label: 'ECC REG', theme: 'optimal' },

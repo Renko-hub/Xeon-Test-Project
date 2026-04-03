@@ -9,7 +9,10 @@ const PowerBios = ({ gen }: any) => {
     { label: "CPU C6 report", value: gen === 'V2' ? 'Enable' : 'Disable', highlight: gen !== 'V2' },
   ];
 
-  return <BiosWindow title="CPU C STATE CONTROL" path="Advanced → Power Management → CPU C State" rows={rows} />;
+  return <BiosWindow 
+  title="CPU C STATE CONTROL" 
+  path="Advanced > Power Management Configuration > CPU C State Control" 
+  rows={rows} />;
 };
 
 export default PowerBios;

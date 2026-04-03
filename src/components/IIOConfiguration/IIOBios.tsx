@@ -8,7 +8,10 @@ const IIOBios = ({ pciGen }: any) => {
     { label: "IOU1 (PCIE PORT X4)", value: pciGen, highlight: true },
   ];
 
-  return <BiosWindow title="IIO0 CONFIGURATION" path="IntelRCSetup → IIO Configuration" rows={rows} />;
+  return <BiosWindow 
+  title="IIO0 CONFIGURATION" 
+  path="IntelRCSetup > IIO Configuration > IIO0 Configuration" 
+  rows={rows} />;
 };
 
 export default IIOBios;
