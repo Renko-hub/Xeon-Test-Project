@@ -3,15 +3,12 @@ import BiosWindow from '../BiosWindow/BiosWindow';
 import { useTimingEngine } from './data/timingEngine'; 
 
 const RamBios = () => {
-  // Используем хук с исправленным названием (useTimingEngine)
   const { config, res, updateCustomTiming } = useTimingEngine();
   
   if (!res) return null;
 
   const isUltra = config.profile === 'ultra';
 
-  // Формируем список строк для BIOS. 
-  // Все значения теперь приходят из пересчитанного res в timingEngine
   const rows = [
     { label: "DIMM profile", value: "MANUAL", highlight: isUltra },
     { label: "Memory Voltage", value: res.voltage, highlight: isUltra },
@@ -31,7 +28,6 @@ const RamBios = () => {
     { label: "tCWL", value: res.tCWL },
   ];
 
-  // В заголовке выводим важную техническую инфо: Частоту, Объем, Канальность и Скорость
   const biosTitle = `BIOS: ${config.cpu?.max || 2400}MHZ — ${res.totalRam}GB ${res.channelMode} [${res.bandwidth}]`;
 
   return (
