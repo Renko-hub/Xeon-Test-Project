@@ -1,7 +1,7 @@
 import { CPU_MODELS } from './cpuData';
 
-export type Profile = 'safe' | 'balanced' | 'aggressive' | 'ultra' | 'custom';
 export type Gen = 'V2' | 'V3' | 'V4';
+export type Profile = 'safe' | 'balanced' | 'aggressive' | 'ultra' | 'custom';
 export type BoardType = 'atx' | 'matx';
 
 export interface RamConfig {
@@ -20,8 +20,26 @@ export interface TimingResult {
   tWR: number; tRRD: number; tFAW: number; tRFC: string;
   tREFI: number; tCR: string; tCWL: number; tRTP: number; tWTR: number;
   totalRam: number; bandwidth: string; channelMode: string;
-  voltage: string; latency: string;
+  voltage: string; latency: string; biosTitle: string;
 }
+
+export const GEN_OPTIONS: Gen[] = ['V2', 'V3', 'V4'];
+export const RAM_SIZE_OPTIONS = [4, 8, 12, 16, 24, 32, 48, 64]; 
+export const SLOT_COUNT_OPTIONS = [1, 2, 3, 4]; 
+export const BOARD_TYPE_OPTIONS: BoardType[] = ['atx', 'matx'];
+export const TRIPLE_SIZES = [12, 24, 48];
+export const ULTRA_MODIFIERS = { RFC_SMALL: 0.90, RFC_MED: 0.93, RFC_BIG: 0.97 };
+
+export const isOptionValid = (field: keyof RamConfig, val: any, conf: RamConfig) => {
+  const min = conf.gen === 'V2' ? 2 : 4;
+  if (field === 'ramSize') return val >= min;
+  if (field === 'slotsCount') {
+    if (TRIPLE_SIZES.includes(conf.ramSize) && val === 1) return false;
+    const isV2Special = conf.gen === 'V2' && conf.ramSize === 12 && val === 4;
+    return (conf.ramSize / val) >= min || isV2Special;
+  }
+  return true;
+};
 
 const DDR4_RFC = {
   gb64: { atx: { safe: 980, balanced: 880, aggressive: 820, min: 780 }, matx: { safe: 1050, balanced: 950, aggressive: 880, min: 840 } },
@@ -41,20 +59,9 @@ export const RFC_MODIFIERS: Record<Gen, any> = {
   V4: DDR4_RFC
 };
 
-export const GEN_OPTIONS: Gen[] = ['V2', 'V3', 'V4'];
-export const RAM_SIZE_OPTIONS = [4, 8, 12, 16, 24, 32, 48, 64]; 
-export const SLOT_COUNT_OPTIONS = [1, 2, 3, 4]; 
-export const BOARD_TYPE_OPTIONS: BoardType[] = ['atx', 'matx'];
-
 export const INITIAL_CONFIG: RamConfig = {
-  gen: 'V2',
-  profile: 'safe',
-  boardType: 'atx',
-  ramSize: 8,
-  slotsCount: 2,
-  isEcc: false,
-  cpu: CPU_MODELS['V2'][0],
-  custom: { CL: '9', RCD: '9', RP: '9' }
+  gen: 'V2', profile: 'safe', boardType: 'atx', ramSize: 8, slotsCount: 2, isEcc: false,
+  cpu: CPU_MODELS['V2'][0], custom: { CL: '9', RCD: '9', RP: '9' }
 };
 
 export const TIMINGS_BY_FREQ: any = {
