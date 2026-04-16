@@ -727,27 +727,177 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-var _app = require("./App/App"); // Главный переключатель
-var _appDefault = parcelHelpers.interopDefault(_app);
-const root = (0, _clientDefault.default).createRoot(document.getElementById('root'));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
-    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
+var _reactRouterDom = require("react-router-dom");
+var _globalCss = require("./global.css");
+var _header = require("./components/Header/Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _csmconfiguration = require("./components/CSMConfiguration/CSMConfiguration");
+var _csmconfigurationDefault = parcelHelpers.interopDefault(_csmconfiguration);
+var _fanConfiguration = require("./components/FanConfiguration/FanConfiguration");
+var _fanConfigurationDefault = parcelHelpers.interopDefault(_fanConfiguration);
+var _iioconfiguration = require("./components/IIOConfiguration/IIOConfiguration");
+var _iioconfigurationDefault = parcelHelpers.interopDefault(_iioconfiguration);
+var _pciconfiguration = require("./components/PCIConfiguration/PCIConfiguration");
+var _pciconfigurationDefault = parcelHelpers.interopDefault(_pciconfiguration);
+var _powerConfiguration = require("./components/PowerConfiguration/PowerConfiguration");
+var _powerConfigurationDefault = parcelHelpers.interopDefault(_powerConfiguration);
+var _ramConfiguration = require("./components/RamConfiguration/RamConfiguration");
+var _ramConfigurationDefault = parcelHelpers.interopDefault(_ramConfiguration);
+const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                fileName: "src/index.tsx",
+                lineNumber: 18,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
+                className: "container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+                                to: "/ram",
+                                replace: true
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 21,
+                                columnNumber: 34
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 21,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/ram",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 23,
+                                columnNumber: 37
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 23,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/power",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 24,
+                                columnNumber: 39
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 24,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/iio",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iioconfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 25,
+                                columnNumber: 37
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 25,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/csm",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmconfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 26,
+                                columnNumber: 37
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 26,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/fan",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 27,
+                                columnNumber: 37
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 27,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/pci",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pciconfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 28,
+                                columnNumber: 37
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 28,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "*",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+                                to: "/ram",
+                                replace: true
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 30,
+                                columnNumber: 34
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 30,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/index.tsx",
+                    lineNumber: 20,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/index.tsx",
+                lineNumber: 19,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/index.tsx",
-        lineNumber: 11,
+        lineNumber: 17,
+        columnNumber: 3
+    }, undefined);
+_c = App;
+const rootElement = document.getElementById('root');
+if (rootElement) {
+    const root = (0, _clientDefault.default).createRoot(rootElement);
+    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
+            fileName: "src/index.tsx",
+            lineNumber: 42,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/index.tsx",
+        lineNumber: 41,
         columnNumber: 5
-    }, undefined)
-}, void 0, false, {
-    fileName: "src/index.tsx",
-    lineNumber: 10,
-    columnNumber: 3
-}, undefined));
+    }, undefined));
+}
+var _c;
+$RefreshReg$(_c, "App");
 
   $parcel$ReactRefreshHelpers$1d45.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","./App/App":"dJMW0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-router-dom":"61z4w","./global.css":"11axS","./components/Header/Header":"d3lRq","./components/CSMConfiguration/CSMConfiguration":"7IDf5","./components/FanConfiguration/FanConfiguration":"4qPFO","./components/IIOConfiguration/IIOConfiguration":"2Xem2","./components/PCIConfiguration/PCIConfiguration":"8gBEe","./components/PowerConfiguration/PowerConfiguration":"kEGQB","./components/RamConfiguration/RamConfiguration":"i2Oy5"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -17401,172 +17551,2315 @@ module.exports = require("b0f0e6b9e8349dac");
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
-},{"6f0162e9ab224cd4":"jMk1U"}],"dJMW0":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$f654 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$f654.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f654.prelude(module);
+},{"6f0162e9ab224cd4":"jMk1U"}],"jnFvT":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
-try {
+},{}],"7h6Pi":[function(require,module,exports,__globalThis) {
+"use strict";
+var Refresh = require("7422ead32dcc1e6b");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+module.exports.init = function() {
+    if (!globalThis.$RefreshReg$) {
+        Refresh.injectIntoGlobalHook(globalThis);
+        globalThis.$RefreshReg$ = function() {};
+        globalThis.$RefreshSig$ = function() {
+            return function(type) {
+                return type;
+            };
+        };
+        if (typeof window !== 'undefined') {
+            let ErrorOverlay = require("e4d875b7642f9496");
+            ErrorOverlay.setEditorHandler(function(errorLocation) {
+                let file = `${errorLocation.fileName}:${errorLocation.lineNumber || 1}:${errorLocation.colNumber || 1}`;
+                fetch(module.bundle.devServer + `/__parcel_launch_editor?file=${encodeURIComponent(file)}`);
+            });
+            ErrorOverlay.startReportingRuntimeErrors({
+                onError: function() {}
+            });
+            window.addEventListener('parcelhmraccept', ()=>{
+                ErrorOverlay.dismissRuntimeErrors();
+            });
+        }
+    }
+};
+// Everything below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    globalThis.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + ' ' + id);
+    };
+    globalThis.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (typeof window === 'undefined') return;
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + ' %exports%');
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + ' %exports% ' + key;
+        Refresh.register(exportValue, typeID);
+    }
+}
+
+},{"7422ead32dcc1e6b":"hpiFP","e4d875b7642f9496":"gnoim"}],"hpiFP":[function(require,module,exports,__globalThis) {
+'use strict';
+module.exports = require("96622d495519d4e");
+
+},{"96622d495519d4e":"7AD9f"}],"7AD9f":[function(require,module,exports,__globalThis) {
+/**
+ * @license React
+ * react-refresh-runtime.development.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+(function() {
+    function computeFullKey(signature) {
+        if (null !== signature.fullKey) return signature.fullKey;
+        var fullKey = signature.ownKey;
+        try {
+            var hooks = signature.getCustomHooks();
+        } catch (err) {
+            return signature.forceReset = !0, signature.fullKey = fullKey;
+        }
+        for(var i = 0; i < hooks.length; i++){
+            var hook = hooks[i];
+            if ("function" !== typeof hook) return signature.forceReset = !0, signature.fullKey = fullKey;
+            hook = allSignaturesByType.get(hook);
+            if (void 0 !== hook) {
+                var nestedHookKey = computeFullKey(hook);
+                hook.forceReset && (signature.forceReset = !0);
+                fullKey += "\n---\n" + nestedHookKey;
+            }
+        }
+        return signature.fullKey = fullKey;
+    }
+    function resolveFamily(type) {
+        return updatedFamiliesByType.get(type);
+    }
+    function cloneMap(map) {
+        var clone = new Map();
+        map.forEach(function(value, key) {
+            clone.set(key, value);
+        });
+        return clone;
+    }
+    function cloneSet(set) {
+        var clone = new Set();
+        set.forEach(function(value) {
+            clone.add(value);
+        });
+        return clone;
+    }
+    function getProperty(object, property) {
+        try {
+            return object[property];
+        } catch (err) {}
+    }
+    function register(type, id) {
+        if (!(null === type || "function" !== typeof type && "object" !== typeof type || allFamiliesByType.has(type))) {
+            var family = allFamiliesByID.get(id);
+            void 0 === family ? (family = {
+                current: type
+            }, allFamiliesByID.set(id, family)) : pendingUpdates.push([
+                family,
+                type
+            ]);
+            allFamiliesByType.set(type, family);
+            if ("object" === typeof type && null !== type) switch(getProperty(type, "$$typeof")){
+                case REACT_FORWARD_REF_TYPE:
+                    register(type.render, id + "$render");
+                    break;
+                case REACT_MEMO_TYPE:
+                    register(type.type, id + "$type");
+            }
+        }
+    }
+    function setSignature(type, key) {
+        var forceReset = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : !1, getCustomHooks = 3 < arguments.length ? arguments[3] : void 0;
+        allSignaturesByType.has(type) || allSignaturesByType.set(type, {
+            forceReset: forceReset,
+            ownKey: key,
+            fullKey: null,
+            getCustomHooks: getCustomHooks || function() {
+                return [];
+            }
+        });
+        if ("object" === typeof type && null !== type) switch(getProperty(type, "$$typeof")){
+            case REACT_FORWARD_REF_TYPE:
+                setSignature(type.render, key, forceReset, getCustomHooks);
+                break;
+            case REACT_MEMO_TYPE:
+                setSignature(type.type, key, forceReset, getCustomHooks);
+        }
+    }
+    function collectCustomHooksForSignature(type) {
+        type = allSignaturesByType.get(type);
+        void 0 !== type && computeFullKey(type);
+    }
+    var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_MEMO_TYPE = Symbol.for("react.memo"), PossiblyWeakMap = "function" === typeof WeakMap ? WeakMap : Map, allFamiliesByID = new Map(), allFamiliesByType = new PossiblyWeakMap(), allSignaturesByType = new PossiblyWeakMap(), updatedFamiliesByType = new PossiblyWeakMap(), pendingUpdates = [], helpersByRendererID = new Map(), helpersByRoot = new Map(), mountedRoots = new Set(), failedRoots = new Set(), rootElements = "function" === typeof WeakMap ? new WeakMap() : null, isPerformingRefresh = !1;
+    exports._getMountedRootCount = function() {
+        return mountedRoots.size;
+    };
+    exports.collectCustomHooksForSignature = collectCustomHooksForSignature;
+    exports.createSignatureFunctionForTransform = function() {
+        var savedType, hasCustomHooks, didCollectHooks = !1;
+        return function(type, key, forceReset, getCustomHooks) {
+            if ("string" === typeof key) return savedType || (savedType = type, hasCustomHooks = "function" === typeof getCustomHooks), null == type || "function" !== typeof type && "object" !== typeof type || setSignature(type, key, forceReset, getCustomHooks), type;
+            !didCollectHooks && hasCustomHooks && (didCollectHooks = !0, collectCustomHooksForSignature(savedType));
+        };
+    };
+    exports.getFamilyByID = function(id) {
+        return allFamiliesByID.get(id);
+    };
+    exports.getFamilyByType = function(type) {
+        return allFamiliesByType.get(type);
+    };
+    exports.hasUnrecoverableErrors = function() {
+        return !1;
+    };
+    exports.injectIntoGlobalHook = function(globalObject) {
+        var hook = globalObject.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+        if (void 0 === hook) {
+            var nextID = 0;
+            globalObject.__REACT_DEVTOOLS_GLOBAL_HOOK__ = hook = {
+                renderers: new Map(),
+                supportsFiber: !0,
+                inject: function() {
+                    return nextID++;
+                },
+                onScheduleFiberRoot: function() {},
+                onCommitFiberRoot: function() {},
+                onCommitFiberUnmount: function() {}
+            };
+        }
+        if (hook.isDisabled) console.warn("Something has shimmed the React DevTools global hook (__REACT_DEVTOOLS_GLOBAL_HOOK__). Fast Refresh is not compatible with this shim and will be disabled.");
+        else {
+            var oldInject = hook.inject;
+            hook.inject = function(injected) {
+                var id = oldInject.apply(this, arguments);
+                "function" === typeof injected.scheduleRefresh && "function" === typeof injected.setRefreshHandler && helpersByRendererID.set(id, injected);
+                return id;
+            };
+            hook.renderers.forEach(function(injected, id) {
+                "function" === typeof injected.scheduleRefresh && "function" === typeof injected.setRefreshHandler && helpersByRendererID.set(id, injected);
+            });
+            var oldOnCommitFiberRoot = hook.onCommitFiberRoot, oldOnScheduleFiberRoot = hook.onScheduleFiberRoot || function() {};
+            hook.onScheduleFiberRoot = function(id, root, children) {
+                isPerformingRefresh || (failedRoots.delete(root), null !== rootElements && rootElements.set(root, children));
+                return oldOnScheduleFiberRoot.apply(this, arguments);
+            };
+            hook.onCommitFiberRoot = function(id, root, maybePriorityLevel, didError) {
+                var helpers = helpersByRendererID.get(id);
+                if (void 0 !== helpers) {
+                    helpersByRoot.set(root, helpers);
+                    helpers = root.current;
+                    var alternate = helpers.alternate;
+                    null !== alternate ? (alternate = null != alternate.memoizedState && null != alternate.memoizedState.element && mountedRoots.has(root), helpers = null != helpers.memoizedState && null != helpers.memoizedState.element, !alternate && helpers ? (mountedRoots.add(root), failedRoots.delete(root)) : alternate && helpers || (alternate && !helpers ? (mountedRoots.delete(root), didError ? failedRoots.add(root) : helpersByRoot.delete(root)) : alternate || helpers || didError && failedRoots.add(root))) : mountedRoots.add(root);
+                }
+                return oldOnCommitFiberRoot.apply(this, arguments);
+            };
+        }
+    };
+    exports.isLikelyComponentType = function(type) {
+        switch(typeof type){
+            case "function":
+                if (null != type.prototype) {
+                    if (type.prototype.isReactComponent) return !0;
+                    var ownNames = Object.getOwnPropertyNames(type.prototype);
+                    if (1 < ownNames.length || "constructor" !== ownNames[0] || type.prototype.__proto__ !== Object.prototype) return !1;
+                }
+                type = type.name || type.displayName;
+                return "string" === typeof type && /^[A-Z]/.test(type);
+            case "object":
+                if (null != type) switch(getProperty(type, "$$typeof")){
+                    case REACT_FORWARD_REF_TYPE:
+                    case REACT_MEMO_TYPE:
+                        return !0;
+                }
+                return !1;
+            default:
+                return !1;
+        }
+    };
+    exports.performReactRefresh = function() {
+        if (0 === pendingUpdates.length || isPerformingRefresh) return null;
+        isPerformingRefresh = !0;
+        try {
+            var staleFamilies = new Set(), updatedFamilies = new Set(), updates = pendingUpdates;
+            pendingUpdates = [];
+            updates.forEach(function(_ref) {
+                var family = _ref[0];
+                _ref = _ref[1];
+                var prevType = family.current;
+                updatedFamiliesByType.set(prevType, family);
+                updatedFamiliesByType.set(_ref, family);
+                family.current = _ref;
+                prevType.prototype && prevType.prototype.isReactComponent || _ref.prototype && _ref.prototype.isReactComponent ? _ref = !1 : (prevType = allSignaturesByType.get(prevType), _ref = allSignaturesByType.get(_ref), _ref = void 0 === prevType && void 0 === _ref || void 0 !== prevType && void 0 !== _ref && computeFullKey(prevType) === computeFullKey(_ref) && !_ref.forceReset ? !0 : !1);
+                _ref ? updatedFamilies.add(family) : staleFamilies.add(family);
+            });
+            var update = {
+                updatedFamilies: updatedFamilies,
+                staleFamilies: staleFamilies
+            };
+            helpersByRendererID.forEach(function(helpers) {
+                helpers.setRefreshHandler(resolveFamily);
+            });
+            var didError = !1, firstError = null, failedRootsSnapshot = cloneSet(failedRoots), mountedRootsSnapshot = cloneSet(mountedRoots), helpersByRootSnapshot = cloneMap(helpersByRoot);
+            failedRootsSnapshot.forEach(function(root) {
+                var helpers = helpersByRootSnapshot.get(root);
+                if (void 0 === helpers) throw Error("Could not find helpers for a root. This is a bug in React Refresh.");
+                failedRoots.has(root);
+                if (null !== rootElements && rootElements.has(root)) {
+                    var element = rootElements.get(root);
+                    try {
+                        helpers.scheduleRoot(root, element);
+                    } catch (err) {
+                        didError || (didError = !0, firstError = err);
+                    }
+                }
+            });
+            mountedRootsSnapshot.forEach(function(root) {
+                var helpers = helpersByRootSnapshot.get(root);
+                if (void 0 === helpers) throw Error("Could not find helpers for a root. This is a bug in React Refresh.");
+                mountedRoots.has(root);
+                try {
+                    helpers.scheduleRefresh(root, update);
+                } catch (err) {
+                    didError || (didError = !0, firstError = err);
+                }
+            });
+            if (didError) throw firstError;
+            return update;
+        } finally{
+            isPerformingRefresh = !1;
+        }
+    };
+    exports.register = register;
+    exports.setSignature = setSignature;
+})();
+
+},{}],"gnoim":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-// Компоненты (ПУТИ И НАЗВАНИЯ ИСПРАВЛЕНЫ)
-var _header = require("../components/Header/Header");
-var _headerDefault = parcelHelpers.interopDefault(_header);
-var _ramConfiguration = require("../components/RamConfiguration/RamConfiguration");
-var _ramConfigurationDefault = parcelHelpers.interopDefault(_ramConfiguration);
-var _powerConfiguration = require("../components/PowerConfiguration/PowerConfiguration");
-var _powerConfigurationDefault = parcelHelpers.interopDefault(_powerConfiguration);
-var _fanConfiguration = require("../components/FanConfiguration/FanConfiguration");
-var _fanConfigurationDefault = parcelHelpers.interopDefault(_fanConfiguration);
-var _iioconfiguration = require("../components/IIOConfiguration/IIOConfiguration");
-var _iioconfigurationDefault = parcelHelpers.interopDefault(_iioconfiguration);
-var _csmconfiguration = require("../components/CSMConfiguration/CSMConfiguration");
-var _csmconfigurationDefault = parcelHelpers.interopDefault(_csmconfiguration);
-var _pciconfiguration = require("../components/PCIConfiguration/PCIConfiguration");
-var _pciconfigurationDefault = parcelHelpers.interopDefault(_pciconfiguration);
-// Стили
-var _globalCss = require("./styles/global.css");
-const App = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "main-shell",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                    fileName: "src/App/App.tsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-                    className: "content",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/ram",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramConfigurationDefault.default), {}, void 0, false, {
-                                    fileName: "src/App/App.tsx",
-                                    lineNumber: 24,
-                                    columnNumber: 41
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App/App.tsx",
-                                lineNumber: 24,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/power",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerConfigurationDefault.default), {}, void 0, false, {
-                                    fileName: "src/App/App.tsx",
-                                    lineNumber: 25,
-                                    columnNumber: 43
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App/App.tsx",
-                                lineNumber: 25,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/fan",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanConfigurationDefault.default), {}, void 0, false, {
-                                    fileName: "src/App/App.tsx",
-                                    lineNumber: 26,
-                                    columnNumber: 41
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App/App.tsx",
-                                lineNumber: 26,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/iio",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iioconfigurationDefault.default), {}, void 0, false, {
-                                    fileName: "src/App/App.tsx",
-                                    lineNumber: 27,
-                                    columnNumber: 41
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App/App.tsx",
-                                lineNumber: 27,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/csm",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmconfigurationDefault.default), {}, void 0, false, {
-                                    fileName: "src/App/App.tsx",
-                                    lineNumber: 28,
-                                    columnNumber: 41
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App/App.tsx",
-                                lineNumber: 28,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/pci",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pciconfigurationDefault.default), {}, void 0, false, {
-                                    fileName: "src/App/App.tsx",
-                                    lineNumber: 29,
-                                    columnNumber: 41
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App/App.tsx",
-                                lineNumber: 29,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "*",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
-                                    to: "/ram",
-                                    replace: true
-                                }, void 0, false, {
-                                    fileName: "src/App/App.tsx",
-                                    lineNumber: 32,
-                                    columnNumber: 38
-                                }, void 0)
-                            }, void 0, false, {
-                                fileName: "src/App/App.tsx",
-                                lineNumber: 32,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/App/App.tsx",
-                        lineNumber: 22,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/App/App.tsx",
-                    lineNumber: 21,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/App/App.tsx",
-            lineNumber: 19,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/App/App.tsx",
-        lineNumber: 18,
-        columnNumber: 5
-    }, undefined);
-};
-_c = App;
-exports.default = App;
-var _c;
-$RefreshReg$(_c, "App");
-
-  $parcel$ReactRefreshHelpers$f654.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
+parcelHelpers.export(exports, "setEditorHandler", ()=>$da9882e673ac146b$export$25a22ac46f1bd016);
+parcelHelpers.export(exports, "reportRuntimeError", ()=>$da9882e673ac146b$export$74e9101ce4078c0);
+parcelHelpers.export(exports, "startReportingRuntimeErrors", ()=>$da9882e673ac146b$export$cda2c88a41631c16);
+parcelHelpers.export(exports, "dismissRuntimeErrors", ()=>$da9882e673ac146b$export$1cfa6d161ca81bd9);
+parcelHelpers.export(exports, "stopReportingRuntimeErrors", ()=>$da9882e673ac146b$export$25ba7d9a816639e7);
+function $parcel$interopDefault(a) {
+    return a && a.__esModule ? a.default : a;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-router-dom":"61z4w","../components/Header/Header":"d3lRq","../components/RamConfiguration/RamConfiguration":"i2Oy5","../components/PowerConfiguration/PowerConfiguration":"kEGQB","../components/FanConfiguration/FanConfiguration":"4qPFO","../components/IIOConfiguration/IIOConfiguration":"2Xem2","../components/CSMConfiguration/CSMConfiguration":"7IDf5","../components/PCIConfiguration/PCIConfiguration":"8gBEe","./styles/global.css":"5XnaQ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"61z4w":[function(require,module,exports,__globalThis) {
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /* eslint-env browser */ /* eslint-disable react/react-in-jsx-scope, no-console */ var $b6c7f0288a15c619$var$n, $b6c7f0288a15c619$export$41c562ebe57d11e2, $b6c7f0288a15c619$var$u, $b6c7f0288a15c619$export$a8257692ac88316c, $b6c7f0288a15c619$var$i, $b6c7f0288a15c619$var$r, $b6c7f0288a15c619$var$o, $b6c7f0288a15c619$var$e, $b6c7f0288a15c619$var$f, $b6c7f0288a15c619$var$c, $b6c7f0288a15c619$var$s, $b6c7f0288a15c619$var$a, $b6c7f0288a15c619$var$h, $b6c7f0288a15c619$var$p = {}, $b6c7f0288a15c619$var$y = [], $b6c7f0288a15c619$var$v = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i, $b6c7f0288a15c619$var$w = Array.isArray;
+function $b6c7f0288a15c619$var$d(n, l) {
+    for(var u in l)n[u] = l[u];
+    return n;
+}
+function $b6c7f0288a15c619$var$g(n) {
+    n && n.parentNode && n.parentNode.removeChild(n);
+}
+function $b6c7f0288a15c619$export$c8a8987d4410bf2d(l, u, t) {
+    var i, r, o, e = {};
+    for(o in u)"key" == o ? i = u[o] : "ref" == o ? r = u[o] : e[o] = u[o];
+    if (arguments.length > 2 && (e.children = arguments.length > 3 ? $b6c7f0288a15c619$var$n.call(arguments, 2) : t), "function" == typeof l && null != l.defaultProps) for(o in l.defaultProps)null == e[o] && (e[o] = l.defaultProps[o]);
+    return $b6c7f0288a15c619$var$m(l, e, i, r, null);
+}
+function $b6c7f0288a15c619$var$m(n, t, i, r, o) {
+    var e = {
+        type: n,
+        props: t,
+        key: i,
+        ref: r,
+        __k: null,
+        __: null,
+        __b: 0,
+        __e: null,
+        __c: null,
+        constructor: void 0,
+        __v: null == o ? ++$b6c7f0288a15c619$var$u : o,
+        __i: -1,
+        __u: 0
+    };
+    return null == o && null != $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode && $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode(e), e;
+}
+function $b6c7f0288a15c619$export$7d1e3a5e95ceca43() {
+    return {
+        current: null
+    };
+}
+function $b6c7f0288a15c619$export$ffb0004e005737fa(n) {
+    return n.children;
+}
+function $b6c7f0288a15c619$export$16fa2f45be04daa8(n, l) {
+    this.props = n, this.context = l;
+}
+function $b6c7f0288a15c619$var$S(n, l) {
+    if (null == l) return n.__ ? $b6c7f0288a15c619$var$S(n.__, n.__i + 1) : null;
+    for(var u; l < n.__k.length; l++)if (null != (u = n.__k[l]) && null != u.__e) return u.__e;
+    return "function" == typeof n.type ? $b6c7f0288a15c619$var$S(n) : null;
+}
+function $b6c7f0288a15c619$var$C(n) {
+    var l, u;
+    if (null != (n = n.__) && null != n.__c) {
+        for(n.__e = n.__c.base = null, l = 0; l < n.__k.length; l++)if (null != (u = n.__k[l]) && null != u.__e) {
+            n.__e = n.__c.base = u.__e;
+            break;
+        }
+        return $b6c7f0288a15c619$var$C(n);
+    }
+}
+function $b6c7f0288a15c619$var$M(n) {
+    (!n.__d && (n.__d = !0) && $b6c7f0288a15c619$var$i.push(n) && !$b6c7f0288a15c619$var$$.__r++ || $b6c7f0288a15c619$var$r != $b6c7f0288a15c619$export$41c562ebe57d11e2.debounceRendering) && (($b6c7f0288a15c619$var$r = $b6c7f0288a15c619$export$41c562ebe57d11e2.debounceRendering) || $b6c7f0288a15c619$var$o)($b6c7f0288a15c619$var$$);
+}
+function $b6c7f0288a15c619$var$$() {
+    for(var n, u, t, r, o, f, c, s = 1; $b6c7f0288a15c619$var$i.length;)$b6c7f0288a15c619$var$i.length > s && $b6c7f0288a15c619$var$i.sort($b6c7f0288a15c619$var$e), n = $b6c7f0288a15c619$var$i.shift(), s = $b6c7f0288a15c619$var$i.length, n.__d && (t = void 0, o = (r = (u = n).__v).__e, f = [], c = [], u.__P && ((t = $b6c7f0288a15c619$var$d({}, r)).__v = r.__v + 1, $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode && $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode(t), $b6c7f0288a15c619$var$O(u.__P, t, r, u.__n, u.__P.namespaceURI, 32 & r.__u ? [
+        o
+    ] : null, f, null == o ? $b6c7f0288a15c619$var$S(r) : o, !!(32 & r.__u), c), t.__v = r.__v, t.__.__k[t.__i] = t, $b6c7f0288a15c619$var$z(f, t, c), t.__e != o && $b6c7f0288a15c619$var$C(t)));
+    $b6c7f0288a15c619$var$$.__r = 0;
+}
+function $b6c7f0288a15c619$var$I(n, l, u, t, i, r, o, e, f, c, s) {
+    var a, h, v, w, d, g, _ = t && t.__k || $b6c7f0288a15c619$var$y, m = l.length;
+    for(f = $b6c7f0288a15c619$var$P(u, l, _, f, m), a = 0; a < m; a++)null != (v = u.__k[a]) && (h = -1 == v.__i ? $b6c7f0288a15c619$var$p : _[v.__i] || $b6c7f0288a15c619$var$p, v.__i = a, g = $b6c7f0288a15c619$var$O(n, v, h, i, r, o, e, f, c, s), w = v.__e, v.ref && h.ref != v.ref && (h.ref && $b6c7f0288a15c619$var$q(h.ref, null, v), s.push(v.ref, v.__c || w, v)), null == d && null != w && (d = w), 4 & v.__u || h.__k === v.__k ? f = $b6c7f0288a15c619$var$A(v, f, n) : "function" == typeof v.type && void 0 !== g ? f = g : w && (f = w.nextSibling), v.__u &= -7);
+    return u.__e = d, f;
+}
+function $b6c7f0288a15c619$var$P(n, l, u, t, i) {
+    var r, o, e, f, c, s = u.length, a = s, h = 0;
+    for(n.__k = new Array(i), r = 0; r < i; r++)null != (o = l[r]) && "boolean" != typeof o && "function" != typeof o ? (f = r + h, (o = n.__k[r] = "string" == typeof o || "number" == typeof o || "bigint" == typeof o || o.constructor == String ? $b6c7f0288a15c619$var$m(null, o, null, null, null) : $b6c7f0288a15c619$var$w(o) ? $b6c7f0288a15c619$var$m($b6c7f0288a15c619$export$ffb0004e005737fa, {
+        children: o
+    }, null, null, null) : null == o.constructor && o.__b > 0 ? $b6c7f0288a15c619$var$m(o.type, o.props, o.key, o.ref ? o.ref : null, o.__v) : o).__ = n, o.__b = n.__b + 1, e = null, -1 != (c = o.__i = $b6c7f0288a15c619$var$L(o, u, f, a)) && (a--, (e = u[c]) && (e.__u |= 2)), null == e || null == e.__v ? (-1 == c && (i > s ? h-- : i < s && h++), "function" != typeof o.type && (o.__u |= 4)) : c != f && (c == f - 1 ? h-- : c == f + 1 ? h++ : (c > f ? h-- : h++, o.__u |= 4))) : n.__k[r] = null;
+    if (a) for(r = 0; r < s; r++)null != (e = u[r]) && 0 == (2 & e.__u) && (e.__e == t && (t = $b6c7f0288a15c619$var$S(e)), $b6c7f0288a15c619$var$B(e, e));
+    return t;
+}
+function $b6c7f0288a15c619$var$A(n, l, u) {
+    var t, i;
+    if ("function" == typeof n.type) {
+        for(t = n.__k, i = 0; t && i < t.length; i++)t[i] && (t[i].__ = n, l = $b6c7f0288a15c619$var$A(t[i], l, u));
+        return l;
+    }
+    n.__e != l && (l && n.type && !u.contains(l) && (l = $b6c7f0288a15c619$var$S(n)), u.insertBefore(n.__e, l || null), l = n.__e);
+    do l = l && l.nextSibling;
+    while (null != l && 8 == l.nodeType);
+    return l;
+}
+function $b6c7f0288a15c619$export$47e4c5b300681277(n, l) {
+    return l = l || [], null == n || "boolean" == typeof n || ($b6c7f0288a15c619$var$w(n) ? n.some(function(n) {
+        $b6c7f0288a15c619$export$47e4c5b300681277(n, l);
+    }) : l.push(n)), l;
+}
+function $b6c7f0288a15c619$var$L(n, l, u, t) {
+    var i, r, o = n.key, e = n.type, f = l[u];
+    if (null === f && null == n.key || f && o == f.key && e == f.type && 0 == (2 & f.__u)) return u;
+    if (t > (null != f && 0 == (2 & f.__u) ? 1 : 0)) for(i = u - 1, r = u + 1; i >= 0 || r < l.length;){
+        if (i >= 0) {
+            if ((f = l[i]) && 0 == (2 & f.__u) && o == f.key && e == f.type) return i;
+            i--;
+        }
+        if (r < l.length) {
+            if ((f = l[r]) && 0 == (2 & f.__u) && o == f.key && e == f.type) return r;
+            r++;
+        }
+    }
+    return -1;
+}
+function $b6c7f0288a15c619$var$T(n, l, u) {
+    "-" == l[0] ? n.setProperty(l, null == u ? "" : u) : n[l] = null == u ? "" : "number" != typeof u || $b6c7f0288a15c619$var$v.test(l) ? u : u + "px";
+}
+function $b6c7f0288a15c619$var$j(n, l, u, t, i) {
+    var r;
+    n: if ("style" == l) {
+        if ("string" == typeof u) n.style.cssText = u;
+        else {
+            if ("string" == typeof t && (n.style.cssText = t = ""), t) for(l in t)u && l in u || $b6c7f0288a15c619$var$T(n.style, l, "");
+            if (u) for(l in u)t && u[l] == t[l] || $b6c7f0288a15c619$var$T(n.style, l, u[l]);
+        }
+    } else if ("o" == l[0] && "n" == l[1]) r = l != (l = l.replace($b6c7f0288a15c619$var$f, "$1")), l = l.toLowerCase() in n || "onFocusOut" == l || "onFocusIn" == l ? l.toLowerCase().slice(2) : l.slice(2), n.l || (n.l = {}), n.l[l + r] = u, u ? t ? u.u = t.u : (u.u = $b6c7f0288a15c619$var$c, n.addEventListener(l, r ? $b6c7f0288a15c619$var$a : $b6c7f0288a15c619$var$s, r)) : n.removeEventListener(l, r ? $b6c7f0288a15c619$var$a : $b6c7f0288a15c619$var$s, r);
+    else {
+        if ("http://www.w3.org/2000/svg" == i) l = l.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
+        else if ("width" != l && "height" != l && "href" != l && "list" != l && "form" != l && "tabIndex" != l && "download" != l && "rowSpan" != l && "colSpan" != l && "role" != l && "popover" != l && l in n) try {
+            n[l] = null == u ? "" : u;
+            break n;
+        } catch (n) {}
+        "function" == typeof u || (null == u || !1 === u && "-" != l[4] ? n.removeAttribute(l) : n.setAttribute(l, "popover" == l && 1 == u ? "" : u));
+    }
+}
+function $b6c7f0288a15c619$var$F(n) {
+    return function(u) {
+        if (this.l) {
+            var t = this.l[u.type + n];
+            if (null == u.t) u.t = $b6c7f0288a15c619$var$c++;
+            else if (u.t < t.u) return;
+            return t($b6c7f0288a15c619$export$41c562ebe57d11e2.event ? $b6c7f0288a15c619$export$41c562ebe57d11e2.event(u) : u);
+        }
+    };
+}
+function $b6c7f0288a15c619$var$O(n, u, t, i, r, o, e, f, c, s) {
+    var a, h, p, y, v, _, m, b, S, C, M, $, P, A, H, L, T, j = u.type;
+    if (null != u.constructor) return null;
+    128 & t.__u && (c = !!(32 & t.__u), o = [
+        f = u.__e = t.__e
+    ]), (a = $b6c7f0288a15c619$export$41c562ebe57d11e2.__b) && a(u);
+    n: if ("function" == typeof j) try {
+        if (b = u.props, S = "prototype" in j && j.prototype.render, C = (a = j.contextType) && i[a.__c], M = a ? C ? C.props.value : a.__ : i, t.__c ? m = (h = u.__c = t.__c).__ = h.__E : (S ? u.__c = h = new j(b, M) : (u.__c = h = new $b6c7f0288a15c619$export$16fa2f45be04daa8(b, M), h.constructor = j, h.render = $b6c7f0288a15c619$var$D), C && C.sub(h), h.props = b, h.state || (h.state = {}), h.context = M, h.__n = i, p = h.__d = !0, h.__h = [], h._sb = []), S && null == h.__s && (h.__s = h.state), S && null != j.getDerivedStateFromProps && (h.__s == h.state && (h.__s = $b6c7f0288a15c619$var$d({}, h.__s)), $b6c7f0288a15c619$var$d(h.__s, j.getDerivedStateFromProps(b, h.__s))), y = h.props, v = h.state, h.__v = u, p) S && null == j.getDerivedStateFromProps && null != h.componentWillMount && h.componentWillMount(), S && null != h.componentDidMount && h.__h.push(h.componentDidMount);
+        else {
+            if (S && null == j.getDerivedStateFromProps && b !== y && null != h.componentWillReceiveProps && h.componentWillReceiveProps(b, M), !h.__e && null != h.shouldComponentUpdate && !1 === h.shouldComponentUpdate(b, h.__s, M) || u.__v == t.__v) {
+                for(u.__v != t.__v && (h.props = b, h.state = h.__s, h.__d = !1), u.__e = t.__e, u.__k = t.__k, u.__k.some(function(n) {
+                    n && (n.__ = u);
+                }), $ = 0; $ < h._sb.length; $++)h.__h.push(h._sb[$]);
+                h._sb = [], h.__h.length && e.push(h);
+                break n;
+            }
+            null != h.componentWillUpdate && h.componentWillUpdate(b, h.__s, M), S && null != h.componentDidUpdate && h.__h.push(function() {
+                h.componentDidUpdate(y, v, _);
+            });
+        }
+        if (h.context = M, h.props = b, h.__P = n, h.__e = !1, P = $b6c7f0288a15c619$export$41c562ebe57d11e2.__r, A = 0, S) {
+            for(h.state = h.__s, h.__d = !1, P && P(u), a = h.render(h.props, h.state, h.context), H = 0; H < h._sb.length; H++)h.__h.push(h._sb[H]);
+            h._sb = [];
+        } else do h.__d = !1, P && P(u), a = h.render(h.props, h.state, h.context), h.state = h.__s;
+        while (h.__d && ++A < 25);
+        h.state = h.__s, null != h.getChildContext && (i = $b6c7f0288a15c619$var$d($b6c7f0288a15c619$var$d({}, i), h.getChildContext())), S && !p && null != h.getSnapshotBeforeUpdate && (_ = h.getSnapshotBeforeUpdate(y, v)), L = a, null != a && a.type === $b6c7f0288a15c619$export$ffb0004e005737fa && null == a.key && (L = $b6c7f0288a15c619$var$N(a.props.children)), f = $b6c7f0288a15c619$var$I(n, $b6c7f0288a15c619$var$w(L) ? L : [
+            L
+        ], u, t, i, r, o, e, f, c, s), h.base = u.__e, u.__u &= -161, h.__h.length && e.push(h), m && (h.__E = h.__ = null);
+    } catch (n) {
+        if (u.__v = null, c || null != o) {
+            if (n.then) {
+                for(u.__u |= c ? 160 : 128; f && 8 == f.nodeType && f.nextSibling;)f = f.nextSibling;
+                o[o.indexOf(f)] = null, u.__e = f;
+            } else for(T = o.length; T--;)$b6c7f0288a15c619$var$g(o[T]);
+        } else u.__e = t.__e, u.__k = t.__k;
+        $b6c7f0288a15c619$export$41c562ebe57d11e2.__e(n, u, t);
+    }
+    else null == o && u.__v == t.__v ? (u.__k = t.__k, u.__e = t.__e) : f = u.__e = $b6c7f0288a15c619$var$V(t.__e, u, t, i, r, o, e, c, s);
+    return (a = $b6c7f0288a15c619$export$41c562ebe57d11e2.diffed) && a(u), 128 & u.__u ? void 0 : f;
+}
+function $b6c7f0288a15c619$var$z(n, u, t) {
+    for(var i = 0; i < t.length; i++)$b6c7f0288a15c619$var$q(t[i], t[++i], t[++i]);
+    $b6c7f0288a15c619$export$41c562ebe57d11e2.__c && $b6c7f0288a15c619$export$41c562ebe57d11e2.__c(u, n), n.some(function(u) {
+        try {
+            n = u.__h, u.__h = [], n.some(function(n) {
+                n.call(u);
+            });
+        } catch (n) {
+            $b6c7f0288a15c619$export$41c562ebe57d11e2.__e(n, u.__v);
+        }
+    });
+}
+function $b6c7f0288a15c619$var$N(n) {
+    return "object" != typeof n || null == n || n.__b && n.__b > 0 ? n : $b6c7f0288a15c619$var$w(n) ? n.map($b6c7f0288a15c619$var$N) : $b6c7f0288a15c619$var$d({}, n);
+}
+function $b6c7f0288a15c619$var$V(u, t, i, r, o, e, f, c, s) {
+    var a, h, y, v, d, _, m, b = i.props, k = t.props, x = t.type;
+    if ("svg" == x ? o = "http://www.w3.org/2000/svg" : "math" == x ? o = "http://www.w3.org/1998/Math/MathML" : o || (o = "http://www.w3.org/1999/xhtml"), null != e) {
+        for(a = 0; a < e.length; a++)if ((d = e[a]) && "setAttribute" in d == !!x && (x ? d.localName == x : 3 == d.nodeType)) {
+            u = d, e[a] = null;
+            break;
+        }
+    }
+    if (null == u) {
+        if (null == x) return document.createTextNode(k);
+        u = document.createElementNS(o, x, k.is && k), c && ($b6c7f0288a15c619$export$41c562ebe57d11e2.__m && $b6c7f0288a15c619$export$41c562ebe57d11e2.__m(t, e), c = !1), e = null;
+    }
+    if (null == x) b === k || c && u.data == k || (u.data = k);
+    else {
+        if (e = e && $b6c7f0288a15c619$var$n.call(u.childNodes), b = i.props || $b6c7f0288a15c619$var$p, !c && null != e) for(b = {}, a = 0; a < u.attributes.length; a++)b[(d = u.attributes[a]).name] = d.value;
+        for(a in b)if (d = b[a], "children" == a) ;
+        else if ("dangerouslySetInnerHTML" == a) y = d;
+        else if (!(a in k)) {
+            if ("value" == a && "defaultValue" in k || "checked" == a && "defaultChecked" in k) continue;
+            $b6c7f0288a15c619$var$j(u, a, null, d, o);
+        }
+        for(a in k)d = k[a], "children" == a ? v = d : "dangerouslySetInnerHTML" == a ? h = d : "value" == a ? _ = d : "checked" == a ? m = d : c && "function" != typeof d || b[a] === d || $b6c7f0288a15c619$var$j(u, a, d, b[a], o);
+        if (h) c || y && (h.__html == y.__html || h.__html == u.innerHTML) || (u.innerHTML = h.__html), t.__k = [];
+        else if (y && (u.innerHTML = ""), $b6c7f0288a15c619$var$I("template" == t.type ? u.content : u, $b6c7f0288a15c619$var$w(v) ? v : [
+            v
+        ], t, i, r, "foreignObject" == x ? "http://www.w3.org/1999/xhtml" : o, e, f, e ? e[0] : i.__k && $b6c7f0288a15c619$var$S(i, 0), c, s), null != e) for(a = e.length; a--;)$b6c7f0288a15c619$var$g(e[a]);
+        c || (a = "value", "progress" == x && null == _ ? u.removeAttribute("value") : null != _ && (_ !== u[a] || "progress" == x && !_ || "option" == x && _ != b[a]) && $b6c7f0288a15c619$var$j(u, a, _, b[a], o), a = "checked", null != m && m != u[a] && $b6c7f0288a15c619$var$j(u, a, m, b[a], o));
+    }
+    return u;
+}
+function $b6c7f0288a15c619$var$q(n, u, t) {
+    try {
+        if ("function" == typeof n) {
+            var i = "function" == typeof n.__u;
+            i && n.__u(), i && null == u || (n.__u = n(u));
+        } else n.current = u;
+    } catch (n) {
+        $b6c7f0288a15c619$export$41c562ebe57d11e2.__e(n, t);
+    }
+}
+function $b6c7f0288a15c619$var$B(n, u, t) {
+    var i, r;
+    if ($b6c7f0288a15c619$export$41c562ebe57d11e2.unmount && $b6c7f0288a15c619$export$41c562ebe57d11e2.unmount(n), (i = n.ref) && (i.current && i.current != n.__e || $b6c7f0288a15c619$var$q(i, null, u)), null != (i = n.__c)) {
+        if (i.componentWillUnmount) try {
+            i.componentWillUnmount();
+        } catch (n) {
+            $b6c7f0288a15c619$export$41c562ebe57d11e2.__e(n, u);
+        }
+        i.base = i.__P = null;
+    }
+    if (i = n.__k) for(r = 0; r < i.length; r++)i[r] && $b6c7f0288a15c619$var$B(i[r], u, t || "function" != typeof n.type);
+    t || $b6c7f0288a15c619$var$g(n.__e), n.__c = n.__ = n.__e = void 0;
+}
+function $b6c7f0288a15c619$var$D(n, l, u) {
+    return this.constructor(n, u);
+}
+function $b6c7f0288a15c619$export$b3890eb0ae9dca99(u, t, i) {
+    var r, o, e, f;
+    t == document && (t = document.documentElement), $b6c7f0288a15c619$export$41c562ebe57d11e2.__ && $b6c7f0288a15c619$export$41c562ebe57d11e2.__(u, t), o = (r = "function" == typeof i) ? null : i && i.__k || t.__k, e = [], f = [], $b6c7f0288a15c619$var$O(t, u = (!r && i || t).__k = $b6c7f0288a15c619$export$c8a8987d4410bf2d($b6c7f0288a15c619$export$ffb0004e005737fa, null, [
+        u
+    ]), o || $b6c7f0288a15c619$var$p, $b6c7f0288a15c619$var$p, t.namespaceURI, !r && i ? [
+        i
+    ] : o ? null : t.firstChild ? $b6c7f0288a15c619$var$n.call(t.childNodes) : null, e, !r && i ? i : o ? o.__e : t.firstChild, r, f), $b6c7f0288a15c619$var$z(e, u, f);
+}
+function $b6c7f0288a15c619$export$fa8d919ba61d84db(n, l) {
+    $b6c7f0288a15c619$export$b3890eb0ae9dca99(n, l, $b6c7f0288a15c619$export$fa8d919ba61d84db);
+}
+function $b6c7f0288a15c619$export$e530037191fcd5d7(l, u, t) {
+    var i, r, o, e, f = $b6c7f0288a15c619$var$d({}, l.props);
+    for(o in l.type && l.type.defaultProps && (e = l.type.defaultProps), u)"key" == o ? i = u[o] : "ref" == o ? r = u[o] : f[o] = null == u[o] && null != e ? e[o] : u[o];
+    return arguments.length > 2 && (f.children = arguments.length > 3 ? $b6c7f0288a15c619$var$n.call(arguments, 2) : t), $b6c7f0288a15c619$var$m(l.type, f, i || l.key, r || l.ref, null);
+}
+function $b6c7f0288a15c619$export$fd42f52fd3ae1109(n) {
+    function l(n) {
+        var u, t;
+        return this.getChildContext || (u = new Set, (t = {})[l.__c] = this, this.getChildContext = function() {
+            return t;
+        }, this.componentWillUnmount = function() {
+            u = null;
+        }, this.shouldComponentUpdate = function(n) {
+            this.props.value != n.value && u.forEach(function(n) {
+                n.__e = !0, $b6c7f0288a15c619$var$M(n);
+            });
+        }, this.sub = function(n) {
+            u.add(n);
+            var l = n.componentWillUnmount;
+            n.componentWillUnmount = function() {
+                u && u.delete(n), l && l.call(n);
+            };
+        }), n.children;
+    }
+    return l.__c = "__cC" + $b6c7f0288a15c619$var$h++, l.__ = n, l.Provider = l.__l = (l.Consumer = function(n, l) {
+        return n.children(l);
+    }).contextType = l, l;
+}
+$b6c7f0288a15c619$var$n = $b6c7f0288a15c619$var$y.slice, $b6c7f0288a15c619$export$41c562ebe57d11e2 = {
+    __e: function(n, l, u, t) {
+        for(var i, r, o; l = l.__;)if ((i = l.__c) && !i.__) try {
+            if ((r = i.constructor) && null != r.getDerivedStateFromError && (i.setState(r.getDerivedStateFromError(n)), o = i.__d), null != i.componentDidCatch && (i.componentDidCatch(n, t || {}), o = i.__d), o) return i.__E = i;
+        } catch (l) {
+            n = l;
+        }
+        throw n;
+    }
+}, $b6c7f0288a15c619$var$u = 0, $b6c7f0288a15c619$export$a8257692ac88316c = function(n) {
+    return null != n && null == n.constructor;
+}, $b6c7f0288a15c619$export$16fa2f45be04daa8.prototype.setState = function(n, l) {
+    var u;
+    u = null != this.__s && this.__s != this.state ? this.__s : this.__s = $b6c7f0288a15c619$var$d({}, this.state), "function" == typeof n && (n = n($b6c7f0288a15c619$var$d({}, u), this.props)), n && $b6c7f0288a15c619$var$d(u, n), null != n && this.__v && (l && this._sb.push(l), $b6c7f0288a15c619$var$M(this));
+}, $b6c7f0288a15c619$export$16fa2f45be04daa8.prototype.forceUpdate = function(n) {
+    this.__v && (this.__e = !0, n && this.__h.push(n), $b6c7f0288a15c619$var$M(this));
+}, $b6c7f0288a15c619$export$16fa2f45be04daa8.prototype.render = $b6c7f0288a15c619$export$ffb0004e005737fa, $b6c7f0288a15c619$var$i = [], $b6c7f0288a15c619$var$o = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, $b6c7f0288a15c619$var$e = function(n, l) {
+    return n.__v.__b - l.__v.__b;
+}, $b6c7f0288a15c619$var$$.__r = 0, $b6c7f0288a15c619$var$f = /(PointerCapture)$|Capture$/i, $b6c7f0288a15c619$var$c = 0, $b6c7f0288a15c619$var$s = $b6c7f0288a15c619$var$F(!1), $b6c7f0288a15c619$var$a = $b6c7f0288a15c619$var$F(!0), $b6c7f0288a15c619$var$h = 0;
+var $23b7c1cb98b19658$var$t = /["&<]/;
+function $23b7c1cb98b19658$var$n(r) {
+    if (0 === r.length || !1 === $23b7c1cb98b19658$var$t.test(r)) return r;
+    for(var e = 0, n = 0, o = "", f = ""; n < r.length; n++){
+        switch(r.charCodeAt(n)){
+            case 34:
+                f = "&quot;";
+                break;
+            case 38:
+                f = "&amp;";
+                break;
+            case 60:
+                f = "&lt;";
+                break;
+            default:
+                continue;
+        }
+        n !== e && (o += r.slice(e, n)), o += f, e = n + 1;
+    }
+    return n !== e && (o += r.slice(e, n)), o;
+}
+var $23b7c1cb98b19658$var$o = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i, $23b7c1cb98b19658$var$f = 0, $23b7c1cb98b19658$var$i = Array.isArray;
+function $23b7c1cb98b19658$export$34b9dba7ce09269b(e, t, n, o, i, u) {
+    t || (t = {});
+    var a, c, p = t;
+    if ("ref" in p) for(c in p = {}, t)"ref" == c ? a = t[c] : p[c] = t[c];
+    var l = {
+        type: e,
+        props: p,
+        key: n,
+        ref: a,
+        __k: null,
+        __: null,
+        __b: 0,
+        __e: null,
+        __c: null,
+        constructor: void 0,
+        __v: --$23b7c1cb98b19658$var$f,
+        __i: -1,
+        __u: 0,
+        __source: i,
+        __self: u
+    };
+    if ("function" == typeof e && (a = e.defaultProps)) for(c in a)void 0 === p[c] && (p[c] = a[c]);
+    return $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode && $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode(l), l;
+}
+function $23b7c1cb98b19658$export$45700d561b2268ac(r) {
+    var t = $23b7c1cb98b19658$export$34b9dba7ce09269b($b6c7f0288a15c619$export$ffb0004e005737fa, {
+        tpl: r,
+        exprs: [].slice.call(arguments, 1)
+    });
+    return t.key = t.__v, t;
+}
+var $23b7c1cb98b19658$var$c = {}, $23b7c1cb98b19658$var$p = /[A-Z]/g;
+function $23b7c1cb98b19658$export$991f6ffe102e5bac(e, t) {
+    if ($b6c7f0288a15c619$export$41c562ebe57d11e2.attr) {
+        var f = $b6c7f0288a15c619$export$41c562ebe57d11e2.attr(e, t);
+        if ("string" == typeof f) return f;
+    }
+    if ("ref" === e || "key" === e) return "";
+    if ("style" === e && "object" == typeof t) {
+        var i = "";
+        for(var u in t){
+            var a = t[u];
+            if (null != a && "" !== a) {
+                var l = "-" == u[0] ? u : $23b7c1cb98b19658$var$c[u] || ($23b7c1cb98b19658$var$c[u] = u.replace($23b7c1cb98b19658$var$p, "-$&").toLowerCase()), s = ";";
+                "number" != typeof a || l.startsWith("--") || $23b7c1cb98b19658$var$o.test(l) || (s = "px;"), i = i + l + ":" + a + s;
+            }
+        }
+        return e + '="' + i + '"';
+    }
+    return null == t || !1 === t || "function" == typeof t || "object" == typeof t ? "" : !0 === t ? e : e + '="' + $23b7c1cb98b19658$var$n(t) + '"';
+}
+function $23b7c1cb98b19658$export$40e96e718441efeb(r) {
+    if (null == r || "boolean" == typeof r || "function" == typeof r) return null;
+    if ("object" == typeof r) {
+        if (void 0 === r.constructor) return r;
+        if ($23b7c1cb98b19658$var$i(r)) {
+            for(var e = 0; e < r.length; e++)r[e] = $23b7c1cb98b19658$export$40e96e718441efeb(r[e]);
+            return r;
+        }
+    }
+    return $23b7c1cb98b19658$var$n("" + r);
+}
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /* eslint-env browser */ /**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ let $883a43040cbd0629$var$boundErrorHandler = null;
+function $883a43040cbd0629$var$errorHandler(callback, e) {
+    // $FlowFixMe
+    if (!e.error) return;
+    // $FlowFixMe
+    const { error: error } = e;
+    if (error instanceof Error) callback(error);
+    else // Look in your browser's devtools for more information
+    callback(new Error(error));
+}
+function $883a43040cbd0629$export$6503ec6e8aabbaf(target, callback) {
+    if ($883a43040cbd0629$var$boundErrorHandler !== null) return;
+    $883a43040cbd0629$var$boundErrorHandler = $883a43040cbd0629$var$errorHandler.bind(undefined, callback);
+    target.addEventListener('error', $883a43040cbd0629$var$boundErrorHandler);
+}
+function $883a43040cbd0629$export$d07f55d4c15c0440(target) {
+    if ($883a43040cbd0629$var$boundErrorHandler === null) return;
+    target.removeEventListener('error', $883a43040cbd0629$var$boundErrorHandler);
+    $883a43040cbd0629$var$boundErrorHandler = null;
+}
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ let $900f8c32b7484e20$var$boundRejectionHandler = null;
+function $900f8c32b7484e20$var$rejectionHandler(callback, e) {
+    if (e == null || e.reason == null) return callback(new Error('Unknown'));
+    let { reason: reason } = e;
+    if (reason instanceof Error) return callback(reason);
+    // A non-error was rejected, we don't have a trace :(
+    // Look in your browser's devtools for more information
+    return callback(new Error(reason));
+}
+function $900f8c32b7484e20$export$6503ec6e8aabbaf(target, callback) {
+    if ($900f8c32b7484e20$var$boundRejectionHandler !== null) return;
+    $900f8c32b7484e20$var$boundRejectionHandler = $900f8c32b7484e20$var$rejectionHandler.bind(undefined, callback);
+    // $FlowFixMe
+    target.addEventListener('unhandledrejection', $900f8c32b7484e20$var$boundRejectionHandler);
+}
+function $900f8c32b7484e20$export$d07f55d4c15c0440(target) {
+    if ($900f8c32b7484e20$var$boundRejectionHandler === null) return;
+    // $FlowFixMe
+    target.removeEventListener('unhandledrejection', $900f8c32b7484e20$var$boundRejectionHandler);
+    $900f8c32b7484e20$var$boundRejectionHandler = null;
+}
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ let $5f72ade198404e99$var$stackTraceRegistered = false;
+// Default: https://docs.microsoft.com/en-us/scripting/javascript/reference/stacktracelimit-property-error-javascript
+let $5f72ade198404e99$var$restoreStackTraceValue = 10;
+const $5f72ade198404e99$var$MAX_STACK_LENGTH = 50;
+function $5f72ade198404e99$export$6503ec6e8aabbaf(limit = $5f72ade198404e99$var$MAX_STACK_LENGTH) {
+    if ($5f72ade198404e99$var$stackTraceRegistered) return;
+    try {
+        $5f72ade198404e99$var$restoreStackTraceValue = Error.stackTraceLimit;
+        Error.stackTraceLimit = limit;
+        $5f72ade198404e99$var$stackTraceRegistered = true;
+    } catch (e) {
+    // Not all browsers support this so we don't care if it errors
+    }
+}
+function $5f72ade198404e99$export$d07f55d4c15c0440() {
+    if (!$5f72ade198404e99$var$stackTraceRegistered) return;
+    try {
+        Error.stackTraceLimit = $5f72ade198404e99$var$restoreStackTraceValue;
+        $5f72ade198404e99$var$stackTraceRegistered = false;
+    } catch (e) {
+    // Not all browsers support this so we don't care if it errors
+    }
+}
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /**
+ * A representation of a stack frame.
+ */ class $d35756f426c25812$export$8949fddf10447898 {
+    constructor(functionName = null, fileName = null, lineNumber = null, columnNumber = null, scriptCode = null, sourceFunctionName = null, sourceFileName = null, sourceLineNumber = null, sourceColumnNumber = null, sourceScriptCode = null){
+        if (functionName && functionName.indexOf('Object.') === 0) functionName = functionName.slice(7);
+        if (// https://github.com/facebook/create-react-app/issues/2097
+        // Let's ignore a meaningless name we get for top-level modules.
+        functionName === 'friendlySyntaxErrorLabel' || functionName === 'exports.__esModule' || functionName === '<anonymous>' || !functionName) functionName = null;
+        this.functionName = functionName;
+        this.fileName = fileName;
+        this.lineNumber = lineNumber;
+        this.columnNumber = columnNumber;
+        this._originalFunctionName = sourceFunctionName;
+        this._originalFileName = sourceFileName;
+        this._originalLineNumber = sourceLineNumber;
+        this._originalColumnNumber = sourceColumnNumber;
+        this._scriptCode = scriptCode;
+        this._originalScriptCode = sourceScriptCode;
+    }
+    /**
+   * Returns the name of this function.
+   */ getFunctionName() {
+        return this.functionName || '(anonymous function)';
+    }
+    /**
+   * Returns the source of the frame.
+   * This contains the file name, line number, and column number when available.
+   */ getSource() {
+        let str = '';
+        if (this.fileName != null) str += this.fileName + ':';
+        if (this.lineNumber != null) str += this.lineNumber + ':';
+        if (this.columnNumber != null) str += this.columnNumber + ':';
+        return str.slice(0, -1);
+    }
+    /**
+   * Returns a pretty version of this stack frame.
+   */ toString() {
+        const functionName = this.getFunctionName();
+        const source = this.getSource();
+        return `${functionName}${source ? ` (${source})` : ``}`;
+    }
+}
+var $d35756f426c25812$export$2e2bcd8739ae039 = $d35756f426c25812$export$8949fddf10447898;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ const $865b9ffc545cb441$var$regexExtractLocation = /\(?(.+?)(?::(\d+))?(?::(\d+))?\)?$/;
+function $865b9ffc545cb441$var$extractLocation(token) {
+    return $865b9ffc545cb441$var$regexExtractLocation.exec(token) // $FlowFixMe
+    .slice(1).map((v)=>{
+        const p = Number(v);
+        if (!isNaN(p)) return p;
+        return v;
+    });
+}
+const $865b9ffc545cb441$var$regexValidFrame_Chrome = /^\s*(at|in)\s.+(:\d+)/;
+const $865b9ffc545cb441$var$regexValidFrame_FireFox = /(^|@)\S+:\d+|.+line\s+\d+\s+>\s+(eval|Function).+/;
+function $865b9ffc545cb441$var$parseStack(stack) {
+    let frames = stack.filter((e)=>$865b9ffc545cb441$var$regexValidFrame_Chrome.test(e) || $865b9ffc545cb441$var$regexValidFrame_FireFox.test(e)).map((e)=>{
+        if ($865b9ffc545cb441$var$regexValidFrame_FireFox.test(e)) {
+            // Strip eval, we don't care about it
+            let isEval = false;
+            if (/ > (eval|Function)/.test(e)) {
+                e = e.replace(/ line (\d+)(?: > eval line \d+)* > (eval|Function):\d+:\d+/g, ':$1');
+                isEval = true;
+            }
+            const data = e.split(/[@]/g);
+            const last = data.pop();
+            return new $d35756f426c25812$export$2e2bcd8739ae039(data.join('@') || (isEval ? 'eval' : null), ...$865b9ffc545cb441$var$extractLocation(last));
+        } else {
+            // Strip eval, we don't care about it
+            if (e.indexOf('(eval ') !== -1) e = e.replace(/(\(eval at [^()]*)|(\),.*$)/g, '');
+            if (e.indexOf('(at ') !== -1) e = e.replace(/\(at /, '(');
+            const data = e.trim().split(/\s+/g).slice(1);
+            const last = data.pop();
+            return new $d35756f426c25812$export$2e2bcd8739ae039(data.join(' ') || null, ...$865b9ffc545cb441$var$extractLocation(last));
+        }
+    });
+    let index = frames.findIndex((frame)=>frame.getFunctionName().includes('react-stack-bottom-frame'));
+    if (index >= 0) frames = frames.slice(0, index);
+    return frames;
+}
+/**
+ * Turns an <code>Error</code>, or similar object, into a set of <code>StackFrame</code>s.
+ * @alias parse
+ */ function $865b9ffc545cb441$export$98e6a39c04603d36(error) {
+    if (error == null) throw new Error('You cannot pass a null object.');
+    if (typeof error === 'string') return $865b9ffc545cb441$var$parseStack(error.split('\n'));
+    if (Array.isArray(error)) return $865b9ffc545cb441$var$parseStack(error);
+    if (typeof error.stack === 'string') return $865b9ffc545cb441$var$parseStack(error.stack.split('\n'));
+    throw new Error('The error you provided does not contain a stack trace.');
+}
+var $865b9ffc545cb441$export$2e2bcd8739ae039 = $865b9ffc545cb441$export$98e6a39c04603d36;
+/**
+ * Enhances a set of <code>StackFrame</code>s with their original positions and code (when available).
+ * @param {StackFrame[]} frames A set of <code>StackFrame</code>s which contain (generated) code positions.
+ * @param {number} [contextLines=3] The number of lines to provide before and after the line specified in the <code>StackFrame</code>.
+ */ async function $df495b51087c401c$export$35b6448019ed80b8(error, contextLines = 3) {
+    const frames = $865b9ffc545cb441$export$98e6a39c04603d36(error);
+    // $FlowFixMe
+    let res = await fetch(module.bundle.devServer + '/__parcel_code_frame', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            contextLines: contextLines,
+            frames: frames.map((f)=>({
+                    fileName: f.fileName,
+                    lineNumber: f.lineNumber,
+                    columnNumber: f.columnNumber
+                }))
+        })
+    });
+    let json = await res.json();
+    return json.map((f, i)=>new $d35756f426c25812$export$8949fddf10447898(frames[i].functionName, f.fileName, f.lineNumber, f.columnNumber, f.compiledLines, frames[i].functionName, f.sourceFileName, f.sourceLineNumber, f.sourceColumnNumber, f.sourceLines));
+}
+var $df495b51087c401c$export$2e2bcd8739ae039 = $df495b51087c401c$export$35b6448019ed80b8;
+const $6d40ebe8356580e0$var$CONTEXT_SIZE = 3;
+function $6d40ebe8356580e0$export$9123e6c9c0ac21ed(crash) {
+    return (error, unhandledRejection = false)=>{
+        $df495b51087c401c$export$2e2bcd8739ae039(error, $6d40ebe8356580e0$var$CONTEXT_SIZE).then((stackFrames)=>{
+            if (stackFrames == null) return;
+            crash({
+                error: error,
+                unhandledRejection: unhandledRejection,
+                contextSize: $6d40ebe8356580e0$var$CONTEXT_SIZE,
+                stackFrames: stackFrames
+            });
+        }).catch((e)=>{
+            // eslint-disable-next-line no-console
+            console.log('Could not get the stack frames of error:', e);
+        });
+    };
+}
+function $6d40ebe8356580e0$var$patchConsole(method, onError) {
+    /* eslint-disable no-console */ let original = console[method];
+    console[method] = (...args)=>{
+        let error = null;
+        if (typeof args[0] === 'string') {
+            let format = args[0].match(/%[oOdisfc]/g);
+            if (format) {
+                let errorIndex = format.findIndex((match)=>match === '%o' || match === '%O');
+                if (errorIndex < 0) errorIndex = format.findIndex((match)=>match === '%s');
+                if (errorIndex >= 0) error = args[errorIndex + 1];
+                else error = args[1];
+                if (!(error instanceof Error)) {
+                    let index = 1;
+                    let message = args[0].replace(/%[oOdisfc]/g, (match)=>{
+                        switch(match){
+                            case '%s':
+                                return String(args[index++]);
+                            case '%f':
+                                return parseFloat(args[index++]);
+                            case '%d':
+                            case '%i':
+                                return parseInt(args[index++], 10);
+                            case '%o':
+                            case '%O':
+                                if (args[index] instanceof Error) return String(args[index++]);
+                                else return JSON.stringify(args[index++]);
+                            case '%c':
+                                index++;
+                                return '';
+                        }
+                    });
+                    error = new Error(message);
+                }
+            } else error = new Error(args[0]);
+        } else error = args.find((arg)=>arg instanceof Error);
+        if (error && !error.message.includes('[parcel]') && typeof window !== 'undefined' && window.__REACT_DEVTOOLS_GLOBAL_HOOK__) {
+            // Attempt to append the React component stack
+            // TODO: use React.captureOwnerStack once stable.
+            let hook = window.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+            if (hook.renderers instanceof Map) {
+                for (let renderer of hook.renderers.values())if (typeof renderer?.currentDispatcherRef?.getCurrentStack === 'function') {
+                    let stack = renderer.currentDispatcherRef.getCurrentStack();
+                    if (stack) {
+                        error.stack += stack;
+                        break;
+                    }
+                }
+            }
+            onError(error);
+        }
+        original.apply(console, args);
+    };
+/* eslint-enable no-console */ }
+function $6d40ebe8356580e0$export$38ec23daa6e8dcdf(crash) {
+    const crashWithFramesRunTime = $6d40ebe8356580e0$export$9123e6c9c0ac21ed(crash);
+    $883a43040cbd0629$export$6503ec6e8aabbaf(window, (error)=>crashWithFramesRunTime(error, false));
+    $900f8c32b7484e20$export$6503ec6e8aabbaf(window, (error)=>crashWithFramesRunTime(error, true));
+    $5f72ade198404e99$export$6503ec6e8aabbaf();
+    $6d40ebe8356580e0$var$patchConsole('error', (error)=>crashWithFramesRunTime(error, false));
+    return function() {
+        $5f72ade198404e99$export$d07f55d4c15c0440();
+        $900f8c32b7484e20$export$d07f55d4c15c0440(window);
+        $883a43040cbd0629$export$d07f55d4c15c0440(window);
+    };
+}
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /* eslint-env browser */ var $10ecac3e4062713a$var$t, $10ecac3e4062713a$var$r, $10ecac3e4062713a$var$u, $10ecac3e4062713a$var$i, $10ecac3e4062713a$var$o = 0, $10ecac3e4062713a$var$f = [], $10ecac3e4062713a$var$c = $b6c7f0288a15c619$export$41c562ebe57d11e2, $10ecac3e4062713a$var$e = $10ecac3e4062713a$var$c.__b, $10ecac3e4062713a$var$a = $10ecac3e4062713a$var$c.__r, $10ecac3e4062713a$var$v = $10ecac3e4062713a$var$c.diffed, $10ecac3e4062713a$var$l = $10ecac3e4062713a$var$c.__c, $10ecac3e4062713a$var$m = $10ecac3e4062713a$var$c.unmount, $10ecac3e4062713a$var$s = $10ecac3e4062713a$var$c.__;
+function $10ecac3e4062713a$var$p(n, t) {
+    $10ecac3e4062713a$var$c.__h && $10ecac3e4062713a$var$c.__h($10ecac3e4062713a$var$r, n, $10ecac3e4062713a$var$o || t), $10ecac3e4062713a$var$o = 0;
+    var u = $10ecac3e4062713a$var$r.__H || ($10ecac3e4062713a$var$r.__H = {
+        __: [],
+        __h: []
+    });
+    return n >= u.__.length && u.__.push({}), u.__[n];
+}
+function $10ecac3e4062713a$export$60241385465d0a34(n) {
+    return $10ecac3e4062713a$var$o = 1, $10ecac3e4062713a$export$13e3392192263954($10ecac3e4062713a$var$D, n);
+}
+function $10ecac3e4062713a$export$13e3392192263954(n, u, i) {
+    var o = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 2);
+    if (o.t = n, !o.__c && (o.__ = [
+        i ? i(u) : $10ecac3e4062713a$var$D(void 0, u),
+        function(n) {
+            var t = o.__N ? o.__N[0] : o.__[0], r = o.t(t, n);
+            t !== r && (o.__N = [
+                r,
+                o.__[1]
+            ], o.__c.setState({}));
+        }
+    ], o.__c = $10ecac3e4062713a$var$r, !$10ecac3e4062713a$var$r.__f)) {
+        var f = function(n, t, r) {
+            if (!o.__c.__H) return !0;
+            var u = o.__c.__H.__.filter(function(n) {
+                return !!n.__c;
+            });
+            if (u.every(function(n) {
+                return !n.__N;
+            })) return !c || c.call(this, n, t, r);
+            var i = o.__c.props !== n;
+            return u.forEach(function(n) {
+                if (n.__N) {
+                    var t = n.__[0];
+                    n.__ = n.__N, n.__N = void 0, t !== n.__[0] && (i = !0);
+                }
+            }), c && c.call(this, n, t, r) || i;
+        };
+        $10ecac3e4062713a$var$r.__f = !0;
+        var c = $10ecac3e4062713a$var$r.shouldComponentUpdate, e = $10ecac3e4062713a$var$r.componentWillUpdate;
+        $10ecac3e4062713a$var$r.componentWillUpdate = function(n, t, r) {
+            if (this.__e) {
+                var u = c;
+                c = void 0, f(n, t, r), c = u;
+            }
+            e && e.call(this, n, t, r);
+        }, $10ecac3e4062713a$var$r.shouldComponentUpdate = f;
+    }
+    return o.__N || o.__;
+}
+function $10ecac3e4062713a$export$6d9c69b0de29b591(n, u) {
+    var i = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 3);
+    !$10ecac3e4062713a$var$c.__s && $10ecac3e4062713a$var$C(i.__H, u) && (i.__ = n, i.u = u, $10ecac3e4062713a$var$r.__H.__h.push(i));
+}
+function $10ecac3e4062713a$export$e5c5a5f917a5871c(n, u) {
+    var i = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 4);
+    !$10ecac3e4062713a$var$c.__s && $10ecac3e4062713a$var$C(i.__H, u) && (i.__ = n, i.u = u, $10ecac3e4062713a$var$r.__h.push(i));
+}
+function $10ecac3e4062713a$export$b8f5890fc79d6aca(n) {
+    return $10ecac3e4062713a$var$o = 5, $10ecac3e4062713a$export$1538c33de8887b59(function() {
+        return {
+            current: n
+        };
+    }, []);
+}
+function $10ecac3e4062713a$export$d5a552a76deda3c2(n, t, r) {
+    $10ecac3e4062713a$var$o = 6, $10ecac3e4062713a$export$e5c5a5f917a5871c(function() {
+        if ("function" == typeof n) {
+            var r = n(t());
+            return function() {
+                n(null), r && "function" == typeof r && r();
+            };
+        }
+        if (n) return n.current = t(), function() {
+            return n.current = null;
+        };
+    }, null == r ? r : r.concat(n));
+}
+function $10ecac3e4062713a$export$1538c33de8887b59(n, r) {
+    var u = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 7);
+    return $10ecac3e4062713a$var$C(u.__H, r) && (u.__ = n(), u.__H = r, u.__h = n), u.__;
+}
+function $10ecac3e4062713a$export$35808ee640e87ca7(n, t) {
+    return $10ecac3e4062713a$var$o = 8, $10ecac3e4062713a$export$1538c33de8887b59(function() {
+        return n;
+    }, t);
+}
+function $10ecac3e4062713a$export$fae74005e78b1a27(n) {
+    var u = $10ecac3e4062713a$var$r.context[n.__c], i = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 9);
+    return i.c = n, u ? (null == i.__ && (i.__ = !0, u.sub($10ecac3e4062713a$var$r)), u.props.value) : n.__;
+}
+function $10ecac3e4062713a$export$dc8fbce3eb94dc1e(n, t) {
+    $10ecac3e4062713a$var$c.useDebugValue && $10ecac3e4062713a$var$c.useDebugValue(t ? t(n) : n);
+}
+function $10ecac3e4062713a$export$c052f6604b7d51fe(n) {
+    var u = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 10), i = $10ecac3e4062713a$export$60241385465d0a34();
+    return u.__ = n, $10ecac3e4062713a$var$r.componentDidCatch || ($10ecac3e4062713a$var$r.componentDidCatch = function(n, t) {
+        u.__ && u.__(n, t), i[1](n);
+    }), [
+        i[0],
+        function() {
+            i[1](void 0);
+        }
+    ];
+}
+function $10ecac3e4062713a$export$f680877a34711e37() {
+    var n = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 11);
+    if (!n.__) {
+        for(var u = $10ecac3e4062713a$var$r.__v; null !== u && !u.__m && null !== u.__;)u = u.__;
+        var i = u.__m || (u.__m = [
+            0,
+            0
+        ]);
+        n.__ = "P" + i[0] + "-" + i[1]++;
+    }
+    return n.__;
+}
+function $10ecac3e4062713a$var$j() {
+    for(var n; n = $10ecac3e4062713a$var$f.shift();)if (n.__P && n.__H) try {
+        n.__H.__h.forEach($10ecac3e4062713a$var$z), n.__H.__h.forEach($10ecac3e4062713a$var$B), n.__H.__h = [];
+    } catch (t) {
+        n.__H.__h = [], $10ecac3e4062713a$var$c.__e(t, n.__v);
+    }
+}
+$10ecac3e4062713a$var$c.__b = function(n) {
+    $10ecac3e4062713a$var$r = null, $10ecac3e4062713a$var$e && $10ecac3e4062713a$var$e(n);
+}, $10ecac3e4062713a$var$c.__ = function(n, t) {
+    n && t.__k && t.__k.__m && (n.__m = t.__k.__m), $10ecac3e4062713a$var$s && $10ecac3e4062713a$var$s(n, t);
+}, $10ecac3e4062713a$var$c.__r = function(n) {
+    $10ecac3e4062713a$var$a && $10ecac3e4062713a$var$a(n), $10ecac3e4062713a$var$t = 0;
+    var i = ($10ecac3e4062713a$var$r = n.__c).__H;
+    i && ($10ecac3e4062713a$var$u === $10ecac3e4062713a$var$r ? (i.__h = [], $10ecac3e4062713a$var$r.__h = [], i.__.forEach(function(n) {
+        n.__N && (n.__ = n.__N), n.u = n.__N = void 0;
+    })) : (i.__h.forEach($10ecac3e4062713a$var$z), i.__h.forEach($10ecac3e4062713a$var$B), i.__h = [], $10ecac3e4062713a$var$t = 0)), $10ecac3e4062713a$var$u = $10ecac3e4062713a$var$r;
+}, $10ecac3e4062713a$var$c.diffed = function(n) {
+    $10ecac3e4062713a$var$v && $10ecac3e4062713a$var$v(n);
+    var t = n.__c;
+    t && t.__H && (t.__H.__h.length && (1 !== $10ecac3e4062713a$var$f.push(t) && $10ecac3e4062713a$var$i === $10ecac3e4062713a$var$c.requestAnimationFrame || (($10ecac3e4062713a$var$i = $10ecac3e4062713a$var$c.requestAnimationFrame) || $10ecac3e4062713a$var$w)($10ecac3e4062713a$var$j)), t.__H.__.forEach(function(n) {
+        n.u && (n.__H = n.u), n.u = void 0;
+    })), $10ecac3e4062713a$var$u = $10ecac3e4062713a$var$r = null;
+}, $10ecac3e4062713a$var$c.__c = function(n, t) {
+    t.some(function(n) {
+        try {
+            n.__h.forEach($10ecac3e4062713a$var$z), n.__h = n.__h.filter(function(n) {
+                return !n.__ || $10ecac3e4062713a$var$B(n);
+            });
+        } catch (r) {
+            t.some(function(n) {
+                n.__h && (n.__h = []);
+            }), t = [], $10ecac3e4062713a$var$c.__e(r, n.__v);
+        }
+    }), $10ecac3e4062713a$var$l && $10ecac3e4062713a$var$l(n, t);
+}, $10ecac3e4062713a$var$c.unmount = function(n) {
+    $10ecac3e4062713a$var$m && $10ecac3e4062713a$var$m(n);
+    var t, r = n.__c;
+    r && r.__H && (r.__H.__.forEach(function(n) {
+        try {
+            $10ecac3e4062713a$var$z(n);
+        } catch (n) {
+            t = n;
+        }
+    }), r.__H = void 0, t && $10ecac3e4062713a$var$c.__e(t, r.__v));
+};
+var $10ecac3e4062713a$var$k = "function" == typeof requestAnimationFrame;
+function $10ecac3e4062713a$var$w(n) {
+    var t, r = function() {
+        clearTimeout(u), $10ecac3e4062713a$var$k && cancelAnimationFrame(t), setTimeout(n);
+    }, u = setTimeout(r, 100);
+    $10ecac3e4062713a$var$k && (t = requestAnimationFrame(r));
+}
+function $10ecac3e4062713a$var$z(n) {
+    var t = $10ecac3e4062713a$var$r, u = n.__c;
+    "function" == typeof u && (n.__c = void 0, u()), $10ecac3e4062713a$var$r = t;
+}
+function $10ecac3e4062713a$var$B(n) {
+    var t = $10ecac3e4062713a$var$r;
+    n.__c = n.__(), $10ecac3e4062713a$var$r = t;
+}
+function $10ecac3e4062713a$var$C(n, t) {
+    return !n || n.length !== t.length || t.some(function(t, r) {
+        return t !== n[r];
+    });
+}
+function $10ecac3e4062713a$var$D(n, t) {
+    return "function" == typeof t ? t(n) : t;
+}
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ const $74bb4be6e9b78681$export$f30cb9bc4f736419 = {
+    // Colors for components styles
+    background: 'white',
+    color: 'black',
+    headerColor: '#ce1126',
+    primaryPreBackground: 'rgba(206, 17, 38, 0.05)',
+    primaryPreColor: 'inherit',
+    secondaryPreBackground: 'rgba(251, 245, 180, 0.3)',
+    secondaryPreColor: 'inherit',
+    footer: '#878e91',
+    anchorColor: '#878e91',
+    toggleBackground: 'transparent',
+    toggleColor: '#878e91',
+    closeColor: '#293238',
+    navBackground: 'rgba(206, 17, 38, 0.05)',
+    navArrow: '#ce1126',
+    diffAdded: 'green',
+    diffRemoved: '#ce1126',
+    // Light color scheme inspired by https://chriskempson.github.io/base16/css/base16-github.css
+    // base00: '#ffffff',
+    base01: '#f5f5f5',
+    // base02: '#c8c8fa',
+    base03: '#6e6e6e',
+    // base04: '#e8e8e8',
+    base05: '#333333',
+    // base06: '#ffffff',
+    // base07: '#ffffff',
+    base08: '#881280',
+    // base09: '#0086b3',
+    // base0A: '#795da3',
+    base0B: '#1155cc',
+    base0C: '#994500',
+    // base0D: '#795da3',
+    base0E: '#c80000'
+};
+const $74bb4be6e9b78681$export$3e936a8db52a10a0 = {
+    // Colors for components styles
+    background: '#353535',
+    color: 'white',
+    headerColor: '#e83b46',
+    primaryPreBackground: 'rgba(206, 17, 38, 0.1)',
+    primaryPreColor: '#fccfcf',
+    secondaryPreBackground: 'rgba(251, 245, 180, 0.1)',
+    secondaryPreColor: '#fbf5b4',
+    footer: '#878e91',
+    anchorColor: '#878e91',
+    toggleBackground: 'transparent',
+    toggleColor: '#878e91',
+    closeColor: '#ffffff',
+    navBackground: 'rgba(206, 17, 38, 0.2)',
+    navArrow: '#ce1126',
+    diffAdded: '#85e285',
+    diffRemoved: '#ff5459',
+    // Dark color scheme inspired by https://github.com/atom/base16-tomorrow-dark-theme/blob/master/styles/colors.less
+    // base00: '#1d1f21',
+    base01: '#282a2e',
+    // base02: '#373b41',
+    base03: '#969896',
+    // base04: '#b4b7b4',
+    base05: '#c5c8c6',
+    // base06: '#e0e0e0',
+    // base07: '#ffffff',
+    base08: '#cc6666',
+    // base09: '#de935f',
+    // base0A: '#f0c674',
+    base0B: '#b5bd68',
+    base0C: '#8abeb7',
+    // base0D: '#81a2be',
+    base0E: '#b294bb'
+};
+const $74bb4be6e9b78681$export$bca14c5b3b88a9c9 = Object.fromEntries(Object.keys($74bb4be6e9b78681$export$f30cb9bc4f736419).map((key)=>[
+        key,
+        `light-dark(${$74bb4be6e9b78681$export$f30cb9bc4f736419[key]}, ${$74bb4be6e9b78681$export$3e936a8db52a10a0[key]})`
+    ]));
+const $74bb4be6e9b78681$export$7ef984671d1853d7 = {
+    width: '100vw',
+    height: '100vh',
+    maxWidth: 'none',
+    maxHeight: 'none',
+    border: 0,
+    margin: 0,
+    padding: 0,
+    boxSizing: 'border-box',
+    textAlign: 'center',
+    backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.background,
+    outline: 'none',
+    colorScheme: 'light dark'
+};
+const $20d888b381d18c6c$var$overlayStyle = {
+    position: 'relative',
+    display: 'inline-flex',
+    flexDirection: 'column',
+    height: '100%',
+    width: '1024px',
+    maxWidth: '100%',
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    padding: '0.5rem',
+    boxSizing: 'border-box',
+    textAlign: 'left',
+    fontFamily: 'Consolas, Menlo, monospace',
+    fontSize: '11px',
+    whiteSpace: 'pre-wrap',
+    wordBreak: 'break-word',
+    lineHeight: 1.5,
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.color
+};
+function $20d888b381d18c6c$var$ErrorOverlay(props) {
+    const { shortcutHandler: shortcutHandler } = props;
+    $10ecac3e4062713a$export$6d9c69b0de29b591(()=>{
+        const onKeyDown = (e)=>{
+            if (shortcutHandler) shortcutHandler(e.key);
+        };
+        window.addEventListener('keydown', onKeyDown);
+        return ()=>{
+            window.removeEventListener('keydown', onKeyDown);
+        };
+    }, [
+        shortcutHandler
+    ]);
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+        style: $20d888b381d18c6c$var$overlayStyle,
+        children: props.children
+    });
+}
+var $20d888b381d18c6c$export$2e2bcd8739ae039 = $20d888b381d18c6c$var$ErrorOverlay;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ const $7aae0c9ea64fc08c$var$closeButtonStyle = {
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.closeColor,
+    lineHeight: '1rem',
+    fontSize: '1.5rem',
+    padding: '1rem',
+    cursor: 'pointer',
+    position: 'absolute',
+    right: 0,
+    top: 0
+};
+function $7aae0c9ea64fc08c$var$CloseButton({ close: close }) {
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
+        title: "Click or press Escape to dismiss.",
+        onClick: close,
+        style: $7aae0c9ea64fc08c$var$closeButtonStyle,
+        children: "\xd7"
+    });
+}
+var $7aae0c9ea64fc08c$export$2e2bcd8739ae039 = $7aae0c9ea64fc08c$var$CloseButton;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ const $1adc179a826c5dd2$var$navigationBarStyle = {
+    marginBottom: '0.5rem'
+};
+const $1adc179a826c5dd2$var$buttonContainerStyle = {
+    marginRight: '1em'
+};
+const $1adc179a826c5dd2$var$_navButtonStyle = {
+    border: 'none',
+    borderRadius: '4px',
+    padding: '3px 6px',
+    cursor: 'pointer'
+};
+const $1adc179a826c5dd2$var$leftButtonStyle = {
+    ...$1adc179a826c5dd2$var$_navButtonStyle,
+    backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.navBackground,
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.navArrow,
+    borderTopRightRadius: '0px',
+    borderBottomRightRadius: '0px',
+    marginRight: '1px'
+};
+const $1adc179a826c5dd2$var$rightButtonStyle = {
+    ...$1adc179a826c5dd2$var$_navButtonStyle,
+    backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.navBackground,
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.navArrow,
+    borderTopLeftRadius: '0px',
+    borderBottomLeftRadius: '0px'
+};
+function $1adc179a826c5dd2$var$NavigationBar(props) {
+    const { currentError: currentError, totalErrors: totalErrors, previous: previous, next: next } = props;
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+        style: $1adc179a826c5dd2$var$navigationBarStyle,
+        children: [
+            $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
+                style: $1adc179a826c5dd2$var$buttonContainerStyle,
+                children: [
+                    $23b7c1cb98b19658$export$34b9dba7ce09269b("button", {
+                        onClick: previous,
+                        style: $1adc179a826c5dd2$var$leftButtonStyle,
+                        children: "\u2190"
+                    }),
+                    $23b7c1cb98b19658$export$34b9dba7ce09269b("button", {
+                        onClick: next,
+                        style: $1adc179a826c5dd2$var$rightButtonStyle,
+                        children: "\u2192"
+                    })
+                ]
+            }),
+            `${currentError} of ${totalErrors} errors on the page`
+        ]
+    });
+}
+var $1adc179a826c5dd2$export$2e2bcd8739ae039 = $1adc179a826c5dd2$var$NavigationBar;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ const $c306e3a42547c8c2$var$headerStyle = {
+    fontSize: '2em',
+    fontFamily: 'sans-serif',
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.headerColor,
+    whiteSpace: 'pre-wrap',
+    // Top bottom margin spaces header
+    // Right margin revents overlap with close button
+    margin: '0 2rem 0.75rem 0',
+    flex: '0 0 auto'
+};
+function $c306e3a42547c8c2$var$Header(props) {
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+        style: $c306e3a42547c8c2$var$headerStyle,
+        children: props.headerText
+    });
+}
+var $c306e3a42547c8c2$export$2e2bcd8739ae039 = $c306e3a42547c8c2$var$Header;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ /**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ const $97c30df7f5c364f7$var$_preStyle = {
+    position: 'relative',
+    display: 'block',
+    padding: '0.5em',
+    marginTop: '0.5em',
+    marginBottom: '0.5em',
+    overflowX: 'auto',
+    whiteSpace: 'pre-wrap',
+    borderRadius: '0.25rem'
+};
+const $97c30df7f5c364f7$var$codeStyle = {
+    fontFamily: 'Consolas, Menlo, monospace'
+};
+function $97c30df7f5c364f7$var$CodeBlock({ main: main, codeHTML: codeHTML }) {
+    const primaryPreStyle = {
+        ...$97c30df7f5c364f7$var$_preStyle,
+        backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.primaryPreBackground,
+        color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.primaryPreColor
+    };
+    const secondaryPreStyle = {
+        ...$97c30df7f5c364f7$var$_preStyle,
+        backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.secondaryPreBackground,
+        color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.secondaryPreColor
+    };
+    const preStyle = main ? primaryPreStyle : secondaryPreStyle;
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("pre", {
+        style: preStyle,
+        children: $23b7c1cb98b19658$export$34b9dba7ce09269b("code", {
+            style: $97c30df7f5c364f7$var$codeStyle,
+            dangerouslySetInnerHTML: {
+                __html: codeHTML
+            }
+        })
+    });
+}
+var $97c30df7f5c364f7$export$2e2bcd8739ae039 = $97c30df7f5c364f7$var$CodeBlock;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function $f78f50d61026cdc5$export$44b1e5ee7f53eae1(sourceFileName, sourceLineNumber, sourceColumnNumber, fileName, lineNumber, columnNumber, compiled) {
+    let prettyURL;
+    if (!compiled && sourceFileName && typeof sourceLineNumber === 'number') {
+        // Remove everything up to the first /src/ or /node_modules/
+        const trimMatch = /^[/|\\].*?[/|\\]((src|node_modules)[/|\\].*)/.exec(sourceFileName);
+        if (trimMatch && trimMatch[1]) prettyURL = trimMatch[1];
+        else prettyURL = sourceFileName;
+        prettyURL += ':' + sourceLineNumber;
+        // Note: we intentionally skip 0's because they're produced by cheap webpack maps
+        if (sourceColumnNumber) prettyURL += ':' + sourceColumnNumber;
+    } else if (fileName && typeof lineNumber === 'number') {
+        prettyURL = fileName + ':' + lineNumber;
+        // Note: we intentionally skip 0's because they're produced by cheap webpack maps
+        if (columnNumber) prettyURL += ':' + columnNumber;
+    } else prettyURL = 'unknown';
+    return prettyURL.replace('webpack://', '.');
+}
+var $f78f50d61026cdc5$export$2e2bcd8739ae039 = $f78f50d61026cdc5$export$44b1e5ee7f53eae1;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ var $cdea3ae92bef6910$exports = {};
+'use strict';
+$cdea3ae92bef6910$exports = $cdea3ae92bef6910$var$ansiHTML;
+// Reference to https://github.com/sindresorhus/ansi-regex
+var $cdea3ae92bef6910$var$_regANSI = /(?:(?:\u001b\[)|\u009b)(?:(?:[0-9]{1,3})?(?:(?:;[0-9]{0,3})*)?[A-M|f-m])|\u001b[A-M]/;
+var $cdea3ae92bef6910$var$_defColors = {
+    reset: [
+        'fff',
+        '000'
+    ],
+    black: '000',
+    red: 'ff0000',
+    green: '209805',
+    yellow: 'e8bf03',
+    blue: '0000ff',
+    magenta: 'ff00ff',
+    cyan: '00ffee',
+    lightgrey: 'f0f0f0',
+    darkgrey: '888'
+};
+var $cdea3ae92bef6910$var$_styles = {
+    30: 'black',
+    31: 'red',
+    32: 'green',
+    33: 'yellow',
+    34: 'blue',
+    35: 'magenta',
+    36: 'cyan',
+    37: 'lightgrey'
+};
+var $cdea3ae92bef6910$var$_openTags = {
+    '1': 'font-weight:bold',
+    '2': 'opacity:0.5',
+    '3': '<i>',
+    '4': '<u>',
+    '8': 'display:none',
+    '9': '<del>' // delete
+};
+var $cdea3ae92bef6910$var$_closeTags = {
+    '23': '</i>',
+    '24': '</u>',
+    '29': '</del>' // reset delete
+};
+[
+    0,
+    21,
+    22,
+    27,
+    28,
+    39,
+    49
+].forEach(function(n) {
+    $cdea3ae92bef6910$var$_closeTags[n] = '</span>';
+});
+/**
+ * Converts text with ANSI color codes to HTML markup.
+ * @param {String} text
+ * @returns {*}
+ */ function $cdea3ae92bef6910$var$ansiHTML(text) {
+    // Returns the text if the string has no ANSI escape code.
+    if (!$cdea3ae92bef6910$var$_regANSI.test(text)) return text;
+    // Cache opened sequence.
+    var ansiCodes = [];
+    // Replace with markup.
+    var ret = text.replace(/\033\[(\d+)m/g, function(match, seq) {
+        var ot = $cdea3ae92bef6910$var$_openTags[seq];
+        if (ot) {
+            // If current sequence has been opened, close it.
+            if (!!~ansiCodes.indexOf(seq)) {
+                ansiCodes.pop();
+                return '</span>';
+            }
+            // Open tag.
+            ansiCodes.push(seq);
+            return ot[0] === '<' ? ot : '<span style="' + ot + ';">';
+        }
+        var ct = $cdea3ae92bef6910$var$_closeTags[seq];
+        if (ct) {
+            // Pop sequence
+            ansiCodes.pop();
+            return ct;
+        }
+        return '';
+    });
+    // Make sure tags are closed.
+    var l = ansiCodes.length;
+    l > 0 && (ret += Array(l + 1).join('</span>'));
+    return ret;
+}
+/**
+ * Customize colors.
+ * @param {Object} colors reference to _defColors
+ */ $cdea3ae92bef6910$var$ansiHTML.setColors = function(colors) {
+    if (typeof colors !== 'object') throw new Error('`colors` parameter must be an Object.');
+    var _finalColors = {};
+    for(var key in $cdea3ae92bef6910$var$_defColors){
+        var hex = colors.hasOwnProperty(key) ? colors[key] : null;
+        if (!hex) {
+            _finalColors[key] = $cdea3ae92bef6910$var$_defColors[key];
+            continue;
+        }
+        if ('reset' === key) {
+            if (typeof hex === 'string') hex = [
+                hex
+            ];
+            if (!Array.isArray(hex) || hex.length === 0 || hex.some(function(h) {
+                return typeof h !== 'string';
+            })) throw new Error('The value of `' + key + '` property must be an Array and each item could only be a hex string, e.g.: FF0000');
+            var defHexColor = $cdea3ae92bef6910$var$_defColors[key];
+            if (!hex[0]) hex[0] = defHexColor[0];
+            if (hex.length === 1 || !hex[1]) {
+                hex = [
+                    hex[0]
+                ];
+                hex.push(defHexColor[1]);
+            }
+            hex = hex.slice(0, 2);
+        } else if (typeof hex !== 'string') throw new Error('The value of `' + key + '` property must be a hex string, e.g.: FF0000');
+        _finalColors[key] = hex;
+    }
+    $cdea3ae92bef6910$var$_setTags(_finalColors);
+};
+/**
+ * Reset colors.
+ */ $cdea3ae92bef6910$var$ansiHTML.reset = function() {
+    $cdea3ae92bef6910$var$_setTags($cdea3ae92bef6910$var$_defColors);
+};
+/**
+ * Expose tags, including open and close.
+ * @type {Object}
+ */ $cdea3ae92bef6910$var$ansiHTML.tags = {};
+if (Object.defineProperty) {
+    Object.defineProperty($cdea3ae92bef6910$var$ansiHTML.tags, 'open', {
+        get: function() {
+            return $cdea3ae92bef6910$var$_openTags;
+        }
+    });
+    Object.defineProperty($cdea3ae92bef6910$var$ansiHTML.tags, 'close', {
+        get: function() {
+            return $cdea3ae92bef6910$var$_closeTags;
+        }
+    });
+} else {
+    $cdea3ae92bef6910$var$ansiHTML.tags.open = $cdea3ae92bef6910$var$_openTags;
+    $cdea3ae92bef6910$var$ansiHTML.tags.close = $cdea3ae92bef6910$var$_closeTags;
+}
+function $cdea3ae92bef6910$var$_setTags(colors) {
+    // reset all
+    $cdea3ae92bef6910$var$_openTags['0'] = 'font-weight:normal;opacity:1;color:#' + colors.reset[0] + ';background:#' + colors.reset[1];
+    // inverse
+    $cdea3ae92bef6910$var$_openTags['7'] = 'color:#' + colors.reset[1] + ';background:#' + colors.reset[0];
+    // dark grey
+    $cdea3ae92bef6910$var$_openTags['90'] = 'color:#' + colors.darkgrey;
+    for(var code in $cdea3ae92bef6910$var$_styles){
+        var color = $cdea3ae92bef6910$var$_styles[code];
+        var oriColor = colors[color] || '000';
+        $cdea3ae92bef6910$var$_openTags[code] = 'color:#' + oriColor;
+        code = parseInt(code);
+        $cdea3ae92bef6910$var$_openTags[(code + 10).toString()] = 'background:#' + oriColor;
+    }
+}
+$cdea3ae92bef6910$var$ansiHTML.reset();
+// Map ANSI colors from what babel-code-frame uses to base16-github
+// See: https://github.com/babel/babel/blob/e86f62b304d280d0bab52c38d61842b853848ba6/packages/babel-code-frame/src/index.js#L9-L22
+const $b67e2a05a9c13039$var$colors = {
+    reset: [
+        $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base05,
+        'transparent'
+    ],
+    black: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base05,
+    red: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base08 /* marker, bg-invalid */ ,
+    green: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base0B /* string */ ,
+    yellow: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base08 /* capitalized, jsx_tag, punctuator */ ,
+    blue: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base0C,
+    magenta: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base0C /* regex */ ,
+    cyan: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base0E /* keyword */ ,
+    gray: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base03 /* comment, gutter */ ,
+    lightgrey: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base01,
+    darkgrey: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base03
+};
+/*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports).setColors($b67e2a05a9c13039$var$colors);
+// $FlowFixMe
+for(let tag in /*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports).tags.open)/*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports).tags.open[tag] = /*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports).tags.open[tag].replace(/#light-dark/g, 'light-dark');
+function $b67e2a05a9c13039$var$generateAnsiHTML(txt) {
+    return /*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports)(txt.replace(/[&<>"']/g, (c)=>{
+        switch(c){
+            case '&':
+                return '&amp';
+            case '<':
+                return '&lt;';
+            case '>':
+                return '&gt';
+            case '"':
+                return '&quot;';
+            case "'":
+                return '&#39;';
+            default:
+                return c;
+        }
+    }));
+}
+var $b67e2a05a9c13039$export$2e2bcd8739ae039 = $b67e2a05a9c13039$var$generateAnsiHTML;
+const $e0e0fa52b83f95a9$var$linkStyle = {
+    fontSize: '0.9em',
+    marginBottom: '0.9em'
+};
+const $e0e0fa52b83f95a9$var$anchorStyle = {
+    textDecoration: 'none',
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.anchorColor,
+    cursor: 'pointer'
+};
+const $e0e0fa52b83f95a9$var$codeAnchorStyle = {
+    cursor: 'pointer'
+};
+const $e0e0fa52b83f95a9$var$toggleStyle = {
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.toggleColor,
+    cursor: 'pointer',
+    border: 'none',
+    display: 'block',
+    width: '100%',
+    textAlign: 'left',
+    background: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.toggleBackground,
+    fontFamily: 'Consolas, Menlo, monospace',
+    fontSize: '1em',
+    padding: '0px',
+    lineHeight: '1.5'
+};
+function $e0e0fa52b83f95a9$var$StackFrame(props) {
+    const { frame: frame, critical: critical, showCode: showCode } = props;
+    const { fileName: fileName, lineNumber: lineNumber, columnNumber: columnNumber, _scriptCode: scriptLines, _originalFileName: sourceFileName, _originalLineNumber: sourceLineNumber, _originalColumnNumber: sourceColumnNumber, _originalScriptCode: sourceLines } = frame;
+    const functionName = frame.getFunctionName();
+    const [compiled, setCompiled] = $10ecac3e4062713a$export$60241385465d0a34(!sourceLines);
+    const getErrorLocation = ()=>{
+        const { _originalFileName: fileName, _originalLineNumber: lineNumber } = props.frame;
+        // Unknown file
+        if (!fileName) return null;
+        // e.g. "/path-to-my-app/webpack/bootstrap eaddeb46b67d75e4dfc1"
+        const isInternalWebpackBootstrapCode = fileName.trim().indexOf(' ') !== -1;
+        if (isInternalWebpackBootstrapCode) return null;
+        // Code is in a real file
+        return {
+            fileName: fileName,
+            lineNumber: lineNumber || 1
+        };
+    };
+    const editorHandler = ()=>{
+        const errorLoc = getErrorLocation();
+        if (!errorLoc) return;
+        props.editorHandler?.(errorLoc);
+    };
+    const url = $f78f50d61026cdc5$export$44b1e5ee7f53eae1(sourceFileName, sourceLineNumber, sourceColumnNumber, fileName, lineNumber, columnNumber, compiled);
+    let codeBlockProps = null;
+    if (showCode) {
+        if (compiled && scriptLines && scriptLines.length !== 0 && lineNumber != null) codeBlockProps = {
+            codeHTML: $b67e2a05a9c13039$export$2e2bcd8739ae039(scriptLines),
+            main: critical
+        };
+        else if (!compiled && sourceLines && sourceLines.length !== 0 && sourceLineNumber != null) codeBlockProps = {
+            codeHTML: $b67e2a05a9c13039$export$2e2bcd8739ae039(sourceLines),
+            main: critical
+        };
+    }
+    const canOpenInEditor = getErrorLocation() !== null && props.editorHandler !== null;
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+        children: [
+            $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+                children: functionName
+            }),
+            $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+                style: $e0e0fa52b83f95a9$var$linkStyle,
+                children: $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
+                    role: "link",
+                    style: canOpenInEditor ? $e0e0fa52b83f95a9$var$anchorStyle : null,
+                    onClick: canOpenInEditor ? editorHandler : null,
+                    onKeyDown: canOpenInEditor ? (e)=>{
+                        if (e.key === 'Enter') editorHandler();
+                    } : null,
+                    tabIndex: canOpenInEditor ? '0' : null,
+                    children: url
+                })
+            }),
+            codeBlockProps && $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+                style: {
+                    marginBottom: '1.5em'
+                },
+                children: [
+                    $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
+                        onClick: canOpenInEditor ? editorHandler : null,
+                        style: canOpenInEditor ? $e0e0fa52b83f95a9$var$codeAnchorStyle : null,
+                        children: $23b7c1cb98b19658$export$34b9dba7ce09269b($97c30df7f5c364f7$export$2e2bcd8739ae039, {
+                            ...codeBlockProps
+                        })
+                    }),
+                    scriptLines && sourceLines && $23b7c1cb98b19658$export$34b9dba7ce09269b("button", {
+                        style: $e0e0fa52b83f95a9$var$toggleStyle,
+                        onClick: ()=>{
+                            setCompiled(!compiled);
+                        },
+                        children: 'View ' + (compiled ? 'source' : 'compiled')
+                    })
+                ]
+            })
+        ]
+    });
+}
+var $e0e0fa52b83f95a9$export$2e2bcd8739ae039 = $e0e0fa52b83f95a9$var$StackFrame;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ const $9a1abb59f5d10ec8$var$_collapsibleStyle = {
+    cursor: 'pointer',
+    border: 'none',
+    display: 'block',
+    width: '100%',
+    textAlign: 'left',
+    fontFamily: 'Consolas, Menlo, monospace',
+    fontSize: '1em',
+    padding: '0px',
+    lineHeight: '1.5'
+};
+const $9a1abb59f5d10ec8$var$collapsibleCollapsedStyle = {
+    ...$9a1abb59f5d10ec8$var$_collapsibleStyle,
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.color,
+    background: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.background,
+    marginBottom: '1.5em'
+};
+const $9a1abb59f5d10ec8$var$collapsibleExpandedStyle = {
+    ...$9a1abb59f5d10ec8$var$_collapsibleStyle,
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.color,
+    background: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.background,
+    marginBottom: '0.6em'
+};
+function $9a1abb59f5d10ec8$var$Collapsible(props) {
+    const [collapsed, setCollapsed] = $10ecac3e4062713a$export$60241385465d0a34(true);
+    const toggleCollapsed = ()=>{
+        setCollapsed(!collapsed);
+    };
+    const count = props.children.length;
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("details", {
+        open: !collapsed,
+        onToggle: toggleCollapsed,
+        children: [
+            $23b7c1cb98b19658$export$34b9dba7ce09269b("summary", {
+                style: collapsed ? $9a1abb59f5d10ec8$var$collapsibleCollapsedStyle : $9a1abb59f5d10ec8$var$collapsibleExpandedStyle,
+                children: (collapsed ? "\u25B6" : "\u25BC") + ` ${count} stack frames were ` + (collapsed ? 'collapsed.' : 'expanded.')
+            }),
+            $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+                children: [
+                    props.children,
+                    $23b7c1cb98b19658$export$34b9dba7ce09269b("button", {
+                        onClick: toggleCollapsed,
+                        style: $9a1abb59f5d10ec8$var$collapsibleExpandedStyle,
+                        children: `\u{25B2} ${count} stack frames were expanded.`
+                    })
+                ]
+            })
+        ]
+    });
+}
+var $9a1abb59f5d10ec8$export$2e2bcd8739ae039 = $9a1abb59f5d10ec8$var$Collapsible;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function $e95d7084caaf4e6d$export$723fa77eef12dd9f(sourceFileName, fileName) {
+    return sourceFileName == null || sourceFileName === '' || sourceFileName.indexOf('~/') !== -1 || sourceFileName.indexOf('node_modules/') !== -1 || sourceFileName.indexOf('error-overlay') !== -1 || sourceFileName.trim().indexOf(' ') !== -1 || fileName == null || fileName === '';
+}
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ function $a5027556d7003a42$export$64794fcb05cf0bcf(errorName) {
+    switch(errorName){
+        case 'EvalError':
+        case 'InternalError':
+        case 'RangeError':
+        case 'ReferenceError':
+        case 'SyntaxError':
+        case 'TypeError':
+        case 'URIError':
+            return true;
+        default:
+            return false;
+    }
+}
+var $a5027556d7003a42$export$2e2bcd8739ae039 = $a5027556d7003a42$export$64794fcb05cf0bcf;
+const $5ee7d2edb790dd06$var$traceStyle = {
+    fontSize: '1em',
+    flex: '0 1 auto',
+    minHeight: '0px',
+    overflow: 'auto'
+};
+function $5ee7d2edb790dd06$var$StackTrace(props) {
+    const { stackFrames: stackFrames, errorName: errorName, contextSize: contextSize, editorHandler: editorHandler } = props;
+    const renderedFrames = [];
+    let hasReachedAppCode = false, currentBundle = [], bundleCount = 0;
+    stackFrames.forEach((frame, index)=>{
+        const { fileName: fileName, _originalFileName: sourceFileName } = frame;
+        const isInternalUrl = $e95d7084caaf4e6d$export$723fa77eef12dd9f(sourceFileName, fileName);
+        const isThrownIntentionally = !$a5027556d7003a42$export$64794fcb05cf0bcf(errorName);
+        const shouldCollapse = isInternalUrl && (isThrownIntentionally || hasReachedAppCode);
+        if (!isInternalUrl) hasReachedAppCode = true;
+        const frameEle = $23b7c1cb98b19658$export$34b9dba7ce09269b($e0e0fa52b83f95a9$export$2e2bcd8739ae039, {
+            frame: frame,
+            contextSize: contextSize,
+            critical: index === 0,
+            showCode: !shouldCollapse,
+            editorHandler: editorHandler
+        }, 'frame-' + index);
+        const lastElement = index === stackFrames.length - 1;
+        if (shouldCollapse) currentBundle.push(frameEle);
+        if (!shouldCollapse || lastElement) {
+            if (currentBundle.length === 1) renderedFrames.push(currentBundle[0]);
+            else if (currentBundle.length > 1) {
+                bundleCount++;
+                renderedFrames.push($23b7c1cb98b19658$export$34b9dba7ce09269b($9a1abb59f5d10ec8$export$2e2bcd8739ae039, {
+                    children: currentBundle
+                }, 'bundle-' + bundleCount));
+            }
+            currentBundle = [];
+        }
+        if (!shouldCollapse) renderedFrames.push(frameEle);
+    });
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+        style: $5ee7d2edb790dd06$var$traceStyle,
+        children: renderedFrames
+    });
+}
+var $5ee7d2edb790dd06$export$2e2bcd8739ae039 = $5ee7d2edb790dd06$var$StackTrace;
+const $2eeadf2892cff4e4$var$diffStyle = {
+    backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.primaryPreBackground,
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.primaryPreColor,
+    padding: '0.5em',
+    overflowX: 'auto',
+    whiteSpace: 'pre-wrap',
+    borderRadius: '0.25rem'
+};
+function $2eeadf2892cff4e4$export$2e2bcd8739ae039({ diff: diff }) {
+    let lines = diff.split('\n').flatMap((line, i)=>[
+            $2eeadf2892cff4e4$var$formatLine(line, i),
+            '\n'
+        ]).slice(0, -1);
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("pre", {
+        style: $2eeadf2892cff4e4$var$diffStyle,
+        children: lines
+    });
+}
+function $2eeadf2892cff4e4$var$formatLine(line, index) {
+    if (line.startsWith('+')) return $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
+        style: {
+            color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.diffAdded,
+            fontWeight: 'bold'
+        },
+        children: line
+    }, index);
+    else if (line.startsWith('-') || line.startsWith('>')) return $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
+        style: {
+            color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.diffRemoved,
+            fontWeight: 'bold'
+        },
+        children: line
+    }, index);
+    else return line;
+}
+const $4baa71cb4cecc0ea$var$wrapperStyle = {
+    display: 'flex',
+    flexDirection: 'column'
+};
+function $4baa71cb4cecc0ea$var$RuntimeError({ errorRecord: errorRecord, editorHandler: editorHandler }) {
+    const { error: error, unhandledRejection: unhandledRejection, contextSize: contextSize, stackFrames: stackFrames } = errorRecord;
+    const errorName = unhandledRejection ? 'Unhandled Rejection (' + error.name + ')' : error.name;
+    // Make header prettier
+    const message = error.message;
+    let headerText = message.match(/^\w*:/) || !errorName ? message : errorName + ': ' + message;
+    headerText = headerText // TODO: maybe remove this prefix from fbjs?
+    // It's just scaring people
+    .replace(/^Invariant Violation:\s*/, '') // This is not helpful either:
+    .replace(/^Warning:\s*/, '') // Break the actionable part to the next line.
+    // AFAIK React 16+ should already do this.
+    .replace(' Check the render method', '\n\nCheck the render method').replace(' Check your code at', '\n\nCheck your code at');
+    let link, diff;
+    if (headerText.includes('https://react.dev/link/hydration-mismatch')) {
+        [headerText, diff] = headerText.split('https://react.dev/link/hydration-mismatch');
+        link = 'https://react.dev/link/hydration-mismatch';
+    } else if (headerText.includes('This will cause a hydration error.')) {
+        [headerText, diff] = headerText.split('This will cause a hydration error.');
+        headerText += 'This will cause a hydration error.';
+    }
+    let lines = headerText.split('\n');
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+        style: $4baa71cb4cecc0ea$var$wrapperStyle,
+        children: [
+            $23b7c1cb98b19658$export$34b9dba7ce09269b($c306e3a42547c8c2$export$2e2bcd8739ae039, {
+                headerText: lines[0]
+            }),
+            $23b7c1cb98b19658$export$34b9dba7ce09269b("pre", {
+                children: lines.slice(1).join('\n').trim()
+            }),
+            link && $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+                children: $23b7c1cb98b19658$export$34b9dba7ce09269b("a", {
+                    href: link,
+                    target: "_blank",
+                    rel: "noreferrer",
+                    children: link
+                })
+            }),
+            diff && $23b7c1cb98b19658$export$34b9dba7ce09269b($2eeadf2892cff4e4$export$2e2bcd8739ae039, {
+                diff: diff.trim()
+            }),
+            $23b7c1cb98b19658$export$34b9dba7ce09269b($5ee7d2edb790dd06$export$2e2bcd8739ae039, {
+                stackFrames: stackFrames,
+                errorName: errorName,
+                contextSize: contextSize,
+                editorHandler: editorHandler
+            })
+        ]
+    });
+}
+var $4baa71cb4cecc0ea$export$2e2bcd8739ae039 = $4baa71cb4cecc0ea$var$RuntimeError;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ const $7606db210182b733$var$footerStyle = {
+    fontFamily: 'sans-serif',
+    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.footer,
+    marginTop: '0.5rem',
+    flex: '0 0 auto'
+};
+function $7606db210182b733$var$Footer(props) {
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
+        style: $7606db210182b733$var$footerStyle,
+        children: [
+            props.line1,
+            $23b7c1cb98b19658$export$34b9dba7ce09269b("br", {}),
+            props.line2
+        ]
+    });
+}
+var $7606db210182b733$export$2e2bcd8739ae039 = $7606db210182b733$var$Footer;
+function $d0eac8b125ed15e2$var$RuntimeErrorContainer(props) {
+    const { errorRecords: errorRecords, close: close } = props;
+    const totalErrors = errorRecords.length;
+    let [currentIndex, setCurrentIndex] = $10ecac3e4062713a$export$60241385465d0a34(0);
+    let previous = ()=>{
+        setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : totalErrors - 1);
+    };
+    let next = ()=>{
+        setCurrentIndex(currentIndex < totalErrors - 1 ? currentIndex + 1 : 0);
+    };
+    return $23b7c1cb98b19658$export$34b9dba7ce09269b($20d888b381d18c6c$export$2e2bcd8739ae039, {
+        shortcutHandler: (key)=>{
+            if (key === 'Escape') props.close();
+            else if (key === 'ArrowLeft') previous();
+            else if (key === 'ArrowRight') next();
+        },
+        children: [
+            $23b7c1cb98b19658$export$34b9dba7ce09269b($7aae0c9ea64fc08c$export$2e2bcd8739ae039, {
+                close: close
+            }),
+            totalErrors > 1 && $23b7c1cb98b19658$export$34b9dba7ce09269b($1adc179a826c5dd2$export$2e2bcd8739ae039, {
+                currentError: currentIndex + 1,
+                totalErrors: totalErrors,
+                previous: previous,
+                next: next
+            }),
+            $23b7c1cb98b19658$export$34b9dba7ce09269b($4baa71cb4cecc0ea$export$2e2bcd8739ae039, {
+                errorRecord: errorRecords[currentIndex],
+                editorHandler: props.editorHandler
+            }),
+            $23b7c1cb98b19658$export$34b9dba7ce09269b($7606db210182b733$export$2e2bcd8739ae039, {
+                line1: "This screen is visible only in development. It will not appear if the app crashes in production.",
+                line2: "Open your browser\u2019s developer console to further inspect this error.  Click the 'X' or hit ESC to dismiss this message."
+            })
+        ]
+    });
+}
+var $d0eac8b125ed15e2$export$2e2bcd8739ae039 = $d0eac8b125ed15e2$var$RuntimeErrorContainer;
+let $da9882e673ac146b$var$iframe = null;
+let $da9882e673ac146b$var$editorHandler = null;
+let $da9882e673ac146b$var$currentRuntimeErrorRecords = [];
+let $da9882e673ac146b$var$stopListeningToRuntimeErrors = null;
+function $da9882e673ac146b$export$25a22ac46f1bd016(handler) {
+    $da9882e673ac146b$var$editorHandler = handler;
+    if ($da9882e673ac146b$var$iframe) $da9882e673ac146b$var$update();
+}
+function $da9882e673ac146b$export$74e9101ce4078c0(error, options) {
+    $6d40ebe8356580e0$export$9123e6c9c0ac21ed($da9882e673ac146b$var$handleRuntimeError(options))(error, false);
+}
+function $da9882e673ac146b$export$cda2c88a41631c16(options) {
+    if ($da9882e673ac146b$var$stopListeningToRuntimeErrors !== null) throw new Error('Already listening');
+    $da9882e673ac146b$var$stopListeningToRuntimeErrors = $6d40ebe8356580e0$export$38ec23daa6e8dcdf($da9882e673ac146b$var$handleRuntimeError(options));
+}
+const $da9882e673ac146b$var$handleRuntimeError = (options)=>(errorRecord)=>{
+        try {
+            if (typeof options.onError === 'function') options.onError.call(null);
+        } finally{
+            if ($da9882e673ac146b$var$currentRuntimeErrorRecords.some(({ error: error })=>error === errorRecord.error)) // This fixes https://github.com/facebook/create-react-app/issues/3011.
+            // eslint-disable-next-line no-unsafe-finally
+            return;
+            $da9882e673ac146b$var$currentRuntimeErrorRecords = $da9882e673ac146b$var$currentRuntimeErrorRecords.concat([
+                errorRecord
+            ]);
+            $da9882e673ac146b$var$update();
+        }
+    };
+function $da9882e673ac146b$export$1cfa6d161ca81bd9() {
+    $da9882e673ac146b$var$currentRuntimeErrorRecords = [];
+    $da9882e673ac146b$var$update();
+}
+function $da9882e673ac146b$export$25ba7d9a816639e7() {
+    if ($da9882e673ac146b$var$stopListeningToRuntimeErrors === null) throw new Error('Not currently listening');
+    try {
+        $da9882e673ac146b$var$stopListeningToRuntimeErrors();
+    } finally{
+        $da9882e673ac146b$var$stopListeningToRuntimeErrors = null;
+    }
+}
+let $da9882e673ac146b$var$rootNode, $da9882e673ac146b$var$shadow;
+function $da9882e673ac146b$var$update() {
+    if (!$da9882e673ac146b$var$rootNode) {
+        $da9882e673ac146b$var$rootNode = document.createElement('parcel-error-overlay');
+        $da9882e673ac146b$var$shadow = $da9882e673ac146b$var$rootNode.attachShadow({
+            mode: 'open'
+        });
+        if ($da9882e673ac146b$var$rootNode) document.body?.appendChild($da9882e673ac146b$var$rootNode);
+    }
+    if ($da9882e673ac146b$var$currentRuntimeErrorRecords.length > 0 && $da9882e673ac146b$var$shadow) $b6c7f0288a15c619$export$b3890eb0ae9dca99($23b7c1cb98b19658$export$34b9dba7ce09269b("dialog", {
+        ref: (d)=>d?.showModal(),
+        style: $74bb4be6e9b78681$export$7ef984671d1853d7,
+        onClose: $da9882e673ac146b$export$1cfa6d161ca81bd9,
+        children: $23b7c1cb98b19658$export$34b9dba7ce09269b($da9882e673ac146b$var$ErrorOverlay, {})
+    }), $da9882e673ac146b$var$shadow);
+    else {
+        $da9882e673ac146b$var$rootNode?.remove();
+        $da9882e673ac146b$var$rootNode = null;
+    }
+}
+function $da9882e673ac146b$var$ErrorOverlay() {
+    if ($da9882e673ac146b$var$currentRuntimeErrorRecords.length > 0) return $23b7c1cb98b19658$export$34b9dba7ce09269b($d0eac8b125ed15e2$export$2e2bcd8739ae039, {
+        errorRecords: $da9882e673ac146b$var$currentRuntimeErrorRecords,
+        close: $da9882e673ac146b$export$1cfa6d161ca81bd9,
+        editorHandler: $da9882e673ac146b$var$editorHandler
+    });
+    return null;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"61z4w":[function(require,module,exports,__globalThis) {
 /**
  * React Router DOM v6.30.3
  *
@@ -24830,37 +27123,7 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"d3lRq":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"11axS":[function() {},{}],"d3lRq":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$620a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$620a.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -24875,44 +27138,66 @@ var _reactRouterDom = require("react-router-dom");
 var _headerModuleCss = require("./Header.module.css");
 var _headerModuleCssDefault = parcelHelpers.interopDefault(_headerModuleCss);
 const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
-        className: (0, _headerModuleCssDefault.default).navigationShell,
+        className: (0, _headerModuleCssDefault.default).header,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: (0, _headerModuleCssDefault.default).navigationContainer,
+            className: (0, _headerModuleCssDefault.default).header__container,
             children: [
-                [
-                    '/ram',
-                    'Xeon Ram Tool'
-                ],
-                [
-                    '/power',
-                    'Power Management'
-                ],
-                [
-                    '/fan',
-                    'Fan Configuration'
-                ],
-                [
-                    '/iio',
-                    'IIO Configuration'
-                ],
-                [
-                    '/csm',
-                    'CSM Configuration'
-                ],
-                [
-                    '/pci',
-                    'PCI Configuration'
-                ]
-            ].map(([to, label])=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: to,
-                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).navLink} ${isActive ? (0, _headerModuleCssDefault.default).isActiveLink : ''}`,
-                    children: label
-                }, to, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/ram",
+                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    children: "Xeon Ram Tool"
+                }, void 0, false, {
                     fileName: "src/components/Header/Header.tsx",
-                    lineNumber: 15,
-                    columnNumber: 9
-                }, undefined))
-        }, void 0, false, {
+                    lineNumber: 7,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/power",
+                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    children: "Power Management"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.tsx",
+                    lineNumber: 8,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/iio",
+                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    children: "IIO Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.tsx",
+                    lineNumber: 9,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/csm",
+                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    children: "CSM Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.tsx",
+                    lineNumber: 10,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/fan",
+                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    children: "Fan Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.tsx",
+                    lineNumber: 11,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/pci",
+                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    children: "PCI Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.tsx",
+                    lineNumber: 12,
+                    columnNumber: 7
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "src/components/Header/Header.tsx",
             lineNumber: 6,
             columnNumber: 5
@@ -24933,2295 +27218,17 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"dVPUn","react-router-dom":"61z4w","./Header.module.css":"bjXDN","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"bjXDN":[function(require,module,exports,__globalThis) {
-module.exports["isActiveLink"] = `MqZHCq_isActiveLink`;
-module.exports["navLink"] = `MqZHCq_navLink`;
-module.exports["navigationContainer"] = `MqZHCq_navigationContainer`;
-module.exports["navigationShell"] = `MqZHCq_navigationShell`;
+module.exports["header"] = `MqZHCq_header`;
+module.exports["header__container"] = `MqZHCq_header__container`;
+module.exports["header__link"] = `MqZHCq_header__link`;
+module.exports["header__link_active"] = `MqZHCq_header__link_active`;
 
-},{}],"7h6Pi":[function(require,module,exports,__globalThis) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-module.exports.init = function() {
-    if (!globalThis.$RefreshReg$) {
-        Refresh.injectIntoGlobalHook(globalThis);
-        globalThis.$RefreshReg$ = function() {};
-        globalThis.$RefreshSig$ = function() {
-            return function(type) {
-                return type;
-            };
-        };
-        if (typeof window !== 'undefined') {
-            let ErrorOverlay = require("e4d875b7642f9496");
-            ErrorOverlay.setEditorHandler(function(errorLocation) {
-                let file = `${errorLocation.fileName}:${errorLocation.lineNumber || 1}:${errorLocation.colNumber || 1}`;
-                fetch(module.bundle.devServer + `/__parcel_launch_editor?file=${encodeURIComponent(file)}`);
-            });
-            ErrorOverlay.startReportingRuntimeErrors({
-                onError: function() {}
-            });
-            window.addEventListener('parcelhmraccept', ()=>{
-                ErrorOverlay.dismissRuntimeErrors();
-            });
-        }
-    }
-};
-// Everything below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    globalThis.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + ' ' + id);
-    };
-    globalThis.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (typeof window === 'undefined') return;
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + ' %exports%');
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + ' %exports% ' + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"hpiFP","e4d875b7642f9496":"gnoim"}],"hpiFP":[function(require,module,exports,__globalThis) {
-'use strict';
-module.exports = require("96622d495519d4e");
-
-},{"96622d495519d4e":"7AD9f"}],"7AD9f":[function(require,module,exports,__globalThis) {
-/**
- * @license React
- * react-refresh-runtime.development.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-(function() {
-    function computeFullKey(signature) {
-        if (null !== signature.fullKey) return signature.fullKey;
-        var fullKey = signature.ownKey;
-        try {
-            var hooks = signature.getCustomHooks();
-        } catch (err) {
-            return signature.forceReset = !0, signature.fullKey = fullKey;
-        }
-        for(var i = 0; i < hooks.length; i++){
-            var hook = hooks[i];
-            if ("function" !== typeof hook) return signature.forceReset = !0, signature.fullKey = fullKey;
-            hook = allSignaturesByType.get(hook);
-            if (void 0 !== hook) {
-                var nestedHookKey = computeFullKey(hook);
-                hook.forceReset && (signature.forceReset = !0);
-                fullKey += "\n---\n" + nestedHookKey;
-            }
-        }
-        return signature.fullKey = fullKey;
-    }
-    function resolveFamily(type) {
-        return updatedFamiliesByType.get(type);
-    }
-    function cloneMap(map) {
-        var clone = new Map();
-        map.forEach(function(value, key) {
-            clone.set(key, value);
-        });
-        return clone;
-    }
-    function cloneSet(set) {
-        var clone = new Set();
-        set.forEach(function(value) {
-            clone.add(value);
-        });
-        return clone;
-    }
-    function getProperty(object, property) {
-        try {
-            return object[property];
-        } catch (err) {}
-    }
-    function register(type, id) {
-        if (!(null === type || "function" !== typeof type && "object" !== typeof type || allFamiliesByType.has(type))) {
-            var family = allFamiliesByID.get(id);
-            void 0 === family ? (family = {
-                current: type
-            }, allFamiliesByID.set(id, family)) : pendingUpdates.push([
-                family,
-                type
-            ]);
-            allFamiliesByType.set(type, family);
-            if ("object" === typeof type && null !== type) switch(getProperty(type, "$$typeof")){
-                case REACT_FORWARD_REF_TYPE:
-                    register(type.render, id + "$render");
-                    break;
-                case REACT_MEMO_TYPE:
-                    register(type.type, id + "$type");
-            }
-        }
-    }
-    function setSignature(type, key) {
-        var forceReset = 2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : !1, getCustomHooks = 3 < arguments.length ? arguments[3] : void 0;
-        allSignaturesByType.has(type) || allSignaturesByType.set(type, {
-            forceReset: forceReset,
-            ownKey: key,
-            fullKey: null,
-            getCustomHooks: getCustomHooks || function() {
-                return [];
-            }
-        });
-        if ("object" === typeof type && null !== type) switch(getProperty(type, "$$typeof")){
-            case REACT_FORWARD_REF_TYPE:
-                setSignature(type.render, key, forceReset, getCustomHooks);
-                break;
-            case REACT_MEMO_TYPE:
-                setSignature(type.type, key, forceReset, getCustomHooks);
-        }
-    }
-    function collectCustomHooksForSignature(type) {
-        type = allSignaturesByType.get(type);
-        void 0 !== type && computeFullKey(type);
-    }
-    var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_MEMO_TYPE = Symbol.for("react.memo"), PossiblyWeakMap = "function" === typeof WeakMap ? WeakMap : Map, allFamiliesByID = new Map(), allFamiliesByType = new PossiblyWeakMap(), allSignaturesByType = new PossiblyWeakMap(), updatedFamiliesByType = new PossiblyWeakMap(), pendingUpdates = [], helpersByRendererID = new Map(), helpersByRoot = new Map(), mountedRoots = new Set(), failedRoots = new Set(), rootElements = "function" === typeof WeakMap ? new WeakMap() : null, isPerformingRefresh = !1;
-    exports._getMountedRootCount = function() {
-        return mountedRoots.size;
-    };
-    exports.collectCustomHooksForSignature = collectCustomHooksForSignature;
-    exports.createSignatureFunctionForTransform = function() {
-        var savedType, hasCustomHooks, didCollectHooks = !1;
-        return function(type, key, forceReset, getCustomHooks) {
-            if ("string" === typeof key) return savedType || (savedType = type, hasCustomHooks = "function" === typeof getCustomHooks), null == type || "function" !== typeof type && "object" !== typeof type || setSignature(type, key, forceReset, getCustomHooks), type;
-            !didCollectHooks && hasCustomHooks && (didCollectHooks = !0, collectCustomHooksForSignature(savedType));
-        };
-    };
-    exports.getFamilyByID = function(id) {
-        return allFamiliesByID.get(id);
-    };
-    exports.getFamilyByType = function(type) {
-        return allFamiliesByType.get(type);
-    };
-    exports.hasUnrecoverableErrors = function() {
-        return !1;
-    };
-    exports.injectIntoGlobalHook = function(globalObject) {
-        var hook = globalObject.__REACT_DEVTOOLS_GLOBAL_HOOK__;
-        if (void 0 === hook) {
-            var nextID = 0;
-            globalObject.__REACT_DEVTOOLS_GLOBAL_HOOK__ = hook = {
-                renderers: new Map(),
-                supportsFiber: !0,
-                inject: function() {
-                    return nextID++;
-                },
-                onScheduleFiberRoot: function() {},
-                onCommitFiberRoot: function() {},
-                onCommitFiberUnmount: function() {}
-            };
-        }
-        if (hook.isDisabled) console.warn("Something has shimmed the React DevTools global hook (__REACT_DEVTOOLS_GLOBAL_HOOK__). Fast Refresh is not compatible with this shim and will be disabled.");
-        else {
-            var oldInject = hook.inject;
-            hook.inject = function(injected) {
-                var id = oldInject.apply(this, arguments);
-                "function" === typeof injected.scheduleRefresh && "function" === typeof injected.setRefreshHandler && helpersByRendererID.set(id, injected);
-                return id;
-            };
-            hook.renderers.forEach(function(injected, id) {
-                "function" === typeof injected.scheduleRefresh && "function" === typeof injected.setRefreshHandler && helpersByRendererID.set(id, injected);
-            });
-            var oldOnCommitFiberRoot = hook.onCommitFiberRoot, oldOnScheduleFiberRoot = hook.onScheduleFiberRoot || function() {};
-            hook.onScheduleFiberRoot = function(id, root, children) {
-                isPerformingRefresh || (failedRoots.delete(root), null !== rootElements && rootElements.set(root, children));
-                return oldOnScheduleFiberRoot.apply(this, arguments);
-            };
-            hook.onCommitFiberRoot = function(id, root, maybePriorityLevel, didError) {
-                var helpers = helpersByRendererID.get(id);
-                if (void 0 !== helpers) {
-                    helpersByRoot.set(root, helpers);
-                    helpers = root.current;
-                    var alternate = helpers.alternate;
-                    null !== alternate ? (alternate = null != alternate.memoizedState && null != alternate.memoizedState.element && mountedRoots.has(root), helpers = null != helpers.memoizedState && null != helpers.memoizedState.element, !alternate && helpers ? (mountedRoots.add(root), failedRoots.delete(root)) : alternate && helpers || (alternate && !helpers ? (mountedRoots.delete(root), didError ? failedRoots.add(root) : helpersByRoot.delete(root)) : alternate || helpers || didError && failedRoots.add(root))) : mountedRoots.add(root);
-                }
-                return oldOnCommitFiberRoot.apply(this, arguments);
-            };
-        }
-    };
-    exports.isLikelyComponentType = function(type) {
-        switch(typeof type){
-            case "function":
-                if (null != type.prototype) {
-                    if (type.prototype.isReactComponent) return !0;
-                    var ownNames = Object.getOwnPropertyNames(type.prototype);
-                    if (1 < ownNames.length || "constructor" !== ownNames[0] || type.prototype.__proto__ !== Object.prototype) return !1;
-                }
-                type = type.name || type.displayName;
-                return "string" === typeof type && /^[A-Z]/.test(type);
-            case "object":
-                if (null != type) switch(getProperty(type, "$$typeof")){
-                    case REACT_FORWARD_REF_TYPE:
-                    case REACT_MEMO_TYPE:
-                        return !0;
-                }
-                return !1;
-            default:
-                return !1;
-        }
-    };
-    exports.performReactRefresh = function() {
-        if (0 === pendingUpdates.length || isPerformingRefresh) return null;
-        isPerformingRefresh = !0;
-        try {
-            var staleFamilies = new Set(), updatedFamilies = new Set(), updates = pendingUpdates;
-            pendingUpdates = [];
-            updates.forEach(function(_ref) {
-                var family = _ref[0];
-                _ref = _ref[1];
-                var prevType = family.current;
-                updatedFamiliesByType.set(prevType, family);
-                updatedFamiliesByType.set(_ref, family);
-                family.current = _ref;
-                prevType.prototype && prevType.prototype.isReactComponent || _ref.prototype && _ref.prototype.isReactComponent ? _ref = !1 : (prevType = allSignaturesByType.get(prevType), _ref = allSignaturesByType.get(_ref), _ref = void 0 === prevType && void 0 === _ref || void 0 !== prevType && void 0 !== _ref && computeFullKey(prevType) === computeFullKey(_ref) && !_ref.forceReset ? !0 : !1);
-                _ref ? updatedFamilies.add(family) : staleFamilies.add(family);
-            });
-            var update = {
-                updatedFamilies: updatedFamilies,
-                staleFamilies: staleFamilies
-            };
-            helpersByRendererID.forEach(function(helpers) {
-                helpers.setRefreshHandler(resolveFamily);
-            });
-            var didError = !1, firstError = null, failedRootsSnapshot = cloneSet(failedRoots), mountedRootsSnapshot = cloneSet(mountedRoots), helpersByRootSnapshot = cloneMap(helpersByRoot);
-            failedRootsSnapshot.forEach(function(root) {
-                var helpers = helpersByRootSnapshot.get(root);
-                if (void 0 === helpers) throw Error("Could not find helpers for a root. This is a bug in React Refresh.");
-                failedRoots.has(root);
-                if (null !== rootElements && rootElements.has(root)) {
-                    var element = rootElements.get(root);
-                    try {
-                        helpers.scheduleRoot(root, element);
-                    } catch (err) {
-                        didError || (didError = !0, firstError = err);
-                    }
-                }
-            });
-            mountedRootsSnapshot.forEach(function(root) {
-                var helpers = helpersByRootSnapshot.get(root);
-                if (void 0 === helpers) throw Error("Could not find helpers for a root. This is a bug in React Refresh.");
-                mountedRoots.has(root);
-                try {
-                    helpers.scheduleRefresh(root, update);
-                } catch (err) {
-                    didError || (didError = !0, firstError = err);
-                }
-            });
-            if (didError) throw firstError;
-            return update;
-        } finally{
-            isPerformingRefresh = !1;
-        }
-    };
-    exports.register = register;
-    exports.setSignature = setSignature;
-})();
-
-},{}],"gnoim":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "setEditorHandler", ()=>$da9882e673ac146b$export$25a22ac46f1bd016);
-parcelHelpers.export(exports, "reportRuntimeError", ()=>$da9882e673ac146b$export$74e9101ce4078c0);
-parcelHelpers.export(exports, "startReportingRuntimeErrors", ()=>$da9882e673ac146b$export$cda2c88a41631c16);
-parcelHelpers.export(exports, "dismissRuntimeErrors", ()=>$da9882e673ac146b$export$1cfa6d161ca81bd9);
-parcelHelpers.export(exports, "stopReportingRuntimeErrors", ()=>$da9882e673ac146b$export$25ba7d9a816639e7);
-function $parcel$interopDefault(a) {
-    return a && a.__esModule ? a.default : a;
-}
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /* eslint-env browser */ /* eslint-disable react/react-in-jsx-scope, no-console */ var $b6c7f0288a15c619$var$n, $b6c7f0288a15c619$export$41c562ebe57d11e2, $b6c7f0288a15c619$var$u, $b6c7f0288a15c619$export$a8257692ac88316c, $b6c7f0288a15c619$var$i, $b6c7f0288a15c619$var$r, $b6c7f0288a15c619$var$o, $b6c7f0288a15c619$var$e, $b6c7f0288a15c619$var$f, $b6c7f0288a15c619$var$c, $b6c7f0288a15c619$var$s, $b6c7f0288a15c619$var$a, $b6c7f0288a15c619$var$h, $b6c7f0288a15c619$var$p = {}, $b6c7f0288a15c619$var$y = [], $b6c7f0288a15c619$var$v = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i, $b6c7f0288a15c619$var$w = Array.isArray;
-function $b6c7f0288a15c619$var$d(n, l) {
-    for(var u in l)n[u] = l[u];
-    return n;
-}
-function $b6c7f0288a15c619$var$g(n) {
-    n && n.parentNode && n.parentNode.removeChild(n);
-}
-function $b6c7f0288a15c619$export$c8a8987d4410bf2d(l, u, t) {
-    var i, r, o, e = {};
-    for(o in u)"key" == o ? i = u[o] : "ref" == o ? r = u[o] : e[o] = u[o];
-    if (arguments.length > 2 && (e.children = arguments.length > 3 ? $b6c7f0288a15c619$var$n.call(arguments, 2) : t), "function" == typeof l && null != l.defaultProps) for(o in l.defaultProps)null == e[o] && (e[o] = l.defaultProps[o]);
-    return $b6c7f0288a15c619$var$m(l, e, i, r, null);
-}
-function $b6c7f0288a15c619$var$m(n, t, i, r, o) {
-    var e = {
-        type: n,
-        props: t,
-        key: i,
-        ref: r,
-        __k: null,
-        __: null,
-        __b: 0,
-        __e: null,
-        __c: null,
-        constructor: void 0,
-        __v: null == o ? ++$b6c7f0288a15c619$var$u : o,
-        __i: -1,
-        __u: 0
-    };
-    return null == o && null != $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode && $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode(e), e;
-}
-function $b6c7f0288a15c619$export$7d1e3a5e95ceca43() {
-    return {
-        current: null
-    };
-}
-function $b6c7f0288a15c619$export$ffb0004e005737fa(n) {
-    return n.children;
-}
-function $b6c7f0288a15c619$export$16fa2f45be04daa8(n, l) {
-    this.props = n, this.context = l;
-}
-function $b6c7f0288a15c619$var$S(n, l) {
-    if (null == l) return n.__ ? $b6c7f0288a15c619$var$S(n.__, n.__i + 1) : null;
-    for(var u; l < n.__k.length; l++)if (null != (u = n.__k[l]) && null != u.__e) return u.__e;
-    return "function" == typeof n.type ? $b6c7f0288a15c619$var$S(n) : null;
-}
-function $b6c7f0288a15c619$var$C(n) {
-    var l, u;
-    if (null != (n = n.__) && null != n.__c) {
-        for(n.__e = n.__c.base = null, l = 0; l < n.__k.length; l++)if (null != (u = n.__k[l]) && null != u.__e) {
-            n.__e = n.__c.base = u.__e;
-            break;
-        }
-        return $b6c7f0288a15c619$var$C(n);
-    }
-}
-function $b6c7f0288a15c619$var$M(n) {
-    (!n.__d && (n.__d = !0) && $b6c7f0288a15c619$var$i.push(n) && !$b6c7f0288a15c619$var$$.__r++ || $b6c7f0288a15c619$var$r != $b6c7f0288a15c619$export$41c562ebe57d11e2.debounceRendering) && (($b6c7f0288a15c619$var$r = $b6c7f0288a15c619$export$41c562ebe57d11e2.debounceRendering) || $b6c7f0288a15c619$var$o)($b6c7f0288a15c619$var$$);
-}
-function $b6c7f0288a15c619$var$$() {
-    for(var n, u, t, r, o, f, c, s = 1; $b6c7f0288a15c619$var$i.length;)$b6c7f0288a15c619$var$i.length > s && $b6c7f0288a15c619$var$i.sort($b6c7f0288a15c619$var$e), n = $b6c7f0288a15c619$var$i.shift(), s = $b6c7f0288a15c619$var$i.length, n.__d && (t = void 0, o = (r = (u = n).__v).__e, f = [], c = [], u.__P && ((t = $b6c7f0288a15c619$var$d({}, r)).__v = r.__v + 1, $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode && $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode(t), $b6c7f0288a15c619$var$O(u.__P, t, r, u.__n, u.__P.namespaceURI, 32 & r.__u ? [
-        o
-    ] : null, f, null == o ? $b6c7f0288a15c619$var$S(r) : o, !!(32 & r.__u), c), t.__v = r.__v, t.__.__k[t.__i] = t, $b6c7f0288a15c619$var$z(f, t, c), t.__e != o && $b6c7f0288a15c619$var$C(t)));
-    $b6c7f0288a15c619$var$$.__r = 0;
-}
-function $b6c7f0288a15c619$var$I(n, l, u, t, i, r, o, e, f, c, s) {
-    var a, h, v, w, d, g, _ = t && t.__k || $b6c7f0288a15c619$var$y, m = l.length;
-    for(f = $b6c7f0288a15c619$var$P(u, l, _, f, m), a = 0; a < m; a++)null != (v = u.__k[a]) && (h = -1 == v.__i ? $b6c7f0288a15c619$var$p : _[v.__i] || $b6c7f0288a15c619$var$p, v.__i = a, g = $b6c7f0288a15c619$var$O(n, v, h, i, r, o, e, f, c, s), w = v.__e, v.ref && h.ref != v.ref && (h.ref && $b6c7f0288a15c619$var$q(h.ref, null, v), s.push(v.ref, v.__c || w, v)), null == d && null != w && (d = w), 4 & v.__u || h.__k === v.__k ? f = $b6c7f0288a15c619$var$A(v, f, n) : "function" == typeof v.type && void 0 !== g ? f = g : w && (f = w.nextSibling), v.__u &= -7);
-    return u.__e = d, f;
-}
-function $b6c7f0288a15c619$var$P(n, l, u, t, i) {
-    var r, o, e, f, c, s = u.length, a = s, h = 0;
-    for(n.__k = new Array(i), r = 0; r < i; r++)null != (o = l[r]) && "boolean" != typeof o && "function" != typeof o ? (f = r + h, (o = n.__k[r] = "string" == typeof o || "number" == typeof o || "bigint" == typeof o || o.constructor == String ? $b6c7f0288a15c619$var$m(null, o, null, null, null) : $b6c7f0288a15c619$var$w(o) ? $b6c7f0288a15c619$var$m($b6c7f0288a15c619$export$ffb0004e005737fa, {
-        children: o
-    }, null, null, null) : null == o.constructor && o.__b > 0 ? $b6c7f0288a15c619$var$m(o.type, o.props, o.key, o.ref ? o.ref : null, o.__v) : o).__ = n, o.__b = n.__b + 1, e = null, -1 != (c = o.__i = $b6c7f0288a15c619$var$L(o, u, f, a)) && (a--, (e = u[c]) && (e.__u |= 2)), null == e || null == e.__v ? (-1 == c && (i > s ? h-- : i < s && h++), "function" != typeof o.type && (o.__u |= 4)) : c != f && (c == f - 1 ? h-- : c == f + 1 ? h++ : (c > f ? h-- : h++, o.__u |= 4))) : n.__k[r] = null;
-    if (a) for(r = 0; r < s; r++)null != (e = u[r]) && 0 == (2 & e.__u) && (e.__e == t && (t = $b6c7f0288a15c619$var$S(e)), $b6c7f0288a15c619$var$B(e, e));
-    return t;
-}
-function $b6c7f0288a15c619$var$A(n, l, u) {
-    var t, i;
-    if ("function" == typeof n.type) {
-        for(t = n.__k, i = 0; t && i < t.length; i++)t[i] && (t[i].__ = n, l = $b6c7f0288a15c619$var$A(t[i], l, u));
-        return l;
-    }
-    n.__e != l && (l && n.type && !u.contains(l) && (l = $b6c7f0288a15c619$var$S(n)), u.insertBefore(n.__e, l || null), l = n.__e);
-    do l = l && l.nextSibling;
-    while (null != l && 8 == l.nodeType);
-    return l;
-}
-function $b6c7f0288a15c619$export$47e4c5b300681277(n, l) {
-    return l = l || [], null == n || "boolean" == typeof n || ($b6c7f0288a15c619$var$w(n) ? n.some(function(n) {
-        $b6c7f0288a15c619$export$47e4c5b300681277(n, l);
-    }) : l.push(n)), l;
-}
-function $b6c7f0288a15c619$var$L(n, l, u, t) {
-    var i, r, o = n.key, e = n.type, f = l[u];
-    if (null === f && null == n.key || f && o == f.key && e == f.type && 0 == (2 & f.__u)) return u;
-    if (t > (null != f && 0 == (2 & f.__u) ? 1 : 0)) for(i = u - 1, r = u + 1; i >= 0 || r < l.length;){
-        if (i >= 0) {
-            if ((f = l[i]) && 0 == (2 & f.__u) && o == f.key && e == f.type) return i;
-            i--;
-        }
-        if (r < l.length) {
-            if ((f = l[r]) && 0 == (2 & f.__u) && o == f.key && e == f.type) return r;
-            r++;
-        }
-    }
-    return -1;
-}
-function $b6c7f0288a15c619$var$T(n, l, u) {
-    "-" == l[0] ? n.setProperty(l, null == u ? "" : u) : n[l] = null == u ? "" : "number" != typeof u || $b6c7f0288a15c619$var$v.test(l) ? u : u + "px";
-}
-function $b6c7f0288a15c619$var$j(n, l, u, t, i) {
-    var r;
-    n: if ("style" == l) {
-        if ("string" == typeof u) n.style.cssText = u;
-        else {
-            if ("string" == typeof t && (n.style.cssText = t = ""), t) for(l in t)u && l in u || $b6c7f0288a15c619$var$T(n.style, l, "");
-            if (u) for(l in u)t && u[l] == t[l] || $b6c7f0288a15c619$var$T(n.style, l, u[l]);
-        }
-    } else if ("o" == l[0] && "n" == l[1]) r = l != (l = l.replace($b6c7f0288a15c619$var$f, "$1")), l = l.toLowerCase() in n || "onFocusOut" == l || "onFocusIn" == l ? l.toLowerCase().slice(2) : l.slice(2), n.l || (n.l = {}), n.l[l + r] = u, u ? t ? u.u = t.u : (u.u = $b6c7f0288a15c619$var$c, n.addEventListener(l, r ? $b6c7f0288a15c619$var$a : $b6c7f0288a15c619$var$s, r)) : n.removeEventListener(l, r ? $b6c7f0288a15c619$var$a : $b6c7f0288a15c619$var$s, r);
-    else {
-        if ("http://www.w3.org/2000/svg" == i) l = l.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
-        else if ("width" != l && "height" != l && "href" != l && "list" != l && "form" != l && "tabIndex" != l && "download" != l && "rowSpan" != l && "colSpan" != l && "role" != l && "popover" != l && l in n) try {
-            n[l] = null == u ? "" : u;
-            break n;
-        } catch (n) {}
-        "function" == typeof u || (null == u || !1 === u && "-" != l[4] ? n.removeAttribute(l) : n.setAttribute(l, "popover" == l && 1 == u ? "" : u));
-    }
-}
-function $b6c7f0288a15c619$var$F(n) {
-    return function(u) {
-        if (this.l) {
-            var t = this.l[u.type + n];
-            if (null == u.t) u.t = $b6c7f0288a15c619$var$c++;
-            else if (u.t < t.u) return;
-            return t($b6c7f0288a15c619$export$41c562ebe57d11e2.event ? $b6c7f0288a15c619$export$41c562ebe57d11e2.event(u) : u);
-        }
-    };
-}
-function $b6c7f0288a15c619$var$O(n, u, t, i, r, o, e, f, c, s) {
-    var a, h, p, y, v, _, m, b, S, C, M, $, P, A, H, L, T, j = u.type;
-    if (null != u.constructor) return null;
-    128 & t.__u && (c = !!(32 & t.__u), o = [
-        f = u.__e = t.__e
-    ]), (a = $b6c7f0288a15c619$export$41c562ebe57d11e2.__b) && a(u);
-    n: if ("function" == typeof j) try {
-        if (b = u.props, S = "prototype" in j && j.prototype.render, C = (a = j.contextType) && i[a.__c], M = a ? C ? C.props.value : a.__ : i, t.__c ? m = (h = u.__c = t.__c).__ = h.__E : (S ? u.__c = h = new j(b, M) : (u.__c = h = new $b6c7f0288a15c619$export$16fa2f45be04daa8(b, M), h.constructor = j, h.render = $b6c7f0288a15c619$var$D), C && C.sub(h), h.props = b, h.state || (h.state = {}), h.context = M, h.__n = i, p = h.__d = !0, h.__h = [], h._sb = []), S && null == h.__s && (h.__s = h.state), S && null != j.getDerivedStateFromProps && (h.__s == h.state && (h.__s = $b6c7f0288a15c619$var$d({}, h.__s)), $b6c7f0288a15c619$var$d(h.__s, j.getDerivedStateFromProps(b, h.__s))), y = h.props, v = h.state, h.__v = u, p) S && null == j.getDerivedStateFromProps && null != h.componentWillMount && h.componentWillMount(), S && null != h.componentDidMount && h.__h.push(h.componentDidMount);
-        else {
-            if (S && null == j.getDerivedStateFromProps && b !== y && null != h.componentWillReceiveProps && h.componentWillReceiveProps(b, M), !h.__e && null != h.shouldComponentUpdate && !1 === h.shouldComponentUpdate(b, h.__s, M) || u.__v == t.__v) {
-                for(u.__v != t.__v && (h.props = b, h.state = h.__s, h.__d = !1), u.__e = t.__e, u.__k = t.__k, u.__k.some(function(n) {
-                    n && (n.__ = u);
-                }), $ = 0; $ < h._sb.length; $++)h.__h.push(h._sb[$]);
-                h._sb = [], h.__h.length && e.push(h);
-                break n;
-            }
-            null != h.componentWillUpdate && h.componentWillUpdate(b, h.__s, M), S && null != h.componentDidUpdate && h.__h.push(function() {
-                h.componentDidUpdate(y, v, _);
-            });
-        }
-        if (h.context = M, h.props = b, h.__P = n, h.__e = !1, P = $b6c7f0288a15c619$export$41c562ebe57d11e2.__r, A = 0, S) {
-            for(h.state = h.__s, h.__d = !1, P && P(u), a = h.render(h.props, h.state, h.context), H = 0; H < h._sb.length; H++)h.__h.push(h._sb[H]);
-            h._sb = [];
-        } else do h.__d = !1, P && P(u), a = h.render(h.props, h.state, h.context), h.state = h.__s;
-        while (h.__d && ++A < 25);
-        h.state = h.__s, null != h.getChildContext && (i = $b6c7f0288a15c619$var$d($b6c7f0288a15c619$var$d({}, i), h.getChildContext())), S && !p && null != h.getSnapshotBeforeUpdate && (_ = h.getSnapshotBeforeUpdate(y, v)), L = a, null != a && a.type === $b6c7f0288a15c619$export$ffb0004e005737fa && null == a.key && (L = $b6c7f0288a15c619$var$N(a.props.children)), f = $b6c7f0288a15c619$var$I(n, $b6c7f0288a15c619$var$w(L) ? L : [
-            L
-        ], u, t, i, r, o, e, f, c, s), h.base = u.__e, u.__u &= -161, h.__h.length && e.push(h), m && (h.__E = h.__ = null);
-    } catch (n) {
-        if (u.__v = null, c || null != o) {
-            if (n.then) {
-                for(u.__u |= c ? 160 : 128; f && 8 == f.nodeType && f.nextSibling;)f = f.nextSibling;
-                o[o.indexOf(f)] = null, u.__e = f;
-            } else for(T = o.length; T--;)$b6c7f0288a15c619$var$g(o[T]);
-        } else u.__e = t.__e, u.__k = t.__k;
-        $b6c7f0288a15c619$export$41c562ebe57d11e2.__e(n, u, t);
-    }
-    else null == o && u.__v == t.__v ? (u.__k = t.__k, u.__e = t.__e) : f = u.__e = $b6c7f0288a15c619$var$V(t.__e, u, t, i, r, o, e, c, s);
-    return (a = $b6c7f0288a15c619$export$41c562ebe57d11e2.diffed) && a(u), 128 & u.__u ? void 0 : f;
-}
-function $b6c7f0288a15c619$var$z(n, u, t) {
-    for(var i = 0; i < t.length; i++)$b6c7f0288a15c619$var$q(t[i], t[++i], t[++i]);
-    $b6c7f0288a15c619$export$41c562ebe57d11e2.__c && $b6c7f0288a15c619$export$41c562ebe57d11e2.__c(u, n), n.some(function(u) {
-        try {
-            n = u.__h, u.__h = [], n.some(function(n) {
-                n.call(u);
-            });
-        } catch (n) {
-            $b6c7f0288a15c619$export$41c562ebe57d11e2.__e(n, u.__v);
-        }
-    });
-}
-function $b6c7f0288a15c619$var$N(n) {
-    return "object" != typeof n || null == n || n.__b && n.__b > 0 ? n : $b6c7f0288a15c619$var$w(n) ? n.map($b6c7f0288a15c619$var$N) : $b6c7f0288a15c619$var$d({}, n);
-}
-function $b6c7f0288a15c619$var$V(u, t, i, r, o, e, f, c, s) {
-    var a, h, y, v, d, _, m, b = i.props, k = t.props, x = t.type;
-    if ("svg" == x ? o = "http://www.w3.org/2000/svg" : "math" == x ? o = "http://www.w3.org/1998/Math/MathML" : o || (o = "http://www.w3.org/1999/xhtml"), null != e) {
-        for(a = 0; a < e.length; a++)if ((d = e[a]) && "setAttribute" in d == !!x && (x ? d.localName == x : 3 == d.nodeType)) {
-            u = d, e[a] = null;
-            break;
-        }
-    }
-    if (null == u) {
-        if (null == x) return document.createTextNode(k);
-        u = document.createElementNS(o, x, k.is && k), c && ($b6c7f0288a15c619$export$41c562ebe57d11e2.__m && $b6c7f0288a15c619$export$41c562ebe57d11e2.__m(t, e), c = !1), e = null;
-    }
-    if (null == x) b === k || c && u.data == k || (u.data = k);
-    else {
-        if (e = e && $b6c7f0288a15c619$var$n.call(u.childNodes), b = i.props || $b6c7f0288a15c619$var$p, !c && null != e) for(b = {}, a = 0; a < u.attributes.length; a++)b[(d = u.attributes[a]).name] = d.value;
-        for(a in b)if (d = b[a], "children" == a) ;
-        else if ("dangerouslySetInnerHTML" == a) y = d;
-        else if (!(a in k)) {
-            if ("value" == a && "defaultValue" in k || "checked" == a && "defaultChecked" in k) continue;
-            $b6c7f0288a15c619$var$j(u, a, null, d, o);
-        }
-        for(a in k)d = k[a], "children" == a ? v = d : "dangerouslySetInnerHTML" == a ? h = d : "value" == a ? _ = d : "checked" == a ? m = d : c && "function" != typeof d || b[a] === d || $b6c7f0288a15c619$var$j(u, a, d, b[a], o);
-        if (h) c || y && (h.__html == y.__html || h.__html == u.innerHTML) || (u.innerHTML = h.__html), t.__k = [];
-        else if (y && (u.innerHTML = ""), $b6c7f0288a15c619$var$I("template" == t.type ? u.content : u, $b6c7f0288a15c619$var$w(v) ? v : [
-            v
-        ], t, i, r, "foreignObject" == x ? "http://www.w3.org/1999/xhtml" : o, e, f, e ? e[0] : i.__k && $b6c7f0288a15c619$var$S(i, 0), c, s), null != e) for(a = e.length; a--;)$b6c7f0288a15c619$var$g(e[a]);
-        c || (a = "value", "progress" == x && null == _ ? u.removeAttribute("value") : null != _ && (_ !== u[a] || "progress" == x && !_ || "option" == x && _ != b[a]) && $b6c7f0288a15c619$var$j(u, a, _, b[a], o), a = "checked", null != m && m != u[a] && $b6c7f0288a15c619$var$j(u, a, m, b[a], o));
-    }
-    return u;
-}
-function $b6c7f0288a15c619$var$q(n, u, t) {
-    try {
-        if ("function" == typeof n) {
-            var i = "function" == typeof n.__u;
-            i && n.__u(), i && null == u || (n.__u = n(u));
-        } else n.current = u;
-    } catch (n) {
-        $b6c7f0288a15c619$export$41c562ebe57d11e2.__e(n, t);
-    }
-}
-function $b6c7f0288a15c619$var$B(n, u, t) {
-    var i, r;
-    if ($b6c7f0288a15c619$export$41c562ebe57d11e2.unmount && $b6c7f0288a15c619$export$41c562ebe57d11e2.unmount(n), (i = n.ref) && (i.current && i.current != n.__e || $b6c7f0288a15c619$var$q(i, null, u)), null != (i = n.__c)) {
-        if (i.componentWillUnmount) try {
-            i.componentWillUnmount();
-        } catch (n) {
-            $b6c7f0288a15c619$export$41c562ebe57d11e2.__e(n, u);
-        }
-        i.base = i.__P = null;
-    }
-    if (i = n.__k) for(r = 0; r < i.length; r++)i[r] && $b6c7f0288a15c619$var$B(i[r], u, t || "function" != typeof n.type);
-    t || $b6c7f0288a15c619$var$g(n.__e), n.__c = n.__ = n.__e = void 0;
-}
-function $b6c7f0288a15c619$var$D(n, l, u) {
-    return this.constructor(n, u);
-}
-function $b6c7f0288a15c619$export$b3890eb0ae9dca99(u, t, i) {
-    var r, o, e, f;
-    t == document && (t = document.documentElement), $b6c7f0288a15c619$export$41c562ebe57d11e2.__ && $b6c7f0288a15c619$export$41c562ebe57d11e2.__(u, t), o = (r = "function" == typeof i) ? null : i && i.__k || t.__k, e = [], f = [], $b6c7f0288a15c619$var$O(t, u = (!r && i || t).__k = $b6c7f0288a15c619$export$c8a8987d4410bf2d($b6c7f0288a15c619$export$ffb0004e005737fa, null, [
-        u
-    ]), o || $b6c7f0288a15c619$var$p, $b6c7f0288a15c619$var$p, t.namespaceURI, !r && i ? [
-        i
-    ] : o ? null : t.firstChild ? $b6c7f0288a15c619$var$n.call(t.childNodes) : null, e, !r && i ? i : o ? o.__e : t.firstChild, r, f), $b6c7f0288a15c619$var$z(e, u, f);
-}
-function $b6c7f0288a15c619$export$fa8d919ba61d84db(n, l) {
-    $b6c7f0288a15c619$export$b3890eb0ae9dca99(n, l, $b6c7f0288a15c619$export$fa8d919ba61d84db);
-}
-function $b6c7f0288a15c619$export$e530037191fcd5d7(l, u, t) {
-    var i, r, o, e, f = $b6c7f0288a15c619$var$d({}, l.props);
-    for(o in l.type && l.type.defaultProps && (e = l.type.defaultProps), u)"key" == o ? i = u[o] : "ref" == o ? r = u[o] : f[o] = null == u[o] && null != e ? e[o] : u[o];
-    return arguments.length > 2 && (f.children = arguments.length > 3 ? $b6c7f0288a15c619$var$n.call(arguments, 2) : t), $b6c7f0288a15c619$var$m(l.type, f, i || l.key, r || l.ref, null);
-}
-function $b6c7f0288a15c619$export$fd42f52fd3ae1109(n) {
-    function l(n) {
-        var u, t;
-        return this.getChildContext || (u = new Set, (t = {})[l.__c] = this, this.getChildContext = function() {
-            return t;
-        }, this.componentWillUnmount = function() {
-            u = null;
-        }, this.shouldComponentUpdate = function(n) {
-            this.props.value != n.value && u.forEach(function(n) {
-                n.__e = !0, $b6c7f0288a15c619$var$M(n);
-            });
-        }, this.sub = function(n) {
-            u.add(n);
-            var l = n.componentWillUnmount;
-            n.componentWillUnmount = function() {
-                u && u.delete(n), l && l.call(n);
-            };
-        }), n.children;
-    }
-    return l.__c = "__cC" + $b6c7f0288a15c619$var$h++, l.__ = n, l.Provider = l.__l = (l.Consumer = function(n, l) {
-        return n.children(l);
-    }).contextType = l, l;
-}
-$b6c7f0288a15c619$var$n = $b6c7f0288a15c619$var$y.slice, $b6c7f0288a15c619$export$41c562ebe57d11e2 = {
-    __e: function(n, l, u, t) {
-        for(var i, r, o; l = l.__;)if ((i = l.__c) && !i.__) try {
-            if ((r = i.constructor) && null != r.getDerivedStateFromError && (i.setState(r.getDerivedStateFromError(n)), o = i.__d), null != i.componentDidCatch && (i.componentDidCatch(n, t || {}), o = i.__d), o) return i.__E = i;
-        } catch (l) {
-            n = l;
-        }
-        throw n;
-    }
-}, $b6c7f0288a15c619$var$u = 0, $b6c7f0288a15c619$export$a8257692ac88316c = function(n) {
-    return null != n && null == n.constructor;
-}, $b6c7f0288a15c619$export$16fa2f45be04daa8.prototype.setState = function(n, l) {
-    var u;
-    u = null != this.__s && this.__s != this.state ? this.__s : this.__s = $b6c7f0288a15c619$var$d({}, this.state), "function" == typeof n && (n = n($b6c7f0288a15c619$var$d({}, u), this.props)), n && $b6c7f0288a15c619$var$d(u, n), null != n && this.__v && (l && this._sb.push(l), $b6c7f0288a15c619$var$M(this));
-}, $b6c7f0288a15c619$export$16fa2f45be04daa8.prototype.forceUpdate = function(n) {
-    this.__v && (this.__e = !0, n && this.__h.push(n), $b6c7f0288a15c619$var$M(this));
-}, $b6c7f0288a15c619$export$16fa2f45be04daa8.prototype.render = $b6c7f0288a15c619$export$ffb0004e005737fa, $b6c7f0288a15c619$var$i = [], $b6c7f0288a15c619$var$o = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, $b6c7f0288a15c619$var$e = function(n, l) {
-    return n.__v.__b - l.__v.__b;
-}, $b6c7f0288a15c619$var$$.__r = 0, $b6c7f0288a15c619$var$f = /(PointerCapture)$|Capture$/i, $b6c7f0288a15c619$var$c = 0, $b6c7f0288a15c619$var$s = $b6c7f0288a15c619$var$F(!1), $b6c7f0288a15c619$var$a = $b6c7f0288a15c619$var$F(!0), $b6c7f0288a15c619$var$h = 0;
-var $23b7c1cb98b19658$var$t = /["&<]/;
-function $23b7c1cb98b19658$var$n(r) {
-    if (0 === r.length || !1 === $23b7c1cb98b19658$var$t.test(r)) return r;
-    for(var e = 0, n = 0, o = "", f = ""; n < r.length; n++){
-        switch(r.charCodeAt(n)){
-            case 34:
-                f = "&quot;";
-                break;
-            case 38:
-                f = "&amp;";
-                break;
-            case 60:
-                f = "&lt;";
-                break;
-            default:
-                continue;
-        }
-        n !== e && (o += r.slice(e, n)), o += f, e = n + 1;
-    }
-    return n !== e && (o += r.slice(e, n)), o;
-}
-var $23b7c1cb98b19658$var$o = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i, $23b7c1cb98b19658$var$f = 0, $23b7c1cb98b19658$var$i = Array.isArray;
-function $23b7c1cb98b19658$export$34b9dba7ce09269b(e, t, n, o, i, u) {
-    t || (t = {});
-    var a, c, p = t;
-    if ("ref" in p) for(c in p = {}, t)"ref" == c ? a = t[c] : p[c] = t[c];
-    var l = {
-        type: e,
-        props: p,
-        key: n,
-        ref: a,
-        __k: null,
-        __: null,
-        __b: 0,
-        __e: null,
-        __c: null,
-        constructor: void 0,
-        __v: --$23b7c1cb98b19658$var$f,
-        __i: -1,
-        __u: 0,
-        __source: i,
-        __self: u
-    };
-    if ("function" == typeof e && (a = e.defaultProps)) for(c in a)void 0 === p[c] && (p[c] = a[c]);
-    return $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode && $b6c7f0288a15c619$export$41c562ebe57d11e2.vnode(l), l;
-}
-function $23b7c1cb98b19658$export$45700d561b2268ac(r) {
-    var t = $23b7c1cb98b19658$export$34b9dba7ce09269b($b6c7f0288a15c619$export$ffb0004e005737fa, {
-        tpl: r,
-        exprs: [].slice.call(arguments, 1)
-    });
-    return t.key = t.__v, t;
-}
-var $23b7c1cb98b19658$var$c = {}, $23b7c1cb98b19658$var$p = /[A-Z]/g;
-function $23b7c1cb98b19658$export$991f6ffe102e5bac(e, t) {
-    if ($b6c7f0288a15c619$export$41c562ebe57d11e2.attr) {
-        var f = $b6c7f0288a15c619$export$41c562ebe57d11e2.attr(e, t);
-        if ("string" == typeof f) return f;
-    }
-    if ("ref" === e || "key" === e) return "";
-    if ("style" === e && "object" == typeof t) {
-        var i = "";
-        for(var u in t){
-            var a = t[u];
-            if (null != a && "" !== a) {
-                var l = "-" == u[0] ? u : $23b7c1cb98b19658$var$c[u] || ($23b7c1cb98b19658$var$c[u] = u.replace($23b7c1cb98b19658$var$p, "-$&").toLowerCase()), s = ";";
-                "number" != typeof a || l.startsWith("--") || $23b7c1cb98b19658$var$o.test(l) || (s = "px;"), i = i + l + ":" + a + s;
-            }
-        }
-        return e + '="' + i + '"';
-    }
-    return null == t || !1 === t || "function" == typeof t || "object" == typeof t ? "" : !0 === t ? e : e + '="' + $23b7c1cb98b19658$var$n(t) + '"';
-}
-function $23b7c1cb98b19658$export$40e96e718441efeb(r) {
-    if (null == r || "boolean" == typeof r || "function" == typeof r) return null;
-    if ("object" == typeof r) {
-        if (void 0 === r.constructor) return r;
-        if ($23b7c1cb98b19658$var$i(r)) {
-            for(var e = 0; e < r.length; e++)r[e] = $23b7c1cb98b19658$export$40e96e718441efeb(r[e]);
-            return r;
-        }
-    }
-    return $23b7c1cb98b19658$var$n("" + r);
-}
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /* eslint-env browser */ /**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ let $883a43040cbd0629$var$boundErrorHandler = null;
-function $883a43040cbd0629$var$errorHandler(callback, e) {
-    // $FlowFixMe
-    if (!e.error) return;
-    // $FlowFixMe
-    const { error: error } = e;
-    if (error instanceof Error) callback(error);
-    else // Look in your browser's devtools for more information
-    callback(new Error(error));
-}
-function $883a43040cbd0629$export$6503ec6e8aabbaf(target, callback) {
-    if ($883a43040cbd0629$var$boundErrorHandler !== null) return;
-    $883a43040cbd0629$var$boundErrorHandler = $883a43040cbd0629$var$errorHandler.bind(undefined, callback);
-    target.addEventListener('error', $883a43040cbd0629$var$boundErrorHandler);
-}
-function $883a43040cbd0629$export$d07f55d4c15c0440(target) {
-    if ($883a43040cbd0629$var$boundErrorHandler === null) return;
-    target.removeEventListener('error', $883a43040cbd0629$var$boundErrorHandler);
-    $883a43040cbd0629$var$boundErrorHandler = null;
-}
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ let $900f8c32b7484e20$var$boundRejectionHandler = null;
-function $900f8c32b7484e20$var$rejectionHandler(callback, e) {
-    if (e == null || e.reason == null) return callback(new Error('Unknown'));
-    let { reason: reason } = e;
-    if (reason instanceof Error) return callback(reason);
-    // A non-error was rejected, we don't have a trace :(
-    // Look in your browser's devtools for more information
-    return callback(new Error(reason));
-}
-function $900f8c32b7484e20$export$6503ec6e8aabbaf(target, callback) {
-    if ($900f8c32b7484e20$var$boundRejectionHandler !== null) return;
-    $900f8c32b7484e20$var$boundRejectionHandler = $900f8c32b7484e20$var$rejectionHandler.bind(undefined, callback);
-    // $FlowFixMe
-    target.addEventListener('unhandledrejection', $900f8c32b7484e20$var$boundRejectionHandler);
-}
-function $900f8c32b7484e20$export$d07f55d4c15c0440(target) {
-    if ($900f8c32b7484e20$var$boundRejectionHandler === null) return;
-    // $FlowFixMe
-    target.removeEventListener('unhandledrejection', $900f8c32b7484e20$var$boundRejectionHandler);
-    $900f8c32b7484e20$var$boundRejectionHandler = null;
-}
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ let $5f72ade198404e99$var$stackTraceRegistered = false;
-// Default: https://docs.microsoft.com/en-us/scripting/javascript/reference/stacktracelimit-property-error-javascript
-let $5f72ade198404e99$var$restoreStackTraceValue = 10;
-const $5f72ade198404e99$var$MAX_STACK_LENGTH = 50;
-function $5f72ade198404e99$export$6503ec6e8aabbaf(limit = $5f72ade198404e99$var$MAX_STACK_LENGTH) {
-    if ($5f72ade198404e99$var$stackTraceRegistered) return;
-    try {
-        $5f72ade198404e99$var$restoreStackTraceValue = Error.stackTraceLimit;
-        Error.stackTraceLimit = limit;
-        $5f72ade198404e99$var$stackTraceRegistered = true;
-    } catch (e) {
-    // Not all browsers support this so we don't care if it errors
-    }
-}
-function $5f72ade198404e99$export$d07f55d4c15c0440() {
-    if (!$5f72ade198404e99$var$stackTraceRegistered) return;
-    try {
-        Error.stackTraceLimit = $5f72ade198404e99$var$restoreStackTraceValue;
-        $5f72ade198404e99$var$stackTraceRegistered = false;
-    } catch (e) {
-    // Not all browsers support this so we don't care if it errors
-    }
-}
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /**
- * A representation of a stack frame.
- */ class $d35756f426c25812$export$8949fddf10447898 {
-    constructor(functionName = null, fileName = null, lineNumber = null, columnNumber = null, scriptCode = null, sourceFunctionName = null, sourceFileName = null, sourceLineNumber = null, sourceColumnNumber = null, sourceScriptCode = null){
-        if (functionName && functionName.indexOf('Object.') === 0) functionName = functionName.slice(7);
-        if (// https://github.com/facebook/create-react-app/issues/2097
-        // Let's ignore a meaningless name we get for top-level modules.
-        functionName === 'friendlySyntaxErrorLabel' || functionName === 'exports.__esModule' || functionName === '<anonymous>' || !functionName) functionName = null;
-        this.functionName = functionName;
-        this.fileName = fileName;
-        this.lineNumber = lineNumber;
-        this.columnNumber = columnNumber;
-        this._originalFunctionName = sourceFunctionName;
-        this._originalFileName = sourceFileName;
-        this._originalLineNumber = sourceLineNumber;
-        this._originalColumnNumber = sourceColumnNumber;
-        this._scriptCode = scriptCode;
-        this._originalScriptCode = sourceScriptCode;
-    }
-    /**
-   * Returns the name of this function.
-   */ getFunctionName() {
-        return this.functionName || '(anonymous function)';
-    }
-    /**
-   * Returns the source of the frame.
-   * This contains the file name, line number, and column number when available.
-   */ getSource() {
-        let str = '';
-        if (this.fileName != null) str += this.fileName + ':';
-        if (this.lineNumber != null) str += this.lineNumber + ':';
-        if (this.columnNumber != null) str += this.columnNumber + ':';
-        return str.slice(0, -1);
-    }
-    /**
-   * Returns a pretty version of this stack frame.
-   */ toString() {
-        const functionName = this.getFunctionName();
-        const source = this.getSource();
-        return `${functionName}${source ? ` (${source})` : ``}`;
-    }
-}
-var $d35756f426c25812$export$2e2bcd8739ae039 = $d35756f426c25812$export$8949fddf10447898;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ const $865b9ffc545cb441$var$regexExtractLocation = /\(?(.+?)(?::(\d+))?(?::(\d+))?\)?$/;
-function $865b9ffc545cb441$var$extractLocation(token) {
-    return $865b9ffc545cb441$var$regexExtractLocation.exec(token) // $FlowFixMe
-    .slice(1).map((v)=>{
-        const p = Number(v);
-        if (!isNaN(p)) return p;
-        return v;
-    });
-}
-const $865b9ffc545cb441$var$regexValidFrame_Chrome = /^\s*(at|in)\s.+(:\d+)/;
-const $865b9ffc545cb441$var$regexValidFrame_FireFox = /(^|@)\S+:\d+|.+line\s+\d+\s+>\s+(eval|Function).+/;
-function $865b9ffc545cb441$var$parseStack(stack) {
-    let frames = stack.filter((e)=>$865b9ffc545cb441$var$regexValidFrame_Chrome.test(e) || $865b9ffc545cb441$var$regexValidFrame_FireFox.test(e)).map((e)=>{
-        if ($865b9ffc545cb441$var$regexValidFrame_FireFox.test(e)) {
-            // Strip eval, we don't care about it
-            let isEval = false;
-            if (/ > (eval|Function)/.test(e)) {
-                e = e.replace(/ line (\d+)(?: > eval line \d+)* > (eval|Function):\d+:\d+/g, ':$1');
-                isEval = true;
-            }
-            const data = e.split(/[@]/g);
-            const last = data.pop();
-            return new $d35756f426c25812$export$2e2bcd8739ae039(data.join('@') || (isEval ? 'eval' : null), ...$865b9ffc545cb441$var$extractLocation(last));
-        } else {
-            // Strip eval, we don't care about it
-            if (e.indexOf('(eval ') !== -1) e = e.replace(/(\(eval at [^()]*)|(\),.*$)/g, '');
-            if (e.indexOf('(at ') !== -1) e = e.replace(/\(at /, '(');
-            const data = e.trim().split(/\s+/g).slice(1);
-            const last = data.pop();
-            return new $d35756f426c25812$export$2e2bcd8739ae039(data.join(' ') || null, ...$865b9ffc545cb441$var$extractLocation(last));
-        }
-    });
-    let index = frames.findIndex((frame)=>frame.getFunctionName().includes('react-stack-bottom-frame'));
-    if (index >= 0) frames = frames.slice(0, index);
-    return frames;
-}
-/**
- * Turns an <code>Error</code>, or similar object, into a set of <code>StackFrame</code>s.
- * @alias parse
- */ function $865b9ffc545cb441$export$98e6a39c04603d36(error) {
-    if (error == null) throw new Error('You cannot pass a null object.');
-    if (typeof error === 'string') return $865b9ffc545cb441$var$parseStack(error.split('\n'));
-    if (Array.isArray(error)) return $865b9ffc545cb441$var$parseStack(error);
-    if (typeof error.stack === 'string') return $865b9ffc545cb441$var$parseStack(error.stack.split('\n'));
-    throw new Error('The error you provided does not contain a stack trace.');
-}
-var $865b9ffc545cb441$export$2e2bcd8739ae039 = $865b9ffc545cb441$export$98e6a39c04603d36;
-/**
- * Enhances a set of <code>StackFrame</code>s with their original positions and code (when available).
- * @param {StackFrame[]} frames A set of <code>StackFrame</code>s which contain (generated) code positions.
- * @param {number} [contextLines=3] The number of lines to provide before and after the line specified in the <code>StackFrame</code>.
- */ async function $df495b51087c401c$export$35b6448019ed80b8(error, contextLines = 3) {
-    const frames = $865b9ffc545cb441$export$98e6a39c04603d36(error);
-    // $FlowFixMe
-    let res = await fetch(module.bundle.devServer + '/__parcel_code_frame', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            contextLines: contextLines,
-            frames: frames.map((f)=>({
-                    fileName: f.fileName,
-                    lineNumber: f.lineNumber,
-                    columnNumber: f.columnNumber
-                }))
-        })
-    });
-    let json = await res.json();
-    return json.map((f, i)=>new $d35756f426c25812$export$8949fddf10447898(frames[i].functionName, f.fileName, f.lineNumber, f.columnNumber, f.compiledLines, frames[i].functionName, f.sourceFileName, f.sourceLineNumber, f.sourceColumnNumber, f.sourceLines));
-}
-var $df495b51087c401c$export$2e2bcd8739ae039 = $df495b51087c401c$export$35b6448019ed80b8;
-const $6d40ebe8356580e0$var$CONTEXT_SIZE = 3;
-function $6d40ebe8356580e0$export$9123e6c9c0ac21ed(crash) {
-    return (error, unhandledRejection = false)=>{
-        $df495b51087c401c$export$2e2bcd8739ae039(error, $6d40ebe8356580e0$var$CONTEXT_SIZE).then((stackFrames)=>{
-            if (stackFrames == null) return;
-            crash({
-                error: error,
-                unhandledRejection: unhandledRejection,
-                contextSize: $6d40ebe8356580e0$var$CONTEXT_SIZE,
-                stackFrames: stackFrames
-            });
-        }).catch((e)=>{
-            // eslint-disable-next-line no-console
-            console.log('Could not get the stack frames of error:', e);
-        });
-    };
-}
-function $6d40ebe8356580e0$var$patchConsole(method, onError) {
-    /* eslint-disable no-console */ let original = console[method];
-    console[method] = (...args)=>{
-        let error = null;
-        if (typeof args[0] === 'string') {
-            let format = args[0].match(/%[oOdisfc]/g);
-            if (format) {
-                let errorIndex = format.findIndex((match)=>match === '%o' || match === '%O');
-                if (errorIndex < 0) errorIndex = format.findIndex((match)=>match === '%s');
-                if (errorIndex >= 0) error = args[errorIndex + 1];
-                else error = args[1];
-                if (!(error instanceof Error)) {
-                    let index = 1;
-                    let message = args[0].replace(/%[oOdisfc]/g, (match)=>{
-                        switch(match){
-                            case '%s':
-                                return String(args[index++]);
-                            case '%f':
-                                return parseFloat(args[index++]);
-                            case '%d':
-                            case '%i':
-                                return parseInt(args[index++], 10);
-                            case '%o':
-                            case '%O':
-                                if (args[index] instanceof Error) return String(args[index++]);
-                                else return JSON.stringify(args[index++]);
-                            case '%c':
-                                index++;
-                                return '';
-                        }
-                    });
-                    error = new Error(message);
-                }
-            } else error = new Error(args[0]);
-        } else error = args.find((arg)=>arg instanceof Error);
-        if (error && !error.message.includes('[parcel]') && typeof window !== 'undefined' && window.__REACT_DEVTOOLS_GLOBAL_HOOK__) {
-            // Attempt to append the React component stack
-            // TODO: use React.captureOwnerStack once stable.
-            let hook = window.__REACT_DEVTOOLS_GLOBAL_HOOK__;
-            if (hook.renderers instanceof Map) {
-                for (let renderer of hook.renderers.values())if (typeof renderer?.currentDispatcherRef?.getCurrentStack === 'function') {
-                    let stack = renderer.currentDispatcherRef.getCurrentStack();
-                    if (stack) {
-                        error.stack += stack;
-                        break;
-                    }
-                }
-            }
-            onError(error);
-        }
-        original.apply(console, args);
-    };
-/* eslint-enable no-console */ }
-function $6d40ebe8356580e0$export$38ec23daa6e8dcdf(crash) {
-    const crashWithFramesRunTime = $6d40ebe8356580e0$export$9123e6c9c0ac21ed(crash);
-    $883a43040cbd0629$export$6503ec6e8aabbaf(window, (error)=>crashWithFramesRunTime(error, false));
-    $900f8c32b7484e20$export$6503ec6e8aabbaf(window, (error)=>crashWithFramesRunTime(error, true));
-    $5f72ade198404e99$export$6503ec6e8aabbaf();
-    $6d40ebe8356580e0$var$patchConsole('error', (error)=>crashWithFramesRunTime(error, false));
-    return function() {
-        $5f72ade198404e99$export$d07f55d4c15c0440();
-        $900f8c32b7484e20$export$d07f55d4c15c0440(window);
-        $883a43040cbd0629$export$d07f55d4c15c0440(window);
-    };
-}
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /* eslint-env browser */ var $10ecac3e4062713a$var$t, $10ecac3e4062713a$var$r, $10ecac3e4062713a$var$u, $10ecac3e4062713a$var$i, $10ecac3e4062713a$var$o = 0, $10ecac3e4062713a$var$f = [], $10ecac3e4062713a$var$c = $b6c7f0288a15c619$export$41c562ebe57d11e2, $10ecac3e4062713a$var$e = $10ecac3e4062713a$var$c.__b, $10ecac3e4062713a$var$a = $10ecac3e4062713a$var$c.__r, $10ecac3e4062713a$var$v = $10ecac3e4062713a$var$c.diffed, $10ecac3e4062713a$var$l = $10ecac3e4062713a$var$c.__c, $10ecac3e4062713a$var$m = $10ecac3e4062713a$var$c.unmount, $10ecac3e4062713a$var$s = $10ecac3e4062713a$var$c.__;
-function $10ecac3e4062713a$var$p(n, t) {
-    $10ecac3e4062713a$var$c.__h && $10ecac3e4062713a$var$c.__h($10ecac3e4062713a$var$r, n, $10ecac3e4062713a$var$o || t), $10ecac3e4062713a$var$o = 0;
-    var u = $10ecac3e4062713a$var$r.__H || ($10ecac3e4062713a$var$r.__H = {
-        __: [],
-        __h: []
-    });
-    return n >= u.__.length && u.__.push({}), u.__[n];
-}
-function $10ecac3e4062713a$export$60241385465d0a34(n) {
-    return $10ecac3e4062713a$var$o = 1, $10ecac3e4062713a$export$13e3392192263954($10ecac3e4062713a$var$D, n);
-}
-function $10ecac3e4062713a$export$13e3392192263954(n, u, i) {
-    var o = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 2);
-    if (o.t = n, !o.__c && (o.__ = [
-        i ? i(u) : $10ecac3e4062713a$var$D(void 0, u),
-        function(n) {
-            var t = o.__N ? o.__N[0] : o.__[0], r = o.t(t, n);
-            t !== r && (o.__N = [
-                r,
-                o.__[1]
-            ], o.__c.setState({}));
-        }
-    ], o.__c = $10ecac3e4062713a$var$r, !$10ecac3e4062713a$var$r.__f)) {
-        var f = function(n, t, r) {
-            if (!o.__c.__H) return !0;
-            var u = o.__c.__H.__.filter(function(n) {
-                return !!n.__c;
-            });
-            if (u.every(function(n) {
-                return !n.__N;
-            })) return !c || c.call(this, n, t, r);
-            var i = o.__c.props !== n;
-            return u.forEach(function(n) {
-                if (n.__N) {
-                    var t = n.__[0];
-                    n.__ = n.__N, n.__N = void 0, t !== n.__[0] && (i = !0);
-                }
-            }), c && c.call(this, n, t, r) || i;
-        };
-        $10ecac3e4062713a$var$r.__f = !0;
-        var c = $10ecac3e4062713a$var$r.shouldComponentUpdate, e = $10ecac3e4062713a$var$r.componentWillUpdate;
-        $10ecac3e4062713a$var$r.componentWillUpdate = function(n, t, r) {
-            if (this.__e) {
-                var u = c;
-                c = void 0, f(n, t, r), c = u;
-            }
-            e && e.call(this, n, t, r);
-        }, $10ecac3e4062713a$var$r.shouldComponentUpdate = f;
-    }
-    return o.__N || o.__;
-}
-function $10ecac3e4062713a$export$6d9c69b0de29b591(n, u) {
-    var i = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 3);
-    !$10ecac3e4062713a$var$c.__s && $10ecac3e4062713a$var$C(i.__H, u) && (i.__ = n, i.u = u, $10ecac3e4062713a$var$r.__H.__h.push(i));
-}
-function $10ecac3e4062713a$export$e5c5a5f917a5871c(n, u) {
-    var i = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 4);
-    !$10ecac3e4062713a$var$c.__s && $10ecac3e4062713a$var$C(i.__H, u) && (i.__ = n, i.u = u, $10ecac3e4062713a$var$r.__h.push(i));
-}
-function $10ecac3e4062713a$export$b8f5890fc79d6aca(n) {
-    return $10ecac3e4062713a$var$o = 5, $10ecac3e4062713a$export$1538c33de8887b59(function() {
-        return {
-            current: n
-        };
-    }, []);
-}
-function $10ecac3e4062713a$export$d5a552a76deda3c2(n, t, r) {
-    $10ecac3e4062713a$var$o = 6, $10ecac3e4062713a$export$e5c5a5f917a5871c(function() {
-        if ("function" == typeof n) {
-            var r = n(t());
-            return function() {
-                n(null), r && "function" == typeof r && r();
-            };
-        }
-        if (n) return n.current = t(), function() {
-            return n.current = null;
-        };
-    }, null == r ? r : r.concat(n));
-}
-function $10ecac3e4062713a$export$1538c33de8887b59(n, r) {
-    var u = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 7);
-    return $10ecac3e4062713a$var$C(u.__H, r) && (u.__ = n(), u.__H = r, u.__h = n), u.__;
-}
-function $10ecac3e4062713a$export$35808ee640e87ca7(n, t) {
-    return $10ecac3e4062713a$var$o = 8, $10ecac3e4062713a$export$1538c33de8887b59(function() {
-        return n;
-    }, t);
-}
-function $10ecac3e4062713a$export$fae74005e78b1a27(n) {
-    var u = $10ecac3e4062713a$var$r.context[n.__c], i = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 9);
-    return i.c = n, u ? (null == i.__ && (i.__ = !0, u.sub($10ecac3e4062713a$var$r)), u.props.value) : n.__;
-}
-function $10ecac3e4062713a$export$dc8fbce3eb94dc1e(n, t) {
-    $10ecac3e4062713a$var$c.useDebugValue && $10ecac3e4062713a$var$c.useDebugValue(t ? t(n) : n);
-}
-function $10ecac3e4062713a$export$c052f6604b7d51fe(n) {
-    var u = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 10), i = $10ecac3e4062713a$export$60241385465d0a34();
-    return u.__ = n, $10ecac3e4062713a$var$r.componentDidCatch || ($10ecac3e4062713a$var$r.componentDidCatch = function(n, t) {
-        u.__ && u.__(n, t), i[1](n);
-    }), [
-        i[0],
-        function() {
-            i[1](void 0);
-        }
-    ];
-}
-function $10ecac3e4062713a$export$f680877a34711e37() {
-    var n = $10ecac3e4062713a$var$p($10ecac3e4062713a$var$t++, 11);
-    if (!n.__) {
-        for(var u = $10ecac3e4062713a$var$r.__v; null !== u && !u.__m && null !== u.__;)u = u.__;
-        var i = u.__m || (u.__m = [
-            0,
-            0
-        ]);
-        n.__ = "P" + i[0] + "-" + i[1]++;
-    }
-    return n.__;
-}
-function $10ecac3e4062713a$var$j() {
-    for(var n; n = $10ecac3e4062713a$var$f.shift();)if (n.__P && n.__H) try {
-        n.__H.__h.forEach($10ecac3e4062713a$var$z), n.__H.__h.forEach($10ecac3e4062713a$var$B), n.__H.__h = [];
-    } catch (t) {
-        n.__H.__h = [], $10ecac3e4062713a$var$c.__e(t, n.__v);
-    }
-}
-$10ecac3e4062713a$var$c.__b = function(n) {
-    $10ecac3e4062713a$var$r = null, $10ecac3e4062713a$var$e && $10ecac3e4062713a$var$e(n);
-}, $10ecac3e4062713a$var$c.__ = function(n, t) {
-    n && t.__k && t.__k.__m && (n.__m = t.__k.__m), $10ecac3e4062713a$var$s && $10ecac3e4062713a$var$s(n, t);
-}, $10ecac3e4062713a$var$c.__r = function(n) {
-    $10ecac3e4062713a$var$a && $10ecac3e4062713a$var$a(n), $10ecac3e4062713a$var$t = 0;
-    var i = ($10ecac3e4062713a$var$r = n.__c).__H;
-    i && ($10ecac3e4062713a$var$u === $10ecac3e4062713a$var$r ? (i.__h = [], $10ecac3e4062713a$var$r.__h = [], i.__.forEach(function(n) {
-        n.__N && (n.__ = n.__N), n.u = n.__N = void 0;
-    })) : (i.__h.forEach($10ecac3e4062713a$var$z), i.__h.forEach($10ecac3e4062713a$var$B), i.__h = [], $10ecac3e4062713a$var$t = 0)), $10ecac3e4062713a$var$u = $10ecac3e4062713a$var$r;
-}, $10ecac3e4062713a$var$c.diffed = function(n) {
-    $10ecac3e4062713a$var$v && $10ecac3e4062713a$var$v(n);
-    var t = n.__c;
-    t && t.__H && (t.__H.__h.length && (1 !== $10ecac3e4062713a$var$f.push(t) && $10ecac3e4062713a$var$i === $10ecac3e4062713a$var$c.requestAnimationFrame || (($10ecac3e4062713a$var$i = $10ecac3e4062713a$var$c.requestAnimationFrame) || $10ecac3e4062713a$var$w)($10ecac3e4062713a$var$j)), t.__H.__.forEach(function(n) {
-        n.u && (n.__H = n.u), n.u = void 0;
-    })), $10ecac3e4062713a$var$u = $10ecac3e4062713a$var$r = null;
-}, $10ecac3e4062713a$var$c.__c = function(n, t) {
-    t.some(function(n) {
-        try {
-            n.__h.forEach($10ecac3e4062713a$var$z), n.__h = n.__h.filter(function(n) {
-                return !n.__ || $10ecac3e4062713a$var$B(n);
-            });
-        } catch (r) {
-            t.some(function(n) {
-                n.__h && (n.__h = []);
-            }), t = [], $10ecac3e4062713a$var$c.__e(r, n.__v);
-        }
-    }), $10ecac3e4062713a$var$l && $10ecac3e4062713a$var$l(n, t);
-}, $10ecac3e4062713a$var$c.unmount = function(n) {
-    $10ecac3e4062713a$var$m && $10ecac3e4062713a$var$m(n);
-    var t, r = n.__c;
-    r && r.__H && (r.__H.__.forEach(function(n) {
-        try {
-            $10ecac3e4062713a$var$z(n);
-        } catch (n) {
-            t = n;
-        }
-    }), r.__H = void 0, t && $10ecac3e4062713a$var$c.__e(t, r.__v));
-};
-var $10ecac3e4062713a$var$k = "function" == typeof requestAnimationFrame;
-function $10ecac3e4062713a$var$w(n) {
-    var t, r = function() {
-        clearTimeout(u), $10ecac3e4062713a$var$k && cancelAnimationFrame(t), setTimeout(n);
-    }, u = setTimeout(r, 100);
-    $10ecac3e4062713a$var$k && (t = requestAnimationFrame(r));
-}
-function $10ecac3e4062713a$var$z(n) {
-    var t = $10ecac3e4062713a$var$r, u = n.__c;
-    "function" == typeof u && (n.__c = void 0, u()), $10ecac3e4062713a$var$r = t;
-}
-function $10ecac3e4062713a$var$B(n) {
-    var t = $10ecac3e4062713a$var$r;
-    n.__c = n.__(), $10ecac3e4062713a$var$r = t;
-}
-function $10ecac3e4062713a$var$C(n, t) {
-    return !n || n.length !== t.length || t.some(function(t, r) {
-        return t !== n[r];
-    });
-}
-function $10ecac3e4062713a$var$D(n, t) {
-    return "function" == typeof t ? t(n) : t;
-}
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ const $74bb4be6e9b78681$export$f30cb9bc4f736419 = {
-    // Colors for components styles
-    background: 'white',
-    color: 'black',
-    headerColor: '#ce1126',
-    primaryPreBackground: 'rgba(206, 17, 38, 0.05)',
-    primaryPreColor: 'inherit',
-    secondaryPreBackground: 'rgba(251, 245, 180, 0.3)',
-    secondaryPreColor: 'inherit',
-    footer: '#878e91',
-    anchorColor: '#878e91',
-    toggleBackground: 'transparent',
-    toggleColor: '#878e91',
-    closeColor: '#293238',
-    navBackground: 'rgba(206, 17, 38, 0.05)',
-    navArrow: '#ce1126',
-    diffAdded: 'green',
-    diffRemoved: '#ce1126',
-    // Light color scheme inspired by https://chriskempson.github.io/base16/css/base16-github.css
-    // base00: '#ffffff',
-    base01: '#f5f5f5',
-    // base02: '#c8c8fa',
-    base03: '#6e6e6e',
-    // base04: '#e8e8e8',
-    base05: '#333333',
-    // base06: '#ffffff',
-    // base07: '#ffffff',
-    base08: '#881280',
-    // base09: '#0086b3',
-    // base0A: '#795da3',
-    base0B: '#1155cc',
-    base0C: '#994500',
-    // base0D: '#795da3',
-    base0E: '#c80000'
-};
-const $74bb4be6e9b78681$export$3e936a8db52a10a0 = {
-    // Colors for components styles
-    background: '#353535',
-    color: 'white',
-    headerColor: '#e83b46',
-    primaryPreBackground: 'rgba(206, 17, 38, 0.1)',
-    primaryPreColor: '#fccfcf',
-    secondaryPreBackground: 'rgba(251, 245, 180, 0.1)',
-    secondaryPreColor: '#fbf5b4',
-    footer: '#878e91',
-    anchorColor: '#878e91',
-    toggleBackground: 'transparent',
-    toggleColor: '#878e91',
-    closeColor: '#ffffff',
-    navBackground: 'rgba(206, 17, 38, 0.2)',
-    navArrow: '#ce1126',
-    diffAdded: '#85e285',
-    diffRemoved: '#ff5459',
-    // Dark color scheme inspired by https://github.com/atom/base16-tomorrow-dark-theme/blob/master/styles/colors.less
-    // base00: '#1d1f21',
-    base01: '#282a2e',
-    // base02: '#373b41',
-    base03: '#969896',
-    // base04: '#b4b7b4',
-    base05: '#c5c8c6',
-    // base06: '#e0e0e0',
-    // base07: '#ffffff',
-    base08: '#cc6666',
-    // base09: '#de935f',
-    // base0A: '#f0c674',
-    base0B: '#b5bd68',
-    base0C: '#8abeb7',
-    // base0D: '#81a2be',
-    base0E: '#b294bb'
-};
-const $74bb4be6e9b78681$export$bca14c5b3b88a9c9 = Object.fromEntries(Object.keys($74bb4be6e9b78681$export$f30cb9bc4f736419).map((key)=>[
-        key,
-        `light-dark(${$74bb4be6e9b78681$export$f30cb9bc4f736419[key]}, ${$74bb4be6e9b78681$export$3e936a8db52a10a0[key]})`
-    ]));
-const $74bb4be6e9b78681$export$7ef984671d1853d7 = {
-    width: '100vw',
-    height: '100vh',
-    maxWidth: 'none',
-    maxHeight: 'none',
-    border: 0,
-    margin: 0,
-    padding: 0,
-    boxSizing: 'border-box',
-    textAlign: 'center',
-    backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.background,
-    outline: 'none',
-    colorScheme: 'light dark'
-};
-const $20d888b381d18c6c$var$overlayStyle = {
-    position: 'relative',
-    display: 'inline-flex',
-    flexDirection: 'column',
-    height: '100%',
-    width: '1024px',
-    maxWidth: '100%',
-    overflowX: 'hidden',
-    overflowY: 'auto',
-    padding: '0.5rem',
-    boxSizing: 'border-box',
-    textAlign: 'left',
-    fontFamily: 'Consolas, Menlo, monospace',
-    fontSize: '11px',
-    whiteSpace: 'pre-wrap',
-    wordBreak: 'break-word',
-    lineHeight: 1.5,
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.color
-};
-function $20d888b381d18c6c$var$ErrorOverlay(props) {
-    const { shortcutHandler: shortcutHandler } = props;
-    $10ecac3e4062713a$export$6d9c69b0de29b591(()=>{
-        const onKeyDown = (e)=>{
-            if (shortcutHandler) shortcutHandler(e.key);
-        };
-        window.addEventListener('keydown', onKeyDown);
-        return ()=>{
-            window.removeEventListener('keydown', onKeyDown);
-        };
-    }, [
-        shortcutHandler
-    ]);
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-        style: $20d888b381d18c6c$var$overlayStyle,
-        children: props.children
-    });
-}
-var $20d888b381d18c6c$export$2e2bcd8739ae039 = $20d888b381d18c6c$var$ErrorOverlay;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ const $7aae0c9ea64fc08c$var$closeButtonStyle = {
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.closeColor,
-    lineHeight: '1rem',
-    fontSize: '1.5rem',
-    padding: '1rem',
-    cursor: 'pointer',
-    position: 'absolute',
-    right: 0,
-    top: 0
-};
-function $7aae0c9ea64fc08c$var$CloseButton({ close: close }) {
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
-        title: "Click or press Escape to dismiss.",
-        onClick: close,
-        style: $7aae0c9ea64fc08c$var$closeButtonStyle,
-        children: "\xd7"
-    });
-}
-var $7aae0c9ea64fc08c$export$2e2bcd8739ae039 = $7aae0c9ea64fc08c$var$CloseButton;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ const $1adc179a826c5dd2$var$navigationBarStyle = {
-    marginBottom: '0.5rem'
-};
-const $1adc179a826c5dd2$var$buttonContainerStyle = {
-    marginRight: '1em'
-};
-const $1adc179a826c5dd2$var$_navButtonStyle = {
-    border: 'none',
-    borderRadius: '4px',
-    padding: '3px 6px',
-    cursor: 'pointer'
-};
-const $1adc179a826c5dd2$var$leftButtonStyle = {
-    ...$1adc179a826c5dd2$var$_navButtonStyle,
-    backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.navBackground,
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.navArrow,
-    borderTopRightRadius: '0px',
-    borderBottomRightRadius: '0px',
-    marginRight: '1px'
-};
-const $1adc179a826c5dd2$var$rightButtonStyle = {
-    ...$1adc179a826c5dd2$var$_navButtonStyle,
-    backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.navBackground,
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.navArrow,
-    borderTopLeftRadius: '0px',
-    borderBottomLeftRadius: '0px'
-};
-function $1adc179a826c5dd2$var$NavigationBar(props) {
-    const { currentError: currentError, totalErrors: totalErrors, previous: previous, next: next } = props;
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-        style: $1adc179a826c5dd2$var$navigationBarStyle,
-        children: [
-            $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
-                style: $1adc179a826c5dd2$var$buttonContainerStyle,
-                children: [
-                    $23b7c1cb98b19658$export$34b9dba7ce09269b("button", {
-                        onClick: previous,
-                        style: $1adc179a826c5dd2$var$leftButtonStyle,
-                        children: "\u2190"
-                    }),
-                    $23b7c1cb98b19658$export$34b9dba7ce09269b("button", {
-                        onClick: next,
-                        style: $1adc179a826c5dd2$var$rightButtonStyle,
-                        children: "\u2192"
-                    })
-                ]
-            }),
-            `${currentError} of ${totalErrors} errors on the page`
-        ]
-    });
-}
-var $1adc179a826c5dd2$export$2e2bcd8739ae039 = $1adc179a826c5dd2$var$NavigationBar;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ const $c306e3a42547c8c2$var$headerStyle = {
-    fontSize: '2em',
-    fontFamily: 'sans-serif',
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.headerColor,
-    whiteSpace: 'pre-wrap',
-    // Top bottom margin spaces header
-    // Right margin revents overlap with close button
-    margin: '0 2rem 0.75rem 0',
-    flex: '0 0 auto'
-};
-function $c306e3a42547c8c2$var$Header(props) {
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-        style: $c306e3a42547c8c2$var$headerStyle,
-        children: props.headerText
-    });
-}
-var $c306e3a42547c8c2$export$2e2bcd8739ae039 = $c306e3a42547c8c2$var$Header;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ /**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ const $97c30df7f5c364f7$var$_preStyle = {
-    position: 'relative',
-    display: 'block',
-    padding: '0.5em',
-    marginTop: '0.5em',
-    marginBottom: '0.5em',
-    overflowX: 'auto',
-    whiteSpace: 'pre-wrap',
-    borderRadius: '0.25rem'
-};
-const $97c30df7f5c364f7$var$codeStyle = {
-    fontFamily: 'Consolas, Menlo, monospace'
-};
-function $97c30df7f5c364f7$var$CodeBlock({ main: main, codeHTML: codeHTML }) {
-    const primaryPreStyle = {
-        ...$97c30df7f5c364f7$var$_preStyle,
-        backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.primaryPreBackground,
-        color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.primaryPreColor
-    };
-    const secondaryPreStyle = {
-        ...$97c30df7f5c364f7$var$_preStyle,
-        backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.secondaryPreBackground,
-        color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.secondaryPreColor
-    };
-    const preStyle = main ? primaryPreStyle : secondaryPreStyle;
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("pre", {
-        style: preStyle,
-        children: $23b7c1cb98b19658$export$34b9dba7ce09269b("code", {
-            style: $97c30df7f5c364f7$var$codeStyle,
-            dangerouslySetInnerHTML: {
-                __html: codeHTML
-            }
-        })
-    });
-}
-var $97c30df7f5c364f7$export$2e2bcd8739ae039 = $97c30df7f5c364f7$var$CodeBlock;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ function $f78f50d61026cdc5$export$44b1e5ee7f53eae1(sourceFileName, sourceLineNumber, sourceColumnNumber, fileName, lineNumber, columnNumber, compiled) {
-    let prettyURL;
-    if (!compiled && sourceFileName && typeof sourceLineNumber === 'number') {
-        // Remove everything up to the first /src/ or /node_modules/
-        const trimMatch = /^[/|\\].*?[/|\\]((src|node_modules)[/|\\].*)/.exec(sourceFileName);
-        if (trimMatch && trimMatch[1]) prettyURL = trimMatch[1];
-        else prettyURL = sourceFileName;
-        prettyURL += ':' + sourceLineNumber;
-        // Note: we intentionally skip 0's because they're produced by cheap webpack maps
-        if (sourceColumnNumber) prettyURL += ':' + sourceColumnNumber;
-    } else if (fileName && typeof lineNumber === 'number') {
-        prettyURL = fileName + ':' + lineNumber;
-        // Note: we intentionally skip 0's because they're produced by cheap webpack maps
-        if (columnNumber) prettyURL += ':' + columnNumber;
-    } else prettyURL = 'unknown';
-    return prettyURL.replace('webpack://', '.');
-}
-var $f78f50d61026cdc5$export$2e2bcd8739ae039 = $f78f50d61026cdc5$export$44b1e5ee7f53eae1;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ var $cdea3ae92bef6910$exports = {};
-'use strict';
-$cdea3ae92bef6910$exports = $cdea3ae92bef6910$var$ansiHTML;
-// Reference to https://github.com/sindresorhus/ansi-regex
-var $cdea3ae92bef6910$var$_regANSI = /(?:(?:\u001b\[)|\u009b)(?:(?:[0-9]{1,3})?(?:(?:;[0-9]{0,3})*)?[A-M|f-m])|\u001b[A-M]/;
-var $cdea3ae92bef6910$var$_defColors = {
-    reset: [
-        'fff',
-        '000'
-    ],
-    black: '000',
-    red: 'ff0000',
-    green: '209805',
-    yellow: 'e8bf03',
-    blue: '0000ff',
-    magenta: 'ff00ff',
-    cyan: '00ffee',
-    lightgrey: 'f0f0f0',
-    darkgrey: '888'
-};
-var $cdea3ae92bef6910$var$_styles = {
-    30: 'black',
-    31: 'red',
-    32: 'green',
-    33: 'yellow',
-    34: 'blue',
-    35: 'magenta',
-    36: 'cyan',
-    37: 'lightgrey'
-};
-var $cdea3ae92bef6910$var$_openTags = {
-    '1': 'font-weight:bold',
-    '2': 'opacity:0.5',
-    '3': '<i>',
-    '4': '<u>',
-    '8': 'display:none',
-    '9': '<del>' // delete
-};
-var $cdea3ae92bef6910$var$_closeTags = {
-    '23': '</i>',
-    '24': '</u>',
-    '29': '</del>' // reset delete
-};
-[
-    0,
-    21,
-    22,
-    27,
-    28,
-    39,
-    49
-].forEach(function(n) {
-    $cdea3ae92bef6910$var$_closeTags[n] = '</span>';
-});
-/**
- * Converts text with ANSI color codes to HTML markup.
- * @param {String} text
- * @returns {*}
- */ function $cdea3ae92bef6910$var$ansiHTML(text) {
-    // Returns the text if the string has no ANSI escape code.
-    if (!$cdea3ae92bef6910$var$_regANSI.test(text)) return text;
-    // Cache opened sequence.
-    var ansiCodes = [];
-    // Replace with markup.
-    var ret = text.replace(/\033\[(\d+)m/g, function(match, seq) {
-        var ot = $cdea3ae92bef6910$var$_openTags[seq];
-        if (ot) {
-            // If current sequence has been opened, close it.
-            if (!!~ansiCodes.indexOf(seq)) {
-                ansiCodes.pop();
-                return '</span>';
-            }
-            // Open tag.
-            ansiCodes.push(seq);
-            return ot[0] === '<' ? ot : '<span style="' + ot + ';">';
-        }
-        var ct = $cdea3ae92bef6910$var$_closeTags[seq];
-        if (ct) {
-            // Pop sequence
-            ansiCodes.pop();
-            return ct;
-        }
-        return '';
-    });
-    // Make sure tags are closed.
-    var l = ansiCodes.length;
-    l > 0 && (ret += Array(l + 1).join('</span>'));
-    return ret;
-}
-/**
- * Customize colors.
- * @param {Object} colors reference to _defColors
- */ $cdea3ae92bef6910$var$ansiHTML.setColors = function(colors) {
-    if (typeof colors !== 'object') throw new Error('`colors` parameter must be an Object.');
-    var _finalColors = {};
-    for(var key in $cdea3ae92bef6910$var$_defColors){
-        var hex = colors.hasOwnProperty(key) ? colors[key] : null;
-        if (!hex) {
-            _finalColors[key] = $cdea3ae92bef6910$var$_defColors[key];
-            continue;
-        }
-        if ('reset' === key) {
-            if (typeof hex === 'string') hex = [
-                hex
-            ];
-            if (!Array.isArray(hex) || hex.length === 0 || hex.some(function(h) {
-                return typeof h !== 'string';
-            })) throw new Error('The value of `' + key + '` property must be an Array and each item could only be a hex string, e.g.: FF0000');
-            var defHexColor = $cdea3ae92bef6910$var$_defColors[key];
-            if (!hex[0]) hex[0] = defHexColor[0];
-            if (hex.length === 1 || !hex[1]) {
-                hex = [
-                    hex[0]
-                ];
-                hex.push(defHexColor[1]);
-            }
-            hex = hex.slice(0, 2);
-        } else if (typeof hex !== 'string') throw new Error('The value of `' + key + '` property must be a hex string, e.g.: FF0000');
-        _finalColors[key] = hex;
-    }
-    $cdea3ae92bef6910$var$_setTags(_finalColors);
-};
-/**
- * Reset colors.
- */ $cdea3ae92bef6910$var$ansiHTML.reset = function() {
-    $cdea3ae92bef6910$var$_setTags($cdea3ae92bef6910$var$_defColors);
-};
-/**
- * Expose tags, including open and close.
- * @type {Object}
- */ $cdea3ae92bef6910$var$ansiHTML.tags = {};
-if (Object.defineProperty) {
-    Object.defineProperty($cdea3ae92bef6910$var$ansiHTML.tags, 'open', {
-        get: function() {
-            return $cdea3ae92bef6910$var$_openTags;
-        }
-    });
-    Object.defineProperty($cdea3ae92bef6910$var$ansiHTML.tags, 'close', {
-        get: function() {
-            return $cdea3ae92bef6910$var$_closeTags;
-        }
-    });
-} else {
-    $cdea3ae92bef6910$var$ansiHTML.tags.open = $cdea3ae92bef6910$var$_openTags;
-    $cdea3ae92bef6910$var$ansiHTML.tags.close = $cdea3ae92bef6910$var$_closeTags;
-}
-function $cdea3ae92bef6910$var$_setTags(colors) {
-    // reset all
-    $cdea3ae92bef6910$var$_openTags['0'] = 'font-weight:normal;opacity:1;color:#' + colors.reset[0] + ';background:#' + colors.reset[1];
-    // inverse
-    $cdea3ae92bef6910$var$_openTags['7'] = 'color:#' + colors.reset[1] + ';background:#' + colors.reset[0];
-    // dark grey
-    $cdea3ae92bef6910$var$_openTags['90'] = 'color:#' + colors.darkgrey;
-    for(var code in $cdea3ae92bef6910$var$_styles){
-        var color = $cdea3ae92bef6910$var$_styles[code];
-        var oriColor = colors[color] || '000';
-        $cdea3ae92bef6910$var$_openTags[code] = 'color:#' + oriColor;
-        code = parseInt(code);
-        $cdea3ae92bef6910$var$_openTags[(code + 10).toString()] = 'background:#' + oriColor;
-    }
-}
-$cdea3ae92bef6910$var$ansiHTML.reset();
-// Map ANSI colors from what babel-code-frame uses to base16-github
-// See: https://github.com/babel/babel/blob/e86f62b304d280d0bab52c38d61842b853848ba6/packages/babel-code-frame/src/index.js#L9-L22
-const $b67e2a05a9c13039$var$colors = {
-    reset: [
-        $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base05,
-        'transparent'
-    ],
-    black: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base05,
-    red: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base08 /* marker, bg-invalid */ ,
-    green: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base0B /* string */ ,
-    yellow: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base08 /* capitalized, jsx_tag, punctuator */ ,
-    blue: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base0C,
-    magenta: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base0C /* regex */ ,
-    cyan: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base0E /* keyword */ ,
-    gray: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base03 /* comment, gutter */ ,
-    lightgrey: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base01,
-    darkgrey: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.base03
-};
-/*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports).setColors($b67e2a05a9c13039$var$colors);
-// $FlowFixMe
-for(let tag in /*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports).tags.open)/*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports).tags.open[tag] = /*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports).tags.open[tag].replace(/#light-dark/g, 'light-dark');
-function $b67e2a05a9c13039$var$generateAnsiHTML(txt) {
-    return /*@__PURE__*/ $parcel$interopDefault($cdea3ae92bef6910$exports)(txt.replace(/[&<>"']/g, (c)=>{
-        switch(c){
-            case '&':
-                return '&amp';
-            case '<':
-                return '&lt;';
-            case '>':
-                return '&gt';
-            case '"':
-                return '&quot;';
-            case "'":
-                return '&#39;';
-            default:
-                return c;
-        }
-    }));
-}
-var $b67e2a05a9c13039$export$2e2bcd8739ae039 = $b67e2a05a9c13039$var$generateAnsiHTML;
-const $e0e0fa52b83f95a9$var$linkStyle = {
-    fontSize: '0.9em',
-    marginBottom: '0.9em'
-};
-const $e0e0fa52b83f95a9$var$anchorStyle = {
-    textDecoration: 'none',
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.anchorColor,
-    cursor: 'pointer'
-};
-const $e0e0fa52b83f95a9$var$codeAnchorStyle = {
-    cursor: 'pointer'
-};
-const $e0e0fa52b83f95a9$var$toggleStyle = {
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.toggleColor,
-    cursor: 'pointer',
-    border: 'none',
-    display: 'block',
-    width: '100%',
-    textAlign: 'left',
-    background: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.toggleBackground,
-    fontFamily: 'Consolas, Menlo, monospace',
-    fontSize: '1em',
-    padding: '0px',
-    lineHeight: '1.5'
-};
-function $e0e0fa52b83f95a9$var$StackFrame(props) {
-    const { frame: frame, critical: critical, showCode: showCode } = props;
-    const { fileName: fileName, lineNumber: lineNumber, columnNumber: columnNumber, _scriptCode: scriptLines, _originalFileName: sourceFileName, _originalLineNumber: sourceLineNumber, _originalColumnNumber: sourceColumnNumber, _originalScriptCode: sourceLines } = frame;
-    const functionName = frame.getFunctionName();
-    const [compiled, setCompiled] = $10ecac3e4062713a$export$60241385465d0a34(!sourceLines);
-    const getErrorLocation = ()=>{
-        const { _originalFileName: fileName, _originalLineNumber: lineNumber } = props.frame;
-        // Unknown file
-        if (!fileName) return null;
-        // e.g. "/path-to-my-app/webpack/bootstrap eaddeb46b67d75e4dfc1"
-        const isInternalWebpackBootstrapCode = fileName.trim().indexOf(' ') !== -1;
-        if (isInternalWebpackBootstrapCode) return null;
-        // Code is in a real file
-        return {
-            fileName: fileName,
-            lineNumber: lineNumber || 1
-        };
-    };
-    const editorHandler = ()=>{
-        const errorLoc = getErrorLocation();
-        if (!errorLoc) return;
-        props.editorHandler?.(errorLoc);
-    };
-    const url = $f78f50d61026cdc5$export$44b1e5ee7f53eae1(sourceFileName, sourceLineNumber, sourceColumnNumber, fileName, lineNumber, columnNumber, compiled);
-    let codeBlockProps = null;
-    if (showCode) {
-        if (compiled && scriptLines && scriptLines.length !== 0 && lineNumber != null) codeBlockProps = {
-            codeHTML: $b67e2a05a9c13039$export$2e2bcd8739ae039(scriptLines),
-            main: critical
-        };
-        else if (!compiled && sourceLines && sourceLines.length !== 0 && sourceLineNumber != null) codeBlockProps = {
-            codeHTML: $b67e2a05a9c13039$export$2e2bcd8739ae039(sourceLines),
-            main: critical
-        };
-    }
-    const canOpenInEditor = getErrorLocation() !== null && props.editorHandler !== null;
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-        children: [
-            $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-                children: functionName
-            }),
-            $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-                style: $e0e0fa52b83f95a9$var$linkStyle,
-                children: $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
-                    role: "link",
-                    style: canOpenInEditor ? $e0e0fa52b83f95a9$var$anchorStyle : null,
-                    onClick: canOpenInEditor ? editorHandler : null,
-                    onKeyDown: canOpenInEditor ? (e)=>{
-                        if (e.key === 'Enter') editorHandler();
-                    } : null,
-                    tabIndex: canOpenInEditor ? '0' : null,
-                    children: url
-                })
-            }),
-            codeBlockProps && $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-                style: {
-                    marginBottom: '1.5em'
-                },
-                children: [
-                    $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
-                        onClick: canOpenInEditor ? editorHandler : null,
-                        style: canOpenInEditor ? $e0e0fa52b83f95a9$var$codeAnchorStyle : null,
-                        children: $23b7c1cb98b19658$export$34b9dba7ce09269b($97c30df7f5c364f7$export$2e2bcd8739ae039, {
-                            ...codeBlockProps
-                        })
-                    }),
-                    scriptLines && sourceLines && $23b7c1cb98b19658$export$34b9dba7ce09269b("button", {
-                        style: $e0e0fa52b83f95a9$var$toggleStyle,
-                        onClick: ()=>{
-                            setCompiled(!compiled);
-                        },
-                        children: 'View ' + (compiled ? 'source' : 'compiled')
-                    })
-                ]
-            })
-        ]
-    });
-}
-var $e0e0fa52b83f95a9$export$2e2bcd8739ae039 = $e0e0fa52b83f95a9$var$StackFrame;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ const $9a1abb59f5d10ec8$var$_collapsibleStyle = {
-    cursor: 'pointer',
-    border: 'none',
-    display: 'block',
-    width: '100%',
-    textAlign: 'left',
-    fontFamily: 'Consolas, Menlo, monospace',
-    fontSize: '1em',
-    padding: '0px',
-    lineHeight: '1.5'
-};
-const $9a1abb59f5d10ec8$var$collapsibleCollapsedStyle = {
-    ...$9a1abb59f5d10ec8$var$_collapsibleStyle,
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.color,
-    background: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.background,
-    marginBottom: '1.5em'
-};
-const $9a1abb59f5d10ec8$var$collapsibleExpandedStyle = {
-    ...$9a1abb59f5d10ec8$var$_collapsibleStyle,
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.color,
-    background: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.background,
-    marginBottom: '0.6em'
-};
-function $9a1abb59f5d10ec8$var$Collapsible(props) {
-    const [collapsed, setCollapsed] = $10ecac3e4062713a$export$60241385465d0a34(true);
-    const toggleCollapsed = ()=>{
-        setCollapsed(!collapsed);
-    };
-    const count = props.children.length;
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("details", {
-        open: !collapsed,
-        onToggle: toggleCollapsed,
-        children: [
-            $23b7c1cb98b19658$export$34b9dba7ce09269b("summary", {
-                style: collapsed ? $9a1abb59f5d10ec8$var$collapsibleCollapsedStyle : $9a1abb59f5d10ec8$var$collapsibleExpandedStyle,
-                children: (collapsed ? "\u25B6" : "\u25BC") + ` ${count} stack frames were ` + (collapsed ? 'collapsed.' : 'expanded.')
-            }),
-            $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-                children: [
-                    props.children,
-                    $23b7c1cb98b19658$export$34b9dba7ce09269b("button", {
-                        onClick: toggleCollapsed,
-                        style: $9a1abb59f5d10ec8$var$collapsibleExpandedStyle,
-                        children: `\u{25B2} ${count} stack frames were expanded.`
-                    })
-                ]
-            })
-        ]
-    });
-}
-var $9a1abb59f5d10ec8$export$2e2bcd8739ae039 = $9a1abb59f5d10ec8$var$Collapsible;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ function $e95d7084caaf4e6d$export$723fa77eef12dd9f(sourceFileName, fileName) {
-    return sourceFileName == null || sourceFileName === '' || sourceFileName.indexOf('~/') !== -1 || sourceFileName.indexOf('node_modules/') !== -1 || sourceFileName.indexOf('error-overlay') !== -1 || sourceFileName.trim().indexOf(' ') !== -1 || fileName == null || fileName === '';
-}
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ function $a5027556d7003a42$export$64794fcb05cf0bcf(errorName) {
-    switch(errorName){
-        case 'EvalError':
-        case 'InternalError':
-        case 'RangeError':
-        case 'ReferenceError':
-        case 'SyntaxError':
-        case 'TypeError':
-        case 'URIError':
-            return true;
-        default:
-            return false;
-    }
-}
-var $a5027556d7003a42$export$2e2bcd8739ae039 = $a5027556d7003a42$export$64794fcb05cf0bcf;
-const $5ee7d2edb790dd06$var$traceStyle = {
-    fontSize: '1em',
-    flex: '0 1 auto',
-    minHeight: '0px',
-    overflow: 'auto'
-};
-function $5ee7d2edb790dd06$var$StackTrace(props) {
-    const { stackFrames: stackFrames, errorName: errorName, contextSize: contextSize, editorHandler: editorHandler } = props;
-    const renderedFrames = [];
-    let hasReachedAppCode = false, currentBundle = [], bundleCount = 0;
-    stackFrames.forEach((frame, index)=>{
-        const { fileName: fileName, _originalFileName: sourceFileName } = frame;
-        const isInternalUrl = $e95d7084caaf4e6d$export$723fa77eef12dd9f(sourceFileName, fileName);
-        const isThrownIntentionally = !$a5027556d7003a42$export$64794fcb05cf0bcf(errorName);
-        const shouldCollapse = isInternalUrl && (isThrownIntentionally || hasReachedAppCode);
-        if (!isInternalUrl) hasReachedAppCode = true;
-        const frameEle = $23b7c1cb98b19658$export$34b9dba7ce09269b($e0e0fa52b83f95a9$export$2e2bcd8739ae039, {
-            frame: frame,
-            contextSize: contextSize,
-            critical: index === 0,
-            showCode: !shouldCollapse,
-            editorHandler: editorHandler
-        }, 'frame-' + index);
-        const lastElement = index === stackFrames.length - 1;
-        if (shouldCollapse) currentBundle.push(frameEle);
-        if (!shouldCollapse || lastElement) {
-            if (currentBundle.length === 1) renderedFrames.push(currentBundle[0]);
-            else if (currentBundle.length > 1) {
-                bundleCount++;
-                renderedFrames.push($23b7c1cb98b19658$export$34b9dba7ce09269b($9a1abb59f5d10ec8$export$2e2bcd8739ae039, {
-                    children: currentBundle
-                }, 'bundle-' + bundleCount));
-            }
-            currentBundle = [];
-        }
-        if (!shouldCollapse) renderedFrames.push(frameEle);
-    });
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-        style: $5ee7d2edb790dd06$var$traceStyle,
-        children: renderedFrames
-    });
-}
-var $5ee7d2edb790dd06$export$2e2bcd8739ae039 = $5ee7d2edb790dd06$var$StackTrace;
-const $2eeadf2892cff4e4$var$diffStyle = {
-    backgroundColor: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.primaryPreBackground,
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.primaryPreColor,
-    padding: '0.5em',
-    overflowX: 'auto',
-    whiteSpace: 'pre-wrap',
-    borderRadius: '0.25rem'
-};
-function $2eeadf2892cff4e4$export$2e2bcd8739ae039({ diff: diff }) {
-    let lines = diff.split('\n').flatMap((line, i)=>[
-            $2eeadf2892cff4e4$var$formatLine(line, i),
-            '\n'
-        ]).slice(0, -1);
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("pre", {
-        style: $2eeadf2892cff4e4$var$diffStyle,
-        children: lines
-    });
-}
-function $2eeadf2892cff4e4$var$formatLine(line, index) {
-    if (line.startsWith('+')) return $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
-        style: {
-            color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.diffAdded,
-            fontWeight: 'bold'
-        },
-        children: line
-    }, index);
-    else if (line.startsWith('-') || line.startsWith('>')) return $23b7c1cb98b19658$export$34b9dba7ce09269b("span", {
-        style: {
-            color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.diffRemoved,
-            fontWeight: 'bold'
-        },
-        children: line
-    }, index);
-    else return line;
-}
-const $4baa71cb4cecc0ea$var$wrapperStyle = {
-    display: 'flex',
-    flexDirection: 'column'
-};
-function $4baa71cb4cecc0ea$var$RuntimeError({ errorRecord: errorRecord, editorHandler: editorHandler }) {
-    const { error: error, unhandledRejection: unhandledRejection, contextSize: contextSize, stackFrames: stackFrames } = errorRecord;
-    const errorName = unhandledRejection ? 'Unhandled Rejection (' + error.name + ')' : error.name;
-    // Make header prettier
-    const message = error.message;
-    let headerText = message.match(/^\w*:/) || !errorName ? message : errorName + ': ' + message;
-    headerText = headerText // TODO: maybe remove this prefix from fbjs?
-    // It's just scaring people
-    .replace(/^Invariant Violation:\s*/, '') // This is not helpful either:
-    .replace(/^Warning:\s*/, '') // Break the actionable part to the next line.
-    // AFAIK React 16+ should already do this.
-    .replace(' Check the render method', '\n\nCheck the render method').replace(' Check your code at', '\n\nCheck your code at');
-    let link, diff;
-    if (headerText.includes('https://react.dev/link/hydration-mismatch')) {
-        [headerText, diff] = headerText.split('https://react.dev/link/hydration-mismatch');
-        link = 'https://react.dev/link/hydration-mismatch';
-    } else if (headerText.includes('This will cause a hydration error.')) {
-        [headerText, diff] = headerText.split('This will cause a hydration error.');
-        headerText += 'This will cause a hydration error.';
-    }
-    let lines = headerText.split('\n');
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-        style: $4baa71cb4cecc0ea$var$wrapperStyle,
-        children: [
-            $23b7c1cb98b19658$export$34b9dba7ce09269b($c306e3a42547c8c2$export$2e2bcd8739ae039, {
-                headerText: lines[0]
-            }),
-            $23b7c1cb98b19658$export$34b9dba7ce09269b("pre", {
-                children: lines.slice(1).join('\n').trim()
-            }),
-            link && $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-                children: $23b7c1cb98b19658$export$34b9dba7ce09269b("a", {
-                    href: link,
-                    target: "_blank",
-                    rel: "noreferrer",
-                    children: link
-                })
-            }),
-            diff && $23b7c1cb98b19658$export$34b9dba7ce09269b($2eeadf2892cff4e4$export$2e2bcd8739ae039, {
-                diff: diff.trim()
-            }),
-            $23b7c1cb98b19658$export$34b9dba7ce09269b($5ee7d2edb790dd06$export$2e2bcd8739ae039, {
-                stackFrames: stackFrames,
-                errorName: errorName,
-                contextSize: contextSize,
-                editorHandler: editorHandler
-            })
-        ]
-    });
-}
-var $4baa71cb4cecc0ea$export$2e2bcd8739ae039 = $4baa71cb4cecc0ea$var$RuntimeError;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ const $7606db210182b733$var$footerStyle = {
-    fontFamily: 'sans-serif',
-    color: $74bb4be6e9b78681$export$bca14c5b3b88a9c9.footer,
-    marginTop: '0.5rem',
-    flex: '0 0 auto'
-};
-function $7606db210182b733$var$Footer(props) {
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b("div", {
-        style: $7606db210182b733$var$footerStyle,
-        children: [
-            props.line1,
-            $23b7c1cb98b19658$export$34b9dba7ce09269b("br", {}),
-            props.line2
-        ]
-    });
-}
-var $7606db210182b733$export$2e2bcd8739ae039 = $7606db210182b733$var$Footer;
-function $d0eac8b125ed15e2$var$RuntimeErrorContainer(props) {
-    const { errorRecords: errorRecords, close: close } = props;
-    const totalErrors = errorRecords.length;
-    let [currentIndex, setCurrentIndex] = $10ecac3e4062713a$export$60241385465d0a34(0);
-    let previous = ()=>{
-        setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : totalErrors - 1);
-    };
-    let next = ()=>{
-        setCurrentIndex(currentIndex < totalErrors - 1 ? currentIndex + 1 : 0);
-    };
-    return $23b7c1cb98b19658$export$34b9dba7ce09269b($20d888b381d18c6c$export$2e2bcd8739ae039, {
-        shortcutHandler: (key)=>{
-            if (key === 'Escape') props.close();
-            else if (key === 'ArrowLeft') previous();
-            else if (key === 'ArrowRight') next();
-        },
-        children: [
-            $23b7c1cb98b19658$export$34b9dba7ce09269b($7aae0c9ea64fc08c$export$2e2bcd8739ae039, {
-                close: close
-            }),
-            totalErrors > 1 && $23b7c1cb98b19658$export$34b9dba7ce09269b($1adc179a826c5dd2$export$2e2bcd8739ae039, {
-                currentError: currentIndex + 1,
-                totalErrors: totalErrors,
-                previous: previous,
-                next: next
-            }),
-            $23b7c1cb98b19658$export$34b9dba7ce09269b($4baa71cb4cecc0ea$export$2e2bcd8739ae039, {
-                errorRecord: errorRecords[currentIndex],
-                editorHandler: props.editorHandler
-            }),
-            $23b7c1cb98b19658$export$34b9dba7ce09269b($7606db210182b733$export$2e2bcd8739ae039, {
-                line1: "This screen is visible only in development. It will not appear if the app crashes in production.",
-                line2: "Open your browser\u2019s developer console to further inspect this error.  Click the 'X' or hit ESC to dismiss this message."
-            })
-        ]
-    });
-}
-var $d0eac8b125ed15e2$export$2e2bcd8739ae039 = $d0eac8b125ed15e2$var$RuntimeErrorContainer;
-let $da9882e673ac146b$var$iframe = null;
-let $da9882e673ac146b$var$editorHandler = null;
-let $da9882e673ac146b$var$currentRuntimeErrorRecords = [];
-let $da9882e673ac146b$var$stopListeningToRuntimeErrors = null;
-function $da9882e673ac146b$export$25a22ac46f1bd016(handler) {
-    $da9882e673ac146b$var$editorHandler = handler;
-    if ($da9882e673ac146b$var$iframe) $da9882e673ac146b$var$update();
-}
-function $da9882e673ac146b$export$74e9101ce4078c0(error, options) {
-    $6d40ebe8356580e0$export$9123e6c9c0ac21ed($da9882e673ac146b$var$handleRuntimeError(options))(error, false);
-}
-function $da9882e673ac146b$export$cda2c88a41631c16(options) {
-    if ($da9882e673ac146b$var$stopListeningToRuntimeErrors !== null) throw new Error('Already listening');
-    $da9882e673ac146b$var$stopListeningToRuntimeErrors = $6d40ebe8356580e0$export$38ec23daa6e8dcdf($da9882e673ac146b$var$handleRuntimeError(options));
-}
-const $da9882e673ac146b$var$handleRuntimeError = (options)=>(errorRecord)=>{
-        try {
-            if (typeof options.onError === 'function') options.onError.call(null);
-        } finally{
-            if ($da9882e673ac146b$var$currentRuntimeErrorRecords.some(({ error: error })=>error === errorRecord.error)) // This fixes https://github.com/facebook/create-react-app/issues/3011.
-            // eslint-disable-next-line no-unsafe-finally
-            return;
-            $da9882e673ac146b$var$currentRuntimeErrorRecords = $da9882e673ac146b$var$currentRuntimeErrorRecords.concat([
-                errorRecord
-            ]);
-            $da9882e673ac146b$var$update();
-        }
-    };
-function $da9882e673ac146b$export$1cfa6d161ca81bd9() {
-    $da9882e673ac146b$var$currentRuntimeErrorRecords = [];
-    $da9882e673ac146b$var$update();
-}
-function $da9882e673ac146b$export$25ba7d9a816639e7() {
-    if ($da9882e673ac146b$var$stopListeningToRuntimeErrors === null) throw new Error('Not currently listening');
-    try {
-        $da9882e673ac146b$var$stopListeningToRuntimeErrors();
-    } finally{
-        $da9882e673ac146b$var$stopListeningToRuntimeErrors = null;
-    }
-}
-let $da9882e673ac146b$var$rootNode, $da9882e673ac146b$var$shadow;
-function $da9882e673ac146b$var$update() {
-    if (!$da9882e673ac146b$var$rootNode) {
-        $da9882e673ac146b$var$rootNode = document.createElement('parcel-error-overlay');
-        $da9882e673ac146b$var$shadow = $da9882e673ac146b$var$rootNode.attachShadow({
-            mode: 'open'
-        });
-        if ($da9882e673ac146b$var$rootNode) document.body?.appendChild($da9882e673ac146b$var$rootNode);
-    }
-    if ($da9882e673ac146b$var$currentRuntimeErrorRecords.length > 0 && $da9882e673ac146b$var$shadow) $b6c7f0288a15c619$export$b3890eb0ae9dca99($23b7c1cb98b19658$export$34b9dba7ce09269b("dialog", {
-        ref: (d)=>d?.showModal(),
-        style: $74bb4be6e9b78681$export$7ef984671d1853d7,
-        onClose: $da9882e673ac146b$export$1cfa6d161ca81bd9,
-        children: $23b7c1cb98b19658$export$34b9dba7ce09269b($da9882e673ac146b$var$ErrorOverlay, {})
-    }), $da9882e673ac146b$var$shadow);
-    else {
-        $da9882e673ac146b$var$rootNode?.remove();
-        $da9882e673ac146b$var$rootNode = null;
-    }
-}
-function $da9882e673ac146b$var$ErrorOverlay() {
-    if ($da9882e673ac146b$var$currentRuntimeErrorRecords.length > 0) return $23b7c1cb98b19658$export$34b9dba7ce09269b($d0eac8b125ed15e2$export$2e2bcd8739ae039, {
-        errorRecords: $da9882e673ac146b$var$currentRuntimeErrorRecords,
-        close: $da9882e673ac146b$export$1cfa6d161ca81bd9,
-        editorHandler: $da9882e673ac146b$var$editorHandler
-    });
-    return null;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"i2Oy5":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$61ef = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$61ef.init();
+},{}],"7IDf5":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2edc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$2edc.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$61ef.prelude(module);
+$parcel$ReactRefreshHelpers$2edc.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27229,220 +27236,167 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-var _ramTools = require("./RamTools");
-var _ramToolsDefault = parcelHelpers.interopDefault(_ramTools);
-var _ramInfo = require("./RamInfo");
-var _ramInfoDefault = parcelHelpers.interopDefault(_ramInfo);
-var _ramBios = require("./RamBios");
-var _ramBiosDefault = parcelHelpers.interopDefault(_ramBios);
-var _ultraWarningModal = require("./UltraWarningModal/UltraWarningModal");
-var _ultraWarningModalDefault = parcelHelpers.interopDefault(_ultraWarningModal);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+// Меняем только эти импорты
+var _csmtools = require("./CSMTools");
+var _csmtoolsDefault = parcelHelpers.interopDefault(_csmtools);
+var _csminfo = require("./CSMInfo");
+var _csminfoDefault = parcelHelpers.interopDefault(_csminfo);
+var _csmbios = require("./CSMBios");
+var _csmbiosDefault = parcelHelpers.interopDefault(_csmbios);
 var _s = $RefreshSig$();
-const RamConfiguration = ()=>{
+const CSMConfiguration = ()=>{
     _s();
-    const [isModalOpen, setIsModalOpen] = (0, _react.useState)(false);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-        className: "manager-layout",
+    const [value, setValue] = (0, _react.useState)('mbr');
+    const { title, path, content } = (0, _csmbiosDefault.default)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default), {
-                title: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ultraWarningModalDefault.default), {
-                    onModalOpen: setIsModalOpen
-                }, void 0, false, {
-                    fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                    lineNumber: 14,
-                    columnNumber: 16
-                }, void 0),
-                toolsLabel: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0410 \u041F\u0410\u041C\u042F\u0422\u0418",
-                infoNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramInfoDefault.default), {}, void 0, false, {
-                    fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                    lineNumber: 16,
-                    columnNumber: 19
-                }, void 0),
-                toolsNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramToolsDefault.default), {
-                    showUltraTeaser: isModalOpen
-                }, void 0, false, {
-                    fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                    lineNumber: 17,
-                    columnNumber: 20
-                }, void 0)
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "BOOT & RECOVERY",
+                toolsLabel: "DISK MODE",
+                renderInfo: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csminfoDefault.default), {
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
+                        lineNumber: 20,
+                        columnNumber: 33
+                    }, void 0),
+                renderTools: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmtoolsDefault.default), {
+                        value: value,
+                        setValue: setValue,
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
+                        lineNumber: 22,
+                        columnNumber: 11
+                    }, void 0)
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                lineNumber: 13,
+                fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramBiosDefault.default), {}, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                lineNumber: 19,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                title: title,
+                path: path,
+                content: content,
+                type: "csm" // Идентификатор для хука внутри BiosWindow
+                ,
+                value: value
+            }, void 0, false, {
+                fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined)
         ]
-    }, void 0, true, {
-        fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-        lineNumber: 12,
-        columnNumber: 5
-    }, undefined);
+    }, void 0, true);
 };
-_s(RamConfiguration, "mLsII5HRP5G63IA/8vjZ5YHXWr8=");
-_c = RamConfiguration;
-exports.default = RamConfiguration;
+_s(CSMConfiguration, "VxsUZAqU8z1jALOT9nVAYQFg/84=");
+_c = CSMConfiguration;
+exports.default = CSMConfiguration;
 var _c;
-$RefreshReg$(_c, "RamConfiguration");
+$RefreshReg$(_c, "CSMConfiguration");
 
-  $parcel$ReactRefreshHelpers$61ef.postlude(module);
+  $parcel$ReactRefreshHelpers$2edc.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","./RamTools":"jxHKH","./RamInfo":"cUeEy","./RamBios":"a06IC","./UltraWarningModal/UltraWarningModal":"lUMXS","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"xpgGa":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$81e1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$81e1.init();
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Toolbox/Toolbox":"2S4BZ","../BiosWindow/BiosWindow":"fCqKj","./CSMTools":"2pbW4","./CSMInfo":"1hMh8","./CSMBios":"kb3Ag","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2S4BZ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$c86f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$c86f.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$81e1.prelude(module);
+$parcel$ReactRefreshHelpers$c86f.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _button = require("../Button/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _infoBlockModuleCss = require("./InfoBlock.module.css");
-var _infoBlockModuleCssDefault = parcelHelpers.interopDefault(_infoBlockModuleCss);
+var _toolboxModuleCss = require("./Toolbox.module.css");
+var _toolboxModuleCssDefault = parcelHelpers.interopDefault(_toolboxModuleCss);
+var _infoModuleCss = require("./styles/Info.module.css");
+var _infoModuleCssDefault = parcelHelpers.interopDefault(_infoModuleCss);
+var _toolsModuleCss = require("./styles/Tools.module.css");
+var _toolsModuleCssDefault = parcelHelpers.interopDefault(_toolsModuleCss);
 var _s = $RefreshSig$();
-const InfoBlock = ({ title, toolsLabel, infoNode, toolsNode })=>{
+const Toolbox = ({ title, toolsLabel, renderInfo, renderTools })=>{
     _s();
-    const [isInfo, setIsInfo] = (0, _react.useState)(false);
-    const cls = isInfo ? (0, _infoBlockModuleCssDefault.default).modeInfo : (0, _infoBlockModuleCssDefault.default).modeTools;
+    const [activeTab, setActiveTab] = (0, _react.useState)('info');
+    const isInfo = activeTab === 'info';
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: `${(0, _infoBlockModuleCssDefault.default).panel} ${cls}`,
+        className: (0, _toolboxModuleCssDefault.default).toolbox_container,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: `${(0, _toolboxModuleCssDefault.default).toolbox_title} ${isInfo ? (0, _toolboxModuleCssDefault.default).info_active : (0, _toolboxModuleCssDefault.default).tools_active}`,
                 children: title
             }, void 0, false, {
-                fileName: "src/components/InfoBlock/InfoBlock.tsx",
-                lineNumber: 11,
+                fileName: "src/components/Toolbox/Toolbox.tsx",
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _infoBlockModuleCssDefault.default).tabs,
+                className: (0, _toolboxModuleCssDefault.default).toolbox_tabs,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                         type: "warning",
                         isActive: isInfo,
-                        onClick: ()=>setIsInfo(true),
-                        children: "\u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415"
+                        onClick: ()=>setActiveTab('info'),
+                        className: (0, _toolboxModuleCssDefault.default).tab_button
                     }, void 0, false, {
-                        fileName: "src/components/InfoBlock/InfoBlock.tsx",
-                        lineNumber: 13,
+                        fileName: "src/components/Toolbox/Toolbox.tsx",
+                        lineNumber: 25,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                         type: "info",
+                        label: toolsLabel,
                         isActive: !isInfo,
-                        onClick: ()=>setIsInfo(false),
-                        children: toolsLabel
+                        onClick: ()=>setActiveTab('tools'),
+                        className: (0, _toolboxModuleCssDefault.default).tab_button
                     }, void 0, false, {
-                        fileName: "src/components/InfoBlock/InfoBlock.tsx",
-                        lineNumber: 14,
+                        fileName: "src/components/Toolbox/Toolbox.tsx",
+                        lineNumber: 31,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/InfoBlock/InfoBlock.tsx",
-                lineNumber: 12,
+                fileName: "src/components/Toolbox/Toolbox.tsx",
+                lineNumber: 24,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _infoBlockModuleCssDefault.default).content,
-                children: isInfo ? infoNode : toolsNode
-            }, +isInfo, false, {
-                fileName: "src/components/InfoBlock/InfoBlock.tsx",
-                lineNumber: 16,
+                className: `${(0, _toolboxModuleCssDefault.default).toolbox_card} ${isInfo ? (0, _toolboxModuleCssDefault.default).info_border : (0, _toolboxModuleCssDefault.default).tools_border}`,
+                children: isInfo ? renderInfo((0, _infoModuleCssDefault.default)) : renderTools((0, _toolsModuleCssDefault.default))
+            }, void 0, false, {
+                fileName: "src/components/Toolbox/Toolbox.tsx",
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/InfoBlock/InfoBlock.tsx",
-        lineNumber: 10,
+        fileName: "src/components/Toolbox/Toolbox.tsx",
+        lineNumber: 19,
         columnNumber: 5
     }, undefined);
 };
-_s(InfoBlock, "YK2CWtHmn8zoyrkTDQ2nPk9+1aI=");
-_c = InfoBlock;
-// Хелпер для сокращения однотипных div-оберток
-const Div = (name)=>({ children })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: (0, _infoBlockModuleCssDefault.default)[name],
-            children: children
-        }, void 0, false, {
-            fileName: "src/components/InfoBlock/InfoBlock.tsx",
-            lineNumber: 22,
-            columnNumber: 54
-        }, undefined);
-InfoBlock.Section = Div('section');
-InfoBlock.Label = ({ children })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-        className: (0, _infoBlockModuleCssDefault.default).label,
-        children: children
-    }, void 0, false, {
-        fileName: "src/components/InfoBlock/InfoBlock.tsx",
-        lineNumber: 25,
-        columnNumber: 46
-    }, undefined);
-InfoBlock.Grid = Div('grid');
-InfoBlock.RowLayout = Div('rowLayout');
-InfoBlock.Row = ({ icon, children })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _infoBlockModuleCssDefault.default).row,
-        children: [
-            icon && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: (0, _infoBlockModuleCssDefault.default).icon,
-                children: icon
-            }, void 0, false, {
-                fileName: "src/components/InfoBlock/InfoBlock.tsx",
-                lineNumber: 30,
-                columnNumber: 14
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _infoBlockModuleCssDefault.default).text,
-                children: children
-            }, void 0, false, {
-                fileName: "src/components/InfoBlock/InfoBlock.tsx",
-                lineNumber: 31,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/InfoBlock/InfoBlock.tsx",
-        lineNumber: 29,
-        columnNumber: 3
-    }, undefined);
-InfoBlock.Select = (p)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _infoBlockModuleCssDefault.default).selectWrapper,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
-            className: (0, _infoBlockModuleCssDefault.default).toolSelect,
-            ...p
-        }, void 0, false, {
-            fileName: "src/components/InfoBlock/InfoBlock.tsx",
-            lineNumber: 35,
-            columnNumber: 41
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/InfoBlock/InfoBlock.tsx",
-        lineNumber: 35,
-        columnNumber: 3
-    }, undefined);
-exports.default = InfoBlock;
+_s(Toolbox, "07WFtfECrh9YJ3GjXjcQQrsYX0o=");
+_c = Toolbox;
+exports.default = Toolbox;
 var _c;
-$RefreshReg$(_c, "InfoBlock");
+$RefreshReg$(_c, "Toolbox");
 
-  $parcel$ReactRefreshHelpers$81e1.postlude(module);
+  $parcel$ReactRefreshHelpers$c86f.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","./InfoBlock.module.css":"38kol","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4hbTW":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","./Toolbox.module.css":"fNILQ","./styles/Info.module.css":"4y82s","./styles/Tools.module.css":"25PqV","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4hbTW":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$6d2e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$6d2e.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27453,39 +27407,26 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
+var _buttonConfig = require("./Button.config");
 var _buttonModuleCss = require("./Button.module.css");
 var _buttonModuleCssDefault = parcelHelpers.interopDefault(_buttonModuleCss);
-var _buttonConfig = require("./Button.config");
-const Button = ({ type, isActive, onClick, children })=>{
-    const lowType = type?.toLowerCase();
-    const config = (0, _buttonConfig.BUTTONS).find((b)=>b.type === lowType);
-    const theme = config?.theme;
-    const variant = config?.variant;
-    const classes = [
-        (0, _buttonModuleCssDefault.default).baseButton,
-        isActive && (0, _buttonModuleCssDefault.default).isActive,
-        isActive && variant === 'outline' && (0, _buttonModuleCssDefault.default).infoOutline,
-        isActive && theme === 'info' && variant !== 'outline' && (0, _buttonModuleCssDefault.default).infoTheme,
-        isActive && theme === 'metallic' && (0, _buttonModuleCssDefault.default).metallicActive,
-        isActive && theme === 'lava' && (0, _buttonModuleCssDefault.default).lavaEffect,
-        theme === 'warning' && (isActive ? (0, _buttonModuleCssDefault.default).warningActive : (0, _buttonModuleCssDefault.default).warningInactive),
-        isActive && theme && ![
-            'info',
-            'metallic',
-            'warning',
-            'lava'
-        ].includes(theme) && (0, _buttonModuleCssDefault.default)[`${theme}Theme`]
-    ].filter(Boolean).join(' ');
+const Button = ({ type, isActive, className, label, ...rest })=>{
+    const item = (0, _buttonConfig.BUTTONS)[type];
+    // Если типа нет в конфиге — не мусорим в DOM
+    if (!item) return null;
+    // Определяем тему: активная или обычная
+    const themeClass = isActive ? (0, _buttonModuleCssDefault.default)[`${item.theme}_active`] : (0, _buttonModuleCssDefault.default)[item.theme];
+    // Базовые классы (всегда есть)
+    let cls = `${(0, _buttonModuleCssDefault.default).button} ${themeClass}`;
+    // Если прокинули кастомный className — приклеиваем его в конец
+    if (className) cls += ` ${className}`;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-        type: "button",
-        onClick: onClick,
-        className: classes,
-        children: children || config?.label || type?.replace('size_', '').replace('slots_', '').toUpperCase()
+        className: cls,
+        ...rest,
+        children: label ?? item.label
     }, void 0, false, {
         fileName: "src/components/Button/Button.tsx",
-        lineNumber: 30,
+        lineNumber: 20,
         columnNumber: 5
     }, undefined);
 };
@@ -27499,1288 +27440,174 @@ $RefreshReg$(_c, "Button");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Button.module.css":"8CTjF","./Button.config":"c37D4","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"8CTjF":[function(require,module,exports,__globalThis) {
-module.exports["baseButton"] = `-_VRTG_baseButton`;
-module.exports["customTheme"] = `-_VRTG_customTheme`;
-module.exports["dangerTheme"] = `-_VRTG_dangerTheme`;
-module.exports["infoOutline"] = `-_VRTG_infoOutline`;
-module.exports["infoTheme"] = `-_VRTG_infoTheme`;
-module.exports["isActive"] = `-_VRTG_isActive`;
-module.exports["lavaEffect"] = `-_VRTG_lavaEffect`;
-module.exports["lavaSync"] = `-_VRTG_lavaSync`;
-module.exports["lavaSync"];
-module.exports["metallicActive"] = `-_VRTG_metallicActive`;
-module.exports["optimalTheme"] = `-_VRTG_optimalTheme`;
-module.exports["safeTheme"] = `-_VRTG_safeTheme`;
-module.exports["v2Theme"] = `-_VRTG_v2Theme`;
-module.exports["v3Theme"] = `-_VRTG_v3Theme`;
-module.exports["warningActive"] = `-_VRTG_warningActive`;
-module.exports["warningInactive"] = `-_VRTG_warningInactive`;
-
-},{}],"c37D4":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./Button.config":"c37D4","./Button.module.css":"8CTjF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"c37D4":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "BUTTONS", ()=>BUTTONS);
-const BUTTONS = [
-    // Пресеты
-    {
-        type: 'safe',
+const BUTTONS = {
+    safe: {
         label: "\u0411\u0415\u0417\u041E\u041F\u0410\u0421\u041D\u042B\u0419",
         theme: 'safe'
     },
-    {
-        type: 'balanced',
+    balanced: {
         label: "\u041E\u041F\u0422\u0418\u041C\u0410\u041B\u042C\u041D\u042B\u0419",
         theme: 'optimal'
     },
-    {
-        type: 'aggressive',
+    aggressive: {
         label: "\u0410\u0413\u0420\u0415\u0421\u0421\u0418\u0412\u041D\u042B\u0419",
         theme: 'danger'
     },
-    {
-        type: 'ultra',
+    ultra: {
         label: "\u0423\u041B\u042C\u0422\u0420\u0410",
         theme: 'lava'
     },
-    {
-        type: 'custom',
+    custom: {
         label: "\u0420\u0423\u0427\u041D\u042B\u0415 \u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0418",
         theme: 'custom'
     },
-    {
-        type: 'warning',
+    warning: {
         label: "\u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415",
         theme: 'warning'
     },
-    {
-        type: 'info',
+    info: {
         label: "\u0418\u041D\u0424\u041E",
-        theme: 'info',
-        variant: 'outline'
+        theme: 'info'
     },
-    // Поколения (DDR / Прочие)
-    {
-        type: 'v2',
+    v_2: {
         label: 'V2',
         theme: 'v2'
     },
-    {
-        type: 'v3',
+    v_3: {
         label: 'V3',
         theme: 'v3'
     },
-    {
-        type: 'v4',
+    v_4: {
         label: 'V4',
-        theme: 'metallic'
+        theme: 'v4'
     },
-    // РЕЖИМ ШИНЫ PCI-E (Те самые кнопки с твоего скрина)
-    {
-        type: 'gen 2',
+    gen_2: {
         label: 'GEN 2',
-        theme: 'info'
+        theme: 'gen'
     },
-    {
-        type: 'gen 3',
+    gen_3: {
         label: 'GEN 3',
-        theme: 'info'
+        theme: 'gen'
     },
-    {
-        type: 'gen 4',
-        label: 'GEN 4',
-        theme: 'info'
-    },
-    // Алгоритмы / Системные (Тоже синие)
-    {
-        type: 'mbr',
+    mbr: {
         label: 'MBR',
-        theme: 'info'
+        theme: 'partition'
     },
-    {
-        type: 'gpt',
+    gpt: {
         label: 'GPT',
-        theme: 'info'
+        theme: 'partition'
     },
-    // Тип памяти
-    {
-        type: 'ecc',
+    ecc: {
         label: 'ECC REG',
-        theme: 'optimal'
+        theme: 'server'
     },
-    {
-        type: 'desktop',
+    desktop: {
         label: 'DESKTOP',
-        theme: 'optimal'
+        theme: 'desktop'
     },
-    // ОБЪЕМ
-    {
-        type: 'size_4',
-        label: "4\u0413\u0411",
-        theme: 'safe'
+    slots1: {
+        label: "1 \u0421\u041B\u041E\u0422",
+        theme: 'slots'
     },
-    {
-        type: 'size_8',
-        label: "8\u0413\u0411",
-        theme: 'safe'
+    slots2: {
+        label: "2 \u0421\u041B\u041E\u0422\u0410",
+        theme: 'slots'
     },
-    {
-        type: 'size_12',
-        label: "12\u0413\u0411",
-        theme: 'safe'
+    slots3: {
+        label: "3 \u0421\u041B\u041E\u0422\u0410",
+        theme: 'slots'
     },
-    {
-        type: 'size_16',
-        label: "16\u0413\u0411",
-        theme: 'safe'
+    slots4: {
+        label: "4 \u0421\u041B\u041E\u0422\u0410",
+        theme: 'slots'
     },
-    {
-        type: 'size_24',
-        label: "24\u0413\u0411",
-        theme: 'safe'
-    },
-    {
-        type: 'size_32',
-        label: "32\u0413\u0411",
-        theme: 'safe'
-    },
-    {
-        type: 'size_48',
-        label: "48\u0413\u0411",
-        theme: 'safe'
-    },
-    {
-        type: 'size_64',
-        label: "64\u0413\u0411",
-        theme: 'safe'
-    },
-    // СЛОТЫ
-    {
-        type: 'slots_1',
-        label: '1',
-        theme: 'info'
-    },
-    {
-        type: 'slots_2',
-        label: '2',
-        theme: 'info'
-    },
-    {
-        type: 'slots_3',
-        label: '3',
-        theme: 'info'
-    },
-    {
-        type: 'slots_4',
-        label: '4',
-        theme: 'info'
-    },
-    // Материнка
-    {
-        type: 'atx',
+    atx: {
         label: 'ATX',
-        theme: 'info'
+        theme: 'board'
     },
-    {
-        type: 'matx',
-        label: 'mATX',
-        theme: 'info'
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"38kol":[function(require,module,exports,__globalThis) {
-module.exports["content"] = `jkIP1G_content`;
-module.exports["grid"] = `jkIP1G_grid`;
-module.exports["icon"] = `jkIP1G_icon`;
-module.exports["label"] = `jkIP1G_label`;
-module.exports["modeInfo"] = `jkIP1G_modeInfo`;
-module.exports["modeTools"] = `jkIP1G_modeTools`;
-module.exports["panel"] = `jkIP1G_panel`;
-module.exports["row"] = `jkIP1G_row`;
-module.exports["rowLayout"] = `jkIP1G_rowLayout`;
-module.exports["section"] = `jkIP1G_section`;
-module.exports["selectWrapper"] = `jkIP1G_selectWrapper`;
-module.exports["tabs"] = `jkIP1G_tabs`;
-module.exports["toolSelect"] = `jkIP1G_toolSelect`;
-
-},{}],"jxHKH":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$7bb7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$7bb7.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7bb7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _button = require("../Button/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-var _cpuData = require("./data/cpuData");
-var _timingsData = require("./data/timingsData");
-var _timingEngine = require("./data/timingEngine");
-var _s = $RefreshSig$();
-const RamTools = ({ showUltraTeaser })=>{
-    _s();
-    const { config, update, unlocked } = (0, _timingEngine.useTimingEngine)();
-    const prevUnlocked = (0, _react.useRef)(unlocked);
-    const currentGen = config.gen;
-    (0, _react.useEffect)(()=>{
-        if (!prevUnlocked.current && unlocked) update({
-            profile: 'ultra'
-        });
-        if (prevUnlocked.current && !unlocked && config.profile === 'ultra') update({
-            profile: 'balanced'
-        });
-        prevUnlocked.current = unlocked;
-    }, [
-        unlocked,
-        config.profile,
-        update
-    ]);
-    const renderGroup = (label, field, options, prefix = "", format = (v)=>v)=>{
-        const visible = options.filter((v)=>(0, _timingsData.isOptionValid)(field, v, config));
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Label, {
-                    children: label
-                }, void 0, false, {
-                    fileName: "src/components/RamConfiguration/RamTools.tsx",
-                    lineNumber: 26,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Grid, {
-                    children: visible.map((v)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                            type: prefix + String(v),
-                            isActive: config[field] === format(v),
-                            onClick: ()=>update({
-                                    [field]: format(v)
-                                })
-                        }, field + String(v), false, {
-                            fileName: "src/components/RamConfiguration/RamTools.tsx",
-                            lineNumber: 29,
-                            columnNumber: 13
-                        }, undefined))
-                }, void 0, false, {
-                    fileName: "src/components/RamConfiguration/RamTools.tsx",
-                    lineNumber: 27,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RamConfiguration/RamTools.tsx",
-            lineNumber: 25,
-            columnNumber: 7
-        }, undefined);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "ram-tools",
-        children: [
-            renderGroup("\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415:", "gen", (0, _timingsData.GEN_OPTIONS)),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Label, {
-                        children: "\u041C\u041E\u0414\u0415\u041B\u042C \u041F\u0420\u041E\u0426\u0415\u0421\u0421\u041E\u0420\u0410:"
-                    }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamTools.tsx",
-                        lineNumber: 46,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Select, {
-                        value: config.cpu?.name,
-                        onChange: (e)=>{
-                            const model = (0, _cpuData.CPU_MODELS)[currentGen].find((m)=>m.name === e.target.value);
-                            if (model) update({
-                                cpu: model
-                            });
-                        },
-                        children: (0, _cpuData.CPU_MODELS)[currentGen].map((m)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                                value: m.name,
-                                children: m.name
-                            }, m.name, false, {
-                                fileName: "src/components/RamConfiguration/RamTools.tsx",
-                                lineNumber: 55,
-                                columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamTools.tsx",
-                        lineNumber: 47,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RamConfiguration/RamTools.tsx",
-                lineNumber: 45,
-                columnNumber: 7
-            }, undefined),
-            renderGroup("\u0422\u0418\u041F \u041F\u0410\u041C\u042F\u0422\u0418:", "isEcc", [
-                'desktop',
-                'ecc'
-            ], "", (v)=>v === 'ecc'),
-            renderGroup("\u0412\u0421\u0415\u0413\u041E \u041F\u0410\u041C\u042F\u0422\u0418:", "ramSize", (0, _timingsData.RAM_SIZE_OPTIONS), "size_"),
-            renderGroup("\u0417\u0410\u041D\u042F\u0422\u041E \u0421\u041B\u041E\u0422\u041E\u0412:", "slotsCount", (0, _timingsData.SLOT_COUNT_OPTIONS), "slots_"),
-            renderGroup("\u041C\u0410\u0422\u0415\u0420\u0418\u041D\u0421\u041A\u0410\u042F \u041F\u041B\u0410\u0422\u0410:", "boardType", (0, _timingsData.BOARD_TYPE_OPTIONS)),
-            renderGroup("\u041F\u0420\u0415\u0421\u0415\u0422\u042B:", "profile", [
-                'safe',
-                'balanced',
-                'aggressive',
-                'custom',
-                ...unlocked || showUltraTeaser ? [
-                    'ultra'
-                ] : []
-            ])
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RamConfiguration/RamTools.tsx",
-        lineNumber: 42,
-        columnNumber: 5
-    }, undefined);
-};
-_s(RamTools, "yz0gtWNlzrIeuCXb8tx9ROBHE/8=", false, function() {
-    return [
-        (0, _timingEngine.useTimingEngine)
-    ];
-});
-_c = RamTools;
-exports.default = RamTools;
-var _c;
-$RefreshReg$(_c, "RamTools");
-
-  $parcel$ReactRefreshHelpers$7bb7.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","../InfoBlock/InfoBlock":"xpgGa","./data/cpuData":"jogp5","./data/timingsData":"5c8Ij","./data/timingEngine":"g2O1J","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jogp5":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CPU_MODELS", ()=>CPU_MODELS);
-const CPU_MODELS = {
-    V2: [
-        {
-            name: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442 (1866)",
-            max: 1866
-        },
-        {
-            name: "E5-2618L v2 \u2014 1600",
-            max: 1600
-        },
-        {
-            name: "E5-2620 v2 \u2014 1600",
-            max: 1600
-        },
-        {
-            name: "E5-2630 v2 \u2014 1600",
-            max: 1600
-        },
-        {
-            name: "E5-2630L v2 \u2014 1600",
-            max: 1600
-        },
-        {
-            name: "E5-2640 v2 \u2014 1600",
-            max: 1600
-        },
-        {
-            name: "E5-2650L v2 \u2014 1600",
-            max: 1600
-        },
-        {
-            name: "E5-2603 v2 \u2014 1333",
-            max: 1333
-        },
-        {
-            name: "E5-2609 v2 \u2014 1333",
-            max: 1333
-        }
-    ],
-    V3: [
-        {
-            name: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442 (2133)",
-            max: 2133
-        },
-        {
-            name: "E5-2620 v3 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2623 v3 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2628L v3 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2630 v3 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2630L v3 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2640 v3 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2648L v3 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2603 v3 \u2014 1600",
-            max: 1600
-        },
-        {
-            name: "E5-2609 v3 \u2014 1600",
-            max: 1600
-        },
-        {
-            name: "E5-2622 v3 \u2014 1600",
-            max: 1600
-        }
-    ],
-    V4: [
-        {
-            name: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442 (2400)",
-            max: 2400
-        },
-        {
-            name: "E5-2618L v4 \u2014 2133",
-            max: 2133
-        },
-        {
-            name: "E5-2620 v4 \u2014 2133",
-            max: 2133
-        },
-        {
-            name: "E5-2623 v4 \u2014 2133",
-            max: 2133
-        },
-        {
-            name: "E5-2630 v4 \u2014 2133",
-            max: 2133
-        },
-        {
-            name: "E5-2640 v4 \u2014 2133",
-            max: 2133
-        },
-        {
-            name: "E5-2650L v4 \u2014 2133",
-            max: 2133
-        },
-        {
-            name: "E5-2683 v4 \u2014 2133",
-            max: 2133
-        },
-        {
-            name: "E5-2603 v4 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2608L v4 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2609 v4 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2628L v4 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2630L v4 \u2014 1866",
-            max: 1866
-        },
-        {
-            name: "E5-2648L v4 \u2014 1866",
-            max: 1866
-        }
-    ]
-};
-exports.default = CPU_MODELS;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"5c8Ij":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "GEN_OPTIONS", ()=>GEN_OPTIONS);
-parcelHelpers.export(exports, "RAM_SIZE_OPTIONS", ()=>RAM_SIZE_OPTIONS);
-parcelHelpers.export(exports, "SLOT_COUNT_OPTIONS", ()=>SLOT_COUNT_OPTIONS);
-parcelHelpers.export(exports, "BOARD_TYPE_OPTIONS", ()=>BOARD_TYPE_OPTIONS);
-parcelHelpers.export(exports, "TRIPLE_SIZES", ()=>TRIPLE_SIZES);
-parcelHelpers.export(exports, "ULTRA_MODIFIERS", ()=>ULTRA_MODIFIERS);
-parcelHelpers.export(exports, "isOptionValid", ()=>isOptionValid);
-parcelHelpers.export(exports, "RFC_MODIFIERS", ()=>RFC_MODIFIERS);
-parcelHelpers.export(exports, "INITIAL_CONFIG", ()=>INITIAL_CONFIG);
-parcelHelpers.export(exports, "TIMINGS_BY_FREQ", ()=>TIMINGS_BY_FREQ);
-var _cpuData = require("./cpuData");
-const GEN_OPTIONS = [
-    'V2',
-    'V3',
-    'V4'
-];
-const RAM_SIZE_OPTIONS = [
-    4,
-    8,
-    12,
-    16,
-    24,
-    32,
-    48,
-    64
-];
-const SLOT_COUNT_OPTIONS = [
-    1,
-    2,
-    3,
-    4
-];
-const BOARD_TYPE_OPTIONS = [
-    'atx',
-    'matx'
-];
-const TRIPLE_SIZES = [
-    12,
-    24,
-    48
-];
-const ULTRA_MODIFIERS = {
-    RFC_SMALL: 0.90,
-    RFC_MED: 0.93,
-    RFC_BIG: 0.97
-};
-const isOptionValid = (field, val, conf)=>{
-    const min = conf.gen === 'V2' ? 2 : 4;
-    if (field === 'ramSize') return val >= min;
-    if (field === 'slotsCount') {
-        if (TRIPLE_SIZES.includes(conf.ramSize) && val === 1) return false;
-        const isV2Special = conf.gen === 'V2' && conf.ramSize === 12 && val === 4;
-        return conf.ramSize / val >= min || isV2Special;
-    }
-    return true;
-};
-const DDR4_RFC = {
-    gb64: {
-        atx: {
-            safe: 980,
-            balanced: 880,
-            aggressive: 820,
-            min: 780
-        },
-        matx: {
-            safe: 1050,
-            balanced: 950,
-            aggressive: 880,
-            min: 840
-        }
+    matx: {
+        label: 'MATX',
+        theme: 'board'
     },
-    gb32: {
-        atx: {
-            safe: 680,
-            balanced: 620,
-            aggressive: 580,
-            min: 540
-        },
-        matx: {
-            safe: 720,
-            balanced: 660,
-            aggressive: 620,
-            min: 580
-        }
+    activate: {
+        label: "\u0410\u041A\u0422\u0418\u0412\u0418\u0420\u041E\u0412\u0410\u0422\u042C",
+        theme: 'danger'
     },
-    gb16: {
-        atx: {
-            safe: 416,
-            balanced: 344,
-            aggressive: 328,
-            min: 312
-        },
-        matx: {
-            safe: 440,
-            balanced: 380,
-            aggressive: 350,
-            min: 330
-        }
+    cancel: {
+        label: "\u041E\u0422\u041C\u0415\u041D\u0410",
+        theme: 'safe'
     },
-    gb8: {
-        atx: {
-            safe: 312,
-            balanced: 280,
-            aggressive: 264,
-            min: 240
-        },
-        matx: {
-            safe: 344,
-            balanced: 328,
-            aggressive: 280,
-            min: 264
-        }
+    yes: {
+        label: "\u0414\u0410",
+        theme: 'yes'
     },
-    gb4: {
-        atx: {
-            safe: 240,
-            balanced: 210,
-            aggressive: 190,
-            min: 170
-        },
-        matx: {
-            safe: 264,
-            balanced: 240,
-            aggressive: 210,
-            min: 190
-        }
-    }
-};
-const RFC_MODIFIERS = {
-    V2: {
-        gb16: {
-            safe: 344,
-            balanced: 312,
-            aggressive: 280,
-            min: 240
-        },
-        gb8: {
-            safe: 210,
-            balanced: 180,
-            aggressive: 172,
-            min: 160
-        },
-        gb4: {
-            safe: 160,
-            balanced: 128,
-            aggressive: 114,
-            min: 96
-        }
-    },
-    V3: DDR4_RFC,
-    V4: DDR4_RFC
-};
-const INITIAL_CONFIG = {
-    gen: 'V2',
-    profile: 'safe',
-    boardType: 'atx',
-    ramSize: 8,
-    slotsCount: 2,
-    isEcc: false,
-    cpu: (0, _cpuData.CPU_MODELS)['V2'][0],
-    custom: {
-        CL: '9',
-        RCD: '9',
-        RP: '9'
-    }
-};
-const TIMINGS_BY_FREQ = {
-    1333: {
-        safe: {
-            tCL: 9,
-            tRCD: 9,
-            tRP: 9,
-            tRAS: 24,
-            tWR: 10,
-            tRRD: 4,
-            tRTP: 6,
-            tWTR: 6,
-            tFAW: 20,
-            tCWL: 9
-        },
-        balanced: {
-            tCL: 7,
-            tRCD: 7,
-            tRP: 7,
-            tRAS: 20,
-            tWR: 10,
-            tRRD: 4,
-            tRTP: 4,
-            tWTR: 4,
-            tFAW: 16,
-            tCWL: 7
-        },
-        aggressive: {
-            tCL: 6,
-            tRCD: 6,
-            tRP: 6,
-            tRAS: 16,
-            tWR: 8,
-            tRRD: 4,
-            tRTP: 4,
-            tWTR: 4,
-            tFAW: 16,
-            tCWL: 6
-        }
-    },
-    1600: {
-        safe: {
-            tCL: 11,
-            tRCD: 11,
-            tRP: 11,
-            tRAS: 28,
-            tWR: 12,
-            tRRD: 5,
-            tRTP: 7,
-            tWTR: 7,
-            tFAW: 20,
-            tCWL: 10
-        },
-        balanced: {
-            tCL: 9,
-            tRCD: 9,
-            tRP: 9,
-            tRAS: 24,
-            tWR: 10,
-            tRRD: 4,
-            tRTP: 6,
-            tWTR: 6,
-            tFAW: 16,
-            tCWL: 9
-        },
-        aggressive: {
-            tCL: 8,
-            tRCD: 8,
-            tRP: 8,
-            tRAS: 20,
-            tWR: 10,
-            tRRD: 4,
-            tRTP: 5,
-            tWTR: 4,
-            tFAW: 16,
-            tCWL: 8
-        }
-    },
-    1866: {
-        safe: {
-            tCL: 13,
-            tRCD: 13,
-            tRP: 13,
-            tRAS: 30,
-            tWR: 12,
-            tRRD: 5,
-            tRTP: 8,
-            tWTR: 8,
-            tFAW: 24,
-            tCWL: 11
-        },
-        balanced: {
-            tCL: 11,
-            tRCD: 11,
-            tRP: 11,
-            tRAS: 26,
-            tWR: 12,
-            tRRD: 4,
-            tRTP: 7,
-            tWTR: 7,
-            tFAW: 20,
-            tCWL: 10
-        },
-        aggressive: {
-            tCL: 10,
-            tRCD: 10,
-            tRP: 10,
-            tRAS: 22,
-            tWR: 10,
-            tRRD: 4,
-            tRTP: 6,
-            tWTR: 5,
-            tFAW: 16,
-            tCWL: 9
-        }
-    },
-    2133: {
-        safe: {
-            tCL: 14,
-            tRCD: 14,
-            tRP: 14,
-            tRAS: 32,
-            tWR: 14,
-            tRRD: 6,
-            tRTP: 10,
-            tWTR: 10,
-            tFAW: 28,
-            tCWL: 13
-        },
-        balanced: {
-            tCL: 13,
-            tRCD: 13,
-            tRP: 13,
-            tRAS: 30,
-            tWR: 14,
-            tRRD: 5,
-            tRTP: 8,
-            tWTR: 8,
-            tFAW: 24,
-            tCWL: 13
-        },
-        aggressive: {
-            tCL: 12,
-            tRCD: 12,
-            tRP: 12,
-            tRAS: 28,
-            tWR: 12,
-            tRRD: 4,
-            tRTP: 7,
-            tWTR: 7,
-            tFAW: 20,
-            tCWL: 12
-        }
-    },
-    2400: {
-        safe: {
-            tCL: 15,
-            tRCD: 15,
-            tRP: 15,
-            tRAS: 34,
-            tWR: 16,
-            tRRD: 6,
-            tRTP: 10,
-            tWTR: 10,
-            tFAW: 28,
-            tCWL: 14
-        },
-        balanced: {
-            tCL: 13,
-            tRCD: 13,
-            tRP: 13,
-            tRAS: 30,
-            tWR: 12,
-            tRRD: 5,
-            tRTP: 8,
-            tWTR: 8,
-            tFAW: 24,
-            tCWL: 13
-        },
-        aggressive: {
-            tCL: 12,
-            tRCD: 12,
-            tRP: 12,
-            tRAS: 28,
-            tWR: 10,
-            tRRD: 4,
-            tRTP: 6,
-            tWTR: 6,
-            tFAW: 16,
-            tCWL: 12
-        }
+    no: {
+        label: "\u041D\u0415\u0422",
+        theme: 'no'
     }
 };
 
-},{"./cpuData":"jogp5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"g2O1J":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useTimingEngine", ()=>useTimingEngine);
-var _zustand = require("zustand");
-var _timingsData = require("./timingsData");
-var _cpuData = require("./cpuData");
-/** 
- * ВАЛИДАЦИЯ: Контроль плотности и слотов.
- */ const validate = (conf)=>{
-    const next = {
-        ...conf
-    };
-    if (!(0, _timingsData.isOptionValid)('slotsCount', next.slotsCount, next)) {
-        const minStick = next.gen === 'V2' ? 2 : 4;
-        next.slotsCount = Math.max(1, Math.floor(next.ramSize / minStick));
-    }
-    return next;
-};
-/**
- * ЯДРО РАСЧЕТОВ
- */ const calculate = (conf)=>{
-    const { cpu, gen, profile, boardType, ramSize, slotsCount, isEcc, custom } = conf;
-    const freq = Math.min(cpu?.max || 1866, 2400);
-    const freqData = (0, _timingsData.TIMINGS_BY_FREQ)[freq] || (0, _timingsData.TIMINGS_BY_FREQ);
-    const isU = profile === 'ultra', isC = profile === 'custom', isMatx = boardType === 'matx';
-    const baseKey = isU || isC ? 'aggressive' : profile;
-    const src = freqData[baseKey] || freqData.balanced;
-    // Тайминги
-    const tCL = isC ? Number(custom.CL) : isU && ramSize < 48 ? src.tCL - 1 : src.tCL;
-    let tRCD = isC ? Number(custom.RCD) : isU && ramSize <= 16 ? src.tRCD - 1 : src.tRCD;
-    let tRP = isC ? Number(custom.RP) : isU && ramSize <= 16 ? src.tRP - 1 : src.tRP;
-    if (isEcc && !isC && profile !== 'safe') {
-        tRCD += 1;
-        tRP += 1;
-    }
-    // tRFC ЛОГИКА (Твоя формула: mATX + Нагрузка слотов)
-    const perStick = Math.max(2, Math.floor(ramSize / slotsCount));
-    const rfcGenData = (0, _timingsData.RFC_MODIFIERS)[gen];
-    const sizeKey = perStick >= 64 ? 'gb64' : perStick >= 32 ? 'gb32' : perStick >= 16 ? 'gb16' : perStick >= 8 ? 'gb8' : 'gb4';
-    const rfcSet = rfcGenData[sizeKey] || rfcGenData.gb16;
-    // Берем базовые значения из таблицы (для mATX они выше в timingsData)
-    const rfcVals = isMatx && rfcSet.matx ? rfcSet.matx : rfcSet.atx || rfcSet;
-    const ratio = freq / (({
-        V2: 1866,
-        V3: 2133,
-        V4: 2400
-    })[gen] || 2400);
-    // Штраф matxPenalty применяется только если в таблице нет готового значения matx
-    const matxPenalty = isMatx && !rfcSet.matx ? 1.15 : 1.0;
-    // loadMod 1.04 дает тот самый прирост при 4 планках
-    const loadMod = slotsCount === 4 && !isMatx ? 1.04 : 1.0;
-    const calcRFCValue = (k)=>{
-        const base = rfcVals[k] || 312;
-        return Math.floor(base * ratio * (isEcc ? 1.08 : 1.0) * loadMod * matxPenalty);
-    };
-    const ultraMod = ramSize >= 48 ? (0, _timingsData.ULTRA_MODIFIERS).RFC_BIG : ramSize >= 24 ? (0, _timingsData.ULTRA_MODIFIERS).RFC_MED : (0, _timingsData.ULTRA_MODIFIERS).RFC_SMALL;
-    const mainRfc = isU ? Math.floor(calcRFCValue('aggressive') * ultraMod) : calcRFCValue(baseKey);
-    let tRFC_Str = `${mainRfc}`;
-    if (!isC) {
-        if (isU) tRFC_Str += " (ULTRA)";
-        else {
-            const nextLevelMap = {
-                safe: 'balanced',
-                balanced: 'aggressive',
-                aggressive: 'min'
-            };
-            const nextKey = nextLevelMap[profile] || 'min';
-            const best = calcRFCValue(nextKey);
-            if (best < mainRfc) tRFC_Str += ` (IDEAL: ${best})`;
-        }
-    }
-    const channels = isMatx ? Math.min(slotsCount, 2) : Math.min(slotsCount, 4);
-    const bandwidth = `${(freq * 8 * channels / 1000 * (slotsCount === 3 ? 0.88 : 1.0)).toFixed(1)} GB/s`;
-    const channelMode = channels === 4 ? 'QUAD' : slotsCount === 3 ? 'TRIPLE' : channels === 2 ? 'DUAL' : 'SINGLE';
-    return {
-        tCL,
-        tRCD,
-        tRP,
-        tRAS: tCL + tRCD + 4,
-        tRC: tCL + tRCD + 4 + tRP,
-        tWR: src.tWR + (isMatx ? 2 : 0),
-        tRRD: isMatx ? 6 : src.tRRD || 4,
-        tFAW: isMatx ? 24 : src.tFAW || 16,
-        tRFC: tRFC_Str,
-        tREFI: ramSize >= 64 || profile === 'safe' || isMatx ? 15600 : isU && ramSize <= 32 ? 65535 : 32767,
-        tCR: profile === 'safe' || boardType === 'atx' && (slotsCount >= 3 || ramSize >= 64 || isEcc) ? '2N' : '1N',
-        tCWL: gen === 'V2' ? tCL : tCL % 2 === 0 ? tCL : tCL - 1,
-        totalRam: ramSize,
-        bandwidth,
-        channelMode,
-        voltage: isU ? '1.45v' : '1.35v',
-        latency: `${(tCL * 2000 / freq).toFixed(1)} ns`,
-        tRTP: isU ? 5 : Math.max(6, Math.floor(tCL / 2)),
-        tWTR: isU ? 4 : src.tWTR || 6,
-        biosTitle: `BIOS: ${freq}MHZ \u{2014} ${ramSize}GB ${channelMode} [${bandwidth}]`
-    };
-};
-const useTimingEngine = (0, _zustand.create)((set)=>({
-        config: (0, _timingsData.INITIAL_CONFIG),
-        unlocked: false,
-        res: calculate((0, _timingsData.INITIAL_CONFIG)),
-        update: (patch)=>set((s)=>{
-                let next = {
-                    ...s.config,
-                    ...patch
-                };
-                if (patch.gen) // Берем первый объект проца
-                next.cpu = (0, _cpuData.CPU_MODELS)[patch.gen][0];
-                next = validate(next);
-                return {
-                    config: next,
-                    res: calculate(next)
-                };
-            }),
-        updateCustomTiming: (k, v)=>set((s)=>{
-                let val = v.replace(/\D/g, '');
-                // Защита от 0 и пустых строк
-                if (!val || val === '0') val = '6';
-                const next = {
-                    ...s.config,
-                    custom: {
-                        ...s.config.custom,
-                        [k]: val
-                    }
-                };
-                return {
-                    config: next,
-                    res: calculate(next)
-                };
-            }),
-        setUnlocked: (u)=>set((s)=>{
-                const next = !u && s.config.profile === 'ultra' ? {
-                    ...s.config,
-                    profile: 'balanced'
-                } : s.config;
-                return {
-                    unlocked: u,
-                    config: next,
-                    res: calculate(next)
-                };
-            })
-    }));
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8CTjF":[function(require,module,exports,__globalThis) {
+module.exports["board_active"] = `-_VRTG_board_active`;
+module.exports["button"] = `-_VRTG_button`;
+module.exports["custom_active"] = `-_VRTG_custom_active`;
+module.exports["danger_active"] = `-_VRTG_danger_active`;
+module.exports["desktop_active"] = `-_VRTG_desktop_active`;
+module.exports["gen_active"] = `-_VRTG_gen_active`;
+module.exports["info"] = `-_VRTG_info`;
+module.exports["info_active"] = `-_VRTG_info_active`;
+module.exports["lava"] = `-_VRTG_lava`;
+module.exports["lava"];
+module.exports["lava_active"] = `-_VRTG_lava_active`;
+module.exports["no_active"] = `-_VRTG_no_active`;
+module.exports["optimal_active"] = `-_VRTG_optimal_active`;
+module.exports["partition_active"] = `-_VRTG_partition_active`;
+module.exports["safe_active"] = `-_VRTG_safe_active`;
+module.exports["server_active"] = `-_VRTG_server_active`;
+module.exports["slots_active"] = `-_VRTG_slots_active`;
+module.exports["v2_active"] = `-_VRTG_v2_active`;
+module.exports["v3_active"] = `-_VRTG_v3_active`;
+module.exports["v4_active"] = `-_VRTG_v4_active`;
+module.exports["warning"] = `-_VRTG_warning`;
+module.exports["warning_active"] = `-_VRTG_warning_active`;
+module.exports["yes_active"] = `-_VRTG_yes_active`;
 
-},{"zustand":"83cPn","./timingsData":"5c8Ij","./cpuData":"jogp5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"83cPn":[function(require,module,exports,__globalThis) {
-'use strict';
-var vanilla = require("a19f4edd89926025");
-var react = require("a0cacd268d6bf882");
-Object.keys(vanilla).forEach(function(k) {
-    if (k !== 'default' && !Object.prototype.hasOwnProperty.call(exports, k)) Object.defineProperty(exports, k, {
-        enumerable: true,
-        get: function() {
-            return vanilla[k];
-        }
-    });
-});
-Object.keys(react).forEach(function(k) {
-    if (k !== 'default' && !Object.prototype.hasOwnProperty.call(exports, k)) Object.defineProperty(exports, k, {
-        enumerable: true,
-        get: function() {
-            return react[k];
-        }
-    });
-});
+},{}],"fNILQ":[function(require,module,exports,__globalThis) {
+module.exports["info_active"] = `ppCF8q_info_active`;
+module.exports["info_border"] = `ppCF8q_info_border`;
+module.exports["info_container"] = `ppCF8q_info_container`;
+module.exports["tab_button"] = `ppCF8q_tab_button`;
+module.exports["toolbox_card"] = `ppCF8q_toolbox_card`;
+module.exports["toolbox_container"] = `ppCF8q_toolbox_container`;
+module.exports["toolbox_tabs"] = `ppCF8q_toolbox_tabs`;
+module.exports["toolbox_title"] = `ppCF8q_toolbox_title`;
+module.exports["tools_active"] = `ppCF8q_tools_active`;
+module.exports["tools_border"] = `ppCF8q_tools_border`;
+module.exports["tools_container"] = `ppCF8q_tools_container`;
 
-},{"a19f4edd89926025":"folPr","a0cacd268d6bf882":"6ueAP"}],"folPr":[function(require,module,exports,__globalThis) {
-'use strict';
-const createStoreImpl = (createState)=>{
-    let state;
-    const listeners = /* @__PURE__ */ new Set();
-    const setState = (partial, replace)=>{
-        const nextState = typeof partial === "function" ? partial(state) : partial;
-        if (!Object.is(nextState, state)) {
-            const previousState = state;
-            state = (replace != null ? replace : typeof nextState !== "object" || nextState === null) ? nextState : Object.assign({}, state, nextState);
-            listeners.forEach((listener)=>listener(state, previousState));
-        }
-    };
-    const getState = ()=>state;
-    const getInitialState = ()=>initialState;
-    const subscribe = (listener)=>{
-        listeners.add(listener);
-        return ()=>listeners.delete(listener);
-    };
-    const api = {
-        setState,
-        getState,
-        getInitialState,
-        subscribe
-    };
-    const initialState = state = createState(setState, getState, api);
-    return api;
-};
-const createStore = (createState)=>createState ? createStoreImpl(createState) : createStoreImpl;
-exports.createStore = createStore;
+},{}],"4y82s":[function(require,module,exports,__globalThis) {
+module.exports["info_container"] = `k8MFAq_info_container`;
+module.exports["info_highlight"] = `k8MFAq_info_highlight`;
+module.exports["info_icon"] = `k8MFAq_info_icon`;
+module.exports["info_item"] = `k8MFAq_info_item`;
+module.exports["info_text"] = `k8MFAq_info_text`;
 
-},{}],"6ueAP":[function(require,module,exports,__globalThis) {
-'use strict';
-var React = require("6a69048f974f8971");
-var vanilla = require("985957b117977eb9");
-const identity = (arg)=>arg;
-function useStore(api, selector = identity) {
-    const slice = React.useSyncExternalStore(api.subscribe, React.useCallback(()=>selector(api.getState()), [
-        api,
-        selector
-    ]), React.useCallback(()=>selector(api.getInitialState()), [
-        api,
-        selector
-    ]));
-    React.useDebugValue(slice);
-    return slice;
-}
-const createImpl = (createState)=>{
-    const api = vanilla.createStore(createState);
-    const useBoundStore = (selector)=>useStore(api, selector);
-    Object.assign(useBoundStore, api);
-    return useBoundStore;
-};
-const create = (createState)=>createState ? createImpl(createState) : createImpl;
-exports.create = create;
-exports.useStore = useStore;
+},{}],"25PqV":[function(require,module,exports,__globalThis) {
+module.exports["btn_group"] = `UGBGfW_btn_group`;
+module.exports["tools_button"] = `UGBGfW_tools_button`;
+module.exports["tools_container"] = `UGBGfW_tools_container`;
+module.exports["tools_icon"] = `UGBGfW_tools_icon`;
+module.exports["tools_item"] = `UGBGfW_tools_item`;
+module.exports["tools_label"] = `UGBGfW_tools_label`;
+module.exports["tools_select"] = `UGBGfW_tools_select`;
+module.exports["tools_select_wrapper"] = `UGBGfW_tools_select_wrapper`;
+module.exports["tools_text"] = `UGBGfW_tools_text`;
 
-},{"6a69048f974f8971":"jMk1U","985957b117977eb9":"folPr"}],"cUeEy":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$6f8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$6f8e.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6f8e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const RamInfo = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u26A1",
-                children: "\u041D\u0430 X99 \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0432\u043E\u043B\u044C\u0442\u0430\u0436\u043E\u043C \u043A\u0430\u043A \u043F\u0440\u0430\u0432\u0438\u043B\u043E \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043E (\u0437\u0430 \u0438\u0441\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435\u043C \u0442\u043E\u043F\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442)! \u041D\u043E \u0435\u0441\u043B\u0438 \u0432\u0441\u0451 \u0436\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0430 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u0442\u044C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u0447\u0435\u0440\u0435\u0437 BIOS, \u0442\u043E \u0437\u0430\u043F\u0438\u0441\u044C \u0434\u0435\u043B\u0430\u0435\u0442\u0441\u044F \u0446\u0435\u043B\u044B\u043C \u0447\u0438\u0441\u043B\u043E\u043C: 120/135/145 \u2014 \u044D\u0442\u043E 1.2 / 1.35 / 1.45 v. \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 0 = Auto (1.2 v)."
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
-                lineNumber: 6,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83E\uDDCA",
-                children: "\u041F\u041E\u041C\u041D\u0418\u0422\u0415! \u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0432\u043E\u043B\u044C\u0442\u0430\u0436\u0430 \u0442\u0440\u0435\u0431\u0443\u044E\u0442 \u043D\u0430\u043B\u0438\u0447\u0438\u0435 \u043A\u0430\u043A\u043E\u0433\u043E-\u043B\u0438\u0431\u043E \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u044F \u041E\u0417\u0423 (\u0440\u0430\u0434\u0438\u0430\u0442\u043E\u0440\u044B, Top-Flow \u043A\u0443\u043B\u0435\u0440)! \u0411\u0435\u0437 \u044D\u0442\u043E\u0433\u043E \u043F\u043B\u0430\u0448\u043A\u0438 \u043C\u043E\u0433\u0443\u0442 \u0431\u044B\u0441\u0442\u0440\u043E \u0434\u0435\u0433\u0440\u0430\u0434\u0438\u0440\u043E\u0432\u0430\u0442\u044C."
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
-                lineNumber: 9,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u26A0\uFE0F",
-                children: "\u0421\u043F\u0435\u0446\u0438\u0444\u0438\u043A\u0430 \u0440\u0430\u0437\u0432\u043E\u0434\u043A\u0438 mATX-\u043F\u043B\u0430\u0442 \u0447\u0430\u0441\u0442\u043E \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0438\u0432\u0430\u0435\u0442 tRFC \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439 \u041E\u0417\u0423. \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 328 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u0432\u0435\u0440\u043E\u044F\u0442\u043D\u044B\u043C \u043F\u043E\u0440\u043E\u0433\u043E\u043C, \u043D\u0438\u0436\u0435 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0442\u0430\u043A\u0438\u0435 \u043C\u043E\u0434\u0443\u043B\u0438 \u043F\u043E\u043F\u0440\u043E\u0441\u0442\u0443 \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u044E\u0442."
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
-                lineNumber: 12,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCCA",
-                children: "\u0412 4-\u043A\u0430\u043D\u0430\u043B\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 tRFC \u0432\u044B\u0448\u0435 \u0438 \u0441\u0442\u0430\u0432\u0438\u0442\u0441\u044F \u043F\u043E \u0441\u0430\u043C\u043E\u0439 \u043C\u0435\u0434\u043B\u0435\u043D\u043D\u043E\u0439 \u043F\u043B\u0430\u0448\u043A\u0435. \u0415\u0441\u043B\u0438 \u043D\u0435\u0442 \u0441\u0442\u0430\u0440\u0442\u0430 \u2014 \u043F\u043E\u0434\u043D\u0438\u043C\u0438\u0442\u0435 tRFC \u043D\u0430 20-40 \u043F\u0443\u043D\u043A\u0442\u043E\u0432. \u0420\u0435\u0436\u0438\u043C 2N/2T \u0447\u0430\u0449\u0435 \u0432\u044B\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044F \u0434\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u0438 (\u0435\u0441\u043B\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u0435\u0442 \u0432 1N/1T)."
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
-                lineNumber: 15,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDD0B",
-                children: "\u0415\u0441\u043B\u0438 \u041F\u041A \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u0435\u0442: \u0432\u044B\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0411\u041F \u0438\u0437 \u0440\u043E\u0437\u0435\u0442\u043A\u0438, \u0432\u044B\u0442\u0430\u0449\u0438\u0442\u0435 \u0431\u0430\u0442\u0430\u0440\u0435\u0439\u043A\u0443 2032 \u0438\u043B\u0438 \u0437\u0430\u043C\u043A\u043D\u0438\u0442\u0435 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u044B CLR_CMOS \u043D\u0430 10 \u0441\u0435\u043A. \u043F\u0435\u0440\u0435\u043C\u044B\u0447\u043A\u043E\u0439 (\u043E\u0442\u0432\u0451\u0440\u0442\u043A\u043E\u0439)."
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
-                lineNumber: 18,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true);
-_c = RamInfo;
-exports.default = RamInfo;
-var _c;
-$RefreshReg$(_c, "RamInfo");
-
-  $parcel$ReactRefreshHelpers$6f8e.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"a06IC":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$d353 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$d353.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d353.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _biosWindow = require("../BiosWindow/BiosWindow");
-var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
-var _timingEngine = require("./data/timingEngine");
-var _s = $RefreshSig$();
-const RamBios = ()=>{
-    _s();
-    const { config, res, updateCustomTiming } = (0, _timingEngine.useTimingEngine)();
-    if (!res) return null;
-    const isUltra = config.profile === 'ultra';
-    const rows = [
-        {
-            label: "DIMM profile",
-            value: "MANUAL",
-            highlight: isUltra
-        },
-        {
-            label: "Memory Voltage",
-            value: res.voltage,
-            highlight: isUltra
-        },
-        {
-            label: "Command Timing",
-            value: res.tCR
-        },
-        {
-            label: "Refresh Rate (tREFI)",
-            value: res.tREFI
-        },
-        {
-            label: "CAS Latency (tCL)",
-            value: res.tCL,
-            manualKey: "CL"
-        },
-        {
-            label: "tRP",
-            value: res.tRP,
-            manualKey: "RP"
-        },
-        {
-            label: "tRCD",
-            value: res.tRCD,
-            manualKey: "RCD"
-        },
-        {
-            label: "tRAS",
-            value: res.tRAS
-        },
-        {
-            label: "tWR",
-            value: res.tWR
-        },
-        {
-            label: "tRFC",
-            value: res.tRFC,
-            highlight: isUltra
-        },
-        {
-            label: "tRRD",
-            value: res.tRRD
-        },
-        {
-            label: "tRTP",
-            value: res.tRTP
-        },
-        {
-            label: "tWTR",
-            value: res.tWTR
-        },
-        {
-            label: "tFAW",
-            value: res.tFAW
-        },
-        {
-            label: "tRC",
-            value: res.tRC
-        },
-        {
-            label: "tCWL",
-            value: res.tCWL
-        }
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-        title: res.biosTitle,
-        path: "IntelRCSetup > Memory Configuration > Memory Timings & Voltage",
-        config: config,
-        onUpdate: updateCustomTiming,
-        rows: rows,
-        isUltra: isUltra
-    }, void 0, false, {
-        fileName: "src/components/RamConfiguration/RamBios.tsx",
-        lineNumber: 28,
-        columnNumber: 5
-    }, undefined);
-};
-_s(RamBios, "ZZfy2Aer231DcIT7MLd4cUSL/PA=", false, function() {
-    return [
-        (0, _timingEngine.useTimingEngine)
-    ];
-});
-_c = RamBios;
-exports.default = RamBios;
-var _c;
-$RefreshReg$(_c, "RamBios");
-
-  $parcel$ReactRefreshHelpers$d353.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"fCqKj","./data/timingEngine":"g2O1J","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fCqKj":[function(require,module,exports,__globalThis) {
+},{}],"fCqKj":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$87fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$87fc.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -28795,107 +27622,108 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _biosWindowModuleCss = require("./BiosWindow.module.css");
 var _biosWindowModuleCssDefault = parcelHelpers.interopDefault(_biosWindowModuleCss);
-const BiosWindow = ({ title, path, rows = [], config = {}, onUpdate, promo })=>{
-    const isManual = config?.profile === 'custom';
-    const vals = config?.custom || {};
+var _useBiosLogic = require("./hooks/useBiosLogic");
+var _useBiosLogicDefault = parcelHelpers.interopDefault(_useBiosLogic);
+var _biosInput = require("./BiosInput/BiosInput");
+var _biosInputDefault = parcelHelpers.interopDefault(_biosInput);
+var _s = $RefreshSig$();
+const BiosWindow = ({ title, content = [], path, type, value, onBiosChange })=>{
+    _s();
+    const getRightText = (0, _useBiosLogicDefault.default)(type, value);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _biosWindowModuleCssDefault.default).screenWrapper,
+        className: (0, _biosWindowModuleCssDefault.default).bios_container,
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _biosWindowModuleCssDefault.default).mainWindow,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _biosWindowModuleCssDefault.default).windowTitle,
-                        children: title
-                    }, void 0, false, {
-                        fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _biosWindowModuleCssDefault.default).rowsList,
-                        children: rows.map((r, i)=>r === 'hr' ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: (0, _biosWindowModuleCssDefault.default).rowSeparator
-                            }, i, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+                className: (0, _biosWindowModuleCssDefault.default).bios__header,
+                children: title
+            }, void 0, false, {
+                fileName: "src/components/BiosWindow/BiosWindow.tsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                className: (0, _biosWindowModuleCssDefault.default).bios__list,
+                "data-input-group": true,
+                children: content.map((item, index)=>{
+                    const rightText = getRightText(item);
+                    const isDisabled = rightText === "Disabled" || rightText === "Disable";
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: (0, _biosWindowModuleCssDefault.default).bios__item,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: (0, _biosWindowModuleCssDefault.default).text_left,
+                                children: item.text_left
+                            }, void 0, false, {
                                 fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                                lineNumber: 14,
-                                columnNumber: 26
-                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: `${(0, _biosWindowModuleCssDefault.default).itemRow} ${r.highlight ? (0, _biosWindowModuleCssDefault.default).isHighlighted : ''} ${r.disabled ? (0, _biosWindowModuleCssDefault.default).isDisabled : ''}`,
+                                lineNumber: 20,
+                                columnNumber: 15
+                            }, undefined),
+                            item.id && onBiosChange ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: (0, _biosWindowModuleCssDefault.default).text_right,
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: (0, _biosWindowModuleCssDefault.default).rowLabel,
-                                        children: r.label
+                                    "[",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosInputDefault.default), {
+                                        value: rightText,
+                                        onChange: (val)=>onBiosChange(item.id, val),
+                                        isFirst: item.id === 'tCL'
                                     }, void 0, false, {
                                         fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                                        lineNumber: 16,
-                                        columnNumber: 15
+                                        lineNumber: 24,
+                                        columnNumber: 20
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: (0, _biosWindowModuleCssDefault.default).rowValue,
-                                        children: [
-                                            "[",
-                                            r.manualKey && isManual ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                                className: `${(0, _biosWindowModuleCssDefault.default).valueInput} ${(0, _biosWindowModuleCssDefault.default).editableInput}`,
-                                                value: vals[r.manualKey] ?? '',
-                                                maxLength: 2,
-                                                onChange: (e)=>onUpdate(r.manualKey, e.target.value),
-                                                onFocus: (e)=>e.target.select()
-                                            }, void 0, false, {
-                                                fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                                                lineNumber: 19,
-                                                columnNumber: 19
-                                            }, undefined) : r.value,
-                                            "]"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                                        lineNumber: 17,
-                                        columnNumber: 15
-                                    }, undefined)
+                                    "]"
                                 ]
-                            }, i, true, {
+                            }, void 0, true, {
                                 fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                                lineNumber: 15,
-                                columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
-                        fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _biosWindowModuleCssDefault.default).pathFooter,
-                        children: [
-                            "PATH: ",
-                            path
+                                lineNumber: 23,
+                                columnNumber: 17
+                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: isDisabled ? (0, _biosWindowModuleCssDefault.default).state_disabled : (0, _biosWindowModuleCssDefault.default).text_right,
+                                children: [
+                                    "[",
+                                    rightText,
+                                    "]"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/BiosWindow/BiosWindow.tsx",
+                                lineNumber: 31,
+                                columnNumber: 17
+                            }, undefined)
                         ]
-                    }, void 0, true, {
+                    }, index, true, {
                         fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                        lineNumber: 31,
-                        columnNumber: 9
-                    }, undefined)
+                        lineNumber: 19,
+                        columnNumber: 13
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "src/components/BiosWindow/BiosWindow.tsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
+                className: (0, _biosWindowModuleCssDefault.default).bios__footer,
+                children: [
+                    "PATH: ",
+                    path
                 ]
             }, void 0, true, {
                 fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                lineNumber: 10,
+                lineNumber: 40,
                 columnNumber: 7
-            }, undefined),
-            promo && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _biosWindowModuleCssDefault.default).promoBanner,
-                children: promo
-            }, void 0, false, {
-                fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                lineNumber: 33,
-                columnNumber: 17
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/BiosWindow/BiosWindow.tsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
+_s(BiosWindow, "7bcbOWdXCUXt/uQ1F7Aj6Qspa08=", false, function() {
+    return [
+        (0, _useBiosLogicDefault.default)
+    ];
+});
 _c = BiosWindow;
 exports.default = BiosWindow;
 var _c;
@@ -28906,1489 +27734,108 @@ $RefreshReg$(_c, "BiosWindow");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./BiosWindow.module.css":"aFKvL","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"aFKvL":[function(require,module,exports,__globalThis) {
-module.exports["editableInput"] = `ZDSeZG_editableInput`;
-module.exports["isDisabled"] = `ZDSeZG_isDisabled`;
-module.exports["isHighlighted"] = `ZDSeZG_isHighlighted`;
-module.exports["itemRow"] = `ZDSeZG_itemRow`;
-module.exports["mainWindow"] = `ZDSeZG_mainWindow`;
-module.exports["pathFooter"] = `ZDSeZG_pathFooter`;
-module.exports["rowSeparator"] = `ZDSeZG_rowSeparator`;
-module.exports["rowValue"] = `ZDSeZG_rowValue`;
-module.exports["rowsList"] = `ZDSeZG_rowsList`;
-module.exports["screenWrapper"] = `ZDSeZG_screenWrapper`;
-module.exports["valueInput"] = `ZDSeZG_valueInput`;
-module.exports["windowTitle"] = `ZDSeZG_windowTitle`;
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./BiosWindow.module.css":"aFKvL","./hooks/useBiosLogic":"9oLFO","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./BiosInput/BiosInput":"8hr8e"}],"aFKvL":[function(require,module,exports,__globalThis) {
+module.exports["bios__footer"] = `ZDSeZG_bios__footer`;
+module.exports["bios__header"] = `ZDSeZG_bios__header`;
+module.exports["bios__item"] = `ZDSeZG_bios__item`;
+module.exports["bios__list"] = `ZDSeZG_bios__list`;
+module.exports["bios_container"] = `ZDSeZG_bios_container`;
+module.exports["state_disabled"] = `ZDSeZG_state_disabled`;
+module.exports["text_left"] = `ZDSeZG_text_left`;
+module.exports["text_right"] = `ZDSeZG_text_right`;
 
-},{}],"lUMXS":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$7314 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$7314.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7314.prelude(module);
-
-try {
+},{}],"9oLFO":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _ultraWarningModalModuleCss = require("./UltraWarningModal.module.css");
-var _ultraWarningModalModuleCssDefault = parcelHelpers.interopDefault(_ultraWarningModalModuleCss);
-var _useUltraUnlock = require("./hooks/useUltraUnlock");
-var _ultraModalView = require("./UltraModalView");
-var _ultraModalViewDefault = parcelHelpers.interopDefault(_ultraModalView);
-var _s = $RefreshSig$();
-const UltraWarningModal = ({ onModalOpen })=>{
-    _s();
-    const { isOpen, unlocked, handleTrigger, close } = (0, _useUltraUnlock.useUltraUnlock)(onModalOpen);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _ultraWarningModalModuleCssDefault.default).wrapper,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                onMouseDown: (e)=>{
-                    if (e.detail > 1) e.preventDefault();
-                    handleTrigger(e.detail);
-                },
-                className: `${(0, _ultraWarningModalModuleCssDefault.default).title} ${unlocked ? (0, _ultraWarningModalModuleCssDefault.default).unlocked : ''}`,
-                children: unlocked ? "EXTREME RAM TOOL \uD83D\uDEE0\uFE0F" : 'XEON RAM TOOL'
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                lineNumber: 15,
-                columnNumber: 7
-            }, undefined),
-            isOpen && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ultraModalViewDefault.default), {
-                onClose: close
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-                lineNumber: 25,
-                columnNumber: 18
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RamConfiguration/UltraWarningModal/UltraWarningModal.tsx",
-        lineNumber: 14,
-        columnNumber: 5
-    }, undefined);
-};
-_s(UltraWarningModal, "lU84kczB+6C/WeYDLACXY/Ubtm8=", false, function() {
-    return [
-        (0, _useUltraUnlock.useUltraUnlock)
-    ];
-});
-_c = UltraWarningModal;
-exports.default = UltraWarningModal;
-var _c;
-$RefreshReg$(_c, "UltraWarningModal");
-
-  $parcel$ReactRefreshHelpers$7314.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./UltraWarningModal.module.css":"18H3D","./hooks/useUltraUnlock":"bzxOI","./UltraModalView":"i3mGe","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"18H3D":[function(require,module,exports,__globalThis) {
-module.exports["btnCancel"] = `IfAWBa_btnCancel`;
-module.exports["btnConfirm"] = `IfAWBa_btnConfirm`;
-module.exports["exclamation"] = `IfAWBa_exclamation`;
-module.exports["hazardLine"] = `IfAWBa_hazardLine`;
-module.exports["hazardTriangle"] = `IfAWBa_hazardTriangle`;
-module.exports["lavaSync"] = `IfAWBa_lavaSync`;
-module.exports["lavaSync"];
-module.exports["modalActions"] = `IfAWBa_modalActions`;
-module.exports["modalBody"] = `IfAWBa_modalBody`;
-module.exports["modalContent"] = `IfAWBa_modalContent`;
-module.exports["modalOverlay"] = `IfAWBa_modalOverlay`;
-module.exports["modalText"] = `IfAWBa_modalText`;
-module.exports["modalTitle"] = `IfAWBa_modalTitle`;
-module.exports["moveStripes"] = `IfAWBa_moveStripes`;
-module.exports["moveStripes"];
-module.exports["unlocked"] = `IfAWBa_unlocked`;
-module.exports["voltage"] = `IfAWBa_voltage`;
-module.exports["warningAlert"] = `IfAWBa_warningAlert`;
-
-},{}],"bzxOI":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$c792 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$c792.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c792.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useUltraUnlock", ()=>useUltraUnlock);
-var _react = require("react");
-var _timingEngine = require("../../data/timingEngine");
-const useUltraUnlock = (onStateChange)=>{
-    const [isOpen, setIsOpen] = (0, _react.useState)(false);
-    const [clicks, setClicks] = (0, _react.useState)(0);
-    const timerRef = (0, _react.useRef)(null);
-    const { unlocked, setUnlocked } = (0, _timingEngine.useTimingEngine)();
-    const close = (success)=>{
-        if (timerRef.current) clearTimeout(timerRef.current);
-        if (success) setUnlocked(true);
-        setIsOpen(false);
-        onStateChange(false);
-        setClicks(0);
-    };
-    const handleTrigger = (detail)=>{
-        if (unlocked) return;
-        const nextClicks = clicks + 1;
-        if (nextClicks >= 10) {
-            setIsOpen(true);
-            onStateChange(true);
-        } else setClicks(nextClicks);
-    };
-    (0, _react.useEffect)(()=>{
-        if (isOpen) timerRef.current = setTimeout(()=>close(false), 5000);
-        return ()=>{
-            if (timerRef.current) clearTimeout(timerRef.current);
+const useBiosLogic = (type, value)=>(item)=>{
+        if (item.text_right) return item.text_right;
+        const biosMapper = {
+            csm: {
+                "CSM Support": value === 'gpt' ? "Disabled" : "Enabled",
+                "Boot option filter": value === 'gpt' ? "UEFI only" : "Legacy only",
+                def: value === 'gpt' ? "UEFI" : "Legacy"
+            },
+            power: {
+                // V2 в макс. перфоманс (C0/C1), V3/V4 оставляем базу для стабильности (C2)
+                "Package C State limit": value === 'v_2' ? "C0/C1 state" : "C2 state",
+                // Только V3 требует C3 [Enable] для стабильного анлока. V2 и V4 — Disable.
+                "CPU C3 report": value === 'v_3' ? "Enable" : "Disable",
+                // C6 всегда Disable для всех (форумный стандарт для стабильности и скорости)
+                "CPU C6 report": "Disable",
+                // Для V3 дефолт Enable (чтобы подхватить остальные отчеты), для V2/V4 — Disable
+                def: value === 'v_3' ? "Enable" : "Disable"
+            },
+            iio: {
+                def: value === 'gen_3' ? 'GEN 3' : 'GEN 2'
+            }
         };
+        return biosMapper[type]?.[item.text_left] ?? biosMapper[type]?.def ?? 'N/A';
+    };
+exports.default = useBiosLogic;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8hr8e":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9b66 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9b66.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9b66.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _biosInputModuleCss = require("./BiosInput.module.css");
+var _biosInputModuleCssDefault = parcelHelpers.interopDefault(_biosInputModuleCss);
+var _s = $RefreshSig$();
+const BiosInput = ({ value, onChange, isFirst })=>{
+    _s();
+    const inputRef = (0, _react.useRef)(null);
+    (0, _react.useEffect)(()=>{
+        if (isFirst && inputRef.current) inputRef.current.focus();
     }, [
-        isOpen
+        isFirst
     ]);
-    return {
-        isOpen,
-        unlocked,
-        handleTrigger,
-        close
+    const handleKeyDown = (e)=>{
+        if (e.key === 'Enter') {
+            const parent = e.currentTarget.closest('[data-input-group]');
+            if (!parent) return;
+            const allInputs = Array.from(parent.querySelectorAll(`.${(0, _biosInputModuleCssDefault.default).bios_input}`));
+            const currentIndex = allInputs.indexOf(e.currentTarget);
+            const nextInput = allInputs[currentIndex + 1];
+            if (nextInput) nextInput.focus();
+            else e.currentTarget.blur();
+        }
     };
-};
-
-  $parcel$ReactRefreshHelpers$c792.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"jMk1U","../../data/timingEngine":"g2O1J","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"i3mGe":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$ad21 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$ad21.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ad21.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _ultraWarningModalModuleCss = require("./UltraWarningModal.module.css");
-var _ultraWarningModalModuleCssDefault = parcelHelpers.interopDefault(_ultraWarningModalModuleCss);
-const UltraModalView = ({ onClose })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _ultraWarningModalModuleCssDefault.default).modalOverlay,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: (0, _ultraWarningModalModuleCssDefault.default).modalContent,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: (0, _ultraWarningModalModuleCssDefault.default).hazardLine
-                }, void 0, false, {
-                    fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                    lineNumber: 11,
-                    columnNumber: 7
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: (0, _ultraWarningModalModuleCssDefault.default).modalBody,
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: (0, _ultraWarningModalModuleCssDefault.default).hazardTriangle,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _ultraWarningModalModuleCssDefault.default).exclamation,
-                                children: "!"
-                            }, void 0, false, {
-                                fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                                lineNumber: 13,
-                                columnNumber: 43
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                            lineNumber: 13,
-                            columnNumber: 9
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            className: (0, _ultraWarningModalModuleCssDefault.default).modalTitle,
-                            children: "\u26A0\uFE0F \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415: ULTRA \u0420\u0415\u0416\u0418\u041C"
-                        }, void 0, false, {
-                            fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                            lineNumber: 14,
-                            columnNumber: 9
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: (0, _ultraWarningModalModuleCssDefault.default).modalText,
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    children: "\u0412\u044B \u0430\u043A\u0442\u0438\u0432\u0438\u0440\u0443\u0435\u0442\u0435 \u044D\u043A\u0441\u0442\u0440\u0435\u043C\u0430\u043B\u044C\u043D\u044B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438. \u041F\u043E\u0434\u0445\u043E\u0434\u0438\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0434\u043B\u044F \u0443\u0434\u0430\u0447\u043D\u044B\u0445 \u0447\u0438\u043F\u043E\u0432 \u0438 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u043E\u0431\u0434\u0443\u0432\u0430."
-                                }, void 0, false, {
-                                    fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                                    lineNumber: 16,
-                                    columnNumber: 11
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    children: [
-                                        "\u041D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435: ",
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                            className: (0, _ultraWarningModalModuleCssDefault.default).voltage,
-                                            children: "1.45V"
-                                        }, void 0, false, {
-                                            fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                                            lineNumber: 17,
-                                            columnNumber: 26
-                                        }, undefined),
-                                        "."
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                                    lineNumber: 17,
-                                    columnNumber: 11
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    className: (0, _ultraWarningModalModuleCssDefault.default).warningAlert,
-                                    children: '\u041D\u0430\u0436\u043C\u0438\u0442\u0435 "\u041E\u0422\u041C\u0415\u041D\u0410", \u0435\u0441\u043B\u0438 \u0432\u044B \u043F\u0440\u043E\u0447\u043B\u0438 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435.'
-                                }, void 0, false, {
-                                    fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                                    lineNumber: 18,
-                                    columnNumber: 11
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                            lineNumber: 15,
-                            columnNumber: 9
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: (0, _ultraWarningModalModuleCssDefault.default).modalActions,
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: (0, _ultraWarningModalModuleCssDefault.default).btnConfirm,
-                                    onClick: ()=>onClose(false),
-                                    children: "\u0410\u041A\u0422\u0418\u0412\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
-                                }, void 0, false, {
-                                    fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                                    lineNumber: 21,
-                                    columnNumber: 11
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: (0, _ultraWarningModalModuleCssDefault.default).btnCancel,
-                                    onClick: ()=>onClose(true),
-                                    children: "\u041E\u0422\u041C\u0415\u041D\u0410"
-                                }, void 0, false, {
-                                    fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                                    lineNumber: 22,
-                                    columnNumber: 11
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                            lineNumber: 20,
-                            columnNumber: 9
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                    lineNumber: 12,
-                    columnNumber: 7
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: (0, _ultraWarningModalModuleCssDefault.default).hazardLine
-                }, void 0, false, {
-                    fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-                    lineNumber: 25,
-                    columnNumber: 7
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-            lineNumber: 10,
-            columnNumber: 5
-        }, undefined)
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+        ref: inputRef,
+        className: (0, _biosInputModuleCssDefault.default).bios_input,
+        value: value,
+        onChange: (e)=>onChange(e.target.value),
+        onKeyDown: handleKeyDown,
+        type: "text"
     }, void 0, false, {
-        fileName: "src/components/RamConfiguration/UltraWarningModal/UltraModalView.tsx",
-        lineNumber: 9,
-        columnNumber: 3
-    }, undefined);
-_c = UltraModalView;
-exports.default = UltraModalView;
-var _c;
-$RefreshReg$(_c, "UltraModalView");
-
-  $parcel$ReactRefreshHelpers$ad21.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./UltraWarningModal.module.css":"18H3D","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kEGQB":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$8d8c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$8d8c.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8d8c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-var _powerTools = require("./PowerTools");
-var _powerToolsDefault = parcelHelpers.interopDefault(_powerTools);
-var _powerBios = require("./PowerBios");
-var _powerBiosDefault = parcelHelpers.interopDefault(_powerBios);
-var _powerInfo = require("./PowerInfo");
-var _powerInfoDefault = parcelHelpers.interopDefault(_powerInfo);
-var _s = $RefreshSig$();
-const PowerConfiguration = ()=>{
-    _s();
-    const [gen, setGen] = (0, _react.useState)('V3');
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-        className: "manager-layout",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default), {
-                title: "Power Management",
-                toolsLabel: "\u041F\u0420\u0415\u0421\u0415\u0422 CPU",
-                infoNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerInfoDefault.default), {}, void 0, false, {
-                    fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
-                    lineNumber: 15,
-                    columnNumber: 19
-                }, void 0),
-                toolsNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerToolsDefault.default), {
-                    gen: gen,
-                    setGen: setGen
-                }, void 0, false, {
-                    fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
-                    lineNumber: 16,
-                    columnNumber: 20
-                }, void 0)
-            }, void 0, false, {
-                fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerBiosDefault.default), {
-                gen: gen
-            }, void 0, false, {
-                fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
-                lineNumber: 19,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
-        lineNumber: 11,
+        fileName: "src/components/BiosWindow/BiosInput/BiosInput.tsx",
+        lineNumber: 40,
         columnNumber: 5
     }, undefined);
 };
-_s(PowerConfiguration, "zVy1D2ChclJcYJlYptEvIrQEiJ8=");
-_c = PowerConfiguration;
-exports.default = PowerConfiguration;
+_s(BiosInput, "cBQ6FQ+sf5H+lvNONLKqtm4aeQ8=");
+_c = BiosInput;
+exports.default = BiosInput;
 var _c;
-$RefreshReg$(_c, "PowerConfiguration");
+$RefreshReg$(_c, "BiosInput");
 
-  $parcel$ReactRefreshHelpers$8d8c.postlude(module);
+  $parcel$ReactRefreshHelpers$9b66.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","./PowerTools":"5kdfK","./PowerBios":"fZl1s","./PowerInfo":"lE1Wq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"5kdfK":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$9455 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$9455.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9455.prelude(module);
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./BiosInput.module.css":"iLXjo","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iLXjo":[function(require,module,exports,__globalThis) {
+module.exports["bios_input"] = `g7v7xa_bios_input`;
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _button = require("../Button/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const PowerTools = ({ gen, setGen })=>{
-    const options = [
-        'V2',
-        'V3',
-        'V4'
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Label, {
-                        children: "\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415 \u041F\u0420\u041E\u0426\u0415\u0421\u0421\u041E\u0420\u0410:"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Grid, {
-                        children: options.map((opt)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                type: opt,
-                                isActive: gen === opt,
-                                onClick: ()=>setGen(opt)
-                            }, opt, false, {
-                                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                                lineNumber: 14,
-                                columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            gen === 'V2' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u2699\uFE0F",
-                children: [
-                    "\u0414\u043B\u044F V2 \u0440\u0430\u0437\u0433\u043E\u043D \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D \u043C\u043D\u043E\u0436\u0438\u0442\u0435\u043B\u0435\u043C (16xx) \u0438\u043B\u0438 \u0448\u0438\u043D\u043E\u0439. \u041E\u043F\u0446\u0438\u044F ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "Package C State limit [No Limit]"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 21,
-                        columnNumber: 70
-                    }, undefined),
-                    " \u043F\u043E\u043C\u043E\u0433\u0430\u0435\u0442 \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0442\u044C \u0447\u0430\u0441\u0442\u043E\u0442\u0443 \u043F\u043E\u0434 \u043D\u0430\u0433\u0440\u0443\u0437\u043A\u043E\u0439."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 20,
-                columnNumber: 9
-            }, undefined),
-            gen === 'V3' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCA1",
-                children: [
-                    "\u0414\u043B\u044F \u0440\u0430\u0431\u043E\u0442\u044B ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "Unlock Turbo Boost"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 27,
-                        columnNumber: 22
-                    }, undefined),
-                    " \u043D\u0430 V3 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "CPU C3 Report [Enabled]"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 27,
-                        columnNumber: 74
-                    }, undefined),
-                    "."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 26,
-                columnNumber: 9
-            }, undefined),
-            gen === 'V4' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDE80",
-                children: [
-                    "\u041D\u0430 \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0435 V4 \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \u0432\u044B\u0441\u0442\u0430\u0432\u043B\u044F\u0442\u044C ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "CPU C3 Report [Disabled]"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 33,
-                        columnNumber: 54
-                    }, undefined),
-                    " \u0434\u043B\u044F \u043C\u0438\u043D\u0438\u043C\u0438\u0437\u0430\u0446\u0438\u0438 \u0437\u0430\u0434\u0435\u0440\u0436\u0435\u043A."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 32,
-                columnNumber: 9
-            }, undefined),
-            gen !== 'V2' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDEE0\uFE0F",
-                children: [
-                    "\u0415\u0441\u043B\u0438 \u0447\u0430\u0441\u0442\u043E\u0442\u044B \xab\u043F\u0440\u044B\u0433\u0430\u044E\u0442\xbb \u2014 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u043E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u044C ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "C1E"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 39,
-                        columnNumber: 57
-                    }, undefined),
-                    " \u0447\u0435\u0440\u0435\u0437 ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "ThrottleStop"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 39,
-                        columnNumber: 74
-                    }, undefined),
-                    "."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 38,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDD0A",
-                children: [
-                    "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043A ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "C-States"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 44,
-                        columnNumber: 28
-                    }, undefined),
-                    " \u043C\u043E\u0436\u0435\u0442 \u043F\u043E\u0432\u043B\u0438\u044F\u0442\u044C \u043D\u0430 \u043F\u0438\u0441\u043A \u0434\u0440\u043E\u0441\u0441\u0435\u043B\u0435\u0439 (",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "Coil Whine"
-                    }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 44,
-                        columnNumber: 78
-                    }, undefined),
-                    ")."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 43,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_c = PowerTools;
-exports.default = PowerTools;
-var _c;
-$RefreshReg$(_c, "PowerTools");
-
-  $parcel$ReactRefreshHelpers$9455.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fZl1s":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$97da = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$97da.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$97da.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _biosWindow = require("../BiosWindow/BiosWindow");
-var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
-const PowerBios = ({ gen })=>{
-    const rows = [
-        {
-            label: "C2C3TT",
-            value: "0"
-        },
-        {
-            label: "Package C State limit",
-            value: gen === 'V2' ? 'No Limit' : 'C2 state',
-            highlight: gen !== 'V2'
-        },
-        {
-            label: "CPU C3 report",
-            value: gen === 'V4' ? 'Disable' : 'Enable',
-            highlight: gen === 'V4'
-        },
-        {
-            label: "CPU C6 report",
-            value: gen === 'V2' ? 'Enable' : 'Disable',
-            highlight: gen !== 'V2'
-        }
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-        title: "CPU C STATE CONTROL",
-        path: "Advanced > Power Management Configuration > CPU C State Control",
-        rows: rows
-    }, void 0, false, {
-        fileName: "src/components/PowerConfiguration/PowerBios.tsx",
-        lineNumber: 12,
-        columnNumber: 10
-    }, undefined);
-};
-_c = PowerBios;
-exports.default = PowerBios;
-var _c;
-$RefreshReg$(_c, "PowerBios");
-
-  $parcel$ReactRefreshHelpers$97da.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"fCqKj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"lE1Wq":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$c8c9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$c8c9.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c8c9.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const PowerInfo = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDE80",
-                children: "\u0414\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0433\u043E \u0410\u043D\u043B\u043E\u043A\u0430 \u0422\u0443\u0440\u0431\u043E\u0431\u0443\u0441\u0442\u0430 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0435\u043C \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 C6 (C6 Offline / Un-demote) \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 \u043F\u0438\u0442\u0430\u043D\u0438\u044F CPU!"
-            }, void 0, false, {
-                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
-                lineNumber: 6,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDD79\uFE0F",
-                children: "\u041D\u0430 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u0445 V4 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 C3 \u0434\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u043C\u0438\u043A\u0440\u043E\u0437\u0430\u0434\u0435\u0440\u0436\u043A\u0438 \u0432 \u0438\u0433\u0440\u0430\u0445. \u042D\u0442\u043E \u0434\u0435\u043B\u0430\u0435\u0442 \u0433\u0440\u0430\u0444\u0438\u043A Frame Time \u0440\u043E\u0432\u043D\u0435\u0435."
-            }, void 0, false, {
-                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
-                lineNumber: 9,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCDC",
-                children: "\u0414\u043B\u044F V2 \u043B\u0443\u0447\u0448\u0435 \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0432\u0441\u0451 \u0432 \u0441\u0442\u043E\u043A\u0435 (No Limit), \u0447\u0442\u043E\u0431\u044B \u043D\u0435 \u043F\u043E\u0442\u0435\u0440\u044F\u0442\u044C \u0447\u0430\u0441\u0442\u043E\u0442\u0443 \u043D\u0430 \u043E\u0434\u043D\u043E \u044F\u0434\u0440\u043E \u043F\u0440\u0438 \u0432\u044B\u0441\u043E\u043A\u043E\u0439 \u043D\u0430\u0433\u0440\u0443\u0437\u043A\u0435."
-            }, void 0, false, {
-                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
-                lineNumber: 12,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u26A1",
-                children: "\u0415\u0441\u043B\u0438 \u0447\u0430\u0441\u0442\u043E\u0442\u044B \xab\u0437\u0430\u043C\u0435\u0440\u043B\u0438\xbb \u043D\u0430 \u043C\u0430\u043A\u0441\u0438\u043C\u0443\u043C\u0435, \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0441\u0445\u0435\u043C\u0443 \u043F\u0438\u0442\u0430\u043D\u0438\u044F \u0432 Windows. \u0414\u043B\u044F \u0440\u0430\u0437\u0433\u043E\u043D\u0430 \u0441\u0442\u0430\u0432\u044C\u0442\u0435 \xab\u0412\u044B\u0441\u043E\u043A\u0430\u044F \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C\xbb."
-            }, void 0, false, {
-                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
-                lineNumber: 15,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true);
-_c = PowerInfo;
-exports.default = PowerInfo;
-var _c;
-$RefreshReg$(_c, "PowerInfo");
-
-  $parcel$ReactRefreshHelpers$c8c9.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4qPFO":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$f420 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$f420.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f420.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-var _fanInfo = require("./FanInfo");
-var _fanInfoDefault = parcelHelpers.interopDefault(_fanInfo);
-var _fanBios = require("./FanBios");
-var _fanBiosDefault = parcelHelpers.interopDefault(_fanBios);
-var _fanTools = require("./FanTools/FanTools");
-var _fanToolsDefault = parcelHelpers.interopDefault(_fanTools);
-const FanConfiguration = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-        className: "manager-layout",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default), {
-                title: "SMART FAN FUNCTION",
-                toolsLabel: "\u041E\u0411\u041E\u0420\u041E\u0422\u042B %",
-                infoNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanInfoDefault.default), {}, void 0, false, {
-                    fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
-                    lineNumber: 12,
-                    columnNumber: 19
-                }, void 0),
-                toolsNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanToolsDefault.default), {}, void 0, false, {
-                    fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
-                    lineNumber: 13,
-                    columnNumber: 20
-                }, void 0)
-            }, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanBiosDefault.default), {}, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
-                lineNumber: 15,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, undefined);
-};
-_c = FanConfiguration;
-exports.default = FanConfiguration;
-var _c;
-$RefreshReg$(_c, "FanConfiguration");
-
-  $parcel$ReactRefreshHelpers$f420.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","../InfoBlock/InfoBlock":"xpgGa","./FanInfo":"fU0eG","./FanBios":"j5Yvg","./FanTools/FanTools":"lrIHy","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fU0eG":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$2fe4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$2fe4.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2fe4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const FanInfo = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83C\uDF21\uFE0F",
-                children: "Temperature Tolerance - \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 5-8 (\u0413\u0438\u0441\u0442\u0435\u0440\u0435\u0437\u0438\u0441). \u042D\u0442\u043E \u0441\u043E\u0437\u0434\u0430\u0441\u0442 \xab\u0431\u0443\u0444\u0435\u0440\xbb, \u0447\u0442\u043E\u0431\u044B \u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0442\u043E\u0440\u044B \u043D\u0435 \u0432\u044B\u043B\u0438 \u043F\u0440\u0438 \u043A\u0430\u0436\u0434\u043E\u043C \u0441\u043A\u0430\u0447\u043A\u0435 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440\u044B \u043D\u0430 1-2 \u0433\u0440\u0430\u0434\u0443\u0441\u0430."
-            }, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanInfo.tsx",
-                lineNumber: 6,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCE2",
-                children: "\u041F\u043E\u043B\u043D\u043E\u0446\u0435\u043D\u043D\u043E \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E 4-pin \u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0442\u043E\u0440\u044B. 4-pin \u0432\u0435\u0440\u0442\u0443\u0448\u043A\u0430 \u0432 3-pin \u0440\u0430\u0437\u044A\u0435\u043C\u0435 \u043D\u0430 \u043A\u0438\u0442\u0430\u0439\u0441\u043A\u0438\u0445 \u043F\u043B\u0430\u0442\u0430\u0445 \u0432\u0441\u0435\u0433\u0434\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u043D\u0430 100%. \u041F\u0440\u0438 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 2\u0445 4-pin \u0432\u0435\u0440\u0442\u0443\u0448\u0435\u043A - \u043C\u0435\u043D\u044E \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043A \u043C\u043E\u0436\u0435\u0442 \u043E\u0442\u043B\u0438\u0447\u0430\u0442\u044C\u0441\u044F. \u0422\u0430\u043A\u043E\u0435 \u043C\u0435\u043D\u044E \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u043F\u0440\u0438 \u043D\u0430\u043B\u0438\u0447\u0438\u0435 \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u044F \u043D\u0430 VRM."
-            }, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanInfo.tsx",
-                lineNumber: 9,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83C\uDF00",
-                children: "\u041D\u0430 \u043F\u043B\u0430\u0442\u044B\u0445 \u0441 \u0430\u043A\u0442\u0438\u0432\u043D\u044B\u043C \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u0435\u043C \u0437\u043E\u043D\u044B \u043F\u0438\u0442\u0430\u043D\u0438\u044F \u0438\u0445 \u043E\u0431\u043E\u0440\u043E\u0442\u044B \u043D\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u044E\u0442\u0441\u044F \u0432 BIOS \u043F\u043E \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u0441\u0445\u0435\u043C\u0435 (\u0435\u0441\u043B\u0438 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435)."
-            }, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanInfo.tsx",
-                lineNumber: 12,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u2699\uFE0F",
-                children: "\u0415\u0441\u043B\u0438 \u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0442\u043E\u0440 \u043D\u0435 \u0440\u0435\u0430\u0433\u0438\u0440\u0443\u0435\u0442 \u043D\u0430 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438, \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435, \u0432\u043A\u043B\u044E\u0447\u0435\u043D \u043B\u0438 \u0440\u0435\u0436\u0438\u043C \xabSmart Fan Control\xbb \u0438\u043B\u0438 \xabManual\xbb \u0432\u043C\u0435\u0441\u0442\u043E \xabFull Speed\xbb."
-            }, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanInfo.tsx",
-                lineNumber: 15,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true);
-_c = FanInfo;
-exports.default = FanInfo;
-var _c;
-$RefreshReg$(_c, "FanInfo");
-
-  $parcel$ReactRefreshHelpers$2fe4.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"j5Yvg":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$ac6e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$ac6e.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ac6e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _biosWindow = require("../BiosWindow/BiosWindow");
-var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
-const FanBios = ()=>{
-    const rows = [
-        {
-            label: "Smart Fan 1 Mode",
-            value: "Automatic Mode"
-        },
-        {
-            label: "Smart Fan Temperature 1",
-            value: "40"
-        },
-        {
-            label: "Smart Fan Temperature 2",
-            value: "55"
-        },
-        {
-            label: "Smart Fan Temperature 3",
-            value: "65"
-        },
-        {
-            label: "Smart Fan Temperature 4",
-            value: "75"
-        },
-        {
-            label: "Smart Fan Critical Temperature",
-            value: "80"
-        },
-        {
-            label: "Smart Fan PWM 1",
-            value: "75"
-        },
-        {
-            label: "Smart Fan PWM 2",
-            value: "130"
-        },
-        {
-            label: "Smart Fan PWM 3",
-            value: "185"
-        },
-        {
-            label: "Smart Fan PWM 4",
-            value: "255"
-        },
-        {
-            label: "Fan work mode with critical",
-            value: "Full Mode"
-        },
-        {
-            label: "Temperature Tolerance",
-            value: "5"
-        }
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-        title: "SMART FAN FUNCTION",
-        path: "Advanced > Smart Fan Function",
-        rows: rows
-    }, void 0, false, {
-        fileName: "src/components/FanConfiguration/FanBios.tsx",
-        lineNumber: 21,
-        columnNumber: 5
-    }, undefined);
-};
-_c = FanBios;
-exports.default = FanBios;
-var _c;
-$RefreshReg$(_c, "FanBios");
-
-  $parcel$ReactRefreshHelpers$ac6e.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"fCqKj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"lrIHy":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$fac7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$fac7.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fac7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-var _fanToolsModuleCss = require("./FanTools.module.css");
-var _fanToolsModuleCssDefault = parcelHelpers.interopDefault(_fanToolsModuleCss);
-const FanTools = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _fanToolsModuleCssDefault.default).container,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _fanToolsModuleCssDefault.default).fanList,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _fanToolsModuleCssDefault.default).fanBtn,
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _fanToolsModuleCssDefault.default).icon,
-                                children: "\u2744\uFE0F"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 9,
-                                columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _fanToolsModuleCssDefault.default).label,
-                                children: "PWM 75"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 10,
-                                columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                className: (0, _fanToolsModuleCssDefault.default).value,
-                                children: "29%"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 11,
-                                columnNumber: 9
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                        lineNumber: 8,
-                        columnNumber: 7
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _fanToolsModuleCssDefault.default).fanBtn,
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _fanToolsModuleCssDefault.default).icon,
-                                children: "\uD83C\uDF43"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 15,
-                                columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _fanToolsModuleCssDefault.default).label,
-                                children: "PWM 130"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 16,
-                                columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                className: (0, _fanToolsModuleCssDefault.default).value,
-                                children: "51%"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 17,
-                                columnNumber: 9
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                        lineNumber: 14,
-                        columnNumber: 7
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _fanToolsModuleCssDefault.default).fanBtn,
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _fanToolsModuleCssDefault.default).icon,
-                                children: "\uD83D\uDE80"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 21,
-                                columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _fanToolsModuleCssDefault.default).label,
-                                children: "PWM 185"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 22,
-                                columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                className: (0, _fanToolsModuleCssDefault.default).value,
-                                children: "73%"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 23,
-                                columnNumber: 9
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                        lineNumber: 20,
-                        columnNumber: 7
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _fanToolsModuleCssDefault.default).fanBtn,
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _fanToolsModuleCssDefault.default).icon,
-                                children: "\uD83C\uDF2A\uFE0F"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 27,
-                                columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _fanToolsModuleCssDefault.default).label,
-                                children: "PWM 255"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 28,
-                                columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                className: (0, _fanToolsModuleCssDefault.default).value,
-                                children: "100%"
-                            }, void 0, false, {
-                                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                                lineNumber: 29,
-                                columnNumber: 9
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                        lineNumber: 26,
-                        columnNumber: 7
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                lineNumber: 7,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCA1",
-                children: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u0442\u0435 \u044D\u0442\u0438 \u0442\u043E\u0447\u043A\u0438 \u0432 BIOS \u0434\u043B\u044F \u043E\u043F\u0442\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0431\u0430\u043B\u0430\u043D\u0441\u0430 \u0448\u0443\u043C\u0430 \u0438 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440."
-            }, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-                lineNumber: 33,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/FanConfiguration/FanTools/FanTools.tsx",
-        lineNumber: 6,
-        columnNumber: 3
-    }, undefined);
-_c = FanTools;
-exports.default = FanTools;
-var _c;
-$RefreshReg$(_c, "FanTools");
-
-  $parcel$ReactRefreshHelpers$fac7.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../InfoBlock/InfoBlock":"xpgGa","./FanTools.module.css":"lnilN","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"lnilN":[function(require,module,exports,__globalThis) {
-module.exports["container"] = `JXsdbW_container`;
-module.exports["fanBtn"] = `JXsdbW_fanBtn`;
-module.exports["fanList"] = `JXsdbW_fanList`;
-module.exports["icon"] = `JXsdbW_icon`;
-module.exports["label"] = `JXsdbW_label`;
-module.exports["value"] = `JXsdbW_value`;
-
-},{}],"2Xem2":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$5545 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$5545.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5545.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-// Импортируем переименованный компонент
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-var _iiotools = require("./IIOTools");
-var _iiotoolsDefault = parcelHelpers.interopDefault(_iiotools);
-var _iiobios = require("./IIOBios");
-var _iiobiosDefault = parcelHelpers.interopDefault(_iiobios);
-var _iioinfo = require("./IIOInfo");
-var _iioinfoDefault = parcelHelpers.interopDefault(_iioinfo);
-var _s = $RefreshSig$();
-const IIOConfiguration = ()=>{
-    _s();
-    // Строгая типизация стейта для PCI Gen
-    const [pciGen, setPciGen] = (0, _react.useState)('Gen 3');
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-        className: "manager-layout",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default), {
-                title: "IIO Configuration",
-                toolsLabel: "PCI-E PORTS",
-                infoNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iioinfoDefault.default), {}, void 0, false, {
-                    fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
-                    lineNumber: 17,
-                    columnNumber: 19
-                }, void 0),
-                toolsNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iiotoolsDefault.default), {
-                    pciGen: pciGen,
-                    setPciGen: setPciGen
-                }, void 0, false, {
-                    fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
-                    lineNumber: 18,
-                    columnNumber: 20
-                }, void 0)
-            }, void 0, false, {
-                fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iiobiosDefault.default), {
-                pciGen: pciGen
-            }, void 0, false, {
-                fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
-                lineNumber: 22,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
-        lineNumber: 13,
-        columnNumber: 5
-    }, undefined);
-};
-_s(IIOConfiguration, "3YRzYTCcDjK5q5FGE7zxytT5ZPk=");
-_c = IIOConfiguration;
-exports.default = IIOConfiguration;
-var _c;
-$RefreshReg$(_c, "IIOConfiguration");
-
-  $parcel$ReactRefreshHelpers$5545.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","./IIOTools":"iHIKX","./IIOBios":"jEjIK","./IIOInfo":"8THfS","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iHIKX":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$8ba0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$8ba0.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8ba0.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _button = require("../Button/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const IIOTools = ({ pciGen, setPciGen })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Label, {
-                        children: "\u0420\u0415\u0416\u0418\u041C \u0428\u0418\u041D\u042B PCI-E:"
-                    }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Grid, {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                type: "Gen 2",
-                                isActive: pciGen === 'Gen 2',
-                                onClick: ()=>setPciGen('Gen 2')
-                            }, void 0, false, {
-                                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                                lineNumber: 11,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                type: "Gen 3",
-                                isActive: pciGen === 'Gen 3',
-                                onClick: ()=>setPciGen('Gen 3')
-                            }, void 0, false, {
-                                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                                lineNumber: 12,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            pciGen === 'Gen 3' ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDE80",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "Gen 3"
-                    }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 18,
-                        columnNumber: 11
-                    }, undefined),
-                    " \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \u0434\u043B\u044F \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0445 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442 \u0438 NVMe."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 17,
-                columnNumber: 9
-            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u26A0\uFE0F",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "Gen 2"
-                    }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 22,
-                        columnNumber: 11
-                    }, undefined),
-                    " \u043C\u043E\u0436\u0435\u0442 \u043F\u043E\u0442\u0440\u0435\u0431\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u0434\u043B\u044F \u0441\u0442\u0430\u0440\u044B\u0445 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 21,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCA1",
-                children: [
-                    "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "PCI-E Gen"
-                    }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 27,
-                        columnNumber: 19
-                    }, undefined),
-                    " \u043D\u0430\u043F\u0440\u044F\u043C\u0443\u044E \u0432\u043B\u0438\u044F\u0435\u0442 \u043D\u0430 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u043E\u0431\u043C\u0435\u043D\u0430 \u0434\u0430\u043D\u043D\u044B\u043C\u0438."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 26,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_c = IIOTools;
-exports.default = IIOTools;
-var _c;
-$RefreshReg$(_c, "IIOTools");
-
-  $parcel$ReactRefreshHelpers$8ba0.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jEjIK":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$2dbb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$2dbb.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2dbb.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _biosWindow = require("../BiosWindow/BiosWindow");
-var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
-const IIOBios = ({ pciGen })=>{
-    const rows = [
-        {
-            label: "IOU2 (PCIE PORT X16)",
-            value: pciGen,
-            highlight: true
-        },
-        {
-            label: "IOU0 (PCIE PORT X8)",
-            value: pciGen,
-            highlight: true
-        },
-        {
-            label: "IOU1 (PCIE PORT X4)",
-            value: pciGen,
-            highlight: true
-        }
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-        title: "IIO0 CONFIGURATION",
-        path: "IntelRCSetup > IIO Configuration > IIO0 Configuration",
-        rows: rows
-    }, void 0, false, {
-        fileName: "src/components/IIOConfiguration/IIOBios.tsx",
-        lineNumber: 11,
-        columnNumber: 10
-    }, undefined);
-};
-_c = IIOBios;
-exports.default = IIOBios;
-var _c;
-$RefreshReg$(_c, "IIOBios");
-
-  $parcel$ReactRefreshHelpers$2dbb.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"fCqKj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"8THfS":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$d557 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$d557.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d557.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const IIOInfo = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDD0C",
-                children: "\u0424\u0438\u043A\u0441\u0430\u0446\u0438\u044F \u0440\u0435\u0436\u0438\u043C\u0430 GEN 3 \u043F\u043E\u043C\u043E\u0433\u0430\u0435\u0442 \u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044C \u043E\u0448\u0438\u0431\u043E\u043A Link Training Error, \u0438\u0437-\u0437\u0430 \u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u0430 \u0438\u043B\u0438 NVMe \u043C\u043E\u0433\u0443\u0442 \u043D\u0435 \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F."
-            }, void 0, false, {
-                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
-                lineNumber: 6,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDEE0\uFE0F",
-                children: "\u0414\u043B\u044F \u043A\u0430\u0440\u0442 \u0434\u043E 2013 \u0433\u043E\u0434\u0430 (HD 7000, GTX 600) \u0441\u0442\u0430\u0432\u044C\u0442\u0435 GEN 2. \u0421\u0442\u0430\u0440\u044B\u0435 \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u043B\u0435\u0440\u044B \u0447\u0430\u0441\u0442\u043E \u043D\u0435\u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u044B \u0441 \u0448\u0438\u043D\u043E\u0439 3.0 \u043D\u0430 \u044D\u0442\u043E\u0439 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0435."
-            }, void 0, false, {
-                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
-                lineNumber: 9,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u2728",
-                children: "\u0415\u0441\u043B\u0438 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430 \u0432\u0435\u0434\u0443\u0442 \u0441\u0435\u0431\u044F \u0441\u0442\u0440\u0430\u043D\u043D\u043E \u2014 \u043F\u0440\u043E\u0442\u0440\u0438\u0442\u0435 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u044B \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430 \u0438 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B \u043B\u0430\u0441\u0442\u0438\u043A\u043E\u043C \u0434\u043E \u0431\u043B\u0435\u0441\u043A\u0430. \u041E\u043A\u0438\u0441\u043B\u044B \u2014 \u043F\u0440\u0438\u0447\u0438\u043D\u0430 90% \u043F\u0440\u043E\u0431\u043B\u0435\u043C!"
-            }, void 0, false, {
-                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
-                lineNumber: 12,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83E\uDDEC",
-                children: "\u0415\u0441\u043B\u0438 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0435 \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u043D\u0438\u043A \u043D\u0430 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E NVMe \u0432 \u043E\u0434\u0438\u043D \u0441\u043B\u043E\u0442, \u0438\u0449\u0438\u0442\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0443 \u0440\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u044F \u043B\u0438\u043D\u0438\u0439 (x4x4x4x4) \u0432 IIO Configuration."
-            }, void 0, false, {
-                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
-                lineNumber: 15,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true);
-_c = IIOInfo;
-exports.default = IIOInfo;
-var _c;
-$RefreshReg$(_c, "IIOInfo");
-
-  $parcel$ReactRefreshHelpers$d557.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"7IDf5":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$2edc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$2edc.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2edc.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-var _csmtools = require("./CSMTools");
-var _csmtoolsDefault = parcelHelpers.interopDefault(_csmtools);
-var _csminfo = require("./CSMInfo");
-var _csminfoDefault = parcelHelpers.interopDefault(_csminfo);
-var _csmbios = require("./CSMBios");
-var _csmbiosDefault = parcelHelpers.interopDefault(_csmbios);
-var _s = $RefreshSig$();
-const CSMConfiguration = ()=>{
-    _s();
-    const [disk, setDisk] = (0, _react.useState)('mbr');
-    const isLegacy = disk === 'mbr';
-    const config = {
-        csm: isLegacy ? 'Enabled' : 'Disabled',
-        bootFilter: isLegacy ? 'Legacy only' : 'UEFI only',
-        storage: isLegacy ? 'Legacy' : 'UEFI',
-        video: isLegacy ? 'Legacy' : 'UEFI'
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-        className: "manager-layout",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default), {
-                title: "BOOT & RECOVERY",
-                toolsLabel: "DISK MODE",
-                infoNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csminfoDefault.default), {}, void 0, false, {
-                    fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
-                    lineNumber: 23,
-                    columnNumber: 19
-                }, void 0),
-                toolsNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmtoolsDefault.default), {
-                    disk: disk,
-                    setDisk: setDisk
-                }, void 0, false, {
-                    fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
-                    lineNumber: 24,
-                    columnNumber: 20
-                }, void 0)
-            }, void 0, false, {
-                fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
-                lineNumber: 20,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmbiosDefault.default), {
-                isLegacy: isLegacy,
-                config: config
-            }, void 0, false, {
-                fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
-                lineNumber: 27,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
-        lineNumber: 19,
-        columnNumber: 5
-    }, undefined);
-};
-_s(CSMConfiguration, "R1N+xJKYF7Bx3zWYpMOn51IAdGw=");
-_c = CSMConfiguration;
-exports.default = CSMConfiguration;
-var _c;
-$RefreshReg$(_c, "CSMConfiguration");
-
-  $parcel$ReactRefreshHelpers$2edc.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","./CSMTools":"2pbW4","./CSMInfo":"1hMh8","./CSMBios":"kb3Ag","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2pbW4":[function(require,module,exports,__globalThis) {
+},{}],"2pbW4":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0d01 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$0d01.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -30403,123 +27850,157 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _button = require("../Button/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const CSMTools = ({ disk, setDisk })=>{
-    const options = [
-        'mbr',
-        'gpt'
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+const CSMTools = ({ value, setValue, styles })=>{
+    const renderBtn = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+            className: styles.tools_button,
+            type: type,
+            isActive: value === type,
+            onClick: ()=>setValue(type)
+        }, void 0, false, {
+            fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+            lineNumber: 12,
+            columnNumber: 5
+        }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: styles.tools_container,
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Section, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_label,
+                children: "\u0422\u0418\u041F \u0420\u0410\u0417\u041C\u0415\u0422\u041A\u0418 \u0414\u0418\u0421\u041A\u0410:"
+            }, void 0, false, {
+                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.btn_group,
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Label, {
-                        children: "\u0421\u0422\u0418\u041B\u042C \u0420\u0410\u0417\u041C\u0415\u0422\u041A\u0418 \u0414\u0418\u0421\u041A\u0410:"
+                    renderBtn('mbr'),
+                    renderBtn('gpt')
+                ]
+            }, void 0, true, {
+                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.tools_icon,
+                        children: "\uD83D\uDEE0\uFE0F"
                     }, void 0, false, {
                         fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 11,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Grid, {
-                        children: options.map((opt)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                type: opt,
-                                isActive: disk === opt,
-                                onClick: ()=>setDisk(opt)
-                            }, opt, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: styles.tools_text,
+                        children: [
+                            "\u041F\u0440\u0438 \u0441\u043C\u0435\u043D\u0435 \u0441\u0442\u0438\u043B\u044F \u043D\u0435 \u0437\u0430\u0431\u0443\u0434\u044C\u0442\u0435 \u043F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0440\u0435\u0436\u0438\u043C ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "CSM"
+                            }, void 0, false, {
                                 fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                                lineNumber: 14,
-                                columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
+                                lineNumber: 33,
+                                columnNumber: 57
+                            }, undefined),
+                            " \u0432 BIOS."
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 12,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 10,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined),
-            disk === 'gpt' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u2699\uFE0F",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_item,
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "GPT"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.tools_icon,
+                        children: [
+                            value === 'mbr' && "\u26A0\uFE0F",
+                            value === 'gpt' && "\u2699\uFE0F"
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 26,
-                        columnNumber: 11
+                        lineNumber: 38,
+                        columnNumber: 9
                     }, undefined),
-                    " \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C \u0434\u043B\u044F \u043D\u0430\u0442\u0438\u0432\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "UEFI"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: styles.tools_text,
+                        children: [
+                            value === 'mbr' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "MBR"
+                                    }, void 0, false, {
+                                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+                                        lineNumber: 43,
+                                        columnNumber: 33
+                                    }, undefined),
+                                    " \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D 2\u0422\u0411 \u0438 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "CSM Support"
+                                    }, void 0, false, {
+                                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+                                        lineNumber: 43,
+                                        columnNumber: 68
+                                    }, undefined),
+                                    "."
+                                ]
+                            }, void 0, true),
+                            value === 'gpt' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "GPT"
+                                    }, void 0, false, {
+                                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+                                        lineNumber: 44,
+                                        columnNumber: 33
+                                    }, undefined),
+                                    " \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C \u0434\u043B\u044F ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "UEFI"
+                                    }, void 0, false, {
+                                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+                                        lineNumber: 44,
+                                        columnNumber: 58
+                                    }, undefined),
+                                    " \u0438 ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "Re-Size BAR"
+                                    }, void 0, false, {
+                                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+                                        lineNumber: 44,
+                                        columnNumber: 72
+                                    }, undefined),
+                                    "."
+                                ]
+                            }, void 0, true)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 26,
-                        columnNumber: 52
-                    }, undefined),
-                    " \u0438 \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "Re-Size BAR"
-                    }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 26,
-                        columnNumber: 76
-                    }, undefined),
-                    "."
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 25,
-                columnNumber: 9
-            }, undefined),
-            disk === 'mbr' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u26A0\uFE0F",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "MBR"
-                    }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 32,
-                        columnNumber: 11
-                    }, undefined),
-                    " \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D \u0434\u0438\u0441\u043A\u0430\u043C\u0438 \u0434\u043E 2\u0422\u0411 \u0438 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u043E\u0433\u043E ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "CSM"
-                    }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 32,
-                        columnNumber: 69
-                    }, undefined),
-                    "."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 31,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDEE0\uFE0F",
-                children: [
-                    "\u041F\u0440\u0438 \u0441\u043C\u0435\u043D\u0435 \u0441\u0442\u0438\u043B\u044F (MBR \u2194 GPT) \u043D\u0435 \u0437\u0430\u0431\u0443\u0434\u044C\u0442\u0435 \u043F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0440\u0435\u0436\u0438\u043C ",
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                        children: "CSM"
-                    }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 37,
-                        columnNumber: 67
-                    }, undefined),
-                    " \u0432 BIOS."
-                ]
-            }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 36,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
+        lineNumber: 21,
+        columnNumber: 5
+    }, undefined);
 };
 _c = CSMTools;
 exports.default = CSMTools;
@@ -30531,7 +28012,7 @@ $RefreshReg$(_c, "CSMTools");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"1hMh8":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"1hMh8":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$5d35 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$5d35.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -30542,46 +28023,115 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const CSMInfo = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+const CSMInfo = ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: styles.info_container,
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDD27",
-                children: "\u0415\u0441\u043B\u0438 \u043F\u043E\u0441\u043B\u0435 \u0441\u0431\u0440\u043E\u0441\u0430 BIOS \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043D\u0435 \u0432\u0438\u0434\u0438\u0442 \u0434\u0438\u0441\u043A, \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0440\u0435\u0436\u0438\u043C CSM (Legacy). \u042D\u0442\u043E \u0432\u0435\u0440\u043D\u0435\u0442 \u0432\u0438\u0434\u0438\u043C\u043E\u0441\u0442\u044C \u0441\u0442\u0430\u0440\u044B\u0445 MBR-\u0437\u0430\u043F\u0438\u0441\u0435\u0439."
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDD27"
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        lineNumber: 4,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0415\u0441\u043B\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043D\u0435 \u0432\u0438\u0434\u0438\u0442 \u0434\u0438\u0441\u043A, \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u0435 CSM (Legacy). \u042D\u0442\u043E \u0432\u0435\u0440\u043D\u0435\u0442 \u0432\u0438\u0434\u0438\u043C\u043E\u0441\u0442\u044C \u0441\u0442\u0430\u0440\u044B\u0445 MBR-\u0440\u0430\u0437\u0434\u0435\u043B\u043E\u0432."
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        lineNumber: 5,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
-                lineNumber: 6,
+                lineNumber: 3,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDE80",
-                children: "\u0411\u044B\u0441\u0442\u0440\u0430\u044F \u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0430 (Fast Boot), \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430 \u0434\u0438\u0441\u043A\u043E\u0432 2\u0422\u0411+, \u0440\u0430\u0431\u043E\u0442\u0430 Re-Size BAR \u0438 \u043E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u0430\u044F \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430 Windows 11."
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDE80"
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        lineNumber: 11,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0420\u0435\u0436\u0438\u043C UEFI \u0434\u0430\u0435\u0442 Fast Boot, \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0443 \u0434\u0438\u0441\u043A\u043E\u0432 2\u0422\u0411+, \u0440\u0430\u0431\u043E\u0442\u0443 Re-Size BAR \u0438 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u044C \u0441 Windows 11."
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        lineNumber: 12,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u26A0\uFE0F",
-                children: "\u041D\u0435\u043B\u044C\u0437\u044F \u043F\u0440\u043E\u0441\u0442\u043E \u043F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0440\u0435\u0436\u0438\u043C. \u0415\u0441\u043B\u0438 Windows \u0432 MBR \u2014 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C \u0432 Legacy. \u0414\u043B\u044F UEFI \u043D\u0443\u0436\u043D\u0430 \u043A\u043E\u043D\u0432\u0435\u0440\u0442\u0430\u0446\u0438\u044F \u0432 GPT \u0438\u043B\u0438 \u043F\u0435\u0440\u0435\u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430."
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\u26A0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        lineNumber: 18,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0414\u043B\u044F UEFI \u043D\u0443\u0436\u043D\u0430 GPT-\u0440\u0430\u0437\u043C\u0435\u0442\u043A\u0430. \u041F\u0440\u0438 \u0441\u043C\u0435\u043D\u0435 \u0440\u0435\u0436\u0438\u043C\u0430 Windows \u0432 MBR \u043D\u0435 \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0441\u044F \u0431\u0435\u0437 \u043A\u043E\u043D\u0432\u0435\u0440\u0442\u0430\u0446\u0438\u0438 \u0438\u043B\u0438 \u043F\u0435\u0440\u0435\u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438."
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        lineNumber: 19,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
-                lineNumber: 12,
+                lineNumber: 17,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCBF",
-                children: "\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u0441 MBR \u043D\u0430 GPT \u0431\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u0438 \u0434\u0430\u043D\u043D\u044B\u0445 \u043C\u043E\u0436\u043D\u043E \u0447\u0435\u0440\u0435\u0437 \u0443\u0442\u0438\u043B\u0438\u0442\u0443 \xabmbr2gpt\xbb. \u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u043E\u0433\u043E CSM \u0432 BIOS \u043C\u043E\u0436\u043D\u043E (\u0438 \u043D\u0443\u0436\u043D\u043E) \u0432\u044B\u043A\u043B\u044E\u0447\u0438\u0442\u044C."
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDCBF"
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u0441 MBR \u043D\u0430 GPT \u0431\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u0438 \u0434\u0430\u043D\u043D\u044B\u0445 \u043C\u043E\u0436\u043D\u043E \u0447\u0435\u0440\u0435\u0437 \xabmbr2gpt\xbb. \u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u043E\u0433\u043E CSM \u043C\u043E\u0436\u043D\u043E \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0442\u044C."
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        lineNumber: 26,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
-                lineNumber: 15,
+                lineNumber: 24,
                 columnNumber: 5
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+        lineNumber: 2,
+        columnNumber: 3
+    }, undefined);
 _c = CSMInfo;
 exports.default = CSMInfo;
 var _c;
@@ -30592,12 +28142,52 @@ $RefreshReg$(_c, "CSMInfo");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kb3Ag":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$9938 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$9938.init();
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kb3Ag":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const CSMBios = ()=>({
+        type: 'csm',
+        title: "CSM CONFIGURATION",
+        path: "Advanced > CSM Configuration",
+        content: [
+            {
+                text_left: "CSM Support",
+                highlight: true
+            },
+            {
+                text_left: "Boot option filter",
+                highlight: true
+            },
+            {
+                text_left: "Network",
+                text_right: "Do not launch"
+            },
+            {
+                text_left: "Storage",
+                highlight: true
+            },
+            {
+                text_left: "Video",
+                highlight: true
+            },
+            {
+                text_left: "Other PCI devices",
+                text_right: "UEFI",
+                highlight: true
+            }
+        ]
+    });
+_c = CSMBios;
+exports.default = CSMBios;
+var _c;
+$RefreshReg$(_c, "CSMBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"4qPFO":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$f420 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$f420.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9938.prelude(module);
+$parcel$ReactRefreshHelpers$f420.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -30605,62 +28195,872 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
 var _biosWindow = require("../BiosWindow/BiosWindow");
 var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
-const CSMBios = ({ config })=>{
-    const rows = [
-        {
-            label: "CSM Support",
-            value: config.csm,
-            highlight: true
-        },
-        {
-            label: "Boot option filter",
-            value: config.bootFilter,
-            highlight: true
-        },
-        {
-            label: "Network",
-            value: "Do not launch",
-            highlight: false
-        },
-        {
-            label: "Storage",
-            value: config.storage,
-            highlight: true
-        },
-        {
-            label: "Video",
-            value: config.video,
-            highlight: true
-        },
-        {
-            label: "Other PCI devices",
-            value: "UEFI",
-            highlight: true
-        }
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-        title: "CSM CONFIGURATION",
-        path: "Advanced > CSM Configuration",
-        rows: rows
-    }, void 0, false, {
-        fileName: "src/components/CSMConfiguration/CSMBios.tsx",
-        lineNumber: 15,
-        columnNumber: 5
-    }, undefined);
+var _fanInfo = require("./FanInfo");
+var _fanInfoDefault = parcelHelpers.interopDefault(_fanInfo);
+var _fanBios = require("./FanBios");
+var _fanBiosDefault = parcelHelpers.interopDefault(_fanBios);
+var _fanTools = require("./FanTools");
+var _fanToolsDefault = parcelHelpers.interopDefault(_fanTools);
+const FanConfiguration = ()=>{
+    const { title, path, content } = (0, _fanBiosDefault.default)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "SMART FAN FUNCTION",
+                toolsLabel: "\u041E\u0411\u041E\u0420\u041E\u0422\u042B %",
+                renderInfo: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanInfoDefault.default), {
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
+                        lineNumber: 16,
+                        columnNumber: 33
+                    }, void 0),
+                renderTools: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanToolsDefault.default), {
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
+                        lineNumber: 17,
+                        columnNumber: 34
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                title: title,
+                path: path,
+                content: content
+            }, void 0, false, {
+                fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
+                lineNumber: 20,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
 };
-_c = CSMBios;
-exports.default = CSMBios;
+_c = FanConfiguration;
+exports.default = FanConfiguration;
 var _c;
-$RefreshReg$(_c, "CSMBios");
+$RefreshReg$(_c, "FanConfiguration");
 
-  $parcel$ReactRefreshHelpers$9938.postlude(module);
+  $parcel$ReactRefreshHelpers$f420.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"fCqKj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"8gBEe":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Toolbox/Toolbox":"2S4BZ","../BiosWindow/BiosWindow":"fCqKj","./FanInfo":"fU0eG","./FanBios":"j5Yvg","./FanTools":"hY8Rb","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fU0eG":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2fe4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$2fe4.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2fe4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const FanInfo = ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: styles.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83C\uDF21\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        lineNumber: 4,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "Temperature Tolerance (\u0413\u0438\u0441\u0442\u0435\u0440\u0435\u0437\u0438\u0441): \u0441\u0442\u0430\u0432\u044C\u0442\u0435 5-8. \u042D\u0442\u043E \u0441\u043E\u0437\u0434\u0430\u0441\u0442 \xab\u0431\u0443\u0444\u0435\u0440\xbb, \u0447\u0442\u043E\u0431\u044B \u043E\u0431\u043E\u0440\u043E\u0442\u044B \u043D\u0435 \u043F\u0440\u044B\u0433\u0430\u043B\u0438 \u043F\u0440\u0438 \u043A\u0430\u0436\u0434\u043E\u043C \u0441\u043A\u0430\u0447\u043A\u0435 \u043D\u0430 1-2\xb0."
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        lineNumber: 5,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                lineNumber: 3,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDCE2"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        lineNumber: 11,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041F\u043E\u043B\u043D\u043E\u0446\u0435\u043D\u043D\u043E \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E 4-pin \u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0442\u043E\u0440\u044B. 4-pin \u0432\u0435\u0440\u0442\u0443\u0448\u043A\u0430 \u0432 3-pin \u0440\u0430\u0437\u044A\u0435\u043C\u0435 \u043D\u0430 \u043A\u0438\u0442\u0430\u0439\u0446\u0430\u0445 \u0432\u0441\u0435\u0433\u0434\u0430 \u043A\u0440\u0443\u0442\u0438\u0442 \u043D\u0430 100%."
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        lineNumber: 12,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                lineNumber: 10,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83C\uDF00"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        lineNumber: 18,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041D\u0430 \u043F\u043B\u0430\u0442\u0430\u0445 \u0441 \u0430\u043A\u0442\u0438\u0432\u043D\u044B\u043C \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u0435\u043C VRM \u0438\u0445 \u043E\u0431\u043E\u0440\u043E\u0442\u044B \u043D\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u044E\u0442\u0441\u044F \u0432 BIOS \u043F\u043E \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u0441\u0445\u0435\u043C\u0435 (\u0435\u0441\u043B\u0438 \u0435\u0441\u0442\u044C \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430)."
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        lineNumber: 19,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                lineNumber: 17,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\u2699\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0415\u0441\u043B\u0438 \u043D\u0435\u0442 \u0440\u0435\u0430\u043A\u0446\u0438\u0438 \u043D\u0430 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438, \u0443\u0431\u0435\u0434\u0438\u0442\u0435\u0441\u044C, \u0447\u0442\u043E \u0432\u044B\u0431\u0440\u0430\u043D \u0440\u0435\u0436\u0438\u043C \xabSmart Fan Control\xbb \u0438\u043B\u0438 \xabManual\xbb \u0432\u043C\u0435\u0441\u0442\u043E \xabFull Speed\xbb."
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        lineNumber: 26,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                lineNumber: 24,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+        lineNumber: 2,
+        columnNumber: 3
+    }, undefined);
+_c = FanInfo;
+exports.default = FanInfo;
+var _c;
+$RefreshReg$(_c, "FanInfo");
+
+  $parcel$ReactRefreshHelpers$2fe4.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"j5Yvg":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const FanBios = ()=>({
+        title: "SMART FAN FUNCTION",
+        path: "Advanced > Smart Fan Function",
+        content: [
+            {
+                text_left: "Smart Fan 1 Mode",
+                text_right: "Automatic Mode"
+            },
+            {
+                text_left: "Smart Fan Temperature 1",
+                text_right: "40"
+            },
+            {
+                text_left: "Smart Fan Temperature 2",
+                text_right: "55"
+            },
+            {
+                text_left: "Smart Fan Temperature 3",
+                text_right: "65"
+            },
+            {
+                text_left: "Smart Fan Temperature 4",
+                text_right: "75"
+            },
+            {
+                text_left: "Smart Fan Critical Temperature",
+                text_right: "80"
+            },
+            {
+                text_left: "Smart Fan PWM 1",
+                text_right: "75"
+            },
+            {
+                text_left: "Smart Fan PWM 2",
+                text_right: "130"
+            },
+            {
+                text_left: "Smart Fan PWM 3",
+                text_right: "185"
+            },
+            {
+                text_left: "Smart Fan PWM 4",
+                text_right: "255"
+            },
+            {
+                text_left: "Fan work mode with critical",
+                text_right: "Full Mode"
+            },
+            {
+                text_left: "Temperature Tolerance",
+                text_right: "5"
+            }
+        ]
+    });
+_c = FanBios;
+exports.default = FanBios;
+var _c;
+$RefreshReg$(_c, "FanBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hY8Rb":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$289c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$289c.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$289c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _pwmlist = require("./PWMList/PWMList");
+var _pwmlistDefault = parcelHelpers.interopDefault(_pwmlist);
+const FanTools = ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: styles.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pwmlistDefault.default), {}, void 0, false, {
+                fileName: "src/components/FanConfiguration/FanTools.tsx",
+                lineNumber: 7,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.tools_icon,
+                        children: "\uD83D\uDCA1"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanTools.tsx",
+                        lineNumber: 10,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: styles.tools_text,
+                        children: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u0442\u0435 \u044D\u0442\u0438 \u0442\u043E\u0447\u043A\u0438 \u0432 BIOS \u0434\u043B\u044F \u043E\u043F\u0442\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0431\u0430\u043B\u0430\u043D\u0441\u0430 \u0448\u0443\u043C\u0430 \u0438 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440."
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/FanTools.tsx",
+                        lineNumber: 11,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/FanTools.tsx",
+                lineNumber: 9,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/FanConfiguration/FanTools.tsx",
+        lineNumber: 5,
+        columnNumber: 3
+    }, undefined);
+_c = FanTools;
+exports.default = FanTools;
+var _c;
+$RefreshReg$(_c, "FanTools");
+
+  $parcel$ReactRefreshHelpers$289c.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./PWMList/PWMList":"aqGD7","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"aqGD7":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$f0fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$f0fc.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f0fc.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _pwmlistModuleCss = require("./PWMList.module.css");
+var _pwmlistModuleCssDefault = parcelHelpers.interopDefault(_pwmlistModuleCss);
+const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: (0, _pwmlistModuleCssDefault.default).fan_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: (0, _pwmlistModuleCssDefault.default).fan_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_icon,
+                        children: "\u2744\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 7,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_text,
+                        children: "PWM 75"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 8,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_percent,
+                        children: "29%"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 9,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                lineNumber: 6,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: (0, _pwmlistModuleCssDefault.default).fan_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_icon,
+                        children: "\uD83C\uDF43"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 12,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_text,
+                        children: "PWM 130"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 13,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_percent,
+                        children: "51%"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 14,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                lineNumber: 11,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: (0, _pwmlistModuleCssDefault.default).fan_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_icon,
+                        children: "\uD83D\uDE80"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 17,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_text,
+                        children: "PWM 185"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 18,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_percent,
+                        children: "73%"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 19,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                lineNumber: 16,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: (0, _pwmlistModuleCssDefault.default).fan_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_icon,
+                        children: "\uD83C\uDF2A\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 22,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_text,
+                        children: "PWM 255"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 23,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                        className: (0, _pwmlistModuleCssDefault.default).fan_percent,
+                        children: "100%"
+                    }, void 0, false, {
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        lineNumber: 24,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                lineNumber: 21,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+        lineNumber: 5,
+        columnNumber: 3
+    }, undefined);
+_c = PWMList;
+exports.default = PWMList;
+var _c;
+$RefreshReg$(_c, "PWMList");
+
+  $parcel$ReactRefreshHelpers$f0fc.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./PWMList.module.css":"eq4iW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"eq4iW":[function(require,module,exports,__globalThis) {
+module.exports["fan_container"] = `_1aUYlG_fan_container`;
+module.exports["fan_icon"] = `_1aUYlG_fan_icon`;
+module.exports["fan_item"] = `_1aUYlG_fan_item`;
+module.exports["fan_percent"] = `_1aUYlG_fan_percent`;
+module.exports["fan_text"] = `_1aUYlG_fan_text`;
+
+},{}],"2Xem2":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$5545 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$5545.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5545.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _iiotools = require("./IIOTools");
+var _iiotoolsDefault = parcelHelpers.interopDefault(_iiotools);
+var _iioinfo = require("./IIOInfo");
+var _iioinfoDefault = parcelHelpers.interopDefault(_iioinfo);
+var _iiobios = require("./IIOBios");
+var _iiobiosDefault = parcelHelpers.interopDefault(_iiobios);
+var _s = $RefreshSig$();
+const IIOConfiguration = ()=>{
+    _s();
+    // Используем универсальные имена и стейт
+    const [value, setValue] = (0, _react.useState)('gen_2');
+    const { title, path, content } = (0, _iiobiosDefault.default)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "IIO Configuration",
+                toolsLabel: "PCI-E PORTS",
+                renderInfo: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iioinfoDefault.default), {
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
+                        lineNumber: 19,
+                        columnNumber: 33
+                    }, void 0),
+                renderTools: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iiotoolsDefault.default), {
+                        value: value,
+                        setValue: setValue,
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
+                        lineNumber: 21,
+                        columnNumber: 11
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                title: title,
+                path: path,
+                content: content,
+                type: "iio" // Передаем тип для хука внутри BiosWindow
+                ,
+                value: value
+            }, void 0, false, {
+                fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
+                lineNumber: 29,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(IIOConfiguration, "n7W1bVTmtLZZWLwoXSTKt+6Kfcc=");
+_c = IIOConfiguration;
+exports.default = IIOConfiguration;
+var _c;
+$RefreshReg$(_c, "IIOConfiguration");
+
+  $parcel$ReactRefreshHelpers$5545.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Toolbox/Toolbox":"2S4BZ","../BiosWindow/BiosWindow":"fCqKj","./IIOTools":"iHIKX","./IIOInfo":"8THfS","./IIOBios":"jEjIK","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iHIKX":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$8ba0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$8ba0.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8ba0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+const IIOTools = ({ value, setValue, styles })=>{
+    const renderBtn = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+            className: styles.tools_button,
+            type: type,
+            isActive: value === type,
+            onClick: ()=>setValue(type)
+        }, void 0, false, {
+            fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+            lineNumber: 12,
+            columnNumber: 5
+        }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: styles.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_label,
+                children: "\u041F\u041E\u0420\u0422\u042B PCI-E:"
+            }, void 0, false, {
+                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.btn_group,
+                children: [
+                    renderBtn('gen_2'),
+                    renderBtn('gen_3')
+                ]
+            }, void 0, true, {
+                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.tools_icon,
+                        children: "\uD83D\uDCA1"
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: styles.tools_text,
+                        children: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 \u0432\u043B\u0438\u044F\u0435\u0442 \u043D\u0430 \u043F\u0440\u043E\u043F\u0443\u0441\u043A\u043D\u0443\u044E \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u044C \u0448\u0438\u043D\u044B."
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                lineNumber: 30,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.tools_icon,
+                        children: [
+                            value === 'gen_2' && "\u26A0\uFE0F",
+                            value === 'gen_3' && "\uD83D\uDE80"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: styles.tools_text,
+                        children: [
+                            value === 'gen_2' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "Gen 2"
+                                    }, void 0, false, {
+                                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                                        lineNumber: 43,
+                                        columnNumber: 35
+                                    }, undefined),
+                                    " \u043C\u043E\u0436\u0435\u0442 \u043F\u043E\u0442\u0440\u0435\u0431\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u0434\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B \u0441\u0442\u0430\u0440\u044B\u0445 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432."
+                                ]
+                            }, void 0, true),
+                            value === 'gen_3' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "Gen 3"
+                                    }, void 0, false, {
+                                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                                        lineNumber: 44,
+                                        columnNumber: 35
+                                    }, undefined),
+                                    " \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \u0434\u043B\u044F \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0445 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442 \u0438 NVMe."
+                                ]
+                            }, void 0, true)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+                lineNumber: 37,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
+        lineNumber: 21,
+        columnNumber: 5
+    }, undefined);
+};
+_c = IIOTools;
+exports.default = IIOTools;
+var _c;
+$RefreshReg$(_c, "IIOTools");
+
+  $parcel$ReactRefreshHelpers$8ba0.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"8THfS":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$d557 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$d557.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d557.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const IIOInfo = ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: styles.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\u26A1"
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        lineNumber: 4,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0424\u0438\u043A\u0441\u0430\u0446\u0438\u044F \u0440\u0435\u0436\u0438\u043C\u0430 GEN 3 \u043F\u043E\u043C\u043E\u0433\u0430\u0435\u0442 \u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044C \u043E\u0448\u0438\u0431\u043E\u043A Link Training Error."
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        lineNumber: 5,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                lineNumber: 3,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDEE0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        lineNumber: 11,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0414\u043B\u044F \u0441\u0442\u0430\u0440\u044B\u0445 \u043A\u0430\u0440\u0442 (HD 7000, GTX 600 \u0438 \u0441\u0442\u0430\u0440\u0448\u0435) \u043F\u0440\u0438\u043D\u0443\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0441\u0442\u0430\u0432\u044C\u0442\u0435 GEN 2."
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        lineNumber: 12,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                lineNumber: 10,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\u2728"
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        lineNumber: 18,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0415\u0441\u043B\u0438 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430 \xab\u043E\u0442\u0432\u0430\u043B\u0438\u0432\u0430\u044E\u0442\u0441\u044F\xbb \u2014 \u043F\u0440\u043E\u0442\u0440\u0438\u0442\u0435 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u044B \u0440\u0430\u0437\u044A\u0435\u043C\u043E\u0432 \u043B\u0430\u0441\u0442\u0438\u043A\u043E\u043C."
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        lineNumber: 19,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                lineNumber: 17,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83E\uDDEC"
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0414\u043B\u044F \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 NVMe \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0440\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u0435 \u043B\u0438\u043D\u0438\u0439 (Bifurcation x4x4x4x4)."
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        lineNumber: 26,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                lineNumber: 24,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+        lineNumber: 2,
+        columnNumber: 3
+    }, undefined);
+_c = IIOInfo;
+exports.default = IIOInfo;
+var _c;
+$RefreshReg$(_c, "IIOInfo");
+
+  $parcel$ReactRefreshHelpers$d557.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jEjIK":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const IIOBios = ()=>({
+        type: 'iio',
+        title: "IIO0 CONFIGURATION",
+        path: "IntelRCSetup > IIO Configuration > IIO0 Configuration",
+        content: [
+            {
+                text_left: "IOU2 (PCIE PORT X16)"
+            },
+            {
+                text_left: "IOU0 (PCIE PORT X8)"
+            },
+            {
+                text_left: "IOU1 (PCIE PORT X4)"
+            }
+        ]
+    });
+_c = IIOBios;
+exports.default = IIOBios;
+var _c;
+$RefreshReg$(_c, "IIOBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8gBEe":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$d2b5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$d2b5.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -30671,47 +29071,55 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
 var _pcitools = require("./PCITools/PCITools");
 var _pcitoolsDefault = parcelHelpers.interopDefault(_pcitools);
-var _pcibios = require("./PCIBios");
-var _pcibiosDefault = parcelHelpers.interopDefault(_pcibios);
 var _pciinfo = require("./PCIInfo");
 var _pciinfoDefault = parcelHelpers.interopDefault(_pciinfo);
+var _pcibios = require("./PCIBios");
+var _pcibiosDefault = parcelHelpers.interopDefault(_pcibios);
 const PCIConfiguration = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-        className: "manager-layout",
+    const { title, path, content } = (0, _pcibiosDefault.default)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default), {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
                 title: "PCI SETTINGS",
                 toolsLabel: "GPU-Z \u041F\u0420\u041E\u0412\u0415\u0420\u041A\u0410",
-                infoNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pciinfoDefault.default), {}, void 0, false, {
-                    fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
-                    lineNumber: 12,
-                    columnNumber: 19
-                }, void 0),
-                toolsNode: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pcitoolsDefault.default), {}, void 0, false, {
-                    fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
-                    lineNumber: 13,
-                    columnNumber: 20
-                }, void 0)
+                renderInfo: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pciinfoDefault.default), {
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
+                        lineNumber: 16,
+                        columnNumber: 33
+                    }, void 0),
+                renderTools: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pcitoolsDefault.default), {
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
+                        lineNumber: 17,
+                        columnNumber: 34
+                    }, void 0)
             }, void 0, false, {
                 fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
-                lineNumber: 9,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pcibiosDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                title: title,
+                path: path,
+                content: content
+            }, void 0, false, {
                 fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
-                lineNumber: 16,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined)
         ]
-    }, void 0, true, {
-        fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
-        lineNumber: 8,
-        columnNumber: 5
-    }, undefined);
+    }, void 0, true);
 };
 _c = PCIConfiguration;
 exports.default = PCIConfiguration;
@@ -30723,7 +29131,7 @@ $RefreshReg$(_c, "PCIConfiguration");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../InfoBlock/InfoBlock":"xpgGa","./PCITools/PCITools":"cbYQl","./PCIBios":"4ENvk","./PCIInfo":"fOWRs","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"cbYQl":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Toolbox/Toolbox":"2S4BZ","../BiosWindow/BiosWindow":"fCqKj","./PCITools/PCITools":"cbYQl","./PCIInfo":"fOWRs","./PCIBios":"4ENvk","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"cbYQl":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$d0bd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$d0bd.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -30736,275 +29144,247 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
 var _pcitoolsModuleCss = require("./PCITools.module.css");
 var _pcitoolsModuleCssDefault = parcelHelpers.interopDefault(_pcitoolsModuleCss);
-const PCITools = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _pcitoolsModuleCssDefault.default).container,
+const PCITools = ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: (0, _pcitoolsModuleCssDefault.default).pci_container,
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: (0, _pcitoolsModuleCssDefault.default).sectionLabel,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: (0, _pcitoolsModuleCssDefault.default).pci_section_label,
                 children: "\u0420\u0410\u0417\u0411\u041E\u0420 \u041E\u0428\u0418\u0411\u041E\u041A \u0418\u0417 GPU-Z:"
             }, void 0, false, {
                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                lineNumber: 7,
+                lineNumber: 12,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDEAB",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _pcitoolsModuleCssDefault.default).pci_item,
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                        className: (0, _pcitoolsModuleCssDefault.default).title,
-                        children: "UEFI BOOT REQUIRED / CSM ENABLED"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_icon,
+                        children: "\uD83D\uDEAB"
                     }, void 0, false, {
                         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                        lineNumber: 10,
+                        lineNumber: 15,
                         columnNumber: 7
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: (0, _pcitoolsModuleCssDefault.default).text,
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_item_description,
                         children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_item_title,
+                                children: "UEFI BOOT REQUIRED / CSM ENABLED"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 17,
+                                columnNumber: 9
+                            }, undefined),
                             "BIOS \u0432 \u0440\u0435\u0436\u0438\u043C\u0435 Legacy. Re-Size BAR \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0447\u0438\u0441\u0442\u044B\u0439 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_highlight,
                                 children: "UEFI"
                             }, void 0, false, {
                                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 12,
+                                lineNumber: 18,
                                 columnNumber: 58
                             }, undefined),
                             ". ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 12,
-                                columnNumber: 81
+                                lineNumber: 18,
+                                columnNumber: 109
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_status_accent,
                                 children: "\u0420\u0415\u0428\u0415\u041D\u0418\u0415:"
                             }, void 0, false, {
                                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 13,
+                                lineNumber: 19,
                                 columnNumber: 9
                             }, undefined),
                             " \u0412 BIOS (\u0440\u0430\u0437\u0434\u0435\u043B Boot) \u043F\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_highlight,
                                 children: "CSM Support: Disabled"
                             }, void 0, false, {
                                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 13,
-                                columnNumber: 66
+                                lineNumber: 19,
+                                columnNumber: 94
                             }, undefined),
                             "."
                         ]
                     }, void 0, true, {
                         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                        lineNumber: 11,
+                        lineNumber: 16,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                lineNumber: 9,
+                lineNumber: 14,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCBE",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _pcitoolsModuleCssDefault.default).pci_item,
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                        className: (0, _pcitoolsModuleCssDefault.default).title,
-                        children: "BOOT FROM GPT: NO"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_icon,
+                        children: "\uD83D\uDCBE"
                     }, void 0, false, {
                         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                        lineNumber: 18,
+                        lineNumber: 24,
                         columnNumber: 7
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: (0, _pcitoolsModuleCssDefault.default).text,
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_item_description,
                         children: [
-                            "\u0414\u0438\u0441\u043A \u0432 MBR. \u041D\u0443\u0436\u043D\u043E \u043A\u043E\u043D\u0432\u0435\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0432 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                children: "GPT"
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_item_title,
+                                children: "BOOT FROM GPT: NO"
                             }, void 0, false, {
                                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 20,
+                                lineNumber: 26,
+                                columnNumber: 9
+                            }, undefined),
+                            "\u0414\u0438\u0441\u043A \u0432 MBR. \u041D\u0443\u0436\u043D\u043E \u043A\u043E\u043D\u0432\u0435\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0432 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_highlight,
+                                children: "GPT (\u0447\u0435\u0440\u0435\u0437 MBR2GPT)"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 27,
                                 columnNumber: 44
                             }, undefined),
-                            " (\u0447\u0435\u0440\u0435\u0437 MBR2GPT), \u0438\u043D\u0430\u0447\u0435 \u043F\u043E\u0441\u043B\u0435 \u0432\u044B\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F CSM Windows \u043D\u0435 \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0441\u044F."
+                            ", \u0438\u043D\u0430\u0447\u0435 \u043F\u043E\u0441\u043B\u0435 \u0432\u044B\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F CSM Windows \u043D\u0435 \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0441\u044F."
                         ]
                     }, void 0, true, {
                         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                        lineNumber: 19,
+                        lineNumber: 25,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                lineNumber: 17,
+                lineNumber: 23,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: (0, _pcitoolsModuleCssDefault.default).sectionLabel,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: (0, _pcitoolsModuleCssDefault.default).pci_section_label,
                 children: "\u0413\u0414\u0415 \u0418\u0421\u041A\u0410\u0422\u042C \u041F\u0423\u041D\u041A\u0422\u042B \u0412 BIOS:"
             }, void 0, false, {
                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                lineNumber: 24,
+                lineNumber: 31,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDCC2",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _pcitoolsModuleCssDefault.default).pci_item,
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                        className: (0, _pcitoolsModuleCssDefault.default).title,
-                        children: "\u0421\u041A\u0420\u042B\u0422\u041E\u0415 \u041C\u0415\u041D\u042E (X99/X79)"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_icon,
+                        children: "\uD83D\uDCC2"
                     }, void 0, false, {
                         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                        lineNumber: 27,
+                        lineNumber: 34,
                         columnNumber: 7
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: (0, _pcitoolsModuleCssDefault.default).text,
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_item_description,
                         children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_item_title,
+                                children: "\u0421\u041A\u0420\u042B\u0422\u041E\u0415 \u041C\u0415\u041D\u042E (X99/X79)"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 36,
+                                columnNumber: 9
+                            }, undefined),
                             "\u041F\u0443\u0442\u044C: ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_highlight,
                                 children: "IntelRCSetup \u2192 IIO Configuration"
                             }, void 0, false, {
                                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 29,
+                                lineNumber: 37,
                                 columnNumber: 15
                             }, undefined),
                             ". ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 29,
-                                columnNumber: 66
+                                lineNumber: 37,
+                                columnNumber: 94
                             }, undefined),
                             "\u0412\u043A\u043B\u044E\u0447\u0438\u0442\u0435 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_highlight,
                                 children: "PCI 64B ADDR"
                             }, void 0, false, {
                                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 30,
+                                lineNumber: 38,
                                 columnNumber: 18
                             }, undefined),
-                            ". \u0415\u0441\u043B\u0438 \u043F\u0443\u043D\u043A\u0442 ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                children: "Re-Size BAR"
-                            }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 30,
-                                columnNumber: 60
-                            }, undefined),
-                            " \u043D\u0435 \u043F\u043E\u044F\u0432\u0438\u043B\u0441\u044F \u2014 \u0441\u043C. \u0431\u043B\u043E\u043A \u043D\u0438\u0436\u0435."
+                            ". \u0415\u0441\u043B\u0438 \u043F\u0443\u043D\u043A\u0442 Re-Size BAR \u043D\u0435 \u043F\u043E\u044F\u0432\u0438\u043B\u0441\u044F \u2014 \u0441\u043C. \u0431\u043B\u043E\u043A \u043D\u0438\u0436\u0435."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                        lineNumber: 28,
-                        columnNumber: 7
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                lineNumber: 26,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\u2753",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                        className: (0, _pcitoolsModuleCssDefault.default).title,
-                        children: "4G \u0415\u0421\u0422\u042C, \u0410 RE-SIZE BAR \u041D\u0415\u0422"
-                    }, void 0, false, {
                         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
                         lineNumber: 35,
                         columnNumber: 7
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: (0, _pcitoolsModuleCssDefault.default).text,
-                        children: [
-                            "\u0427\u0430\u0441\u0442\u0430\u044F \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0430 \u043A\u0438\u0442\u0430\u0439\u0446\u0435\u0432: 4G Decoding \u0432\u043A\u043B\u044E\u0447\u0435\u043D, \u0430 \u043F\u0443\u043D\u043A\u0442\u0430 \u0432 \u043C\u0435\u043D\u044E \u043D\u0435\u0442. ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 37,
-                                columnNumber: 77
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                children: "\u0420\u0415\u0428\u0415\u041D\u0418\u0415:"
-                            }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 38,
-                                columnNumber: 9
-                            }, undefined),
-                            " \u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0443\u0442\u0438\u043B\u0438\u0442\u0443 ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                children: "ReBarState"
-                            }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                lineNumber: 38,
-                                columnNumber: 55
-                            }, undefined),
-                            " \u0434\u043B\u044F \u043F\u0440\u0438\u043D\u0443\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \u0447\u0435\u0440\u0435\u0437 EFI-shell."
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                        lineNumber: 36,
-                        columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                lineNumber: 34,
+                lineNumber: 33,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _pcitoolsModuleCssDefault.default).importantBox,
+                className: (0, _pcitoolsModuleCssDefault.default).pci_item,
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                        icon: "\uD83D\uDCA1",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: (0, _pcitoolsModuleCssDefault.default).footerText,
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                    children: "\u041F\u041E\u0420\u042F\u0414\u041E\u041A:"
-                                }, void 0, false, {
-                                    fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                    lineNumber: 45,
-                                    columnNumber: 11
-                                }, undefined),
-                                " GPT \u2192 Off CSM \u2192 64B ADDR \u2192 BAR (\u043C\u0435\u043D\u044E \u0438\u043B\u0438 ReBarState)."
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                            lineNumber: 44,
-                            columnNumber: 9
-                        }, undefined)
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_icon,
+                        children: "\u2753"
                     }, void 0, false, {
                         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
                         lineNumber: 43,
                         columnNumber: 7
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                        icon: "\u26A0\uFE0F",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: (0, _pcitoolsModuleCssDefault.default).footerText,
-                            children: [
-                                "\u041D\u0430 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u0445 ",
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                    children: "v1/v2 (LGA2011)"
-                                }, void 0, false, {
-                                    fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                                    lineNumber: 51,
-                                    columnNumber: 26
-                                }, undefined),
-                                " \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u044F \u043D\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442!"
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                            lineNumber: 50,
-                            columnNumber: 9
-                        }, undefined)
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_item_description,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_item_title,
+                                children: "4G \u0415\u0421\u0422\u042C, \u0410 RE-SIZE BAR \u041D\u0415\u0422"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 45,
+                                columnNumber: 9
+                            }, undefined),
+                            "\u043A\u0438\u0442\u0430\u0439\u0446\u044B: 4G Decoding \u0432\u043A\u043B\u044E\u0447\u0435\u043D, \u0430 \u043F\u0443\u043D\u043A\u0442\u0430 \u0432 \u043C\u0435\u043D\u044E \u043D\u0435\u0442. ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 46,
+                                columnNumber: 60
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_status_accent,
+                                children: "\u0420\u0415\u0428\u0415\u041D\u0418\u0415:"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 47,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0443\u0442\u0438\u043B\u0438\u0442\u0443 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_highlight,
+                                children: "ReBarState"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 47,
+                                columnNumber: 83
+                            }, undefined),
+                            "."
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-                        lineNumber: 49,
+                        lineNumber: 44,
                         columnNumber: 7
                     }, undefined)
                 ]
@@ -31012,11 +29392,98 @@ const PCITools = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
                 lineNumber: 42,
                 columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: (0, _pcitoolsModuleCssDefault.default).pci_section_label,
+                children: "\u0412\u0410\u0416\u041D\u042B\u0415 \u041F\u0420\u0418\u041C\u0415\u0427\u0410\u041D\u0418\u042F:"
+            }, void 0, false, {
+                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                lineNumber: 51,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _pcitoolsModuleCssDefault.default).pci_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_icon,
+                        children: "\uD83D\uDCA1"
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                        lineNumber: 54,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_item_description,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_item_title,
+                                children: "\u041F\u041E\u0420\u042F\u0414\u041E\u041A \u0414\u0415\u0419\u0421\u0422\u0412\u0418\u0419"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 56,
+                                columnNumber: 9
+                            }, undefined),
+                            "GPT \u2192 Off CSM \u2192 64B ADDR \u2192 BAR."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                        lineNumber: 55,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                lineNumber: 53,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _pcitoolsModuleCssDefault.default).pci_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_icon,
+                        children: "\u26A0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                        lineNumber: 62,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: (0, _pcitoolsModuleCssDefault.default).pci_item_description,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_item_title,
+                                children: "\u041E\u0413\u0420\u0410\u041D\u0418\u0427\u0415\u041D\u0418\u0415 \u041F\u041B\u0410\u0422\u0424\u041E\u0420\u041C\u042B"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 64,
+                                columnNumber: 9
+                            }, undefined),
+                            "\u041D\u0430 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u0445 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                className: (0, _pcitoolsModuleCssDefault.default).pci_highlight,
+                                children: "v1/v2 (LGA2011)"
+                            }, void 0, false, {
+                                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                                lineNumber: 65,
+                                columnNumber: 24
+                            }, undefined),
+                            " Re-Size BAR \u043D\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442!"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                        lineNumber: 63,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
+                lineNumber: 61,
+                columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/PCIConfiguration/PCITools/PCITools.tsx",
-        lineNumber: 6,
+        lineNumber: 11,
         columnNumber: 3
     }, undefined);
 _c = PCITools;
@@ -31029,63 +29496,17 @@ $RefreshReg$(_c, "PCITools");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../../InfoBlock/InfoBlock":"xpgGa","./PCITools.module.css":"fDgTr","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fDgTr":[function(require,module,exports,__globalThis) {
-module.exports["container"] = `_7ermDa_container`;
-module.exports["footerText"] = `_7ermDa_footerText`;
-module.exports["importantBox"] = `_7ermDa_importantBox`;
-module.exports["sectionLabel"] = `_7ermDa_sectionLabel`;
-module.exports["text"] = `_7ermDa_text`;
-module.exports["title"] = `_7ermDa_title`;
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./PCITools.module.css":"fDgTr","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fDgTr":[function(require,module,exports,__globalThis) {
+module.exports["pci_container"] = `_7ermDa_pci_container`;
+module.exports["pci_highlight"] = `_7ermDa_pci_highlight`;
+module.exports["pci_icon"] = `_7ermDa_pci_icon`;
+module.exports["pci_item"] = `_7ermDa_pci_item`;
+module.exports["pci_item_description"] = `_7ermDa_pci_item_description`;
+module.exports["pci_item_title"] = `_7ermDa_pci_item_title`;
+module.exports["pci_section_label"] = `_7ermDa_pci_section_label`;
+module.exports["pci_status_accent"] = `_7ermDa_pci_status_accent`;
 
-},{}],"4ENvk":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$5569 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$5569.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5569.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _biosWindow = require("../BiosWindow/BiosWindow");
-var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
-const PCIBios = ()=>{
-    const rows = [
-        {
-            label: "Above 4G Decoding",
-            value: "Enabled",
-            highlight: true
-        },
-        {
-            label: "Re-Size BAR Support",
-            value: "Enabled",
-            highlight: true
-        }
-    ];
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-        title: "PCI SUBSYSTEM SETTINGS",
-        path: "Advanced > PCI Subsystem Setting",
-        rows: rows
-    }, void 0, false, {
-        fileName: "src/components/PCIConfiguration/PCIBios.tsx",
-        lineNumber: 11,
-        columnNumber: 5
-    }, undefined);
-};
-_c = PCIBios;
-exports.default = PCIBios;
-var _c;
-$RefreshReg$(_c, "PCIBios");
-
-  $parcel$ReactRefreshHelpers$5569.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"fCqKj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fOWRs":[function(require,module,exports,__globalThis) {
+},{}],"fOWRs":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$a3e0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$a3e0.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -31096,46 +29517,115 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _infoBlock = require("../InfoBlock/InfoBlock");
-var _infoBlockDefault = parcelHelpers.interopDefault(_infoBlock);
-const PCIInfo = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+const PCIInfo = ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: styles.info_container,
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDC8E",
-                children: "\u041F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0441\u0438\u0441\u0442\u0435\u043C\u0435 \u0430\u0434\u0440\u0435\u0441\u043E\u0432\u0430\u0442\u044C \u0432\u0438\u0434\u0435\u043E\u043F\u0430\u043C\u044F\u0442\u044C \u0432\u044B\u0448\u0435 4 \u0413\u0411. \u041A\u0440\u0438\u0442\u0438\u0447\u043D\u043E \u0434\u043B\u044F Re-Size BAR \u0438 \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0445 \u0443\u0441\u043A\u043E\u0440\u0438\u0442\u0435\u043B\u0435\u0439 (Tesla/Quadro/RTX 30+)."
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDC8E"
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        lineNumber: 4,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0420\u0430\u0437\u0431\u043B\u043E\u043A\u0438\u0440\u0443\u0435\u0442 \u0430\u0434\u0440\u0435\u0441\u0430\u0446\u0438\u044E \u0432\u0438\u0434\u0435\u043E\u043F\u0430\u043C\u044F\u0442\u0438 \u0432\u044B\u0448\u0435 4 \u0413\u0411. \u041D\u0443\u0436\u043D\u043E \u0434\u043B\u044F Re-Size BAR \u0438 \u043D\u043E\u0432\u044B\u0445 GPU (RTX 30+)."
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        lineNumber: 5,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
-                lineNumber: 6,
+                lineNumber: 3,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDD0D",
-                children: "\u041F\u043E\u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u041F\u041E\u0421\u041B\u0415 \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F 4G Decoding \u0432 \u044D\u0442\u043E\u043C \u0436\u0435 \u0440\u0430\u0437\u0434\u0435\u043B\u0435 \u0438\u043B\u0438 \u0432 Advanced \u2192 PCIe Configuration."
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDD0D"
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        lineNumber: 11,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041F\u043E\u044F\u0432\u0438\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u0441\u043B\u0435 \u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 \xab4G Decoding\xbb \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 PCIe."
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        lineNumber: 12,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDEAB",
-                children: "\u041D\u0430 \u0441\u0442\u0430\u0440\u044B\u0445 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u0445 (Xeon E5 v1/v2) \u043F\u0443\u043D\u043A\u0442\u0430 \u043D\u0435 \u0431\u0443\u0434\u0435\u0442 \u2014 \u044D\u0442\u043E \u043B\u0438\u043C\u0438\u0442 \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u044B. Re-Size BAR \u0442\u0430\u043A\u0436\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 GPT-\u0440\u0430\u0437\u043C\u0435\u0442\u043A\u0443 \u0434\u0438\u0441\u043A\u0430."
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDEAB"
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        lineNumber: 18,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E \u043D\u0430 Xeon E5 v1/v2. Re-Size BAR \u0442\u0440\u0435\u0431\u0443\u0435\u0442 GPT-\u0440\u0430\u0437\u043C\u0435\u0442\u043A\u0443 \u0438 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM."
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        lineNumber: 19,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
-                lineNumber: 12,
+                lineNumber: 17,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoBlockDefault.default).Row, {
-                icon: "\uD83D\uDEE0\uFE0F",
-                children: "\u041F\u043E\u0441\u043B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0432 BIOS \u0443\u0431\u0435\u0434\u0438\u0442\u0435\u0441\u044C, \u0447\u0442\u043E \u0432 GPU-Z \u0441\u0442\u0430\u0442\u0443\u0441 Resizable BAR \u0441\u043C\u0435\u043D\u0438\u043B\u0441\u044F \u043D\u0430 \xabEnabled\xbb. CSM \u043F\u0440\u0438 \u044D\u0442\u043E\u043C \u0434\u043E\u043B\u0436\u0435\u043D \u0431\u044B\u0442\u044C \u0432\u044B\u043A\u043B\u044E\u0447\u0435\u043D."
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDEE0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0441\u0442\u0430\u0442\u0443\u0441 \xabEnabled\xbb \u0432 GPU-Z \u043F\u043E\u0441\u043B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 BIOS."
+                    }, void 0, false, {
+                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        lineNumber: 26,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
-                lineNumber: 15,
+                lineNumber: 24,
                 columnNumber: 5
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+        lineNumber: 2,
+        columnNumber: 3
+    }, undefined);
 _c = PCIInfo;
 exports.default = PCIInfo;
 var _c;
@@ -31146,6 +29636,2040 @@ $RefreshReg$(_c, "PCIInfo");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../InfoBlock/InfoBlock":"xpgGa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"5XnaQ":[function() {},{}]},["7KwkS","4dmnR"], "4dmnR", "parcelRequire1fd1", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4ENvk":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const PCIBios = ()=>({
+        title: "PCI SUBSYSTEM SETTINGS",
+        path: "Advanced > PCI Subsystem Setting",
+        content: [
+            {
+                text_left: "Above 4G Decoding",
+                text_right: "Enabled",
+                highlight: true
+            },
+            {
+                text_left: "Re-Size BAR Support",
+                text_right: "Enabled",
+                highlight: true
+            }
+        ]
+    });
+_c = PCIBios;
+exports.default = PCIBios;
+var _c;
+$RefreshReg$(_c, "PCIBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"kEGQB":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$8d8c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$8d8c.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8d8c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _powerTools = require("./PowerTools");
+var _powerToolsDefault = parcelHelpers.interopDefault(_powerTools);
+var _powerBios = require("./PowerBios");
+var _powerBiosDefault = parcelHelpers.interopDefault(_powerBios);
+var _powerInfo = require("./PowerInfo");
+var _powerInfoDefault = parcelHelpers.interopDefault(_powerInfo);
+var _s = $RefreshSig$();
+const PowerConfiguration = ()=>{
+    _s();
+    // Состояние для пресетов CPU
+    const [value, setValue] = (0, _react.useState)('v_2');
+    const { title, path, content } = (0, _powerBiosDefault.default)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "Power Management",
+                toolsLabel: "\u041F\u0420\u0415\u0421\u0415\u0422 CPU",
+                renderInfo: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerInfoDefault.default), {
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
+                        lineNumber: 19,
+                        columnNumber: 33
+                    }, void 0),
+                renderTools: (styles)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerToolsDefault.default), {
+                        value: value,
+                        setValue: setValue,
+                        styles: styles
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
+                        lineNumber: 21,
+                        columnNumber: 11
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                title: title,
+                path: path,
+                content: content,
+                type: "power" // Передаем тип для хука внутри BiosWindow
+                ,
+                value: value
+            }, void 0, false, {
+                fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
+                lineNumber: 29,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(PowerConfiguration, "JJ77rkQy+LCl3vuNXKHynOi9djQ=");
+_c = PowerConfiguration;
+exports.default = PowerConfiguration;
+var _c;
+$RefreshReg$(_c, "PowerConfiguration");
+
+  $parcel$ReactRefreshHelpers$8d8c.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Toolbox/Toolbox":"2S4BZ","../BiosWindow/BiosWindow":"fCqKj","./PowerTools":"5kdfK","./PowerBios":"fZl1s","./PowerInfo":"lE1Wq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"5kdfK":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9455 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9455.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9455.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+const PowerTools = ({ value, setValue, styles })=>{
+    const renderBtn = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+            className: styles.tools_button,
+            type: type,
+            isActive: value === type,
+            onClick: ()=>setValue(type)
+        }, void 0, false, {
+            fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+            lineNumber: 6,
+            columnNumber: 5
+        }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: styles.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_label,
+                children: "\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415 CPU:"
+            }, void 0, false, {
+                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.btn_group,
+                children: [
+                    renderBtn('v_2'),
+                    renderBtn('v_3'),
+                    renderBtn('v_4')
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.tools_icon,
+                        children: "\uD83D\uDD0A"
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: styles.tools_text,
+                        children: [
+                            "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "C-States"
+                            }, void 0, false, {
+                                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                                lineNumber: 28,
+                                columnNumber: 21
+                            }, undefined),
+                            " \u043C\u043E\u0433\u0443\u0442 \u0432\u043B\u0438\u044F\u0442\u044C \u043D\u0430 \u0430\u043A\u0443\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043F\u0438\u0441\u043A \u0434\u0440\u043E\u0441\u0441\u0435\u043B\u0435\u0439."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.tools_icon,
+                        children: [
+                            value === 'v_2' && "\u2699\uFE0F",
+                            value === 'v_3' && "\uD83D\uDCA1",
+                            value === 'v_4' && "\uD83D\uDE80"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: styles.tools_text,
+                        children: [
+                            value === 'v_2' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    "\u0414\u043B\u044F V2: ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "C0/C1 limit"
+                                    }, void 0, false, {
+                                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                                        lineNumber: 39,
+                                        columnNumber: 41
+                                    }, undefined),
+                                    " \u0438 ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "Disabled"
+                                    }, void 0, false, {
+                                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                                        lineNumber: 39,
+                                        columnNumber: 62
+                                    }, undefined),
+                                    " \u043E\u0442\u0447\u0435\u0442\u044B \u0434\u043B\u044F \u043B\u0443\u0447\u0448\u0435\u0433\u043E \u043E\u0442\u043A\u043B\u0438\u043A\u0430."
+                                ]
+                            }, void 0, true),
+                            value === 'v_3' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    "\u0414\u043B\u044F ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "Unlock Turbo Boost"
+                                    }, void 0, false, {
+                                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                                        lineNumber: 40,
+                                        columnNumber: 37
+                                    }, undefined),
+                                    ": C3 [Enabled], C6 [Disabled] \u0434\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u0438."
+                                ]
+                            }, void 0, true),
+                            value === 'v_4' && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                children: [
+                                    "\u0414\u043B\u044F V4 \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                        children: "\u0432\u044B\u043A\u043B\u044E\u0447\u0438\u0442\u044C"
+                                    }, void 0, false, {
+                                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                                        lineNumber: 41,
+                                        columnNumber: 64
+                                    }, undefined),
+                                    " \u044D\u043D\u0435\u0440\u0433\u043E\u0441\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0438\u0435 (Disabled)."
+                                ]
+                            }, void 0, true)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+                lineNumber: 32,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
+        lineNumber: 15,
+        columnNumber: 5
+    }, undefined);
+};
+_c = PowerTools;
+exports.default = PowerTools;
+var _c;
+$RefreshReg$(_c, "PowerTools");
+
+  $parcel$ReactRefreshHelpers$9455.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fZl1s":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const PowerBios = ()=>({
+        type: 'power',
+        title: "CPU C STATE CONTROL",
+        path: "Advanced > Power Management Configuration > CPU C State Control",
+        content: [
+            {
+                text_left: "C2C3TT",
+                text_right: "0"
+            },
+            {
+                text_left: "Package C State limit",
+                highlight: true
+            },
+            {
+                text_left: "CPU C3 report",
+                highlight: true
+            },
+            {
+                text_left: "CPU C6 report",
+                highlight: true
+            }
+        ]
+    });
+_c = PowerBios;
+exports.default = PowerBios;
+var _c;
+$RefreshReg$(_c, "PowerBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lE1Wq":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$c8c9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$c8c9.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c8c9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const PowerInfo = ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: styles.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDE80"
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        lineNumber: 4,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0414\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0433\u043E \u0410\u043D\u043B\u043E\u043A\u0430 \u0422\u0443\u0440\u0431\u043E\u0431\u0443\u0441\u0442\u0430 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 C6 (C6 Offline / Un-demote)."
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        lineNumber: 5,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                lineNumber: 3,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDD79\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        lineNumber: 11,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041D\u0430 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u0445 V4 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 C3 \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u043C\u0438\u043A\u0440\u043E\u0437\u0430\u0434\u0435\u0440\u0436\u043A\u0438 \u0438 \u0434\u0435\u043B\u0430\u0435\u0442 \u0433\u0440\u0430\u0444\u0438\u043A Frame Time \u0440\u043E\u0432\u043D\u0435\u0435."
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        lineNumber: 12,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                lineNumber: 10,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDCDC"
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        lineNumber: 18,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0414\u043B\u044F V2 \u043B\u0443\u0447\u0448\u0435 \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0441\u0442\u043E\u043A (No Limit), \u0447\u0442\u043E\u0431\u044B \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u0432\u044B\u0441\u043E\u043A\u0443\u044E \u0447\u0430\u0441\u0442\u043E\u0442\u0443 \u043D\u0430 \u043E\u0434\u043D\u043E \u044F\u0434\u0440\u043E."
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        lineNumber: 19,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                lineNumber: 17,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\u26A1"
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0415\u0441\u043B\u0438 \u0447\u0430\u0441\u0442\u043E\u0442\u044B \u043D\u0435 \u043F\u0430\u0434\u0430\u044E\u0442 \u0432 \u043F\u0440\u043E\u0441\u0442\u043E\u0435, \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0441\u0445\u0435\u043C\u0443 \u043F\u0438\u0442\u0430\u043D\u0438\u044F Windows (\u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \xab\u0412\u044B\u0441\u043E\u043A\u0430\u044F \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C\xbb)."
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        lineNumber: 26,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                lineNumber: 24,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+        lineNumber: 2,
+        columnNumber: 3
+    }, undefined);
+_c = PowerInfo;
+exports.default = PowerInfo;
+var _c;
+$RefreshReg$(_c, "PowerInfo");
+
+  $parcel$ReactRefreshHelpers$c8c9.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"i2Oy5":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$61ef = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$61ef.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$61ef.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _configData = require("./data/configData");
+var _timingEngine = require("../TimingEngine/TimingEngine");
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _ramTools = require("./RamTools");
+var _ramToolsDefault = parcelHelpers.interopDefault(_ramTools);
+var _ramInfo = require("./RamInfo");
+var _ramInfoDefault = parcelHelpers.interopDefault(_ramInfo);
+var _ramBios = require("./RamBios");
+var _ramBiosDefault = parcelHelpers.interopDefault(_ramBios);
+var _ultraAlert = require("../UltraAlert/UltraAlert");
+var _ultraAlertDefault = parcelHelpers.interopDefault(_ultraAlert);
+var _s = $RefreshSig$();
+const RamConfiguration = ()=>{
+    _s();
+    const [unlocked, setUnlocked] = (0, _react.useState)(false);
+    const [temp, setTemp] = (0, _react.useState)(false);
+    // Начальное состояние
+    const [value, setValue] = (0, _react.useState)({
+        generation: 'V3',
+        cpu: (0, _configData.CPU_MODELS)['V3'][0],
+        isEcc: false,
+        ramSize: 16,
+        has16gbSticks: false,
+        slotsCount: 2,
+        profile: 'safe',
+        boardType: 'atx',
+        tCL: '',
+        tRP: '',
+        tRCD: ''
+    });
+    // Вызов оркестратора TimingEngine (внутри него Hardware, SlotConfiguration и т.д.)
+    const engine = (0, _timingEngine.calculateRamFullLogic)(value, unlocked || temp);
+    // Синхронизация: если логика движка изменила слоты или применила force16, обновляем форму
+    (0, _react.useEffect)(()=>{
+        const s = engine.sanitized;
+        const hasChanged = s.slotsCount !== value.slotsCount || s.cpu.name !== value.cpu.name || s.has16gbSticks !== value.has16gbSticks;
+        if (hasChanged) setValue((prev)=>({
+                ...prev,
+                ...s
+            }));
+    }, [
+        engine.sanitized
+    ]);
+    // Обработка ввода в BIOS (только цифры, макс 2 знака)
+    const handleBiosChange = (id, newVal)=>{
+        const numericVal = newVal.replace(/\D/g, '').slice(0, 2);
+        setValue((prev)=>({
+                ...prev,
+                [id]: numericVal
+            }));
+    };
+    // Подготовка данных для окна BIOS
+    const biosRaw = (0, _ramBiosDefault.default)(engine.timings);
+    const biosData = {
+        ...biosRaw,
+        content: biosRaw.content.map((item)=>({
+                ...item,
+                // Делаем поля редактируемыми только в режиме Custom
+                id: value.profile === 'custom' ? item.id : undefined
+            }))
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ultraAlertDefault.default), {
+                    isUnlocked: unlocked,
+                    onUnlock: setUnlocked,
+                    onSetTempUltra: setTemp
+                }, void 0, false, {
+                    fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
+                    lineNumber: 64,
+                    columnNumber: 16
+                }, void 0),
+                renderInfo: (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramInfoDefault.default), {
+                        styles: s,
+                        value: engine.sanitized,
+                        timings: engine.timings
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
+                        lineNumber: 66,
+                        columnNumber: 11
+                    }, void 0),
+                renderTools: (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramToolsDefault.default), {
+                        styles: s,
+                        value: value,
+                        setValue: setValue,
+                        isUnlocked: unlocked || temp,
+                        availableSlots: engine.sanitized.availableSlots,
+                        currentCpuList: engine.sanitized.currentCpuList,
+                        show16gbToggle: engine.sanitized.show16gbToggle
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
+                        lineNumber: 73,
+                        columnNumber: 11
+                    }, void 0),
+                toolsLabel: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0410 \u041F\u0410\u041C\u042F\u0422\u0418"
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
+                lineNumber: 63,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...biosData,
+                type: "ram",
+                value: engine.sanitized,
+                onBiosChange: handleBiosChange
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
+                lineNumber: 86,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(RamConfiguration, "cRqrfrAwtgvi7apryoojuOGR2z8=");
+_c = RamConfiguration;
+exports.default = RamConfiguration;
+var _c;
+$RefreshReg$(_c, "RamConfiguration");
+
+  $parcel$ReactRefreshHelpers$61ef.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./data/configData":"euR8U","../Toolbox/Toolbox":"2S4BZ","../BiosWindow/BiosWindow":"fCqKj","./RamTools":"jxHKH","./RamInfo":"cUeEy","./RamBios":"a06IC","../UltraAlert/UltraAlert":"3Tqgm","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../TimingEngine/TimingEngine":"fn3lZ"}],"euR8U":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CPU_MODELS", ()=>CPU_MODELS);
+parcelHelpers.export(exports, "RAM_SIZES", ()=>RAM_SIZES);
+parcelHelpers.export(exports, "RAM_PRESETS", ()=>RAM_PRESETS);
+parcelHelpers.export(exports, "SLOTS", ()=>SLOTS);
+parcelHelpers.export(exports, "GENERATIONS", ()=>GENERATIONS);
+const CPU_MODELS = {
+    V2: [
+        {
+            name: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442 (1866)",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2618L v2 \u2014 1600",
+            maxFrequency: 1600
+        },
+        {
+            name: "E5-2620 v2 \u2014 1600",
+            maxFrequency: 1600
+        },
+        {
+            name: "E5-2630 v2 \u2014 1600",
+            maxFrequency: 1600
+        },
+        {
+            name: "E5-2630L v2 \u2014 1600",
+            maxFrequency: 1600
+        },
+        {
+            name: "E5-2640 v2 \u2014 1600",
+            maxFrequency: 1600
+        },
+        {
+            name: "E5-2650L v2 \u2014 1600",
+            maxFrequency: 1600
+        },
+        {
+            name: "E5-2603 v2 \u2014 1333",
+            maxFrequency: 1333
+        },
+        {
+            name: "E5-2609 v2 \u2014 1333",
+            maxFrequency: 1333
+        }
+    ],
+    V3: [
+        {
+            name: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442 (2133)",
+            maxFrequency: 2133
+        },
+        {
+            name: "E5-2620 v3 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2623 v3 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2628L v3 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2630 v3 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2630L v3 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2640 v3 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2648L v3 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2603 v3 \u2014 1600",
+            maxFrequency: 1600
+        },
+        {
+            name: "E5-2609 v3 \u2014 1600",
+            maxFrequency: 1600
+        },
+        {
+            name: "E5-2622 v3 \u2014 1600",
+            maxFrequency: 1600
+        }
+    ],
+    V4: [
+        {
+            name: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442 (2400)",
+            maxFrequency: 2400
+        },
+        {
+            name: "E5-2618L v4 \u2014 2133",
+            maxFrequency: 2133
+        },
+        {
+            name: "E5-2620 v4 \u2014 2133",
+            maxFrequency: 2133
+        },
+        {
+            name: "E5-2623 v4 \u2014 2133",
+            maxFrequency: 2133
+        },
+        {
+            name: "E5-2630 v4 \u2014 2133",
+            maxFrequency: 2133
+        },
+        {
+            name: "E5-2640 v4 \u2014 2133",
+            maxFrequency: 2133
+        },
+        {
+            name: "E5-2650L v4 \u2014 2133",
+            maxFrequency: 2133
+        },
+        {
+            name: "E5-2683 v4 \u2014 2133",
+            maxFrequency: 2133
+        },
+        {
+            name: "E5-2603 v4 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2608L v4 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2609 v4 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2628L v4 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2630L v4 \u2014 1866",
+            maxFrequency: 1866
+        },
+        {
+            name: "E5-2648L v4 \u2014 1866",
+            maxFrequency: 1866
+        }
+    ]
+};
+const RAM_SIZES = [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    32,
+    40,
+    48,
+    64
+];
+const RAM_PRESETS = [
+    'safe',
+    'balanced',
+    'aggressive',
+    'custom',
+    'ultra'
+];
+const SLOTS = [
+    1,
+    2,
+    3,
+    4
+];
+const GENERATIONS = [
+    'V2',
+    'V3',
+    'V4'
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jxHKH":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$7bb7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$7bb7.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7bb7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _configData = require("./data/configData");
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _s = $RefreshSig$();
+const RamTools = ({ value, setValue, styles, isUnlocked, availableSlots = [], currentCpuList = [], show16gbToggle })=>{
+    _s();
+    const onChange = (upd)=>{
+        setValue((p)=>({
+                ...p,
+                ...upd
+            }));
+    };
+    // Автопереключение на ultra при разблокировке
+    (0, _react.useEffect)(()=>{
+        if (isUnlocked) onChange({
+            profile: 'ultra',
+            tCL: '',
+            tRP: '',
+            tRCD: ''
+        });
+    }, [
+        isUnlocked
+    ]);
+    const L = ({ t })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: styles.tools_label,
+            children: t
+        }, void 0, false, {
+            fileName: "src/components/RamConfiguration/RamTools.tsx",
+            lineNumber: 39,
+            columnNumber: 39
+        }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: styles.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(L, {
+                t: "\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415:"
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 43,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.btn_group,
+                children: [
+                    'V2',
+                    'V3',
+                    'V4'
+                ].map((v)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        className: styles.tools_button,
+                        type: v.toLowerCase().replace('v', 'v_'),
+                        isActive: value.generation === v,
+                        onClick: ()=>onChange({
+                                generation: v
+                            })
+                    }, v, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 46,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 44,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(L, {
+                t: "\u041F\u0420\u041E\u0426\u0415\u0421\u0421\u041E\u0420:"
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 56,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                className: styles.tools_select,
+                value: value.cpu?.name || '',
+                onChange: (e)=>onChange({
+                        cpu: currentCpuList.find((c)=>c.name === e.target.value)
+                    }),
+                children: currentCpuList.length > 0 ? currentCpuList.map((c)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                        value: c.name,
+                        children: c.name
+                    }, c.name, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 64,
+                        columnNumber: 13
+                    }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                    children: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430..."
+                }, void 0, false, {
+                    fileName: "src/components/RamConfiguration/RamTools.tsx",
+                    lineNumber: 67,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 57,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(L, {
+                t: "\u0422\u0418\u041F \u041F\u0410\u041C\u042F\u0422\u0418:"
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 71,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.btn_group,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        className: styles.tools_button,
+                        type: "desktop",
+                        isActive: !value.isEcc,
+                        onClick: ()=>onChange({
+                                isEcc: false
+                            })
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 73,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        className: styles.tools_button,
+                        type: "ecc",
+                        isActive: value.isEcc,
+                        onClick: ()=>onChange({
+                                isEcc: true
+                            })
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 79,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 72,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(L, {
+                t: "\u041E\u0411\u042A\u0415\u041C:"
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 87,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                className: styles.tools_select,
+                value: value.ramSize,
+                onChange: (e)=>onChange({
+                        ramSize: +e.target.value
+                    }),
+                children: (0, _configData.RAM_SIZES).map((sz)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                        value: sz,
+                        children: [
+                            sz,
+                            " GB"
+                        ]
+                    }, sz, true, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 94,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 88,
+                columnNumber: 7
+            }, undefined),
+            show16gbToggle && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(L, {
+                        t: "16 \u0413\u0411 \u041F\u041B\u0410\u0428\u041A\u0418:"
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 100,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: styles.btn_group,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                className: styles.tools_button,
+                                type: "no",
+                                isActive: !value.has16gbSticks,
+                                onClick: ()=>onChange({
+                                        has16gbSticks: false
+                                    })
+                            }, void 0, false, {
+                                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                                lineNumber: 102,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                className: styles.tools_button,
+                                type: "yes",
+                                isActive: value.has16gbSticks,
+                                onClick: ()=>onChange({
+                                        has16gbSticks: true
+                                    })
+                            }, void 0, false, {
+                                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                                lineNumber: 108,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 101,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(L, {
+                t: "\u0421\u041B\u041E\u0422\u041E\u0412:"
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 118,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.btn_group,
+                children: availableSlots.length > 0 ? availableSlots.map((n)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        className: styles.tools_button,
+                        type: `slots${n}`,
+                        isActive: value.slotsCount === n,
+                        onClick: ()=>onChange({
+                                slotsCount: n
+                            })
+                    }, n, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 122,
+                        columnNumber: 13
+                    }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: styles.no_slots,
+                    children: "\u041D\u0435\u0442 \u0432\u0430\u0440\u0438\u0430\u043D\u0442\u043E\u0432"
+                }, void 0, false, {
+                    fileName: "src/components/RamConfiguration/RamTools.tsx",
+                    lineNumber: 131,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 119,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(L, {
+                t: "\u0422\u0418\u041F \u041F\u041B\u0410\u0422\u042B:"
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 135,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.btn_group,
+                children: [
+                    'atx',
+                    'matx'
+                ].map((b)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        className: styles.tools_button,
+                        type: b,
+                        isActive: value.boardType === b,
+                        onClick: ()=>onChange({
+                                boardType: b
+                            })
+                    }, b, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 138,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 136,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(L, {
+                t: "\u041F\u0420\u0415\u0421\u0415\u0422:"
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 148,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: styles.btn_group,
+                children: [
+                    [
+                        'safe',
+                        'balanced',
+                        'aggressive'
+                    ].map((p)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                            className: styles.tools_button,
+                            type: p,
+                            isActive: value.profile === p,
+                            onClick: ()=>onChange({
+                                    profile: p,
+                                    tCL: '',
+                                    tRP: '',
+                                    tRCD: ''
+                                })
+                        }, p, false, {
+                            fileName: "src/components/RamConfiguration/RamTools.tsx",
+                            lineNumber: 151,
+                            columnNumber: 11
+                        }, undefined)),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        className: styles.tools_button,
+                        type: "custom",
+                        isActive: value.profile === 'custom',
+                        onClick: ()=>onChange({
+                                profile: 'custom'
+                            })
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 160,
+                        columnNumber: 9
+                    }, undefined),
+                    isUnlocked && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        className: styles.tools_button,
+                        type: "ultra",
+                        isActive: value.profile === 'ultra',
+                        onClick: ()=>onChange({
+                                profile: 'ultra',
+                                tCL: '',
+                                tRP: '',
+                                tRCD: ''
+                            })
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.tsx",
+                        lineNumber: 168,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RamConfiguration/RamTools.tsx",
+                lineNumber: 149,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RamConfiguration/RamTools.tsx",
+        lineNumber: 42,
+        columnNumber: 5
+    }, undefined);
+};
+_s(RamTools, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = RamTools;
+exports.default = RamTools;
+var _c;
+$RefreshReg$(_c, "RamTools");
+
+  $parcel$ReactRefreshHelpers$7bb7.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./data/configData":"euR8U","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"cUeEy":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6f8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$6f8e.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6f8e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const RamInfo = ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: styles.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\u26A1"
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 5,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041D\u0430 X99 \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0432\u043E\u043B\u044C\u0442\u0430\u0436\u043E\u043C \u043A\u0430\u043A \u043F\u0440\u0430\u0432\u0438\u043B\u043E \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043E (\u0437\u0430 \u0438\u0441\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435\u043C \u0442\u043E\u043F\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442)! \u041D\u043E \u0435\u0441\u043B\u0438 \u0432\u0441\u0451 \u0436\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0430 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u0442\u044C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u0447\u0435\u0440\u0435\u0437 BIOS, \u0442\u043E \u0437\u0430\u043F\u0438\u0441\u044C \u0434\u0435\u043B\u0430\u0435\u0442\u0441\u044F \u0446\u0435\u043B\u044B\u043C \u0447\u0438\u0441\u043B\u043E\u043C: 120/135/145 \u2014 \u044D\u0442\u043E 1.2 / 1.35 / 1.45 v. \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 0 = Auto (1.2 v)."
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 6,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                lineNumber: 4,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83E\uDDCA"
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 14,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u041F\u041E\u041C\u041D\u0418\u0422\u0415! \u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0432\u043E\u043B\u044C\u0442\u0430\u0436\u0430 \u0442\u0440\u0435\u0431\u0443\u044E\u0442 \u043D\u0430\u043B\u0438\u0447\u0438\u0435 \u043A\u0430\u043A\u043E\u0433\u043E-\u043B\u0438\u0431\u043E \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u044F \u041E\u0417\u0423 (\u0440\u0430\u0434\u0438\u0430\u0442\u043E\u0440\u044B, Top-Flow \u043A\u0443\u043B\u0435\u0440)! \u0411\u0435\u0437 \u044D\u0442\u043E\u0433\u043E \u043F\u043B\u0430\u0448\u043A\u0438 \u043C\u043E\u0433\u0443\u0442 \u0431\u044B\u0441\u0442\u0440\u043E \u0434\u0435\u0433\u0440\u0430\u0434\u0438\u0440\u043E\u0432\u0430\u0442\u044C."
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 15,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                lineNumber: 13,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\u26A0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 22,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0421\u043F\u0435\u0446\u0438\u0444\u0438\u043A\u0430 \u0440\u0430\u0437\u0432\u043E\u0434\u043A\u0438 mATX-\u043F\u043B\u0430\u0442 \u0447\u0430\u0441\u0442\u043E \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0438\u0432\u0430\u0435\u0442 tRFC \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439 \u041E\u0417\u0423. \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 328 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u0432\u0435\u0440\u043E\u044F\u0442\u043D\u044B\u043C \u043F\u043E\u0440\u043E\u0433\u043E\u043C, \u043D\u0438\u0436\u0435 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0442\u0430\u043A\u0438\u0435 \u043C\u043E\u0434\u0443\u043B\u0438 \u043F\u043E\u043F\u0440\u043E\u0441\u0442\u0443 \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u044E\u0442."
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 23,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                lineNumber: 21,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDCCA"
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 30,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0412 4-\u043A\u0430\u043D\u0430\u043B\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 tRFC \u0432\u044B\u0448\u0435 \u0438 \u0441\u0442\u0430\u0432\u0438\u0442\u0441\u044F \u043F\u043E \u0441\u0430\u043C\u043E\u0439 \u043C\u0435\u0434\u043B\u0435\u043D\u043D\u043E\u0439 \u043F\u043B\u0430\u0448\u043A\u0435. \u0415\u0441\u043B\u0438 \u043D\u0435\u0442 \u0441\u0442\u0430\u0440\u0442\u0430 \u2014 \u043F\u043E\u0434\u043D\u0438\u043C\u0438\u0442\u0435 tRFC \u043D\u0430 20-40 \u043F\u0443\u043D\u043A\u0442\u043E\u0432. \u0420\u0435\u0436\u0438\u043C 2N/2T \u0447\u0430\u0449\u0435 \u0432\u044B\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044F \u0434\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u0438 (\u0435\u0441\u043B\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u0435\u0442 \u0432 1N/1T)."
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 31,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                lineNumber: 29,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: styles.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_icon,
+                        children: "\uD83D\uDD0B"
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 39,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: styles.info_text,
+                        children: "\u0415\u0441\u043B\u0438 \u041F\u041A \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u0435\u0442: \u0432\u044B\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0411\u041F \u0438\u0437 \u0440\u043E\u0437\u0435\u0442\u043A\u0438, \u0432\u044B\u0442\u0430\u0449\u0438\u0442\u0435 \u0431\u0430\u0442\u0430\u0440\u0435\u0439\u043A\u0443 2032 \u0438\u043B\u0438 \u0437\u0430\u043C\u043A\u043D\u0438\u0442\u0435 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u044B CLR_CMOS \u043D\u0430 10 \u0441\u0435\u043A. \u043F\u0435\u0440\u0435\u043C\u044B\u0447\u043A\u043E\u0439 (\u043E\u0442\u0432\u0451\u0440\u0442\u043A\u043E\u0439)."
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        lineNumber: 40,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                lineNumber: 38,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+        lineNumber: 2,
+        columnNumber: 3
+    }, undefined);
+_c = RamInfo;
+exports.default = RamInfo;
+var _c;
+$RefreshReg$(_c, "RamInfo");
+
+  $parcel$ReactRefreshHelpers$6f8e.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"a06IC":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const RamBios = (t)=>{
+    let trfcVal = String(t.tRFC);
+    if (t.profile !== 'custom') {
+        const label = t.isUltra ? 'Ultra' : 'Ideal';
+        trfcVal = `${t.tRFC} (${label}: ${t.tRFC_ideal})`;
+    }
+    return {
+        title: `MEMORY CONFIGURATION - SPEED: ${t.psp}`,
+        path: "INTELRCSETUP > MEMORY CONFIGURATION > MEMORY TIMINGS & VOLTAGE",
+        content: [
+            {
+                text_left: "DIMM PROFILE",
+                text_right: "MANUAL"
+            },
+            {
+                text_left: "MEMORY VOLTAGE",
+                text_right: t.voltage
+            },
+            {
+                text_left: "COMMAND TIMING",
+                text_right: t.commandRate
+            },
+            {
+                text_left: "REFRESH RATE",
+                text_right: t.refreshRate
+            },
+            {
+                text_left: "CAS LATENCY",
+                text_right: t.tCL,
+                id: "tCL"
+            },
+            {
+                text_left: "TRP",
+                text_right: t.tRP,
+                id: "tRP"
+            },
+            {
+                text_left: "TRCD",
+                text_right: t.tRCD,
+                id: "tRCD"
+            },
+            {
+                text_left: "TRAS",
+                text_right: t.tRAS
+            },
+            {
+                text_left: "TWR",
+                text_right: t.tWR
+            },
+            {
+                text_left: "TRFC",
+                text_right: trfcVal
+            },
+            {
+                text_left: "TRRD",
+                text_right: t.tRRD
+            },
+            {
+                text_left: "TRTP",
+                text_right: t.tRTP
+            },
+            {
+                text_left: "TWTR",
+                text_right: t.tWTR
+            },
+            {
+                text_left: "TFAW",
+                text_right: t.tFAW
+            },
+            {
+                text_left: "TRC",
+                text_right: t.tRC
+            },
+            {
+                text_left: "TCWL",
+                text_right: t.tCWL
+            }
+        ]
+    };
+};
+_c = RamBios;
+exports.default = RamBios;
+var _c;
+$RefreshReg$(_c, "RamBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"3Tqgm":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9800 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9800.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9800.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _ultraAlertModuleCss = require("./UltraAlert.module.css");
+var _ultraAlertModuleCssDefault = parcelHelpers.interopDefault(_ultraAlertModuleCss);
+var _useUltraLogic = require("./hooks/useUltraLogic");
+var _useUltraLogicDefault = parcelHelpers.interopDefault(_useUltraLogic);
+var _s = $RefreshSig$();
+const UltraAlert = ({ onUnlock, onSetTempUltra, isUnlocked })=>{
+    _s();
+    const { isOpen, close, handleTrigger } = (0, _useUltraLogicDefault.default)(onUnlock, onSetTempUltra, isUnlocked);
+    const onTriggerDown = (e)=>{
+        e.stopPropagation();
+        handleTrigger();
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: (0, _ultraAlertModuleCssDefault.default).alert_wrap,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: `${(0, _ultraAlertModuleCssDefault.default).alert_trigger} ${isUnlocked ? (0, _ultraAlertModuleCssDefault.default).alert_unlocked : ''}`,
+                onMouseDown: onTriggerDown,
+                children: isUnlocked ? "EXTREME RAM TOOL \uD83D\uDEE0\uFE0F" : 'XEON RAM TOOL'
+            }, void 0, false, {
+                fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            isOpen && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _ultraAlertModuleCssDefault.default).alert_overlay,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: (0, _ultraAlertModuleCssDefault.default).alert_modal,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: (0, _ultraAlertModuleCssDefault.default).alert_hazard
+                        }, void 0, false, {
+                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                            lineNumber: 26,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: (0, _ultraAlertModuleCssDefault.default).alert_body,
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: (0, _ultraAlertModuleCssDefault.default).alert_triangle,
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: (0, _ultraAlertModuleCssDefault.default).alert_excl,
+                                        children: "!"
+                                    }, void 0, false, {
+                                        fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                        lineNumber: 29,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                    lineNumber: 28,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    className: (0, _ultraAlertModuleCssDefault.default).alert_title,
+                                    children: "\u26A0\uFE0F \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415: ULTRA \u0420\u0415\u0416\u0418\u041C"
+                                }, void 0, false, {
+                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                    lineNumber: 31,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: (0, _ultraAlertModuleCssDefault.default).alert_text,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: (0, _ultraAlertModuleCssDefault.default).alert_notice,
+                                            children: "\u0414\u0430\u043D\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u043D\u0435 \u0432\u0441\u0435\u043C\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u043C\u0438."
+                                        }, void 0, false, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                            lineNumber: 33,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: "\u042D\u043A\u0441\u0442\u0440\u0435\u043C\u0430\u043B\u044C\u043D\u044B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438. \u0422\u043E\u043B\u044C\u043A\u043E \u0434\u043B\u044F \u0443\u0434\u0430\u0447\u043D\u044B\u0445 \u0447\u0438\u043F\u043E\u0432 + \u043E\u0431\u0434\u0443\u0432."
+                                        }, void 0, false, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                            lineNumber: 34,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            children: [
+                                                "\u041D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435: ",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: (0, _ultraAlertModuleCssDefault.default).alert_gold,
+                                                    children: "1.45V-1.55V"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                                    lineNumber: 35,
+                                                    columnNumber: 32
+                                                }, undefined),
+                                                "."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                            lineNumber: 35,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: (0, _ultraAlertModuleCssDefault.default).alert_danger,
+                                            children: '\u041D\u0430\u0436\u043C\u0438\u0442\u0435 "\u041E\u0422\u041C\u0415\u041D\u0410", \u0435\u0441\u043B\u0438 \u0432\u044B \u043F\u0440\u043E\u0447\u043B\u0438 \u0442\u0435\u043A\u0441\u0442.'
+                                        }, void 0, false, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                            lineNumber: 36,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                    lineNumber: 32,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: (0, _ultraAlertModuleCssDefault.default).alert_actions,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                            type: "activate",
+                                            onClick: ()=>close(false),
+                                            isActive: true
+                                        }, void 0, false, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                            lineNumber: 39,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                            type: "cancel",
+                                            onClick: ()=>close(true)
+                                        }, void 0, false, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                            lineNumber: 40,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                                    lineNumber: 38,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                            lineNumber: 27,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: (0, _ultraAlertModuleCssDefault.default).alert_hazard
+                        }, void 0, false, {
+                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                            lineNumber: 43,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                    lineNumber: 25,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/UltraAlert/UltraAlert.tsx",
+                lineNumber: 24,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/UltraAlert/UltraAlert.tsx",
+        lineNumber: 15,
+        columnNumber: 5
+    }, undefined);
+};
+_s(UltraAlert, "gnnKON1u1lvul9TW1s4NW5WdeNg=", false, function() {
+    return [
+        (0, _useUltraLogicDefault.default)
+    ];
+});
+_c = UltraAlert;
+exports.default = UltraAlert;
+var _c;
+$RefreshReg$(_c, "UltraAlert");
+
+  $parcel$ReactRefreshHelpers$9800.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../Button/Button":"4hbTW","./UltraAlert.module.css":"4FO4F","./hooks/useUltraLogic":"f4l4h","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4FO4F":[function(require,module,exports,__globalThis) {
+module.exports["alert_actions"] = `i6O3TG_alert_actions`;
+module.exports["alert_body"] = `i6O3TG_alert_body`;
+module.exports["alert_danger"] = `i6O3TG_alert_danger`;
+module.exports["alert_excl"] = `i6O3TG_alert_excl`;
+module.exports["alert_gold"] = `i6O3TG_alert_gold`;
+module.exports["alert_hazard"] = `i6O3TG_alert_hazard`;
+module.exports["alert_modal"] = `i6O3TG_alert_modal`;
+module.exports["alert_notice"] = `i6O3TG_alert_notice`;
+module.exports["alert_overlay"] = `i6O3TG_alert_overlay`;
+module.exports["alert_text"] = `i6O3TG_alert_text`;
+module.exports["alert_title"] = `i6O3TG_alert_title`;
+module.exports["alert_triangle"] = `i6O3TG_alert_triangle`;
+module.exports["alert_trigger"] = `i6O3TG_alert_trigger`;
+module.exports["alert_unlocked"] = `i6O3TG_alert_unlocked`;
+module.exports["alert_wrap"] = `i6O3TG_alert_wrap`;
+module.exports["lava"] = `i6O3TG_lava`;
+module.exports["lava"];
+module.exports["move"] = `i6O3TG_move`;
+module.exports["move"];
+
+},{}],"f4l4h":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$ad3a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$ad3a.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ad3a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+const useUltraLogic = (onUnlock, onSetTempUltra, isUnlocked)=>{
+    const [isOpen, setIsOpen] = (0, _react.useState)(false);
+    const [clicks, setClicks] = (0, _react.useState)(0);
+    const closeAlert = (shouldUnlock)=>{
+        onUnlock(shouldUnlock);
+        setIsOpen(false);
+        onSetTempUltra(false);
+        setClicks(0);
+    };
+    (0, _react.useEffect)(()=>{
+        return ()=>onSetTempUltra(false);
+    }, [
+        onSetTempUltra
+    ]);
+    (0, _react.useEffect)(()=>{
+        if (clicks > 0 && clicks < 10) {
+            const timer = setTimeout(()=>setClicks(0), 2000);
+            return ()=>clearTimeout(timer);
+        }
+    }, [
+        clicks
+    ]);
+    const handleUnlockAttempt = ()=>{
+        if (isUnlocked) {
+            setIsOpen(true);
+            return;
+        }
+        const nextCount = clicks + 1;
+        if (nextCount >= 10) {
+            setIsOpen(true);
+            setClicks(0);
+        } else setClicks(nextCount);
+    };
+    return {
+        isOpen,
+        close: closeAlert,
+        handleTrigger: handleUnlockAttempt
+    };
+};
+exports.default = useUltraLogic;
+
+  $parcel$ReactRefreshHelpers$ad3a.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fn3lZ":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "calculateRamFullLogic", ()=>calculateRamFullLogic);
+var _hardware = require("./Hardware");
+var _slotConfiguration = require("./SlotConfiguration");
+var _primaryTiming = require("./PrimaryTiming");
+var _advancedTiming = require("./AdvancedTiming");
+const calculateRamFullLogic = (config, isUnlocked)=>{
+    // 1. Получаем параметры железа
+    const hw = (0, _hardware.getHardware)(config, isUnlocked);
+    // 2. Рассчитываем конфигурацию слотов
+    const slot = (0, _slotConfiguration.getSlotConfiguration)(config, hw);
+    // 3. Рассчитываем основные тайминги (CL, RCD, RP, RAS)
+    const primary = (0, _primaryTiming.getPrimaryTiming)(hw, slot, config);
+    // 4. Рассчитываем вторичные параметры и вольтаж
+    const advanced = (0, _advancedTiming.getAdvancedTiming)(hw, slot, primary, config);
+    return {
+        // Данные для интерфейса и валидации
+        sanitized: {
+            ...config,
+            cpu: hw.cpu,
+            slotsCount: slot.slotsCount,
+            has16gbSticks: slot.force16,
+            availableSlots: slot.availableSlots,
+            currentCpuList: hw.cpus,
+            show16gbToggle: slot.ramSize >= 16 && slot.ramSize < 64
+        },
+        // Итоговая таблица таймингов
+        timings: {
+            ...advanced,
+            tCL: primary.fCL,
+            tRP: primary.fRP,
+            tRCD: primary.fRCD,
+            tRAS: primary.fRAS,
+            tRC: primary.fRAS + primary.fCL,
+            profile: hw.profile,
+            isUltra: hw.isUltra
+        }
+    };
+};
+
+},{"./Hardware":"fWfqo","./SlotConfiguration":"13PNM","./PrimaryTiming":"3ckq7","./AdvancedTiming":"d6mXJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fWfqo":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getHardware", ()=>getHardware);
+var _configData = require("../RamConfiguration/data/configData");
+const getHardware = (config, isUnlocked)=>{
+    const { generation: GEN, boardType: BT, profile: PR } = config;
+    const isV2 = GEN === 'V2';
+    const isMatx = BT === 'matx';
+    const isCustom = PR === 'custom';
+    const isUltra = PR === 'ultra' && isUnlocked;
+    // Поиск подходящего списка процессоров и конкретной модели
+    const cpus = (0, _configData.CPU_MODELS)[GEN] || [];
+    const cpu = cpus.find((c)=>c.name === config.cpu?.name) || cpus[0] || {
+        name: 'Standard',
+        maxFrequency: 1600
+    };
+    const baseMhz = isV2 ? 1866 : 2133;
+    const curMhz = cpu.maxFrequency || baseMhz;
+    // Расчет штрафа/бонуса частоты (FB в оригинале)
+    const frequencyBonus = curMhz < baseMhz ? baseMhz - curMhz >= 400 ? 2 : 1 : 0;
+    return {
+        isV2,
+        isMatx,
+        isCustom,
+        isUltra,
+        cpu,
+        cpus,
+        curMhz,
+        frequencyBonus,
+        profile: PR
+    };
+};
+
+},{"../RamConfiguration/data/configData":"euR8U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"13PNM":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getSlotConfiguration", ()=>getSlotConfiguration);
+const getSlotConfiguration = (config, hw)=>{
+    const { ramSize: SZ, has16gbSticks: H16, slotsCount: SC } = config;
+    const { isV2, isMatx } = hw;
+    // Решаем, используем ли 16ГБ планки
+    // Если памяти 64+ ГБ — всегда true, если меньше 16 — всегда false, иначе берем из конфига
+    let force16 = SZ >= 64 ? true : SZ < 16 ? false : H16;
+    // Логика подбора доступных слотов (availableSlots)
+    const availableSlots = (()=>{
+        const lock = isV2 && isMatx; // Ограничение для мелких плат на V2
+        if (force16) {
+            if (SZ === 16) return [
+                1
+            ];
+            if (SZ === 32) return [
+                1,
+                2
+            ];
+            if (SZ === 48) return [
+                3
+            ];
+            return lock ? [] : [
+                4
+            ];
+        }
+        if (isV2) {
+            if (SZ === 4) return [
+                1,
+                2
+            ];
+            if (SZ === 6) return [
+                3
+            ];
+            if (SZ === 8) return [
+                1,
+                2,
+                4
+            ];
+            if (SZ === 12) return [
+                3
+            ];
+        } else {
+            if (SZ === 4) return [
+                1
+            ];
+            if (SZ === 8) return [
+                1,
+                2
+            ];
+            if (SZ === 12) return [
+                3
+            ];
+        }
+        if (SZ === 16) return lock ? [
+            2
+        ] : [
+            2,
+            4
+        ];
+        if (SZ === 32) return lock ? [] : [
+            4
+        ];
+        // Дефолтный сценарий
+        let r = [
+            1,
+            2
+        ];
+        if (!lock) {
+            if (SZ >= (isV2 ? 6 : 12)) r.push(3);
+            if (SZ >= (isV2 ? 8 : 16)) r.push(4);
+        }
+        return r;
+    })();
+    // Определяем итоговое количество слотов (vS)
+    // Если текущее значение недоступно для данной конфигурации, берем последний доступный вариант
+    const finalSlotsCount = availableSlots.includes(SC) ? SC : availableSlots[availableSlots.length - 1] || 2;
+    // Если выбрали 32ГБ, но слотов меньше 4 — значит это две планки по 16ГБ
+    if (SZ === 32 && finalSlotsCount < 4) force16 = true;
+    return {
+        force16,
+        availableSlots,
+        slotsCount: finalSlotsCount,
+        ramSize: SZ,
+        isEcc: config.isEcc
+    };
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"3ckq7":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getPrimaryTiming", ()=>getPrimaryTiming);
+const getPrimaryTiming = (hw, slot, config)=>{
+    const { isV2, isUltra, isCustom, profile, frequencyBonus: FB } = hw;
+    const { slotsCount: vS, force16, isEcc: ECC, ramSize: SZ } = slot;
+    // Маппинг базового CL
+    const clMap = isV2 ? {
+        safe: 11,
+        balanced: 10,
+        aggressive: 9,
+        ultra: 8
+    } : {
+        safe: 15,
+        balanced: 13,
+        aggressive: 12,
+        ultra: 11
+    };
+    let cl = clMap[profile] || clMap.safe;
+    if (isUltra) cl = clMap.ultra;
+    // Расчет штрафных баллов (pnl)
+    let pnl = (ECC ? 1 : 0) + (vS === 3 ? 1 : 0);
+    if (vS === 4 && !isV2 && (SZ >= 32 || force16)) pnl += 1;
+    // Результирующий CL с учетом бонуса частоты и штрафов
+    let resCL = cl - FB + pnl;
+    if (isUltra) {
+        if (!hw.isMatx) resCL -= 1;
+        resCL += vS === 1 ? force16 ? 0 : -1 : 0;
+    }
+    const aCL = Math.max(resCL, isV2 ? 7 : 9);
+    const aRCD = force16 || ECC || vS === 4 ? aCL + 1 : aCL;
+    // Хелпер для парсинга кастомных значений
+    const parse = (v, d)=>!v || String(v).trim() === '' ? d : Math.max(parseInt(v) || 0, 6);
+    const fCL = isCustom ? parse(config.tCL, aCL) : aCL;
+    const fRP = isCustom ? parse(config.tRP, aCL) : aCL;
+    const fRCD = isCustom ? parse(config.tRCD, aRCD) : aRCD;
+    const fRAS = isUltra ? fCL * 2 : fCL * 2 + 4;
+    return {
+        fCL,
+        fRP,
+        fRCD,
+        fRAS,
+        aCL,
+        aRCD
+    };
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"d6mXJ":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getAdvancedTiming", ()=>getAdvancedTiming);
+const getAdvancedTiming = (hw, slot, primary, config)=>{
+    const { isV2, isUltra, isMatx, profile: PR, frequencyBonus: FB, curMhz } = hw;
+    const { slotsCount: vS, force16, isEcc: ECC, ramSize: SZ } = slot;
+    const { fCL, fRP, fRCD, aCL, aRCD } = primary;
+    const isCustom = PR === 'custom';
+    const heavy = force16 || ECC || vS === 4;
+    // 1. Расчет коэффициента коррекции для Custom профиля
+    let cR = 1;
+    if (isCustom) {
+        const diffs = [
+            aCL - fCL,
+            aCL - fRP,
+            aRCD - fRCD
+        ].filter((x)=>x > 0);
+        if (diffs.length >= 2) cR = Math.max(0.82, 1 - diffs.reduce((a, b)=>a + b) / diffs.length * 0.04);
+    }
+    // 2. Внутренняя логика RFC
+    const getRFCValues = ()=>{
+        if (isV2) {
+            const d = (ECC ? 30 : 0) + (force16 ? 24 : 0);
+            const b = {
+                safe: {
+                    m: isMatx ? 128 : 120,
+                    o: isMatx ? 114 : 108
+                },
+                balanced: {
+                    m: 114,
+                    o: 104
+                },
+                aggressive: {
+                    m: 104,
+                    o: 94
+                },
+                ultra: {
+                    m: isMatx ? 94 : 84,
+                    o: isMatx ? 84 : 74
+                }
+            };
+            const s = b[PR] || b.safe;
+            return {
+                m: Math.round((s.m + d - FB * 8 - (vS === 1 ? 10 : 0)) * cR),
+                o: Math.round(s.o + d - FB * 4 - (vS === 1 ? 6 : 0))
+            };
+        }
+        const isT = isMatx && !force16 && (SZ === 16 && vS === 2 || SZ === 32 && vS === 4);
+        const scn = [
+            {
+                c: ECC,
+                safe: {
+                    m: 380,
+                    o: 350
+                },
+                balanced: {
+                    m: 350,
+                    o: 312
+                },
+                aggressive: {
+                    m: 312,
+                    o: 280
+                },
+                ultra: {
+                    m: isMatx ? 280 : 270,
+                    o: isMatx ? 264 : 256
+                }
+            },
+            {
+                c: isT,
+                safe: {
+                    m: 344,
+                    o: 328
+                },
+                balanced: {
+                    m: 328,
+                    o: 280
+                },
+                aggressive: {
+                    m: 280,
+                    o: 264
+                },
+                ultra: {
+                    m: 264,
+                    o: 208
+                }
+            },
+            {
+                c: force16,
+                safe: {
+                    m: 312,
+                    o: 280
+                },
+                balanced: {
+                    m: 280,
+                    o: 260
+                },
+                aggressive: {
+                    m: 260,
+                    o: 240
+                },
+                ultra: {
+                    m: isMatx ? 240 : 212,
+                    o: vS === 4 ? 200 : 180
+                }
+            },
+            {
+                c: true,
+                safe: {
+                    m: 260,
+                    o: 240
+                },
+                balanced: {
+                    m: 240,
+                    o: 220
+                },
+                aggressive: {
+                    m: 220,
+                    o: 190
+                },
+                ultra: {
+                    m: (isMatx ? 190 : 170) - (vS === 1 ? 30 : vS === 2 ? 15 : 0),
+                    o: (isMatx ? 156 : 140) - (vS === 1 ? 15 : vS === 2 ? 7 : 0)
+                }
+            }
+        ].find((s)=>s.c);
+        const st = isUltra ? scn.ultra : scn[PR] || scn.safe;
+        const defB = !ECC && !isT && !force16 ? {
+            m: FB * 20,
+            o: FB * 15
+        } : {
+            m: 0,
+            o: 0
+        };
+        return {
+            m: Math.round((st.m - defB.m) * cR),
+            o: Math.round(st.o - defB.o)
+        };
+    };
+    const t = getRFCValues();
+    // 3. Напряжение
+    const voltage = isV2 ? isUltra ? "1.55V" : "1.50V" : isUltra ? "1.45V" : force16 || vS === 4 && SZ >= 64 ? "1.25V" : "1.20V";
+    return {
+        tRFC: t.m,
+        tRFC_ideal: t.o,
+        voltage,
+        refreshRate: (()=>{
+            if (isV2) return isUltra ? "32767" : [
+                'aggressive',
+                'balanced'
+            ].includes(PR) ? "25000" : "12000";
+            return isUltra ? "65535" : [
+                'aggressive',
+                'balanced'
+            ].includes(PR) ? "32767" : "15600";
+        })(),
+        commandRate: ECC ? "1N" : vS === 4 || isMatx && force16 ? "2N" : "1N",
+        tWR: isV2 ? isUltra ? 10 : 12 : isUltra ? 10 : 16,
+        tRRD: isV2 ? isUltra ? 4 : 5 : isUltra ? 4 : heavy ? 6 : 5,
+        tRTP: isUltra ? 4 : 6,
+        tWTR: isUltra ? 4 : 6,
+        tFAW: isV2 ? isUltra ? 16 : 20 : isUltra ? 16 : heavy ? 32 : 24,
+        tCWL: isV2 ? isUltra ? 7 : 8 : isUltra ? Math.max(fCL - 2, 9) : fCL - 1,
+        psp: `${Math.round(curMhz * 8 * (vS === 3 ? 2.5 : vS) / 1000)} GB/s`
+    };
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["7KwkS","4dmnR"], "4dmnR", "parcelRequire1fd1", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=public.6efbc4f8.js.map
