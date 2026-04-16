@@ -1,110 +1,80 @@
-.screenWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 620px;
-}
-
-.mainWindow {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 540px;
-  padding: 25px;
+.bios_container {
+  width: 540px;
+  height: 560px;
   background: #0000aa;
-  color: #aaaaaa;
   font-family: "Courier New", monospace;
-  border: 4px solid #cccccc;
-  box-shadow: 15px 15px 0 #000;
+  border: 4px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.windowTitle {
-  background: #cccccc;
+.bios__header {
+  background: #ccc;
   color: #0000aa;
   text-align: center;
-  padding: 8px;
-  margin-bottom: 20px;
   font-weight: bold;
-  text-transform: uppercase;
+  padding: 2px 0;
+  margin-bottom: 15px;
 }
 
-.rowsList {
-  display: flex;
-  flex-direction: column;
+.bios__list {
+  flex-grow: 1;
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
 }
 
-.itemRow {
+.bios__item {
   display: flex;
   justify-content: space-between;
-  padding: 2px 8px;
+  margin-bottom: 4px;
 }
 
-.isHighlighted {
-  background: #aaaaaa;
-  color: #0000aa;
+.text_left {
+  color: #aaaaaa;
+  flex: 1;
 }
 
-.isHighlighted .rowValue {
-  color: #0000aa;
-}
-
-.isDisabled {
-  pointer-events: none;
-  color: #555555;
-}
-
-.rowValue {
-  color: #fff;
+.text_right {
+  color: #ffffff;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
 }
 
-.valueInput {
-  all: unset;
-  width: 2.2ch;
-  text-align: center;
+.state_disabled {
+  color: #bbbbbb;
+  font-weight: bold;
 }
 
-/* Твои желтые поля ввода */
-.editableInput {
-  background: #ebe707;
-  color: #0000aa !important; /* Принудительно синий текст */
-  margin: 0 2px;
-  cursor: text;
-}
-
-.valueInput:focus {
-  background: #ffffff;
-  color: #000000;
-}
-
-.rowSeparator {
-  height: 2px;
-  background: #aaaaaa;
-  margin: 10px 8px;
-}
-
-.pathFooter {
+.bios__footer {
   margin-top: auto;
-  padding-top: 10px;
   border-top: 2px solid #aaaaaa;
   color: #ffff55;
-  font-size: 14px;
+  font-size: 12px;
+  padding-top: 6px;
+  padding-left: 5px;
 }
 
-@media (max-width: 600px) {
-  .mainWindow {
-    height: auto;
-    min-height: 400px;
-    padding: 15px;
-    box-shadow: 8px 8px 0 #000;
+@media (max-width: 1024px) {
+  .bios_container {
+    max-width: 500px;
   }
-  .itemRow {
-    flex-direction: column;
-    gap: 4px;
-    padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .bios_container {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    min-height: 520px;
+    border-width: 2px;
+  }
+  .bios__item {
+    font-size: 13px;
+  }
+  .bios__footer {
+    font-size: 11px;
   }
 }

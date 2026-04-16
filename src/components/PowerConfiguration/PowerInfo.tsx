@@ -1,21 +1,33 @@
-import React from 'react';
-import InfoBlock from '../InfoBlock/InfoBlock';
-
-const PowerInfo = () => (
-  <>
-    <InfoBlock.Row icon="🚀">
-      Для стабильного Анлока Турбобуста обязательно отключаем состояние C6 (C6 Offline / Un-demote) в настройках питания CPU!
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="🕹️">
-      На процессорах V4 отключение C3 дополнительно снижает микрозадержки в играх. Это делает график Frame Time ровнее.
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="📜">
-      Для V2 лучше оставить всё в стоке (No Limit), чтобы не потерять частоту на одно ядро при высокой нагрузке.
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="⚡">
-      Если частоты «замерли» на максимуме, проверьте схему питания в Windows. Для разгона ставьте «Высокая производительность».
-    </InfoBlock.Row>
-  </>
+const PowerInfo = ({ styles }: any) => (
+  <ul className={styles.info_container}>
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>🚀</span>
+      <span className={styles.info_text}>
+        Для стабильного Анлока Турбобуста обязательно отключайте состояние C6 (C6 Offline / Un-demote).
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>🕹️</span>
+      <span className={styles.info_text}>
+        На процессорах V4 отключение C3 снижает микрозадержки и делает график Frame Time ровнее.
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>📜</span>
+      <span className={styles.info_text}>
+        Для V2 лучше оставить сток (No Limit), чтобы сохранить высокую частоту на одно ядро.
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>⚡</span>
+      <span className={styles.info_text}>
+        Если частоты не падают в простое, проверьте схему питания Windows (рекомендуется «Высокая производительность»).
+      </span>
+    </li>
+  </ul>
 );
 
 export default PowerInfo;

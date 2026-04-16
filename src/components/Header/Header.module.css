@@ -1,17 +1,20 @@
-.navigationShell {
+.header {
   background: #1a1a1a;
   border-bottom: 1px solid #333;
   padding: 15px 0;
   margin-bottom: 20px;
 }
 
-.navigationContainer {
+.header__container {
   display: flex;
   justify-content: center;
   gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.navLink {
+.header__link {
   background: transparent;
   color: #888;
   padding: 8px 10px;
@@ -21,41 +24,47 @@
   text-decoration: none;
   white-space: nowrap;
   text-align: center;
+  border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.navLink:hover:not(.isActiveLink) {
+.header__link:hover:not(.header__link_active) {
   color: #bbb;
 }
 
-.isActiveLink {
+.header__link_active {
   color: #fff;
   border-bottom-color: #007bff;
-  text-shadow:
-    0 0 10px rgba(0, 123, 255, 0.7),
-    0 0 20px rgba(0, 123, 255, 0.2);
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 20px rgba(0, 123, 255, 0.2);
   cursor: default;
 }
 
+@media (max-width: 1024px) {
+  .header__container {
+    gap: 10px;
+  }
+  .header__link {
+    font-size: 13px;
+    padding: 8px 5px;
+  }
+}
+
 @media (max-width: 768px) {
-  .navigationContainer {
+  .header__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px 10px;
     padding: 0 15px;
   }
-
-  .navLink {
+  .header__link {
     padding: 12px 5px;
     font-size: 13px;
-    border-top: 2px solid transparent;
   }
-
-  .isActiveLink {
+  .header__link_active {
     border-top-color: #007bff;
     border-bottom-color: #007bff;
   }

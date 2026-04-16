@@ -1,67 +1,178 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
+import { RAM_SIZES } from './data/configData';
 import Button from '../Button/Button';
-import InfoBlock from '../InfoBlock/InfoBlock';
-import { CPU_MODELS } from './data/cpuData';
-import { 
-  GEN_OPTIONS, RAM_SIZE_OPTIONS, SLOT_COUNT_OPTIONS, BOARD_TYPE_OPTIONS, 
-  RamConfig, Gen, isOptionValid 
-} from './data/timingsData';
-import { useTimingEngine } from './data/timingEngine';
 
-const RamTools = ({ showUltraTeaser }: { showUltraTeaser: boolean }) => {
-  const { config, update, unlocked } = useTimingEngine();
-  const prevUnlocked = useRef(unlocked);
-  const currentGen = config.gen as Gen;
+interface RamToolsProps {
+  value: any;
+  setValue: React.Dispatch<React.SetStateAction<any>>;
+  styles: any;
+  isUnlocked: boolean;
+  availableSlots?: number[];
+  currentCpuList?: any[];
+  show16gbToggle?: boolean;
+}
 
-  useEffect(() => {
-    if (!prevUnlocked.current && unlocked) update({ profile: 'ultra' });
-    if (prevUnlocked.current && !unlocked && config.profile === 'ultra') update({ profile: 'balanced' });
-    prevUnlocked.current = unlocked;
-  }, [unlocked, config.profile, update]);
-
-  const renderGroup = (label: string, field: keyof RamConfig, options: any[], prefix = "", format = (v: any) => v) => {
-    const visible = options.filter(v => isOptionValid(field, v, config));
-    return (
-      <InfoBlock.Section>
-        <InfoBlock.Label>{label}</InfoBlock.Label>
-        <InfoBlock.Grid>
-          {visible.map(v => (
-            <Button 
-              key={field + String(v)} 
-              type={prefix + String(v)} 
-              isActive={config[field] === format(v)} 
-              onClick={() => update({ [field]: format(v) })} 
-            />
-          ))}
-        </InfoBlock.Grid>
-      </InfoBlock.Section>
-    );
+const RamTools = ({ 
+  value, 
+  setValue, 
+  styles, 
+  isUnlocked, 
+  availableSlots = [], 
+  currentCpuList = [], 
+  show16gbToggle 
+}: RamToolsProps) => {
+  
+  const onChange = (upd: any) => {
+    setValue((p: any) => ({ 
+      ...p, 
+      ...upd 
+    }));
   };
 
+  // Автопереключение на ultra при разблокировке
+  useEffect(() => {
+    if (isUnlocked) {
+      onChange({ profile: 'ultra', tCL: '', tRP: '', tRCD: '' });
+    }
+  }, [isUnlocked]);
+
+  const L = ({ t }: { t: string }) => <div className={styles.tools_label}>{t}</div>;
+
   return (
-    <div className="ram-tools">
-      {renderGroup("ПОКОЛЕНИЕ:", "gen", GEN_OPTIONS)}
+    <div className={styles.tools_container}>
+      <L t="ПОКОЛЕНИЕ:" />
+      <div className={styles.btn_group}>
+        {['V2', 'V3', 'V4'].map(v => (
+          <Button 
+            key={v} 
+            className={styles.tools_button} 
+            type={v.toLowerCase().replace('v','v_')} 
+            isActive={value.generation === v} 
+            onClick={() => onChange({ generation: v })} 
+          />
+        ))}
+      </div>
 
-      <InfoBlock.Section>
-        <InfoBlock.Label>МОДЕЛЬ ПРОЦЕССОРА:</InfoBlock.Label>
-        <InfoBlock.Select 
-          value={config.cpu?.name} 
-          onChange={(e: any) => {
-            const model = CPU_MODELS[currentGen].find((m: any) => m.name === e.target.value);
-            if (model) update({ cpu: model });
-          }}
-        >
-          {CPU_MODELS[currentGen].map((m: any) => (
-            <option key={m.name} value={m.name}>{m.name}</option>
-          ))}
-        </InfoBlock.Select>
-      </InfoBlock.Section>
+      <L t="ПРОЦЕССОР:" />
+      <select 
+        className={styles.tools_select} 
+        value={value.cpu?.name || ''} 
+        onChange={e => onChange({ cpu: currentCpuList.find((c: any) => c.name === e.target.value) })}
+      >
+        {currentCpuList.length > 0 ? (
+          currentCpuList.map((c: any) => (
+            <option key={c.name} value={c.name}>{c.name}</option>
+          ))
+        ) : (
+          <option>Загрузка...</option>
+        )}
+      </select>
 
-      {renderGroup("ТИП ПАМЯТИ:", "isEcc", ['desktop', 'ecc'], "", v => v === 'ecc')}
-      {renderGroup("ВСЕГО ПАМЯТИ:", "ramSize", RAM_SIZE_OPTIONS, "size_")}
-      {renderGroup("ЗАНЯТО СЛОТОВ:", "slotsCount", SLOT_COUNT_OPTIONS, "slots_")}
-      {renderGroup("МАТЕРИНСКАЯ ПЛАТА:", "boardType", BOARD_TYPE_OPTIONS)}
-      {renderGroup("ПРЕСЕТЫ:", "profile", ['safe', 'balanced', 'aggressive', 'custom', ...(unlocked || showUltraTeaser ? ['ultra'] : [])])}
+      <L t="ТИП ПАМЯТИ:" />
+      <div className={styles.btn_group}>
+        <Button 
+          className={styles.tools_button} 
+          type="desktop" 
+          isActive={!value.isEcc} 
+          onClick={() => onChange({ isEcc: false })} 
+        />
+        <Button 
+          className={styles.tools_button} 
+          type="ecc" 
+          isActive={value.isEcc} 
+          onClick={() => onChange({ isEcc: true })} 
+        />
+      </div>
+
+      <L t="ОБЪЕМ:" />
+      <select 
+        className={styles.tools_select} 
+        value={value.ramSize} 
+        onChange={e => onChange({ ramSize: +e.target.value })}
+      >
+        {RAM_SIZES.map(sz => (
+          <option key={sz} value={sz}>{sz} GB</option>
+        ))}
+      </select>
+
+      {show16gbToggle && (
+        <>
+          <L t="16 ГБ ПЛАШКИ:" />
+          <div className={styles.btn_group}>
+            <Button 
+              className={styles.tools_button} 
+              type="no" 
+              isActive={!value.has16gbSticks} 
+              onClick={() => onChange({ has16gbSticks: false })} 
+            />
+            <Button 
+              className={styles.tools_button} 
+              type="yes" 
+              isActive={value.has16gbSticks} 
+              onClick={() => onChange({ has16gbSticks: true })} 
+            />
+          </div>
+        </>
+      )}
+
+      <L t="СЛОТОВ:" />
+      <div className={styles.btn_group}>
+        {availableSlots.length > 0 ? (
+          availableSlots.map((n: number) => (
+            <Button 
+              key={n} 
+              className={styles.tools_button} 
+              type={`slots${n}`} 
+              isActive={value.slotsCount === n} 
+              onClick={() => onChange({ slotsCount: n })} 
+            />
+          ))
+        ) : (
+          <div className={styles.no_slots}>Нет вариантов</div>
+        )}
+      </div>
+
+      <L t="ТИП ПЛАТЫ:" />
+      <div className={styles.btn_group}>
+        {['atx', 'matx'].map(b => (
+          <Button 
+            key={b} 
+            className={styles.tools_button} 
+            type={b} 
+            isActive={value.boardType === b} 
+            onClick={() => onChange({ boardType: b })} 
+          />
+        ))}
+      </div>
+
+      <L t="ПРЕСЕТ:" />
+      <div className={styles.btn_group}>
+        {['safe', 'balanced', 'aggressive'].map(p => (
+          <Button 
+            key={p} 
+            className={styles.tools_button} 
+            type={p} 
+            isActive={value.profile === p} 
+            onClick={() => onChange({ profile: p, tCL: '', tRP: '', tRCD: '' })} 
+          />
+        ))}
+        
+        <Button 
+          className={styles.tools_button} 
+          type="custom" 
+          isActive={value.profile === 'custom'} 
+          onClick={() => onChange({ profile: 'custom' })} 
+        />
+
+        {isUnlocked && (
+          <Button 
+            className={styles.tools_button} 
+            type="ultra" 
+            isActive={value.profile === 'ultra'} 
+            onClick={() => onChange({ profile: 'ultra', tCL: '', tRP: '', tRCD: '' })} 
+          />
+        )}
+      </div>
     </div>
   );
 };

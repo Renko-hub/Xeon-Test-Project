@@ -1,32 +1,50 @@
 import React from 'react';
 import Button from '../Button/Button';
-import InfoBlock from '../InfoBlock/InfoBlock';
 
-const IIOTools = ({ pciGen, setPciGen }: any) => {
+interface IIOToolsProps {
+  value: 'gen_2' | 'gen_3';
+  setValue: (val: 'gen_2' | 'gen_3') => void;
+  styles: Record<string, string>;
+}
+
+const IIOTools = ({ value, setValue, styles }: IIOToolsProps) => {
+  const renderBtn = (type: 'gen_2' | 'gen_3') => (
+    <Button 
+      className={styles.tools_button} 
+      type={type} 
+      isActive={value === type} 
+      onClick={() => setValue(type)} 
+    />
+  );
+
   return (
-    <>
-      <InfoBlock.Section>
-        <InfoBlock.Label>РЕЖИМ ШИНЫ PCI-E:</InfoBlock.Label>
-        <InfoBlock.Grid>
-          <Button type="Gen 2" isActive={pciGen === 'Gen 2'} onClick={() => setPciGen('Gen 2')} />
-          <Button type="Gen 3" isActive={pciGen === 'Gen 3'} onClick={() => setPciGen('Gen 3')} />
-        </InfoBlock.Grid>
-      </InfoBlock.Section>
-      
-      {pciGen === 'Gen 3' ? (
-        <InfoBlock.Row icon="🚀">
-          <b>Gen 3</b> рекомендуется для современных видеокарт и NVMe.
-        </InfoBlock.Row>
-      ) : (
-        <InfoBlock.Row icon="⚠️">
-          <b>Gen 2</b> может потребоваться для старых устройств.
-        </InfoBlock.Row>
-      )}
+    <div className={styles.tools_container}>
 
-      <InfoBlock.Row icon="💡">
-        Настройка <b>PCI-E Gen</b> напрямую влияет на скорость обмена данными.
-      </InfoBlock.Row>
-    </>
+      <div className={styles.tools_label}>ПОРТЫ PCI-E:</div>
+
+      <div className={styles.btn_group}>
+        {renderBtn('gen_2')}
+        {renderBtn('gen_3')}
+      </div>
+
+      <div className={styles.tools_item}>
+        <span className={styles.tools_icon}>💡</span>
+        <p className={styles.tools_text}>
+          Настройка влияет на пропускную способность шины.
+        </p>
+      </div>
+
+      <div className={styles.tools_item}>
+        <span className={styles.tools_icon}>
+          {value === 'gen_2' && '⚠️'}
+          {value === 'gen_3' && '🚀'}
+        </span>
+        <p className={styles.tools_text}>
+          {value === 'gen_2' && <><b>Gen 2</b> может потребоваться для стабильной работы старых устройств.</>}
+          {value === 'gen_3' && <><b>Gen 3</b> рекомендуется для современных видеокарт и NVMe.</>}
+        </p>
+      </div>
+    </div>
   );
 };
 

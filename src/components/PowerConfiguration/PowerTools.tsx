@@ -1,49 +1,47 @@
 import React from 'react';
 import Button from '../Button/Button';
-import InfoBlock from '../InfoBlock/InfoBlock';
 
-const PowerTools = ({ gen, setGen }: any) => {
-  const options = ['V2', 'V3', 'V4'];
+const PowerTools = ({ value, setValue, styles }: any) => {
+  const renderBtn = (type: 'v_2' | 'v_3' | 'v_4') => (
+    <Button 
+      className={styles.tools_button} 
+      type={type} 
+      isActive={value === type} 
+      onClick={() => setValue(type)} 
+    />
+  );
 
   return (
-    <>
-      <InfoBlock.Section>
-        <InfoBlock.Label>ПОКОЛЕНИЕ ПРОЦЕССОРА:</InfoBlock.Label>
-        <InfoBlock.Grid>
-          {options.map((opt: any) => (
-            <Button key={opt} type={opt} isActive={gen === opt} onClick={() => setGen(opt)} />
-          ))}
-        </InfoBlock.Grid>
-      </InfoBlock.Section>
+    <div className={styles.tools_container}>
+      
+      <div className={styles.tools_label}>ПОКОЛЕНИЕ CPU:</div>
 
-      {gen === 'V2' && (
-        <InfoBlock.Row icon="⚙️">
-          Для V2 разгон ограничен множителем (16xx) или шиной. Опция <b>Package C State limit [No Limit]</b> помогает удерживать частоту под нагрузкой.
-        </InfoBlock.Row>
-      )}
+      <div className={styles.btn_group}>
+        {renderBtn('v_2')}
+        {renderBtn('v_3')}
+        {renderBtn('v_4')}
+      </div>
 
-      {gen === 'V3' && (
-        <InfoBlock.Row icon="💡">
-          Для работы <b>Unlock Turbo Boost</b> на V3 необходимо оставить <b>CPU C3 Report [Enabled]</b>.
-        </InfoBlock.Row>
-      )}
+      <div className={styles.tools_item}>
+        <span className={styles.tools_icon}>🔊</span>
+        <p className={styles.tools_text}>
+          Настройки <b>C-States</b> могут влиять на акустический писк дросселей.
+        </p>
+      </div>
 
-      {gen === 'V4' && (
-        <InfoBlock.Row icon="🚀">
-          На архитектуре V4 рекомендуется выставлять <b>CPU C3 Report [Disabled]</b> для минимизации задержек.
-        </InfoBlock.Row>
-      )}
-
-      {gen !== 'V2' && (
-        <InfoBlock.Row icon="🛠️">
-          Если частоты «прыгают» — попробуйте отключить <b>C1E</b> через <b>ThrottleStop</b>.
-        </InfoBlock.Row>
-      )}
-
-      <InfoBlock.Row icon="🔊">
-        Изменение настроек <b>C-States</b> может повлиять на писк дросселей (<b>Coil Whine</b>).
-      </InfoBlock.Row>
-    </>
+      <div className={styles.tools_item}>
+        <span className={styles.tools_icon}>
+          {value === 'v_2' && '⚙️'}
+          {value === 'v_3' && '💡'}
+          {value === 'v_4' && '🚀'}
+        </span>
+        <p className={styles.tools_text}>
+          {value === 'v_2' && <>Для V2: <b>C0/C1 limit</b> и <b>Disabled</b> отчеты для лучшего отклика.</>}
+          {value === 'v_3' && <>Для <b>Unlock Turbo Boost</b>: C3 [Enabled], C6 [Disabled] для стабильности.</>}
+          {value === 'v_4' && <>Для V4 рекомендуется полностью <b>выключить</b> энергосбережение (Disabled).</>}
+        </p>
+      </div>
+    </div>
   );
 };
 

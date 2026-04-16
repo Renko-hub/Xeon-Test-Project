@@ -1,112 +1,75 @@
-/*Button.module.css*/
-
-/* Базовая кнопка */
-.baseButton {
+.button {
   width: 100%;
-  padding: 10px 4px;
+  height: 28px;
+  padding: 0 10px;
   background: #2a2a2a;
   border: 1px solid #444;
   color: #888;
   border-radius: 4px;
-  font: 900 10px "Segoe UI", Tahoma, sans-serif;
+  font: 800 9px "Segoe UI", sans-serif;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s ease;
-  outline: none;
-  user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
-/* Эффект при наведении на неактивную кнопку */
-.baseButton:hover:not(.isActive) {
-  background: #333;
-  color: #fff;
-}
-
-/* Общий класс для активного состояния */
-.isActive {
-  color: #fff;
-}
-
-/* --- ТЕМЫ ПОКОЛЕНИЙ --- */
-
-.v2Theme { 
-  background: #6a1b9a; 
-  border-color: #8e24aa; 
-}
-
-.v3Theme { 
-  background: #d35400; 
-  border-color: #e67e22; 
-}
-
-.metallicActive {
-  background: #e0e0e0 !important;
-  color: #000 !important;
-  border-color: #fff !important;
-}
-
-/* --- ЦВЕТНЫЕ ТЕМЫ --- */
-
-.dangerTheme { background: #961b1b; border-color: #b22222; }
-.optimalTheme { background: #218838; border-color: #28a745; }
-.safeTheme { background: #555; border-color: #666; }
-.customTheme { background: #00838f; border-color: #00acc1; }
-
-/* --- ТЕМЫ ИНФО (СИНЯЯ) --- */
-
-.infoTheme { 
-  background: #0044aa; 
-  border-color: #0056b3; 
-}
-
-.infoOutline {
+.warning, .warning_active, .info, .info_active {
+  height: 36px;
+  font-size: 11px;
   background: transparent !important;
-  border: 1px solid #0056b3 !important;
-  color: #007bff !important;
 }
 
-/* --- ВНИМАНИЕ (ИНВЕРСИЯ) --- */
+.warning { border-color: #961b1b; color: #ffd700; }
+.warning_active { border-color: #ffca28; color: #ffca28; }
+.info, .info_active { border-color: #3b82f6; color: #3b82f6; }
+.v2_active { background: #8e24aa; border-color: #ab47bc; color: #fff; }
+.v3_active { background: #d35400; border-color: #e67e22; color: #fff; }
+.v4_active { background: #455a64; border-color: #78909c; color: #fff; }
+.optimal_active { background: #218838; border-color: #28a745; color: #fff; }
+.danger_active { background: #961b1b; border-color: #b22222; color: #fff; }
+.safe_active, .no_active { background: #555 !important; border-color: #777 !important; color: #fff !important; }
+.yes_active { background: #961b1b; border-color: #b22222; color: #fff; }
+.server_active { background: #00838f; border-color: #00acc1; color: #fff; }
+.desktop_active { background: #00695c; border-color: #00897b; color: #fff; }
+.slots_active { background: #3949ab; border-color: #5c6bc0; color: #fff; }
+.board_active { background: #1565c0; border-color: #1e88e5; color: #fff; }
+.gen_active, .partition_active, .custom_active { background: #3b82f6; border-color: #60a5fa; color: #fff; }
 
-.warningInactive {
-  border: 1px solid #961b1b;
-  color: #c5a021;
-  background: transparent;
-}
-
-.warningActive {
-  background: #c5a021;
-  border-color: #d4ac0d;
-  color: #000;
-}
-
-/* --- СПЕЦЭФФЕКТЫ --- */
-
-.lavaEffect {
-  background-color: transparent;
-  border-color: #ff4e00;
+.lava_active {
   background-image: linear-gradient(90deg, #ff4e00, #ffcc00, #ff4e00);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: lavaSync 2s linear infinite;
-  text-shadow: 0 0 8px rgba(255, 78, 0, 0.4);
-  font-weight: 900; /* Чтобы не прыгало */
+  animation: lava 2s linear infinite;
+  font-weight: 900;
+  border-color: #ff4e00;
 }
 
-@keyframes lavaSync {
+@keyframes lava {
   0% { background-position: 0% center; }
   100% { background-position: -200% center; }
 }
 
-/* Адаптив: просто разрешаем кнопкам чуть сжиматься на мобилках */
-@media (max-width: 480px) {
-  .baseButton {
-    padding: 8px 2px;
-    font-size: 9px;
+@media (max-width: 1024px) {
+  .button {
+    height: 32px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    height: 40px;
+    font-size: 11px;
+    white-space: normal;
+    text-align: center;
+  }
+  .warning, .warning_active, .info, .info_active {
+    height: 44px;
+    font-size: 12px;
   }
 }

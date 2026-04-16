@@ -1,21 +1,33 @@
-import React from 'react';
-import InfoBlock from '../InfoBlock/InfoBlock';
-
-const IIOInfo = () => (
-  <>
-    <InfoBlock.Row icon="🔌">
-      Фиксация режима GEN 3 помогает избежать ошибок Link Training Error, из-за которых видеокарта или NVMe могут не определиться.
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="🛠️">
-      Для карт до 2013 года (HD 7000, GTX 600) ставьте GEN 2. Старые контроллеры часто нестабильны с шиной 3.0 на этой платформе.
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="✨">
-      Если устройства ведут себя странно — протрите контакты процессора и видеокарты ластиком до блеска. Окислы — причина 90% проблем!
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="🧬">
-      Если используете переходник на несколько NVMe в один слот, ищите настройку разделения линий (x4x4x4x4) в IIO Configuration.
-    </InfoBlock.Row>
-  </>
+const IIOInfo = ({ styles }: any) => (
+  <ul className={styles.info_container}>
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>⚡</span>
+      <span className={styles.info_text}>
+        Фиксация режима GEN 3 помогает избежать ошибок Link Training Error.
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>🛠️</span>
+      <span className={styles.info_text}>
+        Для старых карт (HD 7000, GTX 600 и старше) принудительно ставьте GEN 2.
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>✨</span>
+      <span className={styles.info_text}>
+        Если устройства «отваливаются» — протрите контакты разъемов ластиком.
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>🧬</span>
+      <span className={styles.info_text}>
+        Для нескольких NVMe используйте разделение линий (Bifurcation x4x4x4x4).
+      </span>
+    </li>
+  </ul>
 );
 
 export default IIOInfo;

@@ -1,56 +1,69 @@
 import React from 'react';
-import InfoBlock from '../../InfoBlock/InfoBlock';
 import s from './PCITools.module.css';
+import { ToolboxStyles } from '@/components/Toolbox/Toolbox';
 
-const PCITools = () => (
-  <div className={s.container}>
-    <span className={s.sectionLabel}>РАЗБОР ОШИБОК ИЗ GPU-Z:</span>
+
+interface PCIToolsProps {
+  styles: ToolboxStyles;
+}
+
+const PCITools = ({ styles }: PCIToolsProps) => (
+  <div className={s.pci_container}>
+    <label className={s.pci_section_label}>РАЗБОР ОШИБОК ИЗ GPU-Z:</label>
     
-    <InfoBlock.Row icon="🚫">
-      <strong className={s.title}>UEFI BOOT REQUIRED / CSM ENABLED</strong>
-      <p className={s.text}>
-        BIOS в режиме Legacy. Re-Size BAR требует чистый <strong>UEFI</strong>. <br/>
-        <strong>РЕШЕНИЕ:</strong> В BIOS (раздел Boot) поставьте <strong>CSM Support: Disabled</strong>.
-      </p>
-    </InfoBlock.Row>
+    <div className={s.pci_item}>
+      <span className={s.pci_icon}>🚫</span>
+      <div className={s.pci_item_description}>
+        <strong className={s.pci_item_title}>UEFI BOOT REQUIRED / CSM ENABLED</strong>
+        BIOS в режиме Legacy. Re-Size BAR требует чистый <strong className={s.pci_highlight}>UEFI</strong>. <br/>
+        <span className={s.pci_status_accent}>РЕШЕНИЕ:</span> В BIOS (раздел Boot) поставьте <strong className={s.pci_highlight}>CSM Support: Disabled</strong>.
+      </div>
+    </div>
 
-    <InfoBlock.Row icon="💾">
-      <strong className={s.title}>BOOT FROM GPT: NO</strong>
-      <p className={s.text}>
-        Диск в MBR. Нужно конвертировать в <strong>GPT</strong> (через MBR2GPT), иначе после выключения CSM Windows не загрузится.
-      </p>
-    </InfoBlock.Row>
+    <div className={s.pci_item}>
+      <span className={s.pci_icon}>💾</span>
+      <div className={s.pci_item_description}>
+        <strong className={s.pci_item_title}>BOOT FROM GPT: NO</strong>
+        Диск в MBR. Нужно конвертировать в <strong className={s.pci_highlight}>GPT (через MBR2GPT)</strong>, иначе после выключения CSM Windows не загрузится.
+      </div>
+    </div>
 
-    <span className={s.sectionLabel}>ГДЕ ИСКАТЬ ПУНКТЫ В BIOS:</span>
+    <label className={s.pci_section_label}>ГДЕ ИСКАТЬ ПУНКТЫ В BIOS:</label>
 
-    <InfoBlock.Row icon="📂">
-      <strong className={s.title}>СКРЫТОЕ МЕНЮ (X99/X79)</strong>
-      <p className={s.text}>
-        Путь: <strong>IntelRCSetup → IIO Configuration</strong>. <br/>
-        Включите <strong>PCI 64B ADDR</strong>. Если пункт <strong>Re-Size BAR</strong> не появился — см. блок ниже.
-      </p>
-    </InfoBlock.Row>
+    <div className={s.pci_item}>
+      <span className={s.pci_icon}>📂</span>
+      <div className={s.pci_item_description}>
+        <strong className={s.pci_item_title}>СКРЫТОЕ МЕНЮ (X99/X79)</strong>
+        Путь: <strong className={s.pci_highlight}>IntelRCSetup → IIO Configuration</strong>. <br/>
+        Включите <strong className={s.pci_highlight}>PCI 64B ADDR</strong>. Если пункт Re-Size BAR не появился — см. блок ниже.
+      </div>
+    </div>
 
-    <InfoBlock.Row icon="❓">
-      <strong className={s.title}>4G ЕСТЬ, А RE-SIZE BAR НЕТ</strong>
-      <p className={s.text}>
-        Частая проблема китайцев: 4G Decoding включен, а пункта в меню нет. <br/>
-        <strong>РЕШЕНИЕ:</strong> Используйте утилиту <strong>ReBarState</strong> для принудительной активации через EFI-shell.
-      </p>
-    </InfoBlock.Row>
+    <div className={s.pci_item}>
+      <span className={s.pci_icon}>❓</span>
+      <div className={s.pci_item_description}>
+        <strong className={s.pci_item_title}>4G ЕСТЬ, А RE-SIZE BAR НЕТ</strong>
+        китайцы: 4G Decoding включен, а пункта в меню нет. <br/>
+        <span className={s.pci_status_accent}>РЕШЕНИЕ:</span> Используйте утилиту <strong className={s.pci_highlight}>ReBarState</strong>.
+      </div>
+    </div>
 
-    <div className={s.importantBox}>
-      <InfoBlock.Row icon="💡">
-        <span className={s.footerText}>
-          <strong>ПОРЯДОК:</strong> GPT → Off CSM → 64B ADDR → BAR (меню или ReBarState).
-        </span>
-      </InfoBlock.Row>
+    <label className={s.pci_section_label}>ВАЖНЫЕ ПРИМЕЧАНИЯ:</label>
 
-      <InfoBlock.Row icon="⚠️">
-        <span className={s.footerText}>
-          На процессорах <strong>v1/v2 (LGA2011)</strong> технология не работает!
-        </span>
-      </InfoBlock.Row>
+    <div className={s.pci_item}>
+      <span className={s.pci_icon}>💡</span>
+      <div className={s.pci_item_description}>
+        <strong className={s.pci_item_title}>ПОРЯДОК ДЕЙСТВИЙ</strong>
+        GPT → Off CSM → 64B ADDR → BAR.
+      </div>
+    </div>
+
+    <div className={s.pci_item}>
+      <span className={s.pci_icon}>⚠️</span>
+      <div className={s.pci_item_description}>
+        <strong className={s.pci_item_title}>ОГРАНИЧЕНИЕ ПЛАТФОРМЫ</strong>
+        На процессорах <strong className={s.pci_highlight}>v1/v2 (LGA2011)</strong> Re-Size BAR не работает!
+      </div>
     </div>
   </div>
 );

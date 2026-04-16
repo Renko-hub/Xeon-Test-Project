@@ -1,31 +1,40 @@
-import { useState } from 'react';
-import InfoWidget from '../InfoBlock/InfoBlock'; 
-import CSMTools from './CSMTools';
-import CSMInfo from './CSMInfo';
-import CSMBios from './CSMBios';
+import React, { useState } from 'react';
+import Toolbox from '../Toolbox/Toolbox'; 
+import BiosWindow from '../BiosWindow/BiosWindow'; 
+
+// Меняем только эти импорты
+import Tools from './CSMTools';
+import Info from './CSMInfo';
+import BiosData from './CSMBios'; 
 
 const CSMConfiguration = () => {
-  const [disk, setDisk] = useState<'mbr' | 'gpt'>('mbr');
-  const isLegacy = disk === 'mbr';
+  const [value, setValue] = useState<'mbr' | 'gpt'>('mbr');
 
-  const config = {
-    csm: isLegacy ? 'Enabled' : 'Disabled',
-    bootFilter: isLegacy ? 'Legacy only' : 'UEFI only',
-    storage: isLegacy ? 'Legacy' : 'UEFI',
-    video: isLegacy ? 'Legacy' : 'UEFI'
-  };
+  const { title, path, content } = BiosData();
 
   return (
-    <main className="manager-layout">
-      <InfoWidget 
+    <>
+      <Toolbox 
         title="BOOT & RECOVERY"
         toolsLabel="DISK MODE"
-        infoNode={<CSMInfo />}
-        toolsNode={<CSMTools disk={disk} setDisk={setDisk} />}
+        renderInfo={(styles) => <Info styles={styles} />}
+        renderTools={(styles) => (
+          <Tools 
+            value={value} 
+            setValue={setValue} 
+            styles={styles} 
+          />
+        )}
       />
 
-      <CSMBios isLegacy={isLegacy} config={config} />
-    </main>
+      <BiosWindow 
+        title={title} 
+        path={path} 
+        content={content} 
+        type="csm"   // Идентификатор для хука внутри BiosWindow
+        value={value} // Текущий стейт
+      />
+    </>
   );
 };
 

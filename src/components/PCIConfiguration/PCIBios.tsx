@@ -1,19 +1,10 @@
-import React from 'react';
-import BiosWindow from '../BiosWindow/BiosWindow';
-
-const PCIBios = () => {
-  const rows = [
-    { label: "Above 4G Decoding", value: "Enabled", highlight: true },
-    { label: "Re-Size BAR Support", value: "Enabled", highlight: true },
-  ];
-
-  return (
-    <BiosWindow 
-      title="PCI SUBSYSTEM SETTINGS" 
-      path="Advanced > PCI Subsystem Setting" 
-      rows={rows} 
-    />
-  );
-};
+const PCIBios = () => ({
+  title: "PCI SUBSYSTEM SETTINGS",
+  path: "Advanced > PCI Subsystem Setting",
+  content: [
+    { text_left: "Above 4G Decoding", text_right: "Enabled", highlight: true },
+    { text_left: "Re-Size BAR Support", text_right: "Enabled", highlight: true },
+  ]
+});
 
 export default PCIBios;

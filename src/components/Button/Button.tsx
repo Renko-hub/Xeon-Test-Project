@@ -1,34 +1,24 @@
-import React, { ReactNode } from 'react';
-import styles from './Button.module.css';
-import { BUTTONS } from './Button.config';
+import { BUTTONS, ButtonType } from './Button.config';
+import s from './Button.module.css';
 
-interface ButtonProps {
-  type: string;
-  isActive?: boolean;
-  onClick?: () => void;
-  children?: ReactNode;
-}
+const Button = ({ type, isActive, className, label, ...rest }: any) => {
+  const item = BUTTONS[type as ButtonType];
+  
+  // Если типа нет в конфиге — не мусорим в DOM
+  if (!item) return null;
 
-const Button = ({ type, isActive, onClick, children }: ButtonProps) => {
-  const lowType = type?.toLowerCase();
-  const config = BUTTONS.find(b => b.type === lowType);
-  const theme = config?.theme;
-  const variant = (config as any)?.variant;
-
-  const classes = [
-    styles.baseButton,
-    isActive && styles.isActive,
-    isActive && variant === 'outline' && styles.infoOutline,
-    isActive && theme === 'info' && variant !== 'outline' && styles.infoTheme,
-    isActive && theme === 'metallic' && styles.metallicActive,
-    isActive && theme === 'lava' && styles.lavaEffect,
-    theme === 'warning' && (isActive ? styles.warningActive : styles.warningInactive),
-    isActive && theme && !['info', 'metallic', 'warning', 'lava'].includes(theme) && styles[`${theme}Theme`]
-  ].filter(Boolean).join(' ');
+  // Определяем тему: активная или обычная
+  const themeClass = isActive ? s[`${item.theme}_active`] : s[item.theme];
+  
+  // Базовые классы (всегда есть)
+  let cls = `${s.button} ${themeClass}`;
+  
+  // Если прокинули кастомный className — приклеиваем его в конец
+  if (className) cls += ` ${className}`;
 
   return (
-    <button type="button" onClick={onClick} className={classes}>
-      {children || config?.label || type?.replace('size_', '').replace('slots_', '').toUpperCase()}
+    <button className={cls} {...rest}>
+      {label ?? item.label}
     </button>
   );
 };

@@ -1,23 +1,39 @@
-import { useState } from 'react';
-import InfoWidget from '../InfoBlock/InfoBlock';
+import React, { useState } from 'react';
+import Toolbox from '../Toolbox/Toolbox'; 
+import BiosWindow from '../BiosWindow/BiosWindow';
 import PowerTools from './PowerTools';
-import PowerBios from './PowerBios';
+import PowerBios from './PowerBios'; 
 import PowerInfo from './PowerInfo';
 
 const PowerConfiguration = () => {
-  const [gen, setGen] = useState<'V2' | 'V3' | 'V4'>('V3');
+  // Состояние для пресетов CPU
+  const [value, setValue] = useState<'v_2' | 'v_3' | 'v_4'>('v_2');
+
+  const { title, path, content } = PowerBios();
 
   return (
-    <main className="manager-layout">
-      <InfoWidget
+    <>
+      <Toolbox 
         title="Power Management"
         toolsLabel="ПРЕСЕТ CPU"
-        infoNode={<PowerInfo />}
-        toolsNode={<PowerTools gen={gen} setGen={setGen} />}
+        renderInfo={(styles) => <PowerInfo styles={styles} />}
+        renderTools={(styles) => (
+          <PowerTools 
+            value={value} 
+            setValue={setValue} 
+            styles={styles} 
+          />
+        )}
       />
 
-      <PowerBios gen={gen} />
-    </main>
+      <BiosWindow 
+        title={title} 
+        path={path} 
+        content={content} 
+        type="power"   // Передаем тип для хука внутри BiosWindow
+        value={value}   // Передаем текущий пресет (v2/v3/v4)
+      />
+    </>
   );
 };
 

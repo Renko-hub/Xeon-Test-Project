@@ -1,19 +1,28 @@
-import InfoWidget from '../InfoBlock/InfoBlock'; 
+import React from 'react';
+import Toolbox from '../Toolbox/Toolbox'; 
+import BiosWindow from '../BiosWindow/BiosWindow';
 import FanInfo from './FanInfo';
 import FanBios from './FanBios';
-import FanTools from './FanTools/FanTools';
+import FanTools from './FanTools';
 
 const FanConfiguration = () => {
+  const { title, path, content } = FanBios();
+
   return (
-    <main className="manager-layout">
-      <InfoWidget 
+    <>
+      <Toolbox 
         title="SMART FAN FUNCTION"
         toolsLabel="ОБОРОТЫ %"
-        infoNode={<FanInfo />}
-        toolsNode={<FanTools />}
+        renderInfo={(styles) => <FanInfo styles={styles} />}
+        renderTools={(styles) => <FanTools styles={styles} />}
       />
-      <FanBios />
-    </main>
+
+      <BiosWindow 
+        title={title} 
+        path={path} 
+        content={content} 
+      />
+    </>
   );
 };
 

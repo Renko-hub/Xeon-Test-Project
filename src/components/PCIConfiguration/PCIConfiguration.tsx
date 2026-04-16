@@ -1,20 +1,28 @@
-import InfoWidget from '../InfoBlock/InfoBlock';
+import React from 'react';
+import Toolbox from '../Toolbox/Toolbox'; 
+import BiosWindow from '../BiosWindow/BiosWindow';
 import PCITools from './PCITools/PCITools';
-import PCIBios from './PCIBios';
 import PCIInfo from './PCIInfo';
+import PCIBios from './PCIBios'; 
 
 const PCIConfiguration = () => {
+  const { title, path, content } = PCIBios();
+
   return (
-    <main className="manager-layout">
-      <InfoWidget
+    <>
+      <Toolbox 
         title="PCI SETTINGS"
         toolsLabel="GPU-Z ПРОВЕРКА"
-        infoNode={<PCIInfo />}
-        toolsNode={<PCITools />}
+        renderInfo={(styles) => <PCIInfo styles={styles} />}
+        renderTools={(styles) => <PCITools styles={styles} />}
       />
 
-      <PCIBios />
-    </main>
+      <BiosWindow 
+        title={title} 
+        path={path} 
+        content={content} 
+      />
+    </>
   );
 };
 

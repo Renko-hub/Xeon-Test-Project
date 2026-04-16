@@ -1,21 +1,33 @@
-import React from 'react';
-import InfoBlock from '../InfoBlock/InfoBlock';
-
-const CSMInfo = () => (
-  <>
-    <InfoBlock.Row icon="🔧">
-      Если после сброса BIOS система не видит диск, включите режим CSM (Legacy). Это вернет видимость старых MBR-записей.
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="🚀">
-      Быстрая загрузка (Fast Boot), поддержка дисков 2ТБ+, работа Re-Size BAR и официальная поддержка Windows 11.
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="⚠️">
-      Нельзя просто переключить режим. Если Windows в MBR — работаем в Legacy. Для UEFI нужна конвертация в GPT или переустановка.
-    </InfoBlock.Row>
-    <InfoBlock.Row icon="💿">
-      Перейти с MBR на GPT без потери данных можно через утилиту «mbr2gpt». После этого CSM в BIOS можно (и нужно) выключить.
-    </InfoBlock.Row>
-  </>
+const CSMInfo = ({ styles }: any) => (
+  <ul className={styles.info_container}>
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>🔧</span>
+      <span className={styles.info_text}>
+        Если система не видит диск, включите CSM (Legacy). Это вернет видимость старых MBR-разделов.
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>🚀</span>
+      <span className={styles.info_text}>
+        Режим UEFI дает Fast Boot, поддержку дисков 2ТБ+, работу Re-Size BAR и совместимость с Windows 11.
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>⚠️</span>
+      <span className={styles.info_text}>
+        Для UEFI нужна GPT-разметка. При смене режима Windows в MBR не загрузится без конвертации или переустановки.
+      </span>
+    </li>
+    
+    <li className={styles.info_item}>
+      <span className={styles.info_icon}>💿</span>
+      <span className={styles.info_text}>
+        Перейти с MBR на GPT без потери данных можно через «mbr2gpt». После этого CSM можно отключать.
+      </span>
+    </li>
+  </ul>
 );
 
 export default CSMInfo;

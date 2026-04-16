@@ -1,26 +1,39 @@
 import React, { useState } from 'react';
-// Импортируем переименованный компонент
-import InfoBlock from '../InfoBlock/InfoBlock'; 
+import Toolbox from '../Toolbox/Toolbox'; 
+import BiosWindow from '../BiosWindow/BiosWindow';
 import IIOTools from './IIOTools';
-import IIOBios from './IIOBios';
 import IIOInfo from './IIOInfo';
+import IIOBios from './IIOBios'; 
 
 const IIOConfiguration = () => {
-  // Строгая типизация стейта для PCI Gen
-  const [pciGen, setPciGen] = useState<'Gen 2' | 'Gen 3'>('Gen 3');
+  // Используем универсальные имена и стейт
+  const [value, setValue] = useState<'gen_2' | 'gen_3'>('gen_2');
+
+  const { title, path, content } = IIOBios();
 
   return (
-    <main className="manager-layout">
-      <InfoBlock
+    <>
+      <Toolbox 
         title="IIO Configuration"
         toolsLabel="PCI-E PORTS"
-        infoNode={<IIOInfo />}
-        toolsNode={<IIOTools pciGen={pciGen} setPciGen={setPciGen} />}
+        renderInfo={(styles) => <IIOInfo styles={styles} />}
+        renderTools={(styles) => (
+          <IIOTools 
+            value={value} 
+            setValue={setValue} 
+            styles={styles} 
+          />
+        )}
       />
-      
-      {/* Окно БИОСа, которое зависит от выбранного поколения */}
-      <IIOBios pciGen={pciGen} />
-    </main>
+
+      <BiosWindow 
+        title={title} 
+        path={path} 
+        content={content} 
+        type="iio"    // Передаем тип для хука внутри BiosWindow
+        value={value} // Передаем текущее значение (gen2/gen3)
+      />
+    </>
   );
 };
 

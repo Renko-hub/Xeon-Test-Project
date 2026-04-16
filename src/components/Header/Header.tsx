@@ -1,27 +1,15 @@
 import { NavLink } from 'react-router-dom';
-import styles from './Header.module.css';
+import s from './Header.module.css';
 
 const Header = () => (
-  <nav className={styles.navigationShell}>
-    <div className={styles.navigationContainer}>
-      {[
-        ['/ram', 'Xeon Ram Tool'],
-        ['/power', 'Power Management'],
-        ['/fan', 'Fan Configuration'],
-        ['/iio', 'IIO Configuration'],
-        ['/csm', 'CSM Configuration'],
-        ['/pci', 'PCI Configuration']
-      ].map(([to, label]) => (
-        <NavLink 
-          key={to} 
-          to={to} 
-          className={({ isActive }) => 
-            `${styles.navLink} ${isActive ? styles.isActiveLink : ''}`
-          }
-        >
-          {label}
-        </NavLink>
-      ))}
+  <nav className={s.header}>
+    <div className={s.header__container}>
+      <NavLink to="/ram" className={({ isActive }) => `${s.header__link} ${isActive ? s.header__link_active : ''}`}>Xeon Ram Tool</NavLink>
+      <NavLink to="/power" className={({ isActive }) => `${s.header__link} ${isActive ? s.header__link_active : ''}`}>Power Management</NavLink>
+      <NavLink to="/iio" className={({ isActive }) => `${s.header__link} ${isActive ? s.header__link_active : ''}`}>IIO Configuration</NavLink>
+      <NavLink to="/csm" className={({ isActive }) => `${s.header__link} ${isActive ? s.header__link_active : ''}`}>CSM Configuration</NavLink>
+      <NavLink to="/fan" className={({ isActive }) => `${s.header__link} ${isActive ? s.header__link_active : ''}`}>Fan Configuration</NavLink>
+      <NavLink to="/pci" className={({ isActive }) => `${s.header__link} ${isActive ? s.header__link_active : ''}`}>PCI Configuration</NavLink>
     </div>
   </nav>
 );
