@@ -1,21 +1,26 @@
 .tools_container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .tools_label {
   color: #888;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.pci_label_spacing {
+  margin-top: 12px;
 }
 
 .tools_item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-top: 4px;
+  gap: 10px;
+  margin-top: 0;
 }
 
 .tools_icon {
@@ -23,9 +28,9 @@
   width: 18px;
   display: flex;
   justify-content: center;
-  padding-top: 2px;
+  padding-top: 1px;
   font-size: 14px;
-  transition: filter 0.2s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .tools_item:hover .tools_icon {
@@ -34,8 +39,8 @@
 }
 
 .tools_text {
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.35;
   color: #cbd5e1;
 }
 

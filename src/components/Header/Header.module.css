@@ -3,6 +3,7 @@
   border-bottom: 1px solid #333;
   padding: 15px 0;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .header__container {
@@ -26,7 +27,9 @@
   text-align: center;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +42,9 @@
 .header__link_active {
   color: #fff;
   border-bottom-color: #007bff;
-  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 20px rgba(0, 123, 255, 0.2);
+  text-shadow:
+    0 0 10px rgba(0, 123, 255, 0.7),
+    0 0 20px rgba(0, 123, 255, 0.2);
   cursor: default;
 }
 

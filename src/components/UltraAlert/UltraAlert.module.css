@@ -123,11 +123,15 @@
 }
 
 @keyframes lava {
-  to { background-position: 200% center; }
+  to {
+    background-position: 200% center;
+  }
 }
 
 @keyframes move {
-  to { background-position: 30px 0; }
+  to {
+    background-position: 30px 0;
+  }
 }
 
 @media (max-width: 1024px) {

@@ -1,45 +1,34 @@
-import React from 'react';
+import { clsx } from 'clsx';
+import { ReactNode } from 'react';
 import s from './BiosWindow.module.css';
-import useBiosLogic from './hooks/useBiosLogic';
-import BiosInput from './BiosInput/BiosInput';
 
-const BiosWindow = ({ title, content = [], path, type, value, onBiosChange }: any) => {
-  const getRightText = useBiosLogic(type, value);
+export interface BiosProps {
+  title: string;
+  path: string;
+  content?: { text_left: string; text_right?: ReactNode }[];
+}
 
-  return (
-    <div className={s.bios_container}>
-      <header className={s.bios__header}>{title}</header>
-      
-      <ul className={s.bios__list} data-input-group>
-        {content.map((item: any, index: number) => {
-          const rightText = getRightText(item);
-          const isDisabled = rightText === "Disabled" || rightText === "Disable";
-
-          return (
-            <li key={index} className={s.bios__item}>
-              <span className={s.text_left}>{item.text_left}</span>
-              
-              {item.id && onBiosChange ? (
-                <span className={s.text_right}>
-                  [<BiosInput 
-                    value={rightText} 
-                    onChange={(val: string) => onBiosChange(item.id, val)}
-                    isFirst={item.id === 'tCL'}
-                  />]
-                </span>
-              ) : (
-                <span className={isDisabled ? s.state_disabled : s.text_right}>
-                  [{rightText}]
-                </span>
-              )}
-            </li>
-          );
-        })}
-      </ul>
-
-      <footer className={s.bios__footer}>PATH: {path}</footer>
-    </div>
-  );
-};
+const BiosWindow = ({ title, content = [], path }: BiosProps) => (
+  <div className={s.bios_container}>
+    <div className={s.bios__header}>{title}</div>
+    <ul className={s.bios__list}>
+      {content.map(({ text_left, text_right }, index) => (
+        <li key={index} className={s.bios__item}>
+          <span className={s.text_left}>{text_left}</span>
+          <span
+            className={clsx(
+              s.text_right,
+              (text_right === 'Disabled' || text_right === 'Disable') &&
+                s.state_disabled,
+            )}
+          >
+            [{text_right ?? 'N/A'}]
+          </span>
+        </li>
+      ))}
+    </ul>
+    <div className={s.bios__footer}>PATH: {path}</div>
+  </div>
+);
 
 export default BiosWindow;

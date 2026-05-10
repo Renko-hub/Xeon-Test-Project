@@ -1,18 +1,21 @@
-import React from 'react';
+import clsx from 'clsx';
 import PWMList from './PWMList/PWMList';
 
-const FanTools = ({ styles }: any) => (
-  <div className={styles.tools_container}>
-    
+const FanTools = ({
+  styles,
+  externalStyles = {},
+}: {
+  styles: any;
+  externalStyles?: any;
+}) => (
+  <div className={clsx(styles.tools_container, externalStyles.tools_container)}>
     <PWMList />
-
-    <div className={styles.tools_item}>
+    <div className={clsx(styles.tools_item, externalStyles.tools_item)}>
       <span className={styles.tools_icon}>💡</span>
       <p className={styles.tools_text}>
         Настройте эти точки в BIOS для оптимального баланса шума и температур.
       </p>
     </div>
-    
   </div>
 );
 

@@ -1,41 +1,21 @@
-import React, { useState } from 'react';
-import Toolbox from '../Toolbox/Toolbox'; 
-import BiosWindow from '../BiosWindow/BiosWindow'; 
-
-// Меняем только эти импорты
-import Tools from './CSMTools';
+import BiosWindow from '../BiosWindow/BiosWindow';
+import Toolbox from '../Toolbox/Toolbox';
+import BiosData from './CSMBios';
 import Info from './CSMInfo';
-import BiosData from './CSMBios'; 
+import Tools from './CSMTools';
 
-const CSMConfiguration = () => {
-  const [value, setValue] = useState<'mbr' | 'gpt'>('mbr');
+const INITIAL_STATE = { diskMode: 'mbr' };
 
-  const { title, path, content } = BiosData();
-
-  return (
-    <>
-      <Toolbox 
-        title="BOOT & RECOVERY"
-        toolsLabel="DISK MODE"
-        renderInfo={(styles) => <Info styles={styles} />}
-        renderTools={(styles) => (
-          <Tools 
-            value={value} 
-            setValue={setValue} 
-            styles={styles} 
-          />
-        )}
-      />
-
-      <BiosWindow 
-        title={title} 
-        path={path} 
-        content={content} 
-        type="csm"   // Идентификатор для хука внутри BiosWindow
-        value={value} // Текущий стейт
-      />
-    </>
-  );
-};
+const CSMConfiguration = () => (
+  <Toolbox
+    initialState={INITIAL_STATE}
+    title="BOOT & RECOVERY"
+    toolsLabel="DISK MODE"
+    renderInfo={(s) => <Info styles={s} />}
+    renderTools={(p) => <Tools {...p} />}
+  >
+    {(p) => <BiosWindow {...BiosData(p)} />}
+  </Toolbox>
+);
 
 export default CSMConfiguration;

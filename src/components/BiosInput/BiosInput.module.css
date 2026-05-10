@@ -1,7 +1,6 @@
-
 .bios_input {
   min-width: 2ch;
-  max-width: 4ch;
+  max-width: 5ch;
   background: #ffff55;
   color: #000;
   border: none;
@@ -10,4 +9,11 @@
   font-weight: bold;
   outline: none;
   padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bios_input::placeholder {
+  color: #000;
+  opacity: 1;
 }

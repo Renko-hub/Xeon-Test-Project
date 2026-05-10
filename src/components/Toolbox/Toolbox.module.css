@@ -9,7 +9,7 @@
   text-transform: uppercase;
   margin-bottom: 14px;
   text-align: center;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 .info_active {
@@ -36,7 +36,10 @@
   border-radius: 8px;
   border: 2px solid #1a1a1a;
   border-left: 3px solid transparent;
-  transition: border-left-color 0.3s ease;
+  border-right: 3px solid transparent;
+  transition:
+    border-left-color 0.3s ease,
+    border-right-color 0.3s ease;
 }
 
 .info_border {
@@ -47,7 +50,8 @@
   border-left-color: #3b82f6;
 }
 
-.info_container, .tools_container {
+.info_container,
+.tools_container {
   width: 100%;
 }
 
@@ -61,5 +65,16 @@
   .toolbox_card {
     padding: 20px 15px;
     border-left-width: 4px;
+    border-right-width: 4px;
+  }
+
+  .info_border {
+    border-left-color: #ffca28;
+    border-right-color: #ffca28;
+  }
+
+  .tools_border {
+    border-left-color: #3b82f6;
+    border-right-color: #3b82f6;
   }
 }

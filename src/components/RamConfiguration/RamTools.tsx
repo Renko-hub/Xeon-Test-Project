@@ -1,175 +1,139 @@
-import React, { useEffect } from 'react';
-import { RAM_SIZES } from './data/configData';
 import Button from '../Button/Button';
+import timingEngine from '../TimingEngine/timingEngine';
 
-interface RamToolsProps {
-  value: any;
-  setValue: React.Dispatch<React.SetStateAction<any>>;
-  styles: any;
-  isUnlocked: boolean;
-  availableSlots?: number[];
-  currentCpuList?: any[];
-  show16gbToggle?: boolean;
-}
+const RamTools = ({ state: initialState, update, styles: s }: any) => {
+  const { state } = timingEngine(initialState, initialState.lastChangedKey);
 
-const RamTools = ({ 
-  value, 
-  setValue, 
-  styles, 
-  isUnlocked, 
-  availableSlots = [], 
-  currentCpuList = [], 
-  show16gbToggle 
-}: RamToolsProps) => {
-  
-  const onChange = (upd: any) => {
-    setValue((p: any) => ({ 
-      ...p, 
-      ...upd 
-    }));
-  };
+  const commit = (key: string, val: any) =>
+    update({ [key]: val, lastChangedKey: key });
 
-  // Автопереключение на ultra при разблокировке
-  useEffect(() => {
-    if (isUnlocked) {
-      onChange({ profile: 'ultra', tCL: '', tRP: '', tRCD: '' });
-    }
-  }, [isUnlocked]);
-
-  const L = ({ t }: { t: string }) => <div className={styles.tools_label}>{t}</div>;
+  const boardTypes = ['atx', 'matx'] as const;
+  const generations = ['V2', 'V3', 'V4'] as const;
+  const profiles = ['safe', 'balanced', 'aggressive', 'custom'] as const;
 
   return (
-    <div className={styles.tools_container}>
-      <L t="ПОКОЛЕНИЕ:" />
-      <div className={styles.btn_group}>
-        {['V2', 'V3', 'V4'].map(v => (
-          <Button 
-            key={v} 
-            className={styles.tools_button} 
-            type={v.toLowerCase().replace('v','v_')} 
-            isActive={value.generation === v} 
-            onClick={() => onChange({ generation: v })} 
+    <div className={s.tools_container}>
+      <div className={s.tools_label}>ТИП ПЛАТЫ:</div>
+      <div className={s.btn_group}>
+        {boardTypes.map((type) => (
+          <Button
+            key={type}
+            type={type}
+            isActive={state.boardType === type}
+            onClick={() => commit('boardType', type)}
+            className={s.tools_button}
           />
         ))}
       </div>
 
-      <L t="ПРОЦЕССОР:" />
-      <select 
-        className={styles.tools_select} 
-        value={value.cpu?.name || ''} 
-        onChange={e => onChange({ cpu: currentCpuList.find((c: any) => c.name === e.target.value) })}
-      >
-        {currentCpuList.length > 0 ? (
-          currentCpuList.map((c: any) => (
-            <option key={c.name} value={c.name}>{c.name}</option>
-          ))
-        ) : (
-          <option>Загрузка...</option>
-        )}
-      </select>
-
-      <L t="ТИП ПАМЯТИ:" />
-      <div className={styles.btn_group}>
-        <Button 
-          className={styles.tools_button} 
-          type="desktop" 
-          isActive={!value.isEcc} 
-          onClick={() => onChange({ isEcc: false })} 
-        />
-        <Button 
-          className={styles.tools_button} 
-          type="ecc" 
-          isActive={value.isEcc} 
-          onClick={() => onChange({ isEcc: true })} 
-        />
+      <div className={s.tools_label}>ПОКОЛЕНИЕ:</div>
+      <div className={s.btn_group}>
+        {generations.map((gen) => (
+          <Button
+            key={gen}
+            type={gen}
+            isActive={state.gen === gen}
+            onClick={() => commit('gen', gen)}
+            className={s.tools_button}
+          />
+        ))}
       </div>
 
-      <L t="ОБЪЕМ:" />
-      <select 
-        className={styles.tools_select} 
-        value={value.ramSize} 
-        onChange={e => onChange({ ramSize: +e.target.value })}
-      >
-        {RAM_SIZES.map(sz => (
-          <option key={sz} value={sz}>{sz} GB</option>
-        ))}
-      </select>
+      <div className={s.tools_label}>ПРОЦЕССОР:</div>
+      <div className={s.tools_select_wrapper}>
+        <select
+          className={s.tools_select}
+          value={state.cpu}
+          onChange={(e) => commit('cpu', e.target.value)}
+        >
+          {state.cpuModels.map(({ name }: any) => (
+            <option key={name} value={name}>
+              {name}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      {show16gbToggle && (
+      <div className={s.tools_label}>ТИП ПАМЯТИ:</div>
+      <div className={s.btn_group}>
+        {(state.memoryTypes as string[]).map((type) => (
+          <Button
+            key={type}
+            type={type as any}
+            isActive={state.memoryType === type}
+            onClick={() => commit('memoryType', type)}
+            className={s.tools_button}
+          />
+        ))}
+      </div>
+
+      <div className={s.tools_label}>ОБЪЕМ ПАМЯТИ:</div>
+      <div className={s.tools_select_wrapper}>
+        <select
+          className={s.tools_select}
+          value={state.ramSize}
+          onChange={(e) => commit('ramSize', Number(e.target.value))}
+        >
+          {state.ramSizes.map((size: number) => (
+            <option key={size} value={size}>
+              {size} GB
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {state.isSelectionRequired && (
         <>
-          <L t="16 ГБ ПЛАШКИ:" />
-          <div className={styles.btn_group}>
-            <Button 
-              className={styles.tools_button} 
-              type="no" 
-              isActive={!value.has16gbSticks} 
-              onClick={() => onChange({ has16gbSticks: false })} 
+          <div className={s.tools_label}>ЕСТЬ ПЛАНКИ ПО 16GB И ВЫШЕ?</div>
+          <div className={s.btn_group}>
+            <Button
+              type="no"
+              isActive={!state.isDensityHigh}
+              onClick={() => commit('isDensityHigh', false)}
+              className={s.tools_button}
             />
-            <Button 
-              className={styles.tools_button} 
-              type="yes" 
-              isActive={value.has16gbSticks} 
-              onClick={() => onChange({ has16gbSticks: true })} 
+            <Button
+              type="yes"
+              isActive={state.isDensityHigh}
+              onClick={() => commit('isDensityHigh', true)}
+              className={s.tools_button}
             />
           </div>
         </>
       )}
 
-      <L t="СЛОТОВ:" />
-      <div className={styles.btn_group}>
-        {availableSlots.length > 0 ? (
-          availableSlots.map((n: number) => (
-            <Button 
-              key={n} 
-              className={styles.tools_button} 
-              type={`slots${n}`} 
-              isActive={value.slotsCount === n} 
-              onClick={() => onChange({ slotsCount: n })} 
+      <div className={s.tools_label}>ЗАНЯТО СЛОТОВ:</div>
+      <div className={s.btn_group}>
+        {[1, 2, 3, 4]
+          .filter((n) => state.visibleSlots.includes(n))
+          .map((n) => (
+            <Button
+              key={n}
+              type={`slots${n}` as any}
+              isActive={state.slotsCount === n}
+              onClick={() => commit('slotsCount', n)}
+              className={s.tools_button}
             />
-          ))
-        ) : (
-          <div className={styles.no_slots}>Нет вариантов</div>
-        )}
+          ))}
       </div>
 
-      <L t="ТИП ПЛАТЫ:" />
-      <div className={styles.btn_group}>
-        {['atx', 'matx'].map(b => (
-          <Button 
-            key={b} 
-            className={styles.tools_button} 
-            type={b} 
-            isActive={value.boardType === b} 
-            onClick={() => onChange({ boardType: b })} 
+      <div className={s.tools_label}>ПРЕСЕТ:</div>
+      <div className={s.btn_group}>
+        {profiles.map((p) => (
+          <Button
+            key={p}
+            type={p}
+            isActive={state.profile === p}
+            onClick={() => commit('profile', p)}
+            className={s.tools_button}
           />
         ))}
-      </div>
-
-      <L t="ПРЕСЕТ:" />
-      <div className={styles.btn_group}>
-        {['safe', 'balanced', 'aggressive'].map(p => (
-          <Button 
-            key={p} 
-            className={styles.tools_button} 
-            type={p} 
-            isActive={value.profile === p} 
-            onClick={() => onChange({ profile: p, tCL: '', tRP: '', tRCD: '' })} 
-          />
-        ))}
-        
-        <Button 
-          className={styles.tools_button} 
-          type="custom" 
-          isActive={value.profile === 'custom'} 
-          onClick={() => onChange({ profile: 'custom' })} 
-        />
-
-        {isUnlocked && (
-          <Button 
-            className={styles.tools_button} 
-            type="ultra" 
-            isActive={value.profile === 'ultra'} 
-            onClick={() => onChange({ profile: 'ultra', tCL: '', tRP: '', tRCD: '' })} 
+        {state.profile === 'ultra' && (
+          <Button
+            type="ultra"
+            isActive={true}
+            onClick={() => commit('profile', 'ultra')}
+            className={s.tools_button}
           />
         )}
       </div>

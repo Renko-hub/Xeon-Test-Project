@@ -1,46 +1,66 @@
+import clsx from 'clsx';
 import { ReactNode, useState } from 'react';
 import Button from '../Button/Button';
+
 import s from './Toolbox.module.css';
 import infoS from './styles/Info.module.css';
 import toolsS from './styles/Tools.module.css';
 
 interface ToolboxProps {
-  title: ReactNode;
+  initialState?: any;
+  title: ReactNode | ((p: any) => ReactNode);
   toolsLabel: string;
-  renderInfo: (styles: typeof infoS) => ReactNode;
-  renderTools: (styles: typeof toolsS) => ReactNode;
+  renderInfo?: (styles: any) => ReactNode;
+  renderTools?: (p: any) => ReactNode;
+  children?: ReactNode | ((p: any) => ReactNode);
 }
 
-const Toolbox = ({ title, toolsLabel, renderInfo, renderTools }: ToolboxProps) => {
-  const [activeTab, setActiveTab] = useState<'info' | 'tools'>('info');
-  const isInfo = activeTab === 'info';
+const Toolbox = ({
+  initialState,
+  title,
+  toolsLabel,
+  renderInfo,
+  renderTools,
+  children,
+}: ToolboxProps) => {
+  const [state, setState] = useState(initialState);
+  const [tab, setTab] = useState<'info' | 'tools'>('info');
+
+  const p = {
+    state,
+    setState,
+    update: (patch: any) => setState((prev: any) => ({ ...prev, ...patch })),
+    styles: { ...infoS, ...toolsS },
+  };
 
   return (
-    <div className={s.toolbox_container}>
-      <h1 className={`${s.toolbox_title} ${isInfo ? s.info_active : s.tools_active}`}>
-        {title}
-      </h1>
-      
-      <div className={s.toolbox_tabs}>
-        <Button 
-          type="warning" 
-          isActive={isInfo} 
-          onClick={() => setActiveTab('info')} 
-          className={s.tab_button}
-        />
-        <Button 
-          type="info" 
-          label={toolsLabel} 
-          isActive={!isInfo} 
-          onClick={() => setActiveTab('tools')} 
-          className={s.tab_button}
-        />
+    <>
+      <div className={s.toolbox_container}>
+        <h1 className={clsx(s.toolbox_title, s[`${tab}_active`])}>
+          {typeof title === 'function' ? title(p) : title}
+        </h1>
+
+        <div className={s.toolbox_tabs}>
+          <Button
+            type="warning"
+            isActive={tab === 'info'}
+            onClick={() => setTab('info')}
+          />
+          <Button
+            type="tools"
+            label={toolsLabel}
+            isActive={tab === 'tools'}
+            onClick={() => setTab('tools')}
+          />
+        </div>
+
+        <div className={clsx(s.toolbox_card, s[`${tab}_border`])}>
+          {tab === 'info' ? renderInfo?.(p.styles) : renderTools?.(p)}
+        </div>
       </div>
 
-      <div className={`${s.toolbox_card} ${isInfo ? s.info_border : s.tools_border}`}>
-        {isInfo ? renderInfo(infoS) : renderTools(toolsS)}
-      </div>
-    </div>
+      {typeof children === 'function' ? children(p) : children}
+    </>
   );
 };
 

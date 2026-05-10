@@ -1,47 +1,63 @@
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
-const useUltraLogic = (
-  onUnlock: (val: boolean) => void, 
-  onSetTempUltra: (val: boolean) => void, 
-  isUnlocked: boolean
-) => {
+const useUltraLogic = (state: any, update: any) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [clicks, setClicks] = useState(0);
+  const clicks = useRef(0);
+  const lastClickTime = useRef(0);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const closeAlert = (shouldUnlock: boolean) => {
-    onUnlock(shouldUnlock);
-    setIsOpen(false);
-    onSetTempUltra(false);
-    setClicks(0);
-  };
+  const close = useCallback(
+    (shouldUnlock = false) => {
+      clicks.current = 0;
+      setIsOpen(false);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+      update({
+        active: false,
+        unlocked: shouldUnlock || state.unlocked,
+        ...(shouldUnlock
+          ? { profile: 'ultra', lastChangedKey: 'profile' }
+          : {}),
+      });
+    },
+    [state.unlocked, update],
+  );
 
   useEffect(() => {
-    return () => onSetTempUltra(false);
-  }, [onSetTempUltra]);
-
-  useEffect(() => {
-    if (clicks > 0 && clicks < 10) {
-      const timer = setTimeout(() => setClicks(0), 2000);
-      return () => clearTimeout(timer);
+    if (isOpen) {
+      timeoutRef.current = setTimeout(() => close(false), 7000);
+      return () => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      };
     }
-  }, [clicks]);
+  }, [isOpen, close]);
 
-  const handleUnlockAttempt = () => {
-    if (isUnlocked) {
-      setIsOpen(true);
-      return;
+  const handleTrigger = (e: React.MouseEvent | React.TouchEvent) => {
+    e.stopPropagation();
+
+    if (typeof window !== 'undefined') {
+      window.getSelection()?.removeAllRanges();
     }
-    
-    const nextCount = clicks + 1;
-    if (nextCount >= 10) {
+
+    if (state.unlocked || isOpen) return;
+
+    const now = Date.now();
+    if (now - lastClickTime.current > 2000) {
+      clicks.current = 0;
+    }
+
+    lastClickTime.current = now;
+    clicks.current++;
+
+    if (clicks.current >= 10) {
+      window.navigator?.vibrate?.(200);
       setIsOpen(true);
-      setClicks(0);
-    } else {
-      setClicks(nextCount);
+      update({ active: true });
+      clicks.current = 0;
     }
   };
 
-  return { isOpen, close: closeAlert, handleTrigger: handleUnlockAttempt };
+  return { isOpen, close, handleTrigger };
 };
 
 export default useUltraLogic;

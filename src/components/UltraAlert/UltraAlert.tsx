@@ -1,23 +1,39 @@
-import React from 'react';
+import clsx from 'clsx';
 import Button from '../Button/Button';
 import s from './UltraAlert.module.css';
 import useUltraLogic from './hooks/useUltraLogic';
 
-const UltraAlert = ({ onUnlock, onSetTempUltra, isUnlocked }: any) => {
-  const { isOpen, close, handleTrigger } = useUltraLogic(onUnlock, onSetTempUltra, isUnlocked);
+const ALERT_CONTENT = [
+  {
+    text: 'Данный режим поддерживается не всеми процессорами.',
+    className: s.alert_notice,
+  },
+  { text: 'Экстремальные настройки. Только для удачных чипов + обдув.' },
+  {
+    text: (
+      <>
+        Напряжение:{' '}
+        <span className={s.alert_gold}>1.30V (D4) / 1.55V (D3)</span>.
+      </>
+    ),
+  },
+  {
+    text: 'Нажмите "ОТМЕНА", если вы прочли текст.',
+    className: s.alert_danger,
+  },
+];
 
-  const onTriggerDown = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    handleTrigger();
-  };
+const UltraAlert = ({ state, update }: { state: any; update: any }) => {
+  const { isOpen, close, handleTrigger } = useUltraLogic(state, update);
 
   return (
     <div className={s.alert_wrap}>
-      <span 
-        className={`${s.alert_trigger} ${isUnlocked ? s.alert_unlocked : ''}`}
-        onMouseDown={onTriggerDown}
+      <span
+        className={clsx(s.alert_trigger, state.unlocked && s.alert_unlocked)}
+        onMouseDown={(e) => e.preventDefault()}
+        onClick={handleTrigger}
       >
-        {isUnlocked ? 'EXTREME RAM TOOL 🛠️' : 'XEON RAM TOOL'}
+        {state.unlocked ? 'EXTREME RAM TOOL 🛠️' : 'XEON RAM TOOL'}
       </span>
 
       {isOpen && (
@@ -29,15 +45,18 @@ const UltraAlert = ({ onUnlock, onSetTempUltra, isUnlocked }: any) => {
                 <span className={s.alert_excl}>!</span>
               </div>
               <h2 className={s.alert_title}>⚠️ ВНИМАНИЕ: ULTRA РЕЖИМ</h2>
+
               <div className={s.alert_text}>
-                <p className={s.alert_notice}>Данный режим поддерживается не всеми процессорами.</p>
-                <p>Экстремальные настройки. Только для удачных чипов + обдув.</p>
-                <p>Напряжение: <span className={s.alert_gold}>1.45V-1.55V</span>.</p>
-                <p className={s.alert_danger}>Нажмите "ОТМЕНА", если вы прочли текст.</p>
+                {ALERT_CONTENT.map((item, index) => (
+                  <p key={index} className={item.className}>
+                    {item.text}
+                  </p>
+                ))}
               </div>
+
               <div className={s.alert_actions}>
-                <Button type="activate" onClick={() => close(false)} isActive />
-                <Button type="cancel" onClick={() => close(true)} />
+                <Button type="activate" isActive onClick={() => close(false)} />
+                <Button type="cancel" isActive onClick={() => close(true)} />
               </div>
             </div>
             <div className={s.alert_hazard} />

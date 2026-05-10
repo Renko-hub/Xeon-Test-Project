@@ -1,26 +1,27 @@
+import clsx from 'clsx';
 import { BUTTONS, ButtonType } from './Button.config';
 import s from './Button.module.css';
 
-const Button = ({ type, isActive, className, label, ...rest }: any) => {
-  const item = BUTTONS[type as ButtonType];
-  
-  // Если типа нет в конфиге — не мусорим в DOM
-  if (!item) return null;
+interface ButtonProps {
+  type: ButtonType;
+  isActive?: boolean;
+  onClick?: () => void;
+  className?: string;
+  label?: string;
+}
 
-  // Определяем тему: активная или обычная
-  const themeClass = isActive ? s[`${item.theme}_active`] : s[item.theme];
-  
-  // Базовые классы (всегда есть)
-  let cls = `${s.button} ${themeClass}`;
-  
-  // Если прокинули кастомный className — приклеиваем его в конец
-  if (className) cls += ` ${className}`;
+const Button = ({ type, isActive, onClick, className, label }: ButtonProps) => {
+  const conf = BUTTONS[type];
 
-  return (
-    <button className={cls} {...rest}>
-      {label ?? item.label}
+  return conf ? (
+    <button
+      type="button"
+      onClick={onClick}
+      className={clsx(s.button, s[conf.theme], isActive && s.active, className)}
+    >
+      {label || conf.label}
     </button>
-  );
+  ) : null;
 };
 
 export default Button;

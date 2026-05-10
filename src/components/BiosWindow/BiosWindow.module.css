@@ -2,7 +2,7 @@
   width: 540px;
   height: 560px;
   background: #0000aa;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   border: 4px solid #ccc;
   display: flex;
   flex-direction: column;
@@ -25,27 +25,32 @@
   list-style: none;
   padding: 0 10px;
   margin: 0;
+  overflow-y: auto; /* добавил на случай длинного списка */
 }
 
 .bios__item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 4px;
+  gap: 10px;
 }
 
 .text_left {
-  color: #aaaaaa;
-  flex: 1;
+  color: #ffffff;
+}
+
+.text_right,
+.state_disabled {
+  font-weight: bold;
+  white-space: nowrap;
 }
 
 .text_right {
   color: #ffffff;
-  font-weight: bold;
 }
 
 .state_disabled {
   color: #bbbbbb;
-  font-weight: bold;
 }
 
 .bios__footer {
@@ -53,10 +58,10 @@
   border-top: 2px solid #aaaaaa;
   color: #ffff55;
   font-size: 12px;
-  padding-top: 6px;
-  padding-left: 5px;
+  padding: 6px 0 0 5px;
 }
 
+/* Адаптив */
 @media (max-width: 1024px) {
   .bios_container {
     max-width: 500px;

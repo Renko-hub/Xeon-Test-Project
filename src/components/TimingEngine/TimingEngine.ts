@@ -1,42 +1,35 @@
-import { getHardware } from './Hardware';
-import { getSlotConfiguration } from './SlotConfiguration';
-import { getPrimaryTiming } from './PrimaryTiming';
-import { getAdvancedTiming } from './AdvancedTiming';
+import { TREFI_TABLE } from '../RamConfiguration/data/memoryPresets';
+import memoryConfiguration from './memoryConfiguration';
+import {
+  PrimaryTimings,
+  SubTimings,
+  formatOutputData,
+  resolveFrequency,
+} from './timingUtils';
 
-export const calculateRamFullLogic = (config: any, isUnlocked: boolean) => {
-  // 1. Получаем параметры железа
-  const hw = getHardware(config, isUnlocked);
-  
-  // 2. Рассчитываем конфигурацию слотов
-  const slot = getSlotConfiguration(config, hw);
-  
-  // 3. Рассчитываем основные тайминги (CL, RCD, RP, RAS)
-  const primary = getPrimaryTiming(hw, slot, config);
-  
-  // 4. Рассчитываем вторичные параметры и вольтаж
-  const advanced = getAdvancedTiming(hw, slot, primary, config);
+const timingEngine = (state: any, changedKey?: string): any => {
+  const config = memoryConfiguration({ ...state }, changedKey);
+  const data = { ...state, ...config };
 
-  return {
-    // Данные для интерфейса и валидации
-    sanitized: { 
-      ...config, 
-      cpu: hw.cpu, 
-      slotsCount: slot.slotsCount, 
-      has16gbSticks: slot.force16, 
-      availableSlots: slot.availableSlots, 
-      currentCpuList: hw.cpus, 
-      show16gbToggle: slot.ramSize >= 16 && slot.ramSize < 64 
-    },
-    // Итоговая таблица таймингов
-    timings: {
-      ...advanced,
-      tCL: primary.fCL,
-      tRP: primary.fRP,
-      tRCD: primary.fRCD,
-      tRAS: primary.fRAS,
-      tRC: primary.fRAS + primary.fCL,
-      profile: hw.profile,
-      isUltra: hw.isUltra
-    }
+  const { frequency, frequencyKey } = resolveFrequency(data);
+  const primaries = PrimaryTimings(data, frequencyKey);
+  const subTimings = SubTimings(data, primaries, frequencyKey);
+  const outputData = formatOutputData(data, frequency, primaries);
+
+  const timings: any = {
+    ...primaries,
+    ...subTimings,
+    ...outputData,
+    tWR: 12,
+    tRRD: data.ramType === 'DDR4' ? 4 : 5,
+    tRTP: 6,
+    tWTR: data.ramType === 'DDR4' ? 8 : 7,
+    tFAW: data.ramType === 'DDR4' ? (frequency >= 2400 ? 24 : 16) : 28,
+    tREFI: ((TREFI_TABLE as any)[data.profile] ?? TREFI_TABLE.safe)[data.gen],
+    tRFC_Values: subTimings.tRFC_Values,
   };
+
+  return { state: data, config, timings };
 };
+
+export default timingEngine;

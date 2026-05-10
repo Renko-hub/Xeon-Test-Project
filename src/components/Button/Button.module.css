@@ -6,39 +6,111 @@
   border: 1px solid #444;
   color: #888;
   border-radius: 4px;
-  font: 800 9px "Segoe UI", sans-serif;
+  font:
+    800 9px 'Segoe UI',
+    sans-serif;
   text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.15s ease;
   white-space: nowrap;
 }
 
-.warning, .warning_active, .info, .info_active {
+.warning,
+.tools {
   height: 36px;
   font-size: 11px;
-  background: transparent !important;
+  background: transparent;
 }
 
-.warning { border-color: #961b1b; color: #ffd700; }
-.warning_active { border-color: #ffca28; color: #ffca28; }
-.info, .info_active { border-color: #3b82f6; color: #3b82f6; }
-.v2_active { background: #8e24aa; border-color: #ab47bc; color: #fff; }
-.v3_active { background: #d35400; border-color: #e67e22; color: #fff; }
-.v4_active { background: #455a64; border-color: #78909c; color: #fff; }
-.optimal_active { background: #218838; border-color: #28a745; color: #fff; }
-.danger_active { background: #961b1b; border-color: #b22222; color: #fff; }
-.safe_active, .no_active { background: #555 !important; border-color: #777 !important; color: #fff !important; }
-.yes_active { background: #961b1b; border-color: #b22222; color: #fff; }
-.server_active { background: #00838f; border-color: #00acc1; color: #fff; }
-.desktop_active { background: #00695c; border-color: #00897b; color: #fff; }
-.slots_active { background: #3949ab; border-color: #5c6bc0; color: #fff; }
-.board_active { background: #1565c0; border-color: #1e88e5; color: #fff; }
-.gen_active, .partition_active, .custom_active { background: #3b82f6; border-color: #60a5fa; color: #fff; }
+.warning {
+  border-color: #961b1b;
+  color: #ffd700;
+}
+.warning.active {
+  border-color: #ffca28;
+  color: #ffca28;
+}
 
-.lava_active {
+.tools {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+.tools.active {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.v2.active {
+  background: #8e24aa;
+  border-color: #ab47bc;
+  color: #fff;
+}
+.v3.active {
+  background: #d35400;
+  border-color: #e67e22;
+  color: #fff;
+}
+.v4.active {
+  background: #455a64;
+  border-color: #78909c;
+  color: #fff;
+}
+
+.optimal.active {
+  background: #218838;
+  border-color: #28a745;
+  color: #fff;
+}
+.danger.active {
+  background: #961b1b;
+  border-color: #b22222;
+  color: #fff;
+}
+.yes.active {
+  background: #961b1b;
+  border-color: #b22222;
+  color: #fff;
+}
+
+.safe.active,
+.no.active {
+  background: #555;
+  border-color: #777;
+  color: #fff;
+}
+
+.server.active {
+  background: #00838f;
+  border-color: #00acc1;
+  color: #fff;
+}
+.desktop.active {
+  background: #00695c;
+  border-color: #00897b;
+  color: #fff;
+}
+.slots.active {
+  background: #3949ab;
+  border-color: #5c6bc0;
+  color: #fff;
+}
+.board.active {
+  background: #1565c0;
+  border-color: #1e88e5;
+  color: #fff;
+}
+
+.gen.active,
+.partition.active,
+.custom.active {
+  background: #3b82f6;
+  border-color: #60a5fa;
+  color: #fff;
+}
+
+.lava.active {
   background-image: linear-gradient(90deg, #ff4e00, #ffcc00, #ff4e00);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -50,8 +122,12 @@
 }
 
 @keyframes lava {
-  0% { background-position: 0% center; }
-  100% { background-position: -200% center; }
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -68,7 +144,8 @@
     white-space: normal;
     text-align: center;
   }
-  .warning, .warning_active, .info, .info_active {
+  .warning,
+  .tools {
     height: 44px;
     font-size: 12px;
   }

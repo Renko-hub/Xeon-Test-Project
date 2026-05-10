@@ -1,31 +1,50 @@
-const RamBios = (t: any) => {
-  let trfcVal = String(t.tRFC);
-  if (t.profile !== 'custom') {
-    const label = t.isUltra ? 'Ultra' : 'Ideal';
-    trfcVal = `${t.tRFC} (${label}: ${t.tRFC_ideal})`;
-  }
+import BiosInput from '../BiosInput/BiosInput';
+import timingEngine from '../TimingEngine/timingEngine';
+
+const RamBios = ({
+  state,
+  update,
+}: {
+  state: any;
+  update: (c: any) => void;
+}) => {
+  const { state: s, timings: t } = timingEngine(state, state.lastChangedKey);
+  const isCustom = s.profile === 'custom';
+
+  const val = (f: string, isFirst = false) =>
+    isCustom ? (
+      <BiosInput field={f} state={s} update={update} isFirst={isFirst} />
+    ) : (
+      t[f]
+    );
+
+  const rfcInfo =
+    !isCustom && t.tRFC_Values?.limitValue
+      ? ` (${s.profile === 'ultra' ? 'LIMIT' : 'IDEAL'}: ${t.tRFC_Values.limitValue})`
+      : '';
 
   return {
-    title: `MEMORY CONFIGURATION - SPEED: ${t.psp}`, 
-    path: "INTELRCSETUP > MEMORY CONFIGURATION > MEMORY TIMINGS & VOLTAGE",
+    title: `MEMORY CONFIG - ${t.freq} ${t.bandwidth} (${s.channelsName})`,
+    path: 'INTELRCSETUP > MEMORY CONFIGURATION > MEMORY TIMINGS',
     content: [
-      { text_left: "DIMM PROFILE", text_right: "MANUAL" },
-      { text_left: "MEMORY VOLTAGE", text_right: t.voltage },
-      { text_left: "COMMAND TIMING", text_right: t.commandRate },
-      { text_left: "REFRESH RATE", text_right: t.refreshRate },
-      { text_left: "CAS LATENCY", text_right: t.tCL, id: "tCL" },
-      { text_left: "TRP", text_right: t.tRP, id: "tRP" },
-      { text_left: "TRCD", text_right: t.tRCD, id: "tRCD" },
-      { text_left: "TRAS", text_right: t.tRAS },
-      { text_left: "TWR", text_right: t.tWR },
-      { text_left: "TRFC", text_right: trfcVal },
-      { text_left: "TRRD", text_right: t.tRRD },
-      { text_left: "TRTP", text_right: t.tRTP },
-      { text_left: "TWTR", text_right: t.tWTR },
-      { text_left: "TFAW", text_right: t.tFAW },
-      { text_left: "TRC", text_right: t.tRC },
-      { text_left: "TCWL", text_right: t.tCWL },
-    ]
+      { text_left: 'DIMM profile', text_right: 'MANUAL' },
+      { text_left: 'Memory Frequency', text_right: t.freq.split(' ')[0] },
+      { text_left: 'Memory Voltage', text_right: t.voltage },
+      { text_left: 'Command Timing', text_right: t.tCP },
+      { text_left: 'Refresh Rate', text_right: t.tREFI },
+      { text_left: 'CAS Latency', text_right: val('tCL', true) },
+      { text_left: 'tRP', text_right: val('tRP') },
+      { text_left: 'tRCD', text_right: val('tRCD') },
+      { text_left: 'tRAS', text_right: t.tRAS },
+      { text_left: 'tWR', text_right: t.tWR },
+      { text_left: 'tRFC', text_right: `${t.tRFC_Values?.current}${rfcInfo}` },
+      { text_left: 'tRRD', text_right: t.tRRD },
+      { text_left: 'tRTP', text_right: t.tRTP },
+      { text_left: 'tWTR', text_right: t.tWTR },
+      { text_left: 'tFAW', text_right: t.tFAW },
+      { text_left: 'tRC', text_right: t.tRC },
+      { text_left: 'tCWL', text_right: t.tCWL },
+    ],
   };
 };
 
