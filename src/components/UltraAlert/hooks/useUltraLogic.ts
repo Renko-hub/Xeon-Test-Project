@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const useUltraLogic = (state: any, update: any) => {
   const [isOpen, setIsOpen] = useState(false);
   const clicks = useRef(0);
   const lastClickTime = useRef(0);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const timeoutRef = useRef<number | null>(null);
 
   const close = useCallback(
     (shouldUnlock = false) => {
@@ -16,7 +16,7 @@ const useUltraLogic = (state: any, update: any) => {
         active: false,
         unlocked: shouldUnlock || state.unlocked,
         ...(shouldUnlock
-          ? { profile: 'ultra', lastChangedKey: 'profile' }
+          ? { profile: "ultra", lastChangedKey: "profile" }
           : {}),
       });
     },
@@ -25,7 +25,7 @@ const useUltraLogic = (state: any, update: any) => {
 
   useEffect(() => {
     if (isOpen) {
-      timeoutRef.current = setTimeout(() => close(false), 7000);
+      timeoutRef.current = window.setTimeout(() => close(false), 7000);
       return () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
       };
@@ -34,17 +34,12 @@ const useUltraLogic = (state: any, update: any) => {
 
   const handleTrigger = (e: React.MouseEvent | React.TouchEvent) => {
     e.stopPropagation();
-
-    if (typeof window !== 'undefined') {
-      window.getSelection()?.removeAllRanges();
-    }
+    window.getSelection()?.removeAllRanges();
 
     if (state.unlocked || isOpen) return;
 
     const now = Date.now();
-    if (now - lastClickTime.current > 2000) {
-      clicks.current = 0;
-    }
+    if (now - lastClickTime.current > 2000) clicks.current = 0;
 
     lastClickTime.current = now;
     clicks.current++;

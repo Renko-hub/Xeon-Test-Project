@@ -1,14 +1,16 @@
-import { clsx } from 'clsx';
-import { ReactNode } from 'react';
-import s from './BiosWindow.module.css';
+import { clsx } from "clsx";
+import { ReactNode } from "react";
+import s from "./BiosWindow.module.css";
 
-export interface BiosProps {
+const BiosWindow = ({
+  title,
+  content = [],
+  path,
+}: {
   title: string;
   path: string;
   content?: { text_left: string; text_right?: ReactNode }[];
-}
-
-const BiosWindow = ({ title, content = [], path }: BiosProps) => (
+}) => (
   <div className={s.bios_container}>
     <div className={s.bios__header}>{title}</div>
     <ul className={s.bios__list}>
@@ -18,11 +20,11 @@ const BiosWindow = ({ title, content = [], path }: BiosProps) => (
           <span
             className={clsx(
               s.text_right,
-              (text_right === 'Disabled' || text_right === 'Disable') &&
-                s.state_disabled,
+              (text_right === "Disabled" || text_right === "Disable") &&
+                s.state_disabled
             )}
           >
-            [{text_right ?? 'N/A'}]
+            [{text_right ?? "N/A"}]
           </span>
         </li>
       ))}

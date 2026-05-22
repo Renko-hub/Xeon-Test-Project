@@ -7,7 +7,7 @@
   color: #888;
   border-radius: 4px;
   font:
-    800 9px 'Segoe UI',
+    800 9px "Segoe UI",
     sans-serif;
   text-transform: uppercase;
   cursor: pointer;
@@ -17,100 +17,101 @@
   white-space: nowrap;
 }
 
-.warning,
-.tools {
+.warning {
   height: 36px;
   font-size: 11px;
   background: transparent;
-}
-
-.warning {
   border-color: #961b1b;
   color: #ffd700;
 }
-.warning.active {
+.warning_active {
+  height: 36px;
+  font-size: 11px;
+  background: transparent;
   border-color: #ffca28;
   color: #ffca28;
 }
 
 .tools {
+  height: 36px;
+  font-size: 11px;
+  background: transparent;
   border-color: #3b82f6;
   color: #3b82f6;
 }
-.tools.active {
+.tools_active {
+  height: 36px;
+  font-size: 11px;
+  background: transparent;
   border-color: #3b82f6;
   color: #3b82f6;
 }
 
-.v2.active {
+.v2_active {
   background: #8e24aa;
   border-color: #ab47bc;
   color: #fff;
 }
-.v3.active {
+.v3_active {
   background: #d35400;
   border-color: #e67e22;
   color: #fff;
 }
-.v4.active {
+.v4_active {
   background: #455a64;
   border-color: #78909c;
   color: #fff;
 }
 
-.optimal.active {
+.optimal_active {
   background: #218838;
   border-color: #28a745;
   color: #fff;
 }
-.danger.active {
-  background: #961b1b;
-  border-color: #b22222;
-  color: #fff;
-}
-.yes.active {
+.danger_active,
+.yes_active {
   background: #961b1b;
   border-color: #b22222;
   color: #fff;
 }
 
-.safe.active,
-.no.active {
+.safe_active,
+.no_active {
   background: #555;
   border-color: #777;
   color: #fff;
 }
 
-.server.active {
+.ecc_active {
   background: #00838f;
   border-color: #00acc1;
   color: #fff;
 }
-.desktop.active {
+.desktop_active {
   background: #00695c;
   border-color: #00897b;
   color: #fff;
 }
-.slots.active {
+.slots_active {
   background: #3949ab;
   border-color: #5c6bc0;
   color: #fff;
 }
-.board.active {
+.board_active {
   background: #1565c0;
   border-color: #1e88e5;
   color: #fff;
 }
 
-.gen.active,
-.partition.active,
-.custom.active {
+.gen_active,
+.partition_active,
+.custom_active {
   background: #3b82f6;
   border-color: #60a5fa;
   color: #fff;
 }
 
-.lava.active {
+.lava_active {
   background-image: linear-gradient(90deg, #ff4e00, #ffcc00, #ff4e00);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -145,7 +146,9 @@
     text-align: center;
   }
   .warning,
-  .tools {
+  .warning_active,
+  .tools,
+  .tools_active {
     height: 44px;
     font-size: 12px;
   }

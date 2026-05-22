@@ -10,3 +10,7 @@ export const RAM_CONFIGS = {
     ecc: [4, 8, 16, 32],
   },
 } as const;
+
+export const AVAILABLE_SLOTS = [1, 2, 3, 4] as const;
+
+export const formatRamLabel = (val: string | number) => `${val} GB`;

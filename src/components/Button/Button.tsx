@@ -1,9 +1,29 @@
-import clsx from 'clsx';
-import { BUTTONS, ButtonType } from './Button.config';
-import s from './Button.module.css';
+import clsx from "clsx";
+import {
+  BUTTONS,
+  PresetButtonType,
+  GenButtonType,
+  PciButtonType,
+  DiskButtonType,
+  MemoryButtonType,
+  SlotsButtonType,
+  BoardButtonType,
+  ToolsButtonType,
+  ActionButtonType,
+} from "./Button.config";
+import s from "./Button.module.css";
 
 interface ButtonProps {
-  type: ButtonType;
+  type:
+    | PresetButtonType
+    | GenButtonType
+    | PciButtonType
+    | DiskButtonType
+    | MemoryButtonType
+    | SlotsButtonType
+    | BoardButtonType
+    | ToolsButtonType
+    | ActionButtonType;
   isActive?: boolean;
   onClick?: () => void;
   className?: string;
@@ -11,17 +31,21 @@ interface ButtonProps {
 }
 
 const Button = ({ type, isActive, onClick, className, label }: ButtonProps) => {
-  const conf = BUTTONS[type];
+  const config = BUTTONS[type as keyof typeof BUTTONS];
 
-  return conf ? (
+  return (
     <button
       type="button"
       onClick={onClick}
-      className={clsx(s.button, s[conf.theme], isActive && s.active, className)}
+      className={clsx(
+        s.button,
+        isActive ? config.active : config.normal,
+        className,
+      )}
     >
-      {label || conf.label}
+      {label || config.label}
     </button>
-  ) : null;
+  );
 };
 
 export default Button;

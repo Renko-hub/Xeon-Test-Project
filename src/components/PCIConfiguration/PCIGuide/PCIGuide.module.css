@@ -1,64 +1,93 @@
-.pci_guide_container {
+.pci_container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
   margin: 0;
+  box-sizing: border-box;
 }
-.pci_guide_section {
+
+.pci_section {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
-.pci_section_label {
+
+.pci_title {
   display: block;
   font-size: 11px;
   font-weight: 800;
   color: #ffca28;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 6px;
-  padding-left: 0;
+  margin: 0 0 4px 0;
 }
-.pci_item {
+
+.pci_step_list,
+.pci_error_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pci_step_list {
+  counter-reset: pci-counter;
+}
+
+.pci_step_list li,
+.pci_error_list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   background: #121212;
   border: 1px solid #1f1f1f;
   border-radius: 4px;
   padding: 12px 16px;
   width: 100%;
   box-sizing: border-box;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #efeff1;
+  position: relative;
 }
-.pci_icon {
-  font-size: 16px;
-  margin-right: 14px;
-  flex-shrink: 0;
-  padding-top: 2px;
+
+.pci_step_list li::before {
+  counter-increment: pci-counter;
+  content: counter(pci-counter) ". ";
+  font-weight: 800;
+  color: #ffca28;
+  display: inline;
 }
-.pci_item_description {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-.pci_item_title {
+
+.pci_step_list li strong,
+.pci_error_list li strong {
+  display: inline;
   font-size: 11px;
   font-weight: 700;
   color: #a1a1aa;
   text-transform: uppercase;
+  margin-bottom: 2px;
 }
-.pci_item_text {
-  font-size: 13px;
-  line-height: 1.45;
-  color: #efeff1;
+
+.pci_step_list li span,
+.pci_error_list li span {
+  display: block;
 }
-.pci_highlight {
+
+.pci_accent_text {
+  color: #ffca28;
+  font-weight: 700;
+}
+
+.pci_step_list code,
+.pci_error_list code {
   color: #3b82f6;
   font-weight: 600;
-}
-.pci_status_accent {
-  color: #ffca28;
-  font-weight: 800;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: monospace;
 }

@@ -1,36 +1,25 @@
-import Button from '../Button/Button';
+import Button from "../Button/Button";
+import { PciButtonType } from "../Button/Button.config";
 
-const IIO_CONFIG = {
-  gen_2: {
-    icon: '⚠️',
-    text: <><b>Gen 2</b> может потребоваться для стабильности старых устройств.</>,
-  },
-  gen_3: {
-    icon: '🚀',
-    text: <><b>Gen 3</b> рекомендуется для современных видеокарт и NVMe.</>,
-  },
-} as const;
-
-const GENS = ['gen_2', 'gen_3'] as const;
-
-const IIOTools = ({ state, update, styles: s }: any) => {
+const IIOTools = ({ state, setParam, styles: s }: any) => {
   const { pcieGen } = state;
-  const currentInfo = IIO_CONFIG[pcieGen as keyof typeof IIO_CONFIG];
+
+  const renderButton = (type: PciButtonType) => (
+    <Button
+      type={type}
+      isActive={pcieGen === type}
+      onClick={() => setParam("pcieGen", type)}
+      className={s.tools_button}
+    />
+  );
 
   return (
     <div className={s.tools_container}>
       <div className={s.tools_label}>ПОРТЫ PCI-E:</div>
-      
+
       <div className={s.btn_group}>
-        {GENS.map((gen) => (
-          <Button
-            key={gen}
-            type={gen}
-            isActive={pcieGen === gen}
-            onClick={() => update({ pcieGen: gen })}
-            className={s.tools_button}
-          />
-        ))}
+        {renderButton("gen_2")}
+        {renderButton("gen_3")}
       </div>
 
       <div className={s.tools_item}>
@@ -40,10 +29,21 @@ const IIOTools = ({ state, update, styles: s }: any) => {
         </p>
       </div>
 
-      {currentInfo && (
+      {pcieGen === "gen_2" && (
         <div className={s.tools_item}>
-          <span className={s.tools_icon}>{currentInfo.icon}</span>
-          <p className={s.tools_text}>{currentInfo.text}</p>
+          <span className={s.tools_icon}>⚠️</span>
+          <p className={s.tools_text}>
+            <b>Gen 2</b> может потребоваться для стабильности старых устройств.
+          </p>
+        </div>
+      )}
+
+      {pcieGen === "gen_3" && (
+        <div className={s.tools_item}>
+          <span className={s.tools_icon}>🚀</span>
+          <p className={s.tools_text}>
+            <b>Gen 3</b> рекомендуется для современных видеокарт и NVMe.
+          </p>
         </div>
       )}
     </div>
