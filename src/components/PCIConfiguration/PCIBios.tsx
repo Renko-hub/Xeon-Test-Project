@@ -1,9 +1,10 @@
 const PCIBios = () => ({
-  title: 'PCI SUBSYSTEM SETTINGS',
-  path: 'Advanced > PCI Subsystem Setting',
+  title: "PCI SUBSYSTEM SETTINGS",
+  path: "Advanced > PCI Subsystem Setting",
   content: [
-    { text_left: 'Above 4G Decoding', text_right: 'Enabled' },
-    { text_left: 'Re-Size BAR Support', text_right: 'Enabled' },
+    { text_left: "CSM Support", text_right: "Disable" },
+    { text_left: "Above 4G Decoding", text_right: "Enabled" },
+    { text_left: "Re-Size BAR Support", text_right: "Enabled" },
   ],
 });
 

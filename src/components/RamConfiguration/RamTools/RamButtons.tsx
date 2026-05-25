@@ -1,17 +1,14 @@
-import React from "react";
 import Button from "../../Button/Button";
 import { PROFILE_PRESETS } from "../data/memoryPresets";
 import { AVAILABLE_SLOTS } from "../data/ramData";
 
 const RamButtons = {
-  Board: ({ state, setParam, styles: s }) => {
-    const { boardType } = state;
-
-    const renderButton = (type) => (
+  Board: ({ state, setParam, styles: s }: any) => {
+    const renderButton = (type: string) => (
       <Button
         key={type}
         type={type}
-        isActive={boardType === type}
+        isActive={state.boardType === type}
         onClick={() => setParam("boardType", type)}
         className={s.tools_button}
       />
@@ -25,14 +22,12 @@ const RamButtons = {
     );
   },
 
-  Gen: ({ state, setParam, styles: s }) => {
-    const { gen } = state;
-
-    const renderButton = (type) => (
+  Gen: ({ state, setParam, styles: s }: any) => {
+    const renderButton = (type: string) => (
       <Button
         key={type}
         type={type}
-        isActive={gen === type}
+        isActive={state.gen === type}
         onClick={() => setParam("gen", type)}
         className={s.tools_button}
       />
@@ -47,14 +42,12 @@ const RamButtons = {
     );
   },
 
-  Memory: ({ state, setParam, styles: s }) => {
-    const { memoryType, memoryTypes } = state;
-
-    const renderButton = (type) => (
+  Memory: ({ state, setParam, styles: s }: any) => {
+    const renderButton = (type: string) => (
       <Button
         key={type}
         type={type}
-        isActive={memoryType === type}
+        isActive={state.memoryType === type}
         onClick={() => setParam("memoryType", type)}
         className={s.tools_button}
       />
@@ -62,20 +55,18 @@ const RamButtons = {
 
     return (
       <div className={s.btn_group}>
-        {memoryTypes?.desktop && renderButton("desktop")}
-        {memoryTypes?.ecc && renderButton("ecc")}
+        {state.memoryTypes?.desktop && renderButton("desktop")}
+        {state.memoryTypes?.ecc && renderButton("ecc")}
       </div>
     );
   },
 
-  Density: ({ state, setParam, styles: s }) => {
-    const { isDensityHigh } = state;
-
-    const renderButton = (type, targetValue) => (
+  Density: ({ state, setParam, styles: s }: any) => {
+    const renderButton = (type: string, targetValue: boolean) => (
       <Button
         key={type}
         type={type}
-        isActive={isDensityHigh === targetValue}
+        isActive={state.isDensityHigh === targetValue}
         onClick={() => setParam("isDensityHigh", targetValue)}
         className={s.tools_button}
       />
@@ -89,14 +80,12 @@ const RamButtons = {
     );
   },
 
-  Slot: ({ state, setParam, styles: s }) => {
-    const { slotsCount, visibleSlots } = state;
-
-    const renderButton = (num) => (
+  Slot: ({ state, setParam, styles: s }: any) => {
+    const renderButton = (num: number) => (
       <Button
         key={num}
         type={`slots${num}`}
-        isActive={slotsCount === num}
+        isActive={state.slotsCount === num}
         onClick={() => setParam("slotsCount", num)}
         className={s.tools_button}
       />
@@ -104,19 +93,19 @@ const RamButtons = {
 
     return (
       <div className={s.btn_group}>
-        {AVAILABLE_SLOTS.map((num) => visibleSlots?.[num] && renderButton(num))}
+        {AVAILABLE_SLOTS.map(
+          (num) => state.visibleSlots?.[num] && renderButton(num),
+        )}
       </div>
     );
   },
 
-  Preset: ({ state, setParam, styles: s }) => {
-    const { profile } = state;
-
-    const renderButton = (type) => (
+  Preset: ({ state, setParam, styles: s }: any) => {
+    const renderButton = (type: string) => (
       <Button
         key={type}
         type={type}
-        isActive={profile === type}
+        isActive={state.profile === type}
         onClick={() => setParam("profile", type)}
         className={s.tools_button}
       />
@@ -124,7 +113,9 @@ const RamButtons = {
 
     return (
       <div className={s.btn_group}>
-        {PROFILE_PRESETS.map((p) => renderButton(p))}
+        {PROFILE_PRESETS.filter((p) => p !== "ultra" || state.unlocked).map(
+          (p) => renderButton(p),
+        )}
       </div>
     );
   },

@@ -53,4 +53,5 @@ export const PROFILE_PRESETS = [
   "balanced",
   "aggressive",
   "custom",
+  "ultra",
 ] as const;

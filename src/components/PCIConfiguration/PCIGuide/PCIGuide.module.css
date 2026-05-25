@@ -33,15 +33,10 @@
   gap: 8px;
 }
 
-.pci_step_list {
-  counter-reset: pci-counter;
-}
-
 .pci_step_list li,
 .pci_error_list li {
   display: flex;
   flex-direction: column;
-  gap: 4px;
   background: #121212;
   border: 1px solid #1f1f1f;
   border-radius: 4px;
@@ -54,39 +49,56 @@
   position: relative;
 }
 
-.pci_step_list li::before {
-  counter-increment: pci-counter;
-  content: counter(pci-counter) ". ";
-  font-weight: 800;
-  color: #ffca28;
-  display: inline;
+/* Настройка отступов для параграфов внутри списков */
+.pci_step_list li p,
+.pci_error_list li p {
+  margin: 0 0 6px 0;
+  display: block;
 }
 
-.pci_step_list li strong,
+/* Убираем нижний отступ у последнего абзаца в блоке */
+.pci_step_list li p:last-child,
+.pci_error_list li p:last-child {
+  margin-bottom: 0;
+}
+
+/* Крупные жёлтые заголовки с номерами для шагов */
+.pci_step_list li strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffca28;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* Заголовки в блоке ошибок */
 .pci_error_list li strong {
-  display: inline;
+  display: block;
   font-size: 11px;
   font-weight: 700;
   color: #a1a1aa;
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
-.pci_step_list li span,
-.pci_error_list li span {
-  display: block;
-}
-
+/* Акцентный текст предупреждений */
 .pci_accent_text {
   color: #ffca28;
   font-weight: 700;
+  margin-top: 4px;
+  background: rgba(255, 202, 40, 0.05);
+  padding: 6px 10px;
+  border-left: 3px solid #ffca28;
+  border-radius: 2px;
 }
 
+/* Подсветка кода */
 .pci_step_list code,
 .pci_error_list code {
-  color: #3b82f6;
+  color: #60a5fa; /* Сделано чуть ярче для лучшей читаемости на черном фоне */
   font-weight: 600;
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(59, 130, 246, 0.15);
   padding: 1px 4px;
   border-radius: 3px;
   font-family: monospace;

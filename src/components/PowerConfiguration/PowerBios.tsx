@@ -5,7 +5,10 @@ const PowerBios = (state: { powerLevel: string }) => ({
     { text_left: "C2C3TT", text_right: "0" },
     {
       text_left: "Package C State limit",
-      text_right: state.powerLevel === "V2" ? "C0/C1 state" : "C2 state",
+      text_right:
+        state.powerLevel === "V2" || state.powerLevel === "V4"
+          ? "C0/C1 state"
+          : "C2 state",
     },
     {
       text_left: "CPU C3 report",

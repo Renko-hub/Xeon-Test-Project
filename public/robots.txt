@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://renko-hub.github.io/Xeon-Test-Project/

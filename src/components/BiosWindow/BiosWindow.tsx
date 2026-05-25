@@ -21,7 +21,7 @@ const BiosWindow = ({
             className={clsx(
               s.text_right,
               (text_right === "Disabled" || text_right === "Disable") &&
-                s.state_disabled
+                s.state_disabled,
             )}
           >
             [{text_right ?? "N/A"}]
