@@ -29054,16 +29054,20 @@ $RefreshReg$(_c, "PCIConfiguration");
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const PCIBios = ()=>({
-        title: 'PCI SUBSYSTEM SETTINGS',
-        path: 'Advanced > PCI Subsystem Setting',
+        title: "PCI SUBSYSTEM SETTINGS",
+        path: "Advanced > PCI Subsystem Setting",
         content: [
             {
-                text_left: 'Above 4G Decoding',
-                text_right: 'Enabled'
+                text_left: "CSM Support",
+                text_right: "Disable"
             },
             {
-                text_left: 'Re-Size BAR Support',
-                text_right: 'Enabled'
+                text_left: "Above 4G Decoding",
+                text_right: "Enabled"
+            },
+            {
+                text_left: "Re-Size BAR Support",
+                text_right: "Enabled"
             }
         ]
     });
@@ -29394,209 +29398,160 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: "\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F \u041F\u041E \u0411\u0415\u0417\u041E\u041F\u0410\u0421\u041D\u041E\u041C\u0423 \u0412\u041A\u041B\u042E\u0427\u0415\u041D\u0418\u042E RE-SIZE BAR"
                     }, void 0, false, {
                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                        lineNumber: 7,
+                        lineNumber: 6,
                         columnNumber: 7
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ol", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pciguideModuleCssDefault.default).pci_step_list,
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        children: "\u0412\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 4G Decoding:"
+                                        children: "1. \u0412\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 4G Decoding:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 13,
+                                        lineNumber: 12,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: [
-                                            "\u0421\u043D\u0430\u0447\u0430\u043B\u0430 \u043F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432 ",
+                                            "\u0421\u043D\u0430\u0447\u0430\u043B\u0430 \u043F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432 \u043C\u0435\u043D\u044E",
+                                            " ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Advanced \u2192 PCI Subsystem Settings"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
                                                 lineNumber: 15,
-                                                columnNumber: 33
+                                                columnNumber: 13
                                             }, undefined),
+                                            ". \u0412\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440",
                                             " ",
-                                            "(\u0438\u043B\u0438 \u0432 \u0441\u043A\u0440\u044B\u0442\u044B\u0439 \u0440\u0430\u0437\u0434\u0435\u043B ",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
-                                                children: "IntelRCSetup \u2192 IIO Configuration"
-                                            }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 16,
-                                                columnNumber: 35
-                                            }, undefined),
-                                            ")."
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 14,
-                                        columnNumber: 11
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: [
-                                            "\u0412\u043A\u043B\u044E\u0447\u0438\u0442\u0435 ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Above 4G Decoding"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 20,
-                                                columnNumber: 22
+                                                lineNumber: 16,
+                                                columnNumber: 13
                                             }, undefined),
-                                            ". \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u041F\u041A."
+                                            ". \u041E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u041F\u041A, \u0447\u0442\u043E\u0431\u044B \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 19,
+                                        lineNumber: 13,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 12,
+                                lineNumber: 11,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        children: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 UEFI \u0440\u0435\u0436\u0438\u043C\u0430 \u0434\u043B\u044F \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432:"
+                                        children: "2. \u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 UEFI \u0440\u0435\u0436\u0438\u043C\u0430 \u0434\u043B\u044F \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 25,
+                                        lineNumber: 22,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: [
-                                            "\u041F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432 ",
+                                            "\u041F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0432 \u043C\u0435\u043D\u044E ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Advanced \u2192 CSM Configuration"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 27,
-                                                columnNumber: 25
+                                                lineNumber: 24,
+                                                columnNumber: 30
                                             }, undefined),
-                                            "."
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 26,
-                                        columnNumber: 11
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: [
-                                            "\u041F\u0435\u0440\u0435\u0432\u0435\u0434\u0438\u0442\u0435 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u0443 (Video) \u0438 \u0432\u0441\u0435 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430 \u0432 \u0440\u0435\u0436\u0438\u043C ",
+                                            ". \u041F\u0435\u0440\u0435\u0432\u0435\u0434\u0438\u0442\u0435 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u0443 (Video) \u0438 \u0432\u0441\u0435 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435 physical-\u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430 \u0432 \u0440\u0435\u0436\u0438\u043C ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "UEFI"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 31,
-                                                columnNumber: 21
+                                                lineNumber: 26,
+                                                columnNumber: 19
                                             }, undefined),
-                                            "."
+                                            ". \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0438 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u043F\u0440\u043E\u043C\u0435\u0436\u0443\u0442\u043E\u0447\u043D\u0443\u044E \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0443, \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 29,
-                                        columnNumber: 11
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: "\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0438 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u043F\u0440\u043E\u043C\u0435\u0436\u0443\u0442\u043E\u0447\u043D\u0443\u044E \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0443 BIOS, \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C."
-                                    }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 33,
+                                        lineNumber: 23,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 24,
+                                lineNumber: 21,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        children: "\u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM Support:"
+                                        children: "3. \u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM Support:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 32,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: [
                                             "\u0415\u0441\u043B\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u0441\u0442\u0430\u0440\u0442\u0443\u0435\u0442 \u0438 \u043F\u043E\u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u0438\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435, \u0442\u043E \u0441\u043D\u043E\u0432\u0430 \u0437\u0430\u0439\u0434\u0438\u0442\u0435 \u0432 \u043C\u0435\u043D\u044E ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Advanced \u2192 CSM Configuration"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 42,
+                                                lineNumber: 35,
                                                 columnNumber: 18
                                             }, undefined),
-                                            "."
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 40,
-                                        columnNumber: 11
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: [
-                                            "\u0422\u0435\u043F\u0435\u0440\u044C \u043C\u043E\u0436\u043D\u043E \u043F\u0435\u0440\u0435\u0432\u0435\u0441\u0442\u0438 ",
+                                            ". \u0422\u0435\u043F\u0435\u0440\u044C \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u043F\u0435\u0440\u0435\u0432\u0435\u0441\u0442\u0438 ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "CSM Support"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 45,
-                                                columnNumber: 36
+                                                lineNumber: 36,
+                                                columnNumber: 33
                                             }, undefined),
                                             " \u0432 \u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435",
-                                            " ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Disabled"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 46,
+                                                lineNumber: 37,
                                                 columnNumber: 13
                                             }, undefined),
-                                            "."
+                                            ". \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u041F\u041A."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 44,
+                                        lineNumber: 33,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_accent_text,
-                                        children: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435: \u041F\u0440\u044F\u043C\u043E\u0435 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM \u0431\u0435\u0437 \u043F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0430 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432 \u0432 UEFI \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0438 \u043B\u0438\u0431\u043E \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043E \u0438 \u0432\u044B\u0434\u0430\u0451\u0442 \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0435\u043D\u0438\u0435 \u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0441\u0442\u0438 \u0432\u043A\u043E\u044E\u0447\u0438\u0442\u044C UEFI \u0434\u043B\u044F Video \u0434\u0430\u0436\u0435 \u0435\u0441\u043B\u0438 \u0432\u044B \u0443\u0436\u0435 \u0432\u043A\u043B\u044E\u0447\u0438\u043B\u0438 UEFI, \u043B\u0438\u0431\u043E \u043F\u0440\u0438\u0432\u043E\u0434\u0438\u0442 \u043A \u0447\u0435\u0440\u043D\u043E\u043C\u0443 \u044D\u043A\u0440\u0430\u043D\u0443."
+                                        children: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435: \u041F\u0440\u044F\u043C\u043E\u0435 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM \u0431\u0435\u0437 \u043F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0430 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432 \u0432 UEFI \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0438 \u043B\u0438\u0431\u043E \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043E \u0441\u0438\u0441\u0442\u0435\u043C\u043E\u0439 \u0438 \u0432\u044B\u0434\u0430\u0451\u0442 \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0435\u043D\u0438\u0435 \u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0441\u0442\u0438 \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u044C UEFI \u0434\u043B\u044F Video (\u0434\u0430\u0436\u0435 \u0435\u0441\u043B\u0438 \u0432\u044B \u0443\u0436\u0435 \u0432\u043A\u043B\u044E\u0447\u0438\u043B\u0438 UEFI), \u043B\u0438\u0431\u043E \u043F\u0440\u0438\u0432\u043E\u0434\u0438\u0442 \u043A \u0447\u0435\u0440\u043D\u043E\u043C\u0443 \u044D\u043A\u0440\u0430\u043D\u0443."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 48,
-                                        columnNumber: 11
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: "\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u041F\u041A."
-                                    }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 54,
+                                        lineNumber: 39,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 38,
+                                lineNumber: 31,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        children: "\u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u0440\u0430\u0437\u043C\u0435\u0442\u043A\u0438 \u0434\u0438\u0441\u043A\u0430:"
+                                        children: "4. \u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u0440\u0430\u0437\u043C\u0435\u0442\u043A\u0438 \u0434\u0438\u0441\u043A\u0430:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 48,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: [
                                             "\u0423\u0431\u0435\u0434\u0438\u0442\u0435\u0441\u044C, \u0447\u0442\u043E Windows \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0430 \u043D\u0430 \u0434\u0438\u0441\u043A \u0441 \u0440\u0430\u0437\u043C\u0435\u0442\u043A\u043E\u0439",
                                             " ",
@@ -29604,66 +29559,57 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "GPT"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 60,
+                                                lineNumber: 51,
                                                 columnNumber: 13
                                             }, undefined),
-                                            " \u0415\u0441\u043B\u0438 Windows \u0438\u0437\u043D\u0430\u0447\u0430\u043B\u044C\u043D\u043E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0432 GPT \u0438 \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u043E UEFI, \u0442\u043E UEFI \u043C\u043E\u0436\u043D\u043E \u0432\u044B\u0441\u0442\u0430\u043B\u0432\u044F\u0442\u044C \u0441\u0440\u0430\u0437\u0443 \u0434\u043B\u044F \u0434\u0440\u0443\u0433\u0438\u0445 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u043E\u0432."
+                                            ". \u0415\u0441\u043B\u0438 Windows \u0438\u0437\u043D\u0430\u0447\u0430\u043B\u044C\u043D\u043E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0432 GPT \u0438 \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u043E UEFI, \u0442\u043E UEFI \u043C\u043E\u0436\u043D\u043E \u0432\u044B\u0441\u0442\u0430\u0432\u043B\u044F\u0442\u044C \u0441\u0440\u0430\u0437\u0443 \u0434\u043B\u044F \u0434\u0440\u0443\u0433\u0438\u0445 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u043E\u0432."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 49,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: [
-                                            "\u041F\u0440\u0438 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0438 MBR \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u043A\u043E\u043D\u0432\u0435\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0434\u0438\u0441\u043A \u0447\u0435\u0440\u0435\u0437 \u0443\u0442\u0438\u043B\u0438\u0442\u0443",
-                                            " ",
+                                            "\u041F\u0440\u0438 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0438 MBR \u043A\u043E\u043D\u0432\u0435\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0434\u0438\u0441\u043A \u0447\u0435\u0440\u0435\u0437 \u0443\u0442\u0438\u043B\u0438\u0442\u0443",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "mbr2gpt"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 66,
+                                                lineNumber: 57,
                                                 columnNumber: 13
                                             }, undefined),
                                             ", \u0438\u043D\u0430\u0447\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u0435\u0442 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044C\u0441\u044F \u043F\u043E\u0441\u043B\u0435 \u0434\u0435\u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 CSM."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 55,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 56,
+                                lineNumber: 47,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        children: "\u0410\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u044F Re-Size BAR (\u041E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u043B\u044F \u043D\u0435 \u0431\u0440\u0435\u043D\u0434\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442):"
+                                        children: "5. \u0410\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u044F Re-Size BAR (\u041E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u043B\u044F \u043D\u0435\u0431\u0440\u0435\u043D\u0434\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442):"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 71,
+                                        lineNumber: 63,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_accent_text,
-                                        children: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435: \u041D\u0430 90% \u043A\u0438\u0442\u0430\u0439\u0441\u043A\u0438\u0445 \u0438 \u043D\u0435 \u0431\u0440\u0435\u043D\u0434\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442 (X99, X79 \u0438 \u0434\u0440.) \u043F\u0443\u043D\u043A\u0442 \xabRe-Size BAR\xbb \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0432 \u043C\u0435\u043D\u044E BIOS \u0434\u0430\u0436\u0435 \u043F\u043E\u0441\u043B\u0435 \u0443\u0441\u043F\u0435\u0448\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F 4G Decoding!"
-                                    }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 74,
-                                        columnNumber: 11
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                         children: [
-                                            "\u0412 \u044D\u0442\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u0441\u043A\u0430\u0447\u0430\u0442\u044C \u0443\u0442\u0438\u043B\u0438\u0442\u0443",
-                                            " ",
+                                            "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435: \u041D\u0430 90% \u043A\u0438\u0442\u0430\u0439\u0441\u043A\u0438\u0445 \u0438 \u043D\u0435\u0431\u0440\u0435\u043D\u0434\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442 (X99, X79 \u0438 \u0434\u0440.) \u043F\u0443\u043D\u043A\u0442 \xabRe-Size BAR\xbb \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0432 \u043C\u0435\u043D\u044E BIOS \u0434\u0430\u0436\u0435 \u043F\u043E\u0441\u043B\u0435 \u0443\u0441\u043F\u0435\u0448\u043D\u043E\u0433\u043E \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F 4G Decoding! \u0412 \u044D\u0442\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u0441\u043A\u0430\u0447\u0430\u0442\u044C \u0443\u0442\u0438\u043B\u0438\u0442\u0443",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "ReBarState/NvStrapsReBar"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 81,
+                                                lineNumber: 70,
                                                 columnNumber: 13
                                             }, undefined),
                                             " \u0441 GitHub, \u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C \u0435\u0451 \u043E\u0442 \u0438\u043C\u0435\u043D\u0438 \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440\u0430, \u0432\u0432\u0435\u0441\u0442\u0438 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 ",
@@ -29671,46 +29617,53 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "32"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 82,
+                                                lineNumber: 71,
                                                 columnNumber: 51
                                             }, undefined),
                                             " \u0434\u043B\u044F \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u043C\u0435\u0440\u0430 \u0431\u0443\u0444\u0435\u0440\u0430 \u0438 \u043D\u0430\u0436\u0430\u0442\u044C Enter."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 66,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 70,
+                                lineNumber: 62,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        children: "\u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u0438 \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435 vBIOS \u043A\u0430\u0440\u0442\u044B:"
+                                        children: "6. \u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u0438 \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435 vBIOS \u043A\u0430\u0440\u0442\u044B:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 87,
+                                        lineNumber: 77,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: "\u0417\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u0435 GPU-Z \u0438 \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0441\u0442\u0430\u0442\u0443\u0441 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0435 Re-Size BAR."
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "\u0417\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u0435 GPU-Z \u0438 \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0441\u0442\u0430\u0442\u0443\u0441 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0435 Re-Size BAR. \u0415\u0441\u043B\u0438 \u0444\u0443\u043D\u043A\u0446\u0438\u044F \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430, \u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0443 (vBIOS) \u0441\u0430\u043C\u043E\u0439 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 78,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: "\u0415\u0441\u043B\u0438 \u0444\u0443\u043D\u043A\u0446\u0438\u044F \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430, \u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0443 (vBIOS) \u0441\u0430\u043C\u043E\u0439 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B. \u041F\u0440\u0438 \u0440\u0443\u0447\u043D\u043E\u0439 \u043C\u043E\u0434\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0434\u0430\u043C\u043F\u0430 BIOS \u0438\u043B\u0438 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0435 vBIOS \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B \u043F\u0440\u0438\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0440\u0438\u0441\u043A \u043E\u043A\u0438\u0440\u043F\u0438\u0447\u0438\u0442\u044C \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E \u2014 \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0435\u0433\u043E \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\u0442\u043E\u0440\u043E\u043C. \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0434\u0430\u043C\u043F \u043D\u0430 \u0441\u043B\u0443\u0447\u0430\u0439 \u043F\u0440\u043E\u0431\u043B\u0435\u043C \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438. \u041F\u0440\u043E\u0448\u0438\u0432\u043A\u0443 \u043C\u043E\u0436\u043D\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C \u0447\u0435\u0440\u0435\u0437 CMD. \u0418\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044E \u0434\u043B\u044F \u0412\u0430\u0448\u0435\u0439 \u043A\u0430\u0440\u0442\u044B \u043C\u043E\u0436\u043D\u043E \u043D\u0430\u0439\u0442\u0438 \u0432 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0435 (\u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C \u043D\u0430 \u0444\u043E\u0440\u043C\u0443\u043C\u0430\u0445). \u041C\u043D\u043E\u0433\u0438\u0435 \u0444\u0438\u0440\u043C\u0435\u043D\u043D\u044B\u0435 \u0443\u0442\u0438\u043B\u0438\u0442\u044B \u043E\u0442 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F \u043A\u0430\u0440\u0442\u044B \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \xabRe-Size BAR\xbb \u0438 \u0432\u0435\u0440\u0441\u0438\u044E \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438 vBIOS."
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "\u041F\u0440\u0438 \u0440\u0443\u0447\u043D\u043E\u0439 \u043C\u043E\u0434\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0434\u0430\u043C\u043F\u0430 BIOS \u0438\u043B\u0438 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0435 vBIOS \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B \u043F\u0440\u0438\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0440\u0438\u0441\u043A \u043E\u043A\u0438\u0440\u043F\u0438\u0447\u0438\u0442\u044C \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E \u2014 \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0435\u0433\u043E \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\u0442\u043E\u0440\u043E\u043C. \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0434\u0430\u043C\u043F \u043D\u0430 \u0441\u043B\u0443\u0447\u0430\u0439 \u043F\u0440\u043E\u0431\u043B\u0435\u043C \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 83,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "\u041F\u0440\u043E\u0448\u0438\u0432\u043A\u0443 \u043C\u043E\u0436\u043D\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C \u0447\u0435\u0440\u0435\u0437 CMD. \u0418\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044E \u0434\u043B\u044F \u0412\u0430\u0448\u0435\u0439 \u043A\u0430\u0440\u0442\u044B \u043C\u043E\u0436\u043D\u043E \u043D\u0430\u0439\u0442\u0438 \u0432 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0435 (\u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C \u043D\u0430 \u0444\u043E\u0440\u0443\u043C\u0430\u0445). \u041C\u043D\u043E\u0433\u0438\u0435 \u0444\u0438\u0440\u043C\u0435\u043D\u043D\u044B\u0435 \u0443\u0442\u0438\u043B\u0438\u0442\u044B \u043E\u0442 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F \u043A\u0430\u0440\u0442\u044B \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \xabRe-Size BAR\xbb \u0438 \u0432\u0435\u0440\u0441\u0438\u044E \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438 vBIOS."
+                                    }, void 0, false, {
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        lineNumber: 89,
+                                        columnNumber: 11
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: [
                                             "\u0415\u0441\u043B\u0438 GPU-Z \u0432\u0441\u0451 \u0440\u0430\u0432\u043D\u043E \u0440\u0430\u043F\u043E\u0440\u0442\u0443\u0435\u0442 \u043E\u0431 \u043E\u0448\u0438\u0431\u043A\u0435, \u043F\u0440\u0438\u043D\u0443\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0430\u043A\u0442\u0438\u0432\u0438\u0440\u0443\u0439\u0442\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0443 \u0432 \u0434\u0440\u0430\u0439\u0432\u0435\u0440\u0435 \u0447\u0435\u0440\u0435\u0437 \u0443\u0442\u0438\u043B\u0438\u0442\u0443",
                                             " ",
@@ -29718,41 +29671,40 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "NVIDIA Profile Inspector"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 98,
                                                 columnNumber: 13
                                             }, undefined),
-                                            " (\u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440",
-                                            " ",
+                                            "(\u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440 ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "rBAR - Feature"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 106,
-                                                columnNumber: 13
+                                                lineNumber: 99,
+                                                columnNumber: 23
                                             }, undefined),
                                             " \u0432 \u0441\u0435\u043A\u0446\u0438\u0438 Common)."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 95,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 86,
+                                lineNumber: 76,
                                 columnNumber: 9
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                        lineNumber: 11,
+                        lineNumber: 10,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                lineNumber: 6,
+                lineNumber: 5,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
@@ -29763,7 +29715,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: "\u0423\u0421\u0422\u0420\u0410\u041D\u0415\u041D\u0418\u0415 \u041E\u0428\u0418\u0411\u041E\u041A \u0418\u0417 GPU-Z"
                     }, void 0, false, {
                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                        lineNumber: 113,
+                        lineNumber: 106,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -29775,11 +29727,33 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         children: "UEFI BOOT REQUIRED / CSM ENABLED:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        lineNumber: 109,
+                                        columnNumber: 11
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "BIOS \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0432 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0435\u043C \u0440\u0435\u0436\u0438\u043C\u0435 Legacy. \u041E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u0435 CSM Support \u0432 \u043C\u0435\u043D\u044E Boot \u0438\u043B\u0438 Advanced."
+                                    }, void 0, false, {
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        lineNumber: 110,
+                                        columnNumber: 11
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                lineNumber: 108,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        children: "BOOT FROM GPT: NO:"
+                                    }, void 0, false, {
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
                                         lineNumber: 116,
                                         columnNumber: 11
                                     }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: "BIOS \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0432 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0435\u043C \u0440\u0435\u0436\u0438\u043C\u0435 Legacy. \u041E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u0435 CSM Support \u0432 \u043C\u0435\u043D\u044E Boot \u0438\u043B\u0438 Advanced."
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "\u041E\u0421 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0430 \u043D\u0430 MBR-\u0434\u0438\u0441\u043A\u0435. \u0421\u0440\u043E\u0447\u043D\u043E \u043F\u0435\u0440\u0435\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u0430\u043A\u043E\u043F\u0438\u0442\u0435\u043B\u044C \u0432 GPT \u0431\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u0438 \u0434\u0430\u043D\u043D\u044B\u0445 \u0447\u0435\u0440\u0435\u0437 mbr2gpt."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
                                         lineNumber: 117,
@@ -29790,45 +29764,23 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
                                 lineNumber: 115,
                                 columnNumber: 9
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        children: "BOOT FROM GPT: NO:"
-                                    }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 123,
-                                        columnNumber: 11
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: "\u041E\u0421 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0430 \u043D\u0430 MBR-\u0434\u0438\u0441\u043A\u0435. \u0421\u0440\u043E\u0447\u043D\u043E \u043F\u0435\u0440\u0435\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u0430\u043A\u043E\u043F\u0438\u0442\u0435\u043B\u044C \u0432 GPT \u0431\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u0438 \u0434\u0430\u043D\u043D\u044B\u0445 \u0447\u0435\u0440\u0435\u0437 mbr2gpt."
-                                    }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 124,
-                                        columnNumber: 11
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 122,
-                                columnNumber: 9
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                        lineNumber: 114,
+                        lineNumber: 107,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                lineNumber: 112,
+                lineNumber: 105,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-        lineNumber: 5,
+        lineNumber: 4,
         columnNumber: 3
     }, undefined);
 _c = PCIGuide;
@@ -29841,7 +29793,7 @@ $RefreshReg$(_c, "PCIGuide");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./PCIGuide.module.css":"bhmGB","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"bhmGB":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./PCIGuide.module.css":"bhmGB"}],"bhmGB":[function(require,module,exports,__globalThis) {
 module.exports["pci_accent_text"] = `Kn_sKG_pci_accent_text`;
 module.exports["pci_container"] = `Kn_sKG_pci_container`;
 module.exports["pci_error_list"] = `Kn_sKG_pci_error_list`;
@@ -29914,7 +29866,7 @@ const PowerBios = (state)=>({
             },
             {
                 text_left: "Package C State limit",
-                text_right: state.powerLevel === "V2" ? "C0/C1 state" : "C2 state"
+                text_right: state.powerLevel === "V2" || state.powerLevel === "V4" ? "C0/C1 state" : "C2 state"
             },
             {
                 text_left: "CPU C3 report",
@@ -30572,43 +30524,41 @@ const useUltraLogic = (state, update)=>{
     const [isOpen, setIsOpen] = (0, _react.useState)(false);
     const clicks = (0, _react.useRef)(0);
     const lastClickTime = (0, _react.useRef)(0);
-    const timeoutRef = (0, _react.useRef)(null);
+    const timeoutRef = (0, _react.useRef)(null); // Возвращаем number для браузерного window.setTimeout
     const close = (0, _react.useCallback)((shouldUnlock = false)=>{
         clicks.current = 0;
         setIsOpen(false);
-        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
         update({
             active: false,
             unlocked: shouldUnlock || state.unlocked,
-            ...shouldUnlock ? {
+            ...shouldUnlock && {
                 profile: "ultra",
                 lastChangedKey: "profile"
-            } : {}
+            }
         });
     }, [
         state.unlocked,
         update
     ]);
     (0, _react.useEffect)(()=>{
-        if (isOpen) {
-            timeoutRef.current = window.setTimeout(()=>close(false), 7000);
-            return ()=>{
-                if (timeoutRef.current) clearTimeout(timeoutRef.current);
-            };
-        }
+        if (!isOpen) return;
+        timeoutRef.current = window.setTimeout(()=>close(false), 7000);
+        return ()=>{
+            if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
+        };
     }, [
         isOpen,
         close
     ]);
-    const handleTrigger = (e)=>{
+    const handleTrigger = (0, _react.useCallback)((e)=>{
         e.stopPropagation();
         window.getSelection()?.removeAllRanges();
         if (state.unlocked || isOpen) return;
         const now = Date.now();
         if (now - lastClickTime.current > 2000) clicks.current = 0;
         lastClickTime.current = now;
-        clicks.current++;
-        if (clicks.current >= 10) {
+        if (++clicks.current >= 10) {
             window.navigator?.vibrate?.(200);
             setIsOpen(true);
             update({
@@ -30616,7 +30566,11 @@ const useUltraLogic = (state, update)=>{
             });
             clicks.current = 0;
         }
-    };
+    }, [
+        state.unlocked,
+        isOpen,
+        update
+    ]);
     return {
         isOpen,
         close,
@@ -31318,7 +31272,8 @@ const PROFILE_PRESETS = [
     "safe",
     "balanced",
     "aggressive",
-    "custom"
+    "custom",
+    "ultra"
 ];
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hCsdk":[function(require,module,exports,__globalThis) {
@@ -31330,9 +31285,9 @@ const PrimaryTimings = (state, frequencyKey)=>{
     const { profile, ramSize, slotsCount, isDensityHigh, boardType, memoryType, ramType, gen, tCL: sCL, tRCD: sRCD, tRP: sRP } = state;
     const isDdr4 = ramType === "DDR4";
     const isV4 = gen === "V4";
-    // Расчет нагрузки на контроллер памяти через быстрые битовые сдвиги
-    const loadScore = (Math.floor(ramSize / 32) << 1) + (slotsCount > 2 ? 1 : 0) + (isDensityHigh ? 2 : 0) + (boardType === "matx" ? 1 : 0) + (memoryType === "ecc" ? 1 : 0);
-    // Ветка Ультра-профиля
+    // 1. Расчет нагрузки на контроллер памяти
+    const loadScore = Math.floor(ramSize / 32) * 2 + (slotsCount > 2 ? 1 : 0) + (isDensityHigh ? 2 : 0) + (boardType === "matx" ? 1 : 0) + (memoryType === "ecc" ? 1 : 0);
+    // 2. Расчет для Ультра-профиля
     if (profile === "ultra") {
         const divider = isV4 ? 4 : isDdr4 ? 2 : 3;
         const baseUltra = isV4 ? 11 : isDdr4 ? 12 : (0, _memoryPresets.ULTRA_PRESET).tCL;
@@ -31341,24 +31296,22 @@ const PrimaryTimings = (state, frequencyKey)=>{
             tCL: timing,
             tRCD: timing,
             tRP: timing,
-            // tRAS для ультра поджимается жестче: tCL + tRCD (классический разгон)
             tRAS: (0, _ramFrequency.toEven)(timing * 2),
             loadScore
         };
     }
-    // Ветка стандартных и кастомных профилей
+    // 3. Расчет для Стандартных и Кастомных профилей
     const isCustom = profile === "custom";
-    const preset = (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey][isCustom ? "safe" : profile] || (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey].safe;
+    const preset = (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.[isCustom ? "safe" : profile] || (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.safe;
     const v4Offset = isV4 && frequencyKey >= 2133 ? 2 : 0;
     const calcTiming = (customVal, presetVal)=>{
-        if (isCustom && customVal) return Number(customVal);
-        const val = Number(presetVal) - v4Offset;
+        if (isCustom && customVal) return +customVal;
+        const val = +presetVal - v4Offset;
         return isDdr4 ? Math.max(val, 11) : val;
     };
-    const tCL = calcTiming(sCL, preset.tCL);
-    const tRCD = calcTiming(sRCD, preset.tRCD);
-    const tRP = calcTiming(sRP, preset.tRP);
-    // Классическая безопасная формула JEDEC для tRAS: tCL + tRCD + запас
+    const tCL = calcTiming(sCL, preset?.tCL);
+    const tRCD = calcTiming(sRCD, preset?.tRCD);
+    const tRP = calcTiming(sRP, preset?.tRP);
     const tRAS = (0, _ramFrequency.toEven)(tCL + tRCD + (gen === "V2" ? 4 : 2));
     return {
         tCL,
@@ -31384,116 +31337,77 @@ const SPECIAL_LIMITS = {
     aggressive: (0, _memoryPresets.SPECIAL_PRESETS).ultraLimit.tRFC
 };
 const SubTimings = (state, primaries, frequencyKey)=>{
-    const { profile, ramSize, slotsCount, isDensityHigh, memoryType, boardType, ramType, isSpecialConfig, gen } = state;
-    const { tRCD, tRP } = primaries;
+    const { profile, ramSize, slotsCount, isDensityHigh, memoryType, boardType, ramType, isSpecialConfig, gen = "V3" } = state;
     const isDdr4 = ramType === "DDR4";
-    const isCustom = profile === "custom";
-    const profileKey = isCustom ? "safe" : profile;
-    const generation = gen || "V3";
-    // ТОЧНОЕ ОПРЕДЕЛЕНИЕ ТЯЖЕЛЫХ ПЛАШЕК И ECC
-    // Защита: если slotsCount передан неверно или равен 0, берем минимум 1 слот
+    const profileKey = profile === "custom" ? "safe" : profile;
+    // 1. ОПРЕДЕЛЕНИЕ ТЯЖЕЛЫХ ПЛАШЕК И ECC
     const activeSlots = Math.max(1, slotsCount);
-    const estimatedStickSize = ramSize / activeSlots;
-    // Модуль считается тяжелым (16 ГБ+), если расчетный размер планки >= 12 ГБ 
-    // (с учетом нетипичных конфигураций вроде 3 планок или трехканального режима)
-    const isHighCapacity = estimatedStickSize >= 12 || ramSize >= 32;
+    const isHighCapacity = ramSize / activeSlots >= 12 || ramSize >= 32;
     const isEcc = memoryType === "ecc";
-    // 1. БАЗОВЫЙ РАСЧЕТ ТАЙМИНГОВ ПО ПРОФИЛЯМ (Включая tRRD, tRTP, tWTR)
-    let tFAW = 24;
-    let tWR = 16;
-    let tRRD = isDdr4 ? 4 : 5;
-    let tRTP = 6;
-    let tWTR = isDdr4 ? 8 : 7;
-    if (profile === "ultra") {
-        tFAW = isDdr4 ? 16 : 20;
-        tWR = 10;
-        tRRD = isDdr4 ? 4 : 4;
-        tRTP = 5;
-        tWTR = isDdr4 ? 6 : 5;
-    } else if (profile === "aggressive") {
-        tFAW = isDdr4 ? 20 : 24;
-        tWR = 12;
-        tRRD = isDdr4 ? 4 : 5;
-        tRTP = 6;
-        tWTR = isDdr4 ? 7 : 6;
-    } else if (profile === "balanced") {
-        tFAW = isDdr4 ? 24 : 26;
-        tWR = 14;
-        tRRD = isDdr4 ? 5 : 5;
-        tRTP = 7;
-        tWTR = isDdr4 ? 8 : 7;
-    } else {
-        // Режимы safe и custom
-        const freq = Number(frequencyKey);
-        if (isDdr4) {
-            tFAW = freq >= 2400 ? 28 : freq >= 2133 ? 24 : 20;
-            tWR = freq >= 2400 ? 18 : 16;
-        } else {
-            tFAW = freq >= 1866 ? 32 : freq >= 1600 ? 26 : 24;
-            tWR = freq >= 1866 ? 16 : 14;
+    // 2. БАЗОВЫЙ РАСЧЕТ ТАЙМИНГОВ ПО ПРОФИЛЯМ
+    const freq = Number(frequencyKey);
+    const profileConfigs = {
+        ultra: {
+            tFAW: isDdr4 ? 16 : 20,
+            tWR: 10,
+            tRRD: 4,
+            tRTP: 5,
+            tWTR: isDdr4 ? 6 : 5
+        },
+        aggressive: {
+            tFAW: isDdr4 ? 20 : 24,
+            tWR: 12,
+            tRRD: isDdr4 ? 4 : 5,
+            tRTP: 6,
+            tWTR: isDdr4 ? 7 : 6
+        },
+        balanced: {
+            tFAW: isDdr4 ? 24 : 26,
+            tWR: 14,
+            tRRD: 5,
+            tRTP: 7,
+            tWTR: isDdr4 ? 8 : 7
+        },
+        default: {
+            tFAW: isDdr4 ? freq >= 2400 ? 28 : freq >= 2133 ? 24 : 20 : freq >= 1866 ? 32 : freq >= 1600 ? 26 : 24,
+            tWR: isDdr4 ? freq >= 2400 ? 18 : 16 : freq >= 1866 ? 16 : 14,
+            tRRD: isDdr4 ? 4 : 5,
+            tRTP: 6,
+            tWTR: isDdr4 ? 8 : 7
         }
-    }
-    // 2. ДИНАМИЧЕСКИЕ ШТРАФЫ ДЛЯ ВСЕХ ВТОРИЧНЫХ ТАЙМИНГОВ (ECC + Модули 16GB+)
+    };
+    let { tFAW, tWR, tRRD, tRTP, tWTR } = profileConfigs[profile] || profileConfigs.default;
+    // 3. ДИНАМИЧЕСКИЕ ШТРАФЫ
     if (isHighCapacity) {
-        tFAW += isDdr4 ? 4 : 6; // Двухранговые емкие чипы требуют больших пауз
-        tWR += 2; // Увеличение времени восстановления записи
-        tRRD += 1; // Штраф на задержку между активацией разных банков (Row-to-Row)
-        tWTR += 1; // Штраф на переключение с записи на чтение
+        tFAW += isDdr4 ? 4 : 6;
+        tWR += 2;
+        tRRD += 1;
+        tWTR += 1;
     }
     if (isEcc) {
-        tFAW += 2; // Накладные расходы на логику контроля четности
+        tFAW += 2;
         tWR += isDdr4 ? 2 : 0;
-        tRRD += isDdr4 ? 0 : 1; // DDR3 ECC ощутимо медленнее на шине адреса
-        tRTP += 1; // Дополнительный такт на чтение перед отправкой команды предзаряда
+        tRRD += isDdr4 ? 0 : 1;
+        tRTP += 1;
     }
-    // Обеспечиваем четность для tFAW и tWR согласно стандартам стабильного разгона
     tFAW = (0, _ramFrequency.toEven)(tFAW);
     tWR = (0, _ramFrequency.toEven)(tWR);
-    // 3. ДИНАМИЧЕСКИЙ РАСЧЕТ tREFI
+    // 4. ДИНАМИЧЕСКИЙ РАСЧЕТ tREFI И stabilityBonus
     const tRefiProfile = profile === "ultra" ? "ultra" : profileKey;
-    const tREFI = (0, _memoryPresets.TREFI_TABLE)[tRefiProfile]?.[generation] ?? (0, _memoryPresets.TREFI_TABLE).safe[generation];
-    // 4. РАСЧЕТ stabilityBonus ДЛЯ tRFC
+    const tREFI = (0, _memoryPresets.TREFI_TABLE)[tRefiProfile]?.[gen] ?? (0, _memoryPresets.TREFI_TABLE).safe[gen];
     const stabilityBonus = (Math.floor((ramSize - 8) / 8) * 10 + activeSlots * 12 - 12 + (isDensityHigh ? 48 : 0) + (isEcc ? isDdr4 ? 24 : 40 : -12) + (boardType === "matx" ? 16 : 0)) * (isDdr4 ? 1 : 1.35);
-    // Ветка профиля "ultra"
+    // 5. РАСЧЕТ tRFC И МНОЖИТЕЛЕЙ ГРАНИЦЫ
+    let tRFC, limitMultiplier = 0.92;
     if (profile === "ultra") {
-        const tRFC = (0, _ramFrequency.toEven)((isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET).tRFC) + stabilityBonus * (isDdr4 ? 0.8 : 0.6));
-        return {
-            tRFC,
-            tFAW,
-            tWR,
-            tRRD,
-            tRTP,
-            tWTR,
-            tREFI,
-            tRFC_Values: {
-                current: tRFC,
-                limitValue: (0, _ramFrequency.toEven)(tRFC * 0.9)
-            }
-        };
+        tRFC = (0, _ramFrequency.toEven)((isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET).tRFC) + stabilityBonus * (isDdr4 ? 0.8 : 0.6));
+        limitMultiplier = 0.9;
+    } else if (isSpecialConfig) tRFC = ((0, _memoryPresets.SPECIAL_PRESETS)[profileKey] || (0, _memoryPresets.SPECIAL_PRESETS).safe).tRFC;
+    else {
+        const basePreset = (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.[profileKey] || (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.safe;
+        const defaultBaseRfc = profile === "custom" ? (primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) : basePreset?.tRFC ?? (isDdr4 ? 312 : 240);
+        tRFC = (0, _ramFrequency.toEven)(defaultBaseRfc + stabilityBonus);
     }
-    // Ветка специальной конфигурации "isSpecialConfig"
-    if (isSpecialConfig) {
-        const tRFC = ((0, _memoryPresets.SPECIAL_PRESETS)[profileKey] || (0, _memoryPresets.SPECIAL_PRESETS).safe).tRFC;
-        const limitValue = SPECIAL_LIMITS[profileKey] || (0, _ramFrequency.toEven)(tRFC * 0.92);
-        return {
-            tRFC,
-            tFAW,
-            tWR,
-            tRRD,
-            tRTP,
-            tWTR,
-            tREFI,
-            tRFC_Values: {
-                current: tRFC,
-                limitValue
-            }
-        };
-    }
-    // Базовая ветка стандартных пресетов памяти
-    const basePreset = (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.[profileKey] || (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.safe;
-    const fallbackPresetRfc = isDdr4 ? 312 : 240;
-    const defaultBaseRfc = isCustom ? (tRCD + tRP) * (isDdr4 ? 10 : 8) : basePreset?.tRFC ?? fallbackPresetRfc;
-    const tRFC = (0, _ramFrequency.toEven)(defaultBaseRfc + stabilityBonus);
+    const limitValue = isSpecialConfig && profile !== "ultra" ? SPECIAL_LIMITS[profileKey] || (0, _ramFrequency.toEven)(tRFC * 0.92) : (0, _ramFrequency.toEven)(tRFC * limitMultiplier);
     return {
         tRFC,
         tFAW,
@@ -31504,7 +31418,7 @@ const SubTimings = (state, primaries, frequencyKey)=>{
         tREFI,
         tRFC_Values: {
             current: tRFC,
-            limitValue: (0, _ramFrequency.toEven)(tRFC * 0.92)
+            limitValue
         }
     };
 };
@@ -31882,23 +31796,20 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _button = require("../../Button/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _memoryPresets = require("../data/memoryPresets");
 var _ramData = require("../data/ramData");
 const RamButtons = {
     Board: ({ state, setParam, styles: s })=>{
-        const { boardType } = state;
         const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                 type: type,
-                isActive: boardType === type,
+                isActive: state.boardType === type,
                 onClick: ()=>setParam("boardType", type),
                 className: s.tools_button
             }, type, false, {
                 fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 11,
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31909,20 +31820,19 @@ const RamButtons = {
             ]
         }, void 0, true, {
             fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 21,
+            lineNumber: 18,
             columnNumber: 7
         }, undefined);
     },
     Gen: ({ state, setParam, styles: s })=>{
-        const { gen } = state;
         const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                 type: type,
-                isActive: gen === type,
+                isActive: state.gen === type,
                 onClick: ()=>setParam("gen", type),
                 className: s.tools_button
             }, type, false, {
                 fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 32,
+                lineNumber: 27,
                 columnNumber: 7
             }, undefined);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31934,44 +31844,42 @@ const RamButtons = {
             ]
         }, void 0, true, {
             fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 42,
+            lineNumber: 37,
             columnNumber: 7
         }, undefined);
     },
     Memory: ({ state, setParam, styles: s })=>{
-        const { memoryType, memoryTypes } = state;
         const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                 type: type,
-                isActive: memoryType === type,
+                isActive: state.memoryType === type,
                 onClick: ()=>setParam("memoryType", type),
                 className: s.tools_button
             }, type, false, {
                 fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 54,
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: s.btn_group,
             children: [
-                memoryTypes?.desktop && renderButton("desktop"),
-                memoryTypes?.ecc && renderButton("ecc")
+                state.memoryTypes?.desktop && renderButton("desktop"),
+                state.memoryTypes?.ecc && renderButton("ecc")
             ]
         }, void 0, true, {
             fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 64,
+            lineNumber: 57,
             columnNumber: 7
         }, undefined);
     },
     Density: ({ state, setParam, styles: s })=>{
-        const { isDensityHigh } = state;
         const renderButton = (type, targetValue)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                 type: type,
-                isActive: isDensityHigh === targetValue,
+                isActive: state.isDensityHigh === targetValue,
                 onClick: ()=>setParam("isDensityHigh", targetValue),
                 className: s.tools_button
             }, type, false, {
                 fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 75,
+                lineNumber: 66,
                 columnNumber: 7
             }, undefined);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31982,49 +31890,47 @@ const RamButtons = {
             ]
         }, void 0, true, {
             fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 85,
+            lineNumber: 76,
             columnNumber: 7
         }, undefined);
     },
     Slot: ({ state, setParam, styles: s })=>{
-        const { slotsCount, visibleSlots } = state;
         const renderButton = (num)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                 type: `slots${num}`,
-                isActive: slotsCount === num,
+                isActive: state.slotsCount === num,
                 onClick: ()=>setParam("slotsCount", num),
                 className: s.tools_button
             }, num, false, {
                 fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 96,
+                lineNumber: 85,
                 columnNumber: 7
             }, undefined);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: s.btn_group,
-            children: (0, _ramData.AVAILABLE_SLOTS).map((num)=>visibleSlots?.[num] && renderButton(num))
+            children: (0, _ramData.AVAILABLE_SLOTS).map((num)=>state.visibleSlots?.[num] && renderButton(num))
         }, void 0, false, {
             fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 106,
+            lineNumber: 95,
             columnNumber: 7
         }, undefined);
     },
     Preset: ({ state, setParam, styles: s })=>{
-        const { profile } = state;
         const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
                 type: type,
-                isActive: profile === type,
+                isActive: state.profile === type,
                 onClick: ()=>setParam("profile", type),
                 className: s.tools_button
             }, type, false, {
                 fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 116,
+                lineNumber: 105,
                 columnNumber: 7
             }, undefined);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: s.btn_group,
-            children: (0, _memoryPresets.PROFILE_PRESETS).map((p)=>renderButton(p))
+            children: (0, _memoryPresets.PROFILE_PRESETS).filter((p)=>p !== "ultra" || state.unlocked).map((p)=>renderButton(p))
         }, void 0, false, {
             fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 126,
+            lineNumber: 115,
             columnNumber: 7
         }, undefined);
     }
@@ -32036,7 +31942,7 @@ exports.default = RamButtons;
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../data/memoryPresets":"FGwI4","../data/ramData":"2BRL9","../../Button/Button":"4hbTW"}],"8JnE9":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../data/memoryPresets":"FGwI4","../data/ramData":"2BRL9","../../Button/Button":"4hbTW"}],"8JnE9":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$0d8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$0d8e.init();
 var prevRefreshReg = globalThis.$RefreshReg$;

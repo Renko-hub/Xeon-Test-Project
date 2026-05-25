@@ -509,7 +509,7 @@ img, video {
 .UGBGfW_tools_item {
   align-items: flex-start;
   gap: 10px;
-  margin-top: 0;
+  margin-top: 6px;
   display: flex;
 }
 
@@ -530,7 +530,7 @@ img, video {
 
 .UGBGfW_tools_text {
   color: #cbd5e1;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.35;
 }
 
@@ -659,10 +659,6 @@ img, video {
   display: flex;
 }
 
-.Kn_sKG_pci_step_list {
-  counter-reset: pci-counter;
-}
-
 .Kn_sKG_pci_step_list li, .Kn_sKG_pci_error_list li {
   box-sizing: border-box;
   color: #efeff1;
@@ -670,7 +666,6 @@ img, video {
   border: 1px solid #1f1f1f;
   border-radius: 4px;
   flex-direction: column;
-  gap: 4px;
   width: 100%;
   padding: 12px 16px;
   font-size: 13px;
@@ -679,35 +674,46 @@ img, video {
   position: relative;
 }
 
-.Kn_sKG_pci_step_list li:before {
-  counter-increment: pci-counter;
-  content: counter(pci-counter) ". ";
-  color: #ffca28;
-  font-weight: 800;
-  display: inline;
+.Kn_sKG_pci_step_list li p, .Kn_sKG_pci_error_list li p {
+  margin: 0 0 6px;
+  display: block;
 }
 
-.Kn_sKG_pci_step_list li strong, .Kn_sKG_pci_error_list li strong {
+.Kn_sKG_pci_step_list li p:last-child, .Kn_sKG_pci_error_list li p:last-child {
+  margin-bottom: 0;
+}
+
+.Kn_sKG_pci_step_list li strong {
+  color: #ffca28;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  display: block;
+}
+
+.Kn_sKG_pci_error_list li strong {
   color: #a1a1aa;
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   font-size: 11px;
   font-weight: 700;
-  display: inline;
-}
-
-.Kn_sKG_pci_step_list li span, .Kn_sKG_pci_error_list li span {
   display: block;
 }
 
 .Kn_sKG_pci_accent_text {
   color: #ffca28;
+  background: #ffca280d;
+  border-left: 3px solid #ffca28;
+  border-radius: 2px;
+  margin-top: 4px;
+  padding: 6px 10px;
   font-weight: 700;
 }
 
 .Kn_sKG_pci_step_list code, .Kn_sKG_pci_error_list code {
-  color: #3b82f6;
-  background: #3b82f61a;
+  color: #60a5fa;
+  background: #3b82f626;
   border-radius: 3px;
   padding: 1px 4px;
   font-family: monospace;
