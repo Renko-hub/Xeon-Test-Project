@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -14,17 +13,15 @@
 }
 
 .pci_title {
-  display: block;
   font-size: 11px;
   font-weight: 800;
   color: #ffca28;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 0 0 4px 0;
+  margin-bottom: 4px;
 }
 
-.pci_step_list,
-.pci_error_list {
+.pci_list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -33,56 +30,46 @@
   gap: 8px;
 }
 
-.pci_step_list li,
-.pci_error_list li {
+.pci_item {
   display: flex;
   flex-direction: column;
   background: #121212;
   border: 1px solid #1f1f1f;
   border-radius: 4px;
   padding: 12px 16px;
-  width: 100%;
-  box-sizing: border-box;
   font-size: 13px;
   line-height: 1.45;
   color: #efeff1;
-  position: relative;
 }
 
-/* Настройка отступов для параграфов внутри списков */
-.pci_step_list li p,
-.pci_error_list li p {
-  margin: 0 0 6px 0;
-  display: block;
-}
-
-/* Убираем нижний отступ у последнего абзаца в блоке */
-.pci_step_list li p:last-child,
-.pci_error_list li p:last-child {
-  margin-bottom: 0;
-}
-
-/* Крупные жёлтые заголовки с номерами для шагов */
-.pci_step_list li strong {
-  display: block;
-  font-size: 13px;
-  font-weight: 800;
-  color: #ffca28;
-  text-transform: uppercase;
+.pci_item p {
   margin-bottom: 6px;
 }
 
-/* Заголовки в блоке ошибок */
-.pci_error_list li strong {
+.pci_item p:last-child {
+  margin-bottom: 0;
+}
+
+.pci_item strong {
   display: block;
+  text-transform: uppercase;
+}
+
+/* Дифференциация заголовков для разных секций */
+.pci_step_title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffca28;
+  margin-bottom: 6px;
+}
+
+.pci_error_title {
   font-size: 11px;
   font-weight: 700;
   color: #a1a1aa;
-  text-transform: uppercase;
   margin-bottom: 4px;
 }
 
-/* Акцентный текст предупреждений */
 .pci_accent_text {
   color: #ffca28;
   font-weight: 700;
@@ -93,10 +80,8 @@
   border-radius: 2px;
 }
 
-/* Подсветка кода */
-.pci_step_list code,
-.pci_error_list code {
-  color: #60a5fa; /* Сделано чуть ярче для лучшей читаемости на черном фоне */
+.pci_item code {
+  color: #60a5fa;
   font-weight: 600;
   background: rgba(59, 130, 246, 0.15);
   padding: 1px 4px;

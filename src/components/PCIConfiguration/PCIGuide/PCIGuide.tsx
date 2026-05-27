@@ -7,9 +7,11 @@ const PCIGuide = () => (
         ИНСТРУКЦИЯ ПО БЕЗОПАСНОМУ ВКЛЮЧЕНИЮ RE-SIZE BAR
       </h2>
 
-      <ul className={s.pci_step_list}>
-        <li>
-          <strong>1. Включение 4G Decoding:</strong>
+      <ul className={s.pci_list}>
+        <li className={s.pci_item}>
+          <strong className={s.pci_step_title}>
+            1. Включение 4G Decoding:
+          </strong>
           <p>
             Сначала перейдите в меню{" "}
             <code>Advanced → PCI Subsystem Settings</code>. Включите параметр{" "}
@@ -18,8 +20,10 @@ const PCIGuide = () => (
           </p>
         </li>
 
-        <li>
-          <strong>2. Настройка UEFI режима для устройств:</strong>
+        <li className={s.pci_item}>
+          <strong className={s.pci_step_title}>
+            2. Настройка UEFI режима для устройств:
+          </strong>
           <p>
             Перейдите в меню <code>Advanced → CSM Configuration</code>.
             Переведите видеокарту (Video) и все остальные physical-устройства в
@@ -28,8 +32,10 @@ const PCIGuide = () => (
           </p>
         </li>
 
-        <li>
-          <strong>3. Отключение CSM Support:</strong>
+        <li className={s.pci_item}>
+          <strong className={s.pci_step_title}>
+            3. Отключение CSM Support:
+          </strong>
           <p>
             Если система стартует и появляется изображение, то снова зайдите в
             меню <code>Advanced → CSM Configuration</code>. Теперь можно
@@ -44,8 +50,10 @@ const PCIGuide = () => (
           </p>
         </li>
 
-        <li>
-          <strong>4. Проверка разметки диска:</strong>
+        <li className={s.pci_item}>
+          <strong className={s.pci_step_title}>
+            4. Проверка разметки диска:
+          </strong>
           <p>
             Убедитесь, что Windows установлена на диск с разметкой{" "}
             <code>GPT</code>. Если Windows изначально установить в GPT и в
@@ -59,8 +67,8 @@ const PCIGuide = () => (
           </p>
         </li>
 
-        <li>
-          <strong>
+        <li className={s.pci_item}>
+          <strong className={s.pci_step_title}>
             5. Активация Re-Size BAR (Обязательно для небрендовых плат):
           </strong>
           <p className={s.pci_accent_text}>
@@ -73,8 +81,10 @@ const PCIGuide = () => (
           </p>
         </li>
 
-        <li>
-          <strong>6. Проверка и обновление vBIOS карты:</strong>
+        <li className={s.pci_item}>
+          <strong className={s.pci_step_title}>
+            6. Проверка и обновление vBIOS карты:
+          </strong>
           <p>
             Запустите GPU-Z и проверьте статус технологии во вкладке Re-Size
             BAR. Если функция недоступна, обновите прошивку (vBIOS) самой
@@ -104,16 +114,18 @@ const PCIGuide = () => (
 
     <section className={s.pci_section}>
       <h2 className={s.pci_title}>УСТРАНЕНИЕ ОШИБОК ИЗ GPU-Z</h2>
-      <ul className={s.pci_error_list}>
-        <li>
-          <strong>UEFI BOOT REQUIRED / CSM ENABLED:</strong>
+      <ul className={s.pci_list}>
+        <li className={s.pci_item}>
+          <strong className={s.pci_error_title}>
+            UEFI BOOT REQUIRED / CSM ENABLED:
+          </strong>
           <p>
             BIOS работает в устаревшем режиме Legacy. Отключите CSM Support в
             меню Boot или Advanced.
           </p>
         </li>
-        <li>
-          <strong>BOOT FROM GPT: NO:</strong>
+        <li className={s.pci_item}>
+          <strong className={s.pci_error_title}>BOOT FROM GPT: NO:</strong>
           <p>
             ОС установлена на MBR-диске. Срочно переведите накопитель в GPT без
             потери данных через mbr2gpt.
