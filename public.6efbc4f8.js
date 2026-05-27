@@ -29402,11 +29402,13 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        className: (0, _pciguideModuleCssDefault.default).pci_step_list,
+                        className: (0, _pciguideModuleCssDefault.default).pci_list,
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _pciguideModuleCssDefault.default).pci_item,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "1. \u0412\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 4G Decoding:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
@@ -29421,7 +29423,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "Advanced \u2192 PCI Subsystem Settings"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 15,
+                                                lineNumber: 17,
                                                 columnNumber: 13
                                             }, undefined),
                                             ". \u0412\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440",
@@ -29430,14 +29432,14 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "Above 4G Decoding"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 16,
+                                                lineNumber: 18,
                                                 columnNumber: 13
                                             }, undefined),
                                             ". \u041E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u041F\u041A, \u0447\u0442\u043E\u0431\u044B \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 13,
+                                        lineNumber: 15,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
@@ -29447,12 +29449,14 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _pciguideModuleCssDefault.default).pci_item,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "2. \u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 UEFI \u0440\u0435\u0436\u0438\u043C\u0430 \u0434\u043B\u044F \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 22,
+                                        lineNumber: 24,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29462,7 +29466,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "Advanced \u2192 CSM Configuration"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 24,
+                                                lineNumber: 28,
                                                 columnNumber: 30
                                             }, undefined),
                                             ". \u041F\u0435\u0440\u0435\u0432\u0435\u0434\u0438\u0442\u0435 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u0443 (Video) \u0438 \u0432\u0441\u0435 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435 physical-\u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430 \u0432 \u0440\u0435\u0436\u0438\u043C ",
@@ -29470,29 +29474,31 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "UEFI"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 26,
+                                                lineNumber: 30,
                                                 columnNumber: 19
                                             }, undefined),
                                             ". \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0438 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u043F\u0440\u043E\u043C\u0435\u0436\u0443\u0442\u043E\u0447\u043D\u0443\u044E \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0443, \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 23,
+                                        lineNumber: 27,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 21,
+                                lineNumber: 23,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _pciguideModuleCssDefault.default).pci_item,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "3. \u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM Support:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 32,
+                                        lineNumber: 36,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29502,7 +29508,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "Advanced \u2192 CSM Configuration"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 35,
+                                                lineNumber: 41,
                                                 columnNumber: 18
                                             }, undefined),
                                             ". \u0422\u0435\u043F\u0435\u0440\u044C \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u043F\u0435\u0440\u0435\u0432\u0435\u0441\u0442\u0438 ",
@@ -29510,7 +29516,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "CSM Support"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 36,
+                                                lineNumber: 42,
                                                 columnNumber: 33
                                             }, undefined),
                                             " \u0432 \u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435",
@@ -29518,14 +29524,14 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "Disabled"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 37,
+                                                lineNumber: 43,
                                                 columnNumber: 13
                                             }, undefined),
                                             ". \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u041F\u041A."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 33,
+                                        lineNumber: 39,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29533,22 +29539,24 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         children: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435: \u041F\u0440\u044F\u043C\u043E\u0435 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM \u0431\u0435\u0437 \u043F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0430 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432 \u0432 UEFI \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0438 \u043B\u0438\u0431\u043E \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043E \u0441\u0438\u0441\u0442\u0435\u043C\u043E\u0439 \u0438 \u0432\u044B\u0434\u0430\u0451\u0442 \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0435\u043D\u0438\u0435 \u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0441\u0442\u0438 \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u044C UEFI \u0434\u043B\u044F Video (\u0434\u0430\u0436\u0435 \u0435\u0441\u043B\u0438 \u0432\u044B \u0443\u0436\u0435 \u0432\u043A\u043B\u044E\u0447\u0438\u043B\u0438 UEFI), \u043B\u0438\u0431\u043E \u043F\u0440\u0438\u0432\u043E\u0434\u0438\u0442 \u043A \u0447\u0435\u0440\u043D\u043E\u043C\u0443 \u044D\u043A\u0440\u0430\u043D\u0443."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 45,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 31,
+                                lineNumber: 35,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _pciguideModuleCssDefault.default).pci_item,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "4. \u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u0440\u0430\u0437\u043C\u0435\u0442\u043A\u0438 \u0434\u0438\u0441\u043A\u0430:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 48,
+                                        lineNumber: 54,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29559,14 +29567,14 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "GPT"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 51,
+                                                lineNumber: 59,
                                                 columnNumber: 13
                                             }, undefined),
                                             ". \u0415\u0441\u043B\u0438 Windows \u0438\u0437\u043D\u0430\u0447\u0430\u043B\u044C\u043D\u043E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0432 GPT \u0438 \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u043E UEFI, \u0442\u043E UEFI \u043C\u043E\u0436\u043D\u043E \u0432\u044B\u0441\u0442\u0430\u0432\u043B\u044F\u0442\u044C \u0441\u0440\u0430\u0437\u0443 \u0434\u043B\u044F \u0434\u0440\u0443\u0433\u0438\u0445 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u043E\u0432."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 49,
+                                        lineNumber: 57,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29576,29 +29584,31 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "mbr2gpt"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 57,
+                                                lineNumber: 65,
                                                 columnNumber: 13
                                             }, undefined),
                                             ", \u0438\u043D\u0430\u0447\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u0435\u0442 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044C\u0441\u044F \u043F\u043E\u0441\u043B\u0435 \u0434\u0435\u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 CSM."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 55,
+                                        lineNumber: 63,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 47,
+                                lineNumber: 53,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _pciguideModuleCssDefault.default).pci_item,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "5. \u0410\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u044F Re-Size BAR (\u041E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u043B\u044F \u043D\u0435\u0431\u0440\u0435\u043D\u0434\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442):"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 71,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29609,7 +29619,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "ReBarState/NvStrapsReBar"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 70,
+                                                lineNumber: 78,
                                                 columnNumber: 13
                                             }, undefined),
                                             " \u0441 GitHub, \u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C \u0435\u0451 \u043E\u0442 \u0438\u043C\u0435\u043D\u0438 \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440\u0430, \u0432\u0432\u0435\u0441\u0442\u0438 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 ",
@@ -29617,50 +29627,52 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "32"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 71,
+                                                lineNumber: 79,
                                                 columnNumber: 51
                                             }, undefined),
                                             " \u0434\u043B\u044F \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u043C\u0435\u0440\u0430 \u0431\u0443\u0444\u0435\u0440\u0430 \u0438 \u043D\u0430\u0436\u0430\u0442\u044C Enter."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 74,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 62,
+                                lineNumber: 70,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _pciguideModuleCssDefault.default).pci_item,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "6. \u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u0438 \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435 vBIOS \u043A\u0430\u0440\u0442\u044B:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 77,
+                                        lineNumber: 85,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "\u0417\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u0435 GPU-Z \u0438 \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0441\u0442\u0430\u0442\u0443\u0441 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0435 Re-Size BAR. \u0415\u0441\u043B\u0438 \u0444\u0443\u043D\u043A\u0446\u0438\u044F \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430, \u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0443 (vBIOS) \u0441\u0430\u043C\u043E\u0439 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 88,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "\u041F\u0440\u0438 \u0440\u0443\u0447\u043D\u043E\u0439 \u043C\u043E\u0434\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0434\u0430\u043C\u043F\u0430 BIOS \u0438\u043B\u0438 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0435 vBIOS \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B \u043F\u0440\u0438\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0440\u0438\u0441\u043A \u043E\u043A\u0438\u0440\u043F\u0438\u0447\u0438\u0442\u044C \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E \u2014 \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0435\u0433\u043E \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\u0442\u043E\u0440\u043E\u043C. \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0434\u0430\u043C\u043F \u043D\u0430 \u0441\u043B\u0443\u0447\u0430\u0439 \u043F\u0440\u043E\u0431\u043B\u0435\u043C \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 93,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "\u041F\u0440\u043E\u0448\u0438\u0432\u043A\u0443 \u043C\u043E\u0436\u043D\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C \u0447\u0435\u0440\u0435\u0437 CMD. \u0418\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044E \u0434\u043B\u044F \u0412\u0430\u0448\u0435\u0439 \u043A\u0430\u0440\u0442\u044B \u043C\u043E\u0436\u043D\u043E \u043D\u0430\u0439\u0442\u0438 \u0432 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0435 (\u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C \u043D\u0430 \u0444\u043E\u0440\u0443\u043C\u0430\u0445). \u041C\u043D\u043E\u0433\u0438\u0435 \u0444\u0438\u0440\u043C\u0435\u043D\u043D\u044B\u0435 \u0443\u0442\u0438\u043B\u0438\u0442\u044B \u043E\u0442 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F \u043A\u0430\u0440\u0442\u044B \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \xabRe-Size BAR\xbb \u0438 \u0432\u0435\u0440\u0441\u0438\u044E \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438 vBIOS."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 99,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29671,7 +29683,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "NVIDIA Profile Inspector"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 98,
+                                                lineNumber: 108,
                                                 columnNumber: 13
                                             }, undefined),
                                             "(\u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440 ",
@@ -29679,20 +29691,20 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                                 children: "rBAR - Feature"
                                             }, void 0, false, {
                                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                                lineNumber: 99,
+                                                lineNumber: 109,
                                                 columnNumber: 23
                                             }, undefined),
                                             " \u0432 \u0441\u0435\u043A\u0446\u0438\u0438 Common)."
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 95,
+                                        lineNumber: 105,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 76,
+                                lineNumber: 84,
                                 columnNumber: 9
                             }, undefined)
                         ]
@@ -29715,66 +29727,70 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: "\u0423\u0421\u0422\u0420\u0410\u041D\u0415\u041D\u0418\u0415 \u041E\u0428\u0418\u0411\u041E\u041A \u0418\u0417 GPU-Z"
                     }, void 0, false, {
                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                        lineNumber: 106,
+                        lineNumber: 116,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        className: (0, _pciguideModuleCssDefault.default).pci_error_list,
+                        className: (0, _pciguideModuleCssDefault.default).pci_list,
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _pciguideModuleCssDefault.default).pci_item,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        className: (0, _pciguideModuleCssDefault.default).pci_error_title,
                                         children: "UEFI BOOT REQUIRED / CSM ENABLED:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 119,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "BIOS \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0432 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0435\u043C \u0440\u0435\u0436\u0438\u043C\u0435 Legacy. \u041E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u0435 CSM Support \u0432 \u043C\u0435\u043D\u044E Boot \u0438\u043B\u0438 Advanced."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 122,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 108,
+                                lineNumber: 118,
                                 columnNumber: 9
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _pciguideModuleCssDefault.default).pci_item,
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                        className: (0, _pciguideModuleCssDefault.default).pci_error_title,
                                         children: "BOOT FROM GPT: NO:"
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 116,
+                                        lineNumber: 128,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "\u041E\u0421 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0430 \u043D\u0430 MBR-\u0434\u0438\u0441\u043A\u0435. \u0421\u0440\u043E\u0447\u043D\u043E \u043F\u0435\u0440\u0435\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u0430\u043A\u043E\u043F\u0438\u0442\u0435\u043B\u044C \u0432 GPT \u0431\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u0438 \u0434\u0430\u043D\u043D\u044B\u0445 \u0447\u0435\u0440\u0435\u0437 mbr2gpt."
                                     }, void 0, false, {
                                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 129,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                                lineNumber: 115,
+                                lineNumber: 127,
                                 columnNumber: 9
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                        lineNumber: 107,
+                        lineNumber: 117,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
-                lineNumber: 105,
+                lineNumber: 115,
                 columnNumber: 5
             }, undefined)
         ]
@@ -29793,12 +29809,14 @@ $RefreshReg$(_c, "PCIGuide");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./PCIGuide.module.css":"bhmGB"}],"bhmGB":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./PCIGuide.module.css":"bhmGB","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"bhmGB":[function(require,module,exports,__globalThis) {
 module.exports["pci_accent_text"] = `Kn_sKG_pci_accent_text`;
 module.exports["pci_container"] = `Kn_sKG_pci_container`;
-module.exports["pci_error_list"] = `Kn_sKG_pci_error_list`;
+module.exports["pci_error_title"] = `Kn_sKG_pci_error_title`;
+module.exports["pci_item"] = `Kn_sKG_pci_item`;
+module.exports["pci_list"] = `Kn_sKG_pci_list`;
 module.exports["pci_section"] = `Kn_sKG_pci_section`;
-module.exports["pci_step_list"] = `Kn_sKG_pci_step_list`;
+module.exports["pci_step_title"] = `Kn_sKG_pci_step_title`;
 module.exports["pci_title"] = `Kn_sKG_pci_title`;
 
 },{}],"kEGQB":[function(require,module,exports,__globalThis) {
@@ -30809,64 +30827,61 @@ var _cpuDataJs = require("../RamConfiguration/data/cpuData.js");
 var _ramDataJs = require("../RamConfiguration/data/ramData.js");
 const memoryConfiguration = (state, changedKey)=>{
     const isV2 = state.gen === "V2";
+    const isV3 = state.gen === "V3";
+    const isV4 = state.gen === "V4";
     const ramType = isV2 ? "DDR3" : "DDR4";
+    const isDdr4 = ramType === "DDR4";
+    const typeKey = isDdr4 ? "ddr4" : "ddr3";
     const cpuList = (0, _cpuDataJs.CPU_MODELS)[state.gen] ?? [];
     let ramSize = Number(state.ramSize) || 8;
     if (changedKey === "gen" && ramSize === 6) ramSize = 4;
+    if (isV2 && state.memoryType === "desktop" && ramSize > 32) ramSize = 32;
+    const isV2Special = ramSize === 6 && isV2;
     const memoryTypesArray = [
         "desktop",
         "ecc"
-    ].filter((type)=>!(ramSize === 6 && isV2 && type === "ecc"));
+    ].filter((type)=>!(isV2Special && type === "ecc"));
     const memoryType = memoryTypesArray.includes(state.memoryType) ? state.memoryType : memoryTypesArray[0];
-    const modules = (0, _ramDataJs.RAM_CONFIGS)[ramType]?.[memoryType] ?? [];
+    const isEcc = memoryType === "ecc";
+    const modules = (0, _ramDataJs.RAM_CONFIGS)[ramType]?.[memoryType] ?? [
+        4,
+        8,
+        16,
+        32
+    ];
     let isDensityHigh = !!state.isDensityHigh;
-    if (isV2 && memoryType === "desktop") {
-        isDensityHigh = false;
-        if (ramSize > 32) ramSize = 32;
-    }
-    const calculateSlots = (allowed, required)=>{
-        if (!allowed.length || !required.length) return [];
+    if (isV2 && memoryType === "desktop") isDensityHigh = false;
+    const getValidSlots = (availableModules)=>{
+        if (ramSize === 6 && isV2) return [
+            2,
+            3
+        ];
         return [
             1,
             2,
             3,
             4
         ].filter((slots)=>{
-            if (ramSize === 6 && isV2) return slots === 2 || slots === 3;
-            return required.some((m1)=>{
-                if (slots === 1) return m1 === ramSize;
-                return allowed.some((m2)=>{
-                    if (slots === 2) return m1 + m2 === ramSize;
-                    return allowed.some((m3)=>{
-                        if (slots === 3) return m1 + m2 + m3 === ramSize;
-                        return allowed.some((m4)=>m1 + m2 + m3 + m4 === ramSize);
-                    });
-                });
-            });
+            const moduleSize = ramSize / slots;
+            return Number.isInteger(moduleSize) && availableModules.includes(moduleSize);
         });
     };
-    const standardSlots = calculateSlots(modules.filter((m)=>m <= 8), modules.filter((m)=>m <= 8));
-    const highDensitySlots = calculateSlots(modules, modules.filter((m)=>m >= 16));
-    const isSelectionRequired = standardSlots.length > 0 && highDensitySlots.length > 0 && ramSize >= 16;
+    const standardModules = modules.filter((m)=>m <= 8);
+    const highDensityModules = modules.filter((m)=>m >= 16);
+    const standardSlots = getValidSlots(standardModules);
+    const highDensitySlots = getValidSlots(highDensityModules);
     if (standardSlots.length === 0) isDensityHigh = true;
     else if (highDensitySlots.length === 0) isDensityHigh = false;
+    const isSelectionRequired = standardSlots.length > 0 && highDensitySlots.length > 0 && ramSize >= 16;
     let visibleSlotsArray = isDensityHigh ? highDensitySlots : standardSlots;
-    if (!visibleSlotsArray || visibleSlotsArray.length === 0) visibleSlotsArray = standardSlots.length ? standardSlots : [
+    if (visibleSlotsArray.length === 0) visibleSlotsArray = standardSlots.length ? standardSlots : [
         1
     ];
     const currentSlotsCount = Number(state.slotsCount);
-    const slotsCount = visibleSlotsArray.includes(currentSlotsCount) ? currentSlotsCount : visibleSlotsArray[0] || 1;
+    const slotsCount = visibleSlotsArray.includes(currentSlotsCount) ? currentSlotsCount : visibleSlotsArray[0];
     const cpuExists = cpuList.some((model)=>model.name === state.cpu);
     const currentCpu = cpuExists ? state.cpu : cpuList[0]?.name ?? "";
-    const isSpecialConfig = state.boardType === "matx" && (state.gen === "V3" || state.gen === "V4") && memoryType === "desktop" && !isDensityHigh && (ramSize === 16 && slotsCount === 2 || ramSize === 32 && slotsCount === 4);
-    const visibleSlotsObj = visibleSlotsArray.reduce((acc, num)=>({
-            ...acc,
-            [num]: true
-        }), {});
-    const memoryTypesObj = memoryTypesArray.reduce((acc, type)=>({
-            ...acc,
-            [type]: true
-        }), {});
+    const isSpecialConfig = state.boardType === "matx" && (isV3 || isV4) && memoryType === "desktop" && !isDensityHigh && (ramSize === 16 && slotsCount === 2 || ramSize === 32 && slotsCount === 4);
     return {
         ...state,
         ramSize,
@@ -30875,11 +30890,23 @@ const memoryConfiguration = (state, changedKey)=>{
         slotsCount,
         isSpecialConfig,
         ramType,
+        isDdr4,
+        isV2,
+        isV3,
+        isV4,
+        isEcc,
+        typeKey,
         cpu: currentCpu,
         isSelectionRequired,
         cpuModels: cpuList,
-        visibleSlots: visibleSlotsObj,
-        memoryTypes: memoryTypesObj,
+        visibleSlots: Object.fromEntries(visibleSlotsArray.map((num)=>[
+                num,
+                true
+            ])),
+        memoryTypes: Object.fromEntries(memoryTypesArray.map((type)=>[
+                type,
+                true
+            ])),
         channelsName: [
             "Single",
             "Dual",
@@ -31104,13 +31131,13 @@ parcelHelpers.export(exports, "toEven", ()=>toEven);
 var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 const toEven = (value)=>Math.round(value / 2) * 2;
 const ramFrequency = (state)=>{
-    const { cpu, cpuModels, ramType } = state;
-    const defFreq = ramType === "DDR4" ? 2133 : 1866;
+    const { cpu, cpuModels, isDdr4 = true } = state || {};
+    const defFreq = isDdr4 ? 2133 : 1866;
     const model = cpuModels?.find((m)=>m.name === cpu) || cpuModels?.[0];
     const frequency = model?.maxFreq ?? defFreq;
     return {
         frequency,
-        frequencyKey: (0, _memoryPresets.MEMORY_PRESETS)[frequency] !== undefined ? frequency : defFreq
+        frequencyKey: (0, _memoryPresets.MEMORY_PRESETS)?.[frequency] !== undefined ? frequency : defFreq
     };
 };
 exports.default = ramFrequency;
@@ -31120,7 +31147,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ULTRA_PRESET", ()=>ULTRA_PRESET);
 parcelHelpers.export(exports, "SPECIAL_PRESETS", ()=>SPECIAL_PRESETS);
+parcelHelpers.export(exports, "SPECIAL_LIMITS", ()=>SPECIAL_LIMITS);
 parcelHelpers.export(exports, "TREFI_TABLE", ()=>TREFI_TABLE);
+parcelHelpers.export(exports, "PROFILE_SUBTIMINGS", ()=>PROFILE_SUBTIMINGS);
+parcelHelpers.export(exports, "PENALTIES", ()=>PENALTIES);
 parcelHelpers.export(exports, "MEMORY_PRESETS", ()=>MEMORY_PRESETS);
 parcelHelpers.export(exports, "PROFILE_PRESETS", ()=>PROFILE_PRESETS);
 const ULTRA_PRESET = {
@@ -31144,6 +31174,11 @@ const SPECIAL_PRESETS = {
         tRFC: 264
     }
 };
+const SPECIAL_LIMITS = {
+    safe: SPECIAL_PRESETS.balanced.tRFC,
+    balanced: SPECIAL_PRESETS.aggressive.tRFC,
+    aggressive: SPECIAL_PRESETS.ultraLimit.tRFC
+};
 const TREFI_TABLE = {
     safe: {
         V2: 11700,
@@ -31166,13 +31201,102 @@ const TREFI_TABLE = {
         V4: 65535
     }
 };
+const PROFILE_SUBTIMINGS = {
+    ultra: {
+        ddr4: {
+            tFAW: 16,
+            tWR: 10,
+            tRRD: 4,
+            tRTP: 5,
+            tWTR: 6
+        },
+        ddr3: {
+            tFAW: 20,
+            tWR: 10,
+            tRRD: 4,
+            tRTP: 5,
+            tWTR: 5
+        }
+    },
+    aggressive: {
+        ddr4: {
+            tFAW: 20,
+            tWR: 12,
+            tRRD: 4,
+            tRTP: 6,
+            tWTR: 7
+        },
+        ddr3: {
+            tFAW: 24,
+            tWR: 12,
+            tRRD: 5,
+            tRTP: 6,
+            tWTR: 6
+        }
+    },
+    balanced: {
+        ddr4: {
+            tFAW: 24,
+            tWR: 14,
+            tRRD: 5,
+            tRTP: 7,
+            tWTR: 8
+        },
+        ddr3: {
+            tFAW: 26,
+            tWR: 14,
+            tRRD: 5,
+            tRTP: 7,
+            tWTR: 7
+        }
+    }
+};
+const PENALTIES = {
+    highCapacity: {
+        ddr4: {
+            tFAW: 4,
+            tWR: 2,
+            tRRD: 1,
+            tRTP: 0,
+            tWTR: 1
+        },
+        ddr3: {
+            tFAW: 6,
+            tWR: 2,
+            tRRD: 1,
+            tRTP: 0,
+            tWTR: 1
+        }
+    },
+    ecc: {
+        ddr4: {
+            tFAW: 2,
+            tWR: 2,
+            tRRD: 0,
+            tRTP: 1,
+            tWTR: 0
+        },
+        ddr3: {
+            tFAW: 2,
+            tWR: 0,
+            tRRD: 1,
+            tRTP: 1,
+            tWTR: 0
+        }
+    }
+};
 const MEMORY_PRESETS = {
     1333: {
         safe: {
             tCL: 9,
             tRCD: 9,
             tRP: 9,
-            tRFC: 174
+            tRFC: 174,
+            tFAW: 24,
+            tWR: 14,
+            tRRD: 5,
+            tRTP: 6,
+            tWTR: 7
         },
         balanced: {
             tCL: 8,
@@ -31192,7 +31316,12 @@ const MEMORY_PRESETS = {
             tCL: 11,
             tRCD: 11,
             tRP: 11,
-            tRFC: 208
+            tRFC: 208,
+            tFAW: 26,
+            tWR: 14,
+            tRRD: 5,
+            tRTP: 6,
+            tWTR: 7
         },
         balanced: {
             tCL: 10,
@@ -31212,7 +31341,12 @@ const MEMORY_PRESETS = {
             tCL: 12,
             tRCD: 12,
             tRP: 12,
-            tRFC: 240
+            tRFC: 240,
+            tFAW: 32,
+            tWR: 16,
+            tRRD: 5,
+            tRTP: 6,
+            tWTR: 7
         },
         balanced: {
             tCL: 11,
@@ -31232,7 +31366,12 @@ const MEMORY_PRESETS = {
             tCL: 15,
             tRCD: 15,
             tRP: 15,
-            tRFC: 312
+            tRFC: 312,
+            tFAW: 24,
+            tWR: 16,
+            tRRD: 4,
+            tRTP: 6,
+            tWTR: 8
         },
         balanced: {
             tCL: 14,
@@ -31252,7 +31391,12 @@ const MEMORY_PRESETS = {
             tCL: 17,
             tRCD: 17,
             tRP: 17,
-            tRFC: 350
+            tRFC: 350,
+            tFAW: 28,
+            tWR: 18,
+            tRRD: 4,
+            tRTP: 6,
+            tWTR: 8
         },
         balanced: {
             tCL: 16,
@@ -31282,42 +31426,42 @@ parcelHelpers.defineInteropFlag(exports);
 var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 var _ramFrequency = require("./ramFrequency");
 const PrimaryTimings = (state, frequencyKey)=>{
-    const { profile, ramSize, slotsCount, isDensityHigh, boardType, memoryType, ramType, gen, tCL: sCL, tRCD: sRCD, tRP: sRP } = state;
-    const isDdr4 = ramType === "DDR4";
-    const isV4 = gen === "V4";
-    // 1. Расчет нагрузки на контроллер памяти
-    const loadScore = Math.floor(ramSize / 32) * 2 + (slotsCount > 2 ? 1 : 0) + (isDensityHigh ? 2 : 0) + (boardType === "matx" ? 1 : 0) + (memoryType === "ecc" ? 1 : 0);
-    // 2. Расчет для Ультра-профиля
+    const { profile, ramSize = 16, slotsCount = 2, isDensityHigh = false, boardType = "atx", isEcc = false, isDdr4 = true, isV4 = false, isV3 = false, isV2 = false, tCL: sCL, tRCD: sRCD, tRP: sRP } = state || {};
+    const loadScore = Math.floor(ramSize / 32) * 2 + (slotsCount > 2 ? 1 : 0) + (isDensityHigh ? 2 : 0) + (boardType === "matx" ? 1 : 0) + (isEcc ? 1 : 0);
     if (profile === "ultra") {
         const divider = isV4 ? 4 : isDdr4 ? 2 : 3;
-        const baseUltra = isV4 ? 11 : isDdr4 ? 12 : (0, _memoryPresets.ULTRA_PRESET).tCL;
+        const baseUltra = isV4 ? 11 : isDdr4 ? 12 : (0, _memoryPresets.ULTRA_PRESET)?.tCL ?? 11;
         const timing = baseUltra + Math.floor(loadScore / divider);
+        const tRAS = (0, _ramFrequency.toEven)(timing * 2);
         return {
             tCL: timing,
             tRCD: timing,
             tRP: timing,
-            tRAS: (0, _ramFrequency.toEven)(timing * 2),
-            loadScore
+            tRAS,
+            loadScore,
+            tRC: isV3 || isV4 ? (0, _ramFrequency.toEven)(tRAS + 4) : timing * 3
         };
     }
-    // 3. Расчет для Стандартных и Кастомных профилей
     const isCustom = profile === "custom";
-    const preset = (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.[isCustom ? "safe" : profile] || (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.safe;
+    const preset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.[isCustom ? "safe" : profile] || (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.safe || (0, _memoryPresets.MEMORY_PRESETS)?.safe;
     const v4Offset = isV4 && frequencyKey >= 2133 ? 2 : 0;
-    const calcTiming = (customVal, presetVal)=>{
-        if (isCustom && customVal) return +customVal;
-        const val = +presetVal - v4Offset;
+    const calc = (userVal, presetVal)=>{
+        if (isCustom && userVal) return +userVal;
+        const val = +(presetVal ?? 15) - v4Offset;
         return isDdr4 ? Math.max(val, 11) : val;
     };
-    const tCL = calcTiming(sCL, preset?.tCL);
-    const tRCD = calcTiming(sRCD, preset?.tRCD);
-    const tRP = calcTiming(sRP, preset?.tRP);
-    const tRAS = (0, _ramFrequency.toEven)(tCL + tRCD + (gen === "V2" ? 4 : 2));
+    const tCL = calc(sCL, preset?.tCL);
+    const tRCD = calc(sRCD, preset?.tRCD);
+    const tRP = calc(sRP, preset?.tRP);
+    const tRAS = (0, _ramFrequency.toEven)(tCL + tRCD + (isV2 ? 4 : 2));
+    const calcTRC = isV3 || isV4 ? (0, _ramFrequency.toEven)(tRAS + 4) : tCL + tRCD + tRP;
+    const tRC = isDdr4 ? Math.max(calcTRC, 34) : calcTRC;
     return {
         tCL,
         tRCD,
         tRP,
         tRAS,
+        tRC,
         loadScore
     };
 };
@@ -31331,83 +31475,53 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 var _ramFrequency = require("./ramFrequency");
-const SPECIAL_LIMITS = {
-    safe: (0, _memoryPresets.SPECIAL_PRESETS).balanced.tRFC,
-    balanced: (0, _memoryPresets.SPECIAL_PRESETS).aggressive.tRFC,
-    aggressive: (0, _memoryPresets.SPECIAL_PRESETS).ultraLimit.tRFC
-};
 const SubTimings = (state, primaries, frequencyKey)=>{
-    const { profile, ramSize, slotsCount, isDensityHigh, memoryType, boardType, ramType, isSpecialConfig, gen = "V3" } = state;
-    const isDdr4 = ramType === "DDR4";
-    const profileKey = profile === "custom" ? "safe" : profile;
-    // 1. ОПРЕДЕЛЕНИЕ ТЯЖЕЛЫХ ПЛАШЕК И ECC
-    const activeSlots = Math.max(1, slotsCount);
-    const isHighCapacity = ramSize / activeSlots >= 12 || ramSize >= 32;
-    const isEcc = memoryType === "ecc";
-    // 2. БАЗОВЫЙ РАСЧЕТ ТАЙМИНГОВ ПО ПРОФИЛЯМ
-    const freq = Number(frequencyKey);
-    const profileConfigs = {
-        ultra: {
-            tFAW: isDdr4 ? 16 : 20,
-            tWR: 10,
-            tRRD: 4,
-            tRTP: 5,
-            tWTR: isDdr4 ? 6 : 5
-        },
-        aggressive: {
-            tFAW: isDdr4 ? 20 : 24,
-            tWR: 12,
-            tRRD: isDdr4 ? 4 : 5,
-            tRTP: 6,
-            tWTR: isDdr4 ? 7 : 6
-        },
-        balanced: {
-            tFAW: isDdr4 ? 24 : 26,
-            tWR: 14,
-            tRRD: 5,
-            tRTP: 7,
-            tWTR: isDdr4 ? 8 : 7
-        },
-        default: {
-            tFAW: isDdr4 ? freq >= 2400 ? 28 : freq >= 2133 ? 24 : 20 : freq >= 1866 ? 32 : freq >= 1600 ? 26 : 24,
-            tWR: isDdr4 ? freq >= 2400 ? 18 : 16 : freq >= 1866 ? 16 : 14,
-            tRRD: isDdr4 ? 4 : 5,
-            tRTP: 6,
-            tWTR: isDdr4 ? 8 : 7
-        }
-    };
-    let { tFAW, tWR, tRRD, tRTP, tWTR } = profileConfigs[profile] || profileConfigs.default;
-    // 3. ДИНАМИЧЕСКИЕ ШТРАФЫ
-    if (isHighCapacity) {
-        tFAW += isDdr4 ? 4 : 6;
-        tWR += 2;
-        tRRD += 1;
-        tWTR += 1;
+    const { profile = "default", ramSize = 16, slotsCount = 2, isDensityHigh = false, boardType = "atx", isSpecialConfig = false, gen = "V3", isDdr4 = true, typeKey = "ddr4", isEcc = false } = state;
+    const profileKey = profile === "custom" || profile === "ultra" ? "safe" : profile;
+    let base = (0, _memoryPresets.PROFILE_SUBTIMINGS)?.[profile]?.[typeKey];
+    if (!base) {
+        const freqPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.safe || (0, _memoryPresets.MEMORY_PRESETS)?.safe;
+        base = {
+            tFAW: freqPreset?.tFAW ?? 24,
+            tWR: freqPreset?.tWR ?? 12,
+            tRRD: freqPreset?.tRRD ?? 4,
+            tRTP: freqPreset?.tRTP ?? 6,
+            tWTR: freqPreset?.tWTR ?? 6
+        };
+    }
+    let { tFAW, tWR, tRRD, tRTP, tWTR } = base;
+    const hPen = (0, _memoryPresets.PENALTIES)?.highCapacity?.[typeKey];
+    const ePen = (0, _memoryPresets.PENALTIES)?.ecc?.[typeKey];
+    if (ramSize / Math.max(1, slotsCount) >= 12 || ramSize >= 32) {
+        tFAW += hPen?.tFAW ?? 0;
+        tWR += hPen?.tWR ?? 0;
+        tRRD += hPen?.tRRD ?? 0;
+        tWTR += hPen?.tWTR ?? 0;
     }
     if (isEcc) {
-        tFAW += 2;
-        tWR += isDdr4 ? 2 : 0;
-        tRRD += isDdr4 ? 0 : 1;
-        tRTP += 1;
+        tFAW += ePen?.tFAW ?? 0;
+        tWR += ePen?.tWR ?? 0;
+        tRRD += ePen?.tRRD ?? 0;
+        tRTP += ePen?.tRTP ?? 0;
     }
     tFAW = (0, _ramFrequency.toEven)(tFAW);
     tWR = (0, _ramFrequency.toEven)(tWR);
-    // 4. ДИНАМИЧЕСКИЙ РАСЧЕТ tREFI И stabilityBonus
     const tRefiProfile = profile === "ultra" ? "ultra" : profileKey;
-    const tREFI = (0, _memoryPresets.TREFI_TABLE)[tRefiProfile]?.[gen] ?? (0, _memoryPresets.TREFI_TABLE).safe[gen];
-    const stabilityBonus = (Math.floor((ramSize - 8) / 8) * 10 + activeSlots * 12 - 12 + (isDensityHigh ? 48 : 0) + (isEcc ? isDdr4 ? 24 : 40 : -12) + (boardType === "matx" ? 16 : 0)) * (isDdr4 ? 1 : 1.35);
-    // 5. РАСЧЕТ tRFC И МНОЖИТЕЛЕЙ ГРАНИЦЫ
-    let tRFC, limitMultiplier = 0.92;
+    const tREFI = (0, _memoryPresets.TREFI_TABLE)?.[tRefiProfile]?.[gen] ?? (0, _memoryPresets.TREFI_TABLE)?.safe?.[gen] ?? 7800;
+    const stabilityBonus = (Math.floor((ramSize - 8) / 8) * 10 + slotsCount * 12 - 12 + (isDensityHigh ? 48 : 0) + (isEcc ? isDdr4 ? 24 : 40 : -12) + (boardType === "matx" ? 16 : 0)) * (isDdr4 ? 1 : 1.35);
+    let tRFC;
+    let limitMultiplier = 0.92;
     if (profile === "ultra") {
-        tRFC = (0, _ramFrequency.toEven)((isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET).tRFC) + stabilityBonus * (isDdr4 ? 0.8 : 0.6));
+        const baseRfc = isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET)?.tRFC ?? 180;
+        tRFC = (0, _ramFrequency.toEven)(baseRfc + stabilityBonus * (isDdr4 ? 0.8 : 0.6));
         limitMultiplier = 0.9;
-    } else if (isSpecialConfig) tRFC = ((0, _memoryPresets.SPECIAL_PRESETS)[profileKey] || (0, _memoryPresets.SPECIAL_PRESETS).safe).tRFC;
+    } else if (isSpecialConfig) tRFC = (0, _memoryPresets.SPECIAL_PRESETS)?.[profileKey]?.tRFC ?? (0, _memoryPresets.SPECIAL_PRESETS)?.safe?.tRFC ?? 260;
     else {
-        const basePreset = (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.[profileKey] || (0, _memoryPresets.MEMORY_PRESETS)[frequencyKey]?.safe;
-        const defaultBaseRfc = profile === "custom" ? (primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) : basePreset?.tRFC ?? (isDdr4 ? 312 : 240);
+        const basePreset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.[profileKey] || (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.safe;
+        const defaultBaseRfc = profile === "custom" && primaries ? (primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) : basePreset?.tRFC ?? (isDdr4 ? 312 : 240);
         tRFC = (0, _ramFrequency.toEven)(defaultBaseRfc + stabilityBonus);
     }
-    const limitValue = isSpecialConfig && profile !== "ultra" ? SPECIAL_LIMITS[profileKey] || (0, _ramFrequency.toEven)(tRFC * 0.92) : (0, _ramFrequency.toEven)(tRFC * limitMultiplier);
+    const limitValue = isSpecialConfig && profile !== "ultra" ? (0, _memoryPresets.SPECIAL_LIMITS)?.[profileKey] ?? (0, _ramFrequency.toEven)(tRFC * 0.92) : (0, _ramFrequency.toEven)(tRFC * limitMultiplier);
     return {
         tRFC,
         tFAW,
@@ -31430,16 +31544,12 @@ $RefreshReg$(_c, "SubTimings");
 },{"../../RamConfiguration/data/memoryPresets":"FGwI4","./ramFrequency":"9XM1p","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bN4wa":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _ramFrequency = require("./ramFrequency");
 const ramPerformance = (state, frequency, primaries)=>{
-    const { ramSize, slotsCount, ramType, profile, boardType, gen } = state;
-    const { tCL, tRCD, tRP, tRAS } = primaries;
-    const isDdr4 = ramType === "DDR4";
+    const { ramSize = 16, slotsCount = 2, isDdr4 = true, profile = "default", boardType = "atx" } = state || {};
+    const { tCL = 15, tRC = 34 } = primaries || {};
     const isHighPower = profile === "ultra" || profile === "aggressive";
     const channels = Math.min(slotsCount, boardType === "matx" ? 2 : 4);
     const bandwidthGbps = Math.round(frequency * 8 * channels / 1024) || 0;
-    const calculatedTRC = gen === "V3" || gen === "V4" ? (0, _ramFrequency.toEven)(tRAS + 4) : tCL + tRCD + tRP;
-    const tRC = isDdr4 ? Math.max(calculatedTRC, 34) : calculatedTRC;
     return {
         voltage: isDdr4 ? profile === "ultra" ? "1.30V" : profile === "aggressive" ? "1.25V" : "1.20V" : isHighPower ? "1.55V" : "1.50V",
         tCP: ramSize >= 128 || slotsCount >= 4 ? "2N" : "1N",
@@ -31451,7 +31561,7 @@ const ramPerformance = (state, frequency, primaries)=>{
 };
 exports.default = ramPerformance;
 
-},{"./ramFrequency":"9XM1p","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"cUeEy":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"cUeEy":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$6f8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$6f8e.init();
 var prevRefreshReg = globalThis.$RefreshReg$;

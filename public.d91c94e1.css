@@ -630,7 +630,6 @@ img, video {
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  margin: 0;
   display: flex;
 }
 
@@ -644,13 +643,12 @@ img, video {
   color: #ffca28;
   text-transform: uppercase;
   letter-spacing: .05em;
-  margin: 0 0 4px;
+  margin-bottom: 4px;
   font-size: 11px;
   font-weight: 800;
-  display: block;
 }
 
-.Kn_sKG_pci_step_list, .Kn_sKG_pci_error_list {
+.Kn_sKG_pci_list {
   flex-direction: column;
   gap: 8px;
   margin: 0;
@@ -659,46 +657,43 @@ img, video {
   display: flex;
 }
 
-.Kn_sKG_pci_step_list li, .Kn_sKG_pci_error_list li {
-  box-sizing: border-box;
+.Kn_sKG_pci_item {
   color: #efeff1;
   background: #121212;
   border: 1px solid #1f1f1f;
   border-radius: 4px;
   flex-direction: column;
-  width: 100%;
   padding: 12px 16px;
   font-size: 13px;
   line-height: 1.45;
   display: flex;
-  position: relative;
 }
 
-.Kn_sKG_pci_step_list li p, .Kn_sKG_pci_error_list li p {
-  margin: 0 0 6px;
-  display: block;
+.Kn_sKG_pci_item p {
+  margin-bottom: 6px;
 }
 
-.Kn_sKG_pci_step_list li p:last-child, .Kn_sKG_pci_error_list li p:last-child {
+.Kn_sKG_pci_item p:last-child {
   margin-bottom: 0;
 }
 
-.Kn_sKG_pci_step_list li strong {
-  color: #ffca28;
+.Kn_sKG_pci_item strong {
   text-transform: uppercase;
-  margin-bottom: 6px;
-  font-size: 13px;
-  font-weight: 800;
   display: block;
 }
 
-.Kn_sKG_pci_error_list li strong {
+.Kn_sKG_pci_step_title {
+  color: #ffca28;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.Kn_sKG_pci_error_title {
   color: #a1a1aa;
-  text-transform: uppercase;
   margin-bottom: 4px;
   font-size: 11px;
   font-weight: 700;
-  display: block;
 }
 
 .Kn_sKG_pci_accent_text {
@@ -711,7 +706,7 @@ img, video {
   font-weight: 700;
 }
 
-.Kn_sKG_pci_step_list code, .Kn_sKG_pci_error_list code {
+.Kn_sKG_pci_item code {
   color: #60a5fa;
   background: #3b82f626;
   border-radius: 3px;
