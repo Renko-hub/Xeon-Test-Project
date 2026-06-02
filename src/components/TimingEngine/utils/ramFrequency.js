@@ -1,18 +1,14 @@
-import { MEMORY_PRESETS } from "../../RamConfiguration/data/memoryPresets";
-
 export const toEven = (value) => Math.round(value / 2) * 2;
 
 const ramFrequency = (state) => {
-  const { cpu, cpuModels, isDdr4 = true } = state || {};
-  const defFreq = isDdr4 ? 2133 : 1866;
+  const { cpu, cpuModels, isDdr4 } = state;
 
-  const model = cpuModels?.find((m) => m.name === cpu) || cpuModels?.[0];
-  const frequency = model?.maxFreq ?? defFreq;
+  // Находим нужную модель или берем первую из списка
+  const currentModel = cpuModels?.find((m) => m.name === cpu) ?? cpuModels?.[0];
 
+  // Возвращаем частоту: из модели, либо дефолт для DDR4 (2133), либо дефолт для DDR3 (1866)
   return {
-    frequency,
-    frequencyKey:
-      MEMORY_PRESETS?.[frequency] !== undefined ? frequency : defFreq,
+    frequency: currentModel?.maxFreq ?? (isDdr4 ? 2133 : 1866),
   };
 };
 

@@ -10,7 +10,7 @@ import globals from "globals";
 export default [
   js.configs.recommended,
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
@@ -19,7 +19,7 @@ export default [
         ecmaFeatures: { jsx: true },
       },
       globals: {
-        ...globals.browser, 
+        ...globals.browser,
         ...globals.node,
       },
     },

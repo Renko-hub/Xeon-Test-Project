@@ -1,7 +1,7 @@
 .header {
   background: #1a1a1a;
   border-bottom: 1px solid #333;
-  padding: 15px 0;
+  padding: 12px 0; /* Слегка уменьшили вертикальный паддинг */
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -9,19 +9,20 @@
 .header__container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap; /* Разрешаем перенос на новую строку, если вкладки не влезают */
+  gap: 8px 15px; /* Уменьшили горизонтальный гэп, добавили контролируемый вертикальный */
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .header__link {
   background: transparent;
   color: #888;
-  padding: 8px 10px;
+  padding: 6px 8px; /* Уменьшили внутренние отступы плашек */
   cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px; /* Снизили базовый шрифт для десктопа на 1px */
   text-decoration: none;
   white-space: nowrap;
   text-align: center;
@@ -48,26 +49,29 @@
   cursor: default;
 }
 
-@media (max-width: 1024px) {
+/* Планшетная и промежуточная зона, где ломался десктопный флекс */
+@media (max-width: 1200px) {
   .header__container {
-    gap: 10px;
+    gap: 8px 10px; /* Еще плотнее прижимаем элементы */
   }
   .header__link {
-    font-size: 13px;
-    padding: 8px 5px;
+    font-size: 12px; /* Уменьшаем шрифт на средних экранах */
+    padding: 6px 4px;
   }
 }
 
+/* Мобильная сетка */
 @media (max-width: 768px) {
   .header__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px 10px;
-    padding: 0 15px;
+    grid-template-columns: repeat(2, 1fr); /* Фиксированные 2 колонки */
+    gap: 10px 8px;
+    padding: 0 10px;
   }
   .header__link {
-    padding: 12px 5px;
-    font-size: 13px;
+    padding: 10px 4px;
+    font-size: 11px; /* На мобилках делаем текст компактнее, чтобы длинные фразы не обрезались */
+    white-space: normal; /* Разрешаем тексту внутри кнопки переноситься на 2 строки */
   }
   .header__link_active {
     border-top-color: #007bff;

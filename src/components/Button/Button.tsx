@@ -1,29 +1,10 @@
+// src/components/Button/Button.tsx
 import clsx from "clsx";
-import {
-  BUTTONS,
-  PresetButtonType,
-  GenButtonType,
-  PciButtonType,
-  DiskButtonType,
-  MemoryButtonType,
-  SlotsButtonType,
-  BoardButtonType,
-  ToolsButtonType,
-  ActionButtonType,
-} from "./Button.config";
+import { BUTTONS } from "./button.config";
 import s from "./Button.module.css";
 
 interface ButtonProps {
-  type:
-    | PresetButtonType
-    | GenButtonType
-    | PciButtonType
-    | DiskButtonType
-    | MemoryButtonType
-    | SlotsButtonType
-    | BoardButtonType
-    | ToolsButtonType
-    | ActionButtonType;
+  type: keyof typeof BUTTONS;
   isActive?: boolean;
   onClick?: () => void;
   className?: string;
@@ -31,7 +12,7 @@ interface ButtonProps {
 }
 
 const Button = ({ type, isActive, onClick, className, label }: ButtonProps) => {
-  const config = BUTTONS[type as keyof typeof BUTTONS];
+  const config = BUTTONS[type];
 
   return (
     <button
@@ -39,11 +20,12 @@ const Button = ({ type, isActive, onClick, className, label }: ButtonProps) => {
       onClick={onClick}
       className={clsx(
         s.button,
-        isActive ? config.active : config.normal,
+        // Вернули ?. и добавили || "" на случай, если конфиг не нашелся
+        isActive ? config?.active : config?.normal || "",
         className,
       )}
     >
-      {label || config.label}
+      {label || config?.label}
     </button>
   );
 };

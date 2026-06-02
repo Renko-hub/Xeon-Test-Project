@@ -1,0 +1,74 @@
+.tools_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tools_label {
+  color: #888;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.pci_label_spacing {
+  margin-top: 12px;
+}
+
+.tools_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.tools_icon {
+  flex-shrink: 0;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  padding-top: 1px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.tools_item:hover .tools_icon {
+  filter: drop-shadow(0 0 5px #3b82f6);
+  transform: scale(1.2);
+}
+
+.tools_text {
+  font-size: 13px;
+  line-height: 1.35;
+  color: #cbd5e1;
+}
+
+.btn_group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.tools_button {
+  flex: 1 1 120px;
+  width: auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1024px) {
+  .tools_button {
+    flex: 1 1 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tools_button {
+    flex: 1 1 100%;
+    height: 40px;
+  }
+}

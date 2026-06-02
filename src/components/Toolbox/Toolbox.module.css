@@ -50,11 +50,6 @@
   border-left-color: #3b82f6;
 }
 
-.info_container,
-.tools_container {
-  width: 100%;
-}
-
 @media (max-width: 1024px) {
   .toolbox_container {
     max-width: 100%;
