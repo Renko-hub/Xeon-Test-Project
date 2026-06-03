@@ -3,7 +3,7 @@ const FivrBios = ({ cpuGen = "V3" } = {}) => {
 
   return {
     title: "FIVR CONFIGURATION",
-    path: "CHIPSET > OVERCLOCKING FEATURE",
+    path: "INTELRCSETUP > OVERCLOCKING FEATURE > SVID/FIVR",
     content: isV4
       ? [
           { text_left: "SVID Support", text_right: "Disabled" },

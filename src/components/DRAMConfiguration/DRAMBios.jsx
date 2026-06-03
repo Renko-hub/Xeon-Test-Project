@@ -3,7 +3,7 @@ const DRAMBios = ({ ramType = "ecc" } = {}) => {
 
   return {
     title: "DRAM RAPL CONFIGURATION",
-    path: "INTELRCSETUP > DRAM RAPL CONFIGURATION",
+    path: "INTELRCSETUP > ADVANCED POWER MANAGEMENT CONFIGURATION > DRAM RAPL CONFIGURATION",
     content: isDesktop
       ? [
           {
