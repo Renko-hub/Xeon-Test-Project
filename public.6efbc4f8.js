@@ -27446,8 +27446,8 @@ const useHeaderCarousel = (activeClass, itemClass)=>{
             entries.forEach((entry)=>{
                 const link = entry.target;
                 const ratio = entry.intersectionRatio;
-                link.style.transform = `scale(${0.8 + ratio * 0.2})`;
-                link.style.opacity = String(0.4 + ratio * 0.6);
+                link.style.transform = `scale(${0.85 + ratio * 0.15})`;
+                link.style.opacity = String(0.75 + ratio * 0.25);
             });
         };
         const observer = new IntersectionObserver(handleIntersect, observerOptions);
