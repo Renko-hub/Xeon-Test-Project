@@ -1,3 +1,4 @@
+import React from "react";
 import Button from "../Button/Button";
 import Select from "../Select/Select";
 import timingEngine from "../TimingEngine/timingEngine.js";
@@ -5,7 +6,13 @@ import { formatRamLabel } from "./data/ramData";
 
 const RamTools = ({ styles: s, param, setParam }) => {
   const { config, updateParam } = timingEngine(param);
-  const change = updateParam(setParam);
+  const baseChange = updateParam(setParam);
+
+  const change = (key, value) => {
+    const nextEngine = timingEngine({ ...param, [key]: value }, key);
+    setParam(nextEngine.state);
+  };
+
   const cpuItems = config.cpuModels.map((item) => item.name);
 
   return (

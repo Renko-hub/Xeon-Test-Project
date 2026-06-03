@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BiosWindow from "../BiosWindow/BiosWindow";
 import Toolbox from "../Toolbox/Toolbox";
+import timingEngine from "../TimingEngine/timingEngine.js";
 import RamBios from "./RamBios";
 import Info from "./RamInfo";
 import Tools from "./RamTools";
@@ -15,8 +16,18 @@ const RamConfiguration = ({ selectedButton }) => {
     slot: "slots1",
     preset: "safe",
     ramSize: 4,
+    history: {
+      V2: { cpu: "", ramSize: 4 },
+      V3: { cpu: "", ramSize: 16 },
+      V4: { cpu: "", ramSize: 16 },
+    },
     ...selectedButton,
   });
+
+  const { updateParam } = timingEngine(param);
+  const change = updateParam(setParam);
+
+  const biosData = RamBios(param);
 
   return (
     <>
@@ -25,11 +36,17 @@ const RamConfiguration = ({ selectedButton }) => {
         toolsLabel="КАЛЬКУЛЯТОР ТАЙМИНГОВ"
         renderInfo={Info}
         renderTools={(props) => (
-          <Tools {...props} param={param} setParam={setParam} />
+          <Tools {...props} param={param} setParam={setParam} change={change} />
         )}
       />
 
-      <BiosWindow {...RamBios(param, setParam)} />
+      <BiosWindow
+        title={biosData.title}
+        path={biosData.path}
+        content={biosData.content}
+        state={param}
+        update={change}
+      />
     </>
   );
 };

@@ -3,7 +3,13 @@ import s from "./BiosInput.module.css";
 
 const BiosInput = ({ field, state = {}, update, isFirst }) => {
   const inputRef = useRef(null);
-  const rawValue = state[field] !== undefined ? String(state[field]) : "";
+  const isFreq = field === "userFrequency";
+
+  let rawValue = state[field] !== undefined ? String(state[field]) : "";
+  if (isFreq && rawValue === "") {
+    rawValue = String(state["frequency"] || 1866);
+  }
+
   const numericValue = parseInt(rawValue, 10) || 0;
 
   useEffect(() => {
@@ -16,10 +22,11 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
 
   const handleKeyDown = (e) => {
     if (e.key === "ArrowUp") {
-      setParamValue(numericValue + 1);
+      setParamValue(numericValue + (isFreq ? 133 : 1));
     }
     if (e.key === "ArrowDown") {
-      setParamValue(Math.max(numericValue - 1, 6));
+      const minLimit = isFreq ? 800 : 6;
+      setParamValue(Math.max(numericValue - (isFreq ? 133 : 1), minLimit));
     }
     if (e.key === "Enter") {
       const inputs = Array.from(document.querySelectorAll(`.${s.bios_input}`));
@@ -37,13 +44,19 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
       [
       <input
         ref={inputRef}
+        type="text"
+        inputMode="numeric"
+        pattern="[0-9]*"
         className={s.bios_input}
         value={rawValue}
         placeholder="--"
         onFocus={(e) => e.target.select()}
-        onBlur={() =>
-          rawValue === "" || numericValue < 6 ? setParamValue(6) : null
-        }
+        onBlur={() => {
+          const minLimit = isFreq ? 800 : 6;
+          if (rawValue === "" || numericValue < minLimit) {
+            setParamValue(minLimit);
+          }
+        }}
         onChange={(e) => {
           const val = e.target.value;
           if (val === "" || /^\d*$/.test(val)) {

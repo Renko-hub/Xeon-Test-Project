@@ -19,6 +19,8 @@ const PrimaryTimings = (state, frequency) => {
     tCL: sCL,
     tRCD: sRCD,
     tRP: sRP,
+    tRAS: sRAS, // Принимаем ручное значение tRAS из стейта
+    tRC: sRC, // Принимаем ручное значение tRC из стейта
   } = state;
 
   const slotsCount = Number(slot?.replace("slots", "")) || 2;
@@ -43,7 +45,7 @@ const PrimaryTimings = (state, frequency) => {
     {};
   const v4Offset = isV4 && frequency >= 2133 ? 2 : 0;
 
-  // Хелпер расчета тайминга (в одну строку, без if)
+  // Хелпер расчета тайминга (с поддержкой кастомного ввода параметров)
   const calc = (userVal, presetVal) =>
     preset === "custom" && userVal !== undefined && userVal !== ""
       ? Number(userVal)
@@ -54,12 +56,26 @@ const PrimaryTimings = (state, frequency) => {
   const stdCL = calc(sCL, currentPreset.tCL);
   const stdRCD = calc(sRCD, currentPreset.tRCD);
   const stdRP = calc(sRP, currentPreset.tRP);
-  const stdTras = toEven(stdCL + stdRCD + (isV2 ? 4 : 2));
-  const stdTrc = isDdr4
+
+  // Вычисляем базовое автоматическое значение tRAS
+  const autoTras = toEven(stdCL + stdRCD + (isV2 ? 4 : 2));
+  // Если в режиме custom пользователь ввел tRAS вручную — берем его, иначе автоматическое
+  const stdTras =
+    preset === "custom" && sRAS !== undefined && sRAS !== ""
+      ? Number(sRAS)
+      : autoTras;
+
+  // Вычисляем базовое автоматическое значение tRC
+  const autoTrc = isDdr4
     ? Math.max(isV3 || isV4 ? toEven(stdTras + 4) : stdCL + stdRCD + stdRP, 34)
     : isV3 || isV4
       ? toEven(stdTras + 4)
       : stdCL + stdRCD + stdRP;
+  // Если в режиме custom пользователь ввел tRC вручную — берем его, иначе автоматическое
+  const stdTrc =
+    preset === "custom" && sRC !== undefined && sRC !== ""
+      ? Number(sRC)
+      : autoTrc;
 
   // 3. Финальный маппинг результата через один тернарный оператор
   return preset === "ultra"

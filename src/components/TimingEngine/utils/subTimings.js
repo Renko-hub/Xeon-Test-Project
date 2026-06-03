@@ -9,8 +9,8 @@ import {
 } from "../../RamConfiguration/data/memoryPresets";
 import { toEven } from "./ramFrequency";
 
-const SubTimings = (
-  {
+const SubTimings = (state, primaries, frequency) => {
+  const {
     preset,
     ramSize,
     slot,
@@ -21,45 +21,72 @@ const SubTimings = (
     isDdr4,
     typeKey,
     isEcc,
-  },
-  primaries,
-  frequency,
-) => {
+    tWR: sWR,
+    tREFI: sREFI,
+    tRRD: sRRD,
+    tRTP: sRTP,
+    tWTR: sWTR,
+  } = state;
+
   const slotsCount = Number(slot?.replace("slots", "")) || 2;
   const isHighCap = ramSize / Math.max(1, slotsCount) >= 12 || ramSize >= 32;
 
-  // 1. Линейный сбор базовых таймингов и штрафов (без if-else)
   const freqPreset = MEMORY_PRESETS?.[frequency]?.safe || MEMORY_PRESETS?.safe;
   const base = PROFILE_SUBTIMINGS?.[preset]?.[typeKey] || {};
   const hPen = PENALTIES?.highCapacity?.[typeKey] || {};
   const ePen = PENALTIES?.ecc?.[typeKey] || {};
 
-  const tFAW = toEven(
+  const autoFAW = toEven(
     (base.tFAW ?? freqPreset?.tFAW ?? 24) +
       (isHighCap ? (hPen.tFAW ?? 0) : 0) +
       (isEcc ? (ePen.tFAW ?? 0) : 0),
   );
-  const tWR = toEven(
+  const tFAW = autoFAW;
+
+  const autoWR = toEven(
     (base.tWR ?? freqPreset?.tWR ?? 12) +
       (isHighCap ? (hPen.tWR ?? 0) : 0) +
       (isEcc ? (ePen.tWR ?? 0) : 0),
   );
-  const tRRD =
+  const tWR =
+    preset === "custom" && sWR !== undefined && sWR !== ""
+      ? Number(sWR)
+      : autoWR;
+
+  const autoRRD =
     (base.tRRD ?? freqPreset?.tRRD ?? 4) +
     (isHighCap ? (hPen.tRRD ?? 0) : 0) +
     (isEcc ? (ePen.tRRD ?? 0) : 0);
-  const tWTR =
-    (base.tWTR ?? freqPreset?.tWTR ?? 6) + (isHighCap ? (hPen.tWTR ?? 0) : 0);
-  const tRTP =
-    (base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? (ePen.tRTP ?? 0) : 0);
+  const tRRD =
+    preset === "custom" && sRRD !== undefined && sRRD !== ""
+      ? Number(sRRD)
+      : autoRRD;
 
-  // 2. Линейный расчет констант
+  const autoWTR =
+    (base.tWTR ?? freqPreset?.tWTR ?? 6) + (isHighCap ? (hPen.tWTR ?? 0) : 0);
+  const tWTR =
+    preset === "custom" && sWTR !== undefined && sWTR !== ""
+      ? Number(sWTR)
+      : autoWTR;
+
+  const autoRTP =
+    (base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? (ePen.tRTP ?? 0) : 0);
+  const tRTP =
+    preset === "custom" && sRTP !== undefined && sRTP !== ""
+      ? Number(sRTP)
+      : autoRTP;
+
   const profileKey =
     preset === "custom" || preset === "ultra" ? "safe" : preset;
-  const tREFI =
+
+  const autoREFI =
     TREFI_TABLE?.[preset === "ultra" ? "ultra" : profileKey]?.[gen] ??
     TREFI_TABLE?.safe?.[gen] ??
     7800;
+  const tREFI =
+    preset === "custom" && sREFI !== undefined && sREFI !== ""
+      ? Number(sREFI)
+      : autoREFI;
 
   const stabilityBonus =
     (Math.floor((ramSize - 8) / 8) * 10 +
@@ -70,7 +97,6 @@ const SubTimings = (
       (board === "matx" ? 16 : 0)) *
     (isDdr4 ? 1 : 1.35);
 
-  // 3. Расчет tRFC через тернарное выражение (вместо if-else дерева)
   const tRFC =
     preset === "ultra"
       ? toEven(
@@ -92,7 +118,6 @@ const SubTimings = (
                 (isDdr4 ? 312 : 240)) + stabilityBonus,
             );
 
-  // 4. Определение лимита в одну строку
   const limitValue =
     isSpecialConfig && preset !== "ultra"
       ? (SPECIAL_LIMITS?.[profileKey] ?? toEven(tRFC * 0.92))

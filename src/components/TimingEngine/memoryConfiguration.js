@@ -7,21 +7,44 @@ const memoryConfiguration = (state, changedKey) => {
     memory: userMemory,
     density: userDensity,
     slot: userSlot,
-    cpu: userCpu,
+    cpu,
     board,
+    ramSize,
+    history = { V2: {}, V3: {}, V4: {} },
+    userFrequency,
+    tCL,
+    tRP,
+    tRCD,
+    tRAS,
+    tRC,
+    tWR,
+    tREFI,
+    tRRD,
+    tRTP,
+    tWTR,
+    tCR,
   } = state;
 
-  // 1. Определение платформы и типов данных
+  const cpuList = CPU_MODELS[gen] ?? [];
+
+  let userCpu = cpu;
+  let userRamSize = ramSize;
+
+  if (changedKey === "gen") {
+    const saved = history[gen] || {};
+    userCpu = saved.cpu !== undefined ? saved.cpu : (cpuList[0]?.name ?? "");
+    userRamSize =
+      saved.ramSize !== undefined ? saved.ramSize : gen === "V2" ? 4 : 16;
+  }
+
   const isV2 = gen === "V2";
   const isV3 = gen === "V3";
   const isV4 = gen === "V4";
   const ramType = isV2 ? "DDR3" : "DDR4";
   const isDdr4 = ramType === "DDR4";
   const typeKey = isDdr4 ? "ddr4" : "ddr3";
-  const cpuList = CPU_MODELS[gen] ?? [];
 
-  // 2. Валидация объема памяти (ramSize) без мутаций и без жесткого сброса DESKTOP до 32GB
-  const rawRamSize = Number(state.ramSize) || 8;
+  const rawRamSize = Number(userRamSize) || 8;
   const step1Size = changedKey === "gen" && rawRamSize === 6 ? 4 : rawRamSize;
 
   const currentRamSizes = RAM_SIZES.filter((size) => size !== 6 || isV2);
@@ -29,9 +52,10 @@ const memoryConfiguration = (state, changedKey) => {
     ? step1Size
     : currentRamSizes[0];
 
-  // Вспомогательная функция для симуляции расчета слотов (используется для автоопределения типа памяти)
+  const isV2Special = finalRamSize === 6 && isV2;
+
   const getValidSlotsForType = (memType) => {
-    if (finalRamSize === 6 && isV2) {
+    if (isV2Special) {
       return [2, 3];
     }
     const availableModules = RAM_CONFIGS[ramType]?.[memType] ?? [];
@@ -56,39 +80,39 @@ const memoryConfiguration = (state, changedKey) => {
     });
   };
 
-  // 3. Валидация типа памяти (memory) с автопереключением на ECC для больших объемов
-  const isV2Special = finalRamSize === 6 && isV2;
   const isDesktopPossible = getValidSlotsForType("desktop").length > 0;
+  const isEccPossible = getValidSlotsForType("ecc").length > 0 && !isV2Special;
 
-  // Исключаем desktop, если на десктопных планках физически невозможно собрать выбранный объем
   const memoryTypesArray = ["desktop", "ecc"].filter((type) => {
-    if (isV2Special && type === "ecc") {
+    if (type === "ecc" && !isEccPossible) {
       return false;
     }
-    if (!isDesktopPossible && type === "desktop") {
+    if (type === "desktop" && !isDesktopPossible) {
       return false;
     }
     return true;
   });
 
-  const memory = memoryTypesArray.includes(userMemory)
-    ? userMemory
-    : memoryTypesArray[0];
+  const memory = isV2Special
+    ? "desktop"
+    : memoryTypesArray.includes(userMemory)
+      ? userMemory
+      : memoryTypesArray[0];
   const isEcc = memory === "ecc";
 
-  // 4. Определение доступных конфигураций слотов для уже валидного типа памяти
   const modules = RAM_CONFIGS[ramType]?.[memory] ?? [];
 
-  const getValidSlots = (availableModules) =>
-    isV2Special
-      ? [2, 3]
-      : [1, 2, 3, 4].filter((slots) => {
-          const moduleSize = finalRamSize / slots;
-          return (
-            Number.isInteger(moduleSize) &&
-            availableModules.includes(moduleSize)
-          );
-        });
+  const getValidSlots = (availableModules) => {
+    if (isV2Special) {
+      return [2, 3];
+    }
+    return [1, 2, 3, 4].filter((slots) => {
+      const moduleSize = finalRamSize / slots;
+      return (
+        Number.isInteger(moduleSize) && availableModules.includes(moduleSize)
+      );
+    });
+  };
 
   const slotOverrides = {
     20: { standard: [3, 4], high: [2] },
@@ -105,7 +129,6 @@ const memoryConfiguration = (state, changedKey) => {
     ? override.high
     : getValidSlots(modules.filter((m) => m >= 16));
 
-  // 5. Определение плотности чипов (density) через линейный тернарник
   const density =
     isV2 && memory === "desktop"
       ? "no"
@@ -115,12 +138,13 @@ const memoryConfiguration = (state, changedKey) => {
           ? "no"
           : userDensity;
 
-  // 6. Выбор валидного слота
   const baseSlotsArray = density === "yes" ? highDensitySlots : standardSlots;
-  const visibleSlotsArray =
-    baseSlotsArray.length > 0
+
+  const visibleSlotsArray = isV2Special
+    ? [2, 3]
+    : baseSlotsArray.length > 0
       ? baseSlotsArray
-      : standardSlots.length
+      : standardSlots.length > 0
         ? standardSlots
         : [2];
 
@@ -130,7 +154,6 @@ const memoryConfiguration = (state, changedKey) => {
     : visibleSlotsArray[0];
   const slot = `slots${validSlotNum}`;
 
-  // 7. Проверка процессора и спец-конфигураций
   const currentCpu = cpuList.some((m) => m.name === userCpu)
     ? userCpu
     : (cpuList[0]?.name ?? "");
@@ -142,6 +165,19 @@ const memoryConfiguration = (state, changedKey) => {
     density === "no" &&
     ((finalRamSize === 16 && validSlotNum === 2) ||
       (finalRamSize === 32 && validSlotNum === 4));
+
+  const updatedHistory = {
+    ...history,
+    [gen]: {
+      cpu: currentCpu,
+      ramSize: finalRamSize,
+    },
+  };
+
+  const uiMemoryTypes = {
+    desktop: true,
+    ecc: finalRamSize !== 6,
+  };
 
   return {
     ...state,
@@ -158,7 +194,6 @@ const memoryConfiguration = (state, changedKey) => {
     isEcc,
     typeKey,
     cpu: currentCpu,
-    // Скрываем вопрос высокой плотности на V2, если выбрана обычная десктопная память
     isSelectionRequired:
       finalRamSize >= 16 &&
       finalRamSize <= 32 &&
@@ -168,14 +203,24 @@ const memoryConfiguration = (state, changedKey) => {
       (acc, num) => ({ ...acc, [`slots${num}`]: true }),
       {},
     ),
-    memoryTypes: memoryTypesArray.reduce(
-      (acc, type) => ({ ...acc, [type]: true }),
-      {},
-    ),
+    memoryTypes: uiMemoryTypes,
     channelsName:
       ["Single", "Dual", "Triple", "Quad"][Math.min(validSlotNum - 1, 3)] ??
       "Single",
     ramSizes: currentRamSizes,
+    history: updatedHistory,
+    userFrequency,
+    tCL,
+    tRP,
+    tRCD,
+    tRAS,
+    tRC,
+    tWR,
+    tREFI,
+    tRRD,
+    tRTP,
+    tWTR,
+    tCR,
   };
 };
 

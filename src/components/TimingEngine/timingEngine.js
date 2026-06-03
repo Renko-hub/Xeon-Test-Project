@@ -8,7 +8,6 @@ const timingEngine = (state, changedKey) => {
   const config = memoryConfiguration(state, changedKey);
   const baseData = { ...state, ...config };
 
-  // 1. Линейное приведение таймингов к числу без использования мутирующего forEach
   const userCL =
     baseData.tCL !== undefined && baseData.tCL !== ""
       ? Number(baseData.tCL)
@@ -29,31 +28,26 @@ const timingEngine = (state, changedKey) => {
     tRCD: userRCD,
   };
 
-  // 2. Сбор данных из утилит (частота и первичные тайминги)
   const { frequency } = ramFrequency(dataWithParsedTimings);
   const primaries = PrimaryTimings(dataWithParsedTimings, frequency);
 
-  // 3. Вычисление финальных первичных таймингов (избавляемся от мутаций data.tCL)
   const isCustom = dataWithParsedTimings.preset === "custom";
   const finalPrimaries = {
     ...primaries,
-    tCL: Number((isCustom && userCL) || primaries.tCL),
-    tRP: Number((isCustom && userRP) || primaries.tRP),
-    tRCD: Number((isCustom && userRCD) || primaries.tRCD),
+    tCL: isCustom && userCL !== undefined ? userCL : primaries.tCL,
+    tRP: isCustom && userRP !== undefined ? userRP : primaries.tRP,
+    tRCD: isCustom && userRCD !== undefined ? userRCD : primaries.tRCD,
   };
 
-  // Полный объект данных для передачи в subTimings и performance
   const fullData = { ...dataWithParsedTimings, ...finalPrimaries };
 
   const subTimings = SubTimings(fullData, finalPrimaries, frequency);
   const performance = ramPerformance(fullData, frequency, finalPrimaries);
 
-  // 4. Форматирование строки tRFC в одну строку кода
   const tRfcFormatted = subTimings.tRFC_Values
-    ? `${subTimings.tRFC_Values.current} (${["aggressive", "custom", "ultra"].includes(fullData.preset) ? "LIMIT" : "IDEAL"}: ${subTimings.tRFC_Values.limitValue})`
+    ? `${subTimings.tRFC_Values.current} (${fullData.preset === "ultra" ? "LIMIT" : "IDEAL"}: ${subTimings.tRFC_Values.limitValue})`
     : String(subTimings.tRFC ?? "");
 
-  // 5. Чистый стейт на выход без промежуточного создания переменных
   return {
     state: {
       board: fullData.board,
@@ -65,9 +59,19 @@ const timingEngine = (state, changedKey) => {
       slot: fullData.slot,
       preset: fullData.preset,
       unlocked: fullData.unlocked,
+      history: fullData.history,
+      userFrequency: fullData.userFrequency,
       tCL: fullData.tCL,
       tRP: fullData.tRP,
       tRCD: fullData.tRCD,
+      tRAS: fullData.tRAS,
+      tRC: fullData.tRC,
+      tWR: fullData.tWR,
+      tREFI: fullData.tREFI,
+      tRRD: fullData.tRRD,
+      tRTP: fullData.tRTP,
+      tWTR: fullData.tWTR,
+      tCR: fullData.tCR || fullData.tCP,
     },
     config,
     timings: {
@@ -77,9 +81,11 @@ const timingEngine = (state, changedKey) => {
       freqClean: String(performance.freq ?? "").replace(" MHz", ""),
       tRfcFormatted,
     },
-    // Теперь метод принимает setParam и использует функциональное обновление стейта
     updateParam: (setParam) => (key, value) => {
-      setParam((prev) => timingEngine({ ...prev, [key]: value }, key).state);
+      setParam((prev) => ({
+        ...prev,
+        [key]: value,
+      }));
     },
   };
 };

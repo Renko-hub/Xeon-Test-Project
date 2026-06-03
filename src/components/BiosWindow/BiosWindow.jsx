@@ -1,21 +1,33 @@
 import React from "react";
 import { clsx } from "clsx";
+import BiosInput from "../BiosInput/BiosInput";
 import s from "./BiosWindow.module.css";
 
-const BiosWindow = ({ title, content = [], path }) => (
+const BiosWindow = ({ title, content = [], path, state, update }) => (
   <div className={s.bios_container}>
     <div className={s.bios__header}>{title}</div>
     <ul className={s.bios__list}>
       {content.map(
-        ({ text_left, text_right, isEditable, isDisabled }, index) => (
+        (
+          { text_left, text_right, isEditable, isDisabled, field, isFirst },
+          index,
+        ) => (
           <li key={index} className={s.bios__item}>
             <span className={s.text_left}>{text_left}</span>
-            {/* Класс disabled добавляется ТОЛЬКО если поле явно заблокировано (isDisabled: true) */}
-            <span
-              className={clsx(s.text_right, isDisabled && s.state_disabled)}
-            >
-              {isEditable ? text_right : `[${text_right ?? "N/A"}]`}
-            </span>
+            {isEditable ? (
+              <BiosInput
+                field={field}
+                state={state}
+                update={update}
+                isFirst={isFirst}
+              />
+            ) : (
+              <span
+                className={clsx(s.text_right, isDisabled && s.state_disabled)}
+              >
+                {`[${text_right ?? "N/A"}]`}
+              </span>
+            )}
           </li>
         ),
       )}

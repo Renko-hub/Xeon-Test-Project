@@ -17,7 +17,7 @@ const useUltraLogic = (state, update) => {
         ...prev,
         active: false,
         unlocked: shouldUnlock || prev.unlocked,
-        ...(shouldUnlock && { profile: "ultra", lastChangedKey: "profile" }),
+        ...(shouldUnlock && { preset: "ultra" }),
       }));
     },
     [update],
