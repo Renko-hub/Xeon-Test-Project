@@ -731,23 +731,36 @@ var _reactRouterDom = require("react-router-dom");
 var _globalCss = require("./global.css");
 var _header = require("./components/Header/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
+var _advancedConfiguration = require("./components/AdvancedConfiguration/AdvancedConfiguration");
+var _advancedConfigurationDefault = parcelHelpers.interopDefault(_advancedConfiguration);
 var _csmconfiguration = require("./components/CSMConfiguration/CSMConfiguration");
 var _csmconfigurationDefault = parcelHelpers.interopDefault(_csmconfiguration);
+var _dramconfiguration = require("./components/DRAMConfiguration/DRAMConfiguration");
+var _dramconfigurationDefault = parcelHelpers.interopDefault(_dramconfiguration);
 var _fanConfiguration = require("./components/FanConfiguration/FanConfiguration");
 var _fanConfigurationDefault = parcelHelpers.interopDefault(_fanConfiguration);
+var _fivrConfiguration = require("./components/FivrConfiguration/FivrConfiguration");
+var _fivrConfigurationDefault = parcelHelpers.interopDefault(_fivrConfiguration);
 var _iioconfiguration = require("./components/IIOConfiguration/IIOConfiguration");
 var _iioconfigurationDefault = parcelHelpers.interopDefault(_iioconfiguration);
+// Наш новый компонент контроллера памяти по вашим фото
+var _memoryConfiguration = require("./components/MemoryConfiguration/MemoryConfiguration");
+var _memoryConfigurationDefault = parcelHelpers.interopDefault(_memoryConfiguration);
 var _pciconfiguration = require("./components/PCIConfiguration/PCIConfiguration");
 var _pciconfigurationDefault = parcelHelpers.interopDefault(_pciconfiguration);
 var _powerConfiguration = require("./components/PowerConfiguration/PowerConfiguration");
 var _powerConfigurationDefault = parcelHelpers.interopDefault(_powerConfiguration);
-var _ramConfiguration = require("./components/RamConfiguration/RamConfiguration");
+var _ramConfiguration = require("./components/RamConfiguration/RamConfiguration"); // Возвращаем на место!
 var _ramConfigurationDefault = parcelHelpers.interopDefault(_ramConfiguration);
+var _thermalConfiguration = require("./components/ThermalConfiguration/ThermalConfiguration");
+var _thermalConfigurationDefault = parcelHelpers.interopDefault(_thermalConfiguration);
+var _usbconfiguration = require("./components/USBConfiguration/USBConfiguration");
+var _usbconfigurationDefault = parcelHelpers.interopDefault(_usbconfiguration);
 const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/index.tsx",
-                lineNumber: 18,
+                lineNumber: 25,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -761,84 +774,157 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                                 replace: true
                             }, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 21,
+                                lineNumber: 29,
                                 columnNumber: 34
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 21,
+                            lineNumber: 29,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             path: "/ram",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 23,
+                                lineNumber: 30,
                                 columnNumber: 37
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 23,
+                            lineNumber: 30,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/memory",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _memoryConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 31,
+                                columnNumber: 40
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 31,
+                            columnNumber: 9
+                        }, undefined),
+                        " ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/dram",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dramconfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 33,
+                                columnNumber: 38
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 33,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/thermal",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _thermalConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 34,
+                                columnNumber: 41
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 34,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/fivr",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fivrConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 35,
+                                columnNumber: 38
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 35,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             path: "/power",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 24,
+                                lineNumber: 36,
                                 columnNumber: 39
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 24,
+                            lineNumber: 36,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/advanced",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _advancedConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 37,
+                                columnNumber: 42
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 37,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             path: "/iio",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iioconfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 25,
+                                lineNumber: 38,
                                 columnNumber: 37
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 25,
+                            lineNumber: 38,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             path: "/csm",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmconfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 26,
+                                lineNumber: 39,
                                 columnNumber: 37
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 26,
+                            lineNumber: 39,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/usb",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _usbconfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 40,
+                                columnNumber: 37
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 40,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             path: "/fan",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 27,
+                                lineNumber: 41,
                                 columnNumber: 37
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 27,
+                            lineNumber: 41,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             path: "/pci",
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pciconfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 28,
+                                lineNumber: 42,
                                 columnNumber: 37
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 28,
+                            lineNumber: 42,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -848,44 +934,44 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                                 replace: true
                             }, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 30,
+                                lineNumber: 43,
                                 columnNumber: 34
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 30,
+                            lineNumber: 43,
                             columnNumber: 9
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/index.tsx",
-                    lineNumber: 20,
+                    lineNumber: 27,
                     columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/index.tsx",
-                lineNumber: 19,
+                lineNumber: 26,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/index.tsx",
-        lineNumber: 17,
+        lineNumber: 24,
         columnNumber: 3
     }, undefined);
 _c = App;
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 if (rootElement) {
     const root = (0, _clientDefault.default).createRoot(rootElement);
     root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "src/index.tsx",
-            lineNumber: 42,
+            lineNumber: 55,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.tsx",
-        lineNumber: 41,
+        lineNumber: 54,
         columnNumber: 5
     }, undefined));
 }
@@ -897,7 +983,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","react-router-dom":"61z4w","./global.css":"11axS","./components/Header/Header":"d3lRq","./components/CSMConfiguration/CSMConfiguration":"7IDf5","./components/FanConfiguration/FanConfiguration":"4qPFO","./components/IIOConfiguration/IIOConfiguration":"2Xem2","./components/PCIConfiguration/PCIConfiguration":"8gBEe","./components/PowerConfiguration/PowerConfiguration":"kEGQB","./components/RamConfiguration/RamConfiguration":"i2Oy5","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","react-router-dom":"61z4w","./global.css":"11axS","./components/Header/Header":"adfVe","./components/AdvancedConfiguration/AdvancedConfiguration":"lefX6","./components/CSMConfiguration/CSMConfiguration":"3pRr7","./components/DRAMConfiguration/DRAMConfiguration":"jHf28","./components/FanConfiguration/FanConfiguration":"4VRsi","./components/FivrConfiguration/FivrConfiguration":"5XUz3","./components/IIOConfiguration/IIOConfiguration":"fySTl","./components/MemoryConfiguration/MemoryConfiguration":"4q3An","./components/PCIConfiguration/PCIConfiguration":"iMU4J","./components/PowerConfiguration/PowerConfiguration":"20tYA","./components/RamConfiguration/RamConfiguration":"2rh6a","./components/ThermalConfiguration/ThermalConfiguration":"7In8J","./components/USBConfiguration/USBConfiguration":"gnPgD","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -24845,18 +24931,20 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"11axS":[function() {},{}],"d3lRq":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$620a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$620a.init();
+},{}],"11axS":[function() {},{}],"adfVe":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6b75 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$6b75.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$620a.prelude(module);
+$parcel$ReactRefreshHelpers$6b75.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
 var _headerModuleCss = require("./Header.module.css");
 var _headerModuleCssDefault = parcelHelpers.interopDefault(_headerModuleCss);
 const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
@@ -24866,67 +24954,121 @@ const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                     to: "/ram",
-                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
                     children: "Xeon Ram Tool"
                 }, void 0, false, {
-                    fileName: "src/components/Header/Header.tsx",
-                    lineNumber: 7,
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 8,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/memory",
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
+                    children: "Memory Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 17,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/dram",
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
+                    children: "DRAM RAPL Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 25,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/thermal",
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
+                    children: "Memory Thermal"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 33,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/fivr",
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
+                    children: "FIVR Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 41,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                     to: "/power",
-                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
                     children: "Power Management"
                 }, void 0, false, {
-                    fileName: "src/components/Header/Header.tsx",
-                    lineNumber: 15,
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 49,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/advanced",
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
+                    children: "Advanced Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 57,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                     to: "/iio",
-                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
                     children: "IIO Configuration"
                 }, void 0, false, {
-                    fileName: "src/components/Header/Header.tsx",
-                    lineNumber: 23,
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 65,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                     to: "/csm",
-                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
                     children: "CSM Configuration"
                 }, void 0, false, {
-                    fileName: "src/components/Header/Header.tsx",
-                    lineNumber: 31,
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 73,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: "/usb",
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
+                    children: "USB Configuration"
+                }, void 0, false, {
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 81,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                     to: "/fan",
-                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
                     children: "Fan Configuration"
                 }, void 0, false, {
-                    fileName: "src/components/Header/Header.tsx",
-                    lineNumber: 39,
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 89,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                     to: "/pci",
-                    className: ({ isActive })=>`${(0, _headerModuleCssDefault.default).header__link} ${isActive ? (0, _headerModuleCssDefault.default).header__link_active : ''}`,
+                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
                     children: "PCI Configuration"
                 }, void 0, false, {
-                    fileName: "src/components/Header/Header.tsx",
-                    lineNumber: 47,
+                    fileName: "src/components/Header/Header.jsx",
+                    lineNumber: 97,
                     columnNumber: 7
                 }, undefined)
             ]
         }, void 0, true, {
-            fileName: "src/components/Header/Header.tsx",
-            lineNumber: 6,
+            fileName: "src/components/Header/Header.jsx",
+            lineNumber: 7,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
-        fileName: "src/components/Header/Header.tsx",
-        lineNumber: 5,
+        fileName: "src/components/Header/Header.jsx",
+        lineNumber: 6,
         columnNumber: 3
     }, undefined);
 _c = Header;
@@ -24934,12 +25076,33 @@ exports.default = Header;
 var _c;
 $RefreshReg$(_c, "Header");
 
-  $parcel$ReactRefreshHelpers$620a.postlude(module);
+  $parcel$ReactRefreshHelpers$6b75.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react-router-dom":"61z4w","./Header.module.css":"bjXDN","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"bjXDN":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react-router-dom":"61z4w","clsx":"dOSJC","./Header.module.css":"bjXDN","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dOSJC":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "clsx", ()=>clsx);
+function r(e) {
+    var t, f, n = "";
+    if ("string" == typeof e || "number" == typeof e) n += e;
+    else if ("object" == typeof e) {
+        if (Array.isArray(e)) {
+            var o = e.length;
+            for(t = 0; t < o; t++)e[t] && (f = r(e[t])) && (n && (n += " "), n += f);
+        } else for(f in e)e[f] && (n && (n += " "), n += f);
+    }
+    return n;
+}
+function clsx() {
+    for(var e, t, f = 0, n = "", o = arguments.length; f < o; f++)(e = arguments[f]) && (t = r(e)) && (n && (n += " "), n += t);
+    return n;
+}
+exports.default = clsx;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bjXDN":[function(require,module,exports,__globalThis) {
 module.exports["header"] = `MqZHCq_header`;
 module.exports["header__container"] = `MqZHCq_header__container`;
 module.exports["header__link"] = `MqZHCq_header__link`;
@@ -27223,117 +27386,143 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7IDf5":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$2edc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$2edc.init();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lefX6":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$c97a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$c97a.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2edc.prelude(module);
+$parcel$ReactRefreshHelpers$c97a.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _biosWindow = require("../BiosWindow/BiosWindow");
 var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
 var _toolbox = require("../Toolbox/Toolbox");
 var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
-var _csmbios = require("./CSMBios");
-var _csmbiosDefault = parcelHelpers.interopDefault(_csmbios);
-var _csminfo = require("./CSMInfo");
-var _csminfoDefault = parcelHelpers.interopDefault(_csminfo);
-var _csmtools = require("./CSMTools");
-var _csmtoolsDefault = parcelHelpers.interopDefault(_csmtools);
-const INITIAL_STATE = {
-    diskMode: "mbr"
-};
-const CSMConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
-        initialState: INITIAL_STATE,
-        title: "BOOT & RECOVERY",
-        toolsLabel: "DISK MODE",
-        renderInfo: (0, _csminfoDefault.default),
-        renderTools: (0, _csmtoolsDefault.default),
-        children: (p)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-                ...(0, _csmbiosDefault.default)(p.state)
+var _advancedBios = require("./AdvancedBios");
+var _advancedBiosDefault = parcelHelpers.interopDefault(_advancedBios);
+var _advancedInfo = require("./AdvancedInfo");
+var _advancedInfoDefault = parcelHelpers.interopDefault(_advancedInfo);
+var _advancedTools = require("./AdvancedTools");
+var _advancedToolsDefault = parcelHelpers.interopDefault(_advancedTools);
+var _s = $RefreshSig$();
+const AdvancedConfiguration = ({ selectedButton = "V2" })=>{
+    _s();
+    const [param, setParam] = (0, _react.useState)({
+        cpuGen: selectedButton
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "ADVANCED POWER CONFIGURATION",
+                toolsLabel: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0410 \u041F\u0418\u0422\u0410\u041D\u0418\u042F",
+                renderInfo: (0, _advancedInfoDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _advancedToolsDefault.default), {
+                        ...props,
+                        param: param,
+                        setParam: setParam
+                    }, void 0, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedConfiguration.jsx",
+                        lineNumber: 18,
+                        columnNumber: 11
+                    }, void 0)
             }, void 0, false, {
-                fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
-                lineNumber: 17,
-                columnNumber: 13
+                fileName: "src/components/AdvancedConfiguration/AdvancedConfiguration.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _advancedBiosDefault.default)(param)
+            }, void 0, false, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedConfiguration.jsx",
+                lineNumber: 22,
+                columnNumber: 7
             }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/CSMConfiguration/CSMConfiguration.tsx",
-        lineNumber: 10,
-        columnNumber: 3
-    }, undefined);
-_c = CSMConfiguration;
-exports.default = CSMConfiguration;
+        ]
+    }, void 0, true);
+};
+_s(AdvancedConfiguration, "ZZu+MitL8VQdC+bqAVFqtEytd7s=");
+_c = AdvancedConfiguration;
+exports.default = AdvancedConfiguration;
 var _c;
-$RefreshReg$(_c, "CSMConfiguration");
+$RefreshReg$(_c, "AdvancedConfiguration");
 
-  $parcel$ReactRefreshHelpers$2edc.postlude(module);
+  $parcel$ReactRefreshHelpers$c97a.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"fCqKj","../Toolbox/Toolbox":"2S4BZ","./CSMBios":"kb3Ag","./CSMInfo":"1hMh8","./CSMTools":"2pbW4","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fCqKj":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$87fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$87fc.init();
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./AdvancedBios":"kjvLS","./AdvancedInfo":"ijA4l","./AdvancedTools":"celag","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"hfQWA":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$ba44 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$ba44.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$87fc.prelude(module);
+$parcel$ReactRefreshHelpers$ba44.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _clsx = require("clsx");
+var _biosInput = require("../BiosInput/BiosInput");
+var _biosInputDefault = parcelHelpers.interopDefault(_biosInput);
 var _biosWindowModuleCss = require("./BiosWindow.module.css");
 var _biosWindowModuleCssDefault = parcelHelpers.interopDefault(_biosWindowModuleCss);
-const BiosWindow = ({ title, content = [], path })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const BiosWindow = ({ title, content = [], path, state, update })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: (0, _biosWindowModuleCssDefault.default).bios_container,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: (0, _biosWindowModuleCssDefault.default).bios__header,
                 children: title
             }, void 0, false, {
-                fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                lineNumber: 15,
+                fileName: "src/components/BiosWindow/BiosWindow.jsx",
+                lineNumber: 8,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                 className: (0, _biosWindowModuleCssDefault.default).bios__list,
-                children: content.map(({ text_left, text_right }, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                children: content.map(({ text_left, text_right, isEditable, isDisabled, field, isFirst }, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: (0, _biosWindowModuleCssDefault.default).bios__item,
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 className: (0, _biosWindowModuleCssDefault.default).text_left,
                                 children: text_left
                             }, void 0, false, {
-                                fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                                lineNumber: 19,
-                                columnNumber: 11
+                                fileName: "src/components/BiosWindow/BiosWindow.jsx",
+                                lineNumber: 16,
+                                columnNumber: 13
                             }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _clsx.clsx)((0, _biosWindowModuleCssDefault.default).text_right, (text_right === "Disabled" || text_right === "Disable") && (0, _biosWindowModuleCssDefault.default).state_disabled),
-                                children: [
-                                    "[",
-                                    text_right ?? "N/A",
-                                    "]"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                                lineNumber: 20,
-                                columnNumber: 11
+                            isEditable ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosInputDefault.default), {
+                                field: field,
+                                state: state,
+                                update: update,
+                                isFirst: isFirst
+                            }, void 0, false, {
+                                fileName: "src/components/BiosWindow/BiosWindow.jsx",
+                                lineNumber: 18,
+                                columnNumber: 15
+                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: (0, _clsx.clsx)((0, _biosWindowModuleCssDefault.default).text_right, isDisabled && (0, _biosWindowModuleCssDefault.default).state_disabled),
+                                children: `[${text_right ?? "N/A"}]`
+                            }, void 0, false, {
+                                fileName: "src/components/BiosWindow/BiosWindow.jsx",
+                                lineNumber: 25,
+                                columnNumber: 15
                             }, undefined)
                         ]
                     }, index, true, {
-                        fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                        lineNumber: 18,
-                        columnNumber: 9
+                        fileName: "src/components/BiosWindow/BiosWindow.jsx",
+                        lineNumber: 15,
+                        columnNumber: 11
                     }, undefined))
             }, void 0, false, {
-                fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                lineNumber: 16,
+                fileName: "src/components/BiosWindow/BiosWindow.jsx",
+                lineNumber: 9,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27343,14 +27532,14 @@ const BiosWindow = ({ title, content = [], path })=>/*#__PURE__*/ (0, _jsxDevRun
                     path
                 ]
             }, void 0, true, {
-                fileName: "src/components/BiosWindow/BiosWindow.tsx",
-                lineNumber: 32,
+                fileName: "src/components/BiosWindow/BiosWindow.jsx",
+                lineNumber: 35,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/BiosWindow/BiosWindow.tsx",
-        lineNumber: 14,
+        fileName: "src/components/BiosWindow/BiosWindow.jsx",
+        lineNumber: 7,
         columnNumber: 3
     }, undefined);
 _c = BiosWindow;
@@ -27358,33 +27547,12 @@ exports.default = BiosWindow;
 var _c;
 $RefreshReg$(_c, "BiosWindow");
 
-  $parcel$ReactRefreshHelpers$87fc.postlude(module);
+  $parcel$ReactRefreshHelpers$ba44.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","./BiosWindow.module.css":"aFKvL","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dOSJC":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "clsx", ()=>clsx);
-function r(e) {
-    var t, f, n = "";
-    if ("string" == typeof e || "number" == typeof e) n += e;
-    else if ("object" == typeof e) {
-        if (Array.isArray(e)) {
-            var o = e.length;
-            for(t = 0; t < o; t++)e[t] && (f = r(e[t])) && (n && (n += " "), n += f);
-        } else for(f in e)e[f] && (n && (n += " "), n += f);
-    }
-    return n;
-}
-function clsx() {
-    for(var e, t, f = 0, n = "", o = arguments.length; f < o; f++)(e = arguments[f]) && (t = r(e)) && (n && (n += " "), n += t);
-    return n;
-}
-exports.default = clsx;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"aFKvL":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","clsx":"dOSJC","./BiosWindow.module.css":"aFKvL","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../BiosInput/BiosInput":"4wZVh"}],"aFKvL":[function(require,module,exports,__globalThis) {
 module.exports["bios__footer"] = `ZDSeZG_bios__footer`;
 module.exports["bios__header"] = `ZDSeZG_bios__header`;
 module.exports["bios__item"] = `ZDSeZG_bios__item`;
@@ -27394,12 +27562,103 @@ module.exports["state_disabled"] = `ZDSeZG_state_disabled`;
 module.exports["text_left"] = `ZDSeZG_text_left`;
 module.exports["text_right"] = `ZDSeZG_text_right`;
 
-},{}],"2S4BZ":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$c86f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$c86f.init();
+},{}],"4wZVh":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2a73 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$2a73.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c86f.prelude(module);
+$parcel$ReactRefreshHelpers$2a73.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _biosInputModuleCss = require("./BiosInput.module.css");
+var _biosInputModuleCssDefault = parcelHelpers.interopDefault(_biosInputModuleCss);
+var _s = $RefreshSig$();
+const BiosInput = ({ field, state = {}, update, isFirst })=>{
+    _s();
+    const inputRef = (0, _react.useRef)(null);
+    const isFreq = field === "userFrequency";
+    let rawValue = state[field] !== undefined ? String(state[field]) : "";
+    if (isFreq && rawValue === "") rawValue = String(state["frequency"] || 1866);
+    const numericValue = parseInt(rawValue, 10) || 0;
+    (0, _react.useEffect)(()=>{
+        if (isFirst) inputRef.current?.focus();
+    }, [
+        isFirst
+    ]);
+    const setParamValue = (v)=>update?.(field, String(v));
+    const handleKeyDown = (e)=>{
+        if (e.key === "ArrowUp") setParamValue(numericValue + (isFreq ? 133 : 1));
+        if (e.key === "ArrowDown") {
+            const minLimit = isFreq ? 800 : 6;
+            setParamValue(Math.max(numericValue - (isFreq ? 133 : 1), minLimit));
+        }
+        if (e.key === "Enter") {
+            const inputs = Array.from(document.querySelectorAll(`.${(0, _biosInputModuleCssDefault.default).bios_input}`));
+            const next = inputs[inputs.indexOf(e.currentTarget) + 1];
+            if (next) next.focus();
+            else e.currentTarget.blur();
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+        className: (0, _biosInputModuleCssDefault.default).input_wrapper,
+        children: [
+            "[",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                ref: inputRef,
+                type: "text",
+                inputMode: "numeric",
+                pattern: "[0-9]*",
+                className: (0, _biosInputModuleCssDefault.default).bios_input,
+                value: rawValue,
+                placeholder: "--",
+                onFocus: (e)=>e.target.select(),
+                onBlur: ()=>{
+                    const minLimit = isFreq ? 800 : 6;
+                    if (rawValue === "" || numericValue < minLimit) setParamValue(minLimit);
+                },
+                onChange: (e)=>{
+                    const val = e.target.value;
+                    if (val === "" || /^\d*$/.test(val)) setParamValue(val);
+                },
+                onKeyDown: handleKeyDown
+            }, void 0, false, {
+                fileName: "src/components/BiosInput/BiosInput.jsx",
+                lineNumber: 45,
+                columnNumber: 7
+            }, undefined),
+            "]"
+        ]
+    }, void 0, true, {
+        fileName: "src/components/BiosInput/BiosInput.jsx",
+        lineNumber: 43,
+        columnNumber: 5
+    }, undefined);
+};
+_s(BiosInput, "cBQ6FQ+sf5H+lvNONLKqtm4aeQ8=");
+_c = BiosInput;
+exports.default = BiosInput;
+var _c;
+$RefreshReg$(_c, "BiosInput");
+
+  $parcel$ReactRefreshHelpers$2a73.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./BiosInput.module.css":"6bn1I","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6bn1I":[function(require,module,exports,__globalThis) {
+module.exports["bios_input"] = `CWsxPG_bios_input`;
+
+},{}],"eFAbl":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$fd9b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$fd9b.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fd9b.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27407,109 +27666,97 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _clsx = require("clsx");
 var _clsxDefault = parcelHelpers.interopDefault(_clsx);
-var _react = require("react");
 var _button = require("../Button/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _useTab = require("./hooks/useTab");
+var _useTabDefault = parcelHelpers.interopDefault(_useTab);
+var _info = require("./Info/Info");
+var _infoDefault = parcelHelpers.interopDefault(_info);
+var _tools = require("./Tools/Tools");
+var _toolsDefault = parcelHelpers.interopDefault(_tools);
 var _toolboxModuleCss = require("./Toolbox.module.css");
 var _toolboxModuleCssDefault = parcelHelpers.interopDefault(_toolboxModuleCss);
-var _infoModuleCss = require("./styles/Info.module.css");
-var _infoModuleCssDefault = parcelHelpers.interopDefault(_infoModuleCss);
-var _toolsModuleCss = require("./styles/Tools.module.css");
-var _toolsModuleCssDefault = parcelHelpers.interopDefault(_toolsModuleCss);
 var _s = $RefreshSig$();
-const styles = {
-    ...(0, _infoModuleCssDefault.default),
-    ...(0, _toolsModuleCssDefault.default)
-};
-const Toolbox = ({ initialState, title, toolsLabel, renderInfo, renderTools, children })=>{
+const Toolbox = ({ title, toolsLabel, renderInfo, renderTools })=>{
     _s();
-    const [state, setState] = (0, _react.useState)(initialState);
-    const [tab, setTab] = (0, _react.useState)("info");
-    const update = (patch)=>setState((prev)=>({
-                ...prev,
-                ...patch
-            }));
-    const p = {
-        state,
-        setState,
-        update,
-        setParam: (key, val)=>update({
-                [key]: val,
-                lastChangedKey: key
-            }),
-        styles
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    const { isInfo, isTools, setInfo, setTools } = (0, _useTabDefault.default)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: (0, _toolboxModuleCssDefault.default).toolbox_container,
         children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: (0, _clsxDefault.default)((0, _toolboxModuleCssDefault.default).toolbox_title, isInfo ? (0, _toolboxModuleCssDefault.default).info_active : (0, _toolboxModuleCssDefault.default).tools_active),
+                children: title
+            }, void 0, false, {
+                fileName: "src/components/Toolbox/Toolbox.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _toolboxModuleCssDefault.default).toolbox_container,
+                className: (0, _toolboxModuleCssDefault.default).toolbox_tabs,
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: (0, _clsxDefault.default)((0, _toolboxModuleCssDefault.default).toolbox_title, (0, _toolboxModuleCssDefault.default)[`${tab}_active`]),
-                        children: typeof title === "function" ? title(p) : title
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: "warning",
+                        isActive: isInfo,
+                        onClick: setInfo
                     }, void 0, false, {
-                        fileName: "src/components/Toolbox/Toolbox.tsx",
-                        lineNumber: 46,
+                        fileName: "src/components/Toolbox/Toolbox.jsx",
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _toolboxModuleCssDefault.default).toolbox_tabs,
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                type: "warning",
-                                isActive: tab === "info",
-                                onClick: ()=>setTab("info")
-                            }, void 0, false, {
-                                fileName: "src/components/Toolbox/Toolbox.tsx",
-                                lineNumber: 51,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                type: "tools",
-                                isActive: tab === "tools",
-                                onClick: ()=>setTab("tools"),
-                                label: toolsLabel
-                            }, void 0, false, {
-                                fileName: "src/components/Toolbox/Toolbox.tsx",
-                                lineNumber: 56,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/Toolbox/Toolbox.tsx",
-                        lineNumber: 50,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: (0, _clsxDefault.default)((0, _toolboxModuleCssDefault.default).toolbox_card, (0, _toolboxModuleCssDefault.default)[`${tab}_border`]),
-                        children: tab === "info" ? renderInfo?.(styles) : renderTools?.(p)
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: "tools",
+                        isActive: isTools,
+                        onClick: setTools,
+                        label: toolsLabel
                     }, void 0, false, {
-                        fileName: "src/components/Toolbox/Toolbox.tsx",
-                        lineNumber: 64,
+                        fileName: "src/components/Toolbox/Toolbox.jsx",
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/Toolbox/Toolbox.tsx",
-                lineNumber: 45,
+                fileName: "src/components/Toolbox/Toolbox.jsx",
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
-            typeof children === "function" ? children(p) : children
+            isInfo ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _infoDefault.default), {
+                cardClass: (0, _clsxDefault.default)((0, _toolboxModuleCssDefault.default).toolbox_card, (0, _toolboxModuleCssDefault.default).info_border),
+                renderInfo: renderInfo
+            }, void 0, false, {
+                fileName: "src/components/Toolbox/Toolbox.jsx",
+                lineNumber: 33,
+                columnNumber: 9
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolsDefault.default), {
+                cardClass: (0, _clsxDefault.default)((0, _toolboxModuleCssDefault.default).toolbox_card, (0, _toolboxModuleCssDefault.default).tools_border),
+                renderTools: renderTools
+            }, void 0, false, {
+                fileName: "src/components/Toolbox/Toolbox.jsx",
+                lineNumber: 38,
+                columnNumber: 9
+            }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/components/Toolbox/Toolbox.jsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
 };
-_s(Toolbox, "T4qVCQ9qqBKX8ys8q8gDHvhcdrI=");
+_s(Toolbox, "1t0qtCrT/BFbC4JSJog5XBB2yxM=", false, function() {
+    return [
+        (0, _useTabDefault.default)
+    ];
+});
 _c = Toolbox;
 exports.default = Toolbox;
 var _c;
 $RefreshReg$(_c, "Toolbox");
 
-  $parcel$ReactRefreshHelpers$c86f.postlude(module);
+  $parcel$ReactRefreshHelpers$fd9b.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","react":"jMk1U","../Button/Button":"4hbTW","./Toolbox.module.css":"fNILQ","./styles/Info.module.css":"4y82s","./styles/Tools.module.css":"25PqV","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4hbTW":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","../Button/Button":"4hbTW","./hooks/useTab":"c0EaR","./Info/Info":"levAv","./Tools/Tools":"8UruJ","./Toolbox.module.css":"fNILQ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4hbTW":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$6d2e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$6d2e.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27517,6 +27764,7 @@ var prevRefreshSig = globalThis.$RefreshSig$;
 $parcel$ReactRefreshHelpers$6d2e.prelude(module);
 
 try {
+// src/components/Button/Button.tsx
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
@@ -27530,11 +27778,12 @@ const Button = ({ type, isActive, onClick, className, label })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         type: "button",
         onClick: onClick,
-        className: (0, _clsxDefault.default)((0, _buttonModuleCssDefault.default).button, isActive ? config.active : config.normal, className),
-        children: label || config.label
+        className: (0, _clsxDefault.default)((0, _buttonModuleCssDefault.default).button, // Вернули ?. и добавили || "" на случай, если конфиг не нашелся
+        isActive ? config?.active : config?.normal || "", className),
+        children: label || config?.label
     }, void 0, false, {
         fileName: "src/components/Button/Button.tsx",
-        lineNumber: 37,
+        lineNumber: 18,
         columnNumber: 5
     }, undefined);
 };
@@ -27548,182 +27797,7 @@ $RefreshReg$(_c, "Button");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","./Button.config":"c37D4","./Button.module.css":"8CTjF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"c37D4":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "PRESET_BUTTONS", ()=>PRESET_BUTTONS);
-parcelHelpers.export(exports, "GEN_BUTTONS", ()=>GEN_BUTTONS);
-parcelHelpers.export(exports, "PCI_BUTTONS", ()=>PCI_BUTTONS);
-parcelHelpers.export(exports, "DISK_BUTTONS", ()=>DISK_BUTTONS);
-parcelHelpers.export(exports, "MEMORY_BUTTONS", ()=>MEMORY_BUTTONS);
-parcelHelpers.export(exports, "SLOTS_BUTTONS", ()=>SLOTS_BUTTONS);
-parcelHelpers.export(exports, "BOARD_BUTTONS", ()=>BOARD_BUTTONS);
-parcelHelpers.export(exports, "TOOLS_BUTTONS", ()=>TOOLS_BUTTONS);
-parcelHelpers.export(exports, "ACTION_BUTTONS", ()=>ACTION_BUTTONS);
-parcelHelpers.export(exports, "BUTTONS", ()=>BUTTONS);
-var _buttonModuleCss = require("./Button.module.css");
-var _buttonModuleCssDefault = parcelHelpers.interopDefault(_buttonModuleCss);
-const PRESET_BUTTONS = {
-    safe: {
-        label: "\u0411\u0415\u0417\u041E\u041F\u0410\u0421\u041D\u042B\u0419",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).safe_active
-    },
-    balanced: {
-        label: "\u041E\u041F\u0422\u0418\u041C\u0410\u041B\u042C\u041D\u042B\u0419",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).optimal_active
-    },
-    aggressive: {
-        label: "\u0410\u0413\u0420\u0415\u0421\u0421\u0418\u0412\u041D\u042B\u0419",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).danger_active
-    },
-    ultra: {
-        label: "\u0423\u041B\u042C\u0422\u0420\u0410",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).lava_active
-    },
-    custom: {
-        label: "\u0420\u0423\u0427\u041D\u042B\u0415 \u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0418",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).custom_active
-    }
-};
-const GEN_BUTTONS = {
-    V2: {
-        label: "V2",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).v2_active
-    },
-    V3: {
-        label: "V3",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).v3_active
-    },
-    V4: {
-        label: "V4",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).v4_active
-    }
-};
-const PCI_BUTTONS = {
-    gen_2: {
-        label: "GEN 2",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).gen_active
-    },
-    gen_3: {
-        label: "GEN 3",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).gen_active
-    }
-};
-const DISK_BUTTONS = {
-    mbr: {
-        label: "MBR",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).partition_active
-    },
-    gpt: {
-        label: "GPT",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).partition_active
-    }
-};
-const MEMORY_BUTTONS = {
-    ecc: {
-        label: "ECC REG",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).ecc_active
-    },
-    desktop: {
-        label: "DESKTOP",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).desktop_active
-    }
-};
-const SLOTS_BUTTONS = {
-    slots1: {
-        label: "1 \u0421\u041B\u041E\u0422",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).slots_active
-    },
-    slots2: {
-        label: "2 \u0421\u041B\u041E\u0422\u0410",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).slots_active
-    },
-    slots3: {
-        label: "3 \u0421\u041B\u041E\u0422\u0410",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).slots_active
-    },
-    slots4: {
-        label: "4 \u0421\u041B\u041E\u0422\u0410",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).slots_active
-    }
-};
-const BOARD_BUTTONS = {
-    atx: {
-        label: "ATX",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).board_active
-    },
-    matx: {
-        label: "MATX",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).board_active
-    }
-};
-const TOOLS_BUTTONS = {
-    warning: {
-        label: "\u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415",
-        normal: (0, _buttonModuleCssDefault.default).warning,
-        active: (0, _buttonModuleCssDefault.default).warning_active
-    },
-    tools: {
-        label: "\u0418\u041D\u0421\u0422\u0420\u0423\u041C\u0415\u041D\u0422\u042B",
-        normal: (0, _buttonModuleCssDefault.default).tools,
-        active: (0, _buttonModuleCssDefault.default).tools_active
-    }
-};
-const ACTION_BUTTONS = {
-    activate: {
-        label: "\u0410\u041A\u0422\u0418\u0412\u0418\u0420\u041E\u0412\u0410\u0422\u042C",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).danger_active
-    },
-    cancel: {
-        label: "\u041E\u0422\u041C\u0415\u041D\u0410",
-        normal: (0, _buttonModuleCssDefault.default).safe_active,
-        active: (0, _buttonModuleCssDefault.default).safe_active
-    },
-    yes: {
-        label: "\u0414\u0410",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).yes_active
-    },
-    no: {
-        label: "\u041D\u0415\u0422",
-        normal: (0, _buttonModuleCssDefault.default).button,
-        active: (0, _buttonModuleCssDefault.default).no_active
-    }
-};
-const BUTTONS = {
-    ...PRESET_BUTTONS,
-    ...GEN_BUTTONS,
-    ...PCI_BUTTONS,
-    ...DISK_BUTTONS,
-    ...MEMORY_BUTTONS,
-    ...SLOTS_BUTTONS,
-    ...BOARD_BUTTONS,
-    ...TOOLS_BUTTONS,
-    ...ACTION_BUTTONS
-};
-
-},{"./Button.module.css":"8CTjF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8CTjF":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","./Button.module.css":"8CTjF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./Button.config":"c37D4"}],"8CTjF":[function(require,module,exports,__globalThis) {
 module.exports["board_active"] = `-_VRTG_board_active`;
 module.exports["button"] = `-_VRTG_button`;
 module.exports["custom_active"] = `-_VRTG_custom_active`;
@@ -27748,10 +27822,268 @@ module.exports["warning"] = `-_VRTG_warning`;
 module.exports["warning_active"] = `-_VRTG_warning_active`;
 module.exports["yes_active"] = `-_VRTG_yes_active`;
 
+},{}],"c37D4":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BUTTONS", ()=>BUTTONS);
+var _buttonModuleCss = require("./Button.module.css");
+var _buttonModuleCssDefault = parcelHelpers.interopDefault(_buttonModuleCss);
+const BUTTONS = {
+    // PRESET_BUTTONS
+    safe: {
+        label: "\u0411\u0415\u0417\u041E\u041F\u0410\u0421\u041D\u042B\u0419",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).safe_active
+    },
+    balanced: {
+        label: "\u041E\u041F\u0422\u0418\u041C\u0410\u041B\u042C\u041D\u042B\u0419",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).optimal_active
+    },
+    aggressive: {
+        label: "\u0410\u0413\u0420\u0415\u0421\u0421\u0418\u0412\u041D\u042B\u0419",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).danger_active
+    },
+    ultra: {
+        label: "\u0423\u041B\u042C\u0422\u0420\u0410",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).lava_active
+    },
+    custom: {
+        label: "\u0420\u0423\u0427\u041D\u042B\u0415 \u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0418",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).custom_active
+    },
+    // GEN_BUTTONS
+    V2: {
+        label: "V2",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).v2_active
+    },
+    V3: {
+        label: "V3",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).v3_active
+    },
+    V4: {
+        label: "V4",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).v4_active
+    },
+    // PCI_BUTTONS
+    gen_2: {
+        label: "GEN 2",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).gen_active
+    },
+    gen_3: {
+        label: "GEN 3",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).gen_active
+    },
+    // DISK_BUTTONS
+    mbr: {
+        label: "MBR",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).partition_active
+    },
+    gpt: {
+        label: "GPT",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).partition_active
+    },
+    // MEMORY_BUTTONS
+    ecc: {
+        label: "ECC REG",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).ecc_active
+    },
+    desktop: {
+        label: "DESKTOP",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).desktop_active
+    },
+    // SLOTS_BUTTONS
+    slots1: {
+        label: "1 \u0421\u041B\u041E\u0422",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).slots_active
+    },
+    slots2: {
+        label: "2 \u0421\u041B\u041E\u0422\u0410",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).slots_active
+    },
+    slots3: {
+        label: "3 \u0421\u041B\u041E\u0422\u0410",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).slots_active
+    },
+    slots4: {
+        label: "4 \u0421\u041B\u041E\u0422\u0410",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).slots_active
+    },
+    // BOARD_BUTTONS
+    atx: {
+        label: "ATX",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).board_active
+    },
+    matx: {
+        label: "MATX",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).board_active
+    },
+    // TOOLS_BUTTONS
+    warning: {
+        label: "\u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415",
+        normal: (0, _buttonModuleCssDefault.default).warning,
+        active: (0, _buttonModuleCssDefault.default).warning_active
+    },
+    tools: {
+        label: "\u0418\u041D\u0421\u0422\u0420\u0423\u041C\u0415\u041D\u0422\u042B",
+        normal: (0, _buttonModuleCssDefault.default).tools,
+        active: (0, _buttonModuleCssDefault.default).tools_active
+    },
+    // ACTION_BUTTONS
+    activate: {
+        label: "\u0410\u041A\u0422\u0418\u0412\u0418\u0420\u041E\u0412\u0410\u0422\u042C",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).danger_active
+    },
+    cancel: {
+        label: "\u041E\u0422\u041C\u0415\u041D\u0410",
+        normal: (0, _buttonModuleCssDefault.default).safe_active,
+        active: (0, _buttonModuleCssDefault.default).safe_active
+    },
+    yes: {
+        label: "\u0414\u0410",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).yes_active
+    },
+    no: {
+        label: "\u041D\u0415\u0422",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).no_active
+    }
+};
+
+},{"./Button.module.css":"8CTjF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"c0EaR":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9ad5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9ad5.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9ad5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useTab = (initial = "info")=>{
+    _s();
+    const [tab, setTab] = (0, _react.useState)(initial);
+    return {
+        isInfo: tab === "info",
+        isTools: tab === "tools",
+        setInfo: ()=>setTab("info"),
+        setTools: ()=>setTab("tools")
+    };
+};
+_s(useTab, "eE0g4x98at0LLvgczTD1KgRdjQU=");
+exports.default = useTab;
+
+  $parcel$ReactRefreshHelpers$9ad5.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"levAv":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$3dd3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$3dd3.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3dd3.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _infoModuleCss = require("./Info.module.css");
+var _infoModuleCssDefault = parcelHelpers.interopDefault(_infoModuleCss);
+const Info = ({ renderInfo, cardClass })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: cardClass,
+        children: renderInfo?.((0, _infoModuleCssDefault.default))
+    }, void 0, false, {
+        fileName: "src/components/Toolbox/Info/Info.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = Info;
+exports.default = Info;
+var _c;
+$RefreshReg$(_c, "Info");
+
+  $parcel$ReactRefreshHelpers$3dd3.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","./Info.module.css":"6zoBV","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6zoBV":[function(require,module,exports,__globalThis) {
+module.exports["info_container"] = `_2Xx-Tq_info_container`;
+module.exports["info_highlight"] = `_2Xx-Tq_info_highlight`;
+module.exports["info_icon"] = `_2Xx-Tq_info_icon`;
+module.exports["info_item"] = `_2Xx-Tq_info_item`;
+module.exports["info_text"] = `_2Xx-Tq_info_text`;
+
+},{}],"8UruJ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$95f9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$95f9.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$95f9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _toolsModuleCss = require("./Tools.module.css");
+var _toolsModuleCssDefault = parcelHelpers.interopDefault(_toolsModuleCss);
+const Tools = ({ renderTools, cardClass })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: cardClass,
+        children: renderTools?.({
+            styles: (0, _toolsModuleCssDefault.default)
+        })
+    }, void 0, false, {
+        fileName: "src/components/Toolbox/Tools/Tools.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = Tools;
+exports.default = Tools;
+var _c;
+$RefreshReg$(_c, "Tools");
+
+  $parcel$ReactRefreshHelpers$95f9.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","./Tools.module.css":"fHYjp","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fHYjp":[function(require,module,exports,__globalThis) {
+module.exports["btn_group"] = `P8oNWq_btn_group`;
+module.exports["pci_label_spacing"] = `P8oNWq_pci_label_spacing`;
+module.exports["tools_button"] = `P8oNWq_tools_button`;
+module.exports["tools_container"] = `P8oNWq_tools_container`;
+module.exports["tools_icon"] = `P8oNWq_tools_icon`;
+module.exports["tools_item"] = `P8oNWq_tools_item`;
+module.exports["tools_label"] = `P8oNWq_tools_label`;
+module.exports["tools_text"] = `P8oNWq_tools_text`;
+
 },{}],"fNILQ":[function(require,module,exports,__globalThis) {
 module.exports["info_active"] = `ppCF8q_info_active`;
 module.exports["info_border"] = `ppCF8q_info_border`;
-module.exports["info_container"] = `ppCF8q_info_container`;
 module.exports["tab_button"] = `ppCF8q_tab_button`;
 module.exports["toolbox_card"] = `ppCF8q_toolbox_card`;
 module.exports["toolbox_container"] = `ppCF8q_toolbox_container`;
@@ -27759,69 +28091,575 @@ module.exports["toolbox_tabs"] = `ppCF8q_toolbox_tabs`;
 module.exports["toolbox_title"] = `ppCF8q_toolbox_title`;
 module.exports["tools_active"] = `ppCF8q_tools_active`;
 module.exports["tools_border"] = `ppCF8q_tools_border`;
-module.exports["tools_container"] = `ppCF8q_tools_container`;
 
-},{}],"4y82s":[function(require,module,exports,__globalThis) {
-module.exports["info_container"] = `k8MFAq_info_container`;
-module.exports["info_highlight"] = `k8MFAq_info_highlight`;
-module.exports["info_icon"] = `k8MFAq_info_icon`;
-module.exports["info_item"] = `k8MFAq_info_item`;
-module.exports["info_text"] = `k8MFAq_info_text`;
-
-},{}],"25PqV":[function(require,module,exports,__globalThis) {
-module.exports["btn_group"] = `UGBGfW_btn_group`;
-module.exports["pci_label_spacing"] = `UGBGfW_pci_label_spacing`;
-module.exports["tools_button"] = `UGBGfW_tools_button`;
-module.exports["tools_container"] = `UGBGfW_tools_container`;
-module.exports["tools_icon"] = `UGBGfW_tools_icon`;
-module.exports["tools_item"] = `UGBGfW_tools_item`;
-module.exports["tools_label"] = `UGBGfW_tools_label`;
-module.exports["tools_text"] = `UGBGfW_tools_text`;
-
-},{}],"kb3Ag":[function(require,module,exports,__globalThis) {
+},{}],"kjvLS":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const CSMBios = (state)=>({
+const AdvancedBios = ({ cpuGen = "V3" })=>{
+    // Определяем значение для Uncore Max CLR Freq на основе выбранного поколения CPU
+    let uncoreLimit = "26";
+    if (cpuGen === "V2") uncoreLimit = "24";
+     // Стабильное базовое значение из диапазона 24-28
+    if (cpuGen === "V4") uncoreLimit = "56";
+    return {
+        title: "Advanced Power Management Configuration",
+        path: "IntelRCSetup > Advanced Power Management Configuration",
+        content: [
+            {
+                text_left: "Power Technology",
+                text_right: "Custom"
+            },
+            {
+                text_left: "Config TDP",
+                text_right: "Disable"
+            },
+            {
+                text_left: "IOTG Setting",
+                text_right: "Disable"
+            },
+            {
+                text_left: "Uncore CLR Freq OVRD",
+                text_right: "MANUAL"
+            },
+            {
+                text_left: "Uncore Max CLR Freq",
+                text_right: uncoreLimit,
+                isEditable: true
+            },
+            {
+                text_left: "CPU P State Control",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "CPU HWPM State Control",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "CPU C State Control",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "CPU T State Control",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "CPU - Advanced PM Tuning",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "SOCKET RAPL Config",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "DRAM RAPL Configuration",
+                text_right: "",
+                isEditable: true
+            }
+        ]
+    };
+};
+_c = AdvancedBios;
+exports.default = AdvancedBios;
+var _c;
+$RefreshReg$(_c, "AdvancedBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"ijA4l":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$a433 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$a433.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a433.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const AdvancedInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: s.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83E\uDDE0"
+                    }, void 0, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                        lineNumber: 6,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0427\u0430\u0441\u0442\u043E\u0442\u0430 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Uncore (Cache)"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                                lineNumber: 8,
+                                columnNumber: 17
+                            }, undefined),
+                            " \u043D\u0430\u043F\u0440\u044F\u043C\u0443\u044E \u0432\u043B\u0438\u044F\u0435\u0442 \u043D\u0430 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u043E\u0431\u043C\u0435\u043D\u0430 \u0434\u0430\u043D\u043D\u044B\u043C\u0438 \u043C\u0435\u0436\u0434\u0443 \u044F\u0434\u0440\u0430\u043C\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430, L3-\u043A\u044D\u0448\u0435\u043C \u0438 \u043E\u043F\u0435\u0440\u0430\u0442\u0438\u0432\u043D\u043E\u0439 \u043F\u0430\u043C\u044F\u0442\u044C\u044E."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                        lineNumber: 7,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDD04"
+                    }, void 0, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                        lineNumber: 14,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0412 \u0440\u0435\u0436\u0438\u043C\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "MANUAL"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                                lineNumber: 16,
+                                columnNumber: 18
+                            }, undefined),
+                            " \u0447\u0430\u0441\u0442\u043E\u0442\u0430 \u043A\u044D\u0448\u0430 \u0444\u0438\u043A\u0441\u0438\u0440\u0443\u0435\u0442\u0441\u044F \u043D\u0430 \u043E\u0434\u043D\u043E\u043C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0438. \u042D\u0442\u043E \u043F\u0440\u0435\u0434\u043E\u0442\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0435\u0451 \u0441\u0431\u0440\u043E\u0441 \u0432 \u043F\u0440\u043E\u0441\u0442\u043E\u0435, \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u043E\u0431\u0449\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u043A\u0438 (latency) \u0438 \u0443\u0431\u0438\u0440\u0430\u0435\u0442 \u0441\u0442\u0430\u0442\u0442\u0435\u0440\u044B \u0432 \u0438\u0433\u0440\u0430\u0445."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                        lineNumber: 15,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                lineNumber: 13,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDEE1\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                        lineNumber: 23,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0424\u0438\u043A\u0441\u0430\u0446\u0438\u044F \u0447\u0430\u0441\u0442\u043E\u0442\u044B \u043A\u043E\u043B\u044C\u0446\u0435\u0432\u043E\u0439 \u0448\u0438\u043D\u044B \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u0430 \u0434\u043B\u044F \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430, \u043D\u043E \u043F\u0440\u0438 \u043F\u043E\u044F\u0432\u043B\u0435\u043D\u0438\u0438 \u0441\u0438\u043D\u0438\u0445 \u044D\u043A\u0440\u0430\u043D\u043E\u0432 (BSOD) \u0432 \u0442\u044F\u0436\u0435\u043B\u044B\u0445 \u0437\u0430\u0434\u0430\u0447\u0430\u0445 \u044D\u0442\u043E\u0442 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440 \u0441\u0442\u043E\u0438\u0442 \u0432\u0435\u0440\u043D\u0443\u0442\u044C \u0432 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "AUTO"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                                lineNumber: 27,
+                                columnNumber: 28
+                            }, undefined),
+                            "."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                        lineNumber: 24,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+                lineNumber: 22,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/AdvancedConfiguration/AdvancedInfo.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = AdvancedInfo;
+exports.default = AdvancedInfo;
+var _c;
+$RefreshReg$(_c, "AdvancedInfo");
+
+  $parcel$ReactRefreshHelpers$a433.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"celag":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$8c12 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$8c12.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8c12.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+const AdvancedTools = ({ styles: s, param, setParam })=>{
+    const { cpuGen } = param;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: s.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_label,
+                children: "\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415 CPU:"
+            }, void 0, false, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.btn_group,
+                children: [
+                    "V2",
+                    "V3",
+                    "V4"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: cpuGen === type,
+                        className: s.tools_button,
+                        onClick: ()=>setParam((p)=>({
+                                    ...p,
+                                    cpuGen: type
+                                }))
+                    }, type, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u2699\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 23,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "V2"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                                lineNumber: 25,
+                                columnNumber: 15
+                            }, undefined),
+                            ": \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u044B\u0439 \u043C\u043D\u043E\u0436\u0438\u0442\u0435\u043B\u044C Uncore \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D \u043D\u0430 \u0443\u0440\u043E\u0432\u043D\u0435",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "24\u201328"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                                lineNumber: 26,
+                                columnNumber: 11
+                            }, undefined),
+                            ". \u0412\u044B\u0448\u0435 \u044D\u0442\u043E\u0433\u043E \u043F\u0440\u0435\u0434\u0435\u043B\u0430 \u0447\u0430\u0441\u0442\u043E\u0442\u0430 \u043A\u044D\u0448\u0430 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u0438 \u043D\u0435 \u043F\u043E\u0434\u043D\u0438\u043C\u0435\u0442\u0441\u044F."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                lineNumber: 22,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDCC8"
+                    }, void 0, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "V3"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                                lineNumber: 33,
+                                columnNumber: 15
+                            }, undefined),
+                            ": \u043E\u043F\u0442\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0438 \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u2014 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "26"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                                lineNumber: 33,
+                                columnNumber: 62
+                            }, undefined),
+                            " (2.6 \u0413\u0413\u0446). \u042D\u0442\u043E \u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u044B\u0439 \u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u043B\u0438\u043C\u0438\u0442 \u0434\u043B\u044F \u0431\u043E\u043B\u044C\u0448\u0438\u043D\u0441\u0442\u0432\u0430 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u043E\u0432 Haswell-EP."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                lineNumber: 30,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u26A1"
+                    }, void 0, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "V4"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                                lineNumber: 42,
+                                columnNumber: 15
+                            }, undefined),
+                            " (Broadwell-EP): \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0432\u044B\u0441\u0442\u0430\u0432\u043B\u044F\u0442\u044C \u043B\u0438\u043C\u0438\u0442 \u0434\u043E ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "56"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                                lineNumber: 43,
+                                columnNumber: 14
+                            }, undefined),
+                            ". \u042D\u0442\u043E \u0434\u0430\u0435\u0442 \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0443\u044E \u043F\u0440\u043E\u043F\u0443\u0441\u043A\u043D\u0443\u044E \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u044C \u043A\u043E\u043B\u044C\u0446\u0435\u0432\u043E\u0439 \u0448\u0438\u043D\u044B."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                lineNumber: 39,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u26A0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0424\u0438\u043A\u0441\u0430\u0446\u0438\u044F \u0447\u0430\u0441\u0442\u043E\u0442\u044B \u0432 \u0440\u0435\u0436\u0438\u043C\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "MANUAL"
+                            }, void 0, false, {
+                                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                                lineNumber: 51,
+                                columnNumber: 37
+                            }, undefined),
+                            " \u0443\u0431\u0438\u0440\u0430\u0435\u0442 \u043C\u0438\u043A\u0440\u043E\u0444\u0440\u0438\u0437\u044B, \u043D\u043E \u0437\u0430\u0432\u044B\u0448\u0435\u043D\u043D\u044B\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u043F\u0440\u0438\u0432\u0435\u0434\u0443\u0442 \u043A \u0441\u0438\u043D\u0435\u043C\u0443 \u044D\u043A\u0440\u0430\u043D\u0443 (BSOD)."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+                lineNumber: 48,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/AdvancedConfiguration/AdvancedTools.jsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
+};
+_c = AdvancedTools;
+exports.default = AdvancedTools;
+var _c;
+$RefreshReg$(_c, "AdvancedTools");
+
+  $parcel$ReactRefreshHelpers$8c12.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"3pRr7":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$71e2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$71e2.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$71e2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _csmbios = require("./CSMBios");
+var _csmbiosDefault = parcelHelpers.interopDefault(_csmbios);
+var _csminfo = require("./CSMInfo");
+var _csminfoDefault = parcelHelpers.interopDefault(_csminfo);
+var _csmtools = require("./CSMTools");
+var _csmtoolsDefault = parcelHelpers.interopDefault(_csmtools);
+var _s = $RefreshSig$();
+const CSMConfiguration = ({ selectedButton = "mbr" })=>{
+    _s();
+    const [param, setParam] = (0, _react.useState)({
+        partition: selectedButton
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "BOOT & RECOVERY",
+                toolsLabel: "DISK MODE",
+                renderInfo: (0, _csminfoDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmtoolsDefault.default), {
+                        ...props,
+                        param: param,
+                        setParam: setParam
+                    }, void 0, false, {
+                        fileName: "src/components/CSMConfiguration/CSMConfiguration.jsx",
+                        lineNumber: 18,
+                        columnNumber: 11
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/CSMConfiguration/CSMConfiguration.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _csmbiosDefault.default)(param)
+            }, void 0, false, {
+                fileName: "src/components/CSMConfiguration/CSMConfiguration.jsx",
+                lineNumber: 22,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(CSMConfiguration, "sMY8VFhzmT0p5QQ/Wyxsa8wK5lM=");
+_c = CSMConfiguration;
+exports.default = CSMConfiguration;
+var _c;
+$RefreshReg$(_c, "CSMConfiguration");
+
+  $parcel$ReactRefreshHelpers$71e2.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./CSMBios":"3JV3u","./CSMInfo":"6g4WY","./CSMTools":"eBfQ7","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"3JV3u":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const CSMBios = ({ partition })=>{
+    const isGpt = partition === "gpt";
+    return {
         title: "CSM CONFIGURATION",
         path: "Advanced > CSM Configuration",
         content: [
             {
                 text_left: "CSM Support",
-                text_right: state.diskMode === "mbr" ? "Enabled" : "Disabled"
+                text_right: isGpt ? "Disabled" : "Enabled",
+                isDisabled: isGpt
             },
             {
                 text_left: "Boot option filter",
-                text_right: state.diskMode === "mbr" ? "Legacy only" : "UEFI only"
+                text_right: isGpt ? "UEFI only" : "Legacy only",
+                isDisabled: false
             },
             {
                 text_left: "Network",
-                text_right: "Do not launch"
+                text_right: "Do not launch",
+                isDisabled: true
             },
             {
                 text_left: "Storage",
-                text_right: state.diskMode === "mbr" ? "Legacy" : "UEFI"
+                text_right: isGpt ? "UEFI" : "Legacy",
+                isDisabled: false
             },
             {
                 text_left: "Video",
-                text_right: state.diskMode === "mbr" ? "Legacy" : "UEFI"
+                text_right: isGpt ? "UEFI" : "Legacy",
+                isDisabled: false
             },
             {
                 text_left: "Other PCI devices",
-                text_right: "UEFI"
+                text_right: "UEFI",
+                isDisabled: false
             }
         ]
-    });
+    };
+};
 _c = CSMBios;
 exports.default = CSMBios;
 var _c;
 $RefreshReg$(_c, "CSMBios");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"1hMh8":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$5d35 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$5d35.init();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"6g4WY":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$490a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$490a.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5d35.prelude(module);
+$parcel$ReactRefreshHelpers$490a.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27837,7 +28675,7 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDCBE"
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 4,
                         columnNumber: 7
                     }, undefined),
@@ -27845,13 +28683,13 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0415\u0441\u043B\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043D\u0435 \u0432\u0438\u0434\u0438\u0442 \u0434\u0438\u0441\u043A, \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u0435 CSM (Legacy). \u042D\u0442\u043E \u0432\u0435\u0440\u043D\u0435\u0442 \u0432\u0438\u0434\u0438\u043C\u043E\u0441\u0442\u044C \u0441\u0442\u0430\u0440\u044B\u0445 MBR-\u0440\u0430\u0437\u0434\u0435\u043B\u043E\u0432."
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 5,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                 lineNumber: 3,
                 columnNumber: 5
             }, undefined),
@@ -27862,7 +28700,7 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\u26A1"
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 12,
                         columnNumber: 7
                     }, undefined),
@@ -27870,13 +28708,13 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0420\u0435\u0436\u0438\u043C UEFI \u0434\u0430\u0435\u0442 Fast Boot, \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0443 \u0434\u0438\u0441\u043A\u043E\u0432 2\u0422\u0411+, \u0440\u0430\u0431\u043E\u0442\u0443 Re-Size BAR \u0438 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u044C \u0441 Windows 11."
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 13,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                 lineNumber: 11,
                 columnNumber: 5
             }, undefined),
@@ -27887,7 +28725,7 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDEE0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 20,
                         columnNumber: 7
                     }, undefined),
@@ -27895,13 +28733,13 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0414\u043B\u044F UEFI \u043D\u0443\u0436\u043D\u0430 GPT-\u0440\u0430\u0437\u043C\u0435\u0442\u043A\u0430. \u041F\u0440\u0438 \u0441\u043C\u0435\u043D\u0435 \u0440\u0435\u0436\u0438\u043C\u0430 Windows \u0432 MBR \u043D\u0435 \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0441\u044F \u0431\u0435\u0437 \u043A\u043E\u043D\u0432\u0435\u0440\u0442\u0430\u0446\u0438\u0438 \u0438\u043B\u0438 \u043F\u0435\u0440\u0435\u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438."
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 21,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                 lineNumber: 19,
                 columnNumber: 5
             }, undefined),
@@ -27912,7 +28750,7 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDD04"
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 28,
                         columnNumber: 7
                     }, undefined),
@@ -27920,13 +28758,13 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u0441 MBR \u043D\u0430 GPT \u0431\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u0438 \u0434\u0430\u043D\u043D\u044B\u0445 \u043C\u043E\u0436\u043D\u043E \u0447\u0435\u0440\u0435\u0437 \xabmbr2gpt\xbb. \u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u043E\u0433\u043E CSM \u043C\u043E\u0436\u043D\u043E \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0442\u044C."
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 29,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                 lineNumber: 27,
                 columnNumber: 5
             }, undefined),
@@ -27937,27 +28775,27 @@ const CSMInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDD0A"
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 36,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.info_text,
-                        children: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434 \u0432\u0441\u0435\u0439 \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u043D\u0430 UEFI \u043C\u043E\u0436\u0435\u0442 \u0443\u0431\u0440\u0430\u0442\u044C \u043F\u0438\u0441\u043A \u0431\u0438\u043F\u0435\u0440\u0430 \u0432 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0430\u0445 \u0441 \u0432\u044B\u0440\u0435\u0437\u0430\u043D\u043D\u044B\u043C \u0431\u0438\u043F\u0435\u0440\u043E\u043C, \u0435\u0441\u043B\u0438 \u044D\u0442\u043E\u0442 \u043F\u0438\u0441\u043A \u0435\u0441\u0442\u044C \u043F\u0440\u0438 \u0441\u0442\u0430\u0440\u0442\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B."
+                        children: "\u041F\u0435\u0440\u0435\u0432\u043E\u0434 \u0432\u0441\u0435\u0439 \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u043D\u0430 UEFI \u043C\u043E\u0436\u0435\u0442 \u0443\u0431\u0440\u0430\u0442\u044C \u043F\u0438\u0441\u043A \u0431\u0438\u043F\u0435\u0440\u0430 \u0432 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0430\u0445 \u0441 \u0432\u044B\u0440\u0435\u0437\u0430\u043D\u043D\u044B\u043C \u0431\u0438\u043F\u0435\u0440\u043E\u043C, \u0435\u0441\u043B\u0438 \u044D\u0442\u043E\u0442 \u043F\u0438\u0441\u043A \u0435\u0441\u0442\u044C \u043F\u0440\u0438 \u0441\u0442\u0430\u0440\u0442\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438 BIOS."
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                         lineNumber: 37,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+                fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
                 lineNumber: 35,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/CSMConfiguration/CSMInfo.tsx",
+        fileName: "src/components/CSMConfiguration/CSMInfo.jsx",
         lineNumber: 2,
         columnNumber: 3
     }, undefined);
@@ -27966,17 +28804,17 @@ exports.default = CSMInfo;
 var _c;
 $RefreshReg$(_c, "CSMInfo");
 
-  $parcel$ReactRefreshHelpers$5d35.postlude(module);
+  $parcel$ReactRefreshHelpers$490a.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2pbW4":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$0d01 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$0d01.init();
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"eBfQ7":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$e39d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$e39d.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0d01.prelude(module);
+$parcel$ReactRefreshHelpers$e39d.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27984,18 +28822,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _button = require("../Button/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-const CSMTools = ({ state, setParam, styles: s })=>{
-    const { diskMode } = state;
-    const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-            type: type,
-            isActive: diskMode === type,
-            onClick: ()=>setParam("diskMode", type),
-            className: s.tools_button
-        }, void 0, false, {
-            fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-            lineNumber: 8,
-            columnNumber: 5
-        }, undefined);
+const CSMTools = ({ styles: s, param, setParam })=>{
+    const { partition } = param;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: s.tools_container,
         children: [
@@ -28003,19 +28831,31 @@ const CSMTools = ({ state, setParam, styles: s })=>{
                 className: s.tools_label,
                 children: "\u0422\u0418\u041F \u0420\u0410\u0417\u041C\u0415\u0422\u041A\u0418 \u0414\u0418\u0421\u041A\u0410:"
             }, void 0, false, {
-                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 18,
+                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.btn_group,
                 children: [
-                    renderButton("mbr"),
-                    renderButton("gpt")
-                ]
-            }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 20,
+                    "mbr",
+                    "gpt"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: partition === type,
+                        className: s.tools_button,
+                        onClick: ()=>setParam((p)=>({
+                                    ...p,
+                                    partition: type
+                                }))
+                    }, type, false, {
+                        fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28025,8 +28865,8 @@ const CSMTools = ({ state, setParam, styles: s })=>{
                         className: s.tools_icon,
                         children: "\uD83D\uDEE0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 26,
+                        fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28036,33 +28876,33 @@ const CSMTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "CSM"
                             }, void 0, false, {
-                                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                                lineNumber: 28,
+                                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                                lineNumber: 25,
                                 columnNumber: 57
                             }, undefined),
                             " \u0432 BIOS."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 27,
+                        fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 25,
+                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
-            diskMode === "mbr" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.tools_icon,
                         children: "\u26A0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 34,
-                        columnNumber: 11
+                        fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                        lineNumber: 30,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: s.tools_text,
@@ -28070,41 +28910,41 @@ const CSMTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "MBR"
                             }, void 0, false, {
-                                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                                lineNumber: 36,
-                                columnNumber: 13
+                                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                                lineNumber: 32,
+                                columnNumber: 11
                             }, undefined),
-                            " \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D 2\u0422\u0411 \u0438 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 ",
+                            " \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D 2 \u0422\u0411 \u0438 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
-                                children: "CSM Support"
+                                children: "CSM Support Enabled"
                             }, void 0, false, {
-                                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                                lineNumber: 36,
-                                columnNumber: 48
+                                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                                lineNumber: 32,
+                                columnNumber: 47
                             }, undefined),
-                            " [Enabled]."
+                            "."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 35,
-                        columnNumber: 11
+                        fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                        lineNumber: 31,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 33,
-                columnNumber: 9
+                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                lineNumber: 29,
+                columnNumber: 7
             }, undefined),
-            diskMode === "gpt" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.tools_icon,
                         children: "\u2699\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 43,
-                        columnNumber: 11
+                        fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                        lineNumber: 37,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: s.tools_text,
@@ -28112,43 +28952,43 @@ const CSMTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "GPT"
                             }, void 0, false, {
-                                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                                lineNumber: 45,
-                                columnNumber: 13
+                                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                                lineNumber: 39,
+                                columnNumber: 11
                             }, undefined),
                             " \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C \u0434\u043B\u044F ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "UEFI"
                             }, void 0, false, {
-                                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                                lineNumber: 45,
-                                columnNumber: 38
+                                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                                lineNumber: 39,
+                                columnNumber: 36
                             }, undefined),
                             " \u0438 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "Re-Size BAR"
                             }, void 0, false, {
-                                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                                lineNumber: 45,
-                                columnNumber: 52
+                                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                                lineNumber: 39,
+                                columnNumber: 50
                             }, undefined),
                             "."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                        lineNumber: 44,
-                        columnNumber: 11
+                        fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                        lineNumber: 38,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-                lineNumber: 42,
-                columnNumber: 9
+                fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+                lineNumber: 36,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/CSMConfiguration/CSMTools.tsx",
-        lineNumber: 17,
+        fileName: "src/components/CSMConfiguration/CSMTools.jsx",
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
@@ -28157,17 +28997,477 @@ exports.default = CSMTools;
 var _c;
 $RefreshReg$(_c, "CSMTools");
 
-  $parcel$ReactRefreshHelpers$0d01.postlude(module);
+  $parcel$ReactRefreshHelpers$e39d.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4qPFO":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$f420 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$f420.init();
+},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jHf28":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1300 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$1300.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f420.prelude(module);
+$parcel$ReactRefreshHelpers$1300.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _drambios = require("./DRAMBios");
+var _drambiosDefault = parcelHelpers.interopDefault(_drambios);
+var _draminfo = require("./DRAMInfo");
+var _draminfoDefault = parcelHelpers.interopDefault(_draminfo);
+var _dramtools = require("./DRAMTools");
+var _dramtoolsDefault = parcelHelpers.interopDefault(_dramtools);
+var _s = $RefreshSig$();
+const DRAMConfiguration = ()=>{
+    _s();
+    // Устанавливаем дефолтный тип памяти ECC, чтобы при первой загрузке открывалось полное меню
+    const [param, setParam] = (0, _react.useState)({
+        ramType: "ecc"
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "DRAM RAPL CONFIGURATION",
+                toolsLabel: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0410 \u041F\u0410\u041C\u042F\u0422\u0418",
+                renderInfo: (0, _draminfoDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dramtoolsDefault.default), {
+                        ...props,
+                        param: param,
+                        setParam: setParam
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMConfiguration.jsx",
+                        lineNumber: 19,
+                        columnNumber: 11
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/DRAMConfiguration/DRAMConfiguration.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _drambiosDefault.default)(param)
+            }, void 0, false, {
+                fileName: "src/components/DRAMConfiguration/DRAMConfiguration.jsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(DRAMConfiguration, "4k4DOkcP05Rgys5/DeC2XkmVz3o=");
+_c = DRAMConfiguration;
+exports.default = DRAMConfiguration;
+var _c;
+$RefreshReg$(_c, "DRAMConfiguration");
+
+  $parcel$ReactRefreshHelpers$1300.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./DRAMBios":"6AIpM","./DRAMInfo":"WlBvo","./DRAMTools":"62OS2","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6AIpM":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const DRAMBios = (param)=>{
+    const { ramType = "ecc" } = param; // Значение по умолчанию в нижнем регистре
+    if (ramType === "desktop") // Проверка строки в нижнем регистре
+    return {
+        title: "DRAM RAPL Configuration",
+        path: "IntelRCSetup > DRAM RAPL Configuration",
+        content: [
+            {
+                text_left: "DRAM RAPL Baseline",
+                text_right: "Disable"
+            }
+        ]
+    };
+    return {
+        title: "DRAM RAPL Configuration",
+        path: "IntelRCSetup > DRAM RAPL Configuration",
+        content: [
+            {
+                text_left: "DRAM RAPL Baseline",
+                text_right: "DRAM RAPL Mode 0"
+            },
+            {
+                text_left: "Override BW_LIMIT_TF",
+                text_right: "1"
+            },
+            {
+                text_left: "DRAM RAPL Extended Range",
+                text_right: "Enable"
+            }
+        ]
+    };
+};
+_c = DRAMBios;
+exports.default = DRAMBios;
+var _c;
+$RefreshReg$(_c, "DRAMBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"WlBvo":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$e0b6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$e0b6.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e0b6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const AdvancedInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: s.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83E\uDDE0"
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                        lineNumber: 6,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0427\u0430\u0441\u0442\u043E\u0442\u0430 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Uncore (Cache)"
+                            }, void 0, false, {
+                                fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                                lineNumber: 8,
+                                columnNumber: 17
+                            }, undefined),
+                            " \u043D\u0430\u043F\u0440\u044F\u043C\u0443\u044E \u0432\u043B\u0438\u044F\u0435\u0442 \u043D\u0430 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u043E\u0431\u043C\u0435\u043D\u0430 \u0434\u0430\u043D\u043D\u044B\u043C\u0438 \u043C\u0435\u0436\u0434\u0443 \u044F\u0434\u0440\u0430\u043C\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430, L3-\u043A\u044D\u0448\u0435\u043C \u0438 \u043E\u043F\u0435\u0440\u0430\u0442\u0438\u0432\u043D\u043E\u0439 \u043F\u0430\u043C\u044F\u0442\u044C\u044E."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                        lineNumber: 7,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDD04"
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                        lineNumber: 14,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0412 \u0440\u0435\u0436\u0438\u043C\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "MANUAL"
+                            }, void 0, false, {
+                                fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                                lineNumber: 16,
+                                columnNumber: 18
+                            }, undefined),
+                            " \u0447\u0430\u0441\u0442\u043E\u0442\u0430 \u043A\u044D\u0448\u0430 \u0444\u0438\u043A\u0441\u0438\u0440\u0443\u0435\u0442\u0441\u044F \u043D\u0430 \u043E\u0434\u043D\u043E\u043C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0438. \u042D\u0442\u043E \u043F\u0440\u0435\u0434\u043E\u0442\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0435\u0451 \u0441\u0431\u0440\u043E\u0441 \u0432 \u043F\u0440\u043E\u0441\u0442\u043E\u0435, \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u043E\u0431\u0449\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u043A\u0438 (latency) \u0438 \u0443\u0431\u0438\u0440\u0430\u0435\u0442 \u0441\u0442\u0430\u0442\u0442\u0435\u0440\u044B \u0432 \u0438\u0433\u0440\u0430\u0445."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                        lineNumber: 15,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                lineNumber: 13,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDEE1\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                        lineNumber: 23,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0424\u0438\u043A\u0441\u0430\u0446\u0438\u044F \u0447\u0430\u0441\u0442\u043E\u0442\u044B \u043A\u043E\u043B\u044C\u0446\u0435\u0432\u043E\u0439 \u0448\u0438\u043D\u044B \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u0430 \u0434\u043B\u044F \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430, \u043D\u043E \u043F\u0440\u0438 \u043F\u043E\u044F\u0432\u043B\u0435\u043D\u0438\u0438 \u0441\u0438\u043D\u0438\u0445 \u044D\u043A\u0440\u0430\u043D\u043E\u0432 (BSOD) \u0432 \u0442\u044F\u0436\u0435\u043B\u044B\u0445 \u0437\u0430\u0434\u0430\u0447\u0430\u0445 \u044D\u0442\u043E\u0442 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440 \u0441\u0442\u043E\u0438\u0442 \u0432\u0435\u0440\u043D\u0443\u0442\u044C \u0432 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "AUTO"
+                            }, void 0, false, {
+                                fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                                lineNumber: 27,
+                                columnNumber: 28
+                            }, undefined),
+                            "."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                        lineNumber: 24,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+                lineNumber: 22,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/DRAMConfiguration/DRAMInfo.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = AdvancedInfo;
+exports.default = AdvancedInfo;
+var _c;
+$RefreshReg$(_c, "AdvancedInfo");
+
+  $parcel$ReactRefreshHelpers$e0b6.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"62OS2":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$0127 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$0127.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0127.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+const DRAMTools = ({ styles: s, param, setParam })=>{
+    // Используем дефолтный ключ в нижнем регистре, как в объекте BUTTONS
+    const { ramType = "ecc" } = param;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: s.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_label,
+                children: "\u0422\u0418\u041F \u041F\u0410\u041C\u042F\u0422\u0418:"
+            }, void 0, false, {
+                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.btn_group,
+                children: [
+                    "ecc",
+                    "desktop"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: ramType === type,
+                        className: s.tools_button,
+                        onClick: ()=>setParam((p)=>({
+                                    ...p,
+                                    ramType: type
+                                }))
+                    }, type, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 14,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDEE1\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "ECC REG"
+                            }, void 0, false, {
+                                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                                lineNumber: 27,
+                                columnNumber: 15
+                            }, undefined),
+                            ": \u0430\u043A\u0442\u0438\u0432\u0438\u0440\u0443\u0435\u0442\u0441\u044F \u0440\u0435\u0436\u0438\u043C ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Mode 0"
+                            }, void 0, false, {
+                                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                                lineNumber: 27,
+                                columnNumber: 50
+                            }, undefined),
+                            ". \u042D\u0442\u043E \u0432\u043A\u043B\u044E\u0447\u0430\u0435\u0442 \u0430\u043F\u043F\u0430\u0440\u0430\u0442\u043D\u043E\u0435 \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u043B\u0438\u043C\u0438\u0442\u0430\u043C\u0438 \u043C\u043E\u0449\u043D\u043E\u0441\u0442\u0438 (RAPL), \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0435 \u0434\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B \u043C\u043D\u043E\u0433\u043E\u0440\u0430\u043D\u0433\u043E\u0432\u043E\u0439 \u0441\u0435\u0440\u0432\u0435\u0440\u043D\u043E\u0439 \u043F\u0430\u043C\u044F\u0442\u0438."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                lineNumber: 24,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDDA5\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "DESKTOP"
+                            }, void 0, false, {
+                                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                                lineNumber: 36,
+                                columnNumber: 15
+                            }, undefined),
+                            ": \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u044F\u0442\u0441\u044F \u0432 \u0440\u0435\u0436\u0438\u043C ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Disable"
+                            }, void 0, false, {
+                                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                                lineNumber: 36,
+                                columnNumber: 61
+                            }, undefined),
+                            ". \u041E\u0431\u044B\u0447\u043D\u0430\u044F \u0434\u0435\u0441\u043A\u0442\u043E\u043F\u043D\u0430\u044F \u043F\u0430\u043C\u044F\u0442\u044C \u043D\u0435 \u0432\u0441\u0435\u0433\u0434\u0430 \u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E \u043E\u0442\u0434\u0430\u0435\u0442 \u0434\u0430\u043D\u043D\u044B\u0435 \u043E \u0442\u0435\u043B\u0435\u043C\u0435\u0442\u0440\u0438\u0438, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043B\u0438\u043C\u0438\u0442\u044B \u043B\u0443\u0447\u0448\u0435 \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u043E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u044C."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                lineNumber: 33,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u2699\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 43,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0412\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Mode 0"
+                            }, void 0, false, {
+                                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                                lineNumber: 45,
+                                columnNumber: 21
+                            }, undefined),
+                            " \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442 \u0441\u043A\u0440\u044B\u0442\u044B\u0435 \u043F\u043E\u0434\u043F\u0443\u043D\u043A\u0442\u044B: \u0444\u0438\u043A\u0441\u0430\u0446\u0438\u044E \u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0433\u043E \u043E\u043A\u043D\u0430 \u043F\u0440\u043E\u043F\u0443\u0441\u043A\u043D\u043E\u0439 \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0438 (BW_LIMIT_TF) \u0438 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0435 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D\u043E\u0432 \u043F\u0438\u0442\u0430\u043D\u0438\u044F \u043F\u0430\u043C\u044F\u0442\u0438."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                lineNumber: 42,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u26A0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 52,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: "\u041F\u0440\u0438 \u0432\u044B\u0431\u043E\u0440\u0435 \u0434\u0435\u0441\u043A\u0442\u043E\u043F\u043D\u043E\u0439 \u043F\u0430\u043C\u044F\u0442\u0438 \u0441\u043A\u0440\u044B\u0442\u044B\u0435 \u043E\u043F\u0446\u0438\u0438 \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438 \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u044E\u0442\u0441\u044F, \u043F\u0440\u0435\u0434\u043E\u0442\u0432\u0440\u0430\u0449\u0430\u044F \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u044B\u0435 \u0437\u0430\u0432\u0438\u0441\u0430\u043D\u0438\u044F \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u0438 \u0441\u0438\u043D\u0438\u0435 \u044D\u043A\u0440\u0430\u043D\u044B (BSOD) \u0438\u0437-\u0437\u0430 \u043D\u0435\u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u0438 \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u043B\u0435\u0440\u0430."
+                    }, void 0, false, {
+                        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                        lineNumber: 53,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+                lineNumber: 51,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/DRAMConfiguration/DRAMTools.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = DRAMTools;
+exports.default = DRAMTools;
+var _c;
+$RefreshReg$(_c, "DRAMTools");
+
+  $parcel$ReactRefreshHelpers$0127.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4VRsi":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2f19 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$2f19.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2f19.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28183,87 +29483,91 @@ var _fanInfo = require("./FanInfo");
 var _fanInfoDefault = parcelHelpers.interopDefault(_fanInfo);
 var _fanTools = require("./FanTools");
 var _fanToolsDefault = parcelHelpers.interopDefault(_fanTools);
-const FanConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
-        title: "SMART FAN FUNCTION",
-        toolsLabel: "\u041E\u0411\u041E\u0420\u041E\u0422\u042B %",
-        renderInfo: (0, _fanInfoDefault.default),
-        renderTools: (0, _fanToolsDefault.default),
-        children: ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+const FanConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "SMART FAN FUNCTION",
+                toolsLabel: "\u041E\u0411\u041E\u0420\u041E\u0422\u042B %",
+                renderInfo: (0, _fanInfoDefault.default),
+                renderTools: (0, _fanToolsDefault.default)
+            }, void 0, false, {
+                fileName: "src/components/FanConfiguration/FanConfiguration.jsx",
+                lineNumber: 9,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
                 ...(0, _fanBiosDefault.default)()
             }, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
-                lineNumber: 14,
-                columnNumber: 12
+                fileName: "src/components/FanConfiguration/FanConfiguration.jsx",
+                lineNumber: 16,
+                columnNumber: 5
             }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/FanConfiguration/FanConfiguration.tsx",
-        lineNumber: 8,
-        columnNumber: 3
-    }, undefined);
+        ]
+    }, void 0, true);
 _c = FanConfiguration;
 exports.default = FanConfiguration;
 var _c;
 $RefreshReg$(_c, "FanConfiguration");
 
-  $parcel$ReactRefreshHelpers$f420.postlude(module);
+  $parcel$ReactRefreshHelpers$2f19.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"fCqKj","../Toolbox/Toolbox":"2S4BZ","./FanBios":"j5Yvg","./FanInfo":"fU0eG","./FanTools":"hY8Rb","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"j5Yvg":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./FanBios":"5Sniw","./FanInfo":"aD1Xi","./FanTools":"gzdpv","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"5Sniw":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const FanBios = ()=>({
-        title: 'SMART FAN FUNCTION',
-        path: 'Advanced > Smart Fan Function',
+        title: "SMART FAN FUNCTION",
+        path: "Advanced > Smart Fan Function",
         content: [
             {
-                text_left: 'Smart Fan 1 Mode',
-                text_right: 'Automatic Mode'
+                text_left: "Smart Fan 1 Mode",
+                text_right: "Automatic Mode"
             },
             {
-                text_left: 'Smart Fan Temperature 1',
-                text_right: '40'
+                text_left: "Smart Fan Temperature 1",
+                text_right: "40"
             },
             {
-                text_left: 'Smart Fan Temperature 2',
-                text_right: '55'
+                text_left: "Smart Fan Temperature 2",
+                text_right: "55"
             },
             {
-                text_left: 'Smart Fan Temperature 3',
-                text_right: '65'
+                text_left: "Smart Fan Temperature 3",
+                text_right: "65"
             },
             {
-                text_left: 'Smart Fan Temperature 4',
-                text_right: '75'
+                text_left: "Smart Fan Temperature 4",
+                text_right: "75"
             },
             {
-                text_left: 'Smart Fan Critical Temperature',
-                text_right: '80'
+                text_left: "Smart Fan Critical Temperature",
+                text_right: "80"
             },
             {
-                text_left: 'Smart Fan PWM 1',
-                text_right: '75'
+                text_left: "Smart Fan PWM 1",
+                text_right: "75"
             },
             {
-                text_left: 'Smart Fan PWM 2',
-                text_right: '130'
+                text_left: "Smart Fan PWM 2",
+                text_right: "130"
             },
             {
-                text_left: 'Smart Fan PWM 3',
-                text_right: '185'
+                text_left: "Smart Fan PWM 3",
+                text_right: "185"
             },
             {
-                text_left: 'Smart Fan PWM 4',
-                text_right: '255'
+                text_left: "Smart Fan PWM 4",
+                text_right: "255"
             },
             {
-                text_left: 'Fan work mode with critical',
-                text_right: 'Full Mode'
+                text_left: "Fan work mode with critical",
+                text_right: "Full Mode"
             },
             {
-                text_left: 'Temperature Tolerance',
-                text_right: '5'
+                text_left: "Temperature Tolerance",
+                text_right: "5"
             }
         ]
     });
@@ -28272,12 +29576,12 @@ exports.default = FanBios;
 var _c;
 $RefreshReg$(_c, "FanBios");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fU0eG":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$2fe4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$2fe4.init();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"aD1Xi":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1f4b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$1f4b.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2fe4.prelude(module);
+$parcel$ReactRefreshHelpers$1f4b.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28293,7 +29597,7 @@ const FanInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83C\uDF21\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        fileName: "src/components/FanConfiguration/FanInfo.jsx",
                         lineNumber: 4,
                         columnNumber: 7
                     }, undefined),
@@ -28301,13 +29605,13 @@ const FanInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "Temperature Tolerance (\u0413\u0438\u0441\u0442\u0435\u0440\u0435\u0437\u0438\u0441): \u0441\u0442\u0430\u0432\u044C\u0442\u0435 5-8. \u042D\u0442\u043E \u0441\u043E\u0437\u0434\u0430\u0441\u0442 \xab\u0431\u0443\u0444\u0435\u0440\xbb, \u0447\u0442\u043E\u0431\u044B \u043E\u0431\u043E\u0440\u043E\u0442\u044B \u043D\u0435 \u043F\u0440\u044B\u0433\u0430\u043B\u0438 \u043F\u0440\u0438 \u043A\u0430\u0436\u0434\u043E\u043C \u0441\u043A\u0430\u0447\u043A\u0435 \u043D\u0430 1-2\xb0."
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        fileName: "src/components/FanConfiguration/FanInfo.jsx",
                         lineNumber: 5,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                fileName: "src/components/FanConfiguration/FanInfo.jsx",
                 lineNumber: 3,
                 columnNumber: 5
             }, undefined),
@@ -28318,7 +29622,7 @@ const FanInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDCE2"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        fileName: "src/components/FanConfiguration/FanInfo.jsx",
                         lineNumber: 12,
                         columnNumber: 7
                     }, undefined),
@@ -28326,13 +29630,13 @@ const FanInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u041F\u043E\u043B\u043D\u043E\u0446\u0435\u043D\u043D\u043E \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E 4-pin \u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0442\u043E\u0440\u044B. 4-pin \u0432\u0435\u0440\u0442\u0443\u0448\u043A\u0430 \u0432 3-pin \u0440\u0430\u0437\u044A\u0435\u043C\u0435 \u043D\u0430 \u043A\u0438\u0442\u0430\u0439\u0446\u0430\u0445 \u0432\u0441\u0435\u0433\u0434\u0430 \u043A\u0440\u0443\u0442\u0438\u0442 \u043D\u0430 100%."
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        fileName: "src/components/FanConfiguration/FanInfo.jsx",
                         lineNumber: 13,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                fileName: "src/components/FanConfiguration/FanInfo.jsx",
                 lineNumber: 11,
                 columnNumber: 5
             }, undefined),
@@ -28343,52 +29647,27 @@ const FanInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDCA8"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        fileName: "src/components/FanConfiguration/FanInfo.jsx",
                         lineNumber: 20,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.info_text,
-                        children: "\u041D\u0430 \u043F\u043B\u0430\u0442\u0430\u0445 \u0441 \u0430\u043A\u0442\u0438\u0432\u043D\u044B\u043C \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u0435\u043C VRM \u0438\u0445 \u043E\u0431\u043E\u0440\u043E\u0442\u044B \u043D\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u044E\u0442\u0441\u044F \u0432 BIOS \u043F\u043E \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u0441\u0445\u0435\u043C\u0435 (\u0435\u0441\u043B\u0438 \u0435\u0441\u0442\u044C \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430)."
+                        children: "\u041D\u0430 \u043F\u043B\u0430\u0442\u044B \u0441 \u0430\u043A\u0442\u0438\u0432\u043D\u044B\u043C \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u0435\u043C VRM \u0438\u0445 \u043E\u0431\u043E\u0440\u043E\u0442\u044B \u043D\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u044E\u0442\u0441\u044F \u0432 BIOS \u043F\u043E \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u0441\u0445\u0435\u043C\u0435 (\u0435\u0441\u043B\u0438 \u0435\u0441\u0442\u044C \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430)."
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                        fileName: "src/components/FanConfiguration/FanInfo.jsx",
                         lineNumber: 21,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/FanConfiguration/FanInfo.tsx",
+                fileName: "src/components/FanConfiguration/FanInfo.jsx",
                 lineNumber: 19,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                className: s.info_item,
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: s.info_icon,
-                        children: "\u2699\uFE0F"
-                    }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
-                        lineNumber: 28,
-                        columnNumber: 7
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: s.info_text,
-                        children: "\u0415\u0441\u043B\u0438 \u043D\u0435\u0442 \u0440\u0435\u0430\u043A\u0446\u0438\u0438 \u043D\u0430 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438, \u0443\u0431\u0435\u0434\u0438\u0442\u0435\u0441\u044C, \u0447\u0442\u043E \u0432\u044B\u0431\u0440\u0430\u043D \u0440\u0435\u0436\u0438\u043C \xabSmart Fan Control\xbb \u0438\u043B\u0438 \xabManual\xbb \u0432\u043C\u0435\u0441\u0442\u043E \xabFull Speed\xbb."
-                    }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanInfo.tsx",
-                        lineNumber: 29,
-                        columnNumber: 7
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/FanConfiguration/FanInfo.tsx",
-                lineNumber: 27,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/FanConfiguration/FanInfo.tsx",
+        fileName: "src/components/FanConfiguration/FanInfo.jsx",
         lineNumber: 2,
         columnNumber: 3
     }, undefined);
@@ -28397,17 +29676,17 @@ exports.default = FanInfo;
 var _c;
 $RefreshReg$(_c, "FanInfo");
 
-  $parcel$ReactRefreshHelpers$2fe4.postlude(module);
+  $parcel$ReactRefreshHelpers$1f4b.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"hY8Rb":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$289c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$289c.init();
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"gzdpv":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$38cf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$38cf.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$289c.prelude(module);
+$parcel$ReactRefreshHelpers$38cf.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28421,8 +29700,8 @@ const FanTools = ({ styles: mainStyles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxD
         className: (0, _clsxDefault.default)(mainStyles.tools_container, mainStyles.comboStyle),
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pwmlistDefault.default), {}, void 0, false, {
-                fileName: "src/components/FanConfiguration/FanTools.tsx",
-                lineNumber: 10,
+                fileName: "src/components/FanConfiguration/FanTools.jsx",
+                lineNumber: 6,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28432,28 +29711,28 @@ const FanTools = ({ styles: mainStyles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxD
                         className: mainStyles.tools_icon,
                         children: "\uD83D\uDCA1"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanTools.tsx",
-                        lineNumber: 13,
+                        fileName: "src/components/FanConfiguration/FanTools.jsx",
+                        lineNumber: 9,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: mainStyles.tools_text,
                         children: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u0442\u0435 \u044D\u0442\u0438 \u0442\u043E\u0447\u043A\u0438 \u0432 BIOS \u0434\u043B\u044F \u043E\u043F\u0442\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0431\u0430\u043B\u0430\u043D\u0441\u0430 \u0448\u0443\u043C\u0430 \u0438 \u0442\u0435\u043C\u043F\u0435\u0440\u0430\u0442\u0443\u0440."
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/FanTools.tsx",
-                        lineNumber: 14,
+                        fileName: "src/components/FanConfiguration/FanTools.jsx",
+                        lineNumber: 10,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/FanConfiguration/FanTools.tsx",
-                lineNumber: 12,
+                fileName: "src/components/FanConfiguration/FanTools.jsx",
+                lineNumber: 8,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/FanConfiguration/FanTools.tsx",
-        lineNumber: 9,
+        fileName: "src/components/FanConfiguration/FanTools.jsx",
+        lineNumber: 5,
         columnNumber: 3
     }, undefined);
 _c = FanTools;
@@ -28461,17 +29740,17 @@ exports.default = FanTools;
 var _c;
 $RefreshReg$(_c, "FanTools");
 
-  $parcel$ReactRefreshHelpers$289c.postlude(module);
+  $parcel$ReactRefreshHelpers$38cf.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","./PWMList/PWMList":"aqGD7","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"aqGD7":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$f0fc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$f0fc.init();
+},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","./PWMList/PWMList":"huuq4","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"huuq4":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$925b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$925b.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f0fc.prelude(module);
+$parcel$ReactRefreshHelpers$925b.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28489,7 +29768,7 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_icon,
                         children: "\u2744\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 6,
                         columnNumber: 7
                     }, undefined),
@@ -28497,7 +29776,7 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_text,
                         children: "PWM 75"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 7,
                         columnNumber: 7
                     }, undefined),
@@ -28505,13 +29784,13 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_percent,
                         children: "29%"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 8,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                 lineNumber: 5,
                 columnNumber: 5
             }, undefined),
@@ -28522,7 +29801,7 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_icon,
                         children: "\uD83C\uDF43"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 12,
                         columnNumber: 7
                     }, undefined),
@@ -28530,7 +29809,7 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_text,
                         children: "PWM 130"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 13,
                         columnNumber: 7
                     }, undefined),
@@ -28538,13 +29817,13 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_percent,
                         children: "51%"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 14,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                 lineNumber: 11,
                 columnNumber: 5
             }, undefined),
@@ -28555,7 +29834,7 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_icon,
                         children: "\uD83D\uDE80"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 18,
                         columnNumber: 7
                     }, undefined),
@@ -28563,7 +29842,7 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_text,
                         children: "PWM 185"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 19,
                         columnNumber: 7
                     }, undefined),
@@ -28571,13 +29850,13 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_percent,
                         children: "73%"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 20,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                 lineNumber: 17,
                 columnNumber: 5
             }, undefined),
@@ -28588,7 +29867,7 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_icon,
                         children: "\uD83C\uDF2A\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 24,
                         columnNumber: 7
                     }, undefined),
@@ -28596,7 +29875,7 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_text,
                         children: "PWM 255"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 25,
                         columnNumber: 7
                     }, undefined),
@@ -28604,19 +29883,19 @@ const PWMList = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _pwmlistModuleCssDefault.default).fan_percent,
                         children: "100%"
                     }, void 0, false, {
-                        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                         lineNumber: 26,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+                fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
                 lineNumber: 23,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/FanConfiguration/PWMList/PWMList.tsx",
+        fileName: "src/components/FanConfiguration/PWMList/PWMList.jsx",
         lineNumber: 4,
         columnNumber: 3
     }, undefined);
@@ -28625,7 +29904,7 @@ exports.default = PWMList;
 var _c;
 $RefreshReg$(_c, "PWMList");
 
-  $parcel$ReactRefreshHelpers$f0fc.postlude(module);
+  $parcel$ReactRefreshHelpers$925b.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
@@ -28637,90 +29916,648 @@ module.exports["fan_item"] = `_1aUYlG_fan_item`;
 module.exports["fan_percent"] = `_1aUYlG_fan_percent`;
 module.exports["fan_text"] = `_1aUYlG_fan_text`;
 
-},{}],"2Xem2":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$5545 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$5545.init();
+},{}],"5XUz3":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$72d8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$72d8.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5545.prelude(module);
+$parcel$ReactRefreshHelpers$72d8.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _fivrBios = require("./FivrBios");
+var _fivrBiosDefault = parcelHelpers.interopDefault(_fivrBios);
+var _fivrInfo = require("./FivrInfo");
+var _fivrInfoDefault = parcelHelpers.interopDefault(_fivrInfo);
+var _fivrTools = require("./FivrTools");
+var _fivrToolsDefault = parcelHelpers.interopDefault(_fivrTools);
+var _s = $RefreshSig$();
+const FivrConfiguration = ()=>{
+    _s();
+    // Инициализируем стейт поколения процессора по умолчанию на V3
+    const [param, setParam] = (0, _react.useState)({
+        cpuGen: "V3"
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "CPU FIVR CONFIGURATION",
+                toolsLabel: "\u0423\u041F\u0420\u0410\u0412\u041B\u0415\u041D\u0418\u0415 \u041F\u0418\u0422\u0410\u041D\u0418\u0415\u041C FIVR",
+                renderInfo: (0, _fivrInfoDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fivrToolsDefault.default), {
+                        ...props,
+                        param: param,
+                        setParam: setParam
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrConfiguration.jsx",
+                        lineNumber: 19,
+                        columnNumber: 11
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/FivrConfiguration/FivrConfiguration.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _fivrBiosDefault.default)(param)
+            }, void 0, false, {
+                fileName: "src/components/FivrConfiguration/FivrConfiguration.jsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(FivrConfiguration, "cYEVFn0Zy1dlBMFfkBcsJqPul5w=");
+_c = FivrConfiguration;
+exports.default = FivrConfiguration;
+var _c;
+$RefreshReg$(_c, "FivrConfiguration");
+
+  $parcel$ReactRefreshHelpers$72d8.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./FivrBios":"3ngqf","./FivrInfo":"8e4M2","./FivrTools":"4y982","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"3ngqf":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const FivrBios = (param)=>{
+    const { cpuGen = "V3" } = param;
+    // Если выбран процессор поколения V4 (Broadwell-EP)
+    if (cpuGen === "V4") return {
+        title: "FIVR Configuration",
+        path: "IntelRCSetup > Overclocking Features",
+        content: [
+            {
+                text_left: "SVID Support",
+                text_right: "Disabled"
+            },
+            {
+                text_left: "CPU VCCin Voltage Level",
+                text_right: "359"
+            },
+            {
+                text_left: "FIVR Faults",
+                text_right: "Enabled"
+            },
+            {
+                text_left: "FIVR Efficiency Management",
+                text_right: "Disabled"
+            }
+        ]
+    };
+    // Если выбран процессор поколения V3 (Haswell-EP) — отдаем конфигурацию с SVID Voltage Override
+    return {
+        title: "FIVR Configuration",
+        path: "IntelRCSetup > Overclocking Features",
+        content: [
+            {
+                text_left: "SVID Support",
+                text_right: "Enabled"
+            },
+            {
+                text_left: "SVID Voltage Override",
+                text_right: "0"
+            },
+            {
+                text_left: "CPU VCCin Voltage Level",
+                text_right: "359"
+            },
+            {
+                text_left: "FIVR Faults",
+                text_right: "Enabled"
+            },
+            {
+                text_left: "FIVR Efficiency Management",
+                text_right: "Disabled"
+            }
+        ]
+    };
+};
+_c = FivrBios;
+exports.default = FivrBios;
+var _c;
+$RefreshReg$(_c, "FivrBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8e4M2":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$d3d6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$d3d6.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d3d6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const FivrInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: s.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83E\uDDE0"
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                        lineNumber: 6,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "FIVR"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                                lineNumber: 8,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u0441\u0430\u043C\u043E\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u043D\u043E \u0440\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u044F\u0435\u0442 \u0442\u043E\u0447\u043D\u044B\u0435 \u0442\u043E\u043A\u0438 \u0432\u043D\u0443\u0442\u0440\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430. \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "CPU VCCin Voltage Level [359]"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                                lineNumber: 9,
+                                columnNumber: 18
+                            }, undefined),
+                            " \u2014 \u044D\u0442\u043E \u0437\u0430\u0432\u043E\u0434\u0441\u043A\u043E\u0439 \u0438\u043D\u0434\u0435\u043A\u0441, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0437\u0430\u0434\u0430\u0435\u0442 \u0431\u0430\u0437\u043E\u0432\u043E\u0435 \u0432\u0445\u043E\u0434\u043D\u043E\u0435 \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435 \u043E\u043A\u043E\u043B\u043E ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "1.8\u20131.9 \u0412"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                                lineNumber: 10,
+                                columnNumber: 57
+                            }, undefined),
+                            ", \u043F\u043E\u0441\u0442\u0443\u043F\u0430\u044E\u0449\u0435\u0435 \u043E\u0442 VRM \u043C\u0430\u0442\u0435\u0440\u0438\u043D\u0441\u043A\u043E\u0439 \u043F\u043B\u0430\u0442\u044B."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                        lineNumber: 7,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDCE1"
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                        lineNumber: 16,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u041F\u0440\u043E\u0442\u043E\u043A\u043E\u043B ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "SVID"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                                lineNumber: 18,
+                                columnNumber: 18
+                            }, undefined),
+                            " (Serial Voltage Identification) \u2014 \u044D\u0442\u043E \u0446\u0438\u0444\u0440\u043E\u0432\u0430\u044F \u0448\u0438\u043D\u0430, \u043F\u043E \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440 \u0437\u0430\u043F\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u0442 \u0443 \u0432\u043D\u0435\u0448\u043D\u0435\u0439 \u0441\u0445\u0435\u043C\u044B \u043F\u0438\u0442\u0430\u043D\u0438\u044F \u043F\u043B\u0430\u0442\u044B \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0435 \u0432\u043E\u043B\u044C\u0442\u0430\u0436\u0430 \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u0438 \u043E\u0442 \u0442\u0435\u043A\u0443\u0449\u0435\u0439 \u0447\u0430\u0441\u0442\u043E\u0442\u044B."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                        lineNumber: 17,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                lineNumber: 15,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\u2699\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: "\u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 SVID \u043D\u0430 \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0435 V4 \u0438\u0437\u043E\u043B\u0438\u0440\u0443\u0435\u0442 \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0440\u0435\u0433\u0443\u043B\u044F\u0442\u043E\u0440 FIVR \u043E\u0442 \u0432\u043D\u0435\u0448\u043D\u0438\u0445 \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D\u0438\u0439 \u0442\u0435\u043F\u043B\u043E\u043F\u0430\u043A\u0435\u0442\u0430 \u043F\u043B\u0430\u0442\u044B, \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u044F \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0442\u044C \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u044B\u0435 \u0447\u0430\u0441\u0442\u043E\u0442\u044B \u0431\u0435\u0437 \u0441\u0431\u0440\u043E\u0441\u0430 \u043F\u043E\u0434 \u043D\u0430\u0433\u0440\u0443\u0437\u043A\u043E\u0439."
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                        lineNumber: 26,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+                lineNumber: 24,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/FivrConfiguration/FivrInfo.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = FivrInfo;
+exports.default = FivrInfo;
+var _c;
+$RefreshReg$(_c, "FivrInfo");
+
+  $parcel$ReactRefreshHelpers$d3d6.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4y982":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9a2b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9a2b.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9a2b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+const FivrTools = ({ styles: s, param, setParam })=>{
+    const { cpuGen = "V3" } = param;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: s.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_label,
+                children: "\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415 CPU:"
+            }, void 0, false, {
+                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.btn_group,
+                children: [
+                    "V3",
+                    "V4"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: cpuGen === type,
+                        className: s.tools_button,
+                        onClick: ()=>setParam((p)=>({
+                                    ...p,
+                                    cpuGen: type
+                                }))
+                    }, type, false, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDE80"
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 23,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "FIVR Efficiency Management"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                                lineNumber: 25,
+                                columnNumber: 20
+                            }, undefined),
+                            " \u0432 \u0440\u0435\u0436\u0438\u043C\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Disabled"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                                lineNumber: 25,
+                                columnNumber: 63
+                            }, undefined),
+                            " ",
+                            "\u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0435\u0442 \u044D\u043D\u0435\u0440\u0433\u043E\u0441\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0438\u0435 \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0435\u0433\u043E \u0440\u0435\u0433\u0443\u043B\u044F\u0442\u043E\u0440\u0430, \u0441\u0442\u0430\u0431\u0438\u043B\u0438\u0437\u0438\u0440\u0443\u044F \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435 \u044F\u0434\u0435\u0440 \u043F\u043E\u0434 \u0440\u0435\u0437\u043A\u0438\u043C\u0438 \u0441\u043A\u0430\u0447\u043A\u0430\u043C\u0438 \u0438\u0433\u0440\u043E\u0432\u043E\u0439 \u043D\u0430\u0433\u0440\u0443\u0437\u043A\u0438."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                lineNumber: 22,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDCC9"
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "V3 (Haswell-EP)"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                                lineNumber: 34,
+                                columnNumber: 15
+                            }, undefined),
+                            ": \u0448\u0438\u043D\u0430 SVID \u043E\u0441\u0442\u0430\u0435\u0442\u0441\u044F \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u043E\u0439 \u0434\u043B\u044F \u0442\u043E\u0447\u0435\u0447\u043D\u043E\u0433\u043E \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0441\u043C\u0435\u0449\u0435\u043D\u0438\u0435\u043C \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u044F (\u0430\u043D\u0434\u0435\u0440\u0432\u043E\u043B\u044C\u0442\u0438\u043D\u0433\u0430) \u0447\u0435\u0440\u0435\u0437 \u043C\u043E\u0434\u0438\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439 \u0434\u0440\u0430\u0439\u0432\u0435\u0440 \u0438\u043B\u0438 BIOS \u043F\u0440\u0438 \u0430\u043D\u043B\u043E\u043A\u0435 \u0442\u0443\u0440\u0431\u043E\u0431\u0443\u0441\u0442\u0430."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u26A1"
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "V4 (Broadwell-EP)"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                                lineNumber: 43,
+                                columnNumber: 15
+                            }, undefined),
+                            ": \u043F\u0435\u0440\u0435\u0432\u043E\u0434 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "SVID Support"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                                lineNumber: 43,
+                                columnNumber: 49
+                            }, undefined),
+                            " \u0432",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Disabled"
+                            }, void 0, false, {
+                                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                                lineNumber: 44,
+                                columnNumber: 11
+                            }, undefined),
+                            " \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0435\u0442 \u0432\u043D\u0435\u0448\u043D\u044E\u044E \u0442\u0435\u043B\u0435\u043C\u0435\u0442\u0440\u0438\u044E \u043F\u0438\u0442\u0430\u043D\u0438\u044F. \u042D\u0442\u043E \u0443\u0431\u0438\u0440\u0430\u0435\u0442 \u0441\u0442\u0440\u043E\u043A\u0443 \u043F\u0435\u0440\u0435\u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u0438\u044F \u0432\u043E\u043B\u044C\u0442\u0430\u0436\u0430, \u0444\u0438\u043A\u0441\u0438\u0440\u0443\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u044B\u0439 VCCin."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                lineNumber: 40,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u26A0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: "\u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 SVID \u043D\u0430 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u0445 V4 \u2014 \u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u0434\u043B\u044F \u043E\u0431\u0445\u043E\u0434\u0430 \u0436\u0435\u0441\u0442\u043A\u0438\u0445 \u043B\u0438\u043C\u0438\u0442\u043E\u0432 \u0442\u043E\u043A\u0430 (Power Limit), \u0432\u0441\u0442\u0440\u043E\u0435\u043D\u043D\u044B\u0445 \u0432 \u043C\u0438\u043A\u0440\u043E\u043A\u043E\u0434 \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u044B Broadwell-EP \u043A\u0438\u0442\u0430\u0439\u0441\u043A\u0438\u043C\u0438 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F\u043C\u0438 \u043F\u043B\u0430\u0442."
+                    }, void 0, false, {
+                        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+                lineNumber: 49,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/FivrConfiguration/FivrTools.jsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
+};
+_c = FivrTools;
+exports.default = FivrTools;
+var _c;
+$RefreshReg$(_c, "FivrTools");
+
+  $parcel$ReactRefreshHelpers$9a2b.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fySTl":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$34d7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$34d7.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$34d7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _biosWindow = require("../BiosWindow/BiosWindow");
 var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
 var _toolbox = require("../Toolbox/Toolbox");
 var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
 var _iiobios = require("./IIOBios");
 var _iiobiosDefault = parcelHelpers.interopDefault(_iiobios);
-var _iioinfo = require("./IIOInfo");
-var _iioinfoDefault = parcelHelpers.interopDefault(_iioinfo);
+var _iioinfoJsx = require("./IIOInfo.jsx");
+var _iioinfoJsxDefault = parcelHelpers.interopDefault(_iioinfoJsx);
 var _iiotools = require("./IIOTools");
 var _iiotoolsDefault = parcelHelpers.interopDefault(_iiotools);
-const INITIAL_STATE = {
-    pcieGen: "gen_2"
-};
-const IIOConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
-        initialState: INITIAL_STATE,
-        title: "IIO Configuration",
-        toolsLabel: "PCI-E PORTS",
-        renderInfo: (0, _iioinfoDefault.default),
-        renderTools: (0, _iiotoolsDefault.default),
-        children: (p)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-                ...(0, _iiobiosDefault.default)(p.state)
+var _s = $RefreshSig$();
+const IIOConfiguration = ({ selectedButton = "gen_2" })=>{
+    _s();
+    const [param, setParam] = (0, _react.useState)({
+        pciGen: selectedButton
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "IIO CONFIGURATOR",
+                toolsLabel: "PCI-E PORTS",
+                renderInfo: (0, _iioinfoJsxDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iiotoolsDefault.default), {
+                        ...props,
+                        param: param,
+                        setParam: setParam
+                    }, void 0, false, {
+                        fileName: "src/components/IIOConfiguration/IIOConfiguration.jsx",
+                        lineNumber: 18,
+                        columnNumber: 11
+                    }, void 0)
             }, void 0, false, {
-                fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
-                lineNumber: 17,
-                columnNumber: 13
+                fileName: "src/components/IIOConfiguration/IIOConfiguration.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _iiobiosDefault.default)(param)
+            }, void 0, false, {
+                fileName: "src/components/IIOConfiguration/IIOConfiguration.jsx",
+                lineNumber: 22,
+                columnNumber: 7
             }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/IIOConfiguration/IIOConfiguration.tsx",
-        lineNumber: 10,
-        columnNumber: 3
-    }, undefined);
+        ]
+    }, void 0, true);
+};
+_s(IIOConfiguration, "tdyaefJh9w6OhwIhEHUUFRQf/8s=");
 _c = IIOConfiguration;
 exports.default = IIOConfiguration;
 var _c;
 $RefreshReg$(_c, "IIOConfiguration");
 
-  $parcel$ReactRefreshHelpers$5545.postlude(module);
+  $parcel$ReactRefreshHelpers$34d7.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"fCqKj","../Toolbox/Toolbox":"2S4BZ","./IIOBios":"jEjIK","./IIOInfo":"8THfS","./IIOTools":"iHIKX","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jEjIK":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./IIOBios":"iTgLv","./IIOInfo.jsx":"26ifX","./IIOTools":"92MP8","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iTgLv":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const IIOBios = (state)=>({
+const IIOBios = ({ pciGen })=>{
+    const isGen3 = pciGen === "gen_3";
+    return {
         title: "IIO0 CONFIGURATION",
         path: "IntelRCSetup > IIO Configuration > IIO0 Configuration",
         content: [
+            // Блок для Port 0/DMI
             {
-                text_left: "IOU2 (PCIE PORT X16)",
-                text_right: state.pcieGen === "gen_3" ? "GEN 3" : "GEN 2"
+                text_left: "Socket 0 PcieD00F0 - Port 0/DMI",
+                text_right: "",
+                isEditable: true
             },
             {
-                text_left: "IOU0 (PCIE PORT X8)",
-                text_right: state.pcieGen === "gen_3" ? "GEN 3" : "GEN 2"
+                text_left: "Link Speed",
+                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
+                isEditable: true
+            },
+            // Блок для Port 1A
+            {
+                text_left: "Socket 0 PcieD01F0 - Port 1A",
+                text_right: "",
+                isEditable: true
             },
             {
-                text_left: "IOU1 (PCIE PORT X4)",
-                text_right: state.pcieGen === "gen_3" ? "GEN 3" : "GEN 2"
+                text_left: "Link Speed",
+                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
+                isEditable: true
+            },
+            // Блок для Port 1B
+            {
+                text_left: "Socket 0 PcieD01F1 - Port 1B",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "Link Speed",
+                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
+                isEditable: true
+            },
+            // Блок для Port 2A
+            {
+                text_left: "Socket 0 PcieD02F0 - Port 2A",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "Link Speed",
+                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
+                isEditable: true
+            },
+            // Блок для Port 3A
+            {
+                text_left: "Socket 0 PcieD03F0 - Port 3A",
+                text_right: "",
+                isEditable: true
+            },
+            {
+                text_left: "Link Speed",
+                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
+                isEditable: true
             }
         ]
-    });
+    };
+};
 _c = IIOBios;
 exports.default = IIOBios;
 var _c;
 $RefreshReg$(_c, "IIOBios");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8THfS":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$d557 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$d557.init();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"26ifX":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$43d2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$43d2.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d557.prelude(module);
+$parcel$ReactRefreshHelpers$43d2.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28736,7 +30573,7 @@ const IIOInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\u26A1"
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                         lineNumber: 4,
                         columnNumber: 7
                     }, undefined),
@@ -28744,13 +30581,13 @@ const IIOInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0424\u0438\u043A\u0441\u0430\u0446\u0438\u044F \u0440\u0435\u0436\u0438\u043C\u0430 GEN 3 \u043F\u043E\u043C\u043E\u0433\u0430\u0435\u0442 \u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044C \u043E\u0448\u0438\u0431\u043E\u043A Link Training Error."
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                         lineNumber: 5,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                 lineNumber: 3,
                 columnNumber: 5
             }, undefined),
@@ -28761,7 +30598,7 @@ const IIOInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDEE0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                         lineNumber: 11,
                         columnNumber: 7
                     }, undefined),
@@ -28769,13 +30606,13 @@ const IIOInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0414\u043B\u044F \u0441\u0442\u0430\u0440\u044B\u0445 \u043A\u0430\u0440\u0442 (HD 7000, GTX 600 \u0438 \u0441\u0442\u0430\u0440\u0448\u0435) \u043F\u0440\u0438\u043D\u0443\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0441\u0442\u0430\u0432\u044C\u0442\u0435 GEN 2."
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                         lineNumber: 12,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                 lineNumber: 10,
                 columnNumber: 5
             }, undefined),
@@ -28786,7 +30623,7 @@ const IIOInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\u26A0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                         lineNumber: 18,
                         columnNumber: 7
                     }, undefined),
@@ -28794,13 +30631,13 @@ const IIOInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0415\u0441\u043B\u0438 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430 \xab\u043E\u0442\u0432\u0430\u043B\u0438\u0432\u0430\u044E\u0442\u0441\u044F\xbb \u2014 \u043F\u0440\u043E\u0442\u0440\u0438\u0442\u0435 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u044B \u0440\u0430\u0437\u044A\u0435\u043C\u043E\u0432 \u043B\u0430\u0441\u0442\u0438\u043A\u043E\u043C."
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                         lineNumber: 19,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                 lineNumber: 17,
                 columnNumber: 5
             }, undefined),
@@ -28811,7 +30648,7 @@ const IIOInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83E\uDDEC"
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                         lineNumber: 25,
                         columnNumber: 7
                     }, undefined),
@@ -28819,19 +30656,19 @@ const IIOInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0414\u043B\u044F \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 NVMe \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0440\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u0435 \u043B\u0438\u043D\u0438\u0439 (Bifurcation x4x4x4x4)."
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                         lineNumber: 26,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+                fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
                 lineNumber: 24,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/IIOConfiguration/IIOInfo.tsx",
+        fileName: "src/components/IIOConfiguration/IIOInfo.jsx",
         lineNumber: 2,
         columnNumber: 3
     }, undefined);
@@ -28840,17 +30677,17 @@ exports.default = IIOInfo;
 var _c;
 $RefreshReg$(_c, "IIOInfo");
 
-  $parcel$ReactRefreshHelpers$d557.postlude(module);
+  $parcel$ReactRefreshHelpers$43d2.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iHIKX":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$8ba0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$8ba0.init();
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"92MP8":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$e22c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$e22c.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8ba0.prelude(module);
+$parcel$ReactRefreshHelpers$e22c.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28858,18 +30695,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _button = require("../Button/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-const IIOTools = ({ state, setParam, styles: s })=>{
-    const { pcieGen } = state;
-    const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-            type: type,
-            isActive: pcieGen === type,
-            onClick: ()=>setParam("pcieGen", type),
-            className: s.tools_button
-        }, void 0, false, {
-            fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-            lineNumber: 8,
-            columnNumber: 5
-        }, undefined);
+const IIOTools = ({ styles: s, param, setParam })=>{
+    const { pciGen } = param;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: s.tools_container,
         children: [
@@ -28877,19 +30704,31 @@ const IIOTools = ({ state, setParam, styles: s })=>{
                 className: s.tools_label,
                 children: "\u041F\u041E\u0420\u0422\u042B PCI-E:"
             }, void 0, false, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 18,
+                fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.btn_group,
                 children: [
-                    renderButton("gen_2"),
-                    renderButton("gen_3")
-                ]
-            }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 20,
+                    "gen_2",
+                    "gen_3"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: pciGen === type,
+                        className: s.tools_button,
+                        onClick: ()=>setParam((p)=>({
+                                    ...p,
+                                    pciGen: type
+                                }))
+                    }, type, false, {
+                        fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28899,34 +30738,34 @@ const IIOTools = ({ state, setParam, styles: s })=>{
                         className: s.tools_icon,
                         children: "\uD83D\uDCA1"
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 26,
+                        fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: s.tools_text,
                         children: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 \u0432\u043B\u0438\u044F\u0435\u0442 \u043D\u0430 \u043F\u0440\u043E\u043F\u0443\u0441\u043A\u043D\u0443\u044E \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u044C \u0448\u0438\u043D\u044B."
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 27,
+                        fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 25,
+                fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
-            pcieGen === "gen_2" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.tools_icon,
                         children: "\u26A0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 34,
-                        columnNumber: 11
+                        fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                        lineNumber: 30,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: s.tools_text,
@@ -28934,33 +30773,33 @@ const IIOTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "Gen 2"
                             }, void 0, false, {
-                                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                                lineNumber: 36,
-                                columnNumber: 13
+                                fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                                lineNumber: 32,
+                                columnNumber: 11
                             }, undefined),
                             " \u043C\u043E\u0436\u0435\u0442 \u043F\u043E\u0442\u0440\u0435\u0431\u043E\u0432\u0430\u0442\u044C\u0441\u044F \u0434\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u0438 \u0441\u0442\u0430\u0440\u044B\u0445 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 35,
-                        columnNumber: 11
+                        fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                        lineNumber: 31,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 33,
-                columnNumber: 9
+                fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                lineNumber: 29,
+                columnNumber: 7
             }, undefined),
-            pcieGen === "gen_3" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.tools_icon,
                         children: "\uD83D\uDE80"
                     }, void 0, false, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 43,
-                        columnNumber: 11
+                        fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                        lineNumber: 37,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: s.tools_text,
@@ -28968,27 +30807,27 @@ const IIOTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "Gen 3"
                             }, void 0, false, {
-                                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                                lineNumber: 45,
-                                columnNumber: 13
+                                fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                                lineNumber: 39,
+                                columnNumber: 11
                             }, undefined),
                             " \u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \u0434\u043B\u044F \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0445 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442 \u0438 NVMe."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                        lineNumber: 44,
-                        columnNumber: 11
+                        fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                        lineNumber: 38,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-                lineNumber: 42,
-                columnNumber: 9
+                fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+                lineNumber: 36,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/IIOConfiguration/IIOTools.tsx",
-        lineNumber: 17,
+        fileName: "src/components/IIOConfiguration/IIOTools.jsx",
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
@@ -28997,17 +30836,600 @@ exports.default = IIOTools;
 var _c;
 $RefreshReg$(_c, "IIOTools");
 
-  $parcel$ReactRefreshHelpers$8ba0.postlude(module);
+  $parcel$ReactRefreshHelpers$e22c.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"8gBEe":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$d2b5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$d2b5.init();
+},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4q3An":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1f46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$1f46.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d2b5.prelude(module);
+$parcel$ReactRefreshHelpers$1f46.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _memoryBios = require("./MemoryBios");
+var _memoryBiosDefault = parcelHelpers.interopDefault(_memoryBios);
+var _memoryInfo = require("./MemoryInfo");
+var _memoryInfoDefault = parcelHelpers.interopDefault(_memoryInfo);
+var _memoryTools = require("./MemoryTools");
+var _memoryToolsDefault = parcelHelpers.interopDefault(_memoryTools);
+var _s = $RefreshSig$();
+const MemoryConfiguration = ()=>{
+    _s();
+    const [param, setParam] = (0, _react.useState)({
+        memoryType: "desktop"
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "INTEGRATED MEMORY CONTROLLER",
+                toolsLabel: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0410 \u041F\u0410\u041C\u042F\u0422\u0418",
+                renderInfo: (0, _memoryInfoDefault.default),
+                // Принимаем { styles } от талбокса и пробрасываем их дальше вместе со стейтами
+                renderTools: ({ styles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _memoryToolsDefault.default), {
+                        styles: styles,
+                        param: param,
+                        setParam: setParam
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryConfiguration.jsx",
+                        lineNumber: 19,
+                        columnNumber: 11
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/MemoryConfiguration/MemoryConfiguration.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _memoryBiosDefault.default)(param)
+            }, void 0, false, {
+                fileName: "src/components/MemoryConfiguration/MemoryConfiguration.jsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(MemoryConfiguration, "nIANzpmQBqzLHG4o74K7kZ10jUg=");
+_c = MemoryConfiguration;
+exports.default = MemoryConfiguration;
+var _c;
+$RefreshReg$(_c, "MemoryConfiguration");
+
+  $parcel$ReactRefreshHelpers$1f46.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./MemoryBios":"2Uej4","./MemoryInfo":"hI96e","./MemoryTools":"66vtY"}],"2Uej4":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const MemoryBios = ({ memoryType = "desktop" })=>{
+    const isEcc = memoryType === "ecc";
+    return {
+        title: "Integrated Memory Controller (IMC) Configuration",
+        path: "IntelRCSetup > Integrated Memory Controller (IMC)",
+        content: [
+            {
+                text_left: "Enforce POR",
+                text_right: "Disabled",
+                isDisabled: true
+            },
+            {
+                text_left: "PPR Type",
+                text_right: "PPR Disabled",
+                isDisabled: true
+            },
+            {
+                text_left: "Dram Maintenance Test Inversion",
+                text_right: "Disabled",
+                isDisabled: true
+            },
+            {
+                text_left: "BCIT",
+                text_right: "Disabled",
+                isDisabled: true
+            },
+            {
+                text_left: "Data Scrambling",
+                text_right: isEcc ? "Enabled" : "Disabled",
+                // Если выбран desktop — пункт выключен и заблокирован (серый). Если ecc — активен (белый)
+                isDisabled: !isEcc
+            },
+            {
+                text_left: "Attempt Fast Boot",
+                text_right: "Enable",
+                isDisabled: false
+            },
+            {
+                text_left: "Attempt Fast Cold Boot",
+                text_right: "Enable",
+                isDisabled: false
+            },
+            {
+                text_left: "PSMI Support",
+                text_right: "Disabled",
+                isDisabled: true
+            }
+        ]
+    };
+};
+_c = MemoryBios;
+exports.default = MemoryBios;
+var _c;
+$RefreshReg$(_c, "MemoryBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hI96e":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$35da = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$35da.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$35da.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const MemoryInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: s.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDE80"
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                        lineNumber: 6,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Attempt Fast Boot"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 8,
+                                columnNumber: 19
+                            }, undefined),
+                            " \u0438 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Cold Boot"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 8,
+                                columnNumber: 46
+                            }, undefined),
+                            " \u043F\u0440\u0438\u043D\u0443\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u044B. \u041E\u043D\u0438 \u043F\u0440\u043E\u043F\u0443\u0441\u043A\u0430\u044E\u0442 \u0434\u043E\u043B\u0433\u0443\u044E 15-\u043C\u0438\u043D\u0443\u0442\u043D\u0443\u044E \u0442\u0440\u0435\u043D\u0438\u0440\u043E\u0432\u043A\u0443 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043E\u0432 \u043F\u0440\u0438 \u043A\u0430\u0436\u0434\u043E\u043C \u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u043A\u0435 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C X99."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                        lineNumber: 7,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83E\uDDE0"
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                        lineNumber: 15,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0412 \u0440\u0435\u0436\u0438\u043C\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "DESKTOP"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 17,
+                                columnNumber: 18
+                            }, undefined),
+                            " \u0444\u0443\u043D\u043A\u0446\u0438\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Data Scrambling"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 17,
+                                columnNumber: 41
+                            }, undefined),
+                            " \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0438\u0442\u0441\u044F \u0432 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Disabled"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 18,
+                                columnNumber: 19
+                            }, undefined),
+                            ". \u042D\u0442\u043E \u0443\u0431\u0438\u0440\u0430\u0435\u0442 \u043B\u0438\u0448\u043D\u0438\u0435 \u0446\u0438\u043A\u043B\u044B \u0448\u0438\u0444\u0440\u043E\u0432\u0430\u043D\u0438\u044F \u0431\u0438\u0442 \u0438 \u043D\u0430\u043F\u0440\u044F\u043C\u0443\u044E \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u043E\u0431\u0449\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u043A\u0438 (latency) \u043F\u0430\u043C\u044F\u0442\u0438."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                        lineNumber: 16,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                lineNumber: 14,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDEE1\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                        lineNumber: 24,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0412 \u0440\u0435\u0436\u0438\u043C\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "ECC REG"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 26,
+                                columnNumber: 18
+                            }, undefined),
+                            " \u0441\u043A\u0440\u0435\u043C\u0431\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u043F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0430\u0435\u0442\u0441\u044F \u0432 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Enabled"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 26,
+                                columnNumber: 65
+                            }, undefined),
+                            ". \u042D\u0442\u043E \u0433\u0430\u0441\u0438\u0442 \u043F\u0435\u0440\u0435\u043A\u0440\u0435\u0441\u0442\u043D\u044B\u0435 \u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043C\u0430\u0433\u043D\u0438\u0442\u043D\u044B\u0435 \u043D\u0430\u0432\u043E\u0434\u043A\u0438 \u043C\u0435\u0436\u0434\u0443 \u0440\u0430\u043D\u0433\u0430\u043C\u0438 \u0442\u044F\u0436\u0435\u043B\u044B\u0445 \u043C\u043D\u043E\u0433\u043E\u0447\u0438\u043F\u043E\u0432\u044B\u0445 \u0441\u0435\u0440\u0432\u0435\u0440\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439 \u043F\u043E\u0434 \u043D\u0430\u0433\u0440\u0443\u0437\u043A\u043E\u0439."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                lineNumber: 23,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDD04"
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                        lineNumber: 33,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0415\u0441\u043B\u0438 \u0412\u0421\u0415 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u0432 \u0432\u0430\u0448\u0435\u043C BIOS \u0438\u0437\u043D\u0430\u0447\u0430\u043B\u044C\u043D\u043E \u0441\u0442\u043E\u044F\u0442 \u0432 \u0440\u0435\u0436\u0438\u043C\u0435 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "AUTO"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 35,
+                                columnNumber: 67
+                            }, undefined),
+                            ", \u0442\u043E \u043F\u0440\u0438\u043D\u0446\u0438\u043F\u0438\u0430\u043B\u044C\u043D\u043E \u0432\u0430\u0436\u043D\u044B\u0435 \u043E\u043F\u0446\u0438\u0438 \u0438\u0437 \u0442\u0430\u0431\u043B\u0438\u0446\u044B \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u0432\u0440\u0443\u0447\u043D\u0443\u044E \u043F\u0435\u0440\u0435\u0432\u0435\u0441\u0442\u0438 \u0432",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Enable"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 37,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u0438\u043B\u0438 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Disable"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                                lineNumber: 37,
+                                columnNumber: 27
+                            }, undefined),
+                            "."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                        lineNumber: 34,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+                lineNumber: 32,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/MemoryConfiguration/MemoryInfo.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = MemoryInfo;
+exports.default = MemoryInfo;
+var _c;
+$RefreshReg$(_c, "MemoryInfo");
+
+  $parcel$ReactRefreshHelpers$35da.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"66vtY":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$4684 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$4684.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4684.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+const MemoryTools = ({ styles: s, param, setParam })=>{
+    const { memoryType } = param;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: s.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_label,
+                children: "\u0422\u0418\u041F \u041E\u041F\u0415\u0420\u0410\u0422\u0418\u0412\u041D\u041E\u0419 \u041F\u0410\u041C\u042F\u0422\u0418:"
+            }, void 0, false, {
+                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.btn_group,
+                children: [
+                    "desktop",
+                    "ecc"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: memoryType === type,
+                        className: s.tools_button,
+                        onClick: ()=>setParam((p)=>({
+                                    ...p,
+                                    memoryType: type
+                                }))
+                    }, type, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 13,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u26A0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "DESKTOP"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                                lineNumber: 26,
+                                columnNumber: 15
+                            }, undefined),
+                            " (UDIMM) \u043C\u043E\u0434\u0443\u043B\u0435\u0439 \u0444\u0443\u043D\u043A\u0446\u0438\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Data Scrambling"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                                lineNumber: 26,
+                                columnNumber: 54
+                            }, undefined),
+                            " ",
+                            "\u0432\u044B\u043A\u043B\u044E\u0447\u0430\u0435\u0442\u0441\u044F. \u042D\u0442\u043E \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u043E\u0431\u0449\u0438\u0435 \u0437\u0430\u0434\u0435\u0440\u0436\u043A\u0438 (latency) \u0448\u0438\u043D\u044B \u043F\u0430\u043C\u044F\u0442\u0438."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDEE1\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 32,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0414\u043B\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "ECC REG"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                                lineNumber: 34,
+                                columnNumber: 15
+                            }, undefined),
+                            " \u0441\u0435\u0440\u0432\u0435\u0440\u043D\u043E\u0439 \u043F\u0430\u043C\u044F\u0442\u0438 \u0441\u043A\u0440\u0435\u043C\u0431\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0442\u0440\u043E\u0433\u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u0432\u043A\u043B\u044E\u0447\u0438\u0442\u044C"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                                lineNumber: 35,
+                                columnNumber: 11
+                            }, undefined),
+                            " \u0434\u043B\u044F \u0433\u0430\u0448\u0435\u043D\u0438\u044F \u043F\u0435\u0440\u0435\u043A\u0440\u0435\u0441\u0442\u043D\u044B\u0445 \u043F\u043E\u043C\u0435\u0445 \u043F\u043E\u0434 \u043D\u0430\u0433\u0440\u0443\u0437\u043A\u043E\u0439."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDE80"
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u041E\u043F\u0446\u0438\u0438 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Attempt Fast Boot / Cold Boot"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                                lineNumber: 42,
+                                columnNumber: 17
+                            }, undefined),
+                            " \u0430\u043A\u0442\u0438\u0432\u043D\u044B \u0434\u043B\u044F \u043E\u0431\u043E\u0438\u0445 \u0440\u0435\u0436\u0438\u043C\u043E\u0432. \u041E\u043D\u0438 \u0441\u043E\u043A\u0440\u0430\u0449\u0430\u044E\u0442 \u0432\u0440\u0435\u043C\u044F \u0438\u043D\u0438\u0446\u0438\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 X99 \u0441 15 \u043C\u0438\u043D\u0443\u0442 \u0434\u043E \u043F\u0430\u0440\u044B \u0441\u0435\u043A\u0443\u043D\u0434."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                lineNumber: 39,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDED1"
+                    }, void 0, false, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 48,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u041E\u0442\u043B\u0430\u0434\u043E\u0447\u043D\u044B\u0439 \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "BCIT"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                                lineNumber: 50,
+                                columnNumber: 32
+                            }, undefined),
+                            " \u0438 \u043C\u043E\u043D\u0438\u0442\u043E\u0440\u0438\u043D\u0433 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "PSMI"
+                            }, void 0, false, {
+                                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                                lineNumber: 50,
+                                columnNumber: 57
+                            }, undefined),
+                            " \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u044B, \u0447\u0442\u043E\u0431\u044B \u0438\u0441\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u044B\u0435 \u043C\u0438\u043A\u0440\u043E\u0444\u0440\u0438\u0437\u044B (\u0441\u0442\u0430\u0442\u0442\u0435\u0440\u044B) \u0432 \u0441\u0438\u0441\u0442\u0435\u043C\u0435."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+                lineNumber: 47,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/MemoryConfiguration/MemoryTools.jsx",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = MemoryTools;
+exports.default = MemoryTools;
+var _c;
+$RefreshReg$(_c, "MemoryTools");
+
+  $parcel$ReactRefreshHelpers$4684.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../Button/Button":"4hbTW"}],"iMU4J":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$0644 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$0644.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0644.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -29023,34 +31445,38 @@ var _pciinfo = require("./PCIInfo");
 var _pciinfoDefault = parcelHelpers.interopDefault(_pciinfo);
 var _pcitools = require("./PCITools");
 var _pcitoolsDefault = parcelHelpers.interopDefault(_pcitools);
-const PCIConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
-        title: "PCI SUBSYSTEM SETTINGS",
-        toolsLabel: "\u0413\u0410\u0419\u0414 \u0418 GPU-Z \u041F\u0420\u041E\u0412\u0415\u0420\u041A\u0410",
-        renderInfo: (0, _pciinfoDefault.default),
-        renderTools: (0, _pcitoolsDefault.default),
-        children: ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+const PCIConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "PCI SUBSYSTEM SETTINGS",
+                toolsLabel: "\u0413\u0410\u0419\u0414 \u0418 GPU-Z \u041F\u0420\u041E\u0412\u0415\u0420\u041A\u0410",
+                renderInfo: (0, _pciinfoDefault.default),
+                renderTools: (0, _pcitoolsDefault.default)
+            }, void 0, false, {
+                fileName: "src/components/PCIConfiguration/PCIConfiguration.jsx",
+                lineNumber: 9,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
                 ...(0, _pcibiosDefault.default)()
             }, void 0, false, {
-                fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
-                lineNumber: 14,
-                columnNumber: 12
+                fileName: "src/components/PCIConfiguration/PCIConfiguration.jsx",
+                lineNumber: 16,
+                columnNumber: 5
             }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/PCIConfiguration/PCIConfiguration.tsx",
-        lineNumber: 8,
-        columnNumber: 3
-    }, undefined);
+        ]
+    }, void 0, true);
 _c = PCIConfiguration;
 exports.default = PCIConfiguration;
 var _c;
 $RefreshReg$(_c, "PCIConfiguration");
 
-  $parcel$ReactRefreshHelpers$d2b5.postlude(module);
+  $parcel$ReactRefreshHelpers$0644.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"fCqKj","../Toolbox/Toolbox":"2S4BZ","./PCIBios":"4ENvk","./PCIInfo":"fOWRs","./PCITools":"fcVqq","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4ENvk":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./PCIBios":"54nnw","./PCIInfo":"6vugD","./PCITools":"xUU8G","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"54nnw":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const PCIBios = ()=>({
@@ -29059,15 +31485,18 @@ const PCIBios = ()=>({
         content: [
             {
                 text_left: "CSM Support",
-                text_right: "Disable"
+                text_right: "Disabled",
+                isDisabled: true
             },
             {
                 text_left: "Above 4G Decoding",
-                text_right: "Enabled"
+                text_right: "Enabled",
+                isDisabled: false
             },
             {
                 text_left: "Re-Size BAR Support",
-                text_right: "Enabled"
+                text_right: "Enabled",
+                isDisabled: false
             }
         ]
     });
@@ -29076,12 +31505,12 @@ exports.default = PCIBios;
 var _c;
 $RefreshReg$(_c, "PCIBios");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fOWRs":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$a3e0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$a3e0.init();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"6vugD":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$67d4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$67d4.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a3e0.prelude(module);
+$parcel$ReactRefreshHelpers$67d4.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -29097,7 +31526,7 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDE80"
                     }, void 0, false, {
-                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                         lineNumber: 4,
                         columnNumber: 7
                     }, undefined),
@@ -29107,20 +31536,20 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
                                 children: "\u0421\u0443\u0442\u044C \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438:"
                             }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                                 lineNumber: 6,
                                 columnNumber: 9
                             }, undefined),
                             " \u0421\u043D\u0438\u043C\u0430\u0435\u0442 \u043B\u0438\u043C\u0438\u0442 \u0430\u0434\u0440\u0435\u0441\u0430\u0446\u0438\u0438 \u0432 256 \u041C\u0411 \u0438 \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0443 \u043F\u0440\u044F\u043C\u043E\u0439 \u0434\u043E\u0441\u0442\u0443\u043F \u043A\u043E \u0432\u0441\u0435\u043C\u0443 \u043E\u0431\u044A\u0451\u043C\u0443 \u0432\u0438\u0434\u0435\u043E\u043F\u0430\u043C\u044F\u0442\u0438, \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u044F \u043A\u0430\u0434\u0440\u043E\u0432\u0443\u044E \u0447\u0430\u0441\u0442\u043E\u0442\u0443 \u0432 \u0438\u0433\u0440\u0430\u0445 \u0434\u043E 12-16%."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                         lineNumber: 5,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                 lineNumber: 3,
                 columnNumber: 5
             }, undefined),
@@ -29131,7 +31560,7 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\u2699\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                         lineNumber: 13,
                         columnNumber: 7
                     }, undefined),
@@ -29141,20 +31570,20 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
                                 children: "\u0410\u043F\u043F\u0430\u0440\u0430\u0442\u043D\u0430\u044F \u0431\u0430\u0437\u0430:"
                             }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                                 lineNumber: 15,
                                 columnNumber: 9
                             }, undefined),
                             " \u041E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u043E \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u044F \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u043C\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u043C\u0438 NVIDIA GeForce RTX 3000 / 4000 (\u0430 \u0442\u0430\u043A\u0436\u0435 Turing GTX 1660 / RTX 2000 \u0447\u0435\u0440\u0435\u0437 \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0439 \u0434\u0440\u0430\u0439\u0432\u0435\u0440 NvStrapsReBar) \u0438 AMD Radeon RX 6000 / 7000."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                         lineNumber: 14,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                 lineNumber: 12,
                 columnNumber: 5
             }, undefined),
@@ -29165,7 +31594,7 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\u26A0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                         lineNumber: 23,
                         columnNumber: 7
                     }, undefined),
@@ -29175,20 +31604,20 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
                                 children: "\u041F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u043D\u044B\u0435 \u043B\u0438\u043C\u0438\u0442\u044B:"
                             }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                                 lineNumber: 25,
                                 columnNumber: 9
                             }, undefined),
                             " \u0421\u0442\u0430\u0440\u044B\u0435 \u0441\u0435\u0440\u0432\u0435\u0440\u043D\u044B\u0435 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B \u0432\u0440\u043E\u0434\u0435 Intel Xeon E5 v1 \u0438 v2 \u0430\u043F\u043F\u0430\u0440\u0430\u0442\u043D\u043E \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044E\u0442 \u0430\u0434\u0440\u0435\u0441\u0430\u0446\u0438\u044E \u0432\u044B\u0448\u0435 4 \u0413\u0411 \u043D\u0430 \u0443\u0440\u043E\u0432\u043D\u0435 \u043C\u0438\u043A\u0440\u043E\u043A\u043E\u0434\u0430 \u0447\u0438\u043F\u0430. \u041C\u043E\u0434\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u0430 \u0442\u043E\u043B\u044C\u043A\u043E \u043D\u0430 \u043F\u043E\u043A\u043E\u043B\u0435\u043D\u0438\u044F\u0445 Xeon v3 \u0438 v4."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                         lineNumber: 24,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                 lineNumber: 22,
                 columnNumber: 5
             }, undefined),
@@ -29199,7 +31628,7 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDEE0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                         lineNumber: 33,
                         columnNumber: 7
                     }, undefined),
@@ -29209,7 +31638,7 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
                                 children: "\u0423\u0441\u043B\u043E\u0432\u0438\u0435 \u0438\u043D\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438:"
                             }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                                 lineNumber: 35,
                                 columnNumber: 9
                             }, undefined),
@@ -29217,7 +31646,7 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                 children: "ReBarDxe.ffs"
                             }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                                 lineNumber: 37,
                                 columnNumber: 51
                             }, undefined),
@@ -29225,26 +31654,26 @@ const PCIInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                 children: "UEFITool"
                             }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                                 lineNumber: 38,
                                 columnNumber: 25
                             }, undefined),
                             ". \u041C\u043D\u043E\u0433\u0438\u0435 \u043A\u0430\u0441\u0442\u043E\u043C\u043D\u044B\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438 \u0443\u0436\u0435 \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u0442 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u044B\u0435 \u043C\u0438\u043A\u0440\u043E\u043A\u043E\u0434\u044B."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                         lineNumber: 34,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+                fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
                 lineNumber: 32,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/PCIConfiguration/PCIInfo.tsx",
+        fileName: "src/components/PCIConfiguration/PCIInfo.jsx",
         lineNumber: 2,
         columnNumber: 3
     }, undefined);
@@ -29253,115 +31682,113 @@ exports.default = PCIInfo;
 var _c;
 $RefreshReg$(_c, "PCIInfo");
 
-  $parcel$ReactRefreshHelpers$a3e0.postlude(module);
+  $parcel$ReactRefreshHelpers$67d4.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fcVqq":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$d94f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$d94f.init();
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"xUU8G":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1156 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$1156.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d94f.prelude(module);
+$parcel$ReactRefreshHelpers$1156.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _clsx = require("clsx");
-var _clsxDefault = parcelHelpers.interopDefault(_clsx);
 var _pciguide = require("./PCIGuide/PCIGuide");
 var _pciguideDefault = parcelHelpers.interopDefault(_pciguide);
-const PCITools = ({ styles: mainStyles })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _clsxDefault.default)(mainStyles.tools_container, mainStyles.comboStyle),
+const PCITools = ({ styles: s })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: `${s.tools_container} ${s.comboStyle}`,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pciguideDefault.default), {}, void 0, false, {
-                fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                lineNumber: 10,
+                fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                lineNumber: 5,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _clsxDefault.default)(mainStyles.tools_label, mainStyles.pci_label_spacing),
+                className: `${s.tools_label} ${s.pci_label_spacing}`,
                 children: "\u0412\u0410\u0416\u041D\u042B\u0415 \u041F\u0420\u0418\u041C\u0415\u0427\u0410\u041D\u0418\u042F:"
             }, void 0, false, {
-                fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                lineNumber: 12,
+                fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                lineNumber: 7,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: mainStyles.tools_item,
+                className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: mainStyles.tools_icon,
+                        className: s.tools_icon,
                         children: "\uD83D\uDC8E"
                     }, void 0, false, {
-                        fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                        lineNumber: 17,
+                        fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                        lineNumber: 12,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: mainStyles.tools_text,
+                        className: s.tools_text,
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "\u0421\u0423\u0422\u042C \u0422\u0415\u0425\u041D\u041E\u041B\u041E\u0413\u0418\u0418:"
                             }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                                lineNumber: 19,
+                                fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                                lineNumber: 14,
                                 columnNumber: 9
                             }, undefined),
                             " \u0421\u043D\u0438\u043C\u0430\u0435\u0442 \u043B\u0438\u043C\u0438\u0442 \u0430\u0434\u0440\u0435\u0441\u0430\u0446\u0438\u0438 \u0432 256 \u041C\u0411 \u0438 \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0443 \u043F\u0440\u044F\u043C\u043E\u0439 \u0434\u043E\u0441\u0442\u0443\u043F \u043A\u043E \u0432\u0441\u0435\u043C\u0443 \u043E\u0431\u044A\u0451\u043C\u0443 \u0432\u0438\u0434\u0435\u043E\u043F\u0430\u043C\u044F\u0442\u0438, \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u044F \u043A\u0430\u0434\u0440\u043E\u0432\u0443\u044E \u0447\u0430\u0441\u0442\u043E\u0442\u0443 \u0432 \u0438\u0433\u0440\u0430\u0445."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                        lineNumber: 18,
+                        fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                        lineNumber: 13,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                lineNumber: 16,
+                fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                lineNumber: 11,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: mainStyles.tools_item,
+                className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: mainStyles.tools_icon,
+                        className: s.tools_icon,
                         children: "\uD83D\uDEAB"
                     }, void 0, false, {
-                        fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                        lineNumber: 26,
+                        fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                        lineNumber: 21,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: mainStyles.tools_text,
+                        className: s.tools_text,
                         children: [
                             "\u041D\u0430 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u0445 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "Xeon v1/v2 (LGA2011)"
                             }, void 0, false, {
-                                fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                                lineNumber: 28,
+                                fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                                lineNumber: 23,
                                 columnNumber: 24
                             }, undefined),
-                            " Re-Size BAR \u043D\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u043D\u0430 \u0443\u0440\u043E\u0432\u043D\u0435 \u043C\u0438\u043A\u0440\u043E\u043A\u043E\u0434\u0430 \u0447\u0438\u043F\u0430."
+                            " Re-Size BAR \u041D\u0415 \u0420\u0410\u0411\u041E\u0422\u0410\u0415\u0422 \u043D\u0430 \u0443\u0440\u043E\u0432\u043D\u0435 \u043C\u0438\u043A\u0440\u043E\u043A\u043E\u0434\u0430 \u0447\u0438\u043F\u0430."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                        lineNumber: 27,
+                        fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                        lineNumber: 22,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCITools.tsx",
-                lineNumber: 25,
+                fileName: "src/components/PCIConfiguration/PCITools.jsx",
+                lineNumber: 20,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/PCIConfiguration/PCITools.tsx",
-        lineNumber: 9,
+        fileName: "src/components/PCIConfiguration/PCITools.jsx",
+        lineNumber: 4,
         columnNumber: 3
     }, undefined);
 _c = PCITools;
@@ -29369,17 +31796,17 @@ exports.default = PCITools;
 var _c;
 $RefreshReg$(_c, "PCITools");
 
-  $parcel$ReactRefreshHelpers$d94f.postlude(module);
+  $parcel$ReactRefreshHelpers$1156.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","./PCIGuide/PCIGuide":"l29JF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"l29JF":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$c0f3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$c0f3.init();
+},{"react/jsx-dev-runtime":"dVPUn","./PCIGuide/PCIGuide":"cTJ1X","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"cTJ1X":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$8f9c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$8f9c.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c0f3.prelude(module);
+$parcel$ReactRefreshHelpers$8f9c.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -29397,7 +31824,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: (0, _pciguideModuleCssDefault.default).pci_title,
                         children: "\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F \u041F\u041E \u0411\u0415\u0417\u041E\u041F\u0410\u0421\u041D\u041E\u041C\u0423 \u0412\u041A\u041B\u042E\u0427\u0415\u041D\u0418\u042E RE-SIZE BAR"
                     }, void 0, false, {
-                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                         lineNumber: 6,
                         columnNumber: 7
                     }, undefined),
@@ -29411,7 +31838,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "1. \u0412\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 4G Decoding:"
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 12,
                                         columnNumber: 11
                                     }, undefined),
@@ -29422,7 +31849,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Advanced \u2192 PCI Subsystem Settings"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 17,
                                                 columnNumber: 13
                                             }, undefined),
@@ -29431,20 +31858,20 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Above 4G Decoding"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 18,
                                                 columnNumber: 13
                                             }, undefined),
                                             ". \u041E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u041F\u041A, \u0447\u0442\u043E\u0431\u044B \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C."
                                         ]
                                     }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 15,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                 lineNumber: 11,
                                 columnNumber: 9
                             }, undefined),
@@ -29455,7 +31882,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "2. \u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 UEFI \u0440\u0435\u0436\u0438\u043C\u0430 \u0434\u043B\u044F \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432:"
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 24,
                                         columnNumber: 11
                                     }, undefined),
@@ -29465,7 +31892,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Advanced \u2192 CSM Configuration"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 28,
                                                 columnNumber: 30
                                             }, undefined),
@@ -29473,20 +31900,20 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "UEFI"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 30,
                                                 columnNumber: 19
                                             }, undefined),
                                             ". \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0438 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u043F\u0440\u043E\u043C\u0435\u0436\u0443\u0442\u043E\u0447\u043D\u0443\u044E \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0443, \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u043F\u0440\u0438\u043C\u0435\u043D\u0438\u043B\u0438\u0441\u044C."
                                         ]
                                     }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 27,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                 lineNumber: 23,
                                 columnNumber: 9
                             }, undefined),
@@ -29497,7 +31924,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "3. \u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM Support:"
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 36,
                                         columnNumber: 11
                                     }, undefined),
@@ -29507,7 +31934,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Advanced \u2192 CSM Configuration"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 41,
                                                 columnNumber: 18
                                             }, undefined),
@@ -29515,7 +31942,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "CSM Support"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 42,
                                                 columnNumber: 33
                                             }, undefined),
@@ -29523,14 +31950,14 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "Disabled"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 43,
                                                 columnNumber: 13
                                             }, undefined),
                                             ". \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435 \u041F\u041A."
                                         ]
                                     }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 39,
                                         columnNumber: 11
                                     }, undefined),
@@ -29538,13 +31965,13 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_accent_text,
                                         children: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435: \u041F\u0440\u044F\u043C\u043E\u0435 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 CSM \u0431\u0435\u0437 \u043F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0430 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432 \u0432 UEFI \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0438 \u043B\u0438\u0431\u043E \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043E \u0441\u0438\u0441\u0442\u0435\u043C\u043E\u0439 \u0438 \u0432\u044B\u0434\u0430\u0451\u0442 \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0435\u043D\u0438\u0435 \u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0441\u0442\u0438 \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u044C UEFI \u0434\u043B\u044F Video (\u0434\u0430\u0436\u0435 \u0435\u0441\u043B\u0438 \u0432\u044B \u0443\u0436\u0435 \u0432\u043A\u043B\u044E\u0447\u0438\u043B\u0438 UEFI), \u043B\u0438\u0431\u043E \u043F\u0440\u0438\u0432\u043E\u0434\u0438\u0442 \u043A \u0447\u0435\u0440\u043D\u043E\u043C\u0443 \u044D\u043A\u0440\u0430\u043D\u0443."
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 45,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                 lineNumber: 35,
                                 columnNumber: 9
                             }, undefined),
@@ -29555,7 +31982,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "4. \u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u0440\u0430\u0437\u043C\u0435\u0442\u043A\u0438 \u0434\u0438\u0441\u043A\u0430:"
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 54,
                                         columnNumber: 11
                                     }, undefined),
@@ -29566,14 +31993,14 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "GPT"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 59,
                                                 columnNumber: 13
                                             }, undefined),
                                             ". \u0415\u0441\u043B\u0438 Windows \u0438\u0437\u043D\u0430\u0447\u0430\u043B\u044C\u043D\u043E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0432 GPT \u0438 \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u043E UEFI, \u0442\u043E UEFI \u043C\u043E\u0436\u043D\u043E \u0432\u044B\u0441\u0442\u0430\u0432\u043B\u044F\u0442\u044C \u0441\u0440\u0430\u0437\u0443 \u0434\u043B\u044F \u0434\u0440\u0443\u0433\u0438\u0445 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u043E\u0432."
                                         ]
                                     }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 57,
                                         columnNumber: 11
                                     }, undefined),
@@ -29583,20 +32010,20 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "mbr2gpt"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 65,
                                                 columnNumber: 13
                                             }, undefined),
                                             ", \u0438\u043D\u0430\u0447\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043F\u0435\u0440\u0435\u0441\u0442\u0430\u043D\u0435\u0442 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0442\u044C\u0441\u044F \u043F\u043E\u0441\u043B\u0435 \u0434\u0435\u0430\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u0438 CSM."
                                         ]
                                     }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 63,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                 lineNumber: 53,
                                 columnNumber: 9
                             }, undefined),
@@ -29607,7 +32034,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "5. \u0410\u043A\u0442\u0438\u0432\u0430\u0446\u0438\u044F Re-Size BAR (\u041E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u0434\u043B\u044F \u043D\u0435\u0431\u0440\u0435\u043D\u0434\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442):"
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 71,
                                         columnNumber: 11
                                     }, undefined),
@@ -29618,7 +32045,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "ReBarState/NvStrapsReBar"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 78,
                                                 columnNumber: 13
                                             }, undefined),
@@ -29626,20 +32053,20 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "32"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 79,
                                                 columnNumber: 51
                                             }, undefined),
                                             " \u0434\u043B\u044F \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u043C\u0435\u0440\u0430 \u0431\u0443\u0444\u0435\u0440\u0430 \u0438 \u043D\u0430\u0436\u0430\u0442\u044C Enter."
                                         ]
                                     }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 74,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                 lineNumber: 70,
                                 columnNumber: 9
                             }, undefined),
@@ -29650,28 +32077,28 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_step_title,
                                         children: "6. \u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u0438 \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435 vBIOS \u043A\u0430\u0440\u0442\u044B:"
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 85,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "\u0417\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u0435 GPU-Z \u0438 \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0441\u0442\u0430\u0442\u0443\u0441 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438 \u0432\u043E \u0432\u043A\u043B\u0430\u0434\u043A\u0435 Re-Size BAR. \u0415\u0441\u043B\u0438 \u0444\u0443\u043D\u043A\u0446\u0438\u044F \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430, \u043E\u0431\u043D\u043E\u0432\u0438\u0442\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0443 (vBIOS) \u0441\u0430\u043C\u043E\u0439 \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B."
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 88,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "\u041F\u0440\u0438 \u0440\u0443\u0447\u043D\u043E\u0439 \u043C\u043E\u0434\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0434\u0430\u043C\u043F\u0430 BIOS \u0438\u043B\u0438 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0435 vBIOS \u0432\u0438\u0434\u0435\u043E\u043A\u0430\u0440\u0442\u044B \u043F\u0440\u0438\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0440\u0438\u0441\u043A \u043E\u043A\u0438\u0440\u043F\u0438\u0447\u0438\u0442\u044C \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u043E \u2014 \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0435\u0433\u043E \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\u0442\u043E\u0440\u043E\u043C. \u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0434\u0430\u043C\u043F \u043D\u0430 \u0441\u043B\u0443\u0447\u0430\u0439 \u043F\u0440\u043E\u0431\u043B\u0435\u043C \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438."
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 93,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "\u041F\u0440\u043E\u0448\u0438\u0432\u043A\u0443 \u043C\u043E\u0436\u043D\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C \u0447\u0435\u0440\u0435\u0437 CMD. \u0418\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044E \u0434\u043B\u044F \u0412\u0430\u0448\u0435\u0439 \u043A\u0430\u0440\u0442\u044B \u043C\u043E\u0436\u043D\u043E \u043D\u0430\u0439\u0442\u0438 \u0432 \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0435 (\u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C \u043D\u0430 \u0444\u043E\u0440\u0443\u043C\u0430\u0445). \u041C\u043D\u043E\u0433\u0438\u0435 \u0444\u0438\u0440\u043C\u0435\u043D\u043D\u044B\u0435 \u0443\u0442\u0438\u043B\u0438\u0442\u044B \u043E\u0442 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044F \u043A\u0430\u0440\u0442\u044B \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \xabRe-Size BAR\xbb \u0438 \u0432\u0435\u0440\u0441\u0438\u044E \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0438 vBIOS."
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 99,
                                         columnNumber: 11
                                     }, undefined),
@@ -29682,7 +32109,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "NVIDIA Profile Inspector"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 108,
                                                 columnNumber: 13
                                             }, undefined),
@@ -29690,32 +32117,32 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("code", {
                                                 children: "rBAR - Feature"
                                             }, void 0, false, {
-                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                                 lineNumber: 109,
                                                 columnNumber: 23
                                             }, undefined),
                                             " \u0432 \u0441\u0435\u043A\u0446\u0438\u0438 Common)."
                                         ]
                                     }, void 0, true, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 105,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                 lineNumber: 84,
                                 columnNumber: 9
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                         lineNumber: 10,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                 lineNumber: 5,
                 columnNumber: 5
             }, undefined),
@@ -29726,7 +32153,7 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: (0, _pciguideModuleCssDefault.default).pci_title,
                         children: "\u0423\u0421\u0422\u0420\u0410\u041D\u0415\u041D\u0418\u0415 \u041E\u0428\u0418\u0411\u041E\u041A \u0418\u0417 GPU-Z"
                     }, void 0, false, {
-                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                         lineNumber: 116,
                         columnNumber: 7
                     }, undefined),
@@ -29740,20 +32167,20 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_error_title,
                                         children: "UEFI BOOT REQUIRED / CSM ENABLED:"
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 119,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "BIOS \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0432 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0435\u043C \u0440\u0435\u0436\u0438\u043C\u0435 Legacy. \u041E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u0435 CSM Support \u0432 \u043C\u0435\u043D\u044E Boot \u0438\u043B\u0438 Advanced."
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 122,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                 lineNumber: 118,
                                 columnNumber: 9
                             }, undefined),
@@ -29764,38 +32191,38 @@ const PCIGuide = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: (0, _pciguideModuleCssDefault.default).pci_error_title,
                                         children: "BOOT FROM GPT: NO:"
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 128,
                                         columnNumber: 11
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "\u041E\u0421 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0430 \u043D\u0430 MBR-\u0434\u0438\u0441\u043A\u0435. \u0421\u0440\u043E\u0447\u043D\u043E \u043F\u0435\u0440\u0435\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u0430\u043A\u043E\u043F\u0438\u0442\u0435\u043B\u044C \u0432 GPT \u0431\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u0438 \u0434\u0430\u043D\u043D\u044B\u0445 \u0447\u0435\u0440\u0435\u0437 mbr2gpt."
                                     }, void 0, false, {
-                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                         lineNumber: 129,
                                         columnNumber: 11
                                     }, undefined)
                                 ]
                             }, void 0, true, {
-                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                                 lineNumber: 127,
                                 columnNumber: 9
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                         lineNumber: 117,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+                fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
                 lineNumber: 115,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.tsx",
+        fileName: "src/components/PCIConfiguration/PCIGuide/PCIGuide.jsx",
         lineNumber: 4,
         columnNumber: 3
     }, undefined);
@@ -29804,7 +32231,7 @@ exports.default = PCIGuide;
 var _c;
 $RefreshReg$(_c, "PCIGuide");
 
-  $parcel$ReactRefreshHelpers$c0f3.postlude(module);
+  $parcel$ReactRefreshHelpers$8f9c.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
@@ -29819,17 +32246,18 @@ module.exports["pci_section"] = `Kn_sKG_pci_section`;
 module.exports["pci_step_title"] = `Kn_sKG_pci_step_title`;
 module.exports["pci_title"] = `Kn_sKG_pci_title`;
 
-},{}],"kEGQB":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$8d8c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$8d8c.init();
+},{}],"20tYA":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6891 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$6891.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8d8c.prelude(module);
+$parcel$ReactRefreshHelpers$6891.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _biosWindow = require("../BiosWindow/BiosWindow");
 var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
 var _toolbox = require("../Toolbox/Toolbox");
@@ -29840,73 +32268,98 @@ var _powerInfo = require("./PowerInfo");
 var _powerInfoDefault = parcelHelpers.interopDefault(_powerInfo);
 var _powerTools = require("./PowerTools");
 var _powerToolsDefault = parcelHelpers.interopDefault(_powerTools);
-const INITIAL_STATE = {
-    powerLevel: "V2"
-};
-const PowerConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
-        initialState: INITIAL_STATE,
-        title: "Power Management",
-        toolsLabel: "\u041F\u0420\u0415\u0421\u0415\u0422 CPU",
-        renderInfo: (0, _powerInfoDefault.default),
-        renderTools: (0, _powerToolsDefault.default),
-        children: (p)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-                ...(0, _powerBiosDefault.default)(p.state)
+var _s = $RefreshSig$();
+const PowerConfiguration = ({ selectedButton = "V2" })=>{
+    _s();
+    const [param, setParam] = (0, _react.useState)({
+        cpuGen: selectedButton
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "POWER MANAGMENT",
+                toolsLabel: "\u041F\u0420\u0415\u0421\u0415\u0422 CPU",
+                renderInfo: (0, _powerInfoDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerToolsDefault.default), {
+                        ...props,
+                        param: param,
+                        setParam: setParam
+                    }, void 0, false, {
+                        fileName: "src/components/PowerConfiguration/PowerConfiguration.jsx",
+                        lineNumber: 18,
+                        columnNumber: 11
+                    }, void 0)
             }, void 0, false, {
-                fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
-                lineNumber: 17,
-                columnNumber: 13
+                fileName: "src/components/PowerConfiguration/PowerConfiguration.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _powerBiosDefault.default)(param)
+            }, void 0, false, {
+                fileName: "src/components/PowerConfiguration/PowerConfiguration.jsx",
+                lineNumber: 22,
+                columnNumber: 7
             }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/PowerConfiguration/PowerConfiguration.tsx",
-        lineNumber: 10,
-        columnNumber: 3
-    }, undefined);
+        ]
+    }, void 0, true);
+};
+_s(PowerConfiguration, "ZZu+MitL8VQdC+bqAVFqtEytd7s=");
 _c = PowerConfiguration;
 exports.default = PowerConfiguration;
 var _c;
 $RefreshReg$(_c, "PowerConfiguration");
 
-  $parcel$ReactRefreshHelpers$8d8c.postlude(module);
+  $parcel$ReactRefreshHelpers$6891.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"fCqKj","../Toolbox/Toolbox":"2S4BZ","./PowerBios":"fZl1s","./PowerInfo":"lE1Wq","./PowerTools":"5kdfK","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fZl1s":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./PowerBios":"eoWlO","./PowerInfo":"1fTKq","./PowerTools":"9kWvd","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"eoWlO":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const PowerBios = (state)=>({
+const PowerBios = ({ cpuGen })=>{
+    const isV2 = cpuGen === "V2";
+    const isV3 = cpuGen === "V3";
+    const isV4 = cpuGen === "V4";
+    return {
         title: "CPU C STATE CONTROL",
         path: "Advanced > Power Management Configuration > CPU C State Control",
         content: [
             {
                 text_left: "C2C3TT",
-                text_right: "0"
+                text_right: "0",
+                isDisabled: true
             },
             {
                 text_left: "Package C State limit",
-                text_right: state.powerLevel === "V2" || state.powerLevel === "V4" ? "C0/C1 state" : "C2 state"
+                text_right: isV3 ? "C2 State" : "C0/C1 state",
+                isDisabled: false
             },
             {
                 text_left: "CPU C3 report",
-                text_right: state.powerLevel === "V3" ? "Enable" : "Disable"
+                text_right: isV3 ? "Enable" : "Disable",
+                isDisabled: isV2 || isV4
             },
             {
                 text_left: "CPU C6 report",
-                text_right: "Disable"
+                text_right: "Disable",
+                isDisabled: isV2 || isV3 || isV4
             }
         ]
-    });
+    };
+};
 _c = PowerBios;
 exports.default = PowerBios;
 var _c;
 $RefreshReg$(_c, "PowerBios");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lE1Wq":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$c8c9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$c8c9.init();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"1fTKq":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1a6b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$1a6b.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c8c9.prelude(module);
+$parcel$ReactRefreshHelpers$1a6b.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -29922,7 +32375,7 @@ const PowerInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDE80"
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                         lineNumber: 4,
                         columnNumber: 7
                     }, undefined),
@@ -29930,13 +32383,13 @@ const PowerInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0414\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0433\u043E \u0410\u043D\u043B\u043E\u043A\u0430 \u0422\u0443\u0440\u0431\u043E\u0431\u0443\u0441\u0442\u0430 \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0439\u0442\u0435 \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 C6 (C6 Offline / Un-demote)."
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                         lineNumber: 5,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                 lineNumber: 3,
                 columnNumber: 5
             }, undefined),
@@ -29947,7 +32400,7 @@ const PowerInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDCDF"
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                         lineNumber: 12,
                         columnNumber: 7
                     }, undefined),
@@ -29955,13 +32408,13 @@ const PowerInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u041D\u0430 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u0445 V4 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 C3 \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u043C\u0438\u043A\u0440\u043E\u0437\u0430\u0434\u0435\u0440\u0436\u043A\u0438 \u0438 \u0434\u0435\u043B\u0430\u0435\u0442 \u0433\u0440\u0430\u0444\u0438\u043A Frame Time \u0440\u043E\u0432\u043D\u0435\u0435."
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                         lineNumber: 13,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                 lineNumber: 11,
                 columnNumber: 5
             }, undefined),
@@ -29972,7 +32425,7 @@ const PowerInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDCDC"
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                         lineNumber: 20,
                         columnNumber: 7
                     }, undefined),
@@ -29980,13 +32433,13 @@ const PowerInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0414\u043B\u044F V2 \u043B\u0443\u0447\u0448\u0435 \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0441\u0442\u043E\u043A (No Limit), \u0447\u0442\u043E\u0431\u044B \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u0432\u044B\u0441\u043E\u043A\u0443\u044E \u0447\u0430\u0441\u0442\u043E\u0442\u0443 \u043D\u0430 \u043E\u0434\u043D\u043E \u044F\u0434\u0440\u043E."
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                         lineNumber: 21,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                 lineNumber: 19,
                 columnNumber: 5
             }, undefined),
@@ -29997,7 +32450,7 @@ const PowerInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\u26A0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                         lineNumber: 28,
                         columnNumber: 7
                     }, undefined),
@@ -30005,19 +32458,19 @@ const PowerInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0415\u0441\u043B\u0438 \u0447\u0430\u0441\u0442\u043E\u0442\u044B \u043D\u0435 \u043F\u0430\u0434\u0430\u044E\u0442 \u0432 \u043F\u0440\u043E\u0441\u0442\u043E\u0435, \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0441\u0445\u0435\u043C\u0443 \u043F\u0438\u0442\u0430\u043D\u0438\u044F Windows (\u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0443\u0435\u0442\u0441\u044F \xab\u0412\u044B\u0441\u043E\u043A\u0430\u044F \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C\xbb)."
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                         lineNumber: 29,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+                fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
                 lineNumber: 27,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/PowerConfiguration/PowerInfo.tsx",
+        fileName: "src/components/PowerConfiguration/PowerInfo.jsx",
         lineNumber: 2,
         columnNumber: 3
     }, undefined);
@@ -30026,17 +32479,17 @@ exports.default = PowerInfo;
 var _c;
 $RefreshReg$(_c, "PowerInfo");
 
-  $parcel$ReactRefreshHelpers$c8c9.postlude(module);
+  $parcel$ReactRefreshHelpers$1a6b.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"5kdfK":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$9455 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$9455.init();
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"9kWvd":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$40aa = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$40aa.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9455.prelude(module);
+$parcel$ReactRefreshHelpers$40aa.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -30044,18 +32497,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _button = require("../Button/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
-const PowerTools = ({ state, setParam, styles: s })=>{
-    const { powerLevel } = state;
-    const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-            type: type,
-            isActive: powerLevel === type,
-            onClick: ()=>setParam("powerLevel", type),
-            className: s.tools_button
-        }, void 0, false, {
-            fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-            lineNumber: 8,
-            columnNumber: 5
-        }, undefined);
+const PowerTools = ({ styles: s, param, setParam })=>{
+    const { cpuGen } = param;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: s.tools_container,
         children: [
@@ -30063,20 +32506,32 @@ const PowerTools = ({ state, setParam, styles: s })=>{
                 className: s.tools_label,
                 children: "\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415 CPU:"
             }, void 0, false, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 18,
+                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.btn_group,
                 children: [
-                    renderButton("V2"),
-                    renderButton("V3"),
-                    renderButton("V4")
-                ]
-            }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 20,
+                    "V2",
+                    "V3",
+                    "V4"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: cpuGen === type,
+                        className: s.tools_button,
+                        onClick: ()=>setParam((p)=>({
+                                    ...p,
+                                    cpuGen: type
+                                }))
+                    }, type, false, {
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30086,8 +32541,8 @@ const PowerTools = ({ state, setParam, styles: s })=>{
                         className: s.tools_icon,
                         children: "\uD83D\uDD0A"
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 27,
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -30097,41 +32552,41 @@ const PowerTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "C-States"
                             }, void 0, false, {
-                                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                                lineNumber: 29,
+                                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                                lineNumber: 25,
                                 columnNumber: 21
                             }, undefined),
                             " \u043C\u043E\u0433\u0443\u0442 \u0441\u043D\u0438\u0437\u0438\u0442\u044C \u043F\u0438\u0441\u043A \u0434\u0440\u043E\u0441\u0441\u0435\u043B\u0435\u0439, \u043D\u043E \u043F\u043E\u0432\u044B\u0441\u044F\u0442 \u043F\u043E\u0442\u0440\u0435\u0431\u043B\u0435\u043D\u0438\u0435 \u0432 \u043F\u0440\u043E\u0441\u0442\u043E\u0435 \u043D\u0430 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "10\u201320%"
                             }, void 0, false, {
-                                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                                lineNumber: 30,
+                                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                                lineNumber: 26,
                                 columnNumber: 36
                             }, undefined),
                             "."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 28,
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 26,
+                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
-            powerLevel === "V2" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.tools_icon,
                         children: "\u2699\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 36,
-                        columnNumber: 11
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 31,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: s.tools_text,
@@ -30140,41 +32595,41 @@ const PowerTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "C0/C1 limit"
                             }, void 0, false, {
-                                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                                lineNumber: 38,
-                                columnNumber: 21
+                                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                                lineNumber: 33,
+                                columnNumber: 19
                             }, undefined),
                             " \u0438 ",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "Disabled"
                             }, void 0, false, {
-                                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                                lineNumber: 38,
-                                columnNumber: 42
+                                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                                lineNumber: 33,
+                                columnNumber: 40
                             }, undefined),
                             " \u043E\u0442\u0447\u0435\u0442\u044B."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 37,
-                        columnNumber: 11
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 32,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 35,
-                columnNumber: 9
+                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                lineNumber: 30,
+                columnNumber: 7
             }, undefined),
-            powerLevel === "V3" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.tools_icon,
                         children: "\uD83D\uDCA1"
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 45,
-                        columnNumber: 11
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 38,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: s.tools_text,
@@ -30183,33 +32638,33 @@ const PowerTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "Unlock Turbo Boost"
                             }, void 0, false, {
-                                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                                lineNumber: 47,
-                                columnNumber: 17
+                                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                                lineNumber: 40,
+                                columnNumber: 15
                             }, undefined),
                             ": C3 [Enabled], C6 [Disabled]."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 46,
-                        columnNumber: 11
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 39,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 44,
-                columnNumber: 9
+                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                lineNumber: 37,
+                columnNumber: 7
             }, undefined),
-            powerLevel === "V4" && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_item,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: s.tools_icon,
                         children: "\uD83D\uDE80"
                     }, void 0, false, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 54,
-                        columnNumber: 11
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 45,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: s.tools_text,
@@ -30218,27 +32673,27 @@ const PowerTools = ({ state, setParam, styles: s })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
                                 children: "\u0432\u044B\u043A\u043B\u044E\u0447\u0438\u0442\u044C"
                             }, void 0, false, {
-                                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                                lineNumber: 56,
-                                columnNumber: 44
+                                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                                lineNumber: 47,
+                                columnNumber: 42
                             }, undefined),
                             " \u044D\u043D\u0435\u0440\u0433\u043E\u0441\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0438\u0435."
                         ]
                     }, void 0, true, {
-                        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                        lineNumber: 55,
-                        columnNumber: 11
+                        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                        lineNumber: 46,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-                lineNumber: 53,
-                columnNumber: 9
+                fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+                lineNumber: 44,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/PowerConfiguration/PowerTools.tsx",
-        lineNumber: 17,
+        fileName: "src/components/PowerConfiguration/PowerTools.jsx",
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
@@ -30247,464 +32702,232 @@ exports.default = PowerTools;
 var _c;
 $RefreshReg$(_c, "PowerTools");
 
-  $parcel$ReactRefreshHelpers$9455.postlude(module);
+  $parcel$ReactRefreshHelpers$40aa.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"i2Oy5":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$61ef = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$61ef.init();
+},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2rh6a":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$60e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$60e5.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$61ef.prelude(module);
+$parcel$ReactRefreshHelpers$60e5.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _biosWindow = require("../BiosWindow/BiosWindow");
 var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
 var _toolbox = require("../Toolbox/Toolbox");
 var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
-var _ultraAlert = require("../UltraAlert/UltraAlert");
-var _ultraAlertDefault = parcelHelpers.interopDefault(_ultraAlert);
+var _timingEngineJs = require("../TimingEngine/timingEngine.js");
+var _timingEngineJsDefault = parcelHelpers.interopDefault(_timingEngineJs);
 var _ramBios = require("./RamBios");
 var _ramBiosDefault = parcelHelpers.interopDefault(_ramBios);
 var _ramInfo = require("./RamInfo");
 var _ramInfoDefault = parcelHelpers.interopDefault(_ramInfo);
-var _ramTools = require("./RamTools/RamTools");
+var _ramTools = require("./RamTools");
 var _ramToolsDefault = parcelHelpers.interopDefault(_ramTools);
-const INITIAL_STATE = {
-    gen: "V2",
-    boardType: "atx",
-    cpu: "",
-    ramSize: 4,
-    slotsCount: 1,
-    memoryType: "desktop",
-    profile: "safe",
-    isDensityHigh: false,
-    lastChangedKey: ""
-};
-const RamConfiguration = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
-        initialState: INITIAL_STATE,
-        title: (0, _ultraAlertDefault.default),
-        toolsLabel: "\u041A\u0410\u041B\u042C\u041A\u0423\u041B\u042F\u0422\u041E\u0420 \u0422\u0410\u0419\u041C\u0418\u041D\u0413\u041E\u0412",
-        renderInfo: (0, _ramInfoDefault.default),
-        renderTools: (0, _ramToolsDefault.default),
-        children: (p)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
-                ...(0, _ramBiosDefault.default)(p)
+var _ultraAlert = require("../UltraAlert/UltraAlert");
+var _ultraAlertDefault = parcelHelpers.interopDefault(_ultraAlert);
+var _s = $RefreshSig$();
+const RamConfiguration = ({ selectedButton })=>{
+    _s();
+    const [param, setParam] = (0, _react.useState)({
+        board: "atx",
+        gen: "V2",
+        memory: "desktop",
+        density: "no",
+        slot: "slots1",
+        preset: "safe",
+        ramSize: 4,
+        history: {
+            V2: {
+                cpu: "",
+                ramSize: 4
+            },
+            V3: {
+                cpu: "",
+                ramSize: 16
+            },
+            V4: {
+                cpu: "",
+                ramSize: 16
+            }
+        },
+        ...selectedButton
+    });
+    const { updateParam } = (0, _timingEngineJsDefault.default)(param);
+    const change = updateParam(setParam);
+    const biosData = (0, _ramBiosDefault.default)(param);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ultraAlertDefault.default), {
+                    state: param,
+                    update: setParam
+                }, void 0, false, {
+                    fileName: "src/components/RamConfiguration/RamConfiguration.jsx",
+                    lineNumber: 35,
+                    columnNumber: 16
+                }, void 0),
+                toolsLabel: "\u041A\u0410\u041B\u042C\u041A\u0423\u041B\u042F\u0422\u041E\u0420 \u0422\u0410\u0419\u041C\u0418\u041D\u0413\u041E\u0412",
+                renderInfo: (0, _ramInfoDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramToolsDefault.default), {
+                        ...props,
+                        param: param,
+                        setParam: setParam,
+                        change: change
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamConfiguration.jsx",
+                        lineNumber: 39,
+                        columnNumber: 11
+                    }, void 0)
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-                lineNumber: 28,
-                columnNumber: 13
+                fileName: "src/components/RamConfiguration/RamConfiguration.jsx",
+                lineNumber: 34,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                title: biosData.title,
+                path: biosData.path,
+                content: biosData.content,
+                state: param,
+                update: change
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamConfiguration.jsx",
+                lineNumber: 43,
+                columnNumber: 7
             }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/RamConfiguration/RamConfiguration.tsx",
-        lineNumber: 21,
-        columnNumber: 3
-    }, undefined);
+        ]
+    }, void 0, true);
+};
+_s(RamConfiguration, "V2920iwkmO5UVYgVBnXGrFWRE2k=");
 _c = RamConfiguration;
 exports.default = RamConfiguration;
 var _c;
 $RefreshReg$(_c, "RamConfiguration");
 
-  $parcel$ReactRefreshHelpers$61ef.postlude(module);
+  $parcel$ReactRefreshHelpers$60e5.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"fCqKj","../Toolbox/Toolbox":"2S4BZ","../UltraAlert/UltraAlert":"3Tqgm","./RamBios":"a06IC","./RamInfo":"cUeEy","./RamTools/RamTools":"byx7S","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"3Tqgm":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$9800 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$9800.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9800.prelude(module);
-
-try {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./RamBios":"dNOhH","./RamInfo":"8ud8y","./RamTools":"884Qk","../UltraAlert/UltraAlert":"dG26o","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../TimingEngine/timingEngine.js":"5t7nW"}],"dNOhH":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _clsx = require("clsx");
-var _clsxDefault = parcelHelpers.interopDefault(_clsx);
-var _button = require("../Button/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _ultraAlertModuleCss = require("./UltraAlert.module.css");
-var _ultraAlertModuleCssDefault = parcelHelpers.interopDefault(_ultraAlertModuleCss);
-var _useUltraLogic = require("./hooks/useUltraLogic");
-var _useUltraLogicDefault = parcelHelpers.interopDefault(_useUltraLogic);
-var _s = $RefreshSig$();
-const ALERT_CONTENT = [
-    {
-        text: "\u0414\u0430\u043D\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u043D\u0435 \u0432\u0441\u0435\u043C\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u043C\u0438.",
-        className: (0, _ultraAlertModuleCssDefault.default).alert_notice
-    },
-    {
-        text: "\u042D\u043A\u0441\u0442\u0440\u0435\u043C\u0430\u043B\u044C\u043D\u044B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438. \u0422\u043E\u043B\u044C\u043A\u043E \u0434\u043B\u044F \u0443\u0434\u0430\u0447\u043D\u044B\u0445 \u0447\u0438\u043F\u043E\u0432 + \u043E\u0431\u0434\u0443\u0432."
-    },
-    {
-        text: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-            children: [
-                "\u041D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435:",
-                ' ',
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                    className: (0, _ultraAlertModuleCssDefault.default).alert_gold,
-                    children: "1.30V (D4) / 1.55V (D3)"
-                }, void 0, false, {
-                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, undefined),
-                "."
-            ]
-        }, void 0, true)
-    },
-    {
-        text: '\u041D\u0430\u0436\u043C\u0438\u0442\u0435 "\u041E\u0422\u041C\u0415\u041D\u0410", \u0435\u0441\u043B\u0438 \u0432\u044B \u043F\u0440\u043E\u0447\u043B\u0438 \u0442\u0435\u043A\u0441\u0442.',
-        className: (0, _ultraAlertModuleCssDefault.default).alert_danger
-    }
-];
-const UltraAlert = ({ state, update })=>{
-    _s();
-    const { isOpen, close, handleTrigger } = (0, _useUltraLogicDefault.default)(state, update);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: (0, _ultraAlertModuleCssDefault.default).alert_wrap,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                className: (0, _clsxDefault.default)((0, _ultraAlertModuleCssDefault.default).alert_trigger, state.unlocked && (0, _ultraAlertModuleCssDefault.default).alert_unlocked),
-                onMouseDown: (e)=>e.preventDefault(),
-                onClick: handleTrigger,
-                children: state.unlocked ? "EXTREME RAM TOOL \uD83D\uDEE0\uFE0F" : 'XEON RAM TOOL'
-            }, void 0, false, {
-                fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            isOpen && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _ultraAlertModuleCssDefault.default).alert_overlay,
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: (0, _ultraAlertModuleCssDefault.default).alert_modal,
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: (0, _ultraAlertModuleCssDefault.default).alert_hazard
-                        }, void 0, false, {
-                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                            lineNumber: 42,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: (0, _ultraAlertModuleCssDefault.default).alert_body,
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: (0, _ultraAlertModuleCssDefault.default).alert_triangle,
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: (0, _ultraAlertModuleCssDefault.default).alert_excl,
-                                        children: "!"
-                                    }, void 0, false, {
-                                        fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                                        lineNumber: 45,
-                                        columnNumber: 17
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                                    lineNumber: 44,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: (0, _ultraAlertModuleCssDefault.default).alert_title,
-                                    children: "\u26A0\uFE0F \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415: ULTRA \u0420\u0415\u0416\u0418\u041C"
-                                }, void 0, false, {
-                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                                    lineNumber: 47,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: (0, _ultraAlertModuleCssDefault.default).alert_text,
-                                    children: ALERT_CONTENT.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                            className: item.className,
-                                            children: item.text
-                                        }, index, false, {
-                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                                            lineNumber: 51,
-                                            columnNumber: 19
-                                        }, undefined))
-                                }, void 0, false, {
-                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                                    lineNumber: 49,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: (0, _ultraAlertModuleCssDefault.default).alert_actions,
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                            type: "activate",
-                                            isActive: true,
-                                            onClick: ()=>close(false)
-                                        }, void 0, false, {
-                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                                            lineNumber: 58,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                                            type: "cancel",
-                                            isActive: true,
-                                            onClick: ()=>close(true)
-                                        }, void 0, false, {
-                                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                                            lineNumber: 59,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                                    lineNumber: 57,
-                                    columnNumber: 15
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                            lineNumber: 43,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: (0, _ultraAlertModuleCssDefault.default).alert_hazard
-                        }, void 0, false, {
-                            fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                            lineNumber: 62,
-                            columnNumber: 13
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                    lineNumber: 41,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/UltraAlert/UltraAlert.tsx",
-                lineNumber: 40,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/UltraAlert/UltraAlert.tsx",
-        lineNumber: 30,
-        columnNumber: 5
-    }, undefined);
-};
-_s(UltraAlert, "gnnKON1u1lvul9TW1s4NW5WdeNg=", false, function() {
-    return [
-        (0, _useUltraLogicDefault.default)
-    ];
-});
-_c = UltraAlert;
-exports.default = UltraAlert;
-var _c;
-$RefreshReg$(_c, "UltraAlert");
-
-  $parcel$ReactRefreshHelpers$9800.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","../Button/Button":"4hbTW","./UltraAlert.module.css":"4FO4F","./hooks/useUltraLogic":"f4l4h","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4FO4F":[function(require,module,exports,__globalThis) {
-module.exports["alert_actions"] = `i6O3TG_alert_actions`;
-module.exports["alert_body"] = `i6O3TG_alert_body`;
-module.exports["alert_danger"] = `i6O3TG_alert_danger`;
-module.exports["alert_excl"] = `i6O3TG_alert_excl`;
-module.exports["alert_gold"] = `i6O3TG_alert_gold`;
-module.exports["alert_hazard"] = `i6O3TG_alert_hazard`;
-module.exports["alert_modal"] = `i6O3TG_alert_modal`;
-module.exports["alert_notice"] = `i6O3TG_alert_notice`;
-module.exports["alert_overlay"] = `i6O3TG_alert_overlay`;
-module.exports["alert_text"] = `i6O3TG_alert_text`;
-module.exports["alert_title"] = `i6O3TG_alert_title`;
-module.exports["alert_triangle"] = `i6O3TG_alert_triangle`;
-module.exports["alert_trigger"] = `i6O3TG_alert_trigger`;
-module.exports["alert_unlocked"] = `i6O3TG_alert_unlocked`;
-module.exports["alert_wrap"] = `i6O3TG_alert_wrap`;
-module.exports["lava"] = `i6O3TG_lava`;
-module.exports["lava"];
-module.exports["move"] = `i6O3TG_move`;
-module.exports["move"];
-
-},{}],"f4l4h":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$ad3a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$ad3a.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ad3a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-const useUltraLogic = (state, update)=>{
-    const [isOpen, setIsOpen] = (0, _react.useState)(false);
-    const clicks = (0, _react.useRef)(0);
-    const lastClickTime = (0, _react.useRef)(0);
-    const timeoutRef = (0, _react.useRef)(null); // Возвращаем number для браузерного window.setTimeout
-    const close = (0, _react.useCallback)((shouldUnlock = false)=>{
-        clicks.current = 0;
-        setIsOpen(false);
-        if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
-        update({
-            active: false,
-            unlocked: shouldUnlock || state.unlocked,
-            ...shouldUnlock && {
-                profile: "ultra",
-                lastChangedKey: "profile"
-            }
-        });
-    }, [
-        state.unlocked,
-        update
-    ]);
-    (0, _react.useEffect)(()=>{
-        if (!isOpen) return;
-        timeoutRef.current = window.setTimeout(()=>close(false), 7000);
-        return ()=>{
-            if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
-        };
-    }, [
-        isOpen,
-        close
-    ]);
-    const handleTrigger = (0, _react.useCallback)((e)=>{
-        e.stopPropagation();
-        window.getSelection()?.removeAllRanges();
-        if (state.unlocked || isOpen) return;
-        const now = Date.now();
-        if (now - lastClickTime.current > 2000) clicks.current = 0;
-        lastClickTime.current = now;
-        if (++clicks.current >= 10) {
-            window.navigator?.vibrate?.(200);
-            setIsOpen(true);
-            update({
-                active: true
-            });
-            clicks.current = 0;
-        }
-    }, [
-        state.unlocked,
-        isOpen,
-        update
-    ]);
-    return {
-        isOpen,
-        close,
-        handleTrigger
+var _timingEngineJs = require("../TimingEngine/timingEngine.js");
+var _timingEngineJsDefault = parcelHelpers.interopDefault(_timingEngineJs);
+const RamBios = (param = {})=>{
+    const { state: config = {}, timings = {} } = (0, _timingEngineJsDefault.default)(param);
+    const isCustomMode = config.preset === "custom";
+    const ddrSpeed = config.isDdr4 ? "17000" : "14900";
+    const titleText = `${timings.freq ?? ""} ${config.ramType ?? ""}-${ddrSpeed} (${config.channelsName ?? ""}-Channel)`;
+    const getValue = (field)=>{
+        const val = timings[field];
+        return val !== undefined && val !== null ? String(val) : "";
     };
-};
-exports.default = useUltraLogic;
-
-  $parcel$ReactRefreshHelpers$ad3a.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"a06IC":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$d353 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$d353.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d353.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _biosInput = require("../BiosInput/BiosInput");
-var _biosInputDefault = parcelHelpers.interopDefault(_biosInput);
-var _timingEngine = require("../TimingEngine/timingEngine");
-var _timingEngineDefault = parcelHelpers.interopDefault(_timingEngine);
-const RamBios = (p)=>{
-    const { state: s, timings: t } = (0, _timingEngineDefault.default)(p.state, p.state.lastChangedKey);
-    const isCustom = s.profile === "custom";
-    const limitRfc = t.tRFC_Values?.limitValue;
-    const rfcInfo = !isCustom && limitRfc ? ` (${s.profile === "ultra" ? "LIMIT" : "IDEAL"}: ${limitRfc})` : "";
-    const getTimingValue = (field, defaultValue, isFirst = false)=>isCustom ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosInputDefault.default), {
-            field: field,
-            state: s,
-            update: p.update,
-            isFirst: isFirst
-        }, void 0, false, {
-            fileName: "src/components/RamConfiguration/RamBios.tsx",
-            lineNumber: 19,
-            columnNumber: 7
-        }, undefined) : defaultValue;
+    // Вычисляем чистое значение tRFC без скобок для ручного ввода
+    const rawRfcFormatted = timings.tRfcFormatted ?? getValue("tRFC");
+    let formattedRfc = rawRfcFormatted;
+    if (isCustomMode) // Для ручного ввода оставляем только первое число, отсекая всё, что идет после пробела или скобки
+    formattedRfc = rawRfcFormatted.split(/[ (\s]/)[0];
+    else {
+        // Для остальных пресетов подменяем LIMIT или IDEAL в зависимости от ultra
+        const labelType = config.preset === "ultra" ? "LIMIT" : "IDEAL";
+        formattedRfc = rawRfcFormatted.includes("IDEAL") || rawRfcFormatted.includes("LIMIT") ? rawRfcFormatted.replace(/IDEAL|LIMIT/g, labelType) : rawRfcFormatted;
+    }
+    const fieldsConfig = [
+        {
+            label: "DIMM PROFILE",
+            value: "MANUAL"
+        },
+        {
+            label: "MEMORY FREQUENCY",
+            value: timings.freqClean ?? ""
+        },
+        {
+            label: "MEMORY VOLTAGE",
+            value: getValue("voltage")
+        },
+        {
+            label: "COMMAND TIMING",
+            value: getValue("tCR") || getValue("tCP")
+        },
+        {
+            label: "REFRESH RATE",
+            value: getValue("tREFI")
+        },
+        {
+            label: "CAS LATENCY (TCL)",
+            value: getValue("tCL"),
+            isEditable: isCustomMode,
+            field: "tCL",
+            isFirst: true
+        },
+        {
+            label: "TRP",
+            value: getValue("tRP"),
+            isEditable: isCustomMode,
+            field: "tRP"
+        },
+        {
+            label: "TRCD",
+            value: getValue("tRCD"),
+            isEditable: isCustomMode,
+            field: "tRCD"
+        },
+        {
+            label: "TRAS",
+            value: getValue("tRAS")
+        },
+        {
+            label: "TWR",
+            value: getValue("tWR")
+        },
+        {
+            label: "TRFC",
+            value: formattedRfc
+        },
+        {
+            label: "TRRD",
+            value: getValue("tRRD")
+        },
+        {
+            label: "TRTP",
+            value: getValue("tRTP")
+        },
+        {
+            label: "TWTR",
+            value: getValue("tWTR")
+        },
+        {
+            label: "TFAW",
+            value: getValue("tFAW")
+        },
+        {
+            label: "TRC",
+            value: getValue("tRC")
+        },
+        {
+            label: "TCWL",
+            value: getValue("tCWL")
+        }
+    ];
     return {
-        title: `${t.freq || ""} ${t.bandwidth || ""} (${s.channelsName || ""})`,
+        title: titleText.toUpperCase(),
         path: "INTELRCSETUP > MEMORY CONFIGURATION > MEMORY TIMINGS",
-        content: [
-            {
-                text_left: "DIMM profile",
-                text_right: "MANUAL"
-            },
-            {
-                text_left: "Memory Frequency",
-                text_right: t.freq?.split(" ")[0] || "Auto"
-            },
-            {
-                text_left: "Memory Voltage",
-                text_right: t.voltage
-            },
-            {
-                text_left: "Command Timing",
-                text_right: t.tCP
-            },
-            {
-                text_left: "Refresh Rate",
-                text_right: t.tREFI
-            },
-            {
-                text_left: "CAS Latency",
-                text_right: getTimingValue("tCL", t.tCL, true)
-            },
-            {
-                text_left: "tRP",
-                text_right: getTimingValue("tRP", t.tRP)
-            },
-            {
-                text_left: "tRCD",
-                text_right: getTimingValue("tRCD", t.tRCD)
-            },
-            {
-                text_left: "tRAS",
-                text_right: t.tRAS
-            },
-            {
-                text_left: "tWR",
-                text_right: t.tWR
-            },
-            {
-                text_left: "tRFC",
-                text_right: `${t.tRFC_Values?.current ?? 0}${rfcInfo}`
-            },
-            {
-                text_left: "tRRD",
-                text_right: t.tRRD
-            },
-            {
-                text_left: "tRTP",
-                text_right: t.tRTP
-            },
-            {
-                text_left: "tWTR",
-                text_right: t.tWTR
-            },
-            {
-                text_left: "tFAW",
-                text_right: t.tFAW
-            },
-            {
-                text_left: "tRC",
-                text_right: t.tRC
-            },
-            {
-                text_left: "tCWL",
-                text_right: t.tCWL
-            }
-        ]
+        content: fieldsConfig.map(({ label, value, isEditable = false, field, isFirst })=>({
+                text_left: label,
+                text_right: value,
+                isEditable,
+                field,
+                isFirst
+            }))
     };
 };
 _c = RamBios;
@@ -30712,79 +32935,7 @@ exports.default = RamBios;
 var _c;
 $RefreshReg$(_c, "RamBios");
 
-  $parcel$ReactRefreshHelpers$d353.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","../BiosInput/BiosInput":"jUxle","../TimingEngine/timingEngine":"hvkAK","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jUxle":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$5fbb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$5fbb.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5fbb.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _biosInputModuleCss = require("./BiosInput.module.css");
-var _biosInputModuleCssDefault = parcelHelpers.interopDefault(_biosInputModuleCss);
-var _s = $RefreshSig$();
-const BiosInput = ({ field, state, update, isFirst })=>{
-    _s();
-    const inputRef = (0, _react.useRef)(null);
-    const value = state[field] || "";
-    const numericValue = parseInt(value) || 0;
-    (0, _react.useEffect)(()=>{
-        if (isFirst) inputRef.current?.focus();
-    }, [
-        isFirst
-    ]);
-    const setParam = (v)=>update({
-            [field]: String(v)
-        });
-    const handleKeyDown = (e)=>{
-        if (e.key === "ArrowUp") setParam(numericValue + 1);
-        if (e.key === "ArrowDown") setParam(Math.max(numericValue - 1, 5));
-        if (e.key === "Enter") {
-            const inputs = Array.from(document.querySelectorAll(`.${(0, _biosInputModuleCssDefault.default).bios_input}`));
-            const next = inputs[inputs.indexOf(e.currentTarget) + 1];
-            if (next) next.focus();
-            else e.currentTarget.blur();
-        }
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-        ref: inputRef,
-        className: (0, _biosInputModuleCssDefault.default).bios_input,
-        value: value,
-        placeholder: "--",
-        onFocus: (e)=>e.target.select(),
-        onBlur: ()=>value === "" || numericValue < 5 ? setParam(5) : null,
-        onChange: (e)=>/^\d*$/.test(e.target.value) && setParam(e.target.value),
-        onKeyDown: handleKeyDown
-    }, void 0, false, {
-        fileName: "src/components/BiosInput/BiosInput.tsx",
-        lineNumber: 29,
-        columnNumber: 5
-    }, undefined);
-};
-_s(BiosInput, "cBQ6FQ+sf5H+lvNONLKqtm4aeQ8=");
-_c = BiosInput;
-exports.default = BiosInput;
-var _c;
-$RefreshReg$(_c, "BiosInput");
-
-  $parcel$ReactRefreshHelpers$5fbb.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./BiosInput.module.css":"6bn1I","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6bn1I":[function(require,module,exports,__globalThis) {
-module.exports["bios_input"] = `CWsxPG_bios_input`;
-
-},{}],"hvkAK":[function(require,module,exports,__globalThis) {
+},{"../TimingEngine/timingEngine.js":"5t7nW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"5t7nW":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _memoryConfiguration = require("./memoryConfiguration");
@@ -30798,61 +32949,182 @@ var _subTimingsDefault = parcelHelpers.interopDefault(_subTimings);
 var _ramPerformance = require("./utils/ramPerformance");
 var _ramPerformanceDefault = parcelHelpers.interopDefault(_ramPerformance);
 const timingEngine = (state, changedKey)=>{
-    const config = (0, _memoryConfigurationDefault.default)({
-        ...state
-    }, changedKey);
-    const data = {
+    const config = (0, _memoryConfigurationDefault.default)(state, changedKey);
+    const baseData = {
         ...state,
         ...config
     };
-    const { frequency, frequencyKey } = (0, _ramFrequencyDefault.default)(data);
-    const primaries = (0, _primaryTimingsDefault.default)(data, frequencyKey);
-    const subTimings = (0, _subTimingsDefault.default)(data, primaries, frequencyKey);
+    const userCL = baseData.tCL !== undefined && baseData.tCL !== "" ? Number(baseData.tCL) : undefined;
+    const userRP = baseData.tRP !== undefined && baseData.tRP !== "" ? Number(baseData.tRP) : undefined;
+    const userRCD = baseData.tRCD !== undefined && baseData.tRCD !== "" ? Number(baseData.tRCD) : undefined;
+    const dataWithParsedTimings = {
+        ...baseData,
+        tCL: userCL,
+        tRP: userRP,
+        tRCD: userRCD
+    };
+    const { frequency } = (0, _ramFrequencyDefault.default)(dataWithParsedTimings);
+    const primaries = (0, _primaryTimingsDefault.default)(dataWithParsedTimings, frequency);
+    const isCustom = dataWithParsedTimings.preset === "custom";
+    const finalPrimaries = {
+        ...primaries,
+        tCL: isCustom && userCL !== undefined ? userCL : primaries.tCL,
+        tRP: isCustom && userRP !== undefined ? userRP : primaries.tRP,
+        tRCD: isCustom && userRCD !== undefined ? userRCD : primaries.tRCD
+    };
+    const fullData = {
+        ...dataWithParsedTimings,
+        ...finalPrimaries
+    };
+    const subTimings = (0, _subTimingsDefault.default)(fullData, finalPrimaries, frequency);
+    const performance = (0, _ramPerformanceDefault.default)(fullData, frequency, finalPrimaries);
+    const tRfcFormatted = subTimings.tRFC_Values ? `${subTimings.tRFC_Values.current} (${fullData.preset === "ultra" ? "LIMIT" : "IDEAL"}: ${subTimings.tRFC_Values.limitValue})` : String(subTimings.tRFC ?? "");
     return {
-        state: data,
+        state: {
+            board: fullData.board,
+            gen: fullData.gen,
+            cpu: fullData.cpu,
+            memory: fullData.memory,
+            ramSize: fullData.ramSize,
+            density: fullData.density,
+            slot: fullData.slot,
+            preset: fullData.preset,
+            unlocked: fullData.unlocked,
+            history: fullData.history,
+            userFrequency: fullData.userFrequency,
+            tCL: fullData.tCL,
+            tRP: fullData.tRP,
+            tRCD: fullData.tRCD,
+            tRAS: fullData.tRAS,
+            tRC: fullData.tRC,
+            tWR: fullData.tWR,
+            tREFI: fullData.tREFI,
+            tRRD: fullData.tRRD,
+            tRTP: fullData.tRTP,
+            tWTR: fullData.tWTR,
+            tCR: fullData.tCR || fullData.tCP
+        },
         config,
         timings: {
-            ...primaries,
+            ...finalPrimaries,
             ...subTimings,
-            ...(0, _ramPerformanceDefault.default)(data, frequency, primaries)
-        }
+            ...performance,
+            freqClean: String(performance.freq ?? "").replace(" MHz", ""),
+            tRfcFormatted
+        },
+        updateParam: (setParam)=>(key, value)=>{
+                setParam((prev)=>({
+                        ...prev,
+                        [key]: value
+                    }));
+            }
     };
 };
 exports.default = timingEngine;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./memoryConfiguration":"8HbDv","./utils/ramFrequency":"9XM1p","./utils/primaryTimings":"hCsdk","./utils/subTimings":"c57ne","./utils/ramPerformance":"bN4wa"}],"8HbDv":[function(require,module,exports,__globalThis) {
+},{"./memoryConfiguration":"ePSfX","./utils/ramFrequency":"9XM1p","./utils/primaryTimings":"hCsdk","./utils/subTimings":"c57ne","./utils/ramPerformance":"bN4wa","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"ePSfX":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _cpuDataJs = require("../RamConfiguration/data/cpuData.js");
 var _ramDataJs = require("../RamConfiguration/data/ramData.js");
 const memoryConfiguration = (state, changedKey)=>{
-    const isV2 = state.gen === "V2";
-    const isV3 = state.gen === "V3";
-    const isV4 = state.gen === "V4";
+    const { gen, memory: userMemory, density: userDensity, slot: userSlot, cpu, board, ramSize, history = {
+        V2: {},
+        V3: {},
+        V4: {}
+    }, userFrequency, tCL, tRP, tRCD, tRAS, tRC, tWR, tREFI, tRRD, tRTP, tWTR, tCR } = state;
+    const cpuList = (0, _cpuDataJs.CPU_MODELS)[gen] ?? [];
+    let userCpu = cpu;
+    let userRamSize = ramSize;
+    if (changedKey === "gen") {
+        const saved = history[gen] || {};
+        userCpu = saved.cpu !== undefined ? saved.cpu : cpuList[0]?.name ?? "";
+        userRamSize = saved.ramSize !== undefined ? saved.ramSize : gen === "V2" ? 4 : 16;
+    }
+    const isV2 = gen === "V2";
+    const isV3 = gen === "V3";
+    const isV4 = gen === "V4";
     const ramType = isV2 ? "DDR3" : "DDR4";
     const isDdr4 = ramType === "DDR4";
     const typeKey = isDdr4 ? "ddr4" : "ddr3";
-    const cpuList = (0, _cpuDataJs.CPU_MODELS)[state.gen] ?? [];
-    let ramSize = Number(state.ramSize) || 8;
-    if (changedKey === "gen" && ramSize === 6) ramSize = 4;
-    if (isV2 && state.memoryType === "desktop" && ramSize > 32) ramSize = 32;
-    const isV2Special = ramSize === 6 && isV2;
+    const rawRamSize = Number(userRamSize) || 8;
+    const step1Size = changedKey === "gen" && rawRamSize === 6 ? 4 : rawRamSize;
+    const currentRamSizes = (0, _ramDataJs.RAM_SIZES).filter((size)=>size !== 6 || isV2);
+    const finalRamSize = currentRamSizes.includes(step1Size) ? step1Size : currentRamSizes[0];
+    const isV2Special = finalRamSize === 6 && isV2;
+    const getValidSlotsForType = (memType)=>{
+        if (isV2Special) return [
+            2,
+            3
+        ];
+        const availableModules = (0, _ramDataJs.RAM_CONFIGS)[ramType]?.[memType] ?? [];
+        const slotOverrides = {
+            20: {
+                standard: [
+                    3,
+                    4
+                ],
+                high: [
+                    2
+                ]
+            },
+            24: {
+                standard: [
+                    3,
+                    4
+                ],
+                high: [
+                    2,
+                    3
+                ]
+            },
+            40: {
+                standard: [],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            48: {
+                standard: [],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            }
+        };
+        const override = slotOverrides[finalRamSize];
+        if (override) return [
+            ...override.standard,
+            ...override.high
+        ];
+        return [
+            1,
+            2,
+            3,
+            4
+        ].filter((slots)=>{
+            const moduleSize = finalRamSize / slots;
+            return Number.isInteger(moduleSize) && availableModules.includes(moduleSize);
+        });
+    };
+    const isDesktopPossible = getValidSlotsForType("desktop").length > 0;
+    const isEccPossible = getValidSlotsForType("ecc").length > 0 && !isV2Special;
     const memoryTypesArray = [
         "desktop",
         "ecc"
-    ].filter((type)=>!(isV2Special && type === "ecc"));
-    const memoryType = memoryTypesArray.includes(state.memoryType) ? state.memoryType : memoryTypesArray[0];
-    const isEcc = memoryType === "ecc";
-    const modules = (0, _ramDataJs.RAM_CONFIGS)[ramType]?.[memoryType] ?? [
-        4,
-        8,
-        16,
-        32
-    ];
-    let isDensityHigh = !!state.isDensityHigh;
-    if (isV2 && memoryType === "desktop") isDensityHigh = false;
+    ].filter((type)=>{
+        if (type === "ecc" && !isEccPossible) return false;
+        if (type === "desktop" && !isDesktopPossible) return false;
+        return true;
+    });
+    const memory = isV2Special ? "desktop" : memoryTypesArray.includes(userMemory) ? userMemory : memoryTypesArray[0];
+    const isEcc = memory === "ecc";
+    const modules = (0, _ramDataJs.RAM_CONFIGS)[ramType]?.[memory] ?? [];
     const getValidSlots = (availableModules)=>{
-        if (ramSize === 6 && isV2) return [
+        if (isV2Special) return [
             2,
             3
         ];
@@ -30862,32 +33134,80 @@ const memoryConfiguration = (state, changedKey)=>{
             3,
             4
         ].filter((slots)=>{
-            const moduleSize = ramSize / slots;
+            const moduleSize = finalRamSize / slots;
             return Number.isInteger(moduleSize) && availableModules.includes(moduleSize);
         });
     };
-    const standardModules = modules.filter((m)=>m <= 8);
-    const highDensityModules = modules.filter((m)=>m >= 16);
-    const standardSlots = getValidSlots(standardModules);
-    const highDensitySlots = getValidSlots(highDensityModules);
-    if (standardSlots.length === 0) isDensityHigh = true;
-    else if (highDensitySlots.length === 0) isDensityHigh = false;
-    const isSelectionRequired = standardSlots.length > 0 && highDensitySlots.length > 0 && ramSize >= 16;
-    let visibleSlotsArray = isDensityHigh ? highDensitySlots : standardSlots;
-    if (visibleSlotsArray.length === 0) visibleSlotsArray = standardSlots.length ? standardSlots : [
-        1
+    const slotOverrides = {
+        20: {
+            standard: [
+                3,
+                4
+            ],
+            high: [
+                2
+            ]
+        },
+        24: {
+            standard: [
+                3,
+                4
+            ],
+            high: [
+                2,
+                3
+            ]
+        },
+        40: {
+            standard: [],
+            high: [
+                2,
+                3,
+                4
+            ]
+        },
+        48: {
+            standard: [],
+            high: [
+                2,
+                3,
+                4
+            ]
+        }
+    };
+    const override = slotOverrides[finalRamSize];
+    const standardSlots = override ? override.standard : getValidSlots(modules.filter((m)=>m <= 8));
+    const highDensitySlots = override ? override.high : getValidSlots(modules.filter((m)=>m >= 16));
+    const density = isV2 && memory === "desktop" ? "no" : standardSlots.length === 0 && highDensitySlots.length > 0 ? "yes" : highDensitySlots.length === 0 && standardSlots.length > 0 ? "no" : userDensity;
+    const baseSlotsArray = density === "yes" ? highDensitySlots : standardSlots;
+    const visibleSlotsArray = isV2Special ? [
+        2,
+        3
+    ] : baseSlotsArray.length > 0 ? baseSlotsArray : standardSlots.length > 0 ? standardSlots : [
+        2
     ];
-    const currentSlotsCount = Number(state.slotsCount);
-    const slotsCount = visibleSlotsArray.includes(currentSlotsCount) ? currentSlotsCount : visibleSlotsArray[0];
-    const cpuExists = cpuList.some((model)=>model.name === state.cpu);
-    const currentCpu = cpuExists ? state.cpu : cpuList[0]?.name ?? "";
-    const isSpecialConfig = state.boardType === "matx" && (isV3 || isV4) && memoryType === "desktop" && !isDensityHigh && (ramSize === 16 && slotsCount === 2 || ramSize === 32 && slotsCount === 4);
+    const currentSlotNum = Number(userSlot?.replace("slots", "")) || 2;
+    const validSlotNum = visibleSlotsArray.includes(currentSlotNum) ? currentSlotNum : visibleSlotsArray[0];
+    const slot = `slots${validSlotNum}`;
+    const currentCpu = cpuList.some((m)=>m.name === userCpu) ? userCpu : cpuList[0]?.name ?? "";
+    const isSpecialConfig = board === "matx" && (isV3 || isV4) && memory === "desktop" && density === "no" && (finalRamSize === 16 && validSlotNum === 2 || finalRamSize === 32 && validSlotNum === 4);
+    const updatedHistory = {
+        ...history,
+        [gen]: {
+            cpu: currentCpu,
+            ramSize: finalRamSize
+        }
+    };
+    const uiMemoryTypes = {
+        desktop: true,
+        ecc: finalRamSize !== 6
+    };
     return {
         ...state,
-        ramSize,
-        memoryType,
-        isDensityHigh,
-        slotsCount,
+        ramSize: finalRamSize,
+        memory,
+        density,
+        slot,
         isSpecialConfig,
         ramType,
         isDdr4,
@@ -30897,28 +33217,38 @@ const memoryConfiguration = (state, changedKey)=>{
         isEcc,
         typeKey,
         cpu: currentCpu,
-        isSelectionRequired,
+        isSelectionRequired: finalRamSize >= 16 && finalRamSize <= 32 && !(isV2 && memory === "desktop"),
         cpuModels: cpuList,
-        visibleSlots: Object.fromEntries(visibleSlotsArray.map((num)=>[
-                num,
-                true
-            ])),
-        memoryTypes: Object.fromEntries(memoryTypesArray.map((type)=>[
-                type,
-                true
-            ])),
+        visibleSlots: visibleSlotsArray.reduce((acc, num)=>({
+                ...acc,
+                [`slots${num}`]: true
+            }), {}),
+        memoryTypes: uiMemoryTypes,
         channelsName: [
             "Single",
             "Dual",
             "Triple",
             "Quad"
-        ][Math.min(slotsCount - 1, 3)] ?? "Single",
-        ramSizes: (0, _ramDataJs.RAM_SIZES).filter((size)=>size !== 6 || isV2)
+        ][Math.min(validSlotNum - 1, 3)] ?? "Single",
+        ramSizes: currentRamSizes,
+        history: updatedHistory,
+        userFrequency,
+        tCL,
+        tRP,
+        tRCD,
+        tRAS,
+        tRC,
+        tWR,
+        tREFI,
+        tRRD,
+        tRTP,
+        tWTR,
+        tCR
     };
 };
 exports.default = memoryConfiguration;
 
-},{"../RamConfiguration/data/cpuData.js":"jogp5","../RamConfiguration/data/ramData.js":"2BRL9","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jogp5":[function(require,module,exports,__globalThis) {
+},{"../RamConfiguration/data/cpuData.js":"3q9X0","../RamConfiguration/data/ramData.js":"1PRQ7","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"3q9X0":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CPU_MODELS", ()=>CPU_MODELS);
@@ -31067,12 +33397,11 @@ const CPU_MODELS = {
     ]
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"2BRL9":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"1PRQ7":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "RAM_SIZES", ()=>RAM_SIZES);
 parcelHelpers.export(exports, "RAM_CONFIGS", ()=>RAM_CONFIGS);
-parcelHelpers.export(exports, "AVAILABLE_SLOTS", ()=>AVAILABLE_SLOTS);
 parcelHelpers.export(exports, "formatRamLabel", ()=>formatRamLabel);
 const RAM_SIZES = [
     4,
@@ -31116,33 +33445,75 @@ const RAM_CONFIGS = {
         ]
     }
 };
-const AVAILABLE_SLOTS = [
-    1,
-    2,
-    3,
-    4
-];
 const formatRamLabel = (val)=>`${val} GB`;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"9XM1p":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "toEven", ()=>toEven);
-var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 const toEven = (value)=>Math.round(value / 2) * 2;
 const ramFrequency = (state)=>{
-    const { cpu, cpuModels, isDdr4 = true } = state || {};
-    const defFreq = isDdr4 ? 2133 : 1866;
-    const model = cpuModels?.find((m)=>m.name === cpu) || cpuModels?.[0];
-    const frequency = model?.maxFreq ?? defFreq;
+    const { cpu, cpuModels, isDdr4 } = state;
+    const currentModel = cpuModels?.find((m)=>m.name === cpu) ?? cpuModels?.[0];
     return {
-        frequency,
-        frequencyKey: (0, _memoryPresets.MEMORY_PRESETS)?.[frequency] !== undefined ? frequency : defFreq
+        frequency: currentModel?.maxFreq ?? (isDdr4 ? 2133 : 1866)
     };
 };
 exports.default = ramFrequency;
 
-},{"../../RamConfiguration/data/memoryPresets":"FGwI4","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"FGwI4":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hCsdk":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
+var _ramFrequency = require("./ramFrequency");
+const PrimaryTimings = (state, frequency)=>{
+    const { preset, ramSize, slot, density, board, isEcc, isDdr4, isV4, isV3, isV2, tCL: sCL, tRCD: sRCD, tRP: sRP, tRAS: sRAS, tRC: sRC } = state;
+    const slotsCount = Number(slot?.replace("slots", "")) || 2;
+    const loadScore = Math.floor(ramSize / 32) * 2 + (slotsCount > 2 ? 1 : 0) + (density === "yes" ? 2 : 0) + (board === "matx" ? 1 : 0) + (isEcc ? 1 : 0);
+    // 1. Ветка ULTRA (вычисляется в линейном стиле)
+    const divider = isV4 ? 4 : isDdr4 ? 2 : 3;
+    const baseUltra = isV4 ? 11 : isDdr4 ? 12 : (0, _memoryPresets.ULTRA_PRESET)?.tCL ?? 11;
+    const ultraTiming = baseUltra + Math.floor(loadScore / divider);
+    const ultraTras = (0, _ramFrequency.toEven)(ultraTiming * 2);
+    // 2. Ветка STANDART / CUSTOM
+    const currentPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.[preset === "custom" ? "safe" : preset] ?? (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.safe ?? (0, _memoryPresets.MEMORY_PRESETS)?.safe ?? {};
+    const v4Offset = isV4 && frequency >= 2133 ? 2 : 0;
+    // Хелпер расчета тайминга (с поддержкой кастомного ввода параметров)
+    const calc = (userVal, presetVal)=>preset === "custom" && userVal !== undefined && userVal !== "" ? Number(userVal) : isDdr4 ? Math.max((presetVal ?? 15) - v4Offset, 11) : (presetVal ?? 15) - v4Offset;
+    const stdCL = calc(sCL, currentPreset.tCL);
+    const stdRCD = calc(sRCD, currentPreset.tRCD);
+    const stdRP = calc(sRP, currentPreset.tRP);
+    // Вычисляем базовое автоматическое значение tRAS
+    const autoTras = (0, _ramFrequency.toEven)(stdCL + stdRCD + (isV2 ? 4 : 2));
+    // Если в режиме custom пользователь ввел tRAS вручную — берем его, иначе автоматическое
+    const stdTras = preset === "custom" && sRAS !== undefined && sRAS !== "" ? Number(sRAS) : autoTras;
+    // Вычисляем базовое автоматическое значение tRC
+    const autoTrc = isDdr4 ? Math.max(isV3 || isV4 ? (0, _ramFrequency.toEven)(stdTras + 4) : stdCL + stdRCD + stdRP, 34) : isV3 || isV4 ? (0, _ramFrequency.toEven)(stdTras + 4) : stdCL + stdRCD + stdRP;
+    // Если в режиме custom пользователь ввел tRC вручную — берем его, иначе автоматическое
+    const stdTrc = preset === "custom" && sRC !== undefined && sRC !== "" ? Number(sRC) : autoTrc;
+    // 3. Финальный маппинг результата через один тернарный оператор
+    return preset === "ultra" ? {
+        tCL: ultraTiming,
+        tRCD: ultraTiming,
+        tRP: ultraTiming,
+        tRAS: ultraTras,
+        loadScore,
+        tRC: isV3 || isV4 ? (0, _ramFrequency.toEven)(ultraTras + 4) : ultraTiming * 3
+    } : {
+        tCL: stdCL,
+        tRCD: stdRCD,
+        tRP: stdRP,
+        tRAS: stdTras,
+        tRC: stdTrc,
+        loadScore
+    };
+};
+_c = PrimaryTimings;
+exports.default = PrimaryTimings;
+var _c;
+$RefreshReg$(_c, "PrimaryTimings");
+
+},{"../../RamConfiguration/data/memoryPresets":"6HYNE","./ramFrequency":"9XM1p","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"6HYNE":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ULTRA_PRESET", ()=>ULTRA_PRESET);
@@ -31420,108 +33791,35 @@ const PROFILE_PRESETS = [
     "ultra"
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hCsdk":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"c57ne":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 var _ramFrequency = require("./ramFrequency");
-const PrimaryTimings = (state, frequencyKey)=>{
-    const { profile, ramSize = 16, slotsCount = 2, isDensityHigh = false, boardType = "atx", isEcc = false, isDdr4 = true, isV4 = false, isV3 = false, isV2 = false, tCL: sCL, tRCD: sRCD, tRP: sRP } = state || {};
-    const loadScore = Math.floor(ramSize / 32) * 2 + (slotsCount > 2 ? 1 : 0) + (isDensityHigh ? 2 : 0) + (boardType === "matx" ? 1 : 0) + (isEcc ? 1 : 0);
-    if (profile === "ultra") {
-        const divider = isV4 ? 4 : isDdr4 ? 2 : 3;
-        const baseUltra = isV4 ? 11 : isDdr4 ? 12 : (0, _memoryPresets.ULTRA_PRESET)?.tCL ?? 11;
-        const timing = baseUltra + Math.floor(loadScore / divider);
-        const tRAS = (0, _ramFrequency.toEven)(timing * 2);
-        return {
-            tCL: timing,
-            tRCD: timing,
-            tRP: timing,
-            tRAS,
-            loadScore,
-            tRC: isV3 || isV4 ? (0, _ramFrequency.toEven)(tRAS + 4) : timing * 3
-        };
-    }
-    const isCustom = profile === "custom";
-    const preset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.[isCustom ? "safe" : profile] || (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.safe || (0, _memoryPresets.MEMORY_PRESETS)?.safe;
-    const v4Offset = isV4 && frequencyKey >= 2133 ? 2 : 0;
-    const calc = (userVal, presetVal)=>{
-        if (isCustom && userVal) return +userVal;
-        const val = +(presetVal ?? 15) - v4Offset;
-        return isDdr4 ? Math.max(val, 11) : val;
-    };
-    const tCL = calc(sCL, preset?.tCL);
-    const tRCD = calc(sRCD, preset?.tRCD);
-    const tRP = calc(sRP, preset?.tRP);
-    const tRAS = (0, _ramFrequency.toEven)(tCL + tRCD + (isV2 ? 4 : 2));
-    const calcTRC = isV3 || isV4 ? (0, _ramFrequency.toEven)(tRAS + 4) : tCL + tRCD + tRP;
-    const tRC = isDdr4 ? Math.max(calcTRC, 34) : calcTRC;
-    return {
-        tCL,
-        tRCD,
-        tRP,
-        tRAS,
-        tRC,
-        loadScore
-    };
-};
-_c = PrimaryTimings;
-exports.default = PrimaryTimings;
-var _c;
-$RefreshReg$(_c, "PrimaryTimings");
-
-},{"../../RamConfiguration/data/memoryPresets":"FGwI4","./ramFrequency":"9XM1p","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"c57ne":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
-var _ramFrequency = require("./ramFrequency");
-const SubTimings = (state, primaries, frequencyKey)=>{
-    const { profile = "default", ramSize = 16, slotsCount = 2, isDensityHigh = false, boardType = "atx", isSpecialConfig = false, gen = "V3", isDdr4 = true, typeKey = "ddr4", isEcc = false } = state;
-    const profileKey = profile === "custom" || profile === "ultra" ? "safe" : profile;
-    let base = (0, _memoryPresets.PROFILE_SUBTIMINGS)?.[profile]?.[typeKey];
-    if (!base) {
-        const freqPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.safe || (0, _memoryPresets.MEMORY_PRESETS)?.safe;
-        base = {
-            tFAW: freqPreset?.tFAW ?? 24,
-            tWR: freqPreset?.tWR ?? 12,
-            tRRD: freqPreset?.tRRD ?? 4,
-            tRTP: freqPreset?.tRTP ?? 6,
-            tWTR: freqPreset?.tWTR ?? 6
-        };
-    }
-    let { tFAW, tWR, tRRD, tRTP, tWTR } = base;
-    const hPen = (0, _memoryPresets.PENALTIES)?.highCapacity?.[typeKey];
-    const ePen = (0, _memoryPresets.PENALTIES)?.ecc?.[typeKey];
-    if (ramSize / Math.max(1, slotsCount) >= 12 || ramSize >= 32) {
-        tFAW += hPen?.tFAW ?? 0;
-        tWR += hPen?.tWR ?? 0;
-        tRRD += hPen?.tRRD ?? 0;
-        tWTR += hPen?.tWTR ?? 0;
-    }
-    if (isEcc) {
-        tFAW += ePen?.tFAW ?? 0;
-        tWR += ePen?.tWR ?? 0;
-        tRRD += ePen?.tRRD ?? 0;
-        tRTP += ePen?.tRTP ?? 0;
-    }
-    tFAW = (0, _ramFrequency.toEven)(tFAW);
-    tWR = (0, _ramFrequency.toEven)(tWR);
-    const tRefiProfile = profile === "ultra" ? "ultra" : profileKey;
-    const tREFI = (0, _memoryPresets.TREFI_TABLE)?.[tRefiProfile]?.[gen] ?? (0, _memoryPresets.TREFI_TABLE)?.safe?.[gen] ?? 7800;
-    const stabilityBonus = (Math.floor((ramSize - 8) / 8) * 10 + slotsCount * 12 - 12 + (isDensityHigh ? 48 : 0) + (isEcc ? isDdr4 ? 24 : 40 : -12) + (boardType === "matx" ? 16 : 0)) * (isDdr4 ? 1 : 1.35);
-    let tRFC;
-    let limitMultiplier = 0.92;
-    if (profile === "ultra") {
-        const baseRfc = isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET)?.tRFC ?? 180;
-        tRFC = (0, _ramFrequency.toEven)(baseRfc + stabilityBonus * (isDdr4 ? 0.8 : 0.6));
-        limitMultiplier = 0.9;
-    } else if (isSpecialConfig) tRFC = (0, _memoryPresets.SPECIAL_PRESETS)?.[profileKey]?.tRFC ?? (0, _memoryPresets.SPECIAL_PRESETS)?.safe?.tRFC ?? 260;
-    else {
-        const basePreset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.[profileKey] || (0, _memoryPresets.MEMORY_PRESETS)?.[frequencyKey]?.safe;
-        const defaultBaseRfc = profile === "custom" && primaries ? (primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) : basePreset?.tRFC ?? (isDdr4 ? 312 : 240);
-        tRFC = (0, _ramFrequency.toEven)(defaultBaseRfc + stabilityBonus);
-    }
-    const limitValue = isSpecialConfig && profile !== "ultra" ? (0, _memoryPresets.SPECIAL_LIMITS)?.[profileKey] ?? (0, _ramFrequency.toEven)(tRFC * 0.92) : (0, _ramFrequency.toEven)(tRFC * limitMultiplier);
+const SubTimings = (state, primaries, frequency)=>{
+    const { preset, ramSize, slot, density, board, isSpecialConfig, gen, isDdr4, typeKey, isEcc, tWR: sWR, tREFI: sREFI, tRRD: sRRD, tRTP: sRTP, tWTR: sWTR } = state;
+    const slotsCount = Number(slot?.replace("slots", "")) || 2;
+    const isHighCap = ramSize / Math.max(1, slotsCount) >= 12 || ramSize >= 32;
+    const freqPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.safe || (0, _memoryPresets.MEMORY_PRESETS)?.safe;
+    const base = (0, _memoryPresets.PROFILE_SUBTIMINGS)?.[preset]?.[typeKey] || {};
+    const hPen = (0, _memoryPresets.PENALTIES)?.highCapacity?.[typeKey] || {};
+    const ePen = (0, _memoryPresets.PENALTIES)?.ecc?.[typeKey] || {};
+    const autoFAW = (0, _ramFrequency.toEven)((base.tFAW ?? freqPreset?.tFAW ?? 24) + (isHighCap ? hPen.tFAW ?? 0 : 0) + (isEcc ? ePen.tFAW ?? 0 : 0));
+    const tFAW = autoFAW;
+    const autoWR = (0, _ramFrequency.toEven)((base.tWR ?? freqPreset?.tWR ?? 12) + (isHighCap ? hPen.tWR ?? 0 : 0) + (isEcc ? ePen.tWR ?? 0 : 0));
+    const tWR = preset === "custom" && sWR !== undefined && sWR !== "" ? Number(sWR) : autoWR;
+    const autoRRD = (base.tRRD ?? freqPreset?.tRRD ?? 4) + (isHighCap ? hPen.tRRD ?? 0 : 0) + (isEcc ? ePen.tRRD ?? 0 : 0);
+    const tRRD = preset === "custom" && sRRD !== undefined && sRRD !== "" ? Number(sRRD) : autoRRD;
+    const autoWTR = (base.tWTR ?? freqPreset?.tWTR ?? 6) + (isHighCap ? hPen.tWTR ?? 0 : 0);
+    const tWTR = preset === "custom" && sWTR !== undefined && sWTR !== "" ? Number(sWTR) : autoWTR;
+    const autoRTP = (base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? ePen.tRTP ?? 0 : 0);
+    const tRTP = preset === "custom" && sRTP !== undefined && sRTP !== "" ? Number(sRTP) : autoRTP;
+    const profileKey = preset === "custom" || preset === "ultra" ? "safe" : preset;
+    const autoREFI = (0, _memoryPresets.TREFI_TABLE)?.[preset === "ultra" ? "ultra" : profileKey]?.[gen] ?? (0, _memoryPresets.TREFI_TABLE)?.safe?.[gen] ?? 7800;
+    const tREFI = preset === "custom" && sREFI !== undefined && sREFI !== "" ? Number(sREFI) : autoREFI;
+    const stabilityBonus = (Math.floor((ramSize - 8) / 8) * 10 + slotsCount * 12 - 12 + (density === "yes" ? 48 : 0) + (isEcc ? isDdr4 ? 24 : 40 : -12) + (board === "matx" ? 16 : 0)) * (isDdr4 ? 1 : 1.35);
+    const tRFC = preset === "ultra" ? (0, _ramFrequency.toEven)((isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET)?.tRFC ?? 180) + stabilityBonus * (isDdr4 ? 0.8 : 0.6)) : isSpecialConfig ? (0, _memoryPresets.SPECIAL_PRESETS)?.[profileKey]?.tRFC ?? (0, _memoryPresets.SPECIAL_PRESETS)?.safe?.tRFC ?? 260 : preset === "custom" && primaries ? (0, _ramFrequency.toEven)((primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) + stabilityBonus) : (0, _ramFrequency.toEven)(((0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.[profileKey]?.tRFC || (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.safe?.tRFC || (isDdr4 ? 312 : 240)) + stabilityBonus);
+    const limitValue = isSpecialConfig && preset !== "ultra" ? (0, _memoryPresets.SPECIAL_LIMITS)?.[profileKey] ?? (0, _ramFrequency.toEven)(tRFC * 0.92) : (0, _ramFrequency.toEven)(tRFC * (preset === "ultra" ? 0.9 : 0.92));
     return {
         tRFC,
         tFAW,
@@ -31541,18 +33839,21 @@ exports.default = SubTimings;
 var _c;
 $RefreshReg$(_c, "SubTimings");
 
-},{"../../RamConfiguration/data/memoryPresets":"FGwI4","./ramFrequency":"9XM1p","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bN4wa":[function(require,module,exports,__globalThis) {
+},{"../../RamConfiguration/data/memoryPresets":"6HYNE","./ramFrequency":"9XM1p","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bN4wa":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const ramPerformance = (state, frequency, primaries)=>{
-    const { ramSize = 16, slotsCount = 2, isDdr4 = true, profile = "default", boardType = "atx" } = state || {};
-    const { tCL = 15, tRC = 34 } = primaries || {};
-    const isHighPower = profile === "ultra" || profile === "aggressive";
-    const channels = Math.min(slotsCount, boardType === "matx" ? 2 : 4);
+    const { ramSize, slot, isDdr4, preset, board, tCR: sCR } = state;
+    const { tCL, tRC } = primaries || {};
+    const slotsCount = Number(slot?.replace("slots", "")) || 2;
+    const channels = Math.min(slotsCount, board === "matx" ? 2 : 4);
     const bandwidthGbps = Math.round(frequency * 8 * channels / 1024) || 0;
+    const voltage = isDdr4 ? preset === "ultra" ? "1.30V" : preset === "aggressive" ? "1.25V" : "1.20V" : preset === "ultra" || preset === "aggressive" ? "1.55V" : "1.50V";
+    const autoCR = ramSize >= 128 || slotsCount >= 4 ? "2N" : "1N";
+    const tCP = preset === "custom" && sCR !== undefined && sCR !== "" ? sCR : autoCR;
     return {
-        voltage: isDdr4 ? profile === "ultra" ? "1.30V" : profile === "aggressive" ? "1.25V" : "1.20V" : isHighPower ? "1.55V" : "1.50V",
-        tCP: ramSize >= 128 || slotsCount >= 4 ? "2N" : "1N",
+        voltage,
+        tCP,
         tRC,
         tCWL: isDdr4 && tCL % 2 === 0 ? tCL : tCL - 1,
         bandwidth: `${bandwidthGbps} GB/s`,
@@ -31561,12 +33862,12 @@ const ramPerformance = (state, frequency, primaries)=>{
 };
 exports.default = ramPerformance;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"cUeEy":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$6f8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$6f8e.init();
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8ud8y":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6a86 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$6a86.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6f8e.prelude(module);
+$parcel$ReactRefreshHelpers$6a86.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -31582,7 +33883,7 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\u26A1"
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 4,
                         columnNumber: 7
                     }, undefined),
@@ -31590,13 +33891,13 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u041D\u0430 X99 \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0432\u043E\u043B\u044C\u0442\u0430\u0436\u043E\u043C \u043A\u0430\u043A \u043F\u0440\u0430\u0432\u0438\u043B\u043E \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043E (\u0437\u0430 \u0438\u0441\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435\u043C \u0442\u043E\u043F\u043E\u0432\u044B\u0445 \u043F\u043B\u0430\u0442)! \u041D\u043E \u0435\u0441\u043B\u0438 \u0432\u0441\u0451 \u0436\u0435 \u043F\u0440\u043E\u0448\u0438\u0432\u043A\u0430 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u0442\u044C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u0447\u0435\u0440\u0435\u0437 BIOS, \u0442\u043E \u0437\u0430\u043F\u0438\u0441\u044C \u0434\u0435\u043B\u0430\u0435\u0442\u0441\u044F \u0446\u0435\u043B\u044B\u043C \u0447\u0438\u0441\u043B\u043E\u043C: 120/135/145 \u2014 \u044D\u0442\u043E 1.2 / 1.35 / 1.45 v. \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 0 = Auto (1.2 v)."
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 5,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                fileName: "src/components/RamConfiguration/RamInfo.jsx",
                 lineNumber: 3,
                 columnNumber: 5
             }, undefined),
@@ -31607,7 +33908,7 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\u26A0\uFE0F"
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 14,
                         columnNumber: 7
                     }, undefined),
@@ -31615,13 +33916,13 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u041F\u041E\u041C\u041D\u0418\u0422\u0415! \u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0432\u043E\u043B\u044C\u0442\u0430\u0436\u0430 \u0442\u0440\u0435\u0431\u0443\u044E\u0442 \u043D\u0430\u043B\u0438\u0447\u0438\u0435 \u043A\u0430\u043A\u043E\u0433\u043E-\u043B\u0438\u0431\u043E \u043E\u0445\u043B\u0430\u0436\u0434\u0435\u043D\u0438\u044F \u041E\u0417\u0423 (\u0440\u0430\u0434\u0438\u0430\u0442\u043E\u0440\u044B, Top-Flow \u043A\u0443\u043B\u0435\u0440)! \u0411\u0435\u0437 \u044D\u0442\u043E\u0433\u043E \u043F\u043B\u0430\u0448\u043A\u0438 \u043C\u043E\u0433\u0443\u0442 \u0431\u044B\u0441\u0442\u0440\u043E \u0434\u0435\u0433\u0440\u0430\u0434\u0438\u0440\u043E\u0432\u0430\u0442\u044C."
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 15,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                fileName: "src/components/RamConfiguration/RamInfo.jsx",
                 lineNumber: 13,
                 columnNumber: 5
             }, undefined),
@@ -31632,7 +33933,7 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDCE2"
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 23,
                         columnNumber: 7
                     }, undefined),
@@ -31640,13 +33941,13 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0421\u043F\u0435\u0446\u0438\u0444\u0438\u043A\u0430 \u0440\u0430\u0437\u0432\u043E\u0434\u043A\u0438 mATX-\u043F\u043B\u0430\u0442 \u0447\u0430\u0441\u0442\u043E \u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0438\u0432\u0430\u0435\u0442 tRFC \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439 \u041E\u0417\u0423. \u0417\u043D\u0430\u0447\u0435\u043D\u0438\u0435 328 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u0432\u0435\u0440\u043E\u044F\u0442\u043D\u044B\u043C \u043F\u043E\u0440\u043E\u0433\u043E\u043C, \u043D\u0438\u0436\u0435 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0442\u0430\u043A\u0438\u0435 \u043C\u043E\u0434\u0443\u043B\u0438 \u043F\u043E\u043F\u0440\u043E\u0441\u0442\u0443 \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u044E\u0442."
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 24,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                fileName: "src/components/RamConfiguration/RamInfo.jsx",
                 lineNumber: 22,
                 columnNumber: 5
             }, undefined),
@@ -31657,7 +33958,7 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDD27"
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 32,
                         columnNumber: 7
                     }, undefined),
@@ -31665,13 +33966,13 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0412 4-\u043A\u0430\u043D\u0430\u043B\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 tRFC \u0432\u044B\u0448\u0435 \u0438 \u0441\u0442\u0430\u0432\u0438\u0442\u0441\u044F \u043F\u043E \u0441\u0430\u043C\u043E\u0439 \u043C\u0435\u0434\u043B\u0435\u043D\u043D\u043E\u0439 \u043F\u043B\u0430\u0448\u043A\u0435. \u0415\u0441\u043B\u0438 \u043D\u0435\u0442 \u0441\u0442\u0430\u0440\u0442\u0430 \u2014 \u043F\u043E\u0434\u043D\u0438\u043C\u0438\u0442\u0435 tRFC \u043D\u0430 20-40 \u043F\u0443\u043D\u043A\u0442\u043E\u0432. \u0420\u0435\u0436\u0438\u043C 2N/2T \u0447\u0430\u0449\u0435 \u0432\u044B\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044F \u0434\u043B\u044F \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u0438 (\u0435\u0441\u043B\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u0435\u0442 \u0432 1N/1T)."
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 33,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                fileName: "src/components/RamConfiguration/RamInfo.jsx",
                 lineNumber: 31,
                 columnNumber: 5
             }, undefined),
@@ -31682,7 +33983,7 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_icon,
                         children: "\uD83D\uDD0B"
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 41,
                         columnNumber: 7
                     }, undefined),
@@ -31690,19 +33991,19 @@ const RamInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: s.info_text,
                         children: "\u0415\u0441\u043B\u0438 \u041F\u041A \u043D\u0435 \u0441\u0442\u0430\u0440\u0442\u0443\u0435\u0442: \u0432\u044B\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0411\u041F \u0438\u0437 \u0440\u043E\u0437\u0435\u0442\u043A\u0438, \u0432\u044B\u0442\u0430\u0449\u0438\u0442\u0435 \u0431\u0430\u0442\u0430\u0440\u0435\u0439\u043A\u0443 2032 \u0438\u043B\u0438 \u0437\u0430\u043C\u043A\u043D\u0438\u0442\u0435 \u043A\u043E\u043D\u0442\u0430\u043A\u0442\u044B CLR_CMOS \u043D\u0430 10 \u0441\u0435\u043A. \u043F\u0435\u0440\u0435\u043C\u044B\u0447\u043A\u043E\u0439 (\u043E\u0442\u0432\u0451\u0440\u0442\u043A\u043E\u0439)."
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                        fileName: "src/components/RamConfiguration/RamInfo.jsx",
                         lineNumber: 42,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/components/RamConfiguration/RamInfo.tsx",
+                fileName: "src/components/RamConfiguration/RamInfo.jsx",
                 lineNumber: 40,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/RamConfiguration/RamInfo.tsx",
+        fileName: "src/components/RamConfiguration/RamInfo.jsx",
         lineNumber: 2,
         columnNumber: 3
     }, undefined);
@@ -31711,17 +34012,17 @@ exports.default = RamInfo;
 var _c;
 $RefreshReg$(_c, "RamInfo");
 
-  $parcel$ReactRefreshHelpers$6f8e.postlude(module);
+  $parcel$ReactRefreshHelpers$6a86.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"byx7S":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$3b47 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$3b47.init();
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"884Qk":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$22f0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$22f0.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$3b47.prelude(module);
+$parcel$ReactRefreshHelpers$22f0.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -31729,14 +34030,24 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _timingEngine = require("../../TimingEngine/timingEngine");
-var _timingEngineDefault = parcelHelpers.interopDefault(_timingEngine);
-var _ramButtons = require("./RamButtons");
-var _ramButtonsDefault = parcelHelpers.interopDefault(_ramButtons);
-var _ramSelects = require("./RamSelects");
-var _ramSelectsDefault = parcelHelpers.interopDefault(_ramSelects);
-const RamTools = ({ state: initialState, setParam, styles: s })=>{
-    const { state } = (0, _timingEngineDefault.default)(initialState, initialState.lastChangedKey);
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _select = require("../Select/Select");
+var _selectDefault = parcelHelpers.interopDefault(_select);
+var _timingEngineJs = require("../TimingEngine/timingEngine.js");
+var _timingEngineJsDefault = parcelHelpers.interopDefault(_timingEngineJs);
+var _ramData = require("./data/ramData");
+const RamTools = ({ styles: s, param, setParam })=>{
+    const { config, updateParam } = (0, _timingEngineJsDefault.default)(param);
+    const baseChange = updateParam(setParam);
+    const change = (key, value)=>{
+        const nextEngine = (0, _timingEngineJsDefault.default)({
+            ...param,
+            [key]: value
+        }, key);
+        setParam(nextEngine.state);
+    };
+    const cpuItems = config.cpuModels.map((item)=>item.name);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: s.tools_container,
         children: [
@@ -31744,144 +34055,237 @@ const RamTools = ({ state: initialState, setParam, styles: s })=>{
                 className: s.tools_label,
                 children: "\u0422\u0418\u041F \u041F\u041B\u0410\u0422\u042B:"
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 11,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramButtonsDefault.default).Board, {
-                state: state,
-                setParam: setParam,
-                styles: s
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.btn_group,
+                children: [
+                    "atx",
+                    "matx"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: param.board === type,
+                        className: s.tools_button,
+                        onClick: ()=>change("board", type)
+                    }, type, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 23,
+                        columnNumber: 11
+                    }, undefined))
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 12,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_label,
                 children: "\u041F\u041E\u041A\u041E\u041B\u0415\u041D\u0418\u0415:"
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 14,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 33,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramButtonsDefault.default).Gen, {
-                state: state,
-                setParam: setParam,
-                styles: s
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.btn_group,
+                children: [
+                    "V2",
+                    "V3",
+                    "V4"
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: param.gen === type,
+                        className: s.tools_button,
+                        onClick: ()=>change("gen", type)
+                    }, type, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 36,
+                        columnNumber: 11
+                    }, undefined))
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 15,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_label,
                 children: "\u041F\u0420\u041E\u0426\u0415\u0421\u0421\u041E\u0420:"
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 17,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 46,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramSelectsDefault.default).Cpu, {
-                state: state,
-                setParam: setParam
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _selectDefault.default), {
+                value: param.cpu,
+                items: cpuItems,
+                onChange: (val)=>change("cpu", val)
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 18,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: s.tools_label,
-                children: "\u0422\u0418\u041F \u041F\u0410\u041C\u042F\u0422\u0418:"
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 20,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramButtonsDefault.default).Memory, {
-                state: state,
-                setParam: setParam,
-                styles: s
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 21,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: s.tools_label,
-                children: "\u041E\u0411\u042A\u0415\u041C \u041F\u0410\u041C\u042F\u0422\u0418:"
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 23,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramSelectsDefault.default).RamSize, {
-                state: state,
-                setParam: setParam
-            }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 24,
-                columnNumber: 7
-            }, undefined),
-            state.isSelectionRequired && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            [
+                "desktop",
+                "ecc"
+            ].filter((type)=>config.memoryTypes?.[type]).length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: s.tools_label,
-                        children: "\u0415\u0421\u0422\u042C \u041F\u041B\u0410\u041D\u041A\u0418 \u041F\u041E 16GB \u0418 \u0412\u042B\u0428\u0415?"
+                        children: "\u0422\u0418\u041F \u041F\u0410\u041C\u042F\u0422\u0418:"
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                        lineNumber: 28,
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 56,
                         columnNumber: 11
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramButtonsDefault.default).Density, {
-                        state: state,
-                        setParam: setParam,
-                        styles: s
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: s.btn_group,
+                        children: [
+                            "desktop",
+                            "ecc"
+                        ].filter((type)=>config.memoryTypes?.[type]).map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                type: type,
+                                isActive: param.memory === type,
+                                className: s.tools_button,
+                                onClick: ()=>change("memory", type)
+                            }, type, false, {
+                                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                                lineNumber: 61,
+                                columnNumber: 17
+                            }, undefined))
                     }, void 0, false, {
-                        fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                        lineNumber: 29,
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 57,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_label,
-                children: "\u0417\u0410\u041D\u042F\u0422\u041E \u0421\u041B\u041E\u0422\u041E\u0412:"
+                children: "\u041E\u0411\u042A\u0415\u041C \u041F\u0410\u041C\u042F\u0422\u0418:"
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 33,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 73,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramButtonsDefault.default).Slot, {
-                state: state,
-                setParam: setParam,
-                styles: s
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _selectDefault.default), {
+                value: param.ramSize,
+                items: config.ramSizes,
+                renderLabel: (0, _ramData.formatRamLabel),
+                onChange: (val)=>change("ramSize", Number(val))
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 34,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 74,
                 columnNumber: 7
             }, undefined),
+            config.isSelectionRequired && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: s.tools_label,
+                        children: "\u0415\u0421\u0422\u042C \u041F\u041B\u0410\u041D\u041A\u0418 \u041F\u041E 16GB \u0418 \u0412\u042B\u0428\u0415?"
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 83,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: s.btn_group,
+                        children: [
+                            "no",
+                            "yes"
+                        ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                type: type,
+                                isActive: param.density === type,
+                                className: s.tools_button,
+                                onClick: ()=>change("density", type)
+                            }, type, false, {
+                                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                                lineNumber: 86,
+                                columnNumber: 15
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 84,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true),
+            [
+                "slots1",
+                "slots2",
+                "slots3",
+                "slots4"
+            ].filter((key)=>config.visibleSlots?.[key]).length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: s.tools_label,
+                        children: "\u0417\u0410\u041D\u042F\u0422\u041E \u0421\u041B\u041E\u0422\u041E\u0412:"
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 102,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: s.btn_group,
+                        children: [
+                            "slots1",
+                            "slots2",
+                            "slots3",
+                            "slots4"
+                        ].filter((key)=>config.visibleSlots?.[key]).map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                type: type,
+                                isActive: param.slot === type,
+                                className: s.tools_button,
+                                onClick: ()=>change("slot", type)
+                            }, type, false, {
+                                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                                lineNumber: 107,
+                                columnNumber: 17
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 103,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: s.tools_label,
                 children: "\u041F\u0420\u0415\u0421\u0415\u0422:"
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 36,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 119,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramButtonsDefault.default).Preset, {
-                state: state,
-                setParam: setParam,
-                styles: s
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.btn_group,
+                children: [
+                    "safe",
+                    "balanced",
+                    "aggressive",
+                    "custom",
+                    ...param.unlocked ? [
+                        "ultra"
+                    ] : []
+                ].map((type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        type: type,
+                        isActive: param.preset === type,
+                        className: s.tools_button,
+                        onClick: ()=>change("preset", type)
+                    }, type, false, {
+                        fileName: "src/components/RamConfiguration/RamTools.jsx",
+                        lineNumber: 128,
+                        columnNumber: 11
+                    }, undefined))
             }, void 0, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-                lineNumber: 37,
+                fileName: "src/components/RamConfiguration/RamTools.jsx",
+                lineNumber: 120,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/RamConfiguration/RamTools/RamTools.tsx",
-        lineNumber: 10,
+        fileName: "src/components/RamConfiguration/RamTools.jsx",
+        lineNumber: 19,
         columnNumber: 5
     }, undefined);
 };
@@ -31890,218 +34294,17 @@ exports.default = RamTools;
 var _c;
 $RefreshReg$(_c, "RamTools");
 
-  $parcel$ReactRefreshHelpers$3b47.postlude(module);
+  $parcel$ReactRefreshHelpers$22f0.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./RamButtons":"3dbfA","./RamSelects":"8JnE9","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../../TimingEngine/timingEngine":"hvkAK"}],"3dbfA":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$a3c5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$a3c5.init();
+},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","../Select/Select":"4N36N","../TimingEngine/timingEngine.js":"5t7nW","./data/ramData":"1PRQ7","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"4N36N":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$c737 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$c737.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
 var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a3c5.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _button = require("../../Button/Button");
-var _buttonDefault = parcelHelpers.interopDefault(_button);
-var _memoryPresets = require("../data/memoryPresets");
-var _ramData = require("../data/ramData");
-const RamButtons = {
-    Board: ({ state, setParam, styles: s })=>{
-        const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                type: type,
-                isActive: state.boardType === type,
-                onClick: ()=>setParam("boardType", type),
-                className: s.tools_button
-            }, type, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined);
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: s.btn_group,
-            children: [
-                renderButton("atx"),
-                renderButton("matx")
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 18,
-            columnNumber: 7
-        }, undefined);
-    },
-    Gen: ({ state, setParam, styles: s })=>{
-        const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                type: type,
-                isActive: state.gen === type,
-                onClick: ()=>setParam("gen", type),
-                className: s.tools_button
-            }, type, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 27,
-                columnNumber: 7
-            }, undefined);
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: s.btn_group,
-            children: [
-                renderButton("V2"),
-                renderButton("V3"),
-                renderButton("V4")
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 37,
-            columnNumber: 7
-        }, undefined);
-    },
-    Memory: ({ state, setParam, styles: s })=>{
-        const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                type: type,
-                isActive: state.memoryType === type,
-                onClick: ()=>setParam("memoryType", type),
-                className: s.tools_button
-            }, type, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 47,
-                columnNumber: 7
-            }, undefined);
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: s.btn_group,
-            children: [
-                state.memoryTypes?.desktop && renderButton("desktop"),
-                state.memoryTypes?.ecc && renderButton("ecc")
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 57,
-            columnNumber: 7
-        }, undefined);
-    },
-    Density: ({ state, setParam, styles: s })=>{
-        const renderButton = (type, targetValue)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                type: type,
-                isActive: state.isDensityHigh === targetValue,
-                onClick: ()=>setParam("isDensityHigh", targetValue),
-                className: s.tools_button
-            }, type, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 66,
-                columnNumber: 7
-            }, undefined);
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: s.btn_group,
-            children: [
-                renderButton("no", false),
-                renderButton("yes", true)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 76,
-            columnNumber: 7
-        }, undefined);
-    },
-    Slot: ({ state, setParam, styles: s })=>{
-        const renderButton = (num)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                type: `slots${num}`,
-                isActive: state.slotsCount === num,
-                onClick: ()=>setParam("slotsCount", num),
-                className: s.tools_button
-            }, num, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 85,
-                columnNumber: 7
-            }, undefined);
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: s.btn_group,
-            children: (0, _ramData.AVAILABLE_SLOTS).map((num)=>state.visibleSlots?.[num] && renderButton(num))
-        }, void 0, false, {
-            fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 95,
-            columnNumber: 7
-        }, undefined);
-    },
-    Preset: ({ state, setParam, styles: s })=>{
-        const renderButton = (type)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                type: type,
-                isActive: state.profile === type,
-                onClick: ()=>setParam("profile", type),
-                className: s.tools_button
-            }, type, false, {
-                fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-                lineNumber: 105,
-                columnNumber: 7
-            }, undefined);
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: s.btn_group,
-            children: (0, _memoryPresets.PROFILE_PRESETS).filter((p)=>p !== "ultra" || state.unlocked).map((p)=>renderButton(p))
-        }, void 0, false, {
-            fileName: "src/components/RamConfiguration/RamTools/RamButtons.tsx",
-            lineNumber: 115,
-            columnNumber: 7
-        }, undefined);
-    }
-};
-exports.default = RamButtons;
-
-  $parcel$ReactRefreshHelpers$a3c5.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../data/memoryPresets":"FGwI4","../data/ramData":"2BRL9","../../Button/Button":"4hbTW"}],"8JnE9":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$0d8e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$0d8e.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0d8e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _select = require("../../Select/Select");
-var _selectDefault = parcelHelpers.interopDefault(_select);
-var _ramData = require("../data/ramData");
-const RamSelects = {
-    Cpu: ({ state, setParam })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _selectDefault.default), {
-            value: state.cpu,
-            onChange: (val)=>setParam("cpu", val),
-            items: state.cpuModels.map((val)=>val.name)
-        }, void 0, false, {
-            fileName: "src/components/RamConfiguration/RamTools/RamSelects.tsx",
-            lineNumber: 7,
-            columnNumber: 5
-        }, undefined),
-    RamSize: ({ state, setParam })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _selectDefault.default), {
-            value: state.ramSize,
-            onChange: (val)=>setParam("ramSize", val),
-            items: state.ramSizes,
-            renderLabel: (0, _ramData.formatRamLabel)
-        }, void 0, false, {
-            fileName: "src/components/RamConfiguration/RamTools/RamSelects.tsx",
-            lineNumber: 15,
-            columnNumber: 5
-        }, undefined)
-};
-exports.default = RamSelects;
-
-  $parcel$ReactRefreshHelpers$0d8e.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../data/ramData":"2BRL9","../../Select/Select":"houVW"}],"houVW":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$6b95 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$6b95.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6b95.prelude(module);
+$parcel$ReactRefreshHelpers$c737.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -32109,41 +34312,38 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _selectModuleCss = require("./Select.module.css");
 var _selectModuleCssDefault = parcelHelpers.interopDefault(_selectModuleCss);
-const Select = ({ value, onChange, items, renderLabel })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const Select = ({ value, items, renderLabel, onChange })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: (0, _selectModuleCssDefault.default).wrapper,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
                 className: (0, _selectModuleCssDefault.default).select,
                 value: value,
-                onChange: (e)=>{
-                    const val = e.target.value;
-                    onChange(typeof value === "number" ? Number(val) : val);
-                },
+                onChange: (e)=>onChange?.(e.target.value),
                 children: items.map((val)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
                         value: val,
                         children: renderLabel?.(val) ?? val
                     }, val, false, {
-                        fileName: "src/components/Select/Select.tsx",
-                        lineNumber: 21,
+                        fileName: "src/components/Select/Select.jsx",
+                        lineNumber: 12,
                         columnNumber: 9
                     }, undefined))
             }, void 0, false, {
-                fileName: "src/components/Select/Select.tsx",
-                lineNumber: 12,
+                fileName: "src/components/Select/Select.jsx",
+                lineNumber: 6,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                 className: (0, _selectModuleCssDefault.default).arrow,
                 children: "\u25BC"
             }, void 0, false, {
-                fileName: "src/components/Select/Select.tsx",
-                lineNumber: 26,
+                fileName: "src/components/Select/Select.jsx",
+                lineNumber: 17,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/Select/Select.tsx",
-        lineNumber: 11,
+        fileName: "src/components/Select/Select.jsx",
+        lineNumber: 4,
         columnNumber: 3
     }, undefined);
 _c = Select;
@@ -32151,7 +34351,7 @@ exports.default = Select;
 var _c;
 $RefreshReg$(_c, "Select");
 
-  $parcel$ReactRefreshHelpers$6b95.postlude(module);
+  $parcel$ReactRefreshHelpers$c737.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
@@ -32161,6 +34361,1165 @@ module.exports["arrow"] = `rKR2Yq_arrow`;
 module.exports["select"] = `rKR2Yq_select`;
 module.exports["wrapper"] = `rKR2Yq_wrapper`;
 
-},{}]},["7KwkS","4dmnR"], "4dmnR", "parcelRequire1fd1", {}, null, null, "http://localhost:1234")
+},{}],"dG26o":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$5b85 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$5b85.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5b85.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _ultraAlertModuleCss = require("./UltraAlert.module.css");
+var _ultraAlertModuleCssDefault = parcelHelpers.interopDefault(_ultraAlertModuleCss);
+var _useUltraLogic = require("./hooks/useUltraLogic");
+var _useUltraLogicDefault = parcelHelpers.interopDefault(_useUltraLogic);
+var _s = $RefreshSig$();
+const ALERT_CONTENT = [
+    {
+        text: "\u0414\u0430\u043D\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u043D\u0435 \u0432\u0441\u0435\u043C\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430\u043C\u0438.",
+        className: (0, _ultraAlertModuleCssDefault.default).alert_notice
+    },
+    {
+        text: "\u042D\u043A\u0441\u0442\u0440\u0435\u043C\u0430\u043B\u044C\u043D\u044B\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438. \u0422\u043E\u043B\u044C\u043A\u043E \u0434\u043B\u044F \u0443\u0434\u0430\u0447\u043D\u044B\u0445 \u0447\u0438\u043F\u043E\u0432 + \u043E\u0431\u0434\u0443\u0432."
+    },
+    {
+        text: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            children: [
+                "\u041D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435:",
+                " ",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: (0, _ultraAlertModuleCssDefault.default).alert_gold,
+                    children: "1.30V (D4) / 1.55V (D3)"
+                }, void 0, false, {
+                    fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, undefined),
+                "."
+            ]
+        }, void 0, true)
+    },
+    {
+        text: '\u041D\u0430\u0436\u043C\u0438\u0442\u0435 "\u041E\u0422\u041C\u0415\u041D\u0410", \u0435\u0441\u043B\u0438 \u0432\u044B \u043F\u0440\u043E\u0447\u043B\u0438 \u0442\u0435\u043A\u0441\u0442.',
+        className: (0, _ultraAlertModuleCssDefault.default).alert_danger
+    }
+];
+const UltraAlert = ({ state, update })=>{
+    _s();
+    const { isOpen, close, handleTrigger } = (0, _useUltraLogicDefault.default)(state, update);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: (0, _ultraAlertModuleCssDefault.default).alert_wrap,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: (0, _clsxDefault.default)((0, _ultraAlertModuleCssDefault.default).alert_trigger, state.unlocked && (0, _ultraAlertModuleCssDefault.default).alert_unlocked),
+                onMouseDown: (e)=>e.preventDefault(),
+                onClick: handleTrigger,
+                children: state.unlocked ? "EXTREME RAM TOOL \uD83D\uDEE0\uFE0F" : "XEON RAM TOOL"
+            }, void 0, false, {
+                fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined),
+            isOpen && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _ultraAlertModuleCssDefault.default).alert_overlay,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: (0, _ultraAlertModuleCssDefault.default).alert_modal,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: (0, _ultraAlertModuleCssDefault.default).alert_hazard
+                        }, void 0, false, {
+                            fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                            lineNumber: 42,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: (0, _ultraAlertModuleCssDefault.default).alert_body,
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: (0, _ultraAlertModuleCssDefault.default).alert_triangle,
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: (0, _ultraAlertModuleCssDefault.default).alert_excl,
+                                        children: "!"
+                                    }, void 0, false, {
+                                        fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                                        lineNumber: 45,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                                    lineNumber: 44,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    className: (0, _ultraAlertModuleCssDefault.default).alert_title,
+                                    children: "\u26A0\uFE0F \u0412\u041D\u0418\u041C\u0410\u041D\u0418\u0415: ULTRA \u0420\u0415\u0416\u0418\u041C"
+                                }, void 0, false, {
+                                    fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                                    lineNumber: 47,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: (0, _ultraAlertModuleCssDefault.default).alert_text,
+                                    children: ALERT_CONTENT.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                            className: item.className,
+                                            children: item.text
+                                        }, index, false, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                                            lineNumber: 51,
+                                            columnNumber: 19
+                                        }, undefined))
+                                }, void 0, false, {
+                                    fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                                    lineNumber: 49,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: (0, _ultraAlertModuleCssDefault.default).alert_actions,
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                            type: "activate",
+                                            isActive: true,
+                                            onClick: ()=>close(false)
+                                        }, void 0, false, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                                            lineNumber: 58,
+                                            columnNumber: 17
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                                            type: "cancel",
+                                            isActive: true,
+                                            onClick: ()=>close(true)
+                                        }, void 0, false, {
+                                            fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                                            lineNumber: 59,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                                    lineNumber: 57,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                            lineNumber: 43,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: (0, _ultraAlertModuleCssDefault.default).alert_hazard
+                        }, void 0, false, {
+                            fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                            lineNumber: 62,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                    lineNumber: 41,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/UltraAlert/UltraAlert.jsx",
+                lineNumber: 40,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/UltraAlert/UltraAlert.jsx",
+        lineNumber: 30,
+        columnNumber: 5
+    }, undefined);
+};
+_s(UltraAlert, "gnnKON1u1lvul9TW1s4NW5WdeNg=", false, function() {
+    return [
+        (0, _useUltraLogicDefault.default)
+    ];
+});
+_c = UltraAlert;
+exports.default = UltraAlert;
+var _c;
+$RefreshReg$(_c, "UltraAlert");
+
+  $parcel$ReactRefreshHelpers$5b85.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","../Button/Button":"4hbTW","./UltraAlert.module.css":"4FO4F","./hooks/useUltraLogic":"iHKbD","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4FO4F":[function(require,module,exports,__globalThis) {
+module.exports["alert_actions"] = `i6O3TG_alert_actions`;
+module.exports["alert_body"] = `i6O3TG_alert_body`;
+module.exports["alert_danger"] = `i6O3TG_alert_danger`;
+module.exports["alert_excl"] = `i6O3TG_alert_excl`;
+module.exports["alert_gold"] = `i6O3TG_alert_gold`;
+module.exports["alert_hazard"] = `i6O3TG_alert_hazard`;
+module.exports["alert_modal"] = `i6O3TG_alert_modal`;
+module.exports["alert_notice"] = `i6O3TG_alert_notice`;
+module.exports["alert_overlay"] = `i6O3TG_alert_overlay`;
+module.exports["alert_text"] = `i6O3TG_alert_text`;
+module.exports["alert_title"] = `i6O3TG_alert_title`;
+module.exports["alert_triangle"] = `i6O3TG_alert_triangle`;
+module.exports["alert_trigger"] = `i6O3TG_alert_trigger`;
+module.exports["alert_unlocked"] = `i6O3TG_alert_unlocked`;
+module.exports["alert_wrap"] = `i6O3TG_alert_wrap`;
+module.exports["lava"] = `i6O3TG_lava`;
+module.exports["lava"];
+module.exports["move"] = `i6O3TG_move`;
+module.exports["move"];
+
+},{}],"iHKbD":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$b90f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$b90f.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b90f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useUltraLogic = (state, update)=>{
+    _s();
+    const [isOpen, setIsOpen] = (0, _react.useState)(false);
+    const clicks = (0, _react.useRef)(0);
+    const lastClickTime = (0, _react.useRef)(0);
+    const timeoutRef = (0, _react.useRef)(null);
+    const close = (0, _react.useCallback)((shouldUnlock = false)=>{
+        setIsOpen(false);
+        if (timeoutRef.current) globalThis.clearTimeout(timeoutRef.current);
+        update((prev)=>({
+                ...prev,
+                active: false,
+                unlocked: shouldUnlock || prev.unlocked,
+                ...shouldUnlock && {
+                    preset: "ultra"
+                }
+            }));
+    }, [
+        update
+    ]);
+    (0, _react.useEffect)(()=>{
+        if (!isOpen) return;
+        timeoutRef.current = globalThis.setTimeout(()=>close(false), 7000);
+        return ()=>{
+            if (timeoutRef.current) globalThis.clearTimeout(timeoutRef.current);
+        };
+    }, [
+        isOpen,
+        close
+    ]);
+    const handleTrigger = (0, _react.useCallback)((e)=>{
+        e.stopPropagation();
+        if (state.unlocked || isOpen) return;
+        const now = Date.now();
+        if (now - lastClickTime.current > 2000) clicks.current = 0;
+        lastClickTime.current = now;
+        clicks.current++;
+        if (clicks.current >= 10) {
+            if (typeof window !== "undefined") window.navigator?.vibrate?.(200);
+            setIsOpen(true);
+            update((prev)=>({
+                    ...prev,
+                    active: true
+                }));
+            clicks.current = 0;
+        }
+    }, [
+        state.unlocked,
+        isOpen,
+        update
+    ]);
+    return {
+        isOpen,
+        close,
+        handleTrigger
+    };
+};
+_s(useUltraLogic, "wOHbrUHRiAy0mHBrBIEp+uNLkUY=");
+exports.default = useUltraLogic;
+
+  $parcel$ReactRefreshHelpers$b90f.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"7In8J":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$eabe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$eabe.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$eabe.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _thermalBios = require("./ThermalBios");
+var _thermalBiosDefault = parcelHelpers.interopDefault(_thermalBios);
+var _thermalInfo = require("./ThermalInfo");
+var _thermalInfoDefault = parcelHelpers.interopDefault(_thermalInfo);
+var _thermalTools = require("./ThermalTools");
+var _thermalToolsDefault = parcelHelpers.interopDefault(_thermalTools);
+const ThermalConfiguration = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "MEMORY THERMAL CONFIGURATION",
+                toolsLabel: "\u0422\u0415\u0420\u041C\u041E\u041A\u041E\u041D\u0422\u0420\u041E\u041B\u042C \u041F\u0410\u041C\u042F\u0422\u0418",
+                renderInfo: (0, _thermalInfoDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _thermalToolsDefault.default), {
+                        ...props
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalConfiguration.jsx",
+                        lineNumber: 14,
+                        columnNumber: 33
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/ThermalConfiguration/ThermalConfiguration.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _thermalBiosDefault.default)()
+            }, void 0, false, {
+                fileName: "src/components/ThermalConfiguration/ThermalConfiguration.jsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c = ThermalConfiguration;
+exports.default = ThermalConfiguration;
+var _c;
+$RefreshReg$(_c, "ThermalConfiguration");
+
+  $parcel$ReactRefreshHelpers$eabe.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./ThermalBios":"9Nubf","./ThermalInfo":"hxp7s","./ThermalTools":"n3Cvf","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"9Nubf":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const ThermalBios = ()=>{
+    return {
+        title: "Memory Thermal Configuration",
+        path: "IntelRCSetup > Memory Thermal",
+        content: [
+            {
+                text_left: "Memory Power Savings Mode",
+                text_right: "Disabled"
+            }
+        ]
+    };
+};
+_c = ThermalBios;
+exports.default = ThermalBios;
+var _c;
+$RefreshReg$(_c, "ThermalBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hxp7s":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2424 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$2424.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2424.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const ThermalInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: s.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\u26A1"
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                        lineNumber: 6,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u0421\u0435\u0440\u0432\u0435\u0440\u043D\u044B\u0435 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E \u0430\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E \u044D\u043A\u043E\u043D\u043E\u043C\u044F\u0442 \u044D\u043D\u0435\u0440\u0433\u0438\u044E. \u0424\u0443\u043D\u043A\u0446\u0438\u0438",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Power Savings"
+                            }, void 0, false, {
+                                fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                                lineNumber: 9,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u0434\u0438\u043D\u0430\u043C\u0438\u0447\u0435\u0441\u043A\u0438 \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u044E\u0442 \u043D\u0435\u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u043C\u044B\u0435 \u0431\u043B\u043E\u043A\u0438 \u043F\u0430\u043C\u044F\u0442\u0438, \u0447\u0442\u043E \u043A\u0440\u0438\u0442\u0438\u0447\u043D\u043E \u0434\u043B\u044F \u0434\u0430\u0442\u0430-\u0446\u0435\u043D\u0442\u0440\u043E\u0432, \u043D\u043E \u0432\u0440\u0435\u0434\u043D\u043E \u0434\u043B\u044F \u0434\u043E\u043C\u0430\u0448\u043D\u0435\u0433\u043E \u041F\u041A."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                        lineNumber: 7,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDCC9"
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                        lineNumber: 15,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: "\u0412\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u043B\u044E\u0431\u044B\u0445 \u0440\u0435\u0436\u0438\u043C\u043E\u0432 \u044D\u043D\u0435\u0440\u0433\u043E\u0441\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0438\u044F \u043F\u0430\u043C\u044F\u0442\u0438 \u0437\u0430\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0441\u0438\u0441\u0442\u0435\u043C\u0443 \u0442\u0440\u0430\u0442\u0438\u0442\u044C \u0434\u0440\u0430\u0433\u043E\u0446\u0435\u043D\u043D\u044B\u0435 \u043D\u0430\u043D\u043E\u0441\u0435\u043A\u0443\u043D\u0434\u044B \u043D\u0430 \xab\u043F\u0440\u043E\u0431\u0443\u0436\u0434\u0435\u043D\u0438\u0435\xbb \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u043B\u0435\u0440\u0430, \u0438\u0437-\u0437\u0430 \u0447\u0435\u0433\u043E \u0440\u0435\u0437\u043A\u043E \u043F\u0430\u0434\u0430\u0435\u0442 \u043F\u043B\u0430\u0432\u043D\u043E\u0441\u0442\u044C \u043A\u0430\u0440\u0442\u0438\u043D\u043A\u0438 \u0432 \u0437\u0430\u0434\u0430\u0447\u0430\u0445 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438."
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                        lineNumber: 16,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                lineNumber: 14,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDEE1\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                        lineNumber: 24,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            "\u041F\u043E\u043B\u043D\u043E\u0435 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u0441\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0438\u044F \u043F\u0438\u0442\u0430\u043D\u0438\u044F \u043F\u0440\u0438 \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u0438\u0438 \u0437\u0430\u0432\u043E\u0434\u0441\u043A\u0438\u0445 \u043B\u0438\u043C\u0438\u0442\u043E\u0432 \u0442\u0440\u043E\u0442\u0442\u043B\u0438\u043D\u0433\u0430 (",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "CLTT"
+                            }, void 0, false, {
+                                fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                                lineNumber: 27,
+                                columnNumber: 21
+                            }, undefined),
+                            ") \u2014 \u044D\u0442\u043E \u0441\u0430\u043C\u044B\u0439 \u0433\u0440\u0430\u043C\u043E\u0442\u043D\u044B\u0439 \u0441\u043F\u043E\u0441\u043E\u0431 \u0432\u044B\u0436\u0430\u0442\u044C \u0438\u0437 \u043F\u0430\u043C\u044F\u0442\u0438 \u043C\u0430\u043A\u0441\u0438\u043C\u0443\u043C \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438 \u0431\u0435\u0437 \u0440\u0438\u0441\u043A\u0430 \u0435\u0451 \u043F\u0435\u0440\u0435\u0433\u0440\u0435\u0442\u044C \u0438\u043B\u0438 \u0438\u0441\u043F\u043E\u0440\u0442\u0438\u0442\u044C."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+                lineNumber: 23,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/ThermalConfiguration/ThermalInfo.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = ThermalInfo;
+exports.default = ThermalInfo;
+var _c;
+$RefreshReg$(_c, "ThermalInfo");
+
+  $parcel$ReactRefreshHelpers$2424.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"n3Cvf":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$05e0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$05e0.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$05e0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ThermalTools = ({ styles: s })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: s.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDE80"
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                        lineNumber: 5,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u041F\u0443\u043D\u043A\u0442 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Memory Power Savings Mode"
+                            }, void 0, false, {
+                                fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                                lineNumber: 7,
+                                columnNumber: 17
+                            }, undefined),
+                            " \u043F\u0435\u0440\u0435\u0432\u0435\u0434\u0435\u043D \u0432 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Disabled"
+                            }, void 0, false, {
+                                fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                                lineNumber: 7,
+                                columnNumber: 62
+                            }, undefined),
+                            ", \u0447\u0442\u043E\u0431\u044B \u0437\u0430\u043F\u0440\u0435\u0442\u0438\u0442\u044C \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u043B\u0435\u0440\u0443 \u043F\u0430\u043C\u044F\u0442\u0438 \u0441\u043D\u0438\u0436\u0430\u0442\u044C \u043D\u0430\u043F\u0440\u044F\u0436\u0435\u043D\u0438\u0435 \u0438 \xab\u0443\u0441\u044B\u043F\u043B\u044F\u0442\u044C\xbb \u0444\u0430\u0437\u044B \u043F\u0438\u0442\u0430\u043D\u0438\u044F \u0432 \u043F\u0440\u043E\u0441\u0442\u043E\u0435. \u042D\u0442\u043E \u0443\u0431\u0438\u0440\u0430\u0435\u0442 \u043C\u0438\u043A\u0440\u043E\u0444\u0440\u0438\u0437\u044B \u0438 \u0441\u0442\u0430\u0431\u0438\u043B\u0438\u0437\u0438\u0440\u0443\u0435\u0442 \u0444\u0440\u0435\u0439\u043C\u0440\u0435\u0439\u0442."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                        lineNumber: 6,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u23F1\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u044D\u043D\u0435\u0440\u0433\u043E\u0441\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u0438\u044F \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u043B\u0438\u043D\u0438\u0438 \u043F\u0435\u0440\u0435\u0434\u0430\u0447\u0438 \u0434\u0430\u043D\u043D\u044B\u0445 \u0432 \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u043E\u0439 \u0433\u043E\u0442\u043E\u0432\u043D\u043E\u0441\u0442\u0438. \u042D\u0442\u043E \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u043E\u0431\u0449\u0443\u044E \u0437\u0430\u0434\u0435\u0440\u0436\u043A\u0443 \u043F\u0430\u043C\u044F\u0442\u0438 (",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Latency"
+                            }, void 0, false, {
+                                fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                                lineNumber: 19,
+                                columnNumber: 11
+                            }, undefined),
+                            ") \u043F\u0440\u0438 \u043E\u0431\u0440\u0430\u0449\u0435\u043D\u0438\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0440\u0430 \u043A \u043A\u044D\u0448\u0443."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83C\uDF21\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u041E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u044B \u0432 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Auto / CLTT"
+                            }, void 0, false, {
+                                fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                                lineNumber: 26,
+                                columnNumber: 43
+                            }, undefined),
+                            ". \u0410\u043F\u043F\u0430\u0440\u0430\u0442\u043D\u044B\u0439 \u0442\u0440\u043E\u0442\u0442\u043B\u0438\u043D\u0433 \u043F\u043E \u0434\u0430\u0442\u0447\u0438\u043A\u0430\u043C \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0435\u0442 \u0440\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0432 \u0448\u0442\u0430\u0442\u043D\u043E\u043C \u0440\u0435\u0436\u0438\u043C\u0435, \u0437\u0430\u0449\u0438\u0449\u0430\u044F \u043F\u043B\u0430\u0448\u043A\u0438 \u043E\u0442 \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E\u0433\u043E \u043F\u0435\u0440\u0435\u0433\u0440\u0435\u0432\u0430 \u043F\u043E\u0434 \u043D\u0430\u0433\u0440\u0443\u0437\u043A\u043E\u0439."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u26A0\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: "\u0415\u0441\u043B\u0438 \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u044D\u0442\u043E\u0442 \u0440\u0435\u0436\u0438\u043C \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u044B\u043C, \u0441\u0435\u0440\u0432\u0435\u0440\u043D\u044B\u0435 \u0430\u043B\u0433\u043E\u0440\u0438\u0442\u043C\u044B \u044D\u043A\u043E\u043D\u043E\u043C\u0438\u0438 \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0431\u0443\u0434\u0443\u0442 \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u043E \u0434\u0435\u0440\u0433\u0430\u0442\u044C \u0447\u0430\u0441\u0442\u043E\u0442\u044B \u0448\u0438\u043D\u044B \u043F\u0430\u043C\u044F\u0442\u0438, \u0441\u043E\u0437\u0434\u0430\u0432\u0430\u044F \u0441\u0442\u0430\u0442\u0442\u0435\u0440\u044B \u0432 \u0438\u0433\u0440\u0430\u0445 \u0438 \u0440\u0430\u0431\u043E\u0447\u0438\u0445 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F\u0445."
+                    }, void 0, false, {
+                        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+                lineNumber: 32,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/ThermalConfiguration/ThermalTools.jsx",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = ThermalTools;
+exports.default = ThermalTools;
+var _c;
+$RefreshReg$(_c, "ThermalTools");
+
+  $parcel$ReactRefreshHelpers$05e0.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"gnPgD":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$bc75 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$bc75.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc75.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _usbbios = require("./USBBios");
+var _usbbiosDefault = parcelHelpers.interopDefault(_usbbios);
+// Исправленные пути импорта к новым файлам
+var _usbinfo = require("./USBInfo");
+var _usbinfoDefault = parcelHelpers.interopDefault(_usbinfo);
+var _usbtools = require("./USBTools");
+var _usbtoolsDefault = parcelHelpers.interopDefault(_usbtools);
+const USBConfiguration = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "USB CONFIGURATION",
+                toolsLabel: "\u041D\u0410\u0421\u0422\u0420\u041E\u0419\u041A\u0410 USB",
+                renderInfo: (0, _usbinfoDefault.default),
+                renderTools: (0, _usbtoolsDefault.default)
+            }, void 0, false, {
+                fileName: "src/components/USBConfiguration/USBConfiguration.jsx",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _usbbiosDefault.default)()
+            }, void 0, false, {
+                fileName: "src/components/USBConfiguration/USBConfiguration.jsx",
+                lineNumber: 18,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c = USBConfiguration;
+exports.default = USBConfiguration;
+var _c;
+$RefreshReg$(_c, "USBConfiguration");
+
+  $parcel$ReactRefreshHelpers$bc75.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./USBBios":"cSwWr","./USBInfo":"9QOld","./USBTools":"DlAZj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"cSwWr":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const USBBios = ()=>{
+    return {
+        title: "USB Configuration",
+        path: "Advanced > USB Configuration",
+        content: [
+            {
+                text_left: "Legacy USB Support",
+                text_right: "Enabled"
+            },
+            {
+                text_left: "XHCI Hand-off",
+                text_right: "Enabled"
+            },
+            {
+                text_left: "EHCI Hand-off",
+                text_right: "Disabled"
+            },
+            {
+                text_left: "USB Mass Storage Driver Support",
+                text_right: "Enabled"
+            },
+            {
+                text_left: "Port 60/64 Emulation",
+                text_right: "Disabled"
+            },
+            {
+                text_left: "USB transfer time-out",
+                text_right: "10 sec"
+            },
+            {
+                text_left: "Device reset time-out",
+                text_right: "10 sec"
+            },
+            {
+                text_left: "Device power-up delay",
+                text_right: "Auto"
+            }
+        ]
+    };
+};
+_c = USBBios;
+exports.default = USBBios;
+var _c;
+$RefreshReg$(_c, "USBBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"9QOld":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$c079 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$c079.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c079.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const USBInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: s.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDDA5\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                        lineNumber: 6,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u0421\u043F\u0435\u0446\u0438\u0444\u0438\u043A\u0430 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C X79 / X99:"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                                lineNumber: 8,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u0414\u0430\u043D\u043D\u044B\u0439 \u0440\u0430\u0437\u0434\u0435\u043B BIOS \u0443\u043F\u0440\u0430\u0432\u043B\u044F\u0435\u0442 \u043B\u043E\u0433\u0438\u043A\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B \u0432\u0441\u0442\u0440\u043E\u0435\u043D\u043D\u044B\u0445 \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u043B\u0435\u0440\u043E\u0432 USB \u043E\u0442 Intel \u0438 \u0441\u0442\u043E\u0440\u043E\u043D\u043D\u0438\u0445 \u0447\u0438\u043F\u043E\u0432 (ASMedia). \u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 \u043E\u0434\u0438\u043D\u0430\u043A\u043E\u0432\u043E \u0430\u043A\u0442\u0443\u0430\u043B\u044C\u043D\u0430 \u043A\u0430\u043A \u0434\u043B\u044F \u0441\u043E\u043A\u0435\u0442\u0430 LGA2011, \u0442\u0430\u043A \u0438 \u0434\u043B\u044F LGA2011-3."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                        lineNumber: 7,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDD0C"
+                    }, void 0, false, {
+                        fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                        lineNumber: 16,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u0418\u043D\u0438\u0446\u0438\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0438 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u044C:"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                                lineNumber: 18,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u0420\u0430\u0437\u0434\u0435\u043B \u043E\u0442\u0432\u0435\u0447\u0430\u0435\u0442 \u0437\u0430 \u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0435 \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u0438\u0435 \u0444\u043B\u0435\u0448\u0435\u043A \u0438 \u043A\u043B\u0430\u0432\u0438\u0430\u0442\u0443\u0440 \u0434\u043E \u0441\u0442\u0430\u0440\u0442\u0430 \u041E\u0421 (\u0432 \u0441\u0430\u043C\u043E\u043C BIOS \u0438\u043B\u0438 \u0432 \u0437\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043A\u0430\u0445). \u042D\u0442\u043E \u043A\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0438 \u0432\u0430\u0436\u043D\u043E \u043D\u0430 \u043A\u0438\u0442\u0430\u0439\u0441\u043A\u0438\u0445 \u043C\u0430\u0442\u0435\u0440\u0438\u043D\u0441\u043A\u0438\u0445 \u043F\u043B\u0430\u0442\u0430\u0445 \u0434\u043B\u044F \u0431\u0435\u0441\u043F\u0440\u043E\u0431\u043B\u0435\u043C\u043D\u043E\u0439 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438 Windows."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                        lineNumber: 17,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                lineNumber: 15,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83E\uDD1D"
+                    }, void 0, false, {
+                        fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                        lineNumber: 26,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u0420\u0435\u0448\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0431\u043B\u0435\u043C:"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                                lineNumber: 28,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u041D\u0430 X79/X99 \u0447\u0430\u0441\u0442\u043E \u0432\u043E\u0437\u043D\u0438\u043A\u0430\u044E\u0442 \u043A\u043E\u043D\u0444\u043B\u0438\u043A\u0442\u044B \u0442\u0430\u0439\u043C\u0438\u043D\u0433\u043E\u0432 \u043F\u0440\u0438 \u0438\u043D\u0438\u0446\u0438\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u0441\u0442\u0430\u0440\u044B\u0445 USB-\u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432. \u0422\u043E\u043D\u043A\u0430\u044F \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u043E\u0432 Hand-off \u0438 \u0437\u0430\u0434\u0435\u0440\u0436\u0435\u043A \u043F\u0440\u0435\u0434\u043E\u0442\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0437\u0430\u0432\u0438\u0441\u0430\u043D\u0438\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u043D\u0430 \u044D\u0442\u0430\u043F\u0435 POST-\u043A\u043E\u0434\u043E\u0432."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                        lineNumber: 27,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/USBConfiguration/USBInfo.jsx",
+                lineNumber: 25,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/USBConfiguration/USBInfo.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = USBInfo;
+exports.default = USBInfo;
+var _c;
+$RefreshReg$(_c, "USBInfo");
+
+  $parcel$ReactRefreshHelpers$c079.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"DlAZj":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$e54d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$e54d.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e54d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const USBTools = ({ styles: s })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: s.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_label,
+                children: "\u0420\u0410\u0417\u0411\u041E\u0420 \u041A\u0410\u0416\u0414\u041E\u0413\u041E \u041F\u0423\u041D\u041A\u0422\u0410:"
+            }, void 0, false, {
+                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDD39"
+                    }, void 0, false, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 9,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Legacy USB Support"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 11,
+                                columnNumber: 11
+                            }, undefined),
+                            " \u2014 \u043F\u0440\u0438\u043D\u0443\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435 \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 (",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Enabled"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 11,
+                                columnNumber: 65
+                            }, undefined),
+                            ") \u0433\u0430\u0440\u0430\u043D\u0442\u0438\u0440\u0443\u0435\u0442, \u0447\u0442\u043E \u043A\u043B\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u0430 \u0438 \u043C\u044B\u0448\u044C \u0431\u0443\u0434\u0443\u0442 \u0440\u0430\u0431\u043E\u0442\u0430\u0442\u044C \u0432\u0441\u0435\u0433\u0434\u0430. \u0412 \u0440\u0435\u0436\u0438\u043C\u0435",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                children: "Auto"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 13,
+                                columnNumber: 11
+                            }, undefined),
+                            " BIOS \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u0435\u0442 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0443, \u0435\u0441\u043B\u0438 \u043F\u0440\u0438 \u0441\u0442\u0430\u0440\u0442\u0435 \u043D\u0435 \u043E\u0431\u043D\u0430\u0440\u0443\u0436\u0438\u0442 USB-\u0444\u043B\u0435\u0448\u043A\u0443, \u0438\u0437-\u0437\u0430 \u0447\u0435\u0433\u043E \u0432 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u0435 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438 Windows \u0438\u043B\u0438 \u0432 \u043C\u0435\u043D\u044E \u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0438 (Boot Menu) \u043C\u043E\u0433\u0443\u0442 \u043E\u0442\u043A\u0430\u0437\u0430\u0442\u044C \u043F\u043E\u0440\u0442\u044B."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDD39"
+                    }, void 0, false, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "XHCI / EHCI Hand-off"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 22,
+                                columnNumber: 11
+                            }, undefined),
+                            " \u2014 \u043F\u0435\u0440\u0435\u0434\u0430\u0435\u0442 \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u043C\u0438 (USB 3.0) \u0438 \u043A\u043B\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043A\u0438\u043C\u0438 (USB 2.0) \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u043B\u0435\u0440\u0430\u043C\u0438 \u043E\u0442 BIOS \u043A \u041E\u0421. \u0418\u0437\u0431\u0430\u0432\u043B\u044F\u0435\u0442 \u043E\u0442 \u0444\u0440\u0438\u0437\u043E\u0432 \u043F\u0435\u0440\u0438\u0444\u0435\u0440\u0438\u0438 \u043F\u0440\u0438 \u0441\u0442\u0430\u0440\u0442\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDD39"
+                    }, void 0, false, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "USB Mass Storage Driver Support"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 31,
+                                columnNumber: 11
+                            }, undefined),
+                            " \u2014 \u0432\u043A\u043B\u044E\u0447\u0430\u0435\u0442 \u0431\u0430\u0437\u043E\u0432\u044B\u0439 \u0434\u0440\u0430\u0439\u0432\u0435\u0440 \u0434\u043B\u044F \u0440\u0430\u0431\u043E\u0442\u044B \u0441 \u0432\u043D\u0435\u0448\u043D\u0438\u043C\u0438 \u0436\u0435\u0441\u0442\u043A\u0438\u043C\u0438 \u0434\u0438\u0441\u043A\u0430\u043C\u0438 \u0438 \u0444\u043B\u0435\u0448\u043A\u0430\u043C\u0438 \u0431\u043E\u043B\u044C\u0448\u043E\u0433\u043E \u043E\u0431\u044A\u0435\u043C\u0430 \u043F\u0440\u044F\u043C\u043E \u0432 BIOS."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                lineNumber: 28,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDD39"
+                    }, void 0, false, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Port 60/64 Emulation"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 40,
+                                columnNumber: 11
+                            }, undefined),
+                            " \u2014 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E \u044D\u0442\u0430 \u0444\u0443\u043D\u043A\u0446\u0438\u044F ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u0432\u043A\u043B\u044E\u0447\u0435\u043D\u0430"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 40,
+                                columnNumber: 66
+                            }, undefined),
+                            " ",
+                            "\u0434\u043B\u044F \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u0438 \u0441\u043E \u0441\u0442\u0430\u0440\u044B\u043C\u0438 PS/2-\u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430\u043C\u0438 \u0432 MS-DOS. \u041D\u043E \u0435\u0441\u043B\u0438 \u0443 \u0432\u0430\u0441 \u043E\u0431\u044B\u0447\u043D\u0430\u044F \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u0430\u044F USB-\u043C\u044B\u0448\u044C \u0438 \u043A\u043B\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u0430, \u043E\u043F\u0446\u0438\u044E \u043C\u043E\u0436\u043D\u043E \u0441\u043C\u0435\u043B\u043E \u043F\u0435\u0440\u0435\u0432\u0435\u0441\u0442\u0438 \u0432 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "Disabled"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 43,
+                                columnNumber: 13
+                            }, undefined),
+                            " - \u0434\u043B\u044F \u044D\u0441\u0442\u0435\u0442\u0438\u043A\u0438, \u0447\u0438\u0441\u0442\u043E\u0442\u044B \u043A\u043E\u043D\u0444\u0438\u0433\u0443\u0440\u0430\u0446\u0438\u0438 \u0438 \u043E\u0441\u0432\u043E\u0431\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u043B\u0438\u0448\u043D\u0438\u0445 \u0440\u0435\u0441\u0443\u0440\u0441\u043E\u0432 \u043F\u0440\u0435\u0440\u044B\u0432\u0430\u043D\u0438\u0439."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                lineNumber: 37,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDD39"
+                    }, void 0, false, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "USB hardware delays & time-outs"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 51,
+                                columnNumber: 11
+                            }, undefined),
+                            " \u2014 \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u044F\u0435\u0442 \u0432\u0440\u0435\u043C\u044F \u043E\u0436\u0438\u0434\u0430\u043D\u0438\u044F \u043E\u0442\u0432\u0435\u0442\u0430 \u043E\u0442 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432. \u041F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E \u0441\u0442\u043E\u0438\u0442 20 \u0441\u0435\u043A, \u043D\u043E \u0443\u043C\u0435\u043D\u044C\u0448\u0435\u043D\u0438\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u0434\u043E ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "5\u201310 \u0441\u0435\u043A"
+                            }, void 0, false, {
+                                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                                lineNumber: 53,
+                                columnNumber: 14
+                            }, undefined),
+                            " \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0437\u0430\u043C\u0435\u0442\u043D\u043E \u0443\u0441\u043A\u043E\u0440\u0438\u0442\u044C \u043E\u0431\u0449\u0443\u044E \u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0443 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u0430 \u0438 \u0431\u044B\u0441\u0442\u0440\u0435\u0435 \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442\u044C POST-\u043A\u043E\u0434\u044B."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/USBConfiguration/USBTools.jsx",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/USBConfiguration/USBTools.jsx",
+                lineNumber: 48,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/USBConfiguration/USBTools.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = USBTools;
+exports.default = USBTools;
+var _c;
+$RefreshReg$(_c, "USBTools");
+
+  $parcel$ReactRefreshHelpers$e54d.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["7KwkS","4dmnR"], "4dmnR", "parcelRequire1fd1", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=public.6efbc4f8.js.map
