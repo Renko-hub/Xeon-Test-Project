@@ -1,6 +1,6 @@
 // src/components/Button/Button.tsx
 import clsx from "clsx";
-import { BUTTONS } from "./button.config";
+import { BUTTONS } from "./Button.config";
 import s from "./Button.module.css";
 
 interface ButtonProps {
