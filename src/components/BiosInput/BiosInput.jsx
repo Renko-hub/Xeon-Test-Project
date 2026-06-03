@@ -3,10 +3,10 @@ import s from "./BiosInput.module.css";
 
 const BiosInput = ({ field, state = {}, update, isFirst }) => {
   const inputRef = useRef(null);
-  const isFreq = field === "userFrequency";
+  const isFrequencyField = field === "userFrequency";
 
-  const getMinLimit = () => {
-    if (isFreq) {
+  const getMinimumLimitValue = () => {
+    if (isFrequencyField) {
       return 800;
     }
     if (field === "tRFC") {
@@ -18,14 +18,8 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
     return 4;
   };
 
-  const minLimit = getMinLimit();
-
-  let rawValue = state[field] !== undefined ? String(state[field]) : "";
-
-  if (isFreq && rawValue === "") {
-    rawValue = String(state["frequency"] || 1866);
-  }
-
+  const minimumLimit = getMinimumLimitValue();
+  const rawValue = state[field] !== undefined ? String(state[field]) : "";
   const numericValue = parseInt(rawValue, 10) || 0;
 
   useEffect(() => {
@@ -34,19 +28,21 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
     }
   }, [isFirst]);
 
-  const setParamValue = (v) => update?.(field, String(v));
+  const setParamValue = (newValue) => update?.(field, String(newValue));
 
   const handleKeyDown = (e) => {
     if (e.key === "ArrowUp") {
       e.preventDefault();
-      setParamValue(numericValue + (isFreq ? 133 : field === "tRFC" ? 8 : 1));
+      setParamValue(
+        numericValue + (isFrequencyField ? 133 : field === "tRFC" ? 8 : 1),
+      );
     }
     if (e.key === "ArrowDown") {
       e.preventDefault();
       setParamValue(
         Math.max(
-          numericValue - (isFreq ? 133 : field === "tRFC" ? 8 : 1),
-          minLimit,
+          numericValue - (isFrequencyField ? 133 : field === "tRFC" ? 8 : 1),
+          minimumLimit,
         ),
       );
     }
@@ -54,10 +50,9 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
       e.preventDefault();
       const container = e.currentTarget.closest("ul") || document;
       const inputs = Array.from(container.querySelectorAll(`.${s.bios_input}`));
-      const next = inputs[inputs.indexOf(e.currentTarget) + 1];
-
-      if (next) {
-        next.focus();
+      const nextInput = inputs[inputs.indexOf(e.currentTarget) + 1];
+      if (nextInput) {
+        nextInput.focus();
       } else {
         e.currentTarget.blur();
       }
@@ -77,8 +72,8 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
         placeholder="--"
         onFocus={(e) => e.target.select()}
         onBlur={() => {
-          if (rawValue === "" || numericValue < minLimit) {
-            setParamValue(minLimit);
+          if (rawValue === "" || numericValue < minimumLimit) {
+            setParamValue(minimumLimit);
           }
         }}
         onChange={(e) => {

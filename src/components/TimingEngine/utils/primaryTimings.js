@@ -16,11 +16,11 @@ const PrimaryTimings = (state, frequency) => {
     isV4,
     isV3,
     isV2,
-    tCL: sCL,
-    tRCD: sRCD,
-    tRP: sRP,
-    tRAS: sRAS, // Принимаем ручное значение tRAS из стейта
-    tRC: sRC, // Принимаем ручное значение tRC из стейта
+    tCL,
+    tRCD,
+    tRP,
+    tRAS,
+    tRC,
   } = state;
 
   const slotsCount = Number(slot?.replace("slots", "")) || 2;
@@ -31,68 +31,66 @@ const PrimaryTimings = (state, frequency) => {
     (board === "matx" ? 1 : 0) +
     (isEcc ? 1 : 0);
 
-  // 1. Ветка ULTRA (вычисляется в линейном стиле)
-  const divider = isV4 ? 4 : isDdr4 ? 2 : 3;
-  const baseUltra = isV4 ? 11 : isDdr4 ? 12 : (ULTRA_PRESET?.tCL ?? 11);
-  const ultraTiming = baseUltra + Math.floor(loadScore / divider);
-  const ultraTras = toEven(ultraTiming * 2);
+  const totalDivider = isV4 ? 4 : isDdr4 ? 2 : 3;
+  const baseUltraValue = isV4 ? 11 : isDdr4 ? 12 : (ULTRA_PRESET?.tCL ?? 11);
+  const ultraTimingValue =
+    baseUltraValue + Math.floor(loadScore / totalDivider);
+  const ultraTrasValue = toEven(ultraTimingValue * 2);
 
-  // 2. Ветка STANDART / CUSTOM
-  const currentPreset =
+  const currentPresetData =
     MEMORY_PRESETS?.[frequency]?.[preset === "custom" ? "safe" : preset] ??
     MEMORY_PRESETS?.[frequency]?.safe ??
     MEMORY_PRESETS?.safe ??
     {};
-  const v4Offset = isV4 && frequency >= 2133 ? 2 : 0;
+  const v4OffsetModifier = isV4 && frequency >= 2133 ? 2 : 0;
 
-  // Хелпер расчета тайминга (с поддержкой кастомного ввода параметров)
-  const calc = (userVal, presetVal) =>
-    preset === "custom" && userVal !== undefined && userVal !== ""
-      ? Number(userVal)
+  const calculatePrimaryValue = (userInputValue, presetDefaultValue) =>
+    preset === "custom" && userInputValue !== undefined && userInputValue !== ""
+      ? Number(userInputValue)
       : isDdr4
-        ? Math.max((presetVal ?? 15) - v4Offset, 11)
-        : (presetVal ?? 15) - v4Offset;
+        ? Math.max((presetDefaultValue ?? 15) - v4OffsetModifier, 11)
+        : (presetDefaultValue ?? 15) - v4OffsetModifier;
 
-  const stdCL = calc(sCL, currentPreset.tCL);
-  const stdRCD = calc(sRCD, currentPreset.tRCD);
-  const stdRP = calc(sRP, currentPreset.tRP);
+  const calculatedCL = calculatePrimaryValue(tCL, currentPresetData.tCL);
+  const calculatedRCD = calculatePrimaryValue(tRCD, currentPresetData.tRCD);
+  const calculatedRP = calculatePrimaryValue(tRP, currentPresetData.tRP);
 
-  // Вычисляем базовое автоматическое значение tRAS
-  const autoTras = toEven(stdCL + stdRCD + (isV2 ? 4 : 2));
-  // Если в режиме custom пользователь ввел tRAS вручную — берем его, иначе автоматическое
-  const stdTras =
-    preset === "custom" && sRAS !== undefined && sRAS !== ""
-      ? Number(sRAS)
-      : autoTras;
+  const automaticTras = toEven(calculatedCL + calculatedRCD + (isV2 ? 4 : 2));
+  const finalTras =
+    preset === "custom" && tRAS !== undefined && tRAS !== ""
+      ? Number(tRAS)
+      : automaticTras;
 
-  // Вычисляем базовое автоматическое значение tRC
-  const autoTrc = isDdr4
-    ? Math.max(isV3 || isV4 ? toEven(stdTras + 4) : stdCL + stdRCD + stdRP, 34)
+  const automaticTrc = isDdr4
+    ? Math.max(
+        isV3 || isV4
+          ? toEven(finalTras + 4)
+          : calculatedCL + calculatedRCD + calculatedRP,
+        34,
+      )
     : isV3 || isV4
-      ? toEven(stdTras + 4)
-      : stdCL + stdRCD + stdRP;
-  // Если в режиме custom пользователь ввел tRC вручную — берем его, иначе автоматическое
-  const stdTrc =
-    preset === "custom" && sRC !== undefined && sRC !== ""
-      ? Number(sRC)
-      : autoTrc;
+      ? toEven(finalTras + 4)
+      : calculatedCL + calculatedRCD + calculatedRP;
+  const finalTrc =
+    preset === "custom" && tRC !== undefined && tRC !== ""
+      ? Number(tRC)
+      : automaticTrc;
 
-  // 3. Финальный маппинг результата через один тернарный оператор
   return preset === "ultra"
     ? {
-        tCL: ultraTiming,
-        tRCD: ultraTiming,
-        tRP: ultraTiming,
-        tRAS: ultraTras,
+        tCL: ultraTimingValue,
+        tRCD: ultraTimingValue,
+        tRP: ultraTimingValue,
+        tRAS: ultraTrasValue,
         loadScore,
-        tRC: isV3 || isV4 ? toEven(ultraTras + 4) : ultraTiming * 3,
+        tRC: isV3 || isV4 ? toEven(ultraTrasValue + 4) : ultraTimingValue * 3,
       }
     : {
-        tCL: stdCL,
-        tRCD: stdRCD,
-        tRP: stdRP,
-        tRAS: stdTras,
-        tRC: stdTrc,
+        tCL: calculatedCL,
+        tRCD: calculatedRCD,
+        tRP: calculatedRP,
+        tRAS: finalTras,
+        tRC: finalTrc,
         loadScore,
       };
 };

@@ -1,6 +1,6 @@
 const FanBios = () => ({
   title: "SMART FAN FUNCTION",
-  path: "Advanced > Smart Fan Function",
+  path: "ADVANCED > SMART FAN FUNCTION",
   content: [
     { text_left: "Smart Fan 1 Mode", text_right: "Automatic Mode" },
     { text_left: "Smart Fan Temperature 1", text_right: "40" },

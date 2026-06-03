@@ -8,24 +8,22 @@ const timingEngine = (state, changedKey) => {
   const config = memoryConfiguration(state, changedKey);
   const baseData = { ...state, ...config };
 
-  const userCL =
-    baseData.tCL !== undefined && baseData.tCL !== ""
-      ? Number(baseData.tCL)
-      : undefined;
-  const userRP =
-    baseData.tRP !== undefined && baseData.tRP !== ""
-      ? Number(baseData.tRP)
-      : undefined;
-  const userRCD =
-    baseData.tRCD !== undefined && baseData.tRCD !== ""
-      ? Number(baseData.tRCD)
-      : undefined;
+  const hasUserCL = baseData.tCL !== undefined && baseData.tCL !== "";
+  const hasUserRP = baseData.tRP !== undefined && baseData.tRP !== "";
+  const hasUserRCD = baseData.tRCD !== undefined && baseData.tRCD !== "";
+  const hasUserRFC = baseData.tRFC !== undefined && baseData.tRFC !== "";
+
+  const userCL = hasUserCL ? Number(baseData.tCL) : undefined;
+  const userRP = hasUserRP ? Number(baseData.tRP) : undefined;
+  const userRCD = hasUserRCD ? Number(baseData.tRCD) : undefined;
+  const userRFC = hasUserRFC ? Number(baseData.tRFC) : undefined;
 
   const dataWithParsedTimings = {
     ...baseData,
-    tCL: userCL,
-    tRP: userRP,
-    tRCD: userRCD,
+    ...(hasUserCL && { tCL: userCL }),
+    ...(hasUserRP && { tRP: userRP }),
+    ...(hasUserRCD && { tRCD: userRCD }),
+    ...(hasUserRFC && { tRFC: userRFC }),
   };
 
   const { frequency } = ramFrequency(dataWithParsedTimings);
@@ -72,6 +70,7 @@ const timingEngine = (state, changedKey) => {
       tRTP: fullData.tRTP,
       tWTR: fullData.tWTR,
       tCR: fullData.tCR || fullData.tCP,
+      tRFC: fullData.tRFC,
     },
     config,
     timings: {

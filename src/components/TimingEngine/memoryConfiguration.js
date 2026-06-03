@@ -23,192 +23,216 @@ const memoryConfiguration = (state, changedKey) => {
     tRTP,
     tWTR,
     tCR,
+    tRFC,
   } = state;
 
   const cpuList = CPU_MODELS[gen] ?? [];
 
-  let userCpu = cpu;
-  let userRamSize = ramSize;
+  let activeCpu = cpu;
+  let activeRamSize = ramSize;
 
   if (changedKey === "gen") {
-    const saved = history[gen] || {};
-    userCpu = saved.cpu !== undefined ? saved.cpu : (cpuList[0]?.name ?? "");
-    userRamSize =
-      saved.ramSize !== undefined ? saved.ramSize : gen === "V2" ? 4 : 16;
+    const savedHistory = history[gen] || {};
+    activeCpu =
+      savedHistory.cpu !== undefined
+        ? savedHistory.cpu
+        : (cpuList[0]?.name ?? "");
+    activeRamSize =
+      savedHistory.ramSize !== undefined
+        ? savedHistory.ramSize
+        : gen === "V2"
+          ? 4
+          : 16;
   }
 
-  const isV2 = gen === "V2";
-  const isV3 = gen === "V3";
-  const isV4 = gen === "V4";
-  const ramType = isV2 ? "DDR3" : "DDR4";
-  const isDdr4 = ramType === "DDR4";
-  const typeKey = isDdr4 ? "ddr4" : "ddr3";
+  const isPlatformV2 = gen === "V2";
+  const isPlatformV3 = gen === "V3";
+  const isPlatformV4 = gen === "V4";
+  const ramTypeLabel = isPlatformV2 ? "DDR3" : "DDR4";
+  const isDdr4Type = ramTypeLabel === "DDR4";
+  const ramTypeKey = isDdr4Type ? "ddr4" : "ddr3";
 
-  const rawRamSize = Number(userRamSize) || 8;
-  const step1Size = changedKey === "gen" && rawRamSize === 6 ? 4 : rawRamSize;
+  const rawRamSizeValue = Number(activeRamSize) || 8;
+  const filteredRamSizeStep =
+    changedKey === "gen" && rawRamSizeValue === 6 ? 4 : rawRamSizeValue;
 
-  const currentRamSizes = RAM_SIZES.filter((size) => size !== 6 || isV2);
-  const finalRamSize = currentRamSizes.includes(step1Size)
-    ? step1Size
-    : currentRamSizes[0];
+  const supportedRamSizes = RAM_SIZES.filter(
+    (size) => size !== 6 || isPlatformV2,
+  );
+  const validatedRamSize = supportedRamSizes.includes(filteredRamSizeStep)
+    ? filteredRamSizeStep
+    : (supportedRamSizes[0] ?? 8);
 
-  const isV2Special = finalRamSize === 6 && isV2;
+  const isV2SpecialSize = validatedRamSize === 6 && isPlatformV2;
 
-  const getValidSlotsForType = (memType) => {
-    if (isV2Special) {
-      return [2, 3];
+  const checkValidSlotsForMemoryType = (memoryTypeToCheck) => {
+    if (isV2SpecialSize) {
+      return [];
     }
-    const availableModules = RAM_CONFIGS[ramType]?.[memType] ?? [];
 
-    const slotOverrides = {
+    const availableModules =
+      RAM_CONFIGS[ramTypeLabel]?.[memoryTypeToCheck] ?? [];
+    const capacitySlotOverrides = {
       20: { standard: [3, 4], high: [2] },
       24: { standard: [3, 4], high: [2, 3] },
       40: { standard: [], high: [2, 3, 4] },
       48: { standard: [], high: [2, 3, 4] },
     };
 
-    const override = slotOverrides[finalRamSize];
-    if (override) {
-      return [...override.standard, ...override.high];
+    const currentOverride = capacitySlotOverrides[validatedRamSize];
+    if (currentOverride) {
+      return [...currentOverride.standard, ...currentOverride.high];
     }
 
     return [1, 2, 3, 4].filter((slots) => {
-      const moduleSize = finalRamSize / slots;
+      const singleModuleSize = validatedRamSize / slots;
       return (
-        Number.isInteger(moduleSize) && availableModules.includes(moduleSize)
+        Number.isInteger(singleModuleSize) &&
+        availableModules.includes(singleModuleSize)
       );
     });
   };
 
-  const isDesktopPossible = getValidSlotsForType("desktop").length > 0;
-  const isEccPossible = getValidSlotsForType("ecc").length > 0 && !isV2Special;
+  const isDesktopTypePossible =
+    checkValidSlotsForMemoryType("desktop").length > 0;
+  const isEccTypePossible =
+    checkValidSlotsForMemoryType("ecc").length > 0 && !isV2SpecialSize;
 
-  const memoryTypesArray = ["desktop", "ecc"].filter((type) => {
-    if (type === "ecc" && !isEccPossible) {
+  const validMemoryTypes = ["desktop", "ecc"].filter((type) => {
+    if (type === "ecc" && !isEccTypePossible) {
       return false;
     }
-    if (type === "desktop" && !isDesktopPossible) {
+    if (type === "desktop" && !isDesktopTypePossible) {
       return false;
     }
     return true;
   });
 
-  const memory = isV2Special
+  const selectedMemoryType = isV2SpecialSize
     ? "desktop"
-    : memoryTypesArray.includes(userMemory)
+    : validMemoryTypes.includes(userMemory)
       ? userMemory
-      : memoryTypesArray[0];
-  const isEcc = memory === "ecc";
+      : (validMemoryTypes[0] ?? "desktop");
 
-  const modules = RAM_CONFIGS[ramType]?.[memory] ?? [];
+  const isEccEnabled = selectedMemoryType === "ecc";
+  const configurationModules =
+    RAM_CONFIGS[ramTypeLabel]?.[selectedMemoryType] ?? [];
 
-  const getValidSlots = (availableModules) => {
-    if (isV2Special) {
-      return [2, 3];
+  const filterSlotsByModuleAvailability = (allowedModules) => {
+    if (isV2SpecialSize) {
+      return [];
     }
+
     return [1, 2, 3, 4].filter((slots) => {
-      const moduleSize = finalRamSize / slots;
+      const moduleSize = validatedRamSize / slots;
       return (
-        Number.isInteger(moduleSize) && availableModules.includes(moduleSize)
+        Number.isInteger(moduleSize) && allowedModules.includes(moduleSize)
       );
     });
   };
 
-  const slotOverrides = {
+  const genericSlotOverrides = {
     20: { standard: [3, 4], high: [2] },
     24: { standard: [3, 4], high: [2, 3] },
     40: { standard: [], high: [2, 3, 4] },
     48: { standard: [], high: [2, 3, 4] },
   };
 
-  const override = slotOverrides[finalRamSize];
-  const standardSlots = override
-    ? override.standard
-    : getValidSlots(modules.filter((m) => m <= 8));
-  const highDensitySlots = override
-    ? override.high
-    : getValidSlots(modules.filter((m) => m >= 16));
+  const totalOverrideConfig = genericSlotOverrides[validatedRamSize];
+  const lowDensitySlots = totalOverrideConfig
+    ? totalOverrideConfig.standard
+    : filterSlotsByModuleAvailability(
+        configurationModules.filter((m) => m <= 8),
+      );
+  const highDensitySlots = totalOverrideConfig
+    ? totalOverrideConfig.high
+    : filterSlotsByModuleAvailability(
+        configurationModules.filter((m) => m >= 16),
+      );
 
-  const density =
-    isV2 && memory === "desktop"
+  const calculatedDensity =
+    isPlatformV2 && selectedMemoryType === "desktop"
       ? "no"
-      : standardSlots.length === 0 && highDensitySlots.length > 0
+      : lowDensitySlots.length === 0 && highDensitySlots.length > 0
         ? "yes"
-        : highDensitySlots.length === 0 && standardSlots.length > 0
+        : highDensitySlots.length === 0 && lowDensitySlots.length > 0
           ? "no"
-          : userDensity;
+          : (userDensity ?? "no");
 
-  const baseSlotsArray = density === "yes" ? highDensitySlots : standardSlots;
+  const densityFilteredSlots =
+    calculatedDensity === "yes" ? highDensitySlots : lowDensitySlots;
 
-  const visibleSlotsArray = isV2Special
+  const finalVisibleSlots = isV2SpecialSize
     ? [2, 3]
-    : baseSlotsArray.length > 0
-      ? baseSlotsArray
-      : standardSlots.length > 0
-        ? standardSlots
+    : densityFilteredSlots.length > 0
+      ? densityFilteredSlots
+      : lowDensitySlots.length > 0
+        ? lowDensitySlots
         : [2];
 
-  const currentSlotNum = Number(userSlot?.replace("slots", "")) || 2;
-  const validSlotNum = visibleSlotsArray.includes(currentSlotNum)
-    ? currentSlotNum
-    : visibleSlotsArray[0];
-  const slot = `slots${validSlotNum}`;
+  const currentSlotNumber = Number(userSlot?.replace("slots", "")) || 2;
+  const verifiedSlotNumber = finalVisibleSlots.includes(currentSlotNumber)
+    ? currentSlotNumber
+    : (finalVisibleSlots[0] ?? 2);
 
-  const currentCpu = cpuList.some((m) => m.name === userCpu)
-    ? userCpu
+  const verifiedSlotKey = `slots${verifiedSlotNumber}`;
+
+  const validatedCpu = cpuList.some((m) => m.name === activeCpu)
+    ? activeCpu
     : (cpuList[0]?.name ?? "");
 
-  const isSpecialConfig =
+  const isSpecialMotherboardConfig =
     board === "matx" &&
-    (isV3 || isV4) &&
-    memory === "desktop" &&
-    density === "no" &&
-    ((finalRamSize === 16 && validSlotNum === 2) ||
-      (finalRamSize === 32 && validSlotNum === 4));
+    (isPlatformV3 || isPlatformV4) &&
+    selectedMemoryType === "desktop" &&
+    calculatedDensity === "no" &&
+    ((validatedRamSize === 16 && verifiedSlotNumber === 2) ||
+      (validatedRamSize === 32 && verifiedSlotNumber === 4));
 
-  const updatedHistory = {
+  const updatedPlatformHistory = {
     ...history,
     [gen]: {
-      cpu: currentCpu,
-      ramSize: finalRamSize,
+      cpu: validatedCpu,
+      ramSize: validatedRamSize,
     },
   };
 
-  const uiMemoryTypes = {
+  const formattedMemoryTypesUi = {
     desktop: true,
-    ecc: finalRamSize !== 6,
+    ecc: validatedRamSize !== 6,
   };
 
   return {
     ...state,
-    ramSize: finalRamSize,
-    memory,
-    density,
-    slot,
-    isSpecialConfig,
-    ramType,
-    isDdr4,
-    isV2,
-    isV3,
-    isV4,
-    isEcc,
-    typeKey,
-    cpu: currentCpu,
+    ramSize: validatedRamSize,
+    memory: selectedMemoryType,
+    density: calculatedDensity,
+    slot: verifiedSlotKey,
+    isSpecialConfig: isSpecialMotherboardConfig,
+    ramType: ramTypeLabel,
+    isDdr4: isDdr4Type,
+    isV2: isPlatformV2,
+    isV3: isPlatformV3,
+    isV4: isPlatformV4,
+    isEcc: isEccEnabled,
+    typeKey: ramTypeKey,
+    cpu: validatedCpu,
     isSelectionRequired:
-      finalRamSize >= 16 &&
-      finalRamSize <= 32 &&
-      !(isV2 && memory === "desktop"),
+      validatedRamSize >= 16 &&
+      validatedRamSize <= 32 &&
+      !(isPlatformV2 && selectedMemoryType === "desktop"),
     cpuModels: cpuList,
-    visibleSlots: visibleSlotsArray.reduce(
+    visibleSlots: finalVisibleSlots.reduce(
       (acc, num) => ({ ...acc, [`slots${num}`]: true }),
       {},
     ),
-    memoryTypes: uiMemoryTypes,
+    memoryTypes: formattedMemoryTypesUi,
     channelsName:
-      ["Single", "Dual", "Triple", "Quad"][Math.min(validSlotNum - 1, 3)] ??
-      "Single",
-    ramSizes: currentRamSizes,
-    history: updatedHistory,
+      ["Single", "Dual", "Triple", "Quad"][
+        Math.min(verifiedSlotNumber - 1, 3)
+      ] ?? "Single",
+    ramSizes: supportedRamSizes,
+    history: updatedPlatformHistory,
     userFrequency,
     tCL,
     tRP,
@@ -221,6 +245,7 @@ const memoryConfiguration = (state, changedKey) => {
     tRTP,
     tWTR,
     tCR,
+    tRFC,
   };
 };
 

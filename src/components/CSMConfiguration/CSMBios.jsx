@@ -3,7 +3,7 @@ const CSMBios = ({ partition }) => {
 
   return {
     title: "CSM CONFIGURATION",
-    path: "Advanced > CSM Configuration",
+    path: "ADVANCED > CSM CONFIGURATION",
     content: [
       {
         text_left: "CSM Support",
@@ -13,28 +13,11 @@ const CSMBios = ({ partition }) => {
       {
         text_left: "Boot option filter",
         text_right: isGpt ? "UEFI only" : "Legacy only",
-        isDisabled: false,
       },
-      {
-        text_left: "Network",
-        text_right: "Do not launch",
-        isDisabled: true,
-      },
-      {
-        text_left: "Storage",
-        text_right: isGpt ? "UEFI" : "Legacy",
-        isDisabled: false,
-      },
-      {
-        text_left: "Video",
-        text_right: isGpt ? "UEFI" : "Legacy",
-        isDisabled: false,
-      },
-      {
-        text_left: "Other PCI devices",
-        text_right: "UEFI",
-        isDisabled: false,
-      },
+      { text_left: "Network", text_right: "Do not launch", isDisabled: true },
+      { text_left: "Storage", text_right: isGpt ? "UEFI" : "Legacy" },
+      { text_left: "Video", text_right: isGpt ? "UEFI" : "Legacy" },
+      { text_left: "Other PCI devices", text_right: "UEFI" },
     ],
   };
 };

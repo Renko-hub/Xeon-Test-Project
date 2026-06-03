@@ -27,7 +27,7 @@ const RamConfiguration = ({ selectedButton }) => {
   const { updateParam } = timingEngine(param);
   const change = updateParam(setParam);
 
-  const biosData = RamBios(param);
+  const biosData = RamBios(param, param, change);
 
   return (
     <>

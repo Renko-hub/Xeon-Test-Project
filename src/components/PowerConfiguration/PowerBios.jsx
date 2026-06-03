@@ -1,21 +1,16 @@
-const PowerBios = ({ cpuGen }) => {
+const PowerBios = ({ cpuGen = "V3" } = {}) => {
   const isV2 = cpuGen === "V2";
   const isV3 = cpuGen === "V3";
   const isV4 = cpuGen === "V4";
 
   return {
     title: "CPU C STATE CONTROL",
-    path: "Advanced > Power Management Configuration > CPU C State Control",
+    path: "INTELRCSETUP > ADVANCED POWER MANAGEMENT CONFIGURATION > CPU C STATE CONTROL",
     content: [
-      {
-        text_left: "C2C3TT",
-        text_right: "0",
-        isDisabled: true,
-      },
+      { text_left: "C2C3TT", text_right: "0", isDisabled: true },
       {
         text_left: "Package C State limit",
         text_right: isV3 ? "C2 State" : "C0/C1 state",
-        isDisabled: false,
       },
       {
         text_left: "CPU C3 report",
