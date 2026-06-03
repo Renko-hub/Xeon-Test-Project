@@ -233,26 +233,6 @@ img, video {
   }
 }
 
-.CWsxPG_bios_input {
-  color: #000;
-  text-align: center;
-  min-width: 2ch;
-  max-width: 5ch;
-  font: inherit;
-  vertical-align: middle;
-  background: #ff5;
-  border: none;
-  outline: none;
-  padding: 0;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.CWsxPG_bios_input::placeholder {
-  color: #000;
-  opacity: 1;
-}
-
 .-_VRTG_button {
   color: #888;
   text-transform: uppercase;
@@ -753,6 +733,26 @@ img, video {
   padding: 1px 4px;
   font-family: monospace;
   font-weight: 600;
+}
+
+.CWsxPG_bios_input {
+  color: #000;
+  text-align: center;
+  min-width: 2ch;
+  max-width: 5ch;
+  font: inherit;
+  vertical-align: middle;
+  background: #ff5;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.CWsxPG_bios_input::placeholder {
+  color: #000;
+  opacity: 1;
 }
 
 .rKR2Yq_wrapper {

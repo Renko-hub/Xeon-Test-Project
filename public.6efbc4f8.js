@@ -27555,11 +27555,9 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _clsx = require("clsx");
-var _biosInput = require("../BiosInput/BiosInput");
-var _biosInputDefault = parcelHelpers.interopDefault(_biosInput);
 var _biosWindowModuleCss = require("./BiosWindow.module.css");
 var _biosWindowModuleCssDefault = parcelHelpers.interopDefault(_biosWindowModuleCss);
-const BiosWindow = ({ title, content = [], path, state, update })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const BiosWindow = ({ title, content = [], path })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: (0, _biosWindowModuleCssDefault.default).bios_container,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27567,48 +27565,44 @@ const BiosWindow = ({ title, content = [], path, state, update })=>/*#__PURE__*/
                 children: title
             }, void 0, false, {
                 fileName: "src/components/BiosWindow/BiosWindow.jsx",
-                lineNumber: 8,
+                lineNumber: 7,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                 className: (0, _biosWindowModuleCssDefault.default).bios__list,
-                children: content.map(({ text_left, text_right, isEditable, isDisabled, field, isFirst }, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: (0, _biosWindowModuleCssDefault.default).bios__item,
+                children: content.map(({ text_left, text_right, isDisabled }, i)=>{
+                    const hasRightText = text_right !== undefined && text_right !== null && String(text_right).trim() !== "";
+                    const rightStr = typeof text_right === "string" ? text_right.toLowerCase() : "";
+                    const isRowDisabled = isDisabled || rightStr === "disabled" || rightStr === "disable";
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: (0, _clsx.clsx)((0, _biosWindowModuleCssDefault.default).bios__item, isRowDisabled && (0, _biosWindowModuleCssDefault.default).row_disabled),
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 className: (0, _biosWindowModuleCssDefault.default).text_left,
                                 children: text_left
                             }, void 0, false, {
                                 fileName: "src/components/BiosWindow/BiosWindow.jsx",
-                                lineNumber: 16,
+                                lineNumber: 24,
                                 columnNumber: 13
                             }, undefined),
-                            isEditable ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosInputDefault.default), {
-                                field: field,
-                                state: state,
-                                update: update,
-                                isFirst: isFirst
+                            hasRightText && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: (0, _clsx.clsx)((0, _biosWindowModuleCssDefault.default).text_right, isRowDisabled && (0, _biosWindowModuleCssDefault.default).state_disabled),
+                                children: /*#__PURE__*/ (0, _reactDefault.default).isValidElement(text_right) ? text_right : `[${text_right}]`
                             }, void 0, false, {
                                 fileName: "src/components/BiosWindow/BiosWindow.jsx",
-                                lineNumber: 18,
-                                columnNumber: 15
-                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: (0, _clsx.clsx)((0, _biosWindowModuleCssDefault.default).text_right, isDisabled && (0, _biosWindowModuleCssDefault.default).state_disabled),
-                                children: `[${text_right ?? "N/A"}]`
-                            }, void 0, false, {
-                                fileName: "src/components/BiosWindow/BiosWindow.jsx",
-                                lineNumber: 25,
+                                lineNumber: 26,
                                 columnNumber: 15
                             }, undefined)
                         ]
-                    }, index, true, {
+                    }, `${text_left || "item"}-${i}`, true, {
                         fileName: "src/components/BiosWindow/BiosWindow.jsx",
-                        lineNumber: 15,
+                        lineNumber: 20,
                         columnNumber: 11
-                    }, undefined))
+                    }, undefined);
+                })
             }, void 0, false, {
                 fileName: "src/components/BiosWindow/BiosWindow.jsx",
-                lineNumber: 9,
+                lineNumber: 8,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27619,13 +27613,13 @@ const BiosWindow = ({ title, content = [], path, state, update })=>/*#__PURE__*/
                 ]
             }, void 0, true, {
                 fileName: "src/components/BiosWindow/BiosWindow.jsx",
-                lineNumber: 35,
+                lineNumber: 41,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/BiosWindow/BiosWindow.jsx",
-        lineNumber: 7,
+        lineNumber: 6,
         columnNumber: 3
     }, undefined);
 _c = BiosWindow;
@@ -27638,7 +27632,7 @@ $RefreshReg$(_c, "BiosWindow");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","clsx":"dOSJC","./BiosWindow.module.css":"aFKvL","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../BiosInput/BiosInput":"4wZVh"}],"aFKvL":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","clsx":"dOSJC","./BiosWindow.module.css":"aFKvL","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"aFKvL":[function(require,module,exports,__globalThis) {
 module.exports["bios__footer"] = `ZDSeZG_bios__footer`;
 module.exports["bios__header"] = `ZDSeZG_bios__header`;
 module.exports["bios__item"] = `ZDSeZG_bios__item`;
@@ -27647,97 +27641,6 @@ module.exports["bios_container"] = `ZDSeZG_bios_container`;
 module.exports["state_disabled"] = `ZDSeZG_state_disabled`;
 module.exports["text_left"] = `ZDSeZG_text_left`;
 module.exports["text_right"] = `ZDSeZG_text_right`;
-
-},{}],"4wZVh":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$2a73 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$2a73.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2a73.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _biosInputModuleCss = require("./BiosInput.module.css");
-var _biosInputModuleCssDefault = parcelHelpers.interopDefault(_biosInputModuleCss);
-var _s = $RefreshSig$();
-const BiosInput = ({ field, state = {}, update, isFirst })=>{
-    _s();
-    const inputRef = (0, _react.useRef)(null);
-    const isFreq = field === "userFrequency";
-    let rawValue = state[field] !== undefined ? String(state[field]) : "";
-    if (isFreq && rawValue === "") rawValue = String(state["frequency"] || 1866);
-    const numericValue = parseInt(rawValue, 10) || 0;
-    (0, _react.useEffect)(()=>{
-        if (isFirst) inputRef.current?.focus();
-    }, [
-        isFirst
-    ]);
-    const setParamValue = (v)=>update?.(field, String(v));
-    const handleKeyDown = (e)=>{
-        if (e.key === "ArrowUp") setParamValue(numericValue + (isFreq ? 133 : 1));
-        if (e.key === "ArrowDown") {
-            const minLimit = isFreq ? 800 : 6;
-            setParamValue(Math.max(numericValue - (isFreq ? 133 : 1), minLimit));
-        }
-        if (e.key === "Enter") {
-            const inputs = Array.from(document.querySelectorAll(`.${(0, _biosInputModuleCssDefault.default).bios_input}`));
-            const next = inputs[inputs.indexOf(e.currentTarget) + 1];
-            if (next) next.focus();
-            else e.currentTarget.blur();
-        }
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-        className: (0, _biosInputModuleCssDefault.default).input_wrapper,
-        children: [
-            "[",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                ref: inputRef,
-                type: "text",
-                inputMode: "numeric",
-                pattern: "[0-9]*",
-                className: (0, _biosInputModuleCssDefault.default).bios_input,
-                value: rawValue,
-                placeholder: "--",
-                onFocus: (e)=>e.target.select(),
-                onBlur: ()=>{
-                    const minLimit = isFreq ? 800 : 6;
-                    if (rawValue === "" || numericValue < minLimit) setParamValue(minLimit);
-                },
-                onChange: (e)=>{
-                    const val = e.target.value;
-                    if (val === "" || /^\d*$/.test(val)) setParamValue(val);
-                },
-                onKeyDown: handleKeyDown
-            }, void 0, false, {
-                fileName: "src/components/BiosInput/BiosInput.jsx",
-                lineNumber: 45,
-                columnNumber: 7
-            }, undefined),
-            "]"
-        ]
-    }, void 0, true, {
-        fileName: "src/components/BiosInput/BiosInput.jsx",
-        lineNumber: 43,
-        columnNumber: 5
-    }, undefined);
-};
-_s(BiosInput, "cBQ6FQ+sf5H+lvNONLKqtm4aeQ8=");
-_c = BiosInput;
-exports.default = BiosInput;
-var _c;
-$RefreshReg$(_c, "BiosInput");
-
-  $parcel$ReactRefreshHelpers$2a73.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./BiosInput.module.css":"6bn1I","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6bn1I":[function(require,module,exports,__globalThis) {
-module.exports["bios_input"] = `CWsxPG_bios_input`;
 
 },{}],"eFAbl":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$fd9b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -28181,15 +28084,13 @@ module.exports["tools_border"] = `ppCF8q_tools_border`;
 },{}],"kjvLS":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const AdvancedBios = ({ cpuGen = "V3" })=>{
-    // Определяем значение для Uncore Max CLR Freq на основе выбранного поколения CPU
+const AdvancedBios = ({ cpuGen = "V3" } = {})=>{
     let uncoreLimit = "26";
     if (cpuGen === "V2") uncoreLimit = "24";
-     // Стабильное базовое значение из диапазона 24-28
     if (cpuGen === "V4") uncoreLimit = "56";
     return {
-        title: "Advanced Power Management Configuration",
-        path: "IntelRCSetup > Advanced Power Management Configuration",
+        title: "ADVANCED POWER MANAGEMENT CONFIGURATION",
+        path: "INTELRCSETUP > ADVANCED POWER MANAGEMENT CONFIGURATION",
         content: [
             {
                 text_left: "Power Technology",
@@ -28209,43 +28110,35 @@ const AdvancedBios = ({ cpuGen = "V3" })=>{
             },
             {
                 text_left: "Uncore Max CLR Freq",
-                text_right: uncoreLimit,
-                isEditable: true
+                text_right: uncoreLimit
             },
             {
                 text_left: "CPU P State Control",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "CPU HWPM State Control",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "CPU C State Control",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "CPU T State Control",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "CPU - Advanced PM Tuning",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "SOCKET RAPL Config",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "DRAM RAPL Configuration",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             }
         ]
     };
@@ -28700,7 +28593,7 @@ const CSMBios = ({ partition })=>{
     const isGpt = partition === "gpt";
     return {
         title: "CSM CONFIGURATION",
-        path: "Advanced > CSM Configuration",
+        path: "ADVANCED > CSM CONFIGURATION",
         content: [
             {
                 text_left: "CSM Support",
@@ -28709,8 +28602,7 @@ const CSMBios = ({ partition })=>{
             },
             {
                 text_left: "Boot option filter",
-                text_right: isGpt ? "UEFI only" : "Legacy only",
-                isDisabled: false
+                text_right: isGpt ? "UEFI only" : "Legacy only"
             },
             {
                 text_left: "Network",
@@ -28719,18 +28611,15 @@ const CSMBios = ({ partition })=>{
             },
             {
                 text_left: "Storage",
-                text_right: isGpt ? "UEFI" : "Legacy",
-                isDisabled: false
+                text_right: isGpt ? "UEFI" : "Legacy"
             },
             {
                 text_left: "Video",
-                text_right: isGpt ? "UEFI" : "Legacy",
-                isDisabled: false
+                text_right: isGpt ? "UEFI" : "Legacy"
             },
             {
                 text_left: "Other PCI devices",
-                text_right: "UEFI",
-                isDisabled: false
+                text_right: "UEFI"
             }
         ]
     };
@@ -29161,23 +29050,17 @@ $RefreshReg$(_c, "DRAMConfiguration");
 },{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./DRAMBios":"6AIpM","./DRAMInfo":"WlBvo","./DRAMTools":"62OS2","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6AIpM":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const DRAMBios = (param)=>{
-    const { ramType = "ecc" } = param; // Значение по умолчанию в нижнем регистре
-    if (ramType === "desktop") // Проверка строки в нижнем регистре
+const DRAMBios = ({ ramType = "ecc" } = {})=>{
+    const isDesktop = ramType === "desktop";
     return {
-        title: "DRAM RAPL Configuration",
-        path: "IntelRCSetup > DRAM RAPL Configuration",
-        content: [
+        title: "DRAM RAPL CONFIGURATION",
+        path: "INTELRCSETUP > DRAM RAPL CONFIGURATION",
+        content: isDesktop ? [
             {
                 text_left: "DRAM RAPL Baseline",
                 text_right: "Disable"
             }
-        ]
-    };
-    return {
-        title: "DRAM RAPL Configuration",
-        path: "IntelRCSetup > DRAM RAPL Configuration",
-        content: [
+        ] : [
             {
                 text_left: "DRAM RAPL Baseline",
                 text_right: "DRAM RAPL Mode 0"
@@ -29605,7 +29488,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const FanBios = ()=>({
         title: "SMART FAN FUNCTION",
-        path: "Advanced > Smart Fan Function",
+        path: "ADVANCED > SMART FAN FUNCTION",
         content: [
             {
                 text_left: "Smart Fan 1 Mode",
@@ -30075,13 +29958,12 @@ $RefreshReg$(_c, "FivrConfiguration");
 },{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./FivrBios":"3ngqf","./FivrInfo":"8e4M2","./FivrTools":"4y982","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"3ngqf":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const FivrBios = (param)=>{
-    const { cpuGen = "V3" } = param;
-    // Если выбран процессор поколения V4 (Broadwell-EP)
-    if (cpuGen === "V4") return {
-        title: "FIVR Configuration",
-        path: "IntelRCSetup > Overclocking Features",
-        content: [
+const FivrBios = ({ cpuGen = "V3" } = {})=>{
+    const isV4 = cpuGen === "V4";
+    return {
+        title: "FIVR CONFIGURATION",
+        path: "CHIPSET > OVERCLOCKING FEATURE",
+        content: isV4 ? [
             {
                 text_left: "SVID Support",
                 text_right: "Disabled"
@@ -30098,13 +29980,7 @@ const FivrBios = (param)=>{
                 text_left: "FIVR Efficiency Management",
                 text_right: "Disabled"
             }
-        ]
-    };
-    // Если выбран процессор поколения V3 (Haswell-EP) — отдаем конфигурацию с SVID Voltage Override
-    return {
-        title: "FIVR Configuration",
-        path: "IntelRCSetup > Overclocking Features",
-        content: [
+        ] : [
             {
                 text_left: "SVID Support",
                 text_right: "Enabled"
@@ -30569,66 +30445,52 @@ $RefreshReg$(_c, "IIOConfiguration");
 },{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./IIOBios":"iTgLv","./IIOInfo.jsx":"26ifX","./IIOTools":"92MP8","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"iTgLv":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const IIOBios = ({ pciGen })=>{
+const IIOBios = ({ pciGen = "gen_3" } = {})=>{
     const isGen3 = pciGen === "gen_3";
+    const speedText = isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)";
     return {
         title: "IIO0 CONFIGURATION",
-        path: "IntelRCSetup > IIO Configuration > IIO0 Configuration",
+        path: "INTELRCSETUP > IIO CONFIGURATION > IIO0 CONFIGURATION",
         content: [
-            // Блок для Port 0/DMI
             {
                 text_left: "Socket 0 PcieD00F0 - Port 0/DMI",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "Link Speed",
-                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
-                isEditable: true
+                text_right: speedText
             },
-            // Блок для Port 1A
             {
                 text_left: "Socket 0 PcieD01F0 - Port 1A",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "Link Speed",
-                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
-                isEditable: true
+                text_right: speedText
             },
-            // Блок для Port 1B
             {
                 text_left: "Socket 0 PcieD01F1 - Port 1B",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "Link Speed",
-                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
-                isEditable: true
+                text_right: speedText
             },
-            // Блок для Port 2A
             {
                 text_left: "Socket 0 PcieD02F0 - Port 2A",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "Link Speed",
-                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
-                isEditable: true
+                text_right: speedText
             },
-            // Блок для Port 3A
             {
                 text_left: "Socket 0 PcieD03F0 - Port 3A",
-                text_right: "",
-                isEditable: true
+                text_right: ""
             },
             {
                 text_left: "Link Speed",
-                text_right: isGen3 ? "Gen 3 (8 GT/s)" : "Gen 2 (5 GT/s)",
-                isEditable: true
+                text_right: speedText
             }
         ]
     };
@@ -31000,11 +30862,11 @@ $RefreshReg$(_c, "MemoryConfiguration");
 },{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./MemoryBios":"2Uej4","./MemoryInfo":"hI96e","./MemoryTools":"66vtY"}],"2Uej4":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const MemoryBios = ({ memoryType = "desktop" })=>{
+const MemoryBios = ({ memoryType = "desktop" } = {})=>{
     const isEcc = memoryType === "ecc";
     return {
-        title: "Integrated Memory Controller (IMC) Configuration",
-        path: "IntelRCSetup > Integrated Memory Controller (IMC)",
+        title: "MEMORY CONFIGURATION",
+        path: "INTELRCSETUP > MEMORY CONFIGURATION",
         content: [
             {
                 text_left: "Enforce POR",
@@ -31029,18 +30891,15 @@ const MemoryBios = ({ memoryType = "desktop" })=>{
             {
                 text_left: "Data Scrambling",
                 text_right: isEcc ? "Enabled" : "Disabled",
-                // Если выбран desktop — пункт выключен и заблокирован (серый). Если ecc — активен (белый)
                 isDisabled: !isEcc
             },
             {
                 text_left: "Attempt Fast Boot",
-                text_right: "Enable",
-                isDisabled: false
+                text_right: "Enable"
             },
             {
                 text_left: "Attempt Fast Cold Boot",
-                text_right: "Enable",
-                isDisabled: false
+                text_right: "Enable"
             },
             {
                 text_left: "PSMI Support",
@@ -31567,7 +31426,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const PCIBios = ()=>({
         title: "PCI SUBSYSTEM SETTINGS",
-        path: "Advanced > PCI Subsystem Setting",
+        path: "ADVANCED > PCI SUBSYSTEM SETTING",
         content: [
             {
                 text_left: "CSM Support",
@@ -31576,13 +31435,11 @@ const PCIBios = ()=>({
             },
             {
                 text_left: "Above 4G Decoding",
-                text_right: "Enabled",
-                isDisabled: false
+                text_right: "Enabled"
             },
             {
                 text_left: "Re-Size BAR Support",
-                text_right: "Enabled",
-                isDisabled: false
+                text_right: "Enabled"
             }
         ]
     });
@@ -32404,13 +32261,13 @@ $RefreshReg$(_c, "PowerConfiguration");
 },{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./PowerBios":"eoWlO","./PowerInfo":"1fTKq","./PowerTools":"9kWvd","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"eoWlO":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const PowerBios = ({ cpuGen })=>{
+const PowerBios = ({ cpuGen = "V3" } = {})=>{
     const isV2 = cpuGen === "V2";
     const isV3 = cpuGen === "V3";
     const isV4 = cpuGen === "V4";
     return {
         title: "CPU C STATE CONTROL",
-        path: "Advanced > Power Management Configuration > CPU C State Control",
+        path: "INTELRCSETUP > ADVANCED POWER MANAGEMENT CONFIGURATION > CPU C STATE CONTROL",
         content: [
             {
                 text_left: "C2C3TT",
@@ -32419,8 +32276,7 @@ const PowerBios = ({ cpuGen })=>{
             },
             {
                 text_left: "Package C State limit",
-                text_right: isV3 ? "C2 State" : "C0/C1 state",
-                isDisabled: false
+                text_right: isV3 ? "C2 State" : "C0/C1 state"
             },
             {
                 text_left: "CPU C3 report",
@@ -32849,7 +32705,7 @@ const RamConfiguration = ({ selectedButton })=>{
     });
     const { updateParam } = (0, _timingEngineJsDefault.default)(param);
     const change = updateParam(setParam);
-    const biosData = (0, _ramBiosDefault.default)(param);
+    const biosData = (0, _ramBiosDefault.default)(param, param, change);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
@@ -32904,35 +32760,47 @@ $RefreshReg$(_c, "RamConfiguration");
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./RamBios":"dNOhH","./RamInfo":"8ud8y","./RamTools":"884Qk","../UltraAlert/UltraAlert":"dG26o","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../TimingEngine/timingEngine.js":"5t7nW"}],"dNOhH":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$a464 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$a464.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a464.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _timingEngineJs = require("../TimingEngine/timingEngine.js");
 var _timingEngineJsDefault = parcelHelpers.interopDefault(_timingEngineJs);
-const RamBios = (param = {})=>{
-    const { state: config = {}, timings = {} } = (0, _timingEngineJsDefault.default)(param);
-    const isCustomMode = config.preset === "custom";
-    const slotsCount = Number(config.slot?.replace("slots", "")) || 2;
-    const channelLabels = [
+var _biosInput = require("../BiosInput/BiosInput");
+var _biosInputDefault = parcelHelpers.interopDefault(_biosInput);
+const RamBios = (param = {}, state = {}, update)=>{
+    const { state: config = {}, timings = {} } = (0, _timingEngineJsDefault.default)({
+        ...param,
+        ...state
+    });
+    const isCustom = config.preset === "custom";
+    const slots = Number(config.slot?.replace("slots", "")) || 2;
+    const channels = [
         "SINGLE",
         "DUAL",
         "TRIPLE",
         "QUAD"
-    ];
-    const channels = channelLabels[Math.min(slotsCount - 1, 3)] ?? "SINGLE";
-    const bandwidth = timings.bandwidth ?? "0 GB/s";
-    const titleText = `${timings.freqClean ?? ""} MHZ - ${bandwidth} (${channels})`;
-    const getValue = (field)=>{
-        const val = timings[field];
-        return val !== undefined && val !== null ? String(val) : "";
-    };
-    const rawRfcFormatted = timings.tRfcFormatted ?? getValue("tRFC");
-    let formattedRfc = rawRfcFormatted;
-    if (isCustomMode) formattedRfc = rawRfcFormatted.split(/[ (\s]/);
-    else {
-        const labelType = config.preset === "ultra" ? "LIMIT" : "IDEAL";
-        formattedRfc = rawRfcFormatted.includes("IDEAL") || rawRfcFormatted.includes("LIMIT") ? rawRfcFormatted.replace(/IDEAL|LIMIT/g, labelType) : rawRfcFormatted;
-    }
-    const fieldsConfig = [
+    ][Math.min(slots - 1, 3)] ?? "SINGLE";
+    const titleText = `${timings.freqClean ?? ""} MHZ - ${timings.bandwidth ?? "0 GB/s"} (${channels})`;
+    const getVal = (f)=>state[f] !== undefined ? String(state[f]) : timings[f] !== undefined && timings[f] !== null ? String(timings[f]) : "";
+    const rawRfc = timings.tRfcFormatted ?? getVal("tRFC");
+    const formattedRfc = isCustom ? rawRfc.match(/^\d+/) ? rawRfc : getVal("tRFC") : rawRfc.replace(/IDEAL|LIMIT/g, config.preset === "ultra" ? "LIMIT" : "IDEAL");
+    const createField = (label, field, isEditable = isCustom, isFirst = false)=>({
+            label,
+            value: getVal(field),
+            field,
+            isEditable,
+            isFirst
+        });
+    const fields = [
         {
             label: "DIMM PROFILE",
             value: "MANUAL"
@@ -32943,81 +32811,68 @@ const RamBios = (param = {})=>{
         },
         {
             label: "MEMORY VOLTAGE",
-            value: getValue("voltage")
+            value: getVal("voltage")
         },
         {
             label: "COMMAND TIMING",
-            value: getValue("tCR") || getValue("tCP")
+            value: (getVal("tCR") !== "" ? getVal("tCR") : null) ?? getVal("tCP")
         },
         {
             label: "REFRESH RATE",
-            value: getValue("tREFI")
+            value: getVal("tREFI")
         },
-        {
-            label: "CAS LATENCY (TCL)",
-            value: getValue("tCL"),
-            isEditable: isCustomMode,
-            field: "tCL",
-            isFirst: true
-        },
-        {
-            label: "TRP",
-            value: getValue("tRP"),
-            isEditable: isCustomMode,
-            field: "tRP"
-        },
-        {
-            label: "TRCD",
-            value: getValue("tRCD"),
-            isEditable: isCustomMode,
-            field: "tRCD"
-        },
+        createField("CAS LATENCY", "tCL", isCustom, true),
+        createField("TRP", "tRP"),
+        createField("TRCD", "tRCD"),
         {
             label: "TRAS",
-            value: getValue("tRAS")
+            value: getVal("tRAS")
         },
         {
             label: "TWR",
-            value: getValue("tWR")
+            value: getVal("tWR")
         },
-        {
-            label: "TRFC",
-            value: formattedRfc
-        },
+        createField("TRFC", "tRFC", false),
         {
             label: "TRRD",
-            value: getValue("tRRD")
+            value: getVal("tRRD")
         },
         {
             label: "TRTP",
-            value: getValue("tRTP")
+            value: getVal("tRTP")
         },
         {
             label: "TWTR",
-            value: getValue("tWTR")
+            value: getVal("tWTR")
         },
         {
             label: "TFAW",
-            value: getValue("tFAW")
+            value: getVal("tFAW")
         },
         {
             label: "TRC",
-            value: getValue("tRC")
+            value: getVal("tRC")
         },
         {
             label: "TCWL",
-            value: getValue("tCWL")
+            value: getVal("tCWL")
         }
     ];
     return {
         title: titleText.toUpperCase(),
         path: "INTELRCSETUP > MEMORY CONFIGURATION > MEMORY TIMINGS",
-        content: fieldsConfig.map(({ label, value, isEditable = false, field, isFirst })=>({
+        content: fields.map(({ label, value, isEditable, field, isFirst })=>({
                 text_left: label,
-                text_right: value,
-                isEditable,
-                field,
-                isFirst
+                text_right: isEditable && field ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosInputDefault.default), {
+                    field: field,
+                    state: state,
+                    update: update,
+                    isFirst: isFirst
+                }, void 0, false, {
+                    fileName: "src/components/RamConfiguration/RamBios.jsx",
+                    lineNumber: 77,
+                    columnNumber: 11
+                }, undefined) : field === "tRFC" ? formattedRfc : value
             }))
     };
 };
@@ -33026,7 +32881,12 @@ exports.default = RamBios;
 var _c;
 $RefreshReg$(_c, "RamBios");
 
-},{"../TimingEngine/timingEngine.js":"5t7nW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"5t7nW":[function(require,module,exports,__globalThis) {
+  $parcel$ReactRefreshHelpers$a464.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"../TimingEngine/timingEngine.js":"5t7nW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosInput/BiosInput":"4wZVh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"5t7nW":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _memoryConfiguration = require("./memoryConfiguration");
@@ -33045,14 +32905,28 @@ const timingEngine = (state, changedKey)=>{
         ...state,
         ...config
     };
-    const userCL = baseData.tCL !== undefined && baseData.tCL !== "" ? Number(baseData.tCL) : undefined;
-    const userRP = baseData.tRP !== undefined && baseData.tRP !== "" ? Number(baseData.tRP) : undefined;
-    const userRCD = baseData.tRCD !== undefined && baseData.tRCD !== "" ? Number(baseData.tRCD) : undefined;
+    const hasUserCL = baseData.tCL !== undefined && baseData.tCL !== "";
+    const hasUserRP = baseData.tRP !== undefined && baseData.tRP !== "";
+    const hasUserRCD = baseData.tRCD !== undefined && baseData.tRCD !== "";
+    const hasUserRFC = baseData.tRFC !== undefined && baseData.tRFC !== "";
+    const userCL = hasUserCL ? Number(baseData.tCL) : undefined;
+    const userRP = hasUserRP ? Number(baseData.tRP) : undefined;
+    const userRCD = hasUserRCD ? Number(baseData.tRCD) : undefined;
+    const userRFC = hasUserRFC ? Number(baseData.tRFC) : undefined;
     const dataWithParsedTimings = {
         ...baseData,
-        tCL: userCL,
-        tRP: userRP,
-        tRCD: userRCD
+        ...hasUserCL && {
+            tCL: userCL
+        },
+        ...hasUserRP && {
+            tRP: userRP
+        },
+        ...hasUserRCD && {
+            tRCD: userRCD
+        },
+        ...hasUserRFC && {
+            tRFC: userRFC
+        }
     };
     const { frequency } = (0, _ramFrequencyDefault.default)(dataWithParsedTimings);
     const primaries = (0, _primaryTimingsDefault.default)(dataWithParsedTimings, frequency);
@@ -33093,7 +32967,8 @@ const timingEngine = (state, changedKey)=>{
             tRRD: fullData.tRRD,
             tRTP: fullData.tRTP,
             tWTR: fullData.tWTR,
-            tCR: fullData.tCR || fullData.tCP
+            tCR: fullData.tCR || fullData.tCP,
+            tRFC: fullData.tRFC
         },
         config,
         timings: {
@@ -33123,33 +32998,30 @@ const memoryConfiguration = (state, changedKey)=>{
         V2: {},
         V3: {},
         V4: {}
-    }, userFrequency, tCL, tRP, tRCD, tRAS, tRC, tWR, tREFI, tRRD, tRTP, tWTR, tCR } = state;
+    }, userFrequency, tCL, tRP, tRCD, tRAS, tRC, tWR, tREFI, tRRD, tRTP, tWTR, tCR, tRFC } = state;
     const cpuList = (0, _cpuDataJs.CPU_MODELS)[gen] ?? [];
-    let userCpu = cpu;
-    let userRamSize = ramSize;
+    let activeCpu = cpu;
+    let activeRamSize = ramSize;
     if (changedKey === "gen") {
-        const saved = history[gen] || {};
-        userCpu = saved.cpu !== undefined ? saved.cpu : cpuList[0]?.name ?? "";
-        userRamSize = saved.ramSize !== undefined ? saved.ramSize : gen === "V2" ? 4 : 16;
+        const savedHistory = history[gen] || {};
+        activeCpu = savedHistory.cpu !== undefined ? savedHistory.cpu : cpuList[0]?.name ?? "";
+        activeRamSize = savedHistory.ramSize !== undefined ? savedHistory.ramSize : gen === "V2" ? 4 : 16;
     }
-    const isV2 = gen === "V2";
-    const isV3 = gen === "V3";
-    const isV4 = gen === "V4";
-    const ramType = isV2 ? "DDR3" : "DDR4";
-    const isDdr4 = ramType === "DDR4";
-    const typeKey = isDdr4 ? "ddr4" : "ddr3";
-    const rawRamSize = Number(userRamSize) || 8;
-    const step1Size = changedKey === "gen" && rawRamSize === 6 ? 4 : rawRamSize;
-    const currentRamSizes = (0, _ramDataJs.RAM_SIZES).filter((size)=>size !== 6 || isV2);
-    const finalRamSize = currentRamSizes.includes(step1Size) ? step1Size : currentRamSizes[0];
-    const isV2Special = finalRamSize === 6 && isV2;
-    const getValidSlotsForType = (memType)=>{
-        if (isV2Special) return [
-            2,
-            3
-        ];
-        const availableModules = (0, _ramDataJs.RAM_CONFIGS)[ramType]?.[memType] ?? [];
-        const slotOverrides = {
+    const isPlatformV2 = gen === "V2";
+    const isPlatformV3 = gen === "V3";
+    const isPlatformV4 = gen === "V4";
+    const ramTypeLabel = isPlatformV2 ? "DDR3" : "DDR4";
+    const isDdr4Type = ramTypeLabel === "DDR4";
+    const ramTypeKey = isDdr4Type ? "ddr4" : "ddr3";
+    const rawRamSizeValue = Number(activeRamSize) || 8;
+    const filteredRamSizeStep = changedKey === "gen" && rawRamSizeValue === 6 ? 4 : rawRamSizeValue;
+    const supportedRamSizes = (0, _ramDataJs.RAM_SIZES).filter((size)=>size !== 6 || isPlatformV2);
+    const validatedRamSize = supportedRamSizes.includes(filteredRamSizeStep) ? filteredRamSizeStep : supportedRamSizes[0] ?? 8;
+    const isV2SpecialSize = validatedRamSize === 6 && isPlatformV2;
+    const checkValidSlotsForMemoryType = (memoryTypeToCheck)=>{
+        if (isV2SpecialSize) return [];
+        const availableModules = (0, _ramDataJs.RAM_CONFIGS)[ramTypeLabel]?.[memoryTypeToCheck] ?? [];
+        const capacitySlotOverrides = {
             20: {
                 standard: [
                     3,
@@ -33186,10 +33058,10 @@ const memoryConfiguration = (state, changedKey)=>{
                 ]
             }
         };
-        const override = slotOverrides[finalRamSize];
-        if (override) return [
-            ...override.standard,
-            ...override.high
+        const currentOverride = capacitySlotOverrides[validatedRamSize];
+        if (currentOverride) return [
+            ...currentOverride.standard,
+            ...currentOverride.high
         ];
         return [
             1,
@@ -33197,39 +33069,36 @@ const memoryConfiguration = (state, changedKey)=>{
             3,
             4
         ].filter((slots)=>{
-            const moduleSize = finalRamSize / slots;
-            return Number.isInteger(moduleSize) && availableModules.includes(moduleSize);
+            const singleModuleSize = validatedRamSize / slots;
+            return Number.isInteger(singleModuleSize) && availableModules.includes(singleModuleSize);
         });
     };
-    const isDesktopPossible = getValidSlotsForType("desktop").length > 0;
-    const isEccPossible = getValidSlotsForType("ecc").length > 0 && !isV2Special;
-    const memoryTypesArray = [
+    const isDesktopTypePossible = checkValidSlotsForMemoryType("desktop").length > 0;
+    const isEccTypePossible = checkValidSlotsForMemoryType("ecc").length > 0 && !isV2SpecialSize;
+    const validMemoryTypes = [
         "desktop",
         "ecc"
     ].filter((type)=>{
-        if (type === "ecc" && !isEccPossible) return false;
-        if (type === "desktop" && !isDesktopPossible) return false;
+        if (type === "ecc" && !isEccTypePossible) return false;
+        if (type === "desktop" && !isDesktopTypePossible) return false;
         return true;
     });
-    const memory = isV2Special ? "desktop" : memoryTypesArray.includes(userMemory) ? userMemory : memoryTypesArray[0];
-    const isEcc = memory === "ecc";
-    const modules = (0, _ramDataJs.RAM_CONFIGS)[ramType]?.[memory] ?? [];
-    const getValidSlots = (availableModules)=>{
-        if (isV2Special) return [
-            2,
-            3
-        ];
+    const selectedMemoryType = isV2SpecialSize ? "desktop" : validMemoryTypes.includes(userMemory) ? userMemory : validMemoryTypes[0] ?? "desktop";
+    const isEccEnabled = selectedMemoryType === "ecc";
+    const configurationModules = (0, _ramDataJs.RAM_CONFIGS)[ramTypeLabel]?.[selectedMemoryType] ?? [];
+    const filterSlotsByModuleAvailability = (allowedModules)=>{
+        if (isV2SpecialSize) return [];
         return [
             1,
             2,
             3,
             4
         ].filter((slots)=>{
-            const moduleSize = finalRamSize / slots;
-            return Number.isInteger(moduleSize) && availableModules.includes(moduleSize);
+            const moduleSize = validatedRamSize / slots;
+            return Number.isInteger(moduleSize) && allowedModules.includes(moduleSize);
         });
     };
-    const slotOverrides = {
+    const genericSlotOverrides = {
         20: {
             standard: [
                 3,
@@ -33266,63 +33135,63 @@ const memoryConfiguration = (state, changedKey)=>{
             ]
         }
     };
-    const override = slotOverrides[finalRamSize];
-    const standardSlots = override ? override.standard : getValidSlots(modules.filter((m)=>m <= 8));
-    const highDensitySlots = override ? override.high : getValidSlots(modules.filter((m)=>m >= 16));
-    const density = isV2 && memory === "desktop" ? "no" : standardSlots.length === 0 && highDensitySlots.length > 0 ? "yes" : highDensitySlots.length === 0 && standardSlots.length > 0 ? "no" : userDensity;
-    const baseSlotsArray = density === "yes" ? highDensitySlots : standardSlots;
-    const visibleSlotsArray = isV2Special ? [
+    const totalOverrideConfig = genericSlotOverrides[validatedRamSize];
+    const lowDensitySlots = totalOverrideConfig ? totalOverrideConfig.standard : filterSlotsByModuleAvailability(configurationModules.filter((m)=>m <= 8));
+    const highDensitySlots = totalOverrideConfig ? totalOverrideConfig.high : filterSlotsByModuleAvailability(configurationModules.filter((m)=>m >= 16));
+    const calculatedDensity = isPlatformV2 && selectedMemoryType === "desktop" ? "no" : lowDensitySlots.length === 0 && highDensitySlots.length > 0 ? "yes" : highDensitySlots.length === 0 && lowDensitySlots.length > 0 ? "no" : userDensity ?? "no";
+    const densityFilteredSlots = calculatedDensity === "yes" ? highDensitySlots : lowDensitySlots;
+    const finalVisibleSlots = isV2SpecialSize ? [
         2,
         3
-    ] : baseSlotsArray.length > 0 ? baseSlotsArray : standardSlots.length > 0 ? standardSlots : [
+    ] : densityFilteredSlots.length > 0 ? densityFilteredSlots : lowDensitySlots.length > 0 ? lowDensitySlots : [
         2
     ];
-    const currentSlotNum = Number(userSlot?.replace("slots", "")) || 2;
-    const validSlotNum = visibleSlotsArray.includes(currentSlotNum) ? currentSlotNum : visibleSlotsArray[0];
-    const slot = `slots${validSlotNum}`;
-    const currentCpu = cpuList.some((m)=>m.name === userCpu) ? userCpu : cpuList[0]?.name ?? "";
-    const isSpecialConfig = board === "matx" && (isV3 || isV4) && memory === "desktop" && density === "no" && (finalRamSize === 16 && validSlotNum === 2 || finalRamSize === 32 && validSlotNum === 4);
-    const updatedHistory = {
+    const currentSlotNumber = Number(userSlot?.replace("slots", "")) || 2;
+    const verifiedSlotNumber = finalVisibleSlots.includes(currentSlotNumber) ? currentSlotNumber : finalVisibleSlots[0] ?? 2;
+    const verifiedSlotKey = `slots${verifiedSlotNumber}`;
+    const validatedCpu = cpuList.some((m)=>m.name === activeCpu) ? activeCpu : cpuList[0]?.name ?? "";
+    const isSpecialMotherboardConfig = board === "matx" && (isPlatformV3 || isPlatformV4) && selectedMemoryType === "desktop" && calculatedDensity === "no" && (validatedRamSize === 16 && verifiedSlotNumber === 2 || validatedRamSize === 32 && verifiedSlotNumber === 4);
+    const updatedPlatformHistory = {
         ...history,
         [gen]: {
-            cpu: currentCpu,
-            ramSize: finalRamSize
+            cpu: validatedCpu,
+            ramSize: validatedRamSize
         }
     };
-    const uiMemoryTypes = {
+    const formattedMemoryTypesUi = {
         desktop: true,
-        ecc: finalRamSize !== 6
+        ecc: validatedRamSize !== 6
     };
     return {
         ...state,
-        ramSize: finalRamSize,
-        memory,
-        density,
-        slot,
-        isSpecialConfig,
-        ramType,
-        isDdr4,
-        isV2,
-        isV3,
-        isV4,
-        isEcc,
-        typeKey,
-        cpu: currentCpu,
-        isSelectionRequired: finalRamSize >= 16 && finalRamSize <= 32 && !(isV2 && memory === "desktop"),
+        ramSize: validatedRamSize,
+        memory: selectedMemoryType,
+        density: calculatedDensity,
+        slot: verifiedSlotKey,
+        isSpecialConfig: isSpecialMotherboardConfig,
+        ramType: ramTypeLabel,
+        isDdr4: isDdr4Type,
+        isV2: isPlatformV2,
+        isV3: isPlatformV3,
+        isV4: isPlatformV4,
+        isEcc: isEccEnabled,
+        typeKey: ramTypeKey,
+        cpu: validatedCpu,
+        isSelectionRequired: validatedRamSize >= 16 && validatedRamSize <= 32 && !(isPlatformV2 && selectedMemoryType === "desktop"),
         cpuModels: cpuList,
-        visibleSlots: visibleSlotsArray.reduce((acc, num)=>({
+        visibleSlots: finalVisibleSlots.reduce((acc, num)=>({
                 ...acc,
                 [`slots${num}`]: true
             }), {}),
-        memoryTypes: uiMemoryTypes,
+        memoryTypes: formattedMemoryTypesUi,
         channelsName: [
             "Single",
             "Dual",
             "Triple",
             "Quad"
-        ][Math.min(validSlotNum - 1, 3)] ?? "Single",
-        ramSizes: currentRamSizes,
-        history: updatedHistory,
+        ][Math.min(verifiedSlotNumber - 1, 3)] ?? "Single",
+        ramSizes: supportedRamSizes,
+        history: updatedPlatformHistory,
         userFrequency,
         tCL,
         tRP,
@@ -33334,7 +33203,8 @@ const memoryConfiguration = (state, changedKey)=>{
         tRRD,
         tRTP,
         tWTR,
-        tCR
+        tCR,
+        tRFC
     };
 };
 exports.default = memoryConfiguration;
@@ -33544,10 +33414,13 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "toEven", ()=>toEven);
 const toEven = (value)=>Math.round(value / 2) * 2;
 const ramFrequency = (state)=>{
-    const { cpu, cpuModels, isDdr4 } = state;
-    const currentModel = cpuModels?.find((m)=>m.name === cpu) ?? cpuModels?.[0];
+    const { cpu, cpuModels, isDdr4, userFrequency } = state;
+    if (userFrequency !== undefined && userFrequency !== "") return {
+        frequency: Number(userFrequency)
+    };
+    const currentCpuModel = cpuModels?.find((model)=>model.name === cpu) ?? cpuModels?.[0];
     return {
-        frequency: currentModel?.maxFreq ?? (isDdr4 ? 2133 : 1866)
+        frequency: currentCpuModel?.maxFreq ?? (isDdr4 ? 2133 : 1866)
     };
 };
 exports.default = ramFrequency;
@@ -33558,44 +33431,36 @@ parcelHelpers.defineInteropFlag(exports);
 var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 var _ramFrequency = require("./ramFrequency");
 const PrimaryTimings = (state, frequency)=>{
-    const { preset, ramSize, slot, density, board, isEcc, isDdr4, isV4, isV3, isV2, tCL: sCL, tRCD: sRCD, tRP: sRP, tRAS: sRAS, tRC: sRC } = state;
+    const { preset, ramSize, slot, density, board, isEcc, isDdr4, isV4, isV3, isV2, tCL, tRCD, tRP, tRAS, tRC } = state;
     const slotsCount = Number(slot?.replace("slots", "")) || 2;
     const loadScore = Math.floor(ramSize / 32) * 2 + (slotsCount > 2 ? 1 : 0) + (density === "yes" ? 2 : 0) + (board === "matx" ? 1 : 0) + (isEcc ? 1 : 0);
-    // 1. Ветка ULTRA (вычисляется в линейном стиле)
-    const divider = isV4 ? 4 : isDdr4 ? 2 : 3;
-    const baseUltra = isV4 ? 11 : isDdr4 ? 12 : (0, _memoryPresets.ULTRA_PRESET)?.tCL ?? 11;
-    const ultraTiming = baseUltra + Math.floor(loadScore / divider);
-    const ultraTras = (0, _ramFrequency.toEven)(ultraTiming * 2);
-    // 2. Ветка STANDART / CUSTOM
-    const currentPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.[preset === "custom" ? "safe" : preset] ?? (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.safe ?? (0, _memoryPresets.MEMORY_PRESETS)?.safe ?? {};
-    const v4Offset = isV4 && frequency >= 2133 ? 2 : 0;
-    // Хелпер расчета тайминга (с поддержкой кастомного ввода параметров)
-    const calc = (userVal, presetVal)=>preset === "custom" && userVal !== undefined && userVal !== "" ? Number(userVal) : isDdr4 ? Math.max((presetVal ?? 15) - v4Offset, 11) : (presetVal ?? 15) - v4Offset;
-    const stdCL = calc(sCL, currentPreset.tCL);
-    const stdRCD = calc(sRCD, currentPreset.tRCD);
-    const stdRP = calc(sRP, currentPreset.tRP);
-    // Вычисляем базовое автоматическое значение tRAS
-    const autoTras = (0, _ramFrequency.toEven)(stdCL + stdRCD + (isV2 ? 4 : 2));
-    // Если в режиме custom пользователь ввел tRAS вручную — берем его, иначе автоматическое
-    const stdTras = preset === "custom" && sRAS !== undefined && sRAS !== "" ? Number(sRAS) : autoTras;
-    // Вычисляем базовое автоматическое значение tRC
-    const autoTrc = isDdr4 ? Math.max(isV3 || isV4 ? (0, _ramFrequency.toEven)(stdTras + 4) : stdCL + stdRCD + stdRP, 34) : isV3 || isV4 ? (0, _ramFrequency.toEven)(stdTras + 4) : stdCL + stdRCD + stdRP;
-    // Если в режиме custom пользователь ввел tRC вручную — берем его, иначе автоматическое
-    const stdTrc = preset === "custom" && sRC !== undefined && sRC !== "" ? Number(sRC) : autoTrc;
-    // 3. Финальный маппинг результата через один тернарный оператор
+    const totalDivider = isV4 ? 4 : isDdr4 ? 2 : 3;
+    const baseUltraValue = isV4 ? 11 : isDdr4 ? 12 : (0, _memoryPresets.ULTRA_PRESET)?.tCL ?? 11;
+    const ultraTimingValue = baseUltraValue + Math.floor(loadScore / totalDivider);
+    const ultraTrasValue = (0, _ramFrequency.toEven)(ultraTimingValue * 2);
+    const currentPresetData = (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.[preset === "custom" ? "safe" : preset] ?? (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.safe ?? (0, _memoryPresets.MEMORY_PRESETS)?.safe ?? {};
+    const v4OffsetModifier = isV4 && frequency >= 2133 ? 2 : 0;
+    const calculatePrimaryValue = (userInputValue, presetDefaultValue)=>preset === "custom" && userInputValue !== undefined && userInputValue !== "" ? Number(userInputValue) : isDdr4 ? Math.max((presetDefaultValue ?? 15) - v4OffsetModifier, 11) : (presetDefaultValue ?? 15) - v4OffsetModifier;
+    const calculatedCL = calculatePrimaryValue(tCL, currentPresetData.tCL);
+    const calculatedRCD = calculatePrimaryValue(tRCD, currentPresetData.tRCD);
+    const calculatedRP = calculatePrimaryValue(tRP, currentPresetData.tRP);
+    const automaticTras = (0, _ramFrequency.toEven)(calculatedCL + calculatedRCD + (isV2 ? 4 : 2));
+    const finalTras = preset === "custom" && tRAS !== undefined && tRAS !== "" ? Number(tRAS) : automaticTras;
+    const automaticTrc = isDdr4 ? Math.max(isV3 || isV4 ? (0, _ramFrequency.toEven)(finalTras + 4) : calculatedCL + calculatedRCD + calculatedRP, 34) : isV3 || isV4 ? (0, _ramFrequency.toEven)(finalTras + 4) : calculatedCL + calculatedRCD + calculatedRP;
+    const finalTrc = preset === "custom" && tRC !== undefined && tRC !== "" ? Number(tRC) : automaticTrc;
     return preset === "ultra" ? {
-        tCL: ultraTiming,
-        tRCD: ultraTiming,
-        tRP: ultraTiming,
-        tRAS: ultraTras,
+        tCL: ultraTimingValue,
+        tRCD: ultraTimingValue,
+        tRP: ultraTimingValue,
+        tRAS: ultraTrasValue,
         loadScore,
-        tRC: isV3 || isV4 ? (0, _ramFrequency.toEven)(ultraTras + 4) : ultraTiming * 3
+        tRC: isV3 || isV4 ? (0, _ramFrequency.toEven)(ultraTrasValue + 4) : ultraTimingValue * 3
     } : {
-        tCL: stdCL,
-        tRCD: stdRCD,
-        tRP: stdRP,
-        tRAS: stdTras,
-        tRC: stdTrc,
+        tCL: calculatedCL,
+        tRCD: calculatedRCD,
+        tRP: calculatedRP,
+        tRAS: finalTras,
+        tRC: finalTrc,
         loadScore
     };
 };
@@ -33888,29 +33753,43 @@ parcelHelpers.defineInteropFlag(exports);
 var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 var _ramFrequency = require("./ramFrequency");
 const SubTimings = (state, primaries, frequency)=>{
-    const { preset, ramSize, slot, density, board, isSpecialConfig, gen, isDdr4, typeKey, isEcc, tWR: sWR, tREFI: sREFI, tRRD: sRRD, tRTP: sRTP, tWTR: sWTR } = state;
+    const { preset, ramSize, slot, density, board, isSpecialConfig, gen, isDdr4, typeKey, isEcc, tWR: sWR, tREFI: sREFI, tRRD: sRRD, tRTP: sRTP, tWTR: sWTR, tCWL: sCWL, tRFC: sRFC, userFrequency, frequency: baseFrequency } = state;
+    const currentFrequency = Number(userFrequency || frequency || baseFrequency || 1866);
     const slotsCount = Number(slot?.replace("slots", "")) || 2;
-    const isHighCap = ramSize / Math.max(1, slotsCount) >= 12 || ramSize >= 32;
-    const freqPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.safe || (0, _memoryPresets.MEMORY_PRESETS)?.safe;
+    const isHighCapacity = ramSize / Math.max(1, slotsCount) >= 12 || ramSize >= 32;
+    const freqPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[currentFrequency]?.safe || (0, _memoryPresets.MEMORY_PRESETS)?.safe;
     const base = (0, _memoryPresets.PROFILE_SUBTIMINGS)?.[preset]?.[typeKey] || {};
-    const hPen = (0, _memoryPresets.PENALTIES)?.highCapacity?.[typeKey] || {};
-    const ePen = (0, _memoryPresets.PENALTIES)?.ecc?.[typeKey] || {};
-    const autoFAW = (0, _ramFrequency.toEven)((base.tFAW ?? freqPreset?.tFAW ?? 24) + (isHighCap ? hPen.tFAW ?? 0 : 0) + (isEcc ? ePen.tFAW ?? 0 : 0));
+    const highCapacityPenalty = (0, _memoryPresets.PENALTIES)?.highCapacity?.[typeKey] || {};
+    const eccPenalty = (0, _memoryPresets.PENALTIES)?.ecc?.[typeKey] || {};
+    const autoFAW = (0, _ramFrequency.toEven)((base.tFAW ?? freqPreset?.tFAW ?? 24) + (isHighCapacity ? highCapacityPenalty.tFAW ?? 0 : 0) + (isEcc ? eccPenalty.tFAW ?? 0 : 0));
     const tFAW = autoFAW;
-    const autoWR = (0, _ramFrequency.toEven)((base.tWR ?? freqPreset?.tWR ?? 12) + (isHighCap ? hPen.tWR ?? 0 : 0) + (isEcc ? ePen.tWR ?? 0 : 0));
+    const autoWR = (0, _ramFrequency.toEven)((base.tWR ?? freqPreset?.tWR ?? 12) + (isHighCapacity ? highCapacityPenalty.tWR ?? 0 : 0) + (isEcc ? eccPenalty.tWR ?? 0 : 0));
     const tWR = preset === "custom" && sWR !== undefined && sWR !== "" ? Number(sWR) : autoWR;
-    const autoRRD = (base.tRRD ?? freqPreset?.tRRD ?? 4) + (isHighCap ? hPen.tRRD ?? 0 : 0) + (isEcc ? ePen.tRRD ?? 0 : 0);
+    const autoRRD = (base.tRRD ?? freqPreset?.tRRD ?? 4) + (isHighCapacity ? highCapacityPenalty.tRRD ?? 0 : 0) + (isEcc ? eccPenalty.tRRD ?? 0 : 0);
     const tRRD = preset === "custom" && sRRD !== undefined && sRRD !== "" ? Number(sRRD) : autoRRD;
-    const autoWTR = (base.tWTR ?? freqPreset?.tWTR ?? 6) + (isHighCap ? hPen.tWTR ?? 0 : 0);
+    const autoWTR = (base.tWTR ?? freqPreset?.tWTR ?? 6) + (isHighCapacity ? highCapacityPenalty.tWTR ?? 0 : 0);
     const tWTR = preset === "custom" && sWTR !== undefined && sWTR !== "" ? Number(sWTR) : autoWTR;
-    const autoRTP = (base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? ePen.tRTP ?? 0 : 0);
+    const autoRTP = (base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? eccPenalty.tRTP ?? 0 : 0);
     const tRTP = preset === "custom" && sRTP !== undefined && sRTP !== "" ? Number(sRTP) : autoRTP;
     const profileKey = preset === "custom" || preset === "ultra" ? "safe" : preset;
     const autoREFI = (0, _memoryPresets.TREFI_TABLE)?.[preset === "ultra" ? "ultra" : profileKey]?.[gen] ?? (0, _memoryPresets.TREFI_TABLE)?.safe?.[gen] ?? 7800;
     const tREFI = preset === "custom" && sREFI !== undefined && sREFI !== "" ? Number(sREFI) : autoREFI;
     const stabilityBonus = (Math.floor((ramSize - 8) / 8) * 10 + slotsCount * 12 - 12 + (density === "yes" ? 48 : 0) + (isEcc ? isDdr4 ? 24 : 40 : -12) + (board === "matx" ? 16 : 0)) * (isDdr4 ? 1 : 1.35);
-    const tRFC = preset === "ultra" ? (0, _ramFrequency.toEven)((isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET)?.tRFC ?? 180) + stabilityBonus * (isDdr4 ? 0.8 : 0.6)) : isSpecialConfig ? (0, _memoryPresets.SPECIAL_PRESETS)?.[profileKey]?.tRFC ?? (0, _memoryPresets.SPECIAL_PRESETS)?.safe?.tRFC ?? 260 : preset === "custom" && primaries ? (0, _ramFrequency.toEven)((primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) + stabilityBonus) : (0, _ramFrequency.toEven)(((0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.[profileKey]?.tRFC || (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.safe?.tRFC || (isDdr4 ? 312 : 240)) + stabilityBonus);
+    const autoRFC = preset === "ultra" ? (0, _ramFrequency.toEven)((isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET)?.tRFC ?? 180) + stabilityBonus * (isDdr4 ? 0.8 : 0.6)) : isSpecialConfig ? (0, _memoryPresets.SPECIAL_PRESETS)?.[profileKey]?.tRFC ?? (0, _memoryPresets.SPECIAL_PRESETS)?.safe?.tRFC ?? 260 : preset === "custom" && primaries ? (0, _ramFrequency.toEven)((primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) + stabilityBonus) : (0, _ramFrequency.toEven)(((0, _memoryPresets.MEMORY_PRESETS)?.[currentFrequency]?.[profileKey]?.tRFC || (0, _memoryPresets.MEMORY_PRESETS)?.[currentFrequency]?.safe?.tRFC || (isDdr4 ? 312 : 240)) + stabilityBonus);
+    const tRFC = preset === "custom" && sRFC !== undefined && sRFC !== "" ? Number(sRFC) : autoRFC;
     const limitValue = isSpecialConfig && preset !== "ultra" ? (0, _memoryPresets.SPECIAL_LIMITS)?.[profileKey] ?? (0, _ramFrequency.toEven)(tRFC * 0.92) : (0, _ramFrequency.toEven)(tRFC * (preset === "ultra" ? 0.9 : 0.92));
+    const currentCL = state.tCL !== undefined && state.tCL !== "" ? Number(state.tCL) : primaries?.tCL ?? (isDdr4 ? 16 : 40);
+    const option1 = currentCL;
+    const option2 = isDdr4 ? currentCL - 2 : currentCL - 4;
+    const option3 = isDdr4 ? Math.max(9, Math.floor(currentFrequency / 400)) : Math.max(20, Math.floor(currentFrequency / 150));
+    const sortedCwlOptions = [
+        option1,
+        option2,
+        option3
+    ].sort((a, b)=>a - b);
+    const medianCwlValue = sortedCwlOptions[1];
+    const autoCWL = (0, _ramFrequency.toEven)(base.tCWL ?? freqPreset?.tCWL ?? medianCwlValue);
+    const tCWL = preset === "custom" && sCWL !== undefined && sCWL !== "" ? Number(sCWL) : autoCWL;
     return {
         tRFC,
         tFAW,
@@ -33919,6 +33798,7 @@ const SubTimings = (state, primaries, frequency)=>{
         tRTP,
         tWTR,
         tREFI,
+        tCWL,
         tRFC_Values: {
             current: tRFC,
             limitValue
@@ -33933,27 +33813,125 @@ $RefreshReg$(_c, "SubTimings");
 },{"../../RamConfiguration/data/memoryPresets":"6HYNE","./ramFrequency":"9XM1p","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bN4wa":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const ramPerformance = (state, frequency, primaries)=>{
-    const { ramSize, slot, isDdr4, preset, board, tCR: sCR } = state;
-    const { tCL, tRC } = primaries || {};
+const ramPerformance = (state, frequency)=>{
+    const { ramSize, slot, isDdr4, preset, tCR: userCommandRate } = state;
     const slotsCount = Number(slot?.replace("slots", "")) || 2;
-    const channels = Math.min(slotsCount, 4);
-    const bandwidthGbps = Math.round(frequency * 8 * channels / 1024) || 0;
-    const voltage = isDdr4 ? preset === "ultra" ? "1.30V" : preset === "aggressive" ? "1.25V" : "1.20V" : preset === "ultra" || preset === "aggressive" ? "1.55V" : "1.50V";
-    const autoCR = ramSize >= 128 || slotsCount >= 4 ? "2N" : "1N";
-    const tCP = preset === "custom" && sCR !== undefined && sCR !== "" ? sCR : autoCR;
+    const memoryChannels = Math.min(slotsCount, 4);
+    const bandwidthGbps = Math.round(frequency * 8 * memoryChannels / 1024) || 0;
+    const operationalVoltage = isDdr4 ? preset === "ultra" ? "1.30V" : preset === "aggressive" ? "1.25V" : "1.20V" : preset === "ultra" || preset === "aggressive" ? "1.55V" : "1.50V";
+    const automaticCommandRate = ramSize >= 128 || slotsCount >= 4 ? "2N" : "1N";
+    const finalCommandRate = preset === "custom" && userCommandRate !== undefined && userCommandRate !== "" ? userCommandRate : automaticCommandRate;
     return {
-        voltage,
-        tCP,
-        tRC,
-        tCWL: isDdr4 && tCL % 2 === 0 ? tCL : tCL - 1,
+        voltage: operationalVoltage,
+        tCP: finalCommandRate,
         bandwidth: `${bandwidthGbps} GB/s`,
         freq: `${frequency} MHz`
     };
 };
 exports.default = ramPerformance;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8ud8y":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"4wZVh":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$2a73 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$2a73.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2a73.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _biosInputModuleCss = require("./BiosInput.module.css");
+var _biosInputModuleCssDefault = parcelHelpers.interopDefault(_biosInputModuleCss);
+var _s = $RefreshSig$();
+const BiosInput = ({ field, state = {}, update, isFirst })=>{
+    _s();
+    const inputRef = (0, _react.useRef)(null);
+    const isFrequencyField = field === "userFrequency";
+    const getMinimumLimitValue = ()=>{
+        if (isFrequencyField) return 800;
+        if (field === "tRFC") return 60;
+        if (field === "tCL") return 8;
+        return 4;
+    };
+    const minimumLimit = getMinimumLimitValue();
+    const rawValue = state[field] !== undefined ? String(state[field]) : "";
+    const numericValue = parseInt(rawValue, 10) || 0;
+    (0, _react.useEffect)(()=>{
+        if (isFirst) inputRef.current?.focus();
+    }, [
+        isFirst
+    ]);
+    const setParamValue = (newValue)=>update?.(field, String(newValue));
+    const handleKeyDown = (e)=>{
+        if (e.key === "ArrowUp") {
+            e.preventDefault();
+            setParamValue(numericValue + (isFrequencyField ? 133 : field === "tRFC" ? 8 : 1));
+        }
+        if (e.key === "ArrowDown") {
+            e.preventDefault();
+            setParamValue(Math.max(numericValue - (isFrequencyField ? 133 : field === "tRFC" ? 8 : 1), minimumLimit));
+        }
+        if (e.key === "Enter") {
+            e.preventDefault();
+            const container = e.currentTarget.closest("ul") || document;
+            const inputs = Array.from(container.querySelectorAll(`.${(0, _biosInputModuleCssDefault.default).bios_input}`));
+            const nextInput = inputs[inputs.indexOf(e.currentTarget) + 1];
+            if (nextInput) nextInput.focus();
+            else e.currentTarget.blur();
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+        className: (0, _biosInputModuleCssDefault.default).input_wrapper,
+        children: [
+            "[",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                ref: inputRef,
+                type: "text",
+                inputMode: "numeric",
+                pattern: "[0-9]*",
+                className: (0, _biosInputModuleCssDefault.default).bios_input,
+                value: rawValue,
+                placeholder: "--",
+                onFocus: (e)=>e.target.select(),
+                onBlur: ()=>{
+                    if (rawValue === "" || numericValue < minimumLimit) setParamValue(minimumLimit);
+                },
+                onChange: (e)=>{
+                    const val = e.target.value;
+                    if (val === "" || /^\d*$/.test(val)) setParamValue(val);
+                },
+                onKeyDown: handleKeyDown
+            }, void 0, false, {
+                fileName: "src/components/BiosInput/BiosInput.jsx",
+                lineNumber: 65,
+                columnNumber: 7
+            }, undefined),
+            "]"
+        ]
+    }, void 0, true, {
+        fileName: "src/components/BiosInput/BiosInput.jsx",
+        lineNumber: 63,
+        columnNumber: 5
+    }, undefined);
+};
+_s(BiosInput, "cBQ6FQ+sf5H+lvNONLKqtm4aeQ8=");
+_c = BiosInput;
+exports.default = BiosInput;
+var _c;
+$RefreshReg$(_c, "BiosInput");
+
+  $parcel$ReactRefreshHelpers$2a73.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./BiosInput.module.css":"6bn1I","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6bn1I":[function(require,module,exports,__globalThis) {
+module.exports["bios_input"] = `CWsxPG_bios_input`;
+
+},{}],"8ud8y":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$6a86 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$6a86.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -34805,18 +34783,16 @@ $RefreshReg$(_c, "ThermalConfiguration");
 },{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./ThermalBios":"9Nubf","./ThermalInfo":"hxp7s","./ThermalTools":"n3Cvf","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"9Nubf":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const ThermalBios = ()=>{
-    return {
-        title: "Memory Thermal Configuration",
-        path: "IntelRCSetup > Memory Thermal",
+const ThermalBios = ()=>({
+        title: "MEMORY THERMAL CONFIGURATION",
+        path: "INTELRCSETUP > MEMORY CONFIGURATION > MEMORY THERMAL",
         content: [
             {
                 text_left: "Memory Power Savings Mode",
                 text_right: "Disabled"
             }
         ]
-    };
-};
+    });
 _c = ThermalBios;
 exports.default = ThermalBios;
 var _c;
@@ -35178,10 +35154,9 @@ $RefreshReg$(_c, "USBConfiguration");
 },{"react/jsx-dev-runtime":"dVPUn","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./USBBios":"cSwWr","./USBInfo":"9QOld","./USBTools":"DlAZj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"cSwWr":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const USBBios = ()=>{
-    return {
-        title: "USB Configuration",
-        path: "Advanced > USB Configuration",
+const USBBios = ()=>({
+        title: "USB CONFIGURATION",
+        path: "ADVANCED > USB CONFIGURATION",
         content: [
             {
                 text_left: "Legacy USB Support",
@@ -35216,8 +35191,7 @@ const USBBios = ()=>{
                 text_right: "Auto"
             }
         ]
-    };
-};
+    });
 _c = USBBios;
 exports.default = USBBios;
 var _c;
