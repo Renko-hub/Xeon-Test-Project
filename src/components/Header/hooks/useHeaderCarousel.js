@@ -5,9 +5,13 @@ const useHeaderCarousel = (activeClass, itemClass) => {
 
   useEffect(() => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) {
+      return;
+    }
 
-    if (window.innerWidth > 768) return;
+    if (window.innerWidth > 768) {
+      return;
+    }
 
     const centerElement = (element) => {
       const containerHeight = container.clientHeight;
