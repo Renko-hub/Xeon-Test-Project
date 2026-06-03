@@ -70,7 +70,7 @@
     scroll-behavior: smooth;
     gap: 0;
     padding: 0 10px;
-    max-height: 120px;
+    max-height: 160px;
     overscroll-behavior-y: contain;
     scrollbar-width: none;
   }
@@ -89,11 +89,14 @@
     padding: 0;
     font-size: 11px;
     white-space: nowrap;
+    color: #aaa;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
     transition:
       color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-      border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.15s ease-out,
+      opacity 0.15s ease-out;
   }
 
   .header__link_active {
