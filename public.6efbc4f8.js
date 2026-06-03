@@ -29054,7 +29054,7 @@ const DRAMBios = ({ ramType = "ecc" } = {})=>{
     const isDesktop = ramType === "desktop";
     return {
         title: "DRAM RAPL CONFIGURATION",
-        path: "INTELRCSETUP > DRAM RAPL CONFIGURATION",
+        path: "INTELRCSETUP > ADVANCED POWER MANAGEMENT CONFIGURATION > DRAM RAPL CONFIGURATION",
         content: isDesktop ? [
             {
                 text_left: "DRAM RAPL Baseline",
@@ -29962,7 +29962,7 @@ const FivrBios = ({ cpuGen = "V3" } = {})=>{
     const isV4 = cpuGen === "V4";
     return {
         title: "FIVR CONFIGURATION",
-        path: "CHIPSET > OVERCLOCKING FEATURE",
+        path: "INTELRCSETUP > OVERCLOCKING FEATURE > SVID/FIVR",
         content: isV4 ? [
             {
                 text_left: "SVID Support",
