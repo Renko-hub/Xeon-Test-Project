@@ -20,7 +20,8 @@ const RamBios = (param = {}) => {
   let formattedRfc = rawRfcFormatted;
 
   if (isCustomMode) {
-    formattedRfc = rawRfcFormatted.split(/[ (\s]/);
+    const match = rawRfcFormatted.match(/^\d+/);
+    formattedRfc = match ? match[0] : getValue("tRFC");
   } else {
     const labelType = config.preset === "ultra" ? "LIMIT" : "IDEAL";
     formattedRfc =
@@ -72,7 +73,7 @@ const RamBios = (param = {}) => {
       ({ label, value, isEditable = false, field, isFirst }) => ({
         text_left: label,
         text_right: value,
-        isEditable,
+        isEditable: !!isEditable,
         field,
         isFirst,
       }),

@@ -1,9 +1,8 @@
 const AdvancedBios = ({ cpuGen = "V3" }) => {
-  // Определяем значение для Uncore Max CLR Freq на основе выбранного поколения CPU
   let uncoreLimit = "26";
   if (cpuGen === "V2") {
     uncoreLimit = "24";
-  } // Стабильное базовое значение из диапазона 24-28
+  }
   if (cpuGen === "V4") {
     uncoreLimit = "56";
   }
@@ -30,43 +29,35 @@ const AdvancedBios = ({ cpuGen = "V3" }) => {
       },
       {
         text_left: "Uncore Max CLR Freq",
-        text_right: uncoreLimit, // Динамически меняется: 24, 26 или 56
-        isEditable: true,
+        text_right: uncoreLimit,
       },
       {
         text_left: "CPU P State Control",
         text_right: "",
-        isEditable: true,
       },
       {
         text_left: "CPU HWPM State Control",
         text_right: "",
-        isEditable: true,
       },
       {
         text_left: "CPU C State Control",
         text_right: "",
-        isEditable: true,
       },
       {
         text_left: "CPU T State Control",
         text_right: "",
-        isEditable: true,
       },
       {
         text_left: "CPU - Advanced PM Tuning",
         text_right: "",
-        isEditable: true,
       },
       {
         text_left: "SOCKET RAPL Config",
         text_right: "",
-        isEditable: true,
       },
       {
         text_left: "DRAM RAPL Configuration",
         text_right: "",
-        isEditable: true,
       },
     ],
   };

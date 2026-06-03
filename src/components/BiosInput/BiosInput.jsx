@@ -5,7 +5,23 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
   const inputRef = useRef(null);
   const isFreq = field === "userFrequency";
 
+  const getMinLimit = () => {
+    if (isFreq) {
+      return 800;
+    }
+    if (field === "tRFC") {
+      return 60;
+    }
+    if (field === "tCL") {
+      return 8;
+    }
+    return 4;
+  };
+
+  const minLimit = getMinLimit();
+
   let rawValue = state[field] !== undefined ? String(state[field]) : "";
+
   if (isFreq && rawValue === "") {
     rawValue = String(state["frequency"] || 1866);
   }
@@ -22,15 +38,24 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
 
   const handleKeyDown = (e) => {
     if (e.key === "ArrowUp") {
-      setParamValue(numericValue + (isFreq ? 133 : 1));
+      e.preventDefault();
+      setParamValue(numericValue + (isFreq ? 133 : field === "tRFC" ? 8 : 1));
     }
     if (e.key === "ArrowDown") {
-      const minLimit = isFreq ? 800 : 6;
-      setParamValue(Math.max(numericValue - (isFreq ? 133 : 1), minLimit));
+      e.preventDefault();
+      setParamValue(
+        Math.max(
+          numericValue - (isFreq ? 133 : field === "tRFC" ? 8 : 1),
+          minLimit,
+        ),
+      );
     }
     if (e.key === "Enter") {
-      const inputs = Array.from(document.querySelectorAll(`.${s.bios_input}`));
+      e.preventDefault();
+      const container = e.currentTarget.closest("ul") || document;
+      const inputs = Array.from(container.querySelectorAll(`.${s.bios_input}`));
       const next = inputs[inputs.indexOf(e.currentTarget) + 1];
+
       if (next) {
         next.focus();
       } else {
@@ -52,7 +77,6 @@ const BiosInput = ({ field, state = {}, update, isFirst }) => {
         placeholder="--"
         onFocus={(e) => e.target.select()}
         onBlur={() => {
-          const minLimit = isFreq ? 800 : 6;
           if (rawValue === "" || numericValue < minLimit) {
             setParamValue(minLimit);
           }
