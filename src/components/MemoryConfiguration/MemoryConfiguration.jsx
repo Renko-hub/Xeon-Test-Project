@@ -1,21 +1,22 @@
 import { useState } from "react";
 import BiosWindow from "../BiosWindow/BiosWindow";
 import Toolbox from "../Toolbox/Toolbox";
-import BiosData from "./AdvancedBios";
-import Info from "./AdvancedInfo";
-import Tools from "./AdvancedTools";
+import BiosData from "./MemoryBios";
+import Info from "./MemoryInfo";
+import Tools from "./MemoryTools";
 
-const AdvancedConfiguration = ({ selectedButton = "V3" }) => {
-  const [param, setParam] = useState({ cpuGen: selectedButton });
+const MemoryConfiguration = () => {
+  const [param, setParam] = useState({ memoryType: "desktop" });
 
   return (
     <>
       <Toolbox
-        title="ADVANCED POWER CONFIGURATION"
-        toolsLabel="НАСТРОЙКА ПИТАНИЯ"
+        title="INTEGRATED MEMORY CONTROLLER"
+        toolsLabel="НАСТРОЙКА ПАМЯТИ"
         renderInfo={Info}
-        renderTools={(props) => (
-          <Tools {...props} param={param} setParam={setParam} />
+        // Принимаем { styles } от талбокса и пробрасываем их дальше вместе со стейтами
+        renderTools={({ styles }) => (
+          <Tools styles={styles} param={param} setParam={setParam} />
         )}
       />
 
@@ -24,4 +25,4 @@ const AdvancedConfiguration = ({ selectedButton = "V3" }) => {
   );
 };
 
-export default AdvancedConfiguration;
+export default MemoryConfiguration;

@@ -13,6 +13,15 @@ const Header = () => (
       >
         Xeon Ram Tool
       </NavLink>
+      {/* Название строго по имени папки и компонента */}
+      <NavLink
+        to="/memory"
+        className={({ isActive }) =>
+          clsx(s.header__link, isActive && s.header__link_active)
+        }
+      >
+        Memory Configuration
+      </NavLink>
       <NavLink
         to="/dram"
         className={({ isActive }) =>
@@ -29,7 +38,6 @@ const Header = () => (
       >
         Memory Thermal
       </NavLink>
-      {/* Добавленная вкладка для конфигурации FIVR процессора */}
       <NavLink
         to="/fivr"
         className={({ isActive }) =>

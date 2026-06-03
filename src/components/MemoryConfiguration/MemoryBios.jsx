@@ -1,75 +1,53 @@
-const AdvancedBios = ({ cpuGen = "V3" }) => {
-  // Определяем значение для Uncore Max CLR Freq на основе выбранного поколения CPU
-  let uncoreLimit = "26";
-  if (cpuGen === "V2") {
-    uncoreLimit = "24";
-  } // Стабильное базовое значение из диапазона 24-28
-  if (cpuGen === "V4") {
-    uncoreLimit = "56";
-  }
+const MemoryBios = ({ memoryType = "desktop" }) => {
+  const isEcc = memoryType === "ecc";
 
   return {
-    title: "Advanced Power Management Configuration",
-    path: "IntelRCSetup > Advanced Power Management Configuration",
+    title: "Integrated Memory Controller (IMC) Configuration",
+    path: "IntelRCSetup > Integrated Memory Controller (IMC)",
     content: [
       {
-        text_left: "Power Technology",
-        text_right: "Custom",
+        text_left: "Enforce POR",
+        text_right: "Disabled",
+        isDisabled: true, // Становится серым на интерфейсе
       },
       {
-        text_left: "Config TDP",
-        text_right: "Disable",
+        text_left: "PPR Type",
+        text_right: "PPR Disabled",
+        isDisabled: true, // Становится серым на интерфейсе
       },
       {
-        text_left: "IOTG Setting",
-        text_right: "Disable",
+        text_left: "Dram Maintenance Test Inversion",
+        text_right: "Disabled",
+        isDisabled: true, // Становится серым на интерфейсе
       },
       {
-        text_left: "Uncore CLR Freq OVRD",
-        text_right: "MANUAL",
+        text_left: "BCIT",
+        text_right: "Disabled",
+        isDisabled: true, // Становится серым на интерфейсе
       },
       {
-        text_left: "Uncore Max CLR Freq",
-        text_right: uncoreLimit, // Динамически меняется: 24, 26 или 56
-        isEditable: true,
+        text_left: "Data Scrambling",
+        text_right: isEcc ? "Enabled" : "Disabled",
+        // Если выбран desktop — пункт выключен и заблокирован (серый). Если ecc — активен (белый)
+        isDisabled: !isEcc,
       },
       {
-        text_left: "CPU P State Control",
-        text_right: "",
-        isEditable: true,
+        text_left: "Attempt Fast Boot",
+        text_right: "Enable",
+        isDisabled: false, // Горит активным, так как эта опция включена для оптимизации
       },
       {
-        text_left: "CPU HWPM State Control",
-        text_right: "",
-        isEditable: true,
+        text_left: "Attempt Fast Cold Boot",
+        text_right: "Enable",
+        isDisabled: false, // Горит активным, так как эта опция включена для оптимизации
       },
       {
-        text_left: "CPU C State Control",
-        text_right: "",
-        isEditable: true,
-      },
-      {
-        text_left: "CPU T State Control",
-        text_right: "",
-        isEditable: true,
-      },
-      {
-        text_left: "CPU - Advanced PM Tuning",
-        text_right: "",
-        isEditable: true,
-      },
-      {
-        text_left: "SOCKET RAPL Config",
-        text_right: "",
-        isEditable: true,
-      },
-      {
-        text_left: "DRAM RAPL Configuration",
-        text_right: "",
-        isEditable: true,
+        text_left: "PSMI Support",
+        text_right: "Disabled",
+        isDisabled: true, // Становится серым на интерфейсе
       },
     ],
   };
 };
 
-export default AdvancedBios;
+export default MemoryBios;

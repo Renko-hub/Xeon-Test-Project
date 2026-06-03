@@ -5,7 +5,7 @@ import BiosData from "./AdvancedBios";
 import Info from "./AdvancedInfo";
 import Tools from "./AdvancedTools";
 
-const AdvancedConfiguration = ({ selectedButton = "V3" }) => {
+const AdvancedConfiguration = ({ selectedButton = "V2" }) => {
   const [param, setParam] = useState({ cpuGen: selectedButton });
 
   return (

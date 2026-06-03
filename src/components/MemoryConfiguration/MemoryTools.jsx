@@ -1,59 +1,58 @@
+import React from "react";
 import Button from "../Button/Button";
 
-const AdvancedTools = ({ styles: s, param, setParam }) => {
-  const { cpuGen } = param;
+const MemoryTools = ({ styles: s, param, setParam }) => {
+  const { memoryType } = param;
 
   return (
     <div className={s.tools_container}>
-      <div className={s.tools_label}>ПОКОЛЕНИЕ CPU:</div>
+      <div className={s.tools_label}>ТИП ОПЕРАТИВНОЙ ПАМЯТИ:</div>
 
       <div className={s.btn_group}>
-        {["V2", "V3", "V4"].map((type) => (
+        {["desktop", "ecc"].map((type) => (
           <Button
             key={type}
             type={type}
-            isActive={cpuGen === type}
+            isActive={memoryType === type}
             className={s.tools_button}
-            onClick={() => setParam((p) => ({ ...p, cpuGen: type }))}
+            onClick={() => setParam((p) => ({ ...p, memoryType: type }))}
           />
         ))}
       </div>
 
       <div className={s.tools_item}>
-        <span className={s.tools_icon}>⚙️</span>
-        <p className={s.tools_text}>
-          Для <b>V2</b>: максимальный множитель Uncore ограничен на уровне{" "}
-          <b>24–28</b>. Выше этого предела частота кэша физически не поднимется.
-        </p>
-      </div>
-
-      <div className={s.tools_item}>
-        <span className={s.tools_icon}>📈</span>
-        <p className={s.tools_text}>
-          Для <b>V3</b>: оптимальное и стабильное значение — <b>26</b> (2.6
-          ГГц). Это стандартный рабочий лимит для большинства процессоров
-          Haswell-EP.
-        </p>
-      </div>
-
-      <div className={s.tools_item}>
-        <span className={s.tools_icon}>⚡</span>
-        <p className={s.tools_text}>
-          Для <b>V4</b> (Broadwell-EP): архитектура позволяет выставлять лимит
-          до <b>56</b>. Это дает максимальную пропускную способность кольцевой
-          шины.
-        </p>
-      </div>
-
-      <div className={s.tools_item}>
         <span className={s.tools_icon}>⚠️</span>
         <p className={s.tools_text}>
-          Фиксация частоты в режиме <b>MANUAL</b> убирает микрофризы, но
-          завышенные значения приведут к синему экрану (BSOD).
+          Для <b>DESKTOP</b> (UDIMM) модулей функция <b>Data Scrambling</b>{" "}
+          выключается. Это снижает общие задержки (latency) шины памяти.
+        </p>
+      </div>
+
+      <div className={s.tools_item}>
+        <span className={s.tools_icon}>🛡️</span>
+        <p className={s.tools_text}>
+          Для <b>ECC REG</b> серверной памяти скремблирование строго необходимо{" "}
+          <b>включить</b> для гашения перекрестных помех под нагрузкой.
+        </p>
+      </div>
+
+      <div className={s.tools_item}>
+        <span className={s.tools_icon}>🚀</span>
+        <p className={s.tools_text}>
+          Опции <b>Attempt Fast Boot / Cold Boot</b> активны для обоих режимов.
+          Они сокращают время инициализации X99 с 15 минут до пары секунд.
+        </p>
+      </div>
+
+      <div className={s.tools_item}>
+        <span className={s.tools_icon}>🛑</span>
+        <p className={s.tools_text}>
+          Отладочный интерфейс <b>BCIT</b> и мониторинг <b>PSMI</b> полностью
+          отключены, чтобы исключить случайные микрофризы (статтеры) в системе.
         </p>
       </div>
     </div>
   );
 };
 
-export default AdvancedTools;
+export default MemoryTools;
