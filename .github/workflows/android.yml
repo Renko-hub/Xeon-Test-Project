@@ -31,20 +31,20 @@ jobs:
           java-version: "21"
           distribution: "zulu"
 
-      - name: Install Capacitor CLI & Assets Tool
-        run: npm install @capacitor/core @capacitor/cli @capacitor/android @capacitor/assets
+      - name: Install Capacitor CLI
+        run: npm install @capacitor/core @capacitor/cli @capacitor/android
 
       - name: Create Android Project
         run: |
           npx cap init "Xeon Configurator" "com.renkohub.xeontest" --web-dir=dist
           npx cap add android
 
-      # Робот сам создаст нужную структуру папок и сгенерирует иконку на сервере
-      - name: Generate Android Icons Automatically
+      # Прямое копирование иконки в обход косячного генератора ресурсов
+      - name: Inject Custom Android Icon Directly
         run: |
-          mkdir -p assets
-          cp icon.png assets/icon-only.png
-          npx capacitor-assets generate --android --asset-path assets
+          mkdir -p android/app/src/main/res/drawable
+          cp icon.png android/app/src/main/res/drawable/ic_launcher.png
+          sed -i 's/android:icon="@mipmap\/ic_launcher"/android:icon="@drawable\/ic_launcher"/g' android/app/src/main/AndroidManifest.xml
 
       - name: Fix Kotlin Duplicate Classes Conflict
         run: |
