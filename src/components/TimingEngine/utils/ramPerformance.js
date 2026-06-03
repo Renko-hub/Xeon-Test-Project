@@ -3,7 +3,7 @@ const ramPerformance = (state, frequency, primaries) => {
   const { tCL, tRC } = primaries || {};
 
   const slotsCount = Number(slot?.replace("slots", "")) || 2;
-  const channels = Math.min(slotsCount, board === "matx" ? 2 : 4);
+  const channels = Math.min(slotsCount, 4);
   const bandwidthGbps = Math.round((frequency * 8 * channels) / 1024) || 0;
 
   const voltage = isDdr4

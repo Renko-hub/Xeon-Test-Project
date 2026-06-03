@@ -4,23 +4,24 @@ const RamBios = (param = {}) => {
   const { state: config = {}, timings = {} } = timingEngine(param);
   const isCustomMode = config.preset === "custom";
 
-  const ddrSpeed = config.isDdr4 ? "17000" : "14900";
-  const titleText = `${timings.freq ?? ""} ${config.ramType ?? ""}-${ddrSpeed} (${config.channelsName ?? ""}-Channel)`;
+  const slotsCount = Number(config.slot?.replace("slots", "")) || 2;
+  const channelLabels = ["SINGLE", "DUAL", "TRIPLE", "QUAD"];
+  const channels = channelLabels[Math.min(slotsCount - 1, 3)] ?? "SINGLE";
+
+  const bandwidth = timings.bandwidth ?? "0 GB/s";
+  const titleText = `${timings.freqClean ?? ""} MHZ - ${bandwidth} (${channels})`;
 
   const getValue = (field) => {
     const val = timings[field];
     return val !== undefined && val !== null ? String(val) : "";
   };
 
-  // Вычисляем чистое значение tRFC без скобок для ручного ввода
   const rawRfcFormatted = timings.tRfcFormatted ?? getValue("tRFC");
   let formattedRfc = rawRfcFormatted;
 
   if (isCustomMode) {
-    // Для ручного ввода оставляем только первое число, отсекая всё, что идет после пробела или скобки
-    formattedRfc = rawRfcFormatted.split(/[ (\s]/)[0];
+    formattedRfc = rawRfcFormatted.split(/[ (\s]/);
   } else {
-    // Для остальных пресетов подменяем LIMIT или IDEAL в зависимости от ultra
     const labelType = config.preset === "ultra" ? "LIMIT" : "IDEAL";
     formattedRfc =
       rawRfcFormatted.includes("IDEAL") || rawRfcFormatted.includes("LIMIT")

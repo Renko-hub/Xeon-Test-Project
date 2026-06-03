@@ -68,33 +68,36 @@
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    gap: 8px 0;
+    gap: 0;
     padding: 0 10px;
-    max-height: 121px;
+    max-height: 120px;
     overscroll-behavior-y: contain;
+    scrollbar-width: none;
   }
 
   .header__container::-webkit-scrollbar {
     display: none;
   }
 
-  .header__container {
-    scrollbar-width: none;
-  }
-
   .header__link {
-    flex: 0 0 35px;
+    display: flex;
+    width: 100%;
+    min-height: 40px;
+    flex: 0 0 40px;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     padding: 0;
     font-size: 11px;
     white-space: nowrap;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     transition:
       color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
       border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header__link_active {
+    color: #fff;
     border-top-color: #007bff;
     border-bottom-color: #007bff;
   }
