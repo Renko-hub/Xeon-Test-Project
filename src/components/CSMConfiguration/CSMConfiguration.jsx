@@ -11,7 +11,7 @@ const CSMConfiguration = ({ selectedButton = "mbr" }) => {
   return (
     <>
       <Toolbox
-        title="BOOT & RECOVERY"
+        title="CSM CONFIGURATION"
         toolsLabel="DISK MODE"
         renderInfo={Info}
         renderTools={(props) => (

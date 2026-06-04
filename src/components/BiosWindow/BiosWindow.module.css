@@ -61,7 +61,6 @@
   padding: 6px 0 0 5px;
 }
 
-/* Адаптив */
 @media (max-width: 1024px) {
   .bios_container {
     max-width: 500px;
@@ -70,16 +69,28 @@
 
 @media (max-width: 768px) {
   .bios_container {
+    display: block;
     width: 100%;
     max-width: 540px;
     height: auto;
-    min-height: 520px;
+    min-height: initial;
     border-width: 2px;
+    padding-bottom: 8px;
+  }
+  .bios__list {
+    display: block;
+    height: auto;
+    min-height: 2.5em;
+    overflow-y: visible;
+    padding: 0 10px;
+    margin-bottom: 0;
   }
   .bios__item {
     font-size: 13px;
   }
   .bios__footer {
+    display: block;
     font-size: 11px;
+    margin-top: 1em;
   }
 }
