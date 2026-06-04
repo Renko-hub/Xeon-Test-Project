@@ -4,6 +4,11 @@
   padding: 12px 0;
   margin-bottom: 20px;
   text-transform: uppercase;
+  width: 100%;
+}
+
+.header__toggle {
+  display: none;
 }
 
 .header__container {
@@ -38,19 +43,13 @@
   justify-content: center;
 }
 
-@media (min-width: 769px) {
-  .header__link:nth-child(-n + 13),
-  .header__link:nth-child(n + 27) {
-    display: none;
-  }
-}
-
 .header__link:hover:not(.header__link_active) {
   color: #bbb;
 }
 
-.header__link_active {
+.header__link.header__link_active {
   color: #fff;
+  border-top-color: #007bff;
   border-bottom-color: #007bff;
   text-shadow:
     0 0 10px rgba(0, 123, 255, 0.7),
@@ -59,47 +58,61 @@
 }
 
 @media (max-width: 768px) {
-  .header__container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 0;
-    padding: 0 10px;
-    max-height: 160px;
-    overscroll-behavior-y: contain;
-    scrollbar-width: none;
-    box-sizing: border-box;
+  .header {
+    padding: 0;
+    margin-bottom: 0;
+    align-self: stretch;
   }
 
-  .header__container::-webkit-scrollbar {
+  .header__toggle {
+    display: block;
+    width: 100%;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 12px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .header__container {
     display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 4px;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #151515;
+  }
+
+  .header__container.header__container_open {
+    display: flex;
   }
 
   .header__link {
     display: flex;
     width: 100%;
-    min-height: 40px;
-    flex: 0 0 40px;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
+    height: 44px;
+    min-height: 44px;
     padding: 0;
-    font-size: 11px;
-    white-space: nowrap;
-    color: #aaa;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
-    transition:
-      color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-      border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform, opacity;
+    border-left: none;
+    box-sizing: border-box;
   }
 
-  .header__link_active {
+  .header__link.header__link_active {
     color: #fff;
     border-top-color: #007bff;
     border-bottom-color: #007bff;
+    background: #1e1e1e;
   }
 }

@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
-import useHeaderCarousel from "./hooks/useHeaderCarousel";
 import s from "./Header.module.css";
 
 const MENU_ITEMS = [
@@ -20,17 +20,26 @@ const MENU_ITEMS = [
 ];
 
 const Header = () => {
-  const containerRef = useHeaderCarousel(s.header__link_active, s.header__link);
-  const extendedItems = [...MENU_ITEMS, ...MENU_ITEMS, ...MENU_ITEMS];
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={s.header}>
-      <div className={s.header__container} ref={containerRef}>
-        {extendedItems.map((item, index) => (
+    <nav className={clsx(s.header, isOpen && s.header_open)}>
+      <button className={s.header__toggle} onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? "✕ Закрыть" : "Разделы"}
+      </button>
+
+      <div
+        className={clsx(
+          s.header__container,
+          isOpen && s.header__container_open,
+        )}
+      >
+        {MENU_ITEMS.map((item, index) => (
           <NavLink
             key={`${item.to}-${index}`}
             to={item.to}
             end
+            onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
               clsx(s.header__link, isActive && s.header__link_active)
             }
