@@ -28486,7 +28486,7 @@ const CSMConfiguration = ({ selectedButton = "mbr" })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
-                title: "BOOT & RECOVERY",
+                title: "CSM CONFIGURATION",
                 toolsLabel: "DISK MODE",
                 renderInfo: (0, _csminfoDefault.default),
                 renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmtoolsDefault.default), {
