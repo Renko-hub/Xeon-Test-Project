@@ -1,57 +1,119 @@
 import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom"; // Подключаем локацию, чтобы знать об активном роуте
+import { useLocation } from "react-router-dom";
 
 const useHeaderCarousel = (activeClass, itemClass) => {
   const containerRef = useRef(null);
-  const location = useLocation(); // Следим за изменением страницы
+  const location = useLocation();
 
+  // 1. Логика бесконечного зацикливания при скролле пальцем
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || window.innerWidth > 768) {
+      return;
+    }
+
+    const handleScroll = () => {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const oneThird = scrollHeight / 3;
+
+      if (scrollTop <= 0) {
+        container.scrollTop = oneThird;
+      } else if (scrollTop + clientHeight >= scrollHeight - 2) {
+        container.scrollTop = oneThird * 2 - clientHeight;
+      }
+    };
+
+    container.addEventListener("scroll", handleScroll, { passive: true });
+
+    // Жесткое позиционирование первой вкладки (Xeon Ram Tool) в центр экрана при старте
+    const links = container.querySelectorAll(`.${itemClass}`);
+    if (links.length > 0) {
+      const itemsPerSection = links.length / 3;
+      // Берём самый первый элемент из ЦЕНТРАЛЬНОГО (второго) блока дубликатов
+      const firstCentralItem = links[itemsPerSection];
+
+      if (firstCentralItem) {
+        const containerHeight = container.clientHeight;
+        const elementHeight = firstCentralItem.clientHeight;
+        const elementOffsetTop = firstCentralItem.offsetTop;
+
+        // Вычисляем точную позицию центра без анимации (мгновенно при инициализации)
+        container.scrollTop =
+          elementOffsetTop - containerHeight / 2 + elementHeight / 2;
+      }
+    }
+
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, [itemClass]);
+
+  // 2. Авто-центрирование при кликах и переходе по страницам
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || window.innerWidth > 768) {
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      const links = container.querySelectorAll(`.${itemClass}`);
+      const totalItems = links.length;
+      const itemsPerSection = totalItems / 3;
+
+      let centralActiveLink = null;
+      for (let i = itemsPerSection; i < itemsPerSection * 2; i++) {
+        if (links[i] && links[i].classList.contains(activeClass)) {
+          centralActiveLink = links[i];
+          break;
+        }
+      }
+
+      const activeLink =
+        centralActiveLink || container.querySelector(`.${activeClass}`);
+
+      if (activeLink) {
+        activeLink.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    }, 80);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname, activeClass, itemClass]);
+
+  // 3. 3D-анимация (масштаб и прозрачность)
   useEffect(() => {
     const container = containerRef.current;
     if (!container) {
       return;
     }
 
-    let observer;
+    let observer = null;
 
-    // Функция центрирования элемента по вертикали
-    const centerElement = (element) => {
-      const containerHeight = container.clientHeight;
-      const elementHeight = element.clientHeight;
-      const elementOffsetTop = element.offsetTop;
-
-      container.scrollTo({
-        top: elementOffsetTop - containerHeight / 2 + elementHeight / 2,
-        behavior: "smooth",
-      });
-    };
-
-    // Функция для очистки inline-стилей (нужна при переходе на десктоп)
-    const clearStyles = (links) => {
+    const clearStyles = () => {
+      const links = container.querySelectorAll(`.${itemClass}`);
       links.forEach((link) => {
         link.style.transform = "";
         link.style.opacity = "";
       });
     };
 
-    const initMobileEffects = () => {
+    const initEffects = () => {
+      if (observer) {
+        observer.disconnect();
+        observer = null;
+      }
+      clearStyles();
+
       if (window.innerWidth > 768) {
-        const links = container.querySelectorAll(`.${itemClass}`);
-        clearStyles(links);
         return;
       }
 
-      // 1. Центрируем текущую активную ссылку (при загрузке или смене роута)
-      const activeLink = container.querySelector(`.${activeClass}`);
-      if (activeLink) {
-        // Делаем небольшую задержку, чтобы DOM успел полностью отрисоваться
-        setTimeout(() => centerElement(activeLink), 50);
-      }
+      const thresholds = Array.from({ length: 51 }, (_, i) => i * 0.02);
 
-      // 2. Логика IntersectionObserver для плавного scale и opacity при скролле
       const observerOptions = {
         root: container,
-        rootMargin: "-33% 0px -33% 0px",
-        threshold: [0, 0.25, 0.5, 0.75, 1],
+        rootMargin: "-15% 0px -15% 0px",
+        threshold: thresholds,
       };
 
       const handleIntersect = (entries) => {
@@ -59,8 +121,10 @@ const useHeaderCarousel = (activeClass, itemClass) => {
           const link = entry.target;
           const ratio = entry.intersectionRatio;
 
-          link.style.transform = `scale(${0.85 + ratio * 0.15})`;
-          link.style.opacity = String(0.75 + ratio * 0.25);
+          requestAnimationFrame(() => {
+            link.style.transform = `scale(${0.85 + ratio * 0.2})`;
+            link.style.opacity = String(0.4 + ratio * 0.6);
+          });
         });
       };
 
@@ -69,27 +133,19 @@ const useHeaderCarousel = (activeClass, itemClass) => {
       links.forEach((link) => observer.observe(link));
     };
 
-    // Запускаем эффекты
-    initMobileEffects();
+    initEffects();
 
-    // Слушаем ресайз экрана, чтобы хук вовремя включался/выключался
-    const handleResize = () => {
-      if (observer) {
-        observer.disconnect();
-      }
-      initMobileEffects();
-    };
+    const handleResize = () => initEffects();
+    window.addEventListener("resize", handleResize, { passive: true });
 
-    window.addEventListener("resize", handleResize);
-
-    // Чистим слушатели при размонтировании
     return () => {
       if (observer) {
         observer.disconnect();
       }
       window.removeEventListener("resize", handleResize);
+      clearStyles();
     };
-  }, [activeClass, itemClass, location.pathname]); // Хук перезапустится при смене страницы
+  }, [activeClass, itemClass]);
 
   return containerRef;
 };

@@ -3,7 +3,6 @@ import clsx from "clsx";
 import useHeaderCarousel from "./hooks/useHeaderCarousel";
 import s from "./Header.module.css";
 
-// Конфигурация путей и названий вкладок навигации
 const MENU_ITEMS = [
   { to: "/ram", label: "Xeon Ram Tool" },
   { to: "/memory", label: "Memory Configuration" },
@@ -22,14 +21,16 @@ const MENU_ITEMS = [
 
 const Header = () => {
   const containerRef = useHeaderCarousel(s.header__link_active, s.header__link);
+  const extendedItems = [...MENU_ITEMS, ...MENU_ITEMS, ...MENU_ITEMS];
 
   return (
     <nav className={s.header}>
       <div className={s.header__container} ref={containerRef}>
-        {MENU_ITEMS.map((item) => (
+        {extendedItems.map((item, index) => (
           <NavLink
-            key={item.to}
+            key={`${item.to}-${index}`}
             to={item.to}
+            end
             className={({ isActive }) =>
               clsx(s.header__link, isActive && s.header__link_active)
             }
