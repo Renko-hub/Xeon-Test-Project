@@ -18,8 +18,8 @@ const RamConfiguration = ({ selectedButton }) => {
     ramSize: 4,
     history: {
       V2: { cpu: "", ramSize: 4 },
-      V3: { cpu: "", ramSize: 16 },
-      V4: { cpu: "", ramSize: 16 },
+      V3: { cpu: "", ramSize: 4 },
+      V4: { cpu: "", ramSize: 4 },
     },
     ...selectedButton,
   });
