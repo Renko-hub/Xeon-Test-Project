@@ -33,7 +33,6 @@
   text-decoration: none;
   white-space: nowrap;
   text-align: center;
-  border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
   transition:
     color 0.2s ease,
@@ -50,7 +49,6 @@
 
 .header__link.header__link_active {
   color: #fff;
-  border-top-color: #007bff;
   border-bottom-color: #007bff;
   text-shadow:
     0 0 10px rgba(0, 123, 255, 0.7),
@@ -90,8 +88,8 @@
     width: 20px;
     height: 2px;
     background-color: #fff;
-    transition: 
-      transform 0.3s ease, 
+    transition:
+      transform 0.3s ease,
       opacity 0.3s ease;
   }
 
@@ -147,8 +145,8 @@
 
   .header__link.header__link_active {
     color: #fff;
-    border-top-color: transparent;
-    border-bottom-color: #007bff;
+    border-top: 1px solid #007bff;
+    border-bottom: 1px solid #007bff;
     border-left-color: transparent;
     background: #1e1e1e;
   }
