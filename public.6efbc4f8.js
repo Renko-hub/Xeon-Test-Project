@@ -731,6 +731,8 @@ var _reactRouterDom = require("react-router-dom");
 var _globalCss = require("./global.css");
 var _header = require("./components/Header/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
+var _aboutConfiguration = require("./components/About/AboutConfiguration"); // Изменили путь здесь
+var _aboutConfigurationDefault = parcelHelpers.interopDefault(_aboutConfiguration);
 var _advancedConfiguration = require("./components/AdvancedConfiguration/AdvancedConfiguration");
 var _advancedConfigurationDefault = parcelHelpers.interopDefault(_advancedConfiguration);
 var _csmconfiguration = require("./components/CSMConfiguration/CSMConfiguration");
@@ -743,14 +745,13 @@ var _fivrConfiguration = require("./components/FivrConfiguration/FivrConfigurati
 var _fivrConfigurationDefault = parcelHelpers.interopDefault(_fivrConfiguration);
 var _iioconfiguration = require("./components/IIOConfiguration/IIOConfiguration");
 var _iioconfigurationDefault = parcelHelpers.interopDefault(_iioconfiguration);
-// Наш новый компонент контроллера памяти по вашим фото
 var _memoryConfiguration = require("./components/MemoryConfiguration/MemoryConfiguration");
 var _memoryConfigurationDefault = parcelHelpers.interopDefault(_memoryConfiguration);
 var _pciconfiguration = require("./components/PCIConfiguration/PCIConfiguration");
 var _pciconfigurationDefault = parcelHelpers.interopDefault(_pciconfiguration);
 var _powerConfiguration = require("./components/PowerConfiguration/PowerConfiguration");
 var _powerConfigurationDefault = parcelHelpers.interopDefault(_powerConfiguration);
-var _ramConfiguration = require("./components/RamConfiguration/RamConfiguration"); // Возвращаем на место!
+var _ramConfiguration = require("./components/RamConfiguration/RamConfiguration");
 var _ramConfigurationDefault = parcelHelpers.interopDefault(_ramConfiguration);
 var _thermalConfiguration = require("./components/ThermalConfiguration/ThermalConfiguration");
 var _thermalConfigurationDefault = parcelHelpers.interopDefault(_thermalConfiguration);
@@ -774,8 +775,20 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                                 replace: true
                             }, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 29,
+                                lineNumber: 28,
                                 columnNumber: 34
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 28,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/ram",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 29,
+                                columnNumber: 37
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
@@ -783,11 +796,11 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/ram",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _ramConfigurationDefault.default), {}, void 0, false, {
+                            path: "/memory",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _memoryConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 30,
-                                columnNumber: 37
+                                columnNumber: 40
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
@@ -795,21 +808,32 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/memory",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _memoryConfigurationDefault.default), {}, void 0, false, {
+                            path: "/dram",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dramconfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 31,
-                                columnNumber: 40
+                                columnNumber: 38
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
                             lineNumber: 31,
                             columnNumber: 9
                         }, undefined),
-                        " ",
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/dram",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dramconfigurationDefault.default), {}, void 0, false, {
+                            path: "/thermal",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _thermalConfigurationDefault.default), {}, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 32,
+                                columnNumber: 41
+                            }, void 0)
+                        }, void 0, false, {
+                            fileName: "src/index.tsx",
+                            lineNumber: 32,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                            path: "/fivr",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fivrConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 33,
                                 columnNumber: 38
@@ -820,11 +844,11 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/thermal",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _thermalConfigurationDefault.default), {}, void 0, false, {
+                            path: "/power",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 34,
-                                columnNumber: 41
+                                columnNumber: 39
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
@@ -832,11 +856,11 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/fivr",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fivrConfigurationDefault.default), {}, void 0, false, {
+                            path: "/advanced",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _advancedConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 35,
-                                columnNumber: 38
+                                columnNumber: 42
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
@@ -844,11 +868,11 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/power",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _powerConfigurationDefault.default), {}, void 0, false, {
+                            path: "/iio",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iioconfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 36,
-                                columnNumber: 39
+                                columnNumber: 37
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
@@ -856,11 +880,11 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/advanced",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _advancedConfigurationDefault.default), {}, void 0, false, {
+                            path: "/csm",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmconfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 37,
-                                columnNumber: 42
+                                columnNumber: 37
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
@@ -868,8 +892,8 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/iio",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _iioconfigurationDefault.default), {}, void 0, false, {
+                            path: "/usb",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _usbconfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 38,
                                 columnNumber: 37
@@ -880,8 +904,8 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/csm",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _csmconfigurationDefault.default), {}, void 0, false, {
+                            path: "/fan",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 39,
                                 columnNumber: 37
@@ -892,8 +916,8 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/usb",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _usbconfigurationDefault.default), {}, void 0, false, {
+                            path: "/pci",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pciconfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 40,
                                 columnNumber: 37
@@ -904,27 +928,15 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/fan",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fanConfigurationDefault.default), {}, void 0, false, {
+                            path: "/about",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutConfigurationDefault.default), {}, void 0, false, {
                                 fileName: "src/index.tsx",
                                 lineNumber: 41,
-                                columnNumber: 37
+                                columnNumber: 39
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
                             lineNumber: 41,
-                            columnNumber: 9
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/pci",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pciconfigurationDefault.default), {}, void 0, false, {
-                                fileName: "src/index.tsx",
-                                lineNumber: 42,
-                                columnNumber: 37
-                            }, void 0)
-                        }, void 0, false, {
-                            fileName: "src/index.tsx",
-                            lineNumber: 42,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -934,12 +946,12 @@ const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Has
                                 replace: true
                             }, void 0, false, {
                                 fileName: "src/index.tsx",
-                                lineNumber: 43,
+                                lineNumber: 42,
                                 columnNumber: 34
                             }, void 0)
                         }, void 0, false, {
                             fileName: "src/index.tsx",
-                            lineNumber: 43,
+                            lineNumber: 42,
                             columnNumber: 9
                         }, undefined)
                     ]
@@ -966,12 +978,12 @@ if (rootElement) {
     root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).StrictMode, {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "src/index.tsx",
-            lineNumber: 55,
+            lineNumber: 54,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.tsx",
-        lineNumber: 54,
+        lineNumber: 53,
         columnNumber: 5
     }, undefined));
 }
@@ -983,7 +995,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","react-router-dom":"61z4w","./global.css":"11axS","./components/Header/Header":"adfVe","./components/AdvancedConfiguration/AdvancedConfiguration":"lefX6","./components/CSMConfiguration/CSMConfiguration":"3pRr7","./components/DRAMConfiguration/DRAMConfiguration":"jHf28","./components/FanConfiguration/FanConfiguration":"4VRsi","./components/FivrConfiguration/FivrConfiguration":"5XUz3","./components/IIOConfiguration/IIOConfiguration":"fySTl","./components/MemoryConfiguration/MemoryConfiguration":"4q3An","./components/PCIConfiguration/PCIConfiguration":"iMU4J","./components/PowerConfiguration/PowerConfiguration":"20tYA","./components/RamConfiguration/RamConfiguration":"2rh6a","./components/ThermalConfiguration/ThermalConfiguration":"7In8J","./components/USBConfiguration/USBConfiguration":"gnPgD","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","react-router-dom":"61z4w","./global.css":"11axS","./components/Header/Header":"adfVe","./components/AdvancedConfiguration/AdvancedConfiguration":"lefX6","./components/CSMConfiguration/CSMConfiguration":"3pRr7","./components/DRAMConfiguration/DRAMConfiguration":"jHf28","./components/FanConfiguration/FanConfiguration":"4VRsi","./components/FivrConfiguration/FivrConfiguration":"5XUz3","./components/IIOConfiguration/IIOConfiguration":"fySTl","./components/MemoryConfiguration/MemoryConfiguration":"4q3An","./components/PCIConfiguration/PCIConfiguration":"iMU4J","./components/PowerConfiguration/PowerConfiguration":"20tYA","./components/RamConfiguration/RamConfiguration":"2rh6a","./components/ThermalConfiguration/ThermalConfiguration":"7In8J","./components/USBConfiguration/USBConfiguration":"gnPgD","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./components/About/AboutConfiguration":"eSmTJ"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -24950,6 +24962,61 @@ var _useHeaderCarouselDefault = parcelHelpers.interopDefault(_useHeaderCarousel)
 var _headerModuleCss = require("./Header.module.css");
 var _headerModuleCssDefault = parcelHelpers.interopDefault(_headerModuleCss);
 var _s = $RefreshSig$();
+// Конфигурация путей и названий вкладок навигации
+const MENU_ITEMS = [
+    {
+        to: "/ram",
+        label: "Xeon Ram Tool"
+    },
+    {
+        to: "/memory",
+        label: "Memory Configuration"
+    },
+    {
+        to: "/dram",
+        label: "DRAM RAPL Configuration"
+    },
+    {
+        to: "/thermal",
+        label: "Memory Thermal"
+    },
+    {
+        to: "/fivr",
+        label: "FIVR Configuration"
+    },
+    {
+        to: "/power",
+        label: "Power Management"
+    },
+    {
+        to: "/advanced",
+        label: "Advanced Configuration"
+    },
+    {
+        to: "/iio",
+        label: "IIO Configuration"
+    },
+    {
+        to: "/csm",
+        label: "CSM Configuration"
+    },
+    {
+        to: "/usb",
+        label: "USB Configuration"
+    },
+    {
+        to: "/fan",
+        label: "Fan Configuration"
+    },
+    {
+        to: "/pci",
+        label: "PCI Configuration"
+    },
+    {
+        to: "/about",
+        label: "About"
+    }
+];
 const Header = ()=>{
     _s();
     const containerRef = (0, _useHeaderCarouselDefault.default)((0, _headerModuleCssDefault.default).header__link_active, (0, _headerModuleCssDefault.default).header__link);
@@ -24958,124 +25025,23 @@ const Header = ()=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: (0, _headerModuleCssDefault.default).header__container,
             ref: containerRef,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/ram",
+            children: MENU_ITEMS.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                    to: item.to,
                     className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "Xeon Ram Tool"
-                }, void 0, false, {
+                    children: item.label
+                }, item.to, false, {
                     fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/memory",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "Memory Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/dram",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "DRAM RAPL Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 28,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/thermal",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "Memory Thermal"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 36,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/fivr",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "FIVR Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 44,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/power",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "Power Management"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 52,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/advanced",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "Advanced Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 60,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/iio",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "IIO Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 68,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/csm",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "CSM Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 76,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/usb",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "USB Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 84,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/fan",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "Fan Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 92,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: "/pci",
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: "PCI Configuration"
-                }, void 0, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 100,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
+                    lineNumber: 30,
+                    columnNumber: 11
+                }, undefined))
+        }, void 0, false, {
             fileName: "src/components/Header/Header.jsx",
-            lineNumber: 11,
+            lineNumber: 28,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header/Header.jsx",
-        lineNumber: 10,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
@@ -27410,14 +27376,17 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
+var _reactRouterDom = require("react-router-dom"); // Подключаем локацию, чтобы знать об активном роуте
 var _s = $RefreshSig$();
 const useHeaderCarousel = (activeClass, itemClass)=>{
     _s();
     const containerRef = (0, _react.useRef)(null);
+    const location = (0, _reactRouterDom.useLocation)(); // Следим за изменением страницы
     (0, _react.useEffect)(()=>{
         const container = containerRef.current;
         if (!container) return;
-        if (window.innerWidth > 768) return;
+        let observer;
+        // Функция центрирования элемента по вертикали
         const centerElement = (element)=>{
             const containerHeight = container.clientHeight;
             const elementHeight = element.clientHeight;
@@ -27427,44 +27396,72 @@ const useHeaderCarousel = (activeClass, itemClass)=>{
                 behavior: "smooth"
             });
         };
-        const handleClick = (e)=>{
-            const link = e.target.closest(`.${itemClass}`);
-            if (link) centerElement(link);
-        };
-        const observerOptions = {
-            root: container,
-            rootMargin: "-33% 0px -33% 0px",
-            threshold: [
-                0,
-                0.25,
-                0.5,
-                0.75,
-                1
-            ]
-        };
-        const handleIntersect = (entries)=>{
-            entries.forEach((entry)=>{
-                const link = entry.target;
-                const ratio = entry.intersectionRatio;
-                link.style.transform = `scale(${0.85 + ratio * 0.15})`;
-                link.style.opacity = String(0.75 + ratio * 0.25);
+        // Функция для очистки inline-стилей (нужна при переходе на десктоп)
+        const clearStyles = (links)=>{
+            links.forEach((link)=>{
+                link.style.transform = "";
+                link.style.opacity = "";
             });
         };
-        const observer = new IntersectionObserver(handleIntersect, observerOptions);
-        const links = container.querySelectorAll(`.${itemClass}`);
-        links.forEach((link)=>observer.observe(link));
-        container.addEventListener("click", handleClick);
+        const initMobileEffects = ()=>{
+            if (window.innerWidth > 768) {
+                const links = container.querySelectorAll(`.${itemClass}`);
+                clearStyles(links);
+                return;
+            }
+            // 1. Центрируем текущую активную ссылку (при загрузке или смене роута)
+            const activeLink = container.querySelector(`.${activeClass}`);
+            if (activeLink) // Делаем небольшую задержку, чтобы DOM успел полностью отрисоваться
+            setTimeout(()=>centerElement(activeLink), 50);
+            // 2. Логика IntersectionObserver для плавного scale и opacity при скролле
+            const observerOptions = {
+                root: container,
+                rootMargin: "-33% 0px -33% 0px",
+                threshold: [
+                    0,
+                    0.25,
+                    0.5,
+                    0.75,
+                    1
+                ]
+            };
+            const handleIntersect = (entries)=>{
+                entries.forEach((entry)=>{
+                    const link = entry.target;
+                    const ratio = entry.intersectionRatio;
+                    link.style.transform = `scale(${0.85 + ratio * 0.15})`;
+                    link.style.opacity = String(0.75 + ratio * 0.25);
+                });
+            };
+            observer = new IntersectionObserver(handleIntersect, observerOptions);
+            const links = container.querySelectorAll(`.${itemClass}`);
+            links.forEach((link)=>observer.observe(link));
+        };
+        // Запускаем эффекты
+        initMobileEffects();
+        // Слушаем ресайз экрана, чтобы хук вовремя включался/выключался
+        const handleResize = ()=>{
+            if (observer) observer.disconnect();
+            initMobileEffects();
+        };
+        window.addEventListener("resize", handleResize);
+        // Чистим слушатели при размонтировании
         return ()=>{
-            observer.disconnect();
-            container.removeEventListener("click", handleClick);
+            if (observer) observer.disconnect();
+            window.removeEventListener("resize", handleResize);
         };
     }, [
         activeClass,
-        itemClass
-    ]);
+        itemClass,
+        location.pathname
+    ]); // Хук перезапустится при смене страницы
     return containerRef;
 };
-_s(useHeaderCarousel, "8puyVO4ts1RhCfXUmci3vLI3Njw=");
+_s(useHeaderCarousel, "x5MUtzh3fNiOYaa7dTLcUXU449Q=", false, function() {
+    return [
+        (0, _reactRouterDom.useLocation)
+    ];
+});
 exports.default = useHeaderCarousel;
 
   $parcel$ReactRefreshHelpers$b03c.postlude(module);
@@ -27472,7 +27469,7 @@ exports.default = useHeaderCarousel;
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"lefX6":[function(require,module,exports,__globalThis) {
+},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-router-dom":"61z4w"}],"lefX6":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$c97a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$c97a.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27767,8 +27764,7 @@ const Button = ({ type, isActive, onClick, className, label })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
         type: "button",
         onClick: onClick,
-        className: (0, _clsxDefault.default)((0, _buttonModuleCssDefault.default).button, // Вернули ?. и добавили || "" на случай, если конфиг не нашелся
-        isActive ? config?.active : config?.normal || "", className),
+        className: (0, _clsxDefault.default)((0, _buttonModuleCssDefault.default).button, isActive ? config?.active : config?.normal || "", className),
         children: label || config?.label
     }, void 0, false, {
         fileName: "src/components/Button/Button.tsx",
@@ -27787,6 +27783,7 @@ $RefreshReg$(_c, "Button");
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"dVPUn","clsx":"dOSJC","./Button.module.css":"8CTjF","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./Button.config":"c37D4"}],"8CTjF":[function(require,module,exports,__globalThis) {
+module.exports["about_active"] = `-_VRTG_about_active`;
 module.exports["board_active"] = `-_VRTG_board_active`;
 module.exports["button"] = `-_VRTG_button`;
 module.exports["custom_active"] = `-_VRTG_custom_active`;
@@ -27956,6 +27953,11 @@ const BUTTONS = {
         label: "\u041D\u0415\u0422",
         normal: (0, _buttonModuleCssDefault.default).button,
         active: (0, _buttonModuleCssDefault.default).no_active
+    },
+    donate: {
+        label: "\u041D\u0410 \u041A\u041E\u0424\u0415",
+        normal: (0, _buttonModuleCssDefault.default).button,
+        active: (0, _buttonModuleCssDefault.default).about_active
     }
 };
 
@@ -32777,103 +32779,95 @@ var _timingEngineJsDefault = parcelHelpers.interopDefault(_timingEngineJs);
 var _biosInput = require("../BiosInput/BiosInput");
 var _biosInputDefault = parcelHelpers.interopDefault(_biosInput);
 const RamBios = (param = {}, state = {}, update)=>{
-    const { state: config = {}, timings = {} } = (0, _timingEngineJsDefault.default)({
+    const { state: cfg = {}, timings: t = {} } = (0, _timingEngineJsDefault.default)({
         ...param,
         ...state
     });
-    const isCustom = config.preset === "custom";
-    const slots = Number(config.slot?.replace("slots", "")) || 2;
+    const isCustom = cfg.preset === "custom";
+    const slots = Number(cfg.slot?.replace("slots", "")) || 2;
     const channels = [
         "SINGLE",
         "DUAL",
         "TRIPLE",
         "QUAD"
     ][Math.min(slots - 1, 3)] ?? "SINGLE";
-    const titleText = `${timings.freqClean ?? ""} MHZ - ${timings.bandwidth ?? "0 GB/s"} (${channels})`;
-    const getVal = (f)=>state[f] !== undefined ? String(state[f]) : timings[f] !== undefined && timings[f] !== null ? String(timings[f]) : "";
-    const rawRfc = timings.tRfcFormatted ?? getVal("tRFC");
-    const formattedRfc = isCustom ? rawRfc.match(/^\d+/) ? rawRfc : getVal("tRFC") : rawRfc.replace(/IDEAL|LIMIT/g, config.preset === "ultra" ? "LIMIT" : "IDEAL");
-    const createField = (label, field, isEditable = isCustom, isFirst = false)=>({
-            label,
-            value: getVal(field),
-            field,
-            isEditable,
-            isFirst
+    const getVal = (f)=>state[f] !== undefined ? String(state[f]) : t[f] !== undefined && t[f] !== null ? String(t[f]) : "";
+    const rRfc = t.tRfcFormatted ?? getVal("tRFC");
+    const fRfc = isCustom ? rRfc.match(/^\d+/) ? rRfc.match(/^\d+/)[0] : getVal("tRFC") : rRfc.replace(/IDEAL|LIMIT/g, cfg.preset === "ultra" ? "LIMIT" : "IDEAL");
+    const fld = (label, field, isEditable = isCustom, isFirst = false)=>({
+            text_left: label,
+            text_right: isEditable ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosInputDefault.default), {
+                field: field,
+                state: state,
+                update: update,
+                isFirst: isFirst
+            }, void 0, false, {
+                fileName: "src/components/RamConfiguration/RamBios.jsx",
+                lineNumber: 33,
+                columnNumber: 7
+            }, undefined) : field === "tRFC" ? fRfc : getVal(field)
         });
-    const fields = [
-        {
-            label: "DIMM PROFILE",
-            value: "MANUAL"
-        },
-        {
-            label: "MEMORY FREQUENCY",
-            value: timings.freqClean ?? ""
-        },
-        {
-            label: "MEMORY VOLTAGE",
-            value: getVal("voltage")
-        },
-        {
-            label: "COMMAND TIMING",
-            value: (getVal("tCR") !== "" ? getVal("tCR") : null) ?? getVal("tCP")
-        },
-        {
-            label: "REFRESH RATE",
-            value: getVal("tREFI")
-        },
-        createField("CAS LATENCY", "tCL", isCustom, true),
-        createField("TRP", "tRP"),
-        createField("TRCD", "tRCD"),
-        {
-            label: "TRAS",
-            value: getVal("tRAS")
-        },
-        {
-            label: "TWR",
-            value: getVal("tWR")
-        },
-        createField("TRFC", "tRFC", false),
-        {
-            label: "TRRD",
-            value: getVal("tRRD")
-        },
-        {
-            label: "TRTP",
-            value: getVal("tRTP")
-        },
-        {
-            label: "TWTR",
-            value: getVal("tWTR")
-        },
-        {
-            label: "TFAW",
-            value: getVal("tFAW")
-        },
-        {
-            label: "TRC",
-            value: getVal("tRC")
-        },
-        {
-            label: "TCWL",
-            value: getVal("tCWL")
-        }
-    ];
     return {
-        title: titleText.toUpperCase(),
+        title: `${t.freqClean ?? ""} MHZ - ${t.bandwidth ?? "0 GB/s"} (${channels})`.toUpperCase(),
         path: "INTELRCSETUP > MEMORY CONFIGURATION > MEMORY TIMINGS",
-        content: fields.map(({ label, value, isEditable, field, isFirst })=>({
-                text_left: label,
-                text_right: isEditable && field ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosInputDefault.default), {
-                    field: field,
-                    state: state,
-                    update: update,
-                    isFirst: isFirst
-                }, void 0, false, {
-                    fileName: "src/components/RamConfiguration/RamBios.jsx",
-                    lineNumber: 77,
-                    columnNumber: 11
-                }, undefined) : field === "tRFC" ? formattedRfc : value
-            }))
+        content: [
+            {
+                text_left: "DIMM PROFILE",
+                text_right: "MANUAL"
+            },
+            {
+                text_left: "MEMORY FREQUENCY",
+                text_right: t.freqClean ?? ""
+            },
+            {
+                text_left: "MEMORY VOLTAGE",
+                text_right: getVal("voltage")
+            },
+            {
+                text_left: "COMMAND TIMING",
+                text_right: (getVal("tCR") !== "" ? getVal("tCR") : null) ?? getVal("tCP")
+            },
+            {
+                text_left: "REFRESH RATE",
+                text_right: getVal("tREFI")
+            },
+            fld("CAS LATENCY", "tCL", isCustom, true),
+            fld("TRP", "tRP"),
+            fld("TRCD", "tRCD"),
+            {
+                text_left: "TRAS",
+                text_right: getVal("tRAS")
+            },
+            {
+                text_left: "TWR",
+                text_right: getVal("tWR")
+            },
+            fld("TRFC", "tRFC", false),
+            {
+                text_left: "TRRD",
+                text_right: getVal("tRRD")
+            },
+            {
+                text_left: "TRTP",
+                text_right: getVal("tRTP")
+            },
+            {
+                text_left: "TWTR",
+                text_right: getVal("tWTR")
+            },
+            {
+                text_left: "TFAW",
+                text_right: getVal("tFAW")
+            },
+            {
+                text_left: "TRC",
+                text_right: getVal("tRC")
+            },
+            {
+                text_left: "TCWL",
+                text_right: getVal("tCWL")
+            }
+        ]
     };
 };
 _c = RamBios;
@@ -32905,76 +32899,58 @@ const timingEngine = (state, changedKey)=>{
         ...state,
         ...config
     };
-    const hasUserCL = baseData.tCL !== undefined && baseData.tCL !== "";
-    const hasUserRP = baseData.tRP !== undefined && baseData.tRP !== "";
-    const hasUserRCD = baseData.tRCD !== undefined && baseData.tRCD !== "";
-    const hasUserRFC = baseData.tRFC !== undefined && baseData.tRFC !== "";
-    const userCL = hasUserCL ? Number(baseData.tCL) : undefined;
-    const userRP = hasUserRP ? Number(baseData.tRP) : undefined;
-    const userRCD = hasUserRCD ? Number(baseData.tRCD) : undefined;
-    const userRFC = hasUserRFC ? Number(baseData.tRFC) : undefined;
-    const dataWithParsedTimings = {
-        ...baseData,
-        ...hasUserCL && {
-            tCL: userCL
-        },
-        ...hasUserRP && {
-            tRP: userRP
-        },
-        ...hasUserRCD && {
-            tRCD: userRCD
-        },
-        ...hasUserRFC && {
-            tRFC: userRFC
+    if (changedKey === "cpu" || changedKey === "gen" || changedKey === "preset") {
+        delete baseData.userFrequency;
+        if (baseData.preset !== "custom") {
+            delete baseData.tCL;
+            delete baseData.tRP;
+            delete baseData.tRCD;
+            delete baseData.tRAS;
+            delete baseData.tRC;
+            delete baseData.tWR;
+            delete baseData.tREFI;
+            delete baseData.tRRD;
+            delete baseData.tRTP;
+            delete baseData.tWTR;
+            delete baseData.tCR;
+            delete baseData.tRFC;
         }
+    }
+    const { frequency } = (0, _ramFrequencyDefault.default)(baseData);
+    const primaries = (0, _primaryTimingsDefault.default)(baseData, frequency);
+    const dataWithPrimaries = {
+        ...baseData,
+        ...primaries
     };
-    const { frequency } = (0, _ramFrequencyDefault.default)(dataWithParsedTimings);
-    const primaries = (0, _primaryTimingsDefault.default)(dataWithParsedTimings, frequency);
-    const isCustom = dataWithParsedTimings.preset === "custom";
-    const finalPrimaries = {
+    const subTimings = (0, _subTimingsDefault.default)(dataWithPrimaries, primaries, frequency);
+    const performance = (0, _ramPerformanceDefault.default)(dataWithPrimaries, frequency);
+    const allCalculatedTimings = {
         ...primaries,
-        tCL: isCustom && userCL !== undefined ? userCL : primaries.tCL,
-        tRP: isCustom && userRP !== undefined ? userRP : primaries.tRP,
-        tRCD: isCustom && userRCD !== undefined ? userRCD : primaries.tRCD
+        ...subTimings,
+        ...performance
     };
-    const fullData = {
-        ...dataWithParsedTimings,
-        ...finalPrimaries
-    };
-    const subTimings = (0, _subTimingsDefault.default)(fullData, finalPrimaries, frequency);
-    const performance = (0, _ramPerformanceDefault.default)(fullData, frequency, finalPrimaries);
-    const tRfcFormatted = subTimings.tRFC_Values ? `${subTimings.tRFC_Values.current} (${fullData.preset === "ultra" ? "LIMIT" : "IDEAL"}: ${subTimings.tRFC_Values.limitValue})` : String(subTimings.tRFC ?? "");
+    const isUltra = baseData.preset === "ultra";
+    const tRfcFormatted = subTimings.tRFC_Values ? `${subTimings.tRFC_Values.current} (${isUltra ? "LIMIT" : "IDEAL"}: ${subTimings.tRFC_Values.limitValue})` : String(subTimings.tRFC ?? "");
+    const isCustom = baseData.preset === "custom";
     return {
         state: {
-            board: fullData.board,
-            gen: fullData.gen,
-            cpu: fullData.cpu,
-            memory: fullData.memory,
-            ramSize: fullData.ramSize,
-            density: fullData.density,
-            slot: fullData.slot,
-            preset: fullData.preset,
-            unlocked: fullData.unlocked,
-            history: fullData.history,
-            userFrequency: fullData.userFrequency,
-            tCL: fullData.tCL,
-            tRP: fullData.tRP,
-            tRCD: fullData.tRCD,
-            tRAS: fullData.tRAS,
-            tRC: fullData.tRC,
-            tWR: fullData.tWR,
-            tREFI: fullData.tREFI,
-            tRRD: fullData.tRRD,
-            tRTP: fullData.tRTP,
-            tWTR: fullData.tWTR,
-            tCR: fullData.tCR || fullData.tCP,
-            tRFC: fullData.tRFC
+            ...baseData,
+            tCL: isCustom ? baseData.tCL : allCalculatedTimings.tCL,
+            tRP: isCustom ? baseData.tRP : allCalculatedTimings.tRP,
+            tRCD: isCustom ? baseData.tRCD : allCalculatedTimings.tRCD,
+            tRAS: isCustom ? baseData.tRAS : allCalculatedTimings.tRAS,
+            tRC: isCustom ? baseData.tRC : allCalculatedTimings.tRC,
+            tWR: isCustom ? baseData.tWR : allCalculatedTimings.tWR,
+            tREFI: isCustom ? baseData.tREFI : allCalculatedTimings.tREFI,
+            tRRD: isCustom ? baseData.tRRD : allCalculatedTimings.tRRD,
+            tRTP: isCustom ? baseData.tRTP : allCalculatedTimings.tRTP,
+            tWTR: isCustom ? baseData.tWTR : allCalculatedTimings.tWTR,
+            tCR: isCustom ? baseData.tCR : allCalculatedTimings.tCR,
+            tRFC: isCustom ? baseData.tRFC : allCalculatedTimings.tRFC
         },
         config,
         timings: {
-            ...finalPrimaries,
-            ...subTimings,
-            ...performance,
+            ...allCalculatedTimings,
             freqClean: String(performance.freq ?? "").replace(" MHz", ""),
             tRfcFormatted
         },
@@ -32993,42 +32969,56 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _cpuDataJs = require("../RamConfiguration/data/cpuData.js");
 var _ramDataJs = require("../RamConfiguration/data/ramData.js");
-const memoryConfiguration = (state, changedKey)=>{
-    const { gen, memory: userMemory, density: userDensity, slot: userSlot, cpu, board, ramSize, history = {
-        V2: {},
-        V3: {},
-        V4: {}
-    }, userFrequency, tCL, tRP, tRCD, tRAS, tRC, tWR, tREFI, tRRD, tRTP, tWTR, tCR, tRFC } = state;
-    const cpuList = (0, _cpuDataJs.CPU_MODELS)[gen] ?? [];
-    let activeCpu = cpu;
-    let activeRamSize = ramSize;
-    if (changedKey === "gen") {
-        const savedHistory = history[gen] || {};
-        activeCpu = savedHistory.cpu !== undefined ? savedHistory.cpu : cpuList[0]?.name ?? "";
-        activeRamSize = savedHistory.ramSize !== undefined ? savedHistory.ramSize : gen === "V2" ? 4 : 16;
-    }
-    const isPlatformV2 = gen === "V2";
-    const isPlatformV3 = gen === "V3";
-    const isPlatformV4 = gen === "V4";
-    const ramTypeLabel = isPlatformV2 ? "DDR3" : "DDR4";
-    const isDdr4Type = ramTypeLabel === "DDR4";
-    const ramTypeKey = isDdr4Type ? "ddr4" : "ddr3";
-    const rawRamSizeValue = Number(activeRamSize) || 8;
-    const filteredRamSizeStep = changedKey === "gen" && rawRamSizeValue === 6 ? 4 : rawRamSizeValue;
-    const supportedRamSizes = (0, _ramDataJs.RAM_SIZES).filter((size)=>size !== 6 || isPlatformV2);
-    const validatedRamSize = supportedRamSizes.includes(filteredRamSizeStep) ? filteredRamSizeStep : supportedRamSizes[0] ?? 8;
-    const isV2SpecialSize = validatedRamSize === 6 && isPlatformV2;
-    const checkValidSlotsForMemoryType = (memoryTypeToCheck)=>{
-        if (isV2SpecialSize) return [];
-        const availableModules = (0, _ramDataJs.RAM_CONFIGS)[ramTypeLabel]?.[memoryTypeToCheck] ?? [];
-        const capacitySlotOverrides = {
+const SLOT_COMBINATIONS = {
+    DDR3: {
+        desktop: {
+            6: {
+                standard: [
+                    2,
+                    3
+                ],
+                high: []
+            },
+            12: {
+                standard: [
+                    2,
+                    3
+                ],
+                high: []
+            },
             20: {
                 standard: [
                     3,
                     4
                 ],
+                high: []
+            },
+            24: {
+                standard: [
+                    3,
+                    4
+                ],
+                high: []
+            }
+        },
+        ecc: {
+            12: {
+                standard: [
+                    2,
+                    3
+                ],
+                high: []
+            },
+            20: {
+                standard: [
+                    2,
+                    3,
+                    4
+                ],
                 high: [
-                    2
+                    2,
+                    3,
+                    4
                 ]
             },
             24: {
@@ -33037,8 +33027,8 @@ const memoryConfiguration = (state, changedKey)=>{
                     4
                 ],
                 high: [
-                    2,
-                    3
+                    3,
+                    4
                 ]
             },
             40: {
@@ -33057,37 +33047,151 @@ const memoryConfiguration = (state, changedKey)=>{
                     4
                 ]
             }
-        };
-        const currentOverride = capacitySlotOverrides[validatedRamSize];
-        if (currentOverride) return [
-            ...currentOverride.standard,
-            ...currentOverride.high
-        ];
-        return [
-            1,
-            2,
-            3,
-            4
-        ].filter((slots)=>{
-            const singleModuleSize = validatedRamSize / slots;
-            return Number.isInteger(singleModuleSize) && availableModules.includes(singleModuleSize);
-        });
-    };
-    const isDesktopTypePossible = checkValidSlotsForMemoryType("desktop").length > 0;
-    const isEccTypePossible = checkValidSlotsForMemoryType("ecc").length > 0 && !isV2SpecialSize;
-    const validMemoryTypes = [
-        "desktop",
-        "ecc"
-    ].filter((type)=>{
-        if (type === "ecc" && !isEccTypePossible) return false;
-        if (type === "desktop" && !isDesktopTypePossible) return false;
-        return true;
-    });
-    const selectedMemoryType = isV2SpecialSize ? "desktop" : validMemoryTypes.includes(userMemory) ? userMemory : validMemoryTypes[0] ?? "desktop";
-    const isEccEnabled = selectedMemoryType === "ecc";
-    const configurationModules = (0, _ramDataJs.RAM_CONFIGS)[ramTypeLabel]?.[selectedMemoryType] ?? [];
+        }
+    },
+    DDR4: {
+        desktop: {
+            12: {
+                standard: [
+                    2,
+                    3
+                ],
+                high: []
+            },
+            20: {
+                standard: [
+                    2,
+                    3,
+                    4
+                ],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            24: {
+                standard: [
+                    2,
+                    3,
+                    4
+                ],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            40: {
+                standard: [
+                    4
+                ],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            48: {
+                standard: [
+                    4
+                ],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        ecc: {
+            12: {
+                standard: [
+                    2,
+                    3
+                ],
+                high: []
+            },
+            20: {
+                standard: [
+                    2,
+                    3,
+                    4
+                ],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            24: {
+                standard: [
+                    2,
+                    3,
+                    4
+                ],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            40: {
+                standard: [
+                    4
+                ],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            48: {
+                standard: [
+                    4
+                ],
+                high: [
+                    2,
+                    3,
+                    4
+                ]
+            }
+        }
+    }
+};
+const CHANNELS_MAP = [
+    "Single",
+    "Dual",
+    "Triple",
+    "Quad"
+];
+const memoryConfiguration = (state, changedKey)=>{
+    const { gen, memory: userMemory, density: userDensity, slot: userSlot, cpu, board, ramSize, history = {
+        V2: {},
+        V3: {},
+        V4: {}
+    } } = state;
+    const cpuList = (0, _cpuDataJs.CPU_MODELS)[gen] ?? [];
+    let activeCpu = cpu;
+    let activeRamSize = ramSize;
+    if (changedKey === "gen") {
+        const savedHistory = history[gen] || {};
+        activeCpu = savedHistory.cpu !== undefined ? savedHistory.cpu : cpuList[0]?.name ?? "";
+        activeRamSize = savedHistory.ramSize !== undefined ? savedHistory.ramSize : gen === "V2" ? 4 : 16;
+    } else if (changedKey === "cpu") activeCpu = cpu;
+    const isPlatformV2 = gen === "V2";
+    const isPlatformV3 = gen === "V3";
+    const isPlatformV4 = gen === "V4";
+    const ramTypeLabel = isPlatformV2 ? "DDR3" : "DDR4";
+    const isDdr4Type = ramTypeLabel === "DDR4";
+    const ramTypeKey = isDdr4Type ? "ddr4" : "ddr3";
+    const rawRamSizeValue = Number(activeRamSize) || 8;
+    const filteredRamSizeStep = changedKey === "gen" && rawRamSizeValue === 6 ? 4 : rawRamSizeValue;
+    const supportedRamSizes = (0, _ramDataJs.RAM_SIZES).filter((size)=>size !== 6 || isPlatformV2);
+    const validatedRamSize = supportedRamSizes.includes(filteredRamSizeStep) ? filteredRamSizeStep : supportedRamSizes[0] ?? 8;
+    const isV2SpecialSize = validatedRamSize === 6 && isPlatformV2;
+    const getOverrideForCurrentConfig = (typeToCheck)=>SLOT_COMBINATIONS[ramTypeLabel]?.[typeToCheck]?.[validatedRamSize];
     const filterSlotsByModuleAvailability = (allowedModules)=>{
-        if (isV2SpecialSize) return [];
+        if (isV2SpecialSize || !allowedModules.length) return [];
         return [
             1,
             2,
@@ -33098,44 +33202,25 @@ const memoryConfiguration = (state, changedKey)=>{
             return Number.isInteger(moduleSize) && allowedModules.includes(moduleSize);
         });
     };
-    const genericSlotOverrides = {
-        20: {
-            standard: [
-                3,
-                4
-            ],
-            high: [
-                2
-            ]
-        },
-        24: {
-            standard: [
-                3,
-                4
-            ],
-            high: [
-                2,
-                3
-            ]
-        },
-        40: {
-            standard: [],
-            high: [
-                2,
-                3,
-                4
-            ]
-        },
-        48: {
-            standard: [],
-            high: [
-                2,
-                3,
-                4
-            ]
-        }
+    const checkValidSlotsForMemoryType = (memoryTypeToCheck)=>{
+        if (isV2SpecialSize) return [];
+        const currentOverride = getOverrideForCurrentConfig(memoryTypeToCheck);
+        if (currentOverride) return Array.from(new Set([
+            ...currentOverride.standard,
+            ...currentOverride.high
+        ]));
+        const availableModules = (0, _ramDataJs.RAM_CONFIGS)[ramTypeLabel]?.[memoryTypeToCheck] ?? [];
+        return filterSlotsByModuleAvailability(availableModules);
     };
-    const totalOverrideConfig = genericSlotOverrides[validatedRamSize];
+    const isDesktopTypePossible = checkValidSlotsForMemoryType("desktop").length > 0;
+    const isEccTypePossible = !isV2SpecialSize && checkValidSlotsForMemoryType("ecc").length > 0;
+    const validMemoryTypes = [];
+    if (isDesktopTypePossible) validMemoryTypes.push("desktop");
+    if (isEccTypePossible) validMemoryTypes.push("ecc");
+    const selectedMemoryType = isV2SpecialSize ? "desktop" : validMemoryTypes.includes(userMemory) ? userMemory : validMemoryTypes[0] ?? "desktop";
+    const isEccEnabled = selectedMemoryType === "ecc";
+    const configurationModules = (0, _ramDataJs.RAM_CONFIGS)[ramTypeLabel]?.[selectedMemoryType] ?? [];
+    const totalOverrideConfig = getOverrideForCurrentConfig(selectedMemoryType);
     const lowDensitySlots = totalOverrideConfig ? totalOverrideConfig.standard : filterSlotsByModuleAvailability(configurationModules.filter((m)=>m <= 8));
     const highDensitySlots = totalOverrideConfig ? totalOverrideConfig.high : filterSlotsByModuleAvailability(configurationModules.filter((m)=>m >= 16));
     const calculatedDensity = isPlatformV2 && selectedMemoryType === "desktop" ? "no" : lowDensitySlots.length === 0 && highDensitySlots.length > 0 ? "yes" : highDensitySlots.length === 0 && lowDensitySlots.length > 0 ? "no" : userDensity ?? "no";
@@ -33159,8 +33244,8 @@ const memoryConfiguration = (state, changedKey)=>{
         }
     };
     const formattedMemoryTypesUi = {
-        desktop: true,
-        ecc: validatedRamSize !== 6
+        desktop: isDesktopTypePossible,
+        ecc: isEccTypePossible
     };
     return {
         ...state,
@@ -33179,32 +33264,14 @@ const memoryConfiguration = (state, changedKey)=>{
         cpu: validatedCpu,
         isSelectionRequired: validatedRamSize >= 16 && validatedRamSize <= 32 && !(isPlatformV2 && selectedMemoryType === "desktop"),
         cpuModels: cpuList,
-        visibleSlots: finalVisibleSlots.reduce((acc, num)=>({
-                ...acc,
-                [`slots${num}`]: true
-            }), {}),
+        visibleSlots: Object.fromEntries(finalVisibleSlots.map((num)=>[
+                `slots${num}`,
+                true
+            ])),
         memoryTypes: formattedMemoryTypesUi,
-        channelsName: [
-            "Single",
-            "Dual",
-            "Triple",
-            "Quad"
-        ][Math.min(verifiedSlotNumber - 1, 3)] ?? "Single",
+        channelsName: CHANNELS_MAP[Math.min(verifiedSlotNumber - 1, 3)] ?? "Single",
         ramSizes: supportedRamSizes,
-        history: updatedPlatformHistory,
-        userFrequency,
-        tCL,
-        tRP,
-        tRCD,
-        tRAS,
-        tRC,
-        tWR,
-        tREFI,
-        tRRD,
-        tRTP,
-        tWTR,
-        tCR,
-        tRFC
+        history: updatedPlatformHistory
     };
 };
 exports.default = memoryConfiguration;
@@ -33412,15 +33479,27 @@ const formatRamLabel = (val)=>`${val} GB`;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "toEven", ()=>toEven);
-const toEven = (value)=>Math.round(value / 2) * 2;
+const toEven = (value)=>{
+    const num = Number(value);
+    return isNaN(num) ? 0 : Math.round(num / 2) * 2;
+};
+const DEFAULT_DDR4_FREQ = 2133;
+const DEFAULT_DDR3_FREQ = 1866;
 const ramFrequency = (state)=>{
     const { cpu, cpuModels, isDdr4, userFrequency } = state;
-    if (userFrequency !== undefined && userFrequency !== "") return {
-        frequency: Number(userFrequency)
+    if (userFrequency !== undefined && String(userFrequency).trim() !== "") {
+        const parsedFreq = Number(userFrequency);
+        if (!isNaN(parsedFreq)) return {
+            frequency: parsedFreq
+        };
+    }
+    const fallbackFrequency = isDdr4 ? DEFAULT_DDR4_FREQ : DEFAULT_DDR3_FREQ;
+    if (!Array.isArray(cpuModels) || cpuModels.length === 0) return {
+        frequency: fallbackFrequency
     };
-    const currentCpuModel = cpuModels?.find((model)=>model.name === cpu) ?? cpuModels?.[0];
+    const currentCpuModel = cpuModels.find((model)=>model?.name === cpu) || cpuModels[0];
     return {
-        frequency: currentCpuModel?.maxFreq ?? (isDdr4 ? 2133 : 1866)
+        frequency: currentCpuModel?.maxFreq ?? fallbackFrequency
     };
 };
 exports.default = ramFrequency;
@@ -33430,32 +33509,73 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 var _ramFrequency = require("./ramFrequency");
-const PrimaryTimings = (state, frequency)=>{
-    const { preset, ramSize, slot, density, board, isEcc, isDdr4, isV4, isV3, isV2, tCL, tRCD, tRP, tRAS, tRC } = state;
+const DEFAULT_TIMING = 15;
+const calculateLoadScore = (state)=>{
+    const { ramSize, slot, density, board, isEcc } = state;
     const slotsCount = Number(slot?.replace("slots", "")) || 2;
-    const loadScore = Math.floor(ramSize / 32) * 2 + (slotsCount > 2 ? 1 : 0) + (density === "yes" ? 2 : 0) + (board === "matx" ? 1 : 0) + (isEcc ? 1 : 0);
+    const sizeFactor = ramSize <= 8 ? 0 : ramSize <= 32 ? 1 : 4;
+    return sizeFactor + (slotsCount > 2 ? 1 : 0) + (density === "yes" || density === true ? 2 : 0) + (board === "matx" ? 1 : 0) + (isEcc ? 1 : 0);
+};
+const getV3V4PresetData = (preset, isV4, frequency)=>{
+    const targetPreset = preset === "custom" ? "safe" : preset;
+    const frequencyPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[Number(frequency)]?.[targetPreset];
+    if (frequencyPreset) return frequencyPreset;
+    switch(preset){
+        case "balanced":
+        case "optimal":
+            return {
+                tCL: 13,
+                tRCD: 13,
+                tRP: 13
+            };
+        case "aggressive":
+            return {
+                tCL: 12,
+                tRCD: 12,
+                tRP: 12
+            };
+        case "safe":
+        default:
+            {
+                const safeTiming = isV4 ? 16 : 15;
+                return {
+                    tCL: safeTiming,
+                    tRCD: safeTiming,
+                    tRP: safeTiming
+                };
+            }
+    }
+};
+const PrimaryTimings = (state, frequency)=>{
+    const { preset, board, isDdr4, isV4, isV3, isV2, tCL, tRCD, tRP, tRAS, tRC } = state;
+    const loadScore = calculateLoadScore(state);
     const totalDivider = isV4 ? 4 : isDdr4 ? 2 : 3;
-    const baseUltraValue = isV4 ? 11 : isDdr4 ? 12 : (0, _memoryPresets.ULTRA_PRESET)?.tCL ?? 11;
-    const ultraTimingValue = baseUltraValue + Math.floor(loadScore / totalDivider);
-    const ultraTrasValue = (0, _ramFrequency.toEven)(ultraTimingValue * 2);
-    const currentPresetData = (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.[preset === "custom" ? "safe" : preset] ?? (0, _memoryPresets.MEMORY_PRESETS)?.[frequency]?.safe ?? (0, _memoryPresets.MEMORY_PRESETS)?.safe ?? {};
-    const v4OffsetModifier = isV4 && frequency >= 2133 ? 2 : 0;
-    const calculatePrimaryValue = (userInputValue, presetDefaultValue)=>preset === "custom" && userInputValue !== undefined && userInputValue !== "" ? Number(userInputValue) : isDdr4 ? Math.max((presetDefaultValue ?? 15) - v4OffsetModifier, 11) : (presetDefaultValue ?? 15) - v4OffsetModifier;
-    const calculatedCL = calculatePrimaryValue(tCL, currentPresetData.tCL);
-    const calculatedRCD = calculatePrimaryValue(tRCD, currentPresetData.tRCD);
-    const calculatedRP = calculatePrimaryValue(tRP, currentPresetData.tRP);
-    const automaticTras = (0, _ramFrequency.toEven)(calculatedCL + calculatedRCD + (isV2 ? 4 : 2));
-    const finalTras = preset === "custom" && tRAS !== undefined && tRAS !== "" ? Number(tRAS) : automaticTras;
-    const automaticTrc = isDdr4 ? Math.max(isV3 || isV4 ? (0, _ramFrequency.toEven)(finalTras + 4) : calculatedCL + calculatedRCD + calculatedRP, 34) : isV3 || isV4 ? (0, _ramFrequency.toEven)(finalTras + 4) : calculatedCL + calculatedRCD + calculatedRP;
-    const finalTrc = preset === "custom" && tRC !== undefined && tRC !== "" ? Number(tRC) : automaticTrc;
-    return preset === "ultra" ? {
-        tCL: ultraTimingValue,
-        tRCD: ultraTimingValue,
-        tRP: ultraTimingValue,
-        tRAS: ultraTrasValue,
-        loadScore,
-        tRC: isV3 || isV4 ? (0, _ramFrequency.toEven)(ultraTrasValue + 4) : ultraTimingValue * 3
-    } : {
+    const isPlatformV3V4 = isV3 || isV4;
+    if (preset === "ultra") {
+        const baseUltraValue = isDdr4 ? frequency >= 2400 ? 14 : 12 : (0, _memoryPresets.ULTRA_PRESET)?.tCL ?? 11;
+        const ultraTimingValue = baseUltraValue + Math.floor(loadScore / totalDivider);
+        const ultraTrasValue = (0, _ramFrequency.toEven)(ultraTimingValue * 2 + 2);
+        const ultraTrcValue = ultraTrasValue + ultraTimingValue;
+        return {
+            tCL: ultraTimingValue,
+            tRCD: ultraTimingValue,
+            tRP: ultraTimingValue,
+            tRAS: ultraTrasValue,
+            tRC: ultraTrcValue,
+            loadScore
+        };
+    }
+    const currentPresetData = isPlatformV3V4 ? getV3V4PresetData(preset, isV4, frequency) : (0, _memoryPresets.MEMORY_PRESETS)?.[Number(frequency)]?.[preset === "custom" ? "safe" : preset] ?? (0, _memoryPresets.MEMORY_PRESETS)?.[Number(frequency)]?.safe ?? (0, _memoryPresets.MEMORY_PRESETS)?.safe ?? {};
+    const getTimingValue = (userInput, presetDefault)=>preset === "custom" && userInput !== undefined && String(userInput).trim() !== "" ? Number(userInput) : presetDefault ?? DEFAULT_TIMING;
+    const calculatedCL = getTimingValue(tCL, currentPresetData.tCL);
+    const calculatedRCD = getTimingValue(tRCD, currentPresetData.tRCD);
+    const calculatedRP = getTimingValue(tRP, currentPresetData.tRP);
+    const baseArchitectureRTP = preset === "aggressive" || preset === "ultra" ? 6 : 8;
+    const automaticTras = (0, _ramFrequency.toEven)(calculatedRCD + baseArchitectureRTP + (isV2 ? 4 : 2));
+    const finalTras = preset === "custom" && tRAS !== undefined && String(tRAS).trim() !== "" ? Number(tRAS) : automaticTras;
+    const automaticTrc = finalTras + calculatedRP;
+    const finalTrc = preset === "custom" && tRC !== undefined && String(tRC).trim() !== "" ? Number(tRC) : automaticTrc;
+    return {
         tCL: calculatedCL,
         tRCD: calculatedRCD,
         tRP: calculatedRP,
@@ -33479,7 +33599,6 @@ parcelHelpers.export(exports, "TREFI_TABLE", ()=>TREFI_TABLE);
 parcelHelpers.export(exports, "PROFILE_SUBTIMINGS", ()=>PROFILE_SUBTIMINGS);
 parcelHelpers.export(exports, "PENALTIES", ()=>PENALTIES);
 parcelHelpers.export(exports, "MEMORY_PRESETS", ()=>MEMORY_PRESETS);
-parcelHelpers.export(exports, "PROFILE_PRESETS", ()=>PROFILE_PRESETS);
 const ULTRA_PRESET = {
     tCL: 11,
     tRCD: 11,
@@ -33519,8 +33638,8 @@ const TREFI_TABLE = {
     },
     aggressive: {
         V2: 32767,
-        V3: 45000,
-        V4: 45000
+        V3: 65535,
+        V4: 65535
     },
     ultra: {
         V2: 32767,
@@ -33701,23 +33820,23 @@ const MEMORY_PRESETS = {
             tWTR: 8
         },
         balanced: {
-            tCL: 14,
-            tRCD: 14,
-            tRP: 14,
-            tRFC: 278
-        },
-        aggressive: {
             tCL: 13,
             tRCD: 13,
             tRP: 13,
+            tRFC: 278
+        },
+        aggressive: {
+            tCL: 12,
+            tRCD: 12,
+            tRP: 12,
             tRFC: 260
         }
     },
     2400: {
         safe: {
-            tCL: 17,
-            tRCD: 17,
-            tRP: 17,
+            tCL: 16,
+            tRCD: 16,
+            tRP: 16,
             tRFC: 350,
             tFAW: 28,
             tWR: 18,
@@ -33726,70 +33845,91 @@ const MEMORY_PRESETS = {
             tWTR: 8
         },
         balanced: {
-            tCL: 16,
-            tRCD: 16,
-            tRP: 16,
+            tCL: 13,
+            tRCD: 13,
+            tRP: 13,
             tRFC: 312
         },
         aggressive: {
-            tCL: 15,
-            tRCD: 15,
-            tRP: 15,
+            tCL: 12,
+            tRCD: 12,
+            tRP: 12,
             tRFC: 280
         }
     }
 };
-const PROFILE_PRESETS = [
-    "safe",
-    "balanced",
-    "aggressive",
-    "custom",
-    "ultra"
-];
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"c57ne":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _memoryPresets = require("../../RamConfiguration/data/memoryPresets");
 var _ramFrequency = require("./ramFrequency");
+const getCustomOrAuto = (preset, userInput, autoValue)=>preset === "custom" && userInput !== undefined && String(userInput).trim() !== "" ? Number(userInput) : autoValue;
+const calculateAutoRFC = (params)=>{
+    const { preset, profileKey, isSpecialConfig, isDdr4, currentFrequency, primaries, stabilityBonus } = params;
+    if (preset === "ultra") {
+        const baseUltraRFC = isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET)?.tRFC ?? 180;
+        return (0, _ramFrequency.toEven)(baseUltraRFC + stabilityBonus * (isDdr4 ? 0.8 : 0.6));
+    }
+    if (isSpecialConfig) return (0, _memoryPresets.SPECIAL_PRESETS)?.[profileKey]?.tRFC ?? (0, _memoryPresets.SPECIAL_PRESETS)?.safe?.tRFC ?? 260;
+    if (preset === "custom" && primaries) return (0, _ramFrequency.toEven)((primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) + stabilityBonus);
+    const freqPresetRFC = (0, _memoryPresets.MEMORY_PRESETS)?.[currentFrequency]?.[profileKey]?.tRFC || (0, _memoryPresets.MEMORY_PRESETS)?.[currentFrequency]?.safe?.tRFC || (isDdr4 ? 312 : 240);
+    return (0, _ramFrequency.toEven)(freqPresetRFC + stabilityBonus);
+};
 const SubTimings = (state, primaries, frequency)=>{
-    const { preset, ramSize, slot, density, board, isSpecialConfig, gen, isDdr4, typeKey, isEcc, tWR: sWR, tREFI: sREFI, tRRD: sRRD, tRTP: sRTP, tWTR: sWTR, tCWL: sCWL, tRFC: sRFC, userFrequency, frequency: baseFrequency } = state;
+    const { preset, ramSize, slot, density, board, isSpecialConfig, gen, isDdr4, typeKey, isEcc, tWR: sWR, tREFI: sREFI, tRRD: sRRD, tRTP: sRTP, tWTR: sWTR, tCWL: sCWL, tRFC: sRFC, tFAW: sFAW, userFrequency, frequency: baseFrequency } = state;
     const currentFrequency = Number(userFrequency || frequency || baseFrequency || 1866);
     const slotsCount = Number(slot?.replace("slots", "")) || 2;
-    const isHighCapacity = ramSize / Math.max(1, slotsCount) >= 12 || ramSize >= 32;
+    const isHighCapacity = ramSize >= 20 || ramSize / Math.max(1, slotsCount) >= 8;
+    const activePresetKey = preset === "optimal" ? "balanced" : preset;
+    const profileKey = preset === "custom" || preset === "ultra" ? "safe" : activePresetKey;
     const freqPreset = (0, _memoryPresets.MEMORY_PRESETS)?.[currentFrequency]?.safe || (0, _memoryPresets.MEMORY_PRESETS)?.safe;
-    const base = (0, _memoryPresets.PROFILE_SUBTIMINGS)?.[preset]?.[typeKey] || {};
+    const base = (0, _memoryPresets.PROFILE_SUBTIMINGS)?.[profileKey]?.[typeKey] || {};
     const highCapacityPenalty = (0, _memoryPresets.PENALTIES)?.highCapacity?.[typeKey] || {};
     const eccPenalty = (0, _memoryPresets.PENALTIES)?.ecc?.[typeKey] || {};
+    const ensureSafeEven = (value)=>value % 2 !== 0 ? value + 1 : value;
     const autoFAW = (0, _ramFrequency.toEven)((base.tFAW ?? freqPreset?.tFAW ?? 24) + (isHighCapacity ? highCapacityPenalty.tFAW ?? 0 : 0) + (isEcc ? eccPenalty.tFAW ?? 0 : 0));
-    const tFAW = autoFAW;
-    const autoWR = (0, _ramFrequency.toEven)((base.tWR ?? freqPreset?.tWR ?? 12) + (isHighCapacity ? highCapacityPenalty.tWR ?? 0 : 0) + (isEcc ? eccPenalty.tWR ?? 0 : 0));
-    const tWR = preset === "custom" && sWR !== undefined && sWR !== "" ? Number(sWR) : autoWR;
-    const autoRRD = (base.tRRD ?? freqPreset?.tRRD ?? 4) + (isHighCapacity ? highCapacityPenalty.tRRD ?? 0 : 0) + (isEcc ? eccPenalty.tRRD ?? 0 : 0);
-    const tRRD = preset === "custom" && sRRD !== undefined && sRRD !== "" ? Number(sRRD) : autoRRD;
-    const autoWTR = (base.tWTR ?? freqPreset?.tWTR ?? 6) + (isHighCapacity ? highCapacityPenalty.tWTR ?? 0 : 0);
-    const tWTR = preset === "custom" && sWTR !== undefined && sWTR !== "" ? Number(sWTR) : autoWTR;
-    const autoRTP = (base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? eccPenalty.tRTP ?? 0 : 0);
-    const tRTP = preset === "custom" && sRTP !== undefined && sRTP !== "" ? Number(sRTP) : autoRTP;
-    const profileKey = preset === "custom" || preset === "ultra" ? "safe" : preset;
+    const tFAW = getCustomOrAuto(preset, sFAW, autoFAW);
+    const autoWR = ensureSafeEven((0, _ramFrequency.toEven)((base.tWR ?? freqPreset?.tWR ?? 12) + (isHighCapacity ? highCapacityPenalty.tWR ?? 0 : 0) + (isEcc ? eccPenalty.tWR ?? 0 : 0)));
+    const tWR = getCustomOrAuto(preset, sWR, autoWR);
+    const autoRRD = ensureSafeEven((base.tRRD ?? freqPreset?.tRRD ?? 4) + (isHighCapacity ? highCapacityPenalty.tRRD ?? 0 : 0) + (isEcc ? eccPenalty.tRRD ?? 0 : 0));
+    const tRRD = getCustomOrAuto(preset, sRRD, autoRRD);
+    let baseArchitectureWTR = 8;
+    if (gen === "V3") {
+        if (preset === "aggressive" || preset === "ultra") baseArchitectureWTR = 6;
+        else baseArchitectureWTR = 8;
+    } else if (gen === "V4") {
+        if (preset === "optimal" || preset === "balanced" || preset === "aggressive" || preset === "ultra") baseArchitectureWTR = 6;
+        else baseArchitectureWTR = 8;
+    } else baseArchitectureWTR = ensureSafeEven((base.tWTR ?? freqPreset?.tWTR ?? 6) + (isHighCapacity ? highCapacityPenalty.tWTR ?? 0 : 0));
+    const tWTR = getCustomOrAuto(preset, sWTR, baseArchitectureWTR);
+    const autoRTP = ensureSafeEven((base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? eccPenalty.tRTP ?? 0 : 0));
+    const tRTP = getCustomOrAuto(preset, sRTP, autoRTP);
     const autoREFI = (0, _memoryPresets.TREFI_TABLE)?.[preset === "ultra" ? "ultra" : profileKey]?.[gen] ?? (0, _memoryPresets.TREFI_TABLE)?.safe?.[gen] ?? 7800;
-    const tREFI = preset === "custom" && sREFI !== undefined && sREFI !== "" ? Number(sREFI) : autoREFI;
-    const stabilityBonus = (Math.floor((ramSize - 8) / 8) * 10 + slotsCount * 12 - 12 + (density === "yes" ? 48 : 0) + (isEcc ? isDdr4 ? 24 : 40 : -12) + (board === "matx" ? 16 : 0)) * (isDdr4 ? 1 : 1.35);
-    const autoRFC = preset === "ultra" ? (0, _ramFrequency.toEven)((isDdr4 ? 264 : (0, _memoryPresets.ULTRA_PRESET)?.tRFC ?? 180) + stabilityBonus * (isDdr4 ? 0.8 : 0.6)) : isSpecialConfig ? (0, _memoryPresets.SPECIAL_PRESETS)?.[profileKey]?.tRFC ?? (0, _memoryPresets.SPECIAL_PRESETS)?.safe?.tRFC ?? 260 : preset === "custom" && primaries ? (0, _ramFrequency.toEven)((primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) + stabilityBonus) : (0, _ramFrequency.toEven)(((0, _memoryPresets.MEMORY_PRESETS)?.[currentFrequency]?.[profileKey]?.tRFC || (0, _memoryPresets.MEMORY_PRESETS)?.[currentFrequency]?.safe?.tRFC || (isDdr4 ? 312 : 240)) + stabilityBonus);
-    const tRFC = preset === "custom" && sRFC !== undefined && sRFC !== "" ? Number(sRFC) : autoRFC;
-    const limitValue = isSpecialConfig && preset !== "ultra" ? (0, _memoryPresets.SPECIAL_LIMITS)?.[profileKey] ?? (0, _ramFrequency.toEven)(tRFC * 0.92) : (0, _ramFrequency.toEven)(tRFC * (preset === "ultra" ? 0.9 : 0.92));
-    const currentCL = state.tCL !== undefined && state.tCL !== "" ? Number(state.tCL) : primaries?.tCL ?? (isDdr4 ? 16 : 40);
-    const option1 = currentCL;
-    const option2 = isDdr4 ? currentCL - 2 : currentCL - 4;
-    const option3 = isDdr4 ? Math.max(9, Math.floor(currentFrequency / 400)) : Math.max(20, Math.floor(currentFrequency / 150));
-    const sortedCwlOptions = [
-        option1,
-        option2,
-        option3
-    ].sort((a, b)=>a - b);
-    const medianCwlValue = sortedCwlOptions[1];
-    const autoCWL = (0, _ramFrequency.toEven)(base.tCWL ?? freqPreset?.tCWL ?? medianCwlValue);
-    const tCWL = preset === "custom" && sCWL !== undefined && sCWL !== "" ? Number(sCWL) : autoCWL;
+    const tREFI = getCustomOrAuto(preset, sREFI, autoREFI);
+    const boundedSizeBonus = Math.min(Math.floor((ramSize - 8) / 8) * 8, 32);
+    const genMultiplier = gen === "V4" ? 0.85 : isDdr4 ? 1 : 1.35;
+    const stabilityBonus = (boundedSizeBonus + slotsCount * 12 - 12 + (density === "yes" ? 48 : 0) + (isEcc ? isDdr4 ? 24 : 40 : -12) + (board === "matx" ? 16 : 0)) * genMultiplier;
+    const autoRFC = calculateAutoRFC({
+        preset,
+        profileKey,
+        isSpecialConfig,
+        isDdr4,
+        currentFrequency,
+        primaries,
+        stabilityBonus
+    });
+    const tRFC = getCustomOrAuto(preset, sRFC, autoRFC);
+    const limitMultiplier = preset === "ultra" ? 0.9 : 0.92;
+    const limitValue = isSpecialConfig && preset !== "ultra" ? (0, _memoryPresets.SPECIAL_LIMITS)?.[profileKey] ?? (0, _ramFrequency.toEven)((tRFC || 260) * 0.92) : (0, _ramFrequency.toEven)((tRFC || 260) * limitMultiplier);
+    const currentCL = primaries?.tCL ?? (isDdr4 ? 16 : 11);
+    let calculatedAutoCWL = currentCL;
+    if (isDdr4) {
+        if (preset === "aggressive" || preset === "ultra") calculatedAutoCWL = currentCL - 2;
+        else if (preset === "optimal" || preset === "balanced") calculatedAutoCWL = currentCL - 1;
+    } else calculatedAutoCWL = preset === "aggressive" || preset === "ultra" ? currentCL - 1 : currentCL;
+    const autoCWL = ensureSafeEven((0, _ramFrequency.toEven)(base.tCWL ?? calculatedAutoCWL));
+    const tCWL = getCustomOrAuto(preset, sCWL, autoCWL);
     return {
         tRFC,
         tFAW,
@@ -33813,16 +33953,24 @@ $RefreshReg$(_c, "SubTimings");
 },{"../../RamConfiguration/data/memoryPresets":"6HYNE","./ramFrequency":"9XM1p","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bN4wa":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+const CHANNEL_MAPPING = {
+    Single: 1,
+    Dual: 2,
+    Triple: 3,
+    Quad: 4
+};
 const ramPerformance = (state, frequency)=>{
-    const { ramSize, slot, isDdr4, preset, tCR: userCommandRate } = state;
+    const { ramSize, slot, isDdr4, preset, tCR: userCommandRate, channelsName } = state;
     const slotsCount = Number(slot?.replace("slots", "")) || 2;
-    const memoryChannels = Math.min(slotsCount, 4);
+    const memoryChannels = CHANNEL_MAPPING[channelsName] ?? Math.min(slotsCount, 2);
     const bandwidthGbps = Math.round(frequency * 8 * memoryChannels / 1024) || 0;
     const operationalVoltage = isDdr4 ? preset === "ultra" ? "1.30V" : preset === "aggressive" ? "1.25V" : "1.20V" : preset === "ultra" || preset === "aggressive" ? "1.55V" : "1.50V";
     const automaticCommandRate = ramSize >= 128 || slotsCount >= 4 ? "2N" : "1N";
-    const finalCommandRate = preset === "custom" && userCommandRate !== undefined && userCommandRate !== "" ? userCommandRate : automaticCommandRate;
+    const hasUserValue = userCommandRate !== undefined && String(userCommandRate).trim() !== "";
+    const finalCommandRate = preset === "custom" && hasUserValue ? userCommandRate : automaticCommandRate;
     return {
         voltage: operationalVoltage,
+        tCR: finalCommandRate,
         tCP: finalCommandRate,
         bandwidth: `${bandwidthGbps} GB/s`,
         freq: `${frequency} MHz`
@@ -35585,6 +35733,488 @@ $RefreshReg$(_c, "USBTools");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["7KwkS","4dmnR"], "4dmnR", "parcelRequire1fd1", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"eSmTJ":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$06a4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$06a4.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$06a4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _biosWindow = require("../BiosWindow/BiosWindow");
+var _biosWindowDefault = parcelHelpers.interopDefault(_biosWindow);
+var _toolbox = require("../Toolbox/Toolbox");
+var _toolboxDefault = parcelHelpers.interopDefault(_toolbox);
+var _aboutBios = require("./AboutBios");
+var _aboutBiosDefault = parcelHelpers.interopDefault(_aboutBios);
+var _aboutInfo = require("./AboutInfo");
+var _aboutInfoDefault = parcelHelpers.interopDefault(_aboutInfo);
+var _aboutTools = require("./AboutTools");
+var _aboutToolsDefault = parcelHelpers.interopDefault(_aboutTools);
+var _s = $RefreshSig$();
+const AboutConfiguration = ({ selectedButton = "about" })=>{
+    _s();
+    const [param, setParam] = (0, _react.useState)({
+        aboutTab: selectedButton
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toolboxDefault.default), {
+                title: "ABOUT THE XEON TUNING PROJECT",
+                toolsLabel: "\u0418\u041D\u0424\u041E\u0420\u041C\u0410\u0426\u0418\u042F \u041E \u0421\u0418\u0421\u0422\u0415\u041C\u0415",
+                renderInfo: (0, _aboutInfoDefault.default),
+                renderTools: (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutToolsDefault.default), {
+                        ...props,
+                        param: param,
+                        setParam: setParam
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutConfiguration.jsx",
+                        lineNumber: 18,
+                        columnNumber: 11
+                    }, void 0)
+            }, void 0, false, {
+                fileName: "src/components/About/AboutConfiguration.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _biosWindowDefault.default), {
+                ...(0, _aboutBiosDefault.default)(param)
+            }, void 0, false, {
+                fileName: "src/components/About/AboutConfiguration.jsx",
+                lineNumber: 22,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(AboutConfiguration, "9or/syjgT1XsnR0kAhwqeTUDQx4=");
+_c = AboutConfiguration;
+exports.default = AboutConfiguration;
+var _c;
+$RefreshReg$(_c, "AboutConfiguration");
+
+  $parcel$ReactRefreshHelpers$06a4.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","../BiosWindow/BiosWindow":"hfQWA","../Toolbox/Toolbox":"eFAbl","./AboutBios":"kiO1z","./AboutInfo":"bx2Y7","./AboutTools":"4d8oP","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kiO1z":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const AboutBios = ()=>{
+    return {
+        title: "SYSTEM INFORMATION & DEVELOPER STATUS",
+        path: "MAIN > ABOUT_THE_PROJECT",
+        content: [
+            {
+                text_left: "Project Name",
+                text_right: "Xeon Configurator"
+            },
+            {
+                text_left: "INTEL XEON",
+                text_right: "X79/X99"
+            },
+            {
+                text_left: "Build Version",
+                text_right: "1.0-Stable"
+            },
+            {
+                text_left: "Android Build (APK)",
+                text_right: "SUCCESSFUL"
+            }
+        ]
+    };
+};
+_c = AboutBios;
+exports.default = AboutBios;
+var _c;
+$RefreshReg$(_c, "AboutBios");
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bx2Y7":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$f29e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$f29e.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f29e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const AboutInfo = (s)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: s.info_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDC64"
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 6,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u041E \u043F\u0440\u043E\u0435\u043A\u0442\u0435:"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutInfo.jsx",
+                                lineNumber: 8,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u041F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u0441\u043E\u043B\u044C\u043D\u0430\u044F \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430. \u041F\u0440\u0438 \u043F\u043E\u043C\u043E\u0449\u0438 AI \u0438 \u0432 \u0441\u043E\u0430\u0432\u0442\u043E\u0440\u0441\u0442\u0432\u0435 \u0441 \u043D\u0435\u0439\u0440\u043E\u0441\u0435\u0442\u044F\u043C\u0438 \u044F \u043F\u0440\u043E\u0435\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u043B \u0441\u043B\u043E\u0436\u043D\u0443\u044E \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u044E\u044E \u043B\u043E\u0433\u0438\u043A\u0443 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F, \u0443\u043F\u0430\u043A\u043E\u0432\u044B\u0432\u0430\u044F \u0435\u0451 \u0432 \u043F\u0440\u043E\u0441\u0442\u044B\u0435 \u0438 \u0447\u0438\u0441\u0442\u044B\u0435 \u043C\u043E\u0434\u0443\u043B\u044C\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442\u044B. \u0427\u0435\u0440\u0435\u0437 GitHub Actions \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043D\u0430 \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0441\u0431\u043E\u0440\u043A\u0430 Android APK."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 7,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About/AboutInfo.jsx",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\u2699\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 16,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u0421\u0442\u0435\u043A:"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutInfo.jsx",
+                                lineNumber: 18,
+                                columnNumber: 9
+                            }, undefined),
+                            " HTML5, CSS3 (Modules), JavaScript (ES6+), TypeScript, React (Hooks), Redux Toolkit, Router v6, Vite, CI/CD (GitHub Actions, \u0441\u0431\u043E\u0440\u043A\u0430 Android APK)."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 17,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About/AboutInfo.jsx",
+                lineNumber: 15,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDCBC"
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 25,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u041E\u0442\u043A\u0440\u044B\u0442 \u043A \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u044F\u043C:"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutInfo.jsx",
+                                lineNumber: 27,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u0422\u0430\u043A\u0436\u0435 \u043D\u0430 \u0434\u0430\u043D\u043D\u044B\u0439 \u043C\u043E\u043C\u0435\u043D\u0442 \u043F\u043E \u0441\u043B\u043E\u0436\u0438\u0432\u0448\u0438\u043C\u0441\u044F \u0436\u0438\u0437\u043D\u0435\u043D\u043D\u044B\u043C \u043E\u0431\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430\u043C \u0438\u0449\u0443 \u0443\u0434\u0430\u043B\u0451\u043D\u043D\u044B\u0439 \u0444\u043E\u0440\u043C\u0430\u0442 \u0440\u0430\u0431\u043E\u0442\u044B \u043D\u0430 full-time. \u0415\u0441\u0442\u044C \u043E\u043F\u044B\u0442 \u043A\u043E\u043C\u043C\u0435\u0440\u0447\u0435\u0441\u043A\u043E\u0439 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438 (\u043A\u043E\u043D\u0442\u0440\u0430\u043A\u0442\u043D\u0430\u044F \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430)."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 26,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About/AboutInfo.jsx",
+                lineNumber: 24,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83E\uDDE0"
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 34,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u0411\u044D\u043A\u0433\u0440\u0430\u0443\u043D\u0434:"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutInfo.jsx",
+                                lineNumber: 36,
+                                columnNumber: 9
+                            }, undefined),
+                            " \u0412\u044B\u0441\u0448\u0435\u0435 \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0438 \u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043E\u043F\u044B\u0442 \u0440\u0430\u0431\u043E\u0442\u044B \u0441 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u043C\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u0430\u043C\u0438, \u043D\u0438\u0437\u043A\u043E\u0443\u0440\u043E\u0432\u043D\u0435\u0432\u044B\u043C \u0441\u043E\u0444\u0442\u043E\u043C \u0438 \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430\u043C\u0438. \u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u043D\u043E\u0435 \u043C\u044B\u0448\u043B\u0435\u043D\u0438\u0435 \u0438 \u0443\u043C\u0435\u043D\u0438\u0435 \u0447\u0438\u0442\u0430\u0442\u044C \u0447\u0443\u0436\u043E\u0439 \u043A\u043E\u0434."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 35,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About/AboutInfo.jsx",
+                lineNumber: 33,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: s.info_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_icon,
+                        children: "\uD83D\uDCAC"
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 43,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.info_text,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B:"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutInfo.jsx",
+                                lineNumber: 45,
+                                columnNumber: 9
+                            }, undefined),
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: "https://github.com/Renko-hub",
+                                target: "_blank",
+                                rel: "noreferrer",
+                                className: s.info_link,
+                                children: "GitHub"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutInfo.jsx",
+                                lineNumber: 46,
+                                columnNumber: 9
+                            }, undefined),
+                            " ",
+                            "| whiterockdi@gmail.com"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/About/AboutInfo.jsx",
+                        lineNumber: 44,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About/AboutInfo.jsx",
+                lineNumber: 42,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/About/AboutInfo.jsx",
+        lineNumber: 4,
+        columnNumber: 3
+    }, undefined);
+_c = AboutInfo;
+exports.default = AboutInfo;
+var _c;
+$RefreshReg$(_c, "AboutInfo");
+
+  $parcel$ReactRefreshHelpers$f29e.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"4d8oP":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$d3dd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$d3dd.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d3dd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _button = require("../Button/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+const AboutTools = ({ styles: s })=>{
+    const handleDonateClick = ()=>{
+        window.open("https://yoomoney.ru/to/4100119545912515", "_blank", "noreferrer");
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: s.tools_container,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_label,
+                children: "\u041F\u041E\u0414\u0414\u0415\u0420\u0416\u041A\u0410 \u041F\u0420\u041E\u0415\u041A\u0422\u0410:"
+            }, void 0, false, {
+                fileName: "src/components/About/AboutTools.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.btn_group,
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                    type: "donate",
+                    isActive: true,
+                    className: s.tools_button,
+                    onClick: handleDonateClick
+                }, void 0, false, {
+                    fileName: "src/components/About/AboutTools.jsx",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/About/AboutTools.jsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u2615"
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutTools.jsx",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u042D\u0442\u043E\u0442 \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442 \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u0439"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutTools.jsx",
+                                lineNumber: 28,
+                                columnNumber: 37
+                            }, undefined),
+                            " \u0438 \u0441\u043E\u0437\u0434\u0430\u043D \u043D\u0430 \u0447\u0438\u0441\u0442\u043E\u043C \u044D\u043D\u0442\u0443\u0437\u0438\u0430\u0437\u043C\u0435 \u0441 \u0446\u0435\u043B\u044C\u044E \u043E\u043F\u0442\u0438\u043C\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u0442\u044C BIOS \u043D\u0430 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430\u0445 ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "X79 \u0438 X99"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutTools.jsx",
+                                lineNumber: 29,
+                                columnNumber: 64
+                            }, undefined),
+                            "."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/About/AboutTools.jsx",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About/AboutTools.jsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\uD83D\uDD2C"
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutTools.jsx",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: [
+                            "\u0412\u0441\u044F \u0431\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439 \u0441\u043E\u0431\u0438\u0440\u0430\u043B\u0430\u0441\u044C \u0432\u0440\u0443\u0447\u043D\u0443\u044E \u0438\u0437 \u0441\u043E\u0442\u0435\u043D \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A\u043E\u0432. \u041A\u0430\u0436\u0434\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435, \u0442\u0430\u0439\u043C\u0438\u043D\u0433 \u0438 \u0441\u043A\u0440\u044B\u0442\u044B\u0439 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440 BIOS \u044F",
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("b", {
+                                children: "\u043B\u0438\u0447\u043D\u043E \u043F\u0440\u043E\u0432\u0435\u0440\u044F\u043B \u043D\u0430 \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0435"
+                            }, void 0, false, {
+                                fileName: "src/components/About/AboutTools.jsx",
+                                lineNumber: 38,
+                                columnNumber: 11
+                            }, undefined),
+                            " \u0446\u0435\u043D\u043E\u0439 \u0434\u0435\u0441\u044F\u0442\u043A\u043E\u0432 \u0441\u0431\u0440\u043E\u0441\u043E\u0432 \u0431\u0438\u043E\u0441\u0430 \u0447\u0435\u0440\u0435\u0437 \u0431\u0430\u0442\u0430\u0440\u0435\u0439\u043A\u0443 \u0438 \u0437\u0430\u043C\u044B\u043A\u0430\u043D\u0438\u0435 CMOS."
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/About/AboutTools.jsx",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About/AboutTools.jsx",
+                lineNumber: 33,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: s.tools_item,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: s.tools_icon,
+                        children: "\u2764\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutTools.jsx",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: s.tools_text,
+                        children: "\u0415\u0441\u043B\u0438 \u043F\u0440\u043E\u0435\u043A\u0442 \u0432\u0430\u043C \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u043B\u0441\u044F \u0438 \u0435\u0433\u043E \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u043F\u043E\u043C\u043E\u0433\u043B\u043E \u0440\u0435\u0448\u0438\u0442\u044C \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u044B \u0441 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u043E\u0439 \u0438\u043B\u0438 \u0432\u044B\u0436\u0430\u0442\u044C \u0438\u0437 \u043D\u0435\u0451 \u043C\u0430\u043A\u0441\u0438\u043C\u0443\u043C \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438, \u0432\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0434\u043E\u0431\u0440\u043E\u0432\u043E\u043B\u044C\u043D\u043E \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0430\u0442\u044C \u0430\u0432\u0442\u043E\u0440\u0430, \u043D\u0430\u0436\u0430\u0432 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443 \u0432\u0432\u0435\u0440\u0445\u0443."
+                    }, void 0, false, {
+                        fileName: "src/components/About/AboutTools.jsx",
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/About/AboutTools.jsx",
+                lineNumber: 43,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/About/AboutTools.jsx",
+        lineNumber: 13,
+        columnNumber: 5
+    }, undefined);
+};
+_c = AboutTools;
+exports.default = AboutTools;
+var _c;
+$RefreshReg$(_c, "AboutTools");
+
+  $parcel$ReactRefreshHelpers$d3dd.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","../Button/Button":"4hbTW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["7KwkS","4dmnR"], "4dmnR", "parcelRequire1fd1", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=public.6efbc4f8.js.map
