@@ -76,7 +76,6 @@ img, video {
   white-space: nowrap;
   text-align: center;
   background: none;
-  border-top: 2px solid #0000;
   border-bottom: 2px solid #0000;
   flex: auto;
   justify-content: center;
@@ -98,7 +97,6 @@ img, video {
   color: #fff;
   text-shadow: 0 0 10px #007bffb3, 0 0 20px #007bff33;
   cursor: default;
-  border-top-color: #007bff;
   border-bottom-color: #007bff;
 }
 
@@ -189,8 +187,8 @@ img, video {
   .MqZHCq_header__link.MqZHCq_header__link_active {
     color: #fff;
     background: #1e1e1e;
-    border-top-color: #0000;
-    border-bottom-color: #007bff;
+    border-top: 1px solid #007bff;
+    border-bottom: 1px solid #007bff;
     border-left-color: #0000;
   }
 }
