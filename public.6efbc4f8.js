@@ -25018,44 +25018,75 @@ const MENU_ITEMS = [
 const Header = ()=>{
     _s();
     const [isOpen, setIsOpen] = (0, _react.useState)(false);
+    const menuRef = (0, _react.useRef)(null);
+    (0, _react.useEffect)(()=>{
+        const handleClickOutside = (event)=>{
+            if (menuRef.current && !menuRef.current.contains(event.target)) setIsOpen(false);
+        };
+        if (isOpen) document.addEventListener("mousedown", handleClickOutside);
+        return ()=>{
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [
+        isOpen
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+        ref: menuRef,
         className: (0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header, isOpen && (0, _headerModuleCssDefault.default).header_open),
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: (0, _headerModuleCssDefault.default).header__toggle,
+                className: (0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__toggle, isOpen && (0, _headerModuleCssDefault.default).header__toggle_open),
                 onClick: ()=>setIsOpen(!isOpen),
-                children: isOpen ? "\u2715 \u0417\u0430\u043A\u0440\u044B\u0442\u044C" : "\u0420\u0430\u0437\u0434\u0435\u043B\u044B"
-            }, void 0, false, {
+                "aria-expanded": isOpen,
+                "aria-label": "Menu",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                        fileName: "src/components/Header/Header.jsx",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                        fileName: "src/components/Header/Header.jsx",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                        fileName: "src/components/Header/Header.jsx",
+                        lineNumber: 52,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Header/Header.jsx",
-                lineNumber: 27,
+                lineNumber: 44,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: (0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__container, isOpen && (0, _headerModuleCssDefault.default).header__container_open),
-                children: MENU_ITEMS.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                children: MENU_ITEMS.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                         to: item.to,
                         end: true,
                         onClick: ()=>setIsOpen(false),
                         className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
                         children: item.label
-                    }, `${item.to}-${index}`, false, {
+                    }, item.to, false, {
                         fileName: "src/components/Header/Header.jsx",
-                        lineNumber: 38,
+                        lineNumber: 62,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Header/Header.jsx",
-                lineNumber: 31,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header/Header.jsx",
-        lineNumber: 26,
+        lineNumber: 43,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "+sus0Lb0ewKHdwiUhiTAJFoFyQ0=");
+_s(Header, "yIsVPXmGJnWJAXf4YKobPzEQ+oo=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -25094,6 +25125,7 @@ module.exports["header__container_open"] = `MqZHCq_header__container_open`;
 module.exports["header__link"] = `MqZHCq_header__link`;
 module.exports["header__link_active"] = `MqZHCq_header__link_active`;
 module.exports["header__toggle"] = `MqZHCq_header__toggle`;
+module.exports["header__toggle_open"] = `MqZHCq_header__toggle_open`;
 
 },{}],"7h6Pi":[function(require,module,exports,__globalThis) {
 "use strict";

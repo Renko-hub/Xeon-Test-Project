@@ -86,7 +86,7 @@ img, video {
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
-  transition: color .2s, border-color .2s;
+  transition: color .2s, border-color .2s, background-color .2s;
   display: flex;
 }
 
@@ -110,47 +110,71 @@ img, video {
   }
 
   .MqZHCq_header__toggle {
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
     cursor: pointer;
+    box-sizing: border-box;
     background: #222;
     border: none;
     border-bottom: 1px solid #333;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     width: 100%;
-    padding: 12px 15px;
-    font-size: 13px;
-    font-weight: bold;
+    height: 48px;
+    padding: 0;
+    display: flex;
+  }
+
+  .MqZHCq_header__toggle span {
+    background-color: #fff;
+    width: 20px;
+    height: 2px;
+    transition: transform .3s, opacity .3s;
     display: block;
+  }
+
+  .MqZHCq_header__toggle_open span:first-child {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .MqZHCq_header__toggle_open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .MqZHCq_header__toggle_open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .MqZHCq_header__container {
     box-sizing: border-box;
     background: #151515;
     flex-flow: column;
-    gap: 4px;
+    gap: 0;
     width: 100%;
-    padding: 10px 0;
-    display: none;
+    max-height: 0;
+    padding: 0;
+    transition: max-height .3s ease-in-out;
+    display: flex;
+    overflow: hidden;
   }
 
   .MqZHCq_header__container.MqZHCq_header__container_open {
-    display: flex;
+    border-bottom: 1px solid #333;
+    max-height: 600px;
   }
 
   .MqZHCq_header__link {
-    text-align: center;
     box-sizing: border-box;
     border-top: 2px solid #0000;
     border-bottom: 2px solid #0000;
     border-left: none;
     justify-content: center;
     width: 100%;
+    min-width: 0;
     height: 44px;
     min-height: 44px;
-    padding: 0;
+    padding: 0 20px;
     font-size: 12px;
-    display: flex;
   }
 
   .MqZHCq_header__link.MqZHCq_header__link_active {
@@ -158,6 +182,7 @@ img, video {
     background: #1e1e1e;
     border-top-color: #007bff;
     border-bottom-color: #007bff;
+    border-left-color: #0000;
   }
 }
 
