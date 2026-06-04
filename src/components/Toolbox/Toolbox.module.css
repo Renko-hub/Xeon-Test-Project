@@ -57,10 +57,25 @@
 }
 
 @media (max-width: 768px) {
+  .toolbox_title {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .toolbox_tabs {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .tab_button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
   .toolbox_card {
-    padding: 20px 15px;
-    border-left-width: 4px;
-    border-right-width: 4px;
+    padding: 12px 10px;
+    border-left-width: 3px;
+    border-right-width: 3px;
   }
 
   .info_border {
