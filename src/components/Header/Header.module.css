@@ -6,9 +6,11 @@
   text-transform: uppercase;
 }
 
+/* Перевели на flex-wrap для идеального распределения 13 пунктов */
 .header__container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px 15px;
   max-width: 1400px;
   margin: 0 auto;
@@ -16,6 +18,8 @@
 }
 
 .header__link {
+  flex: 1 1 auto;
+  min-width: 130px; /* Чтобы кнопки держали форму и не сжимались в кашу */
   background: transparent;
   color: #888;
   padding: 6px 8px;
@@ -48,17 +52,7 @@
   cursor: default;
 }
 
-@media (max-width: 1200px) {
-  .header__container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px 10px;
-  }
-  .header__link {
-    font-size: 12px;
-    padding: 6px 4px;
-  }
-}
-
+/* Мобильный BIOS-скролл оставляем без изменений */
 @media (max-width: 768px) {
   .header__container {
     display: flex;

@@ -6,17 +6,17 @@ import "./global.css";
 
 import Header from "./components/Header/Header";
 
+import About from "./components/About/AboutConfiguration"; // Изменили путь здесь
 import AdvancedConfiguration from "./components/AdvancedConfiguration/AdvancedConfiguration";
 import CSMConfiguration from "./components/CSMConfiguration/CSMConfiguration";
 import DRAMConfiguration from "./components/DRAMConfiguration/DRAMConfiguration";
 import FanConfiguration from "./components/FanConfiguration/FanConfiguration";
 import FivrConfiguration from "./components/FivrConfiguration/FivrConfiguration";
 import IIOConfiguration from "./components/IIOConfiguration/IIOConfiguration";
-// Наш новый компонент контроллера памяти по вашим фото
 import MemoryConfiguration from "./components/MemoryConfiguration/MemoryConfiguration";
 import PCIConfiguration from "./components/PCIConfiguration/PCIConfiguration";
 import PowerConfiguration from "./components/PowerConfiguration/PowerConfiguration";
-import RAMConfiguration from "./components/RamConfiguration/RamConfiguration"; // Возвращаем на место!
+import RAMConfiguration from "./components/RamConfiguration/RamConfiguration";
 import ThermalConfiguration from "./components/ThermalConfiguration/ThermalConfiguration";
 import USBConfiguration from "./components/USBConfiguration/USBConfiguration";
 
@@ -25,11 +25,9 @@ const App = () => (
     <Header />
     <main className="container">
       <Routes>
-        {/* Оставляем редирект на стандартный /ram, как было у вас изначально */}
         <Route path="/" element={<Navigate to="/ram" replace />} />
         <Route path="/ram" element={<RAMConfiguration />} />
-        <Route path="/memory" element={<MemoryConfiguration />} />{" "}
-        {/* Новый роут для IMC */}
+        <Route path="/memory" element={<MemoryConfiguration />} />
         <Route path="/dram" element={<DRAMConfiguration />} />
         <Route path="/thermal" element={<ThermalConfiguration />} />
         <Route path="/fivr" element={<FivrConfiguration />} />
@@ -40,6 +38,7 @@ const App = () => (
         <Route path="/usb" element={<USBConfiguration />} />
         <Route path="/fan" element={<FanConfiguration />} />
         <Route path="/pci" element={<PCIConfiguration />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<Navigate to="/ram" replace />} />
       </Routes>
     </main>

@@ -3,89 +3,73 @@ import timingEngine from "../TimingEngine/timingEngine.js";
 import BiosInput from "../BiosInput/BiosInput";
 
 const RamBios = (param = {}, state = {}, update) => {
-  const { state: config = {}, timings = {} } = timingEngine({
+  const { state: cfg = {}, timings: t = {} } = timingEngine({
     ...param,
     ...state,
   });
-  const isCustom = config.preset === "custom";
-
-  const slots = Number(config.slot?.replace("slots", "")) || 2;
+  const isCustom = cfg.preset === "custom";
+  const slots = Number(cfg.slot?.replace("slots", "")) || 2;
   const channels =
     ["SINGLE", "DUAL", "TRIPLE", "QUAD"][Math.min(slots - 1, 3)] ?? "SINGLE";
-  const titleText = `${timings.freqClean ?? ""} MHZ - ${timings.bandwidth ?? "0 GB/s"} (${channels})`;
 
   const getVal = (f) =>
     state[f] !== undefined
       ? String(state[f])
-      : timings[f] !== undefined && timings[f] !== null
-        ? String(timings[f])
+      : t[f] !== undefined && t[f] !== null
+        ? String(t[f])
         : "";
 
-  const rawRfc = timings.tRfcFormatted ?? getVal("tRFC");
-  const formattedRfc = isCustom
-    ? rawRfc.match(/^\d+/)
-      ? rawRfc
-      : getVal("tRFC")
-    : rawRfc.replace(
-        /IDEAL|LIMIT/g,
-        config.preset === "ultra" ? "LIMIT" : "IDEAL",
-      );
+  const rRfc = t.tRfcFormatted ?? getVal("tRFC");
 
-  const createField = (
-    label,
-    field,
-    isEditable = isCustom,
-    isFirst = false,
-  ) => ({
-    label,
-    value: getVal(field),
-    field,
-    isEditable,
-    isFirst,
+  const fRfc = isCustom
+    ? rRfc.match(/^\d+/)
+      ? rRfc.match(/^\d+/)[0]
+      : getVal("tRFC")
+    : rRfc.replace(/IDEAL|LIMIT/g, cfg.preset === "ultra" ? "LIMIT" : "IDEAL");
+
+  const fld = (label, field, isEditable = isCustom, isFirst = false) => ({
+    text_left: label,
+    text_right: isEditable ? (
+      <BiosInput
+        field={field}
+        state={state}
+        update={update}
+        isFirst={isFirst}
+      />
+    ) : field === "tRFC" ? (
+      fRfc
+    ) : (
+      getVal(field)
+    ),
   });
 
-  const fields = [
-    { label: "DIMM PROFILE", value: "MANUAL" },
-    { label: "MEMORY FREQUENCY", value: timings.freqClean ?? "" },
-    { label: "MEMORY VOLTAGE", value: getVal("voltage") },
-    {
-      label: "COMMAND TIMING",
-      value: (getVal("tCR") !== "" ? getVal("tCR") : null) ?? getVal("tCP"),
-    },
-    { label: "REFRESH RATE", value: getVal("tREFI") },
-    createField("CAS LATENCY", "tCL", isCustom, true),
-    createField("TRP", "tRP"),
-    createField("TRCD", "tRCD"),
-    { label: "TRAS", value: getVal("tRAS") },
-    { label: "TWR", value: getVal("tWR") },
-    createField("TRFC", "tRFC", false),
-    { label: "TRRD", value: getVal("tRRD") },
-    { label: "TRTP", value: getVal("tRTP") },
-    { label: "TWTR", value: getVal("tWTR") },
-    { label: "TFAW", value: getVal("tFAW") },
-    { label: "TRC", value: getVal("tRC") },
-    { label: "TCWL", value: getVal("tCWL") },
-  ];
-
   return {
-    title: titleText.toUpperCase(),
+    title:
+      `${t.freqClean ?? ""} MHZ - ${t.bandwidth ?? "0 GB/s"} (${channels})`.toUpperCase(),
     path: "INTELRCSETUP > MEMORY CONFIGURATION > MEMORY TIMINGS",
-    content: fields.map(({ label, value, isEditable, field, isFirst }) => ({
-      text_left: label,
-      text_right:
-        isEditable && field ? (
-          <BiosInput
-            field={field}
-            state={state}
-            update={update}
-            isFirst={isFirst}
-          />
-        ) : field === "tRFC" ? (
-          formattedRfc
-        ) : (
-          value
-        ),
-    })),
+    content: [
+      { text_left: "DIMM PROFILE", text_right: "MANUAL" },
+      { text_left: "MEMORY FREQUENCY", text_right: t.freqClean ?? "" },
+      { text_left: "MEMORY VOLTAGE", text_right: getVal("voltage") },
+      {
+        text_left: "COMMAND TIMING",
+        text_right:
+          (getVal("tCR") !== "" ? getVal("tCR") : null) ?? getVal("tCP"),
+      },
+      { text_left: "REFRESH RATE", text_right: getVal("tREFI") },
+      fld("CAS LATENCY", "tCL", isCustom, true),
+      fld("TRP", "tRP"),
+      fld("TRCD", "tRCD"),
+      { text_left: "TRAS", text_right: getVal("tRAS") },
+      { text_left: "TWR", text_right: getVal("tWR") },
+      fld("TRFC", "tRFC", false),
+      { text_left: "TRRD", text_right: getVal("tRRD") },
+      { text_left: "TRTP", text_right: getVal("tRTP") },
+      { text_left: "TWTR", text_right: getVal("tWTR") },
+      { text_left: "TFAW", text_right: getVal("tFAW") },
+      { text_left: "TRC", text_right: getVal("tRC") },
+      { text_left: "TCWL", text_right: getVal("tCWL") },
+    ],
   };
 };
 

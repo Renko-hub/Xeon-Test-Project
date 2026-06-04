@@ -1,8 +1,18 @@
+const CHANNEL_MAPPING = { Single: 1, Dual: 2, Triple: 3, Quad: 4 };
+
 const ramPerformance = (state, frequency) => {
-  const { ramSize, slot, isDdr4, preset, tCR: userCommandRate } = state;
+  const {
+    ramSize,
+    slot,
+    isDdr4,
+    preset,
+    tCR: userCommandRate,
+    channelsName,
+  } = state;
 
   const slotsCount = Number(slot?.replace("slots", "")) || 2;
-  const memoryChannels = Math.min(slotsCount, 4);
+  const memoryChannels =
+    CHANNEL_MAPPING[channelsName] ?? Math.min(slotsCount, 2);
   const bandwidthGbps =
     Math.round((frequency * 8 * memoryChannels) / 1024) || 0;
 
@@ -17,15 +27,16 @@ const ramPerformance = (state, frequency) => {
       : "1.50V";
 
   const automaticCommandRate = ramSize >= 128 || slotsCount >= 4 ? "2N" : "1N";
+  const hasUserValue =
+    userCommandRate !== undefined && String(userCommandRate).trim() !== "";
   const finalCommandRate =
-    preset === "custom" &&
-    userCommandRate !== undefined &&
-    userCommandRate !== ""
+    preset === "custom" && hasUserValue
       ? userCommandRate
       : automaticCommandRate;
 
   return {
     voltage: operationalVoltage,
+    tCR: finalCommandRate,
     tCP: finalCommandRate,
     bandwidth: `${bandwidthGbps} GB/s`,
     freq: `${frequency} MHz`,

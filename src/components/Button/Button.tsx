@@ -20,7 +20,6 @@ const Button = ({ type, isActive, onClick, className, label }: ButtonProps) => {
       onClick={onClick}
       className={clsx(
         s.button,
-        // Вернули ?. и добавили || "" на случай, если конфиг не нашелся
         isActive ? config?.active : config?.normal || "",
         className,
       )}

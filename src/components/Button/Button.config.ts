@@ -60,4 +60,5 @@ export const BUTTONS = {
   cancel: { label: "ОТМЕНА", normal: s.safe_active, active: s.safe_active },
   yes: { label: "ДА", normal: s.button, active: s.yes_active },
   no: { label: "НЕТ", normal: s.button, active: s.no_active },
+  donate: { label: "НА КОФЕ", normal: s.button, active: s.about_active },
 } as const;

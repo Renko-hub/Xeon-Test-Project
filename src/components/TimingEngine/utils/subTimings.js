@@ -9,6 +9,49 @@ import {
 } from "../../RamConfiguration/data/memoryPresets";
 import { toEven } from "./ramFrequency";
 
+const getCustomOrAuto = (preset, userInput, autoValue) =>
+  preset === "custom" &&
+  userInput !== undefined &&
+  String(userInput).trim() !== ""
+    ? Number(userInput)
+    : autoValue;
+
+const calculateAutoRFC = (params) => {
+  const {
+    preset,
+    profileKey,
+    isSpecialConfig,
+    isDdr4,
+    currentFrequency,
+    primaries,
+    stabilityBonus,
+  } = params;
+
+  if (preset === "ultra") {
+    const baseUltraRFC = isDdr4 ? 264 : (ULTRA_PRESET?.tRFC ?? 180);
+    return toEven(baseUltraRFC + stabilityBonus * (isDdr4 ? 0.8 : 0.6));
+  }
+
+  if (isSpecialConfig) {
+    return (
+      SPECIAL_PRESETS?.[profileKey]?.tRFC ?? SPECIAL_PRESETS?.safe?.tRFC ?? 260
+    );
+  }
+
+  if (preset === "custom" && primaries) {
+    return toEven(
+      (primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) + stabilityBonus,
+    );
+  }
+
+  const freqPresetRFC =
+    MEMORY_PRESETS?.[currentFrequency]?.[profileKey]?.tRFC ||
+    MEMORY_PRESETS?.[currentFrequency]?.safe?.tRFC ||
+    (isDdr4 ? 312 : 240);
+
+  return toEven(freqPresetRFC + stabilityBonus);
+};
+
 const SubTimings = (state, primaries, frequency) => {
   const {
     preset,
@@ -28,6 +71,7 @@ const SubTimings = (state, primaries, frequency) => {
     tWTR: sWTR,
     tCWL: sCWL,
     tRFC: sRFC,
+    tFAW: sFAW,
     userFrequency,
     frequency: baseFrequency,
   } = state;
@@ -37,125 +81,126 @@ const SubTimings = (state, primaries, frequency) => {
   );
   const slotsCount = Number(slot?.replace("slots", "")) || 2;
   const isHighCapacity =
-    ramSize / Math.max(1, slotsCount) >= 12 || ramSize >= 32;
+    ramSize >= 20 || ramSize / Math.max(1, slotsCount) >= 8;
+
+  const activePresetKey = preset === "optimal" ? "balanced" : preset;
+  const profileKey =
+    preset === "custom" || preset === "ultra" ? "safe" : activePresetKey;
 
   const freqPreset =
     MEMORY_PRESETS?.[currentFrequency]?.safe || MEMORY_PRESETS?.safe;
-  const base = PROFILE_SUBTIMINGS?.[preset]?.[typeKey] || {};
+  const base = PROFILE_SUBTIMINGS?.[profileKey]?.[typeKey] || {};
   const highCapacityPenalty = PENALTIES?.highCapacity?.[typeKey] || {};
   const eccPenalty = PENALTIES?.ecc?.[typeKey] || {};
+
+  const ensureSafeEven = (value) => (value % 2 !== 0 ? value + 1 : value);
 
   const autoFAW = toEven(
     (base.tFAW ?? freqPreset?.tFAW ?? 24) +
       (isHighCapacity ? (highCapacityPenalty.tFAW ?? 0) : 0) +
       (isEcc ? (eccPenalty.tFAW ?? 0) : 0),
   );
-  const tFAW = autoFAW;
+  const tFAW = getCustomOrAuto(preset, sFAW, autoFAW);
 
-  const autoWR = toEven(
-    (base.tWR ?? freqPreset?.tWR ?? 12) +
-      (isHighCapacity ? (highCapacityPenalty.tWR ?? 0) : 0) +
-      (isEcc ? (eccPenalty.tWR ?? 0) : 0),
+  const autoWR = ensureSafeEven(
+    toEven(
+      (base.tWR ?? freqPreset?.tWR ?? 12) +
+        (isHighCapacity ? (highCapacityPenalty.tWR ?? 0) : 0) +
+        (isEcc ? (eccPenalty.tWR ?? 0) : 0),
+    ),
   );
-  const tWR =
-    preset === "custom" && sWR !== undefined && sWR !== ""
-      ? Number(sWR)
-      : autoWR;
+  const tWR = getCustomOrAuto(preset, sWR, autoWR);
 
-  const autoRRD =
+  const autoRRD = ensureSafeEven(
     (base.tRRD ?? freqPreset?.tRRD ?? 4) +
-    (isHighCapacity ? (highCapacityPenalty.tRRD ?? 0) : 0) +
-    (isEcc ? (eccPenalty.tRRD ?? 0) : 0);
-  const tRRD =
-    preset === "custom" && sRRD !== undefined && sRRD !== ""
-      ? Number(sRRD)
-      : autoRRD;
+      (isHighCapacity ? (highCapacityPenalty.tRRD ?? 0) : 0) +
+      (isEcc ? (eccPenalty.tRRD ?? 0) : 0),
+  );
+  const tRRD = getCustomOrAuto(preset, sRRD, autoRRD);
 
-  const autoWTR =
-    (base.tWTR ?? freqPreset?.tWTR ?? 6) +
-    (isHighCapacity ? (highCapacityPenalty.tWTR ?? 0) : 0);
-  const tWTR =
-    preset === "custom" && sWTR !== undefined && sWTR !== ""
-      ? Number(sWTR)
-      : autoWTR;
+  let baseArchitectureWTR = 8;
 
-  const autoRTP =
-    (base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? (eccPenalty.tRTP ?? 0) : 0);
-  const tRTP =
-    preset === "custom" && sRTP !== undefined && sRTP !== ""
-      ? Number(sRTP)
-      : autoRTP;
+  if (gen === "V3") {
+    if (preset === "aggressive" || preset === "ultra") {
+      baseArchitectureWTR = 6;
+    } else {
+      baseArchitectureWTR = 8;
+    }
+  } else if (gen === "V4") {
+    if (
+      preset === "optimal" ||
+      preset === "balanced" ||
+      preset === "aggressive" ||
+      preset === "ultra"
+    ) {
+      baseArchitectureWTR = 6;
+    } else {
+      baseArchitectureWTR = 8;
+    }
+  } else {
+    baseArchitectureWTR = ensureSafeEven(
+      (base.tWTR ?? freqPreset?.tWTR ?? 6) +
+        (isHighCapacity ? (highCapacityPenalty.tWTR ?? 0) : 0),
+    );
+  }
 
-  const profileKey =
-    preset === "custom" || preset === "ultra" ? "safe" : preset;
+  const tWTR = getCustomOrAuto(preset, sWTR, baseArchitectureWTR);
+
+  const autoRTP = ensureSafeEven(
+    (base.tRTP ?? freqPreset?.tRTP ?? 6) + (isEcc ? (eccPenalty.tRTP ?? 0) : 0),
+  );
+  const tRTP = getCustomOrAuto(preset, sRTP, autoRTP);
 
   const autoREFI =
     TREFI_TABLE?.[preset === "ultra" ? "ultra" : profileKey]?.[gen] ??
     TREFI_TABLE?.safe?.[gen] ??
     7800;
-  const tREFI =
-    preset === "custom" && sREFI !== undefined && sREFI !== ""
-      ? Number(sREFI)
-      : autoREFI;
+  const tREFI = getCustomOrAuto(preset, sREFI, autoREFI);
 
+  const boundedSizeBonus = Math.min(Math.floor((ramSize - 8) / 8) * 8, 32);
+  const genMultiplier = gen === "V4" ? 0.85 : isDdr4 ? 1 : 1.35;
   const stabilityBonus =
-    (Math.floor((ramSize - 8) / 8) * 10 +
+    (boundedSizeBonus +
       slotsCount * 12 -
       12 +
       (density === "yes" ? 48 : 0) +
       (isEcc ? (isDdr4 ? 24 : 40) : -12) +
       (board === "matx" ? 16 : 0)) *
-    (isDdr4 ? 1 : 1.35);
+    genMultiplier;
 
-  const autoRFC =
-    preset === "ultra"
-      ? toEven(
-          (isDdr4 ? 264 : (ULTRA_PRESET?.tRFC ?? 180)) +
-            stabilityBonus * (isDdr4 ? 0.8 : 0.6),
-        )
-      : isSpecialConfig
-        ? (SPECIAL_PRESETS?.[profileKey]?.tRFC ??
-          SPECIAL_PRESETS?.safe?.tRFC ??
-          260)
-        : preset === "custom" && primaries
-          ? toEven(
-              (primaries.tRCD + primaries.tRP) * (isDdr4 ? 10 : 8) +
-                stabilityBonus,
-            )
-          : toEven(
-              (MEMORY_PRESETS?.[currentFrequency]?.[profileKey]?.tRFC ||
-                MEMORY_PRESETS?.[currentFrequency]?.safe?.tRFC ||
-                (isDdr4 ? 312 : 240)) + stabilityBonus,
-            );
+  const autoRFC = calculateAutoRFC({
+    preset,
+    profileKey,
+    isSpecialConfig,
+    isDdr4,
+    currentFrequency,
+    primaries,
+    stabilityBonus,
+  });
+  const tRFC = getCustomOrAuto(preset, sRFC, autoRFC);
 
-  const tRFC =
-    preset === "custom" && sRFC !== undefined && sRFC !== ""
-      ? Number(sRFC)
-      : autoRFC;
-
+  const limitMultiplier = preset === "ultra" ? 0.9 : 0.92;
   const limitValue =
     isSpecialConfig && preset !== "ultra"
-      ? (SPECIAL_LIMITS?.[profileKey] ?? toEven(tRFC * 0.92))
-      : toEven(tRFC * (preset === "ultra" ? 0.9 : 0.92));
+      ? (SPECIAL_LIMITS?.[profileKey] ?? toEven((tRFC || 260) * 0.92))
+      : toEven((tRFC || 260) * limitMultiplier);
 
-  const currentCL =
-    state.tCL !== undefined && state.tCL !== ""
-      ? Number(state.tCL)
-      : (primaries?.tCL ?? (isDdr4 ? 16 : 40));
-  const option1 = currentCL;
-  const option2 = isDdr4 ? currentCL - 2 : currentCL - 4;
-  const option3 = isDdr4
-    ? Math.max(9, Math.floor(currentFrequency / 400))
-    : Math.max(20, Math.floor(currentFrequency / 150));
+  const currentCL = primaries?.tCL ?? (isDdr4 ? 16 : 11);
+  let calculatedAutoCWL = currentCL;
 
-  const sortedCwlOptions = [option1, option2, option3].sort((a, b) => a - b);
-  const medianCwlValue = sortedCwlOptions[1];
-  const autoCWL = toEven(base.tCWL ?? freqPreset?.tCWL ?? medianCwlValue);
+  if (isDdr4) {
+    if (preset === "aggressive" || preset === "ultra") {
+      calculatedAutoCWL = currentCL - 2;
+    } else if (preset === "optimal" || preset === "balanced") {
+      calculatedAutoCWL = currentCL - 1;
+    }
+  } else {
+    calculatedAutoCWL =
+      preset === "aggressive" || preset === "ultra" ? currentCL - 1 : currentCL;
+  }
 
-  const tCWL =
-    preset === "custom" && sCWL !== undefined && sCWL !== ""
-      ? Number(sCWL)
-      : autoCWL;
+  const autoCWL = ensureSafeEven(toEven(base.tCWL ?? calculatedAutoCWL));
+  const tCWL = getCustomOrAuto(preset, sCWL, autoCWL);
 
   return {
     tRFC,

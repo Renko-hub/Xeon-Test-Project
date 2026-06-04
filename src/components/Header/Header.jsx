@@ -3,108 +3,40 @@ import clsx from "clsx";
 import useHeaderCarousel from "./hooks/useHeaderCarousel";
 import s from "./Header.module.css";
 
+// Конфигурация путей и названий вкладок навигации
+const MENU_ITEMS = [
+  { to: "/ram", label: "Xeon Ram Tool" },
+  { to: "/memory", label: "Memory Configuration" },
+  { to: "/dram", label: "DRAM RAPL Configuration" },
+  { to: "/thermal", label: "Memory Thermal" },
+  { to: "/fivr", label: "FIVR Configuration" },
+  { to: "/power", label: "Power Management" },
+  { to: "/advanced", label: "Advanced Configuration" },
+  { to: "/iio", label: "IIO Configuration" },
+  { to: "/csm", label: "CSM Configuration" },
+  { to: "/usb", label: "USB Configuration" },
+  { to: "/fan", label: "Fan Configuration" },
+  { to: "/pci", label: "PCI Configuration" },
+  { to: "/about", label: "About" },
+];
+
 const Header = () => {
   const containerRef = useHeaderCarousel(s.header__link_active, s.header__link);
 
   return (
     <nav className={s.header}>
       <div className={s.header__container} ref={containerRef}>
-        <NavLink
-          to="/ram"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          Xeon Ram Tool
-        </NavLink>
-        <NavLink
-          to="/memory"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          Memory Configuration
-        </NavLink>
-        <NavLink
-          to="/dram"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          DRAM RAPL Configuration
-        </NavLink>
-        <NavLink
-          to="/thermal"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          Memory Thermal
-        </NavLink>
-        <NavLink
-          to="/fivr"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          FIVR Configuration
-        </NavLink>
-        <NavLink
-          to="/power"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          Power Management
-        </NavLink>
-        <NavLink
-          to="/advanced"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          Advanced Configuration
-        </NavLink>
-        <NavLink
-          to="/iio"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          IIO Configuration
-        </NavLink>
-        <NavLink
-          to="/csm"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          CSM Configuration
-        </NavLink>
-        <NavLink
-          to="/usb"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          USB Configuration
-        </NavLink>
-        <NavLink
-          to="/fan"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          Fan Configuration
-        </NavLink>
-        <NavLink
-          to="/pci"
-          className={({ isActive }) =>
-            clsx(s.header__link, isActive && s.header__link_active)
-          }
-        >
-          PCI Configuration
-        </NavLink>
+        {MENU_ITEMS.map((item) => (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            className={({ isActive }) =>
+              clsx(s.header__link, isActive && s.header__link_active)
+            }
+          >
+            {item.label}
+          </NavLink>
+        ))}
       </div>
     </nav>
   );

@@ -8,83 +8,68 @@ const timingEngine = (state, changedKey) => {
   const config = memoryConfiguration(state, changedKey);
   const baseData = { ...state, ...config };
 
-  const hasUserCL = baseData.tCL !== undefined && baseData.tCL !== "";
-  const hasUserRP = baseData.tRP !== undefined && baseData.tRP !== "";
-  const hasUserRCD = baseData.tRCD !== undefined && baseData.tRCD !== "";
-  const hasUserRFC = baseData.tRFC !== undefined && baseData.tRFC !== "";
+  if (changedKey === "cpu" || changedKey === "gen" || changedKey === "preset") {
+    delete baseData.userFrequency;
+    if (baseData.preset !== "custom") {
+      delete baseData.tCL;
+      delete baseData.tRP;
+      delete baseData.tRCD;
+      delete baseData.tRAS;
+      delete baseData.tRC;
+      delete baseData.tWR;
+      delete baseData.tREFI;
+      delete baseData.tRRD;
+      delete baseData.tRTP;
+      delete baseData.tWTR;
+      delete baseData.tCR;
+      delete baseData.tRFC;
+    }
+  }
 
-  const userCL = hasUserCL ? Number(baseData.tCL) : undefined;
-  const userRP = hasUserRP ? Number(baseData.tRP) : undefined;
-  const userRCD = hasUserRCD ? Number(baseData.tRCD) : undefined;
-  const userRFC = hasUserRFC ? Number(baseData.tRFC) : undefined;
+  const { frequency } = ramFrequency(baseData);
+  const primaries = PrimaryTimings(baseData, frequency);
 
-  const dataWithParsedTimings = {
-    ...baseData,
-    ...(hasUserCL && { tCL: userCL }),
-    ...(hasUserRP && { tRP: userRP }),
-    ...(hasUserRCD && { tRCD: userRCD }),
-    ...(hasUserRFC && { tRFC: userRFC }),
-  };
+  const dataWithPrimaries = { ...baseData, ...primaries };
+  const subTimings = SubTimings(dataWithPrimaries, primaries, frequency);
+  const performance = ramPerformance(dataWithPrimaries, frequency);
 
-  const { frequency } = ramFrequency(dataWithParsedTimings);
-  const primaries = PrimaryTimings(dataWithParsedTimings, frequency);
-
-  const isCustom = dataWithParsedTimings.preset === "custom";
-  const finalPrimaries = {
+  const allCalculatedTimings = {
     ...primaries,
-    tCL: isCustom && userCL !== undefined ? userCL : primaries.tCL,
-    tRP: isCustom && userRP !== undefined ? userRP : primaries.tRP,
-    tRCD: isCustom && userRCD !== undefined ? userRCD : primaries.tRCD,
+    ...subTimings,
+    ...performance,
   };
 
-  const fullData = { ...dataWithParsedTimings, ...finalPrimaries };
-
-  const subTimings = SubTimings(fullData, finalPrimaries, frequency);
-  const performance = ramPerformance(fullData, frequency, finalPrimaries);
-
+  const isUltra = baseData.preset === "ultra";
   const tRfcFormatted = subTimings.tRFC_Values
-    ? `${subTimings.tRFC_Values.current} (${fullData.preset === "ultra" ? "LIMIT" : "IDEAL"}: ${subTimings.tRFC_Values.limitValue})`
+    ? `${subTimings.tRFC_Values.current} (${isUltra ? "LIMIT" : "IDEAL"}: ${subTimings.tRFC_Values.limitValue})`
     : String(subTimings.tRFC ?? "");
+
+  const isCustom = baseData.preset === "custom";
 
   return {
     state: {
-      board: fullData.board,
-      gen: fullData.gen,
-      cpu: fullData.cpu,
-      memory: fullData.memory,
-      ramSize: fullData.ramSize,
-      density: fullData.density,
-      slot: fullData.slot,
-      preset: fullData.preset,
-      unlocked: fullData.unlocked,
-      history: fullData.history,
-      userFrequency: fullData.userFrequency,
-      tCL: fullData.tCL,
-      tRP: fullData.tRP,
-      tRCD: fullData.tRCD,
-      tRAS: fullData.tRAS,
-      tRC: fullData.tRC,
-      tWR: fullData.tWR,
-      tREFI: fullData.tREFI,
-      tRRD: fullData.tRRD,
-      tRTP: fullData.tRTP,
-      tWTR: fullData.tWTR,
-      tCR: fullData.tCR || fullData.tCP,
-      tRFC: fullData.tRFC,
+      ...baseData,
+      tCL: isCustom ? baseData.tCL : allCalculatedTimings.tCL,
+      tRP: isCustom ? baseData.tRP : allCalculatedTimings.tRP,
+      tRCD: isCustom ? baseData.tRCD : allCalculatedTimings.tRCD,
+      tRAS: isCustom ? baseData.tRAS : allCalculatedTimings.tRAS,
+      tRC: isCustom ? baseData.tRC : allCalculatedTimings.tRC,
+      tWR: isCustom ? baseData.tWR : allCalculatedTimings.tWR,
+      tREFI: isCustom ? baseData.tREFI : allCalculatedTimings.tREFI,
+      tRRD: isCustom ? baseData.tRRD : allCalculatedTimings.tRRD,
+      tRTP: isCustom ? baseData.tRTP : allCalculatedTimings.tRTP,
+      tWTR: isCustom ? baseData.tWTR : allCalculatedTimings.tWTR,
+      tCR: isCustom ? baseData.tCR : allCalculatedTimings.tCR,
+      tRFC: isCustom ? baseData.tRFC : allCalculatedTimings.tRFC,
     },
     config,
     timings: {
-      ...finalPrimaries,
-      ...subTimings,
-      ...performance,
+      ...allCalculatedTimings,
       freqClean: String(performance.freq ?? "").replace(" MHz", ""),
       tRfcFormatted,
     },
     updateParam: (setParam) => (key, value) => {
-      setParam((prev) => ({
-        ...prev,
-        [key]: value,
-      }));
+      setParam((prev) => ({ ...prev, [key]: value }));
     },
   };
 };
