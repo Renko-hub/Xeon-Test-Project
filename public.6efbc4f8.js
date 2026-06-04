@@ -24962,7 +24962,6 @@ var _useHeaderCarouselDefault = parcelHelpers.interopDefault(_useHeaderCarousel)
 var _headerModuleCss = require("./Header.module.css");
 var _headerModuleCssDefault = parcelHelpers.interopDefault(_headerModuleCss);
 var _s = $RefreshSig$();
-// Конфигурация путей и названий вкладок навигации
 const MENU_ITEMS = [
     {
         to: "/ram",
@@ -25020,16 +25019,22 @@ const MENU_ITEMS = [
 const Header = ()=>{
     _s();
     const containerRef = (0, _useHeaderCarouselDefault.default)((0, _headerModuleCssDefault.default).header__link_active, (0, _headerModuleCssDefault.default).header__link);
+    const extendedItems = [
+        ...MENU_ITEMS,
+        ...MENU_ITEMS,
+        ...MENU_ITEMS
+    ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
         className: (0, _headerModuleCssDefault.default).header,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: (0, _headerModuleCssDefault.default).header__container,
             ref: containerRef,
-            children: MENU_ITEMS.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+            children: extendedItems.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
                     to: item.to,
+                    end: true,
                     className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
                     children: item.label
-                }, item.to, false, {
+                }, `${item.to}-${index}`, false, {
                     fileName: "src/components/Header/Header.jsx",
                     lineNumber: 30,
                     columnNumber: 11
@@ -27376,88 +27381,126 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
-var _reactRouterDom = require("react-router-dom"); // Подключаем локацию, чтобы знать об активном роуте
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const useHeaderCarousel = (activeClass, itemClass)=>{
     _s();
     const containerRef = (0, _react.useRef)(null);
-    const location = (0, _reactRouterDom.useLocation)(); // Следим за изменением страницы
+    const location = (0, _reactRouterDom.useLocation)();
+    // 1. Логика бесконечного зацикливания при скролле пальцем
+    (0, _react.useEffect)(()=>{
+        const container = containerRef.current;
+        if (!container || window.innerWidth > 768) return;
+        const handleScroll = ()=>{
+            const { scrollTop, scrollHeight, clientHeight } = container;
+            const oneThird = scrollHeight / 3;
+            if (scrollTop <= 0) container.scrollTop = oneThird;
+            else if (scrollTop + clientHeight >= scrollHeight - 2) container.scrollTop = oneThird * 2 - clientHeight;
+        };
+        container.addEventListener("scroll", handleScroll, {
+            passive: true
+        });
+        // Жесткое позиционирование первой вкладки (Xeon Ram Tool) в центр экрана при старте
+        const links = container.querySelectorAll(`.${itemClass}`);
+        if (links.length > 0) {
+            const itemsPerSection = links.length / 3;
+            // Берём самый первый элемент из ЦЕНТРАЛЬНОГО (второго) блока дубликатов
+            const firstCentralItem = links[itemsPerSection];
+            if (firstCentralItem) {
+                const containerHeight = container.clientHeight;
+                const elementHeight = firstCentralItem.clientHeight;
+                const elementOffsetTop = firstCentralItem.offsetTop;
+                // Вычисляем точную позицию центра без анимации (мгновенно при инициализации)
+                container.scrollTop = elementOffsetTop - containerHeight / 2 + elementHeight / 2;
+            }
+        }
+        return ()=>container.removeEventListener("scroll", handleScroll);
+    }, [
+        itemClass
+    ]);
+    // 2. Авто-центрирование при кликах и переходе по страницам
+    (0, _react.useEffect)(()=>{
+        const container = containerRef.current;
+        if (!container || window.innerWidth > 768) return;
+        const timer = setTimeout(()=>{
+            const links = container.querySelectorAll(`.${itemClass}`);
+            const totalItems = links.length;
+            const itemsPerSection = totalItems / 3;
+            let centralActiveLink = null;
+            for(let i = itemsPerSection; i < itemsPerSection * 2; i++)if (links[i] && links[i].classList.contains(activeClass)) {
+                centralActiveLink = links[i];
+                break;
+            }
+            const activeLink = centralActiveLink || container.querySelector(`.${activeClass}`);
+            if (activeLink) activeLink.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 80);
+        return ()=>clearTimeout(timer);
+    }, [
+        location.pathname,
+        activeClass,
+        itemClass
+    ]);
+    // 3. 3D-анимация (масштаб и прозрачность)
     (0, _react.useEffect)(()=>{
         const container = containerRef.current;
         if (!container) return;
-        let observer;
-        // Функция центрирования элемента по вертикали
-        const centerElement = (element)=>{
-            const containerHeight = container.clientHeight;
-            const elementHeight = element.clientHeight;
-            const elementOffsetTop = element.offsetTop;
-            container.scrollTo({
-                top: elementOffsetTop - containerHeight / 2 + elementHeight / 2,
-                behavior: "smooth"
-            });
-        };
-        // Функция для очистки inline-стилей (нужна при переходе на десктоп)
-        const clearStyles = (links)=>{
+        let observer = null;
+        const clearStyles = ()=>{
+            const links = container.querySelectorAll(`.${itemClass}`);
             links.forEach((link)=>{
                 link.style.transform = "";
                 link.style.opacity = "";
             });
         };
-        const initMobileEffects = ()=>{
-            if (window.innerWidth > 768) {
-                const links = container.querySelectorAll(`.${itemClass}`);
-                clearStyles(links);
-                return;
+        const initEffects = ()=>{
+            if (observer) {
+                observer.disconnect();
+                observer = null;
             }
-            // 1. Центрируем текущую активную ссылку (при загрузке или смене роута)
-            const activeLink = container.querySelector(`.${activeClass}`);
-            if (activeLink) // Делаем небольшую задержку, чтобы DOM успел полностью отрисоваться
-            setTimeout(()=>centerElement(activeLink), 50);
-            // 2. Логика IntersectionObserver для плавного scale и opacity при скролле
+            clearStyles();
+            if (window.innerWidth > 768) return;
+            const thresholds = Array.from({
+                length: 51
+            }, (_, i)=>i * 0.02);
             const observerOptions = {
                 root: container,
-                rootMargin: "-33% 0px -33% 0px",
-                threshold: [
-                    0,
-                    0.25,
-                    0.5,
-                    0.75,
-                    1
-                ]
+                rootMargin: "-15% 0px -15% 0px",
+                threshold: thresholds
             };
             const handleIntersect = (entries)=>{
                 entries.forEach((entry)=>{
                     const link = entry.target;
                     const ratio = entry.intersectionRatio;
-                    link.style.transform = `scale(${0.85 + ratio * 0.15})`;
-                    link.style.opacity = String(0.75 + ratio * 0.25);
+                    requestAnimationFrame(()=>{
+                        link.style.transform = `scale(${0.85 + ratio * 0.2})`;
+                        link.style.opacity = String(0.4 + ratio * 0.6);
+                    });
                 });
             };
             observer = new IntersectionObserver(handleIntersect, observerOptions);
             const links = container.querySelectorAll(`.${itemClass}`);
             links.forEach((link)=>observer.observe(link));
         };
-        // Запускаем эффекты
-        initMobileEffects();
-        // Слушаем ресайз экрана, чтобы хук вовремя включался/выключался
-        const handleResize = ()=>{
-            if (observer) observer.disconnect();
-            initMobileEffects();
-        };
-        window.addEventListener("resize", handleResize);
-        // Чистим слушатели при размонтировании
+        initEffects();
+        const handleResize = ()=>initEffects();
+        window.addEventListener("resize", handleResize, {
+            passive: true
+        });
         return ()=>{
             if (observer) observer.disconnect();
             window.removeEventListener("resize", handleResize);
+            clearStyles();
         };
     }, [
         activeClass,
-        itemClass,
-        location.pathname
-    ]); // Хук перезапустится при смене страницы
+        itemClass
+    ]);
     return containerRef;
 };
-_s(useHeaderCarousel, "x5MUtzh3fNiOYaa7dTLcUXU449Q=", false, function() {
+_s(useHeaderCarousel, "jiTkxgkQEY4p10eoT2Q1C8MT3nA=", false, function() {
     return [
         (0, _reactRouterDom.useLocation)
     ];
@@ -32696,11 +32739,11 @@ const RamConfiguration = ({ selectedButton })=>{
             },
             V3: {
                 cpu: "",
-                ramSize: 16
+                ramSize: 4
             },
             V4: {
                 cpu: "",
-                ramSize: 16
+                ramSize: 4
             }
         },
         ...selectedButton
@@ -32750,7 +32793,7 @@ const RamConfiguration = ({ selectedButton })=>{
         ]
     }, void 0, true);
 };
-_s(RamConfiguration, "V2920iwkmO5UVYgVBnXGrFWRE2k=");
+_s(RamConfiguration, "qFInxBTx+422C9Z5K8Rd4178AY8=");
 _c = RamConfiguration;
 exports.default = RamConfiguration;
 var _c;
