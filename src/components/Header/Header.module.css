@@ -37,7 +37,8 @@
   border-bottom: 2px solid transparent;
   transition:
     color 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    background-color 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,43 +66,69 @@
   }
 
   .header__toggle {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
     width: 100%;
+    height: 48px;
     background: #222;
-    color: #fff;
     border: none;
     border-bottom: 1px solid #333;
-    padding: 12px 15px;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
     cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .header__toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: 
+      transform 0.3s ease, 
+      opacity 0.3s ease;
+  }
+
+  .header__toggle_open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .header__toggle_open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__toggle_open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .header__container {
-    display: none;
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 4px;
-    padding: 10px 0;
+    gap: 0;
+    padding: 0;
     width: 100%;
     box-sizing: border-box;
     background: #151515;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
   }
 
   .header__container.header__container_open {
-    display: flex;
+    max-height: 600px;
+    border-bottom: 1px solid #333;
   }
 
   .header__link {
-    display: flex;
     width: 100%;
+    min-width: 0;
     height: 44px;
     min-height: 44px;
-    padding: 0;
+    padding: 0 20px;
     font-size: 12px;
-    text-align: center;
     justify-content: center;
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
@@ -113,6 +140,7 @@
     color: #fff;
     border-top-color: #007bff;
     border-bottom-color: #007bff;
+    border-left-color: transparent;
     background: #1e1e1e;
   }
 }

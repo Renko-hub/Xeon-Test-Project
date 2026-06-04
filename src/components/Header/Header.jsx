@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import s from "./Header.module.css";
@@ -21,11 +21,35 @@ const MENU_ITEMS = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
-    <nav className={clsx(s.header, isOpen && s.header_open)}>
-      <button className={s.header__toggle} onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? "✕ Закрыть" : "Разделы"}
+    <nav ref={menuRef} className={clsx(s.header, isOpen && s.header_open)}>
+      <button
+        className={clsx(s.header__toggle, isOpen && s.header__toggle_open)}
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-label="Menu"
+      >
+        <span />
+        <span />
+        <span />
       </button>
 
       <div
@@ -34,9 +58,9 @@ const Header = () => {
           isOpen && s.header__container_open,
         )}
       >
-        {MENU_ITEMS.map((item, index) => (
+        {MENU_ITEMS.map((item) => (
           <NavLink
-            key={`${item.to}-${index}`}
+            key={item.to}
             to={item.to}
             end
             onClick={() => setIsOpen(false)}
