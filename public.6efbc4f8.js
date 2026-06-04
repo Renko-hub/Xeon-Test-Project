@@ -24954,11 +24954,10 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _clsx = require("clsx");
 var _clsxDefault = parcelHelpers.interopDefault(_clsx);
-var _useHeaderCarousel = require("./hooks/useHeaderCarousel");
-var _useHeaderCarouselDefault = parcelHelpers.interopDefault(_useHeaderCarousel);
 var _headerModuleCss = require("./Header.module.css");
 var _headerModuleCssDefault = parcelHelpers.interopDefault(_headerModuleCss);
 var _s = $RefreshSig$();
@@ -25018,43 +25017,45 @@ const MENU_ITEMS = [
 ];
 const Header = ()=>{
     _s();
-    const containerRef = (0, _useHeaderCarouselDefault.default)((0, _headerModuleCssDefault.default).header__link_active, (0, _headerModuleCssDefault.default).header__link);
-    const extendedItems = [
-        ...MENU_ITEMS,
-        ...MENU_ITEMS,
-        ...MENU_ITEMS
-    ];
+    const [isOpen, setIsOpen] = (0, _react.useState)(false);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
-        className: (0, _headerModuleCssDefault.default).header,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: (0, _headerModuleCssDefault.default).header__container,
-            ref: containerRef,
-            children: extendedItems.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                    to: item.to,
-                    end: true,
-                    className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
-                    children: item.label
-                }, `${item.to}-${index}`, false, {
-                    fileName: "src/components/Header/Header.jsx",
-                    lineNumber: 30,
-                    columnNumber: 11
-                }, undefined))
-        }, void 0, false, {
-            fileName: "src/components/Header/Header.jsx",
-            lineNumber: 28,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        className: (0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header, isOpen && (0, _headerModuleCssDefault.default).header_open),
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: (0, _headerModuleCssDefault.default).header__toggle,
+                onClick: ()=>setIsOpen(!isOpen),
+                children: isOpen ? "\u2715 \u0417\u0430\u043A\u0440\u044B\u0442\u044C" : "\u0420\u0430\u0437\u0434\u0435\u043B\u044B"
+            }, void 0, false, {
+                fileName: "src/components/Header/Header.jsx",
+                lineNumber: 27,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__container, isOpen && (0, _headerModuleCssDefault.default).header__container_open),
+                children: MENU_ITEMS.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                        to: item.to,
+                        end: true,
+                        onClick: ()=>setIsOpen(false),
+                        className: ({ isActive })=>(0, _clsxDefault.default)((0, _headerModuleCssDefault.default).header__link, isActive && (0, _headerModuleCssDefault.default).header__link_active),
+                        children: item.label
+                    }, `${item.to}-${index}`, false, {
+                        fileName: "src/components/Header/Header.jsx",
+                        lineNumber: 38,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Header/Header.jsx",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/Header/Header.jsx",
-        lineNumber: 27,
+        lineNumber: 26,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "5Pap8NrDMV5IEkYqx3Vk5/MnlkQ=", false, function() {
-    return [
-        (0, _useHeaderCarouselDefault.default)
-    ];
-});
+_s(Header, "+sus0Lb0ewKHdwiUhiTAJFoFyQ0=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -25065,7 +25066,7 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react-router-dom":"61z4w","clsx":"dOSJC","./Header.module.css":"bjXDN","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./hooks/useHeaderCarousel":"foKA5"}],"dOSJC":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react-router-dom":"61z4w","clsx":"dOSJC","./Header.module.css":"bjXDN","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"dOSJC":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "clsx", ()=>clsx);
@@ -25089,8 +25090,10 @@ exports.default = clsx;
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bjXDN":[function(require,module,exports,__globalThis) {
 module.exports["header"] = `MqZHCq_header`;
 module.exports["header__container"] = `MqZHCq_header__container`;
+module.exports["header__container_open"] = `MqZHCq_header__container_open`;
 module.exports["header__link"] = `MqZHCq_header__link`;
 module.exports["header__link_active"] = `MqZHCq_header__link_active`;
+module.exports["header__toggle"] = `MqZHCq_header__toggle`;
 
 },{}],"7h6Pi":[function(require,module,exports,__globalThis) {
 "use strict";
@@ -27370,149 +27373,7 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"foKA5":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$b03c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$b03c.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b03c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactRouterDom = require("react-router-dom");
-var _s = $RefreshSig$();
-const useHeaderCarousel = (activeClass, itemClass)=>{
-    _s();
-    const containerRef = (0, _react.useRef)(null);
-    const location = (0, _reactRouterDom.useLocation)();
-    // 1. Логика бесконечного зацикливания при скролле пальцем
-    (0, _react.useEffect)(()=>{
-        const container = containerRef.current;
-        if (!container || window.innerWidth > 768) return;
-        const handleScroll = ()=>{
-            const { scrollTop, scrollHeight, clientHeight } = container;
-            const oneThird = scrollHeight / 3;
-            if (scrollTop <= 0) container.scrollTop = oneThird;
-            else if (scrollTop + clientHeight >= scrollHeight - 2) container.scrollTop = oneThird * 2 - clientHeight;
-        };
-        container.addEventListener("scroll", handleScroll, {
-            passive: true
-        });
-        // Жесткое позиционирование первой вкладки (Xeon Ram Tool) в центр экрана при старте
-        const links = container.querySelectorAll(`.${itemClass}`);
-        if (links.length > 0) {
-            const itemsPerSection = links.length / 3;
-            // Берём самый первый элемент из ЦЕНТРАЛЬНОГО (второго) блока дубликатов
-            const firstCentralItem = links[itemsPerSection];
-            if (firstCentralItem) {
-                const containerHeight = container.clientHeight;
-                const elementHeight = firstCentralItem.clientHeight;
-                const elementOffsetTop = firstCentralItem.offsetTop;
-                // Вычисляем точную позицию центра без анимации (мгновенно при инициализации)
-                container.scrollTop = elementOffsetTop - containerHeight / 2 + elementHeight / 2;
-            }
-        }
-        return ()=>container.removeEventListener("scroll", handleScroll);
-    }, [
-        itemClass
-    ]);
-    // 2. Авто-центрирование при кликах и переходе по страницам
-    (0, _react.useEffect)(()=>{
-        const container = containerRef.current;
-        if (!container || window.innerWidth > 768) return;
-        const timer = setTimeout(()=>{
-            const links = container.querySelectorAll(`.${itemClass}`);
-            const totalItems = links.length;
-            const itemsPerSection = totalItems / 3;
-            let centralActiveLink = null;
-            for(let i = itemsPerSection; i < itemsPerSection * 2; i++)if (links[i] && links[i].classList.contains(activeClass)) {
-                centralActiveLink = links[i];
-                break;
-            }
-            const activeLink = centralActiveLink || container.querySelector(`.${activeClass}`);
-            if (activeLink) activeLink.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-        }, 80);
-        return ()=>clearTimeout(timer);
-    }, [
-        location.pathname,
-        activeClass,
-        itemClass
-    ]);
-    // 3. 3D-анимация (масштаб и прозрачность)
-    (0, _react.useEffect)(()=>{
-        const container = containerRef.current;
-        if (!container) return;
-        let observer = null;
-        const clearStyles = ()=>{
-            const links = container.querySelectorAll(`.${itemClass}`);
-            links.forEach((link)=>{
-                link.style.transform = "";
-                link.style.opacity = "";
-            });
-        };
-        const initEffects = ()=>{
-            if (observer) {
-                observer.disconnect();
-                observer = null;
-            }
-            clearStyles();
-            if (window.innerWidth > 768) return;
-            const thresholds = Array.from({
-                length: 51
-            }, (_, i)=>i * 0.02);
-            const observerOptions = {
-                root: container,
-                rootMargin: "-15% 0px -15% 0px",
-                threshold: thresholds
-            };
-            const handleIntersect = (entries)=>{
-                entries.forEach((entry)=>{
-                    const link = entry.target;
-                    const ratio = entry.intersectionRatio;
-                    requestAnimationFrame(()=>{
-                        link.style.transform = `scale(${0.85 + ratio * 0.2})`;
-                        link.style.opacity = String(0.4 + ratio * 0.6);
-                    });
-                });
-            };
-            observer = new IntersectionObserver(handleIntersect, observerOptions);
-            const links = container.querySelectorAll(`.${itemClass}`);
-            links.forEach((link)=>observer.observe(link));
-        };
-        initEffects();
-        const handleResize = ()=>initEffects();
-        window.addEventListener("resize", handleResize, {
-            passive: true
-        });
-        return ()=>{
-            if (observer) observer.disconnect();
-            window.removeEventListener("resize", handleResize);
-            clearStyles();
-        };
-    }, [
-        activeClass,
-        itemClass
-    ]);
-    return containerRef;
-};
-_s(useHeaderCarousel, "jiTkxgkQEY4p10eoT2Q1C8MT3nA=", false, function() {
-    return [
-        (0, _reactRouterDom.useLocation)
-    ];
-});
-exports.default = useHeaderCarousel;
-
-  $parcel$ReactRefreshHelpers$b03c.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-router-dom":"61z4w"}],"lefX6":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"lefX6":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$c97a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$c97a.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
